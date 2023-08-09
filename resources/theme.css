@@ -1,0 +1,140 @@
+/* Theme */
+:root {
+	--theme-css: 1px;
+	--photon-tab-outline: #0a84ff;
+	--panel-separator-zap-gradient: none !important;
+	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important
+}
+/* Light theme */
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
+	--lwt-accent-color: #d7d7db !important;
+	--toolbar-bgcolor: #f9f9fa !important;
+	--button-hover-bgcolor: #dddedf !important;
+	--button-active-bgcolor: #d2d3d4 !Important
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+#urlbar-background {
+	background-color: white !important;
+	border: solid 1px #cccccc !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+#urlbar:not([breakout-extend], :hover) #urlbar-background {
+	box-shadow: 0px 0px 4px #0001 !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+#urlbar:not([breakout-extend]):hover #urlbar-background {
+	box-shadow: 0px 0px 5px #0002 !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+.tab-background[selected] {
+	background: #f9f9fa !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(#new-tab-button:hover > image, #tabs-newtab-button:hover > image) {
+	background: #bdbec0 !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(#new-tab-button:hover:active > image, #tabs-newtab-button:hover:active > image) {
+	background: #b3b4b6 !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+#nav-bar {
+    box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+.tabbrowser-tab[selected] {
+    box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+}
+/* Dark theme */
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] {
+	--lwt-accent-color: #0c0c0d !important;
+	--toolbar-bgcolor: #323234 !important;
+	--toolbar-field-background-color: #474749 !important;
+	--toolbar-field-border-color: #5a5a5c !important;
+	--button-hover-bgcolor: #aaa6 !important;
+	--toolbarbutton-icon-fill: #bebebe !important;
+	--toolbar-field-focus-background-color: #474749 !important;
+	--button-bgcolor: rgb(55, 55, 55) !important;
+	--toolbarbutton-active-background: #7f7f80 !important;
+	--arrowpanel-background: #4a4a4f !important;
+	--arrowpanel-border: #2a2a2e !important;
+	--button-active-bgcolor: rgb(92, 92, 94) !important;
+	--input-bgcolor: rgb(60, 60, 64) !important;
+	--input-border-color: rgb(90, 90, 94) !important;
+}
+@media (prefers-color-scheme: dark) {
+	.container.infobar {
+		background-color: #454545 !important;
+	}
+	.container.infobar button {
+		background-color: rgb(55, 55, 55) !important;
+	}
+}
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #urlbar {
+	border-color: var(--toolbar-field-border-color) !important;
+}
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #identity-icon-box {
+	--urlbar-box-focus-bgcolor: #474749 !important
+}
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] :is(.urlbar-icon, #identity-box) {
+	fill: #b1b1b3 !important
+}
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #star-button[starred] {
+	fill: #45a1ff !important;
+}
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] .tab-background[selected] {
+	background: #323234 !important;
+}
+/* System themes */
+:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"],
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"])
+#urlbar[breakout-extend] #urlbar-background {
+	border: solid 1px var(--photon-tab-outline) !important;
+}
+:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"],
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) 
+.urlbarView-row[selected] span {
+	--autocomplete-popup-highlight-background: var(--photon-tab-outline) !important;
+	color: var( --lwt-text-color) !important;
+}
+/* Accent color for the titlebar */
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] 
+#navigator-toolbox:not(:-moz-window-inactive) {
+	background: -moz-accent-color !important
+}
+:root[lwt-default-theme-in-dark-mode] * {
+	--lwt-accent-color: -moz-accent-color !important;
+}
+:root[lwt-default-theme-in-dark-mode] *:-moz-window-inactive {
+	--lwt-accent-color: revert !important;
+}
+/**/
+:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+#titlebar:not(:-moz-window-inactive) {
+	color: rgb(251, 251, 254) !important;
+}
+/* Comment ^^^^ if it's unreadable using your accent color */
+/**/
+:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+#new-tab-button:not(:-moz-window-inactive), 
+:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+#tabs-newtab-button:not(:-moz-window-inactive) {
+	fill: rgb(251, 251, 254) !important;
+}
+/* Comment ^^^^ if it's unreadable using your accent color */
+/* All themes */
+/* Use photons default outline on themes with no border */
+#tabbrowser-tabs[style*="--lwt-tab-line-color: rgba(0, 0, 0, 0)"] {
+	--lwt-tab-line-color: var(--photon-tab-outline) !important;
+}

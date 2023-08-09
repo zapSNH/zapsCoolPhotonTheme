@@ -1,0 +1,313 @@
+/* zap's photon theme */
+/* will be much less documented */
+:root {
+	--photon-primary-border-radius: 4px;
+	--photon-secondary-border-radius: 2px;
+	--content-css: 1px;
+}
+@-moz-document url-prefix("about:") {
+	* {
+		--in-content-page-background: #f9f9fa !important;
+		--in-content-primary-button-text-color: white !important;
+	}
+	@media (prefers-color-scheme: dark) {	
+		* {
+		 	--in-content-page-background: #2a2a2e !important;
+			--in-content-accent-color: #0060df !important;
+			--checkbox-checked-bgcolor: #0060df !important;
+			--in-content-button-background: rgba(249, 249, 250, 0.15) !important;
+			--in-content-primary-button-background: #2a8aff !important;
+			--in-content-box-background: #202023 !important;
+			--in-content-box-border-color: #4b4b4e !important;
+			--in-content-button-background-hover: rgba(249,249,250,0.15) !important;
+			--in-content-button-background-active: rgba(249,249,250,0.2) !important;
+			--in-content-table-background: #202023 !important;
+		}
+	}
+	listheader, richlistbox, search-textbox, .info-box-container {
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	listheader {	
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+	richlistbox {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
+	button, menulist, #label-box, .category, .sidebar-footer-link {
+		font-weight: 400 !important;
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	.toggle-button {
+		border-radius: 8px !important;
+	}
+}
+@-moz-document url("about:privatebrowsing") {
+	* {
+		--in-content-page-background: #25003e !important;
+  }
+}
+@-moz-document url("about:protections") {
+	#protection-settings {
+		background-image: url("./resources/icons/settings.svg") !important;
+  }
+}
+@-moz-document url("about:newtab"), url("about:home") {
+	* {
+		--newtab-background-color-secondary: #fff !important;
+		--newtab-text-primary-color: #373737 !important;
+	}
+	.tile, .search-wrapper .search-handoff-button, .ds-card,
+	.card-outer, .card :not(.card-context), .icon-wrapper, .top-site-outer {
+		border-radius: var(--photon-primary-border-radius) !important;
+	}
+	.search-wrapper .search-handoff-button {
+		background-color: white !important;
+		border: solid 1px #c4c4c5 !important;
+	}
+	.customize-menu :not(.switch *), .icon.icon-settings {
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	.icon-settings, .home-section .external-link {
+		background-image: url(./resources/icons/settings.svg) !important;
+	}
+	.ds-card .img-wrapper img {
+		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
+	}
+	.sponsored-label {
+		display: none !important;
+	}
+	.logo-and-wordmark {
+		display: none !important;
+	}
+	.only-search .logo-and-wordmark {
+		display: flex !important;
+	}
+	.top-site-outer:hover {
+		background-color: #d7d7db !important;
+	}
+	.tile, .icon-wrapper .top-site-icon {
+		background-color: rgb(251, 251, 254) !important;
+	}
+	.top-site-outer .default-icon {
+		width: 75% !important;
+		height: 75% !important;
+		background-size: 100% !important;
+		background-color: rgb(251, 251, 254) !important;
+	}
+	.top-site-outer .tile .icon-wrapper {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.top-site-outer .tile .icon-wrapper::before {
+		translate: 0px 10px;
+		font-size: 100px !important;
+		opacity: 0.75 !important;
+	}
+	.top-sites > div:not([class])::before, .section-title {
+		content: "Top sites";
+		background-image: url(./resources/icons/glyph-topsites.svg) !important;
+		background-repeat: no-repeat;
+		background-position-y: 60%;
+		background-position-x: 12px;
+		-moz-context-properties: fill !important;
+		fill: var(--newtab-text-primary-color) !important;
+		margin-left: -10px;
+		padding-left: 32px;
+		translate: 24px 0px;
+		color: var(--newtab-text-primary-color);
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 20px;
+		cursor: text;
+	}
+	section[data-section-id="topstories"] .section-title {
+		background-image: url(./resources/icons/pocket.svg) !important;
+	}
+	section[data-section-id="highlights"] .section-title {
+		background-image: url(./resources/icons/glyph-highlights-16.svg) !important;
+		background-size: 16px !important;
+	}
+	body {
+		background-color: #f9f9fa !important;
+	}
+	@media (prefers-color-scheme: dark) {	
+		* {
+		 	--newtab-background-color-secondary: #38383d !important;
+		 	--newtab-text-primary-color: #cfcfd1 !important;
+			--newtab-overlay-color: #2a2a2ad8 !important;
+		}
+		body {
+			background-color: #2a2a2e !important;
+		}
+		.search-wrapper .search-handoff-button {
+			background-color: #38383d !important;
+			border: solid 1px #5f5f63 !important;
+		}
+	 .top-site-outer:hover {
+			background-color: #4a4a4f !important;
+		}
+	}
+}
+@-moz-document url-prefix("about:preferences"), url("about:addons") {
+	* {
+		--in-content-page-background: #f9f9fa !important;
+		--in-content-primary-button-text-color: white !important;
+	}
+	listheader, richlistbox, search-textbox, .info-box-container {
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	listheader {	
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+	richlistbox {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
+	button, menulist, #label-box, .category, .sidebar-footer-link {
+		font-weight: 400 !important;
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	checkbox[checked] .checkbox-check {
+		background-image: url(./resources/icons/check.svg) !important;
+		-moz-context-properties: fill, fill-opacity !important;
+		fill: white !important;
+		fill-opacity: 1 !important;
+	}
+	.category:is([current], [selected]), .tab-group *[selected] {
+		color: #45a1ff !important;
+	}
+	checkbox:not([disabled="true"]):hover > .checkbox-check[checked],
+	radio:not([disabled="true"])[selected]:hover > .radio-check, .reload-tabs-button:hover {
+		background-color: var(--blue-70) !important;
+	}
+	checkbox:not([disabled="true"]):active > .checkbox-check[checked],
+	radio:not([disabled="true"])[selected]:active > .radio-check, .reload-tabs-button:active {
+		background-color: var(--blue-80) !important;
+	}
+	.text-link:not(.sidebar-footer-link), addon-details a {
+		color: -moz-nativehyperlinktext !important;
+	}
+	#category-general > .category-icon {
+		list-style-image: url("./resources/icons/settings.svg") !important;
+	}
+	#category-home > .category-icon {
+		list-style-image: url("./resources/icons/home.svg") !important;
+	}
+	#category-search > .category-icon {
+		list-style-image: url("./resources/icons/find-in-page.svg") !important;
+	}
+	#category-privacy > .category-icon {
+		list-style-image: url("./resources/icons/security-state-secure.svg") !important;
+	}
+	#category-sync > .category-icon {
+		list-style-image: url("./resources/icons/sync.svg") !important;
+	}
+	#category-experimental > .category-icon {
+		list-style-image: url("./resources/icons/glyph-experiments.svg") !important;
+	}
+	.addons-icon {
+		list-style-image: url("./resources/icons/extensions.svg") !important;
+	}
+	.help-icon {
+		list-style-image: url("./resources/icons/help1.svg") !important;
+	}
+	#trackingProtectionShield {
+		list-style-image: url(./resources/icons/tracking-protection-big.svg) !important;
+	}
+	.indent {
+		-moz-context-properties: fill, fill-opacity !important;
+		fill: currentColor !important;
+		fill-opacity: 1 !important;
+	}
+	.content-blocking-extra-blocking-desc {
+		display: none !important;
+	}
+	.extra-information-label.social-media-option {
+		list-style-image: url(./resources/icons/socialblock-disabled.svg) !important;
+	}
+	.extra-information-label.cross-site-cookies-option {
+		list-style-image: url(./resources/icons/3rdpartycookies-disabled.svg) !important;
+	}
+	.extra-information-label[class*="trackers-option"] {
+		list-style-image: url(./resources/icons/tracker-image-disabled.svg) !important;
+	}
+	.extra-information-label.cryptominers-option {
+		list-style-image: url(./resources/icons/cryptominers-disabled.svg) !important;
+	}
+	.extra-information-label.fingerprinters-option {
+		list-style-image: url(./resources/icons/fingerprinters-disabled.svg) !important;
+	}
+    #contentBlockingTrackingProtectionCheckbox > .checkbox-label-box {
+        list-style-image: url("./resources/icons/tracker-image.svg") !important;
+    }
+  
+	#contentBlockingTrackingProtectionCheckbox[checked] > .checkbox-label-box {
+        list-style-image: url("./resources/icons/tracker-image-disabled.svg") !important;
+	}
+
+	#contentBlockingBlockCookiesCheckbox > .checkbox-label-box {
+        list-style-image: url("./resources/icons/3rdpartycookies.svg") !important;
+	}
+
+	#contentBlockingBlockCookiesCheckbox[checked] > .checkbox-label-box {
+        list-style-image: url("./resources/icons/3rdpartycookies-disabled.svg") !important;
+	}
+
+	#contentBlockingCryptominersCheckbox > .checkbox-label-box {
+		list-style-image: url("./resources/icons/cryptominers.svg") !important;
+	}
+
+	#contentBlockingCryptominersCheckbox[checked] > .checkbox-label-box {
+        list-style-image: url("./resources/icons/cryptominers-disabled.svg") !important;
+	}
+
+	#contentBlockingFingerprintersCheckbox > .checkbox-label-box {
+        list-style-image: url("./resources/icons/fingerprinters.svg") !important;
+	}
+
+	#contentBlockingFingerprintersCheckbox[checked] > .checkbox-label-box {
+        list-style-image: url("./resources/icons/fingerprinters-disabled.svg") !important;
+	}
+	.info-icon {
+        list-style-image: url("./resources/icons/info.svg") !important;
+	}
+	.reload-tabs-button {
+        list-style-image: url("./resources/icons/reload.svg") !important;
+	}
+	@media (prefers-color-scheme: dark) {	
+		* {
+		 	--in-content-page-background: #2a2a2e !important;
+			--in-content-accent-color: #0060df !important;
+			--checkbox-checked-bgcolor: #0060df !important;
+			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
+			--in-content-primary-button-background: #0060df !important;
+			--in-content-box-background: #202023 !important;
+			--in-content-box-border-color: #4b4b4e !important;
+			--in-content-button-background-hover: rgba(249, 249, 250, 0.15) !important;
+			--in-content-button-background-active: rgba(249,249,250,0.2) !important;
+		}
+	}
+}
+@-moz-document url("about:addons") {
+	img[src="chrome://global/skin/icons/settings.svg"] {
+		content: url(./resources/icons/settings.svg) !important;
+	}
+	#help-button img {
+		content: url(./resources/icons/help1.svg) !important;
+	}
+	.category[name="discover"] {
+		background-image: url("./resources/icons/glyph-highlights-16.svg") !important
+	}
+	.category[name="extension"] {
+		background-image: url("./resources/icons/extensions.svg") !important;
+	}
+	.category[name="theme"] {
+		background-image: url("./resources/icons/personalize.svg") !important;
+	}
+	.category[name="plugin"] {
+		background-image: url("./resources/icons/plugin.svg") !important;
+	}
+}

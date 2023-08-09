@@ -1,0 +1,517 @@
+/* Icons */
+/* >:D */
+:root {
+	--icons-css: 1px;
+}
+/* More visible close button */
+.tab-close-button {
+	list-style-image: url(./icons/close-icon2.svg) !important;
+	-moz-context-properties: stroke !important;
+	stroke: currentColor !important;
+  fill-opacity: 1 !important;
+	stroke-linecap: round !important;
+}
+/* Changes the Firefox logo to that of the Photon grayscale one */
+#identity-box.chromeUI > #identity-icon-box > #identity-icon {
+	list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+}
+/* Changes the connection icons to Photon's */
+/* Go to about:config and change security.secure_connection_icon_color_gray to false for the green icon */
+#identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
+	list-style-image: url(./icons/connection-secure.svg) !important
+}
+#identity-box.notSecure #identity-icon {
+	list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
+}
+#identity-box.certErrorPage #identity-icon {
+	list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
+}
+#identity-box.unknownIdentity #identity-icon {
+	list-style-image: url(./icons/info.svg) !important;
+}
+#identity-box.mixedDisplayContent #identity-icon {
+	list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
+}
+/* Changes the search icon to Photon's */
+#identity-box.localResource > #identity-icon-box > #identity-icon,
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+	list-style-image: url(./icons/find-in-page.svg) !important
+}
+/* Changes the tracking protection icons to Photon's */
+#tracking-protection-icon-container[aria-label*="No trackers"] > #tracking-protection-icon-box > #tracking-protection-icon {
+	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important
+}
+#tracking-protection-icon-container[aria-label*="OFF"] > #tracking-protection-icon-box > #tracking-protection-icon {
+	list-style-image: url(./icons/tracking-protection-disabled.svg) !important
+}
+#tracking-protection-icon-container[aria-label*="Blocking"] > #tracking-protection-icon-box > #tracking-protection-icon {
+	list-style-image: url(./icons/tracking-protection.svg) !important
+}
+/* Changes the extension icon to Photon's */
+#identity-box.extensionPage #identity-icon {
+	list-style-image: url(./icons/extensions.svg) !important
+}
+/* Ensures that you can see the tracking protection icon in dark-mode */
+@media (prefers-color-scheme: dark) {
+	#tracking-protection-icon-container[aria-label*="Blocking"] > #tracking-protection-icon-box > #tracking-protection-icon {
+		/*
+		list-style-image: url(./icons/tracking-protection-dark-theme.svg) !important;
+		*/
+		list-style-image: url(./icons/tracking-protection.svg) !important;
+		filter: brightness(200%) hue-rotate(-10deg)
+	}
+}
+
+/* Panel icons */
+/* I was too lazy to do all of them :P */
+#permissions-granted-icon {
+	list-style-image: url(./icons/permissions.svg) !important;
+}
+.autoplay-media-icon.blocked-permission-icon {
+	list-style-image: url(./icons/autoplay-media-blocked.svg) !important;
+}
+.autoplay-media-icon:not(.blocked-permission-icon) {
+	list-style-image: url(./icons/autoplay-media.svg) !important;
+}
+.desktop-notification-icon.blocked-permission-icon {
+	list-style-image: url(./icons/desktop-notification-blocked.svg) !important;
+}
+.desktop-notification-icon:not(.blocked-permission-icon) {
+	list-style-image: url(./icons/desktop-notification.svg) !important;
+}
+.geo-icon.blocked-permission-icon {
+	list-style-image: url(./icons/geo-blocked.svg) !important;
+}
+.geo-icon:not(.blocked-permission-icon) {
+	list-style-image: url(./icons/geo.svg) !important;
+}
+.webRTC-selectDevice-icon.blocked-permission-icon {
+	list-style-image: url(./icons/camera-blocked.svg) !important;
+}
+.webRTC-selectDevice-icon:not(.blocked-permission-icon) {
+	list-style-image: url(./icons/camera.svg) !important;
+}
+#addons-notification-icon {
+	list-style-image: url(./icons/extensions.svg) !important;
+}
+.identity-popup-security-connection {
+  list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
+	stroke: red !important;
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill, stroke !important;
+}
+#identity-popup[connection="secure"] .identity-popup-security-connection {
+  list-style-image: url(./icons/connection-secure.svg) !important;/*
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill, stroke !important;
+	width: 1px !important;
+	height: 1px !important;*/
+}
+#identity-popup[ciphers="weak"] .identity-popup-security-connection,
+#identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
+  list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
+	/*stroke: #ebc778 !important;
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill, stroke !important;*/
+}
+/* Context menu ">" icon */
+#protections-popup-mainView .subviewbutton-nav:not(.notFound)::after,
+#identity-popup-mainView .subviewbutton-nav::after,
+.widget-overflow-list .subviewbutton-nav::after,
+.PanelUI-subView .subviewbutton-nav::after,
+.menu-right {
+	content: url(./icons/back-12.svg) !important;
+	scale: -1 1 !important;
+}
+.menu-right {
+	padding-inline: 4px !important;
+	margin-right: 0 !important;
+}
+/* Photonizes the icons */
+/* This should be self-explanatory */
+#back-button, #context-back {
+	list-style-image: url(./icons/back.svg) !important;
+}
+#forward-button, #context-forward {
+	list-style-image: url(./icons/forward.svg) !important;
+}
+#reload-button, #context-reload {
+	list-style-image: url(./icons/reload.svg) !important;
+}
+#stop-button, #context-stop {
+	list-style-image: url(./icons/stop.svg) !important;
+}
+#home-button {
+	list-style-image: url(./icons/home.svg) !important;
+}
+/* Reload button animation */
+/* from github.com/1280px/rainfox, check out the theme! */
+/* fixed version by me */
+:root:not([customizing]) #stop-reload-button[animate] 
+	> #reload-button 
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image {
+	background-image: url("./icons/stop-to-rel.svg") !important;
+	width: 468px !important;
+	height: 20px !important; 
+}
+:root:not([customizing]) #stop-reload-button[animate] 
+	> #stop-button
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image {
+	background-image: url("./icons/rel-to-stop.svg") !important;
+	width: 468px !important;
+	height: 20px !important; 
+}
+:root:not([customizing]) #stop-reload-button[animate] 
+	> #reload-button:not([displaystop]) 
+	> .toolbarbutton-animatable-box
+	> .toolbarbutton-animatable-image,
+:root:not([customizing]) #stop-reload-button[animate] 
+	> #stop-button:not([disabled]) 
+	> .toolbarbutton-animatable-box
+	> .toolbarbutton-animatable-image {
+  animation-name: userChrome-reload-to-stop !important; 
+  transition: none !important; 
+}
+:root:not([customizing]) #reload-button:not([displaystop]) 
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image,
+:root:not([customizing]) #stop-button:not([disabled]) 
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image {
+	animation-timing-function: steps(25) !important;
+	animation-duration: .3s !important;
+}
+:root:not([customizing]) #stop-reload-button:not([animate]) 
+	> :is(#stop-button, #reload-button)
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image  {
+	translate: -1px !important;
+}
+:root:not([customizing]) #stop-reload-button[animate]
+	> :is(#stop-button, #reload-button)
+	> .toolbarbutton-animatable-box 
+	> .toolbarbutton-animatable-image  {
+	translate: 1px !important;
+}
+@keyframes userChrome-reload-to-stop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-450px) } 
+}
+/* end credits */
+#star-button, #context-bookmarkpage {
+	list-style-image: url(./icons/bookmark-hollow.svg) !important;
+}
+#star-button[starred], #context-bookmarkpage[starred] {
+	list-style-image: url(./icons/bookmark.svg) !important;
+}
+#reader-mode-button-icon {
+	list-style-image: url(./icons/readerMode.svg) !important;
+}
+#downloads-indicator-anchor {
+	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
+}
+/* I find Proton's download animation to be much nicer and I can't be bothered to remake the animation so I partly photonized the download progress indicator */
+#downloads-indicator-progress-outer {
+	border-width: 2px !important;
+	border-color: var(--toolbarbutton-icon-fill) !important;
+}
+#downloads-indicator-progress-inner {
+	width: 12px !important;
+	height: 12px !important;
+}
+#library-button {
+	list-style-image: url(./icons/library.svg) !important;
+}
+#sidebar-button {
+	list-style-image: url(./icons/sidebars.svg) !important;
+}
+#history-panelmenu {
+	list-style-image: url(./icons/history.svg) !important;
+}
+#bookmarks-menu-button {
+	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+}
+/* I don't have pocket so please tell me if there's an issue */
+#save-to-pocket-button {
+	list-style-image: url(./icons/pocket-outline.svg) !important;
+}
+#save-to-pocket-button[open] {
+	list-style-image: url(./icons/pocket.svg) !important;
+}
+#find-button {
+	list-style-image: url(./icons/find-in-page.svg) !important;
+}
+#add-ons-button {
+	list-style-image: url(./icons/extensions.svg) !important;
+}
+#sync-button {
+	list-style-image: url(./icons/sync.svg) !important;
+}
+#new-window-button {
+	list-style-image: url(./icons/new-window.svg) !important;
+}
+#preferences-button {
+	list-style-image: url(./icons/settings.svg) !important;
+}
+#fullscreen-button {
+	list-style-image: url(./icons/fullscreen.svg) !important;
+}
+#zoom-in-button image {
+	list-style-image: url(./icons/zoom-in.svg) !important;
+	padding-left: 8px !important;
+}
+#widget-overflow-fixed-list #zoom-in-button image {
+	padding-left: revert !important;
+}
+#zoom-out-button {
+	list-style-image: url(./icons/zoom-out.svg) !important;
+}
+#PlacesChevron,
+#nav-bar-overflow-button {
+	list-style-image: url(./icons/command-chevron.svg) !important;
+}
+#PlacesChevron[open],
+#nav-bar-overflow-button[open] {
+	rotate: 90deg
+}
+#import-button {
+	list-style-image: url(./icons/import.svg) !important;
+}
+#unified-extensions-button {
+	list-style-image: url(./icons/extensions.svg) !important;
+}
+.bookmark-item[container] {
+	list-style-image: url(./icons/folder.svg) !important;
+}
+#PanelUI-menu-button {
+	list-style-image: url(./icons/menu.svg) !important;
+}
+/* Tab scrollbuttons */
+#tabbrowser-arrowscrollbox {
+	--arrow-image: url(./icons/back-12.svg) !important;
+}
+#scrollbutton-down[part="scrollbutton-down"],
+#scrollbutton-up[part="scrollbutton-up"] {
+	list-style-image: var(--arrow-image, url("chrome://global/skin/icons/arrow-down-12.svg")) !important;
+}
+/* App menu icons */
+/* Makes the icons match the color scheme */
+#appMenu-multiView .subviewbutton::before,
+#appMenu-proton-update-banner::before,
+#downloadsHistory .button-icon,
+.subviewbutton > image {
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill !important;
+}
+/* Back-button when you're in a sub-panel */
+.subviewbutton-back image {	
+	list-style-image: url(./icons/back-12.svg) !important;
+	padding: 2px !important;
+}
+/* FF profile picture */
+#appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])
+	#appMenu-fxa-label2::before {
+	content: "";
+	display: -moz-inline-box;
+	width: 18px !important;
+	height: 18px !important;
+	border-radius: 50%;
+	background-size: 18px;
+	background-image: var(--avatar-image-url);
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 2px !important;
+	outline: solid #ffffff33 1px;
+}
+/* First section */
+#appMenu-new-tab-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/new-tab.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-new-window-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/new-window.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-new-private-window-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/privateBrowsing.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+
+/* Second section */
+#appMenu-bookmarks-button .toolbarbutton-icon {
+	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-history-button .toolbarbutton-icon {
+	list-style-image: url(./icons/history.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-downloads-button .toolbarbutton-icon {
+	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-passwords-button .toolbarbutton-icon {
+	list-style-image: url(./icons/login.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-extensions-themes-button .toolbarbutton-icon {
+	list-style-image: url(./icons/extensions.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+
+/* Third section */
+#appMenu-print-button2 .toolbarbutton-icon {
+	list-style-image: url("./icons/print1.svg");
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-save-file-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/save.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-find-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/find-in-page.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-translate-button .toolbarbutton-icon {
+	list-style-image: url(chrome://browser/skin/translations.svg);
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+/* This pushes down the find button and aligns the zoom seperator */
+#appMenu-translate-button {
+	margin-bottom: 8px !important;
+}
+/* Zoom controls */
+#appMenu-zoom-controls toolbarbutton {
+	/*display: block !important;*/
+}
+#appMenu-zoom-controls toolbarbutton:not(:last-child) .toolbarbutton-icon {
+	border-radius: 50% !important;
+}
+#appMenu-zoom-controls toolbarbutton:not(:hover, :active, :last-child) .toolbarbutton-icon {
+	background-color: color-mix(in srgb, transparent 25%, var(--button-bgcolor)) !important;
+}
+/* Separators */
+#appMenu-zoom-controls::after {
+	content: "";
+	display: block;
+	translate: 0 -17px;
+	width: 1px;
+	height: 1px;
+	border-bottom: 1px solid var(--panel-separator-color);
+	scale: 1000 1 !important;
+}
+#appMenu-zoom-controls::before {
+	content: "";
+	display: block;
+	background-image: url(./icons/zoom.svg);
+	background-repeat: no-repeat;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	width: 16px;
+	height: 16px;
+}
+#appMenu-zoom-controls toolbarbutton::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 24px;
+	border-left: 1px solid var(--panel-separator-color);
+	margin-right: -1px;
+}
+/* Padding fixes */
+#appMenu-zoom-controls toolbarbutton image {
+	padding: 2px !important;
+}
+#appMenu-zoom-controls toolbarbutton {
+	padding: 0px 8px 0px 0px !important;
+}
+#appMenu-fullscreen-button2 {
+	margin-right: -11px !important;
+}
+/* Hover color */
+#appMenu-zoomReduce-button2:hover image,
+#appMenu-zoomEnlarge-button2:hover image {
+	background: var(--panel-item-hover-bgcolor) !important;
+}
+/* Icons */
+#appMenu-zoomReduce-button2 image {
+	list-style-image: url(./icons/zoom-out.svg) !important;
+}
+#appMenu-zoomEnlarge-button2 image {
+	list-style-image: url(./icons/zoom-in.svg) !important;
+}
+#appMenu-fullscreen-button2 image {
+	list-style-image: url(./icons/fullscreen.svg) !important;
+}
+#appMenu-fullscreen-button2[checked] image {
+	list-style-image: url(./icons/fullscreen-exit.svg) !important;
+}
+
+/* Fifth section */
+#appMenu-settings-button .toolbarbutton-icon {
+	list-style-image: url(./icons/settings.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-more-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/developer.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-help-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/help.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	width: 16px !important;
+}
+
+/* Exit icon */
+#appMenu-quit-button2 .toolbarbutton-icon {
+	list-style-image: url(./icons/quit.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+/* Margin fixes */
+#appMenu-help-button2 + toolbarseparator {
+	margin-bottom: 4px !important;
+}
+#appMenu-fxa-status2 + toolbarseparator {
+	margin-top: 4px !important;
+}
+/* Favicons */
+.tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+	content: url(./icons/settings.svg) !important;
+}
+.tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"] {
+	content: url(./icons/extensions.svg) !important;
+}
+.tab-icon-image[src="chrome://browser/skin/customize.svg"] {
+	content: url(./icons/personalize.svg) !important;
+}
+.tab-icon-image:not([src]) {
+	content: url(./icons/globe1.svg) !important;
+}
+/* URLBar icons */
+#urlbar-go-button {
+	list-style-image: url(./icons/forward.svg) !important;
+}
+#urlbar-anon-search-settings image {
+	list-style-image: url(./icons/settings.svg) !important;
+}
+#urlbar-engine-one-off-item-tabs image {
+	list-style-image: url(./icons/tab.svg) !important;
+}
+#urlbar-engine-one-off-item-history image {
+	list-style-image: url(./icons/history.svg) !important;
+}
+.urlbarView-favicon[src="chrome://browser/skin/history.svg"] {
+	content: url(./icons/history.svg) !important;/*
+	background-image: url(./icons/history.svg) !important;*/;
+}
+.urlbarView-favicon[src="chrome://global/skin/icons/search-glass.svg"] {
+	content: url(./icons/find-in-page.svg) !important;/*
+	background-image: url(./icons/find-in-page.svg) !important;*/
+}
+#translations-button-locale {
+	margin: 0px !important;
+}

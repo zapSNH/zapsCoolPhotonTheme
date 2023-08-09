@@ -1,0 +1,211 @@
+/* Panels */
+/* Full-width menu seperators */
+:root {
+	--panels-css: 1px;
+}
+menupopup menuseparator {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+panelview vbox toolbarseparator, panelview toolbarseparator,
+.cui-widget-panel toolbarseparator {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+toolbarseparator {
+	margin: 3px !important;
+}
+#editBookmarkSeparator {
+	margin-top: 10px !important;
+}
+panel toolbarseparator {
+	margin-inline: 0 !important;
+}
+menuitem[disabled="true"] {
+	pointer-events: none !important;
+	opacity: 1 !important;
+	/* This fixes the disabled buttons not showing up on light themes but has a downside of making the button grayscale */
+	/* You can remove this if you're not suffering from this problem */
+	color: GrayText !important;
+}
+
+/* Fixes the border for the "Photon Dark theme" */
+@media (prefers-color-scheme: dark) {
+	slot[part="content"]:only-child {
+		border-color: #27272B !important;
+	}
+}
+:is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) toolbarbutton {
+	margin: 0 !important;
+}
+/* Makes the menu items Photon sized and removes the rounding of the items */
+.panel-subview-body toolbarbutton,
+.cui-widget-panel toolbarbutton:not(.subviewbutton-back),
+.cui-widget-panel toolbaritem, #OtherBookmarksPopup menuitem,
+[placespopup] :is(menuitem) {
+	border-radius: 0px !important;
+	margin: 0px !important;
+	padding: 0px 11px !important;
+}
+panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button) {
+	border-radius: 0px !important;
+	margin: 0px !important;
+}
+/* Fixes for some menu button stuff */
+/* i hate specifity */
+:is(panelview, .panel-subview-body)
+toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info-button) {
+	margin: 1px 0px !important;
+}
+.panel-info-button {
+	margin: 8px !important;
+	border-radius: inherit !important;
+}
+.panel-subview-body {
+	padding: 4px 0 !important;
+}
+.subviewbutton-back {
+	margin: -4px 0px !important;
+	margin-top: -6px !important;
+}
+.subview-subheader {
+	margin-left: 2px !important;
+}
+menuitem, menu {
+	padding: 2px 10px !important;
+}
+#context-navigation menuitem {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#appMenu-quit-button2 {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.panel-subview-footer-button, .cui-widget-panel toolbarbutton:is(.panel-subview-footer-button) {
+	margin-bottom: 4px !important;
+	margin-top: 1px !important;
+}
+/* Dims the shortcut items */
+.panel-subview-body > toolbarbutton:not([disabled])[shortcut*="+"]::after {
+	opacity: .5 !important;
+}
+/* Makes the zoom controls align with the menu buttons */
+#appMenu-zoom-controls2 {
+	margin: 0 !important;
+	padding: 0px 11px !important;
+}
+/* Photon like tab tooltips */
+/* browser.proton.places-tooltip.enabled should be true */
+/* Remove if unwanted */
+#tabbrowser-tab-tooltip vbox {
+	border-radius: var(--photon-border-radius) !important;
+	background-color: var(--arrowpanel-background) !important;
+	box-shadow: 0px 0px 4px #0003 !important;
+}
+#tabbrowser-tab-tooltip {
+	font-weight: 400 !important;
+}
+/* Makes the size of the Firefox account button in the app menu smaller */
+#appMenu-fxa-status2 {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#appMenu-fxa-label2 {
+	padding: 0 8px !important;
+	margin: 0 !important;
+}
+/* Random button that is big */
+#overflowMenu-customize-button {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+/* Photon Downloads panel */
+#downloadsFooterButtons > toolbarseparator {
+	margin: 0 !important;
+}
+/* 9px bottom padding looks better than 8px since there's a separator up top */
+#downloadsHistory {
+	margin: 0px !important;
+	padding-bottom: 9px !important;
+}
+#downloadsPanel-mainView {
+	padding: 0 !important;
+}
+.downloadTypeIcon {
+	margin-left: 8px !important;
+}
+/* Icons but too lazy to put them in icons.css */
+.download-state .downloadButton.downloadIconShow image {
+	list-style-image: url(./icons/folder.svg) !important;
+}
+.download-state .downloadButton.downloadIconRetry image {
+	list-style-image: url(./icons/reload.svg) !important;
+}
+.download-state .downloadButton.downloadIconCancel image {
+	list-style-image: url(./icons/stop.svg) !important;
+}
+/* Bigger Buttons */
+.download-state .downloadButton {
+	width: 48px !important;
+	margin-inline-end: -4px !important;
+}
+.download-state {
+	margin-bottom: 0 !important;
+}
+.downloadButton {
+	height: 52.2px !important;
+}
+/* Panel button styling */
+.panel-footer {
+	justify-content: center !important;
+	margin: 0 !important;
+	margin-top: 16px !important
+}
+#editBookmarkPanelBottomButtons {
+	margin-bottom: -4px !important;
+}
+#editBookmarkPanelBottomButtons button {
+	width: 0px !important;
+}
+.panel-footer > button {
+	border-radius: 0 !important;
+	margin: 0 !important;
+	margin-inline: 0 !important;
+	flex-grow: 1 !important;
+	min-height: 38px !important;
+}
+.popup-notification-primary-button, #editBookmarkPanelDoneButton {
+	background-color: #0074df !important;
+	color: white !important;
+	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
+}
+.popup-notification-primary-button:hover, #editBookmarkPanelDoneButton:hover {
+	background-color: #0a84ff !important;
+}
+.popup-notification-primary-button:active, #editBookmarkPanelDoneButton:active {
+	background-color: #0064cf !important;
+}
+.popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
+	background-color: #aaa2 !important;
+	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
+}
+#editBookmarkPanelRemoveButton {
+	background-color: #0002 !important;
+}
+.popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
+	background-color: #aaa4 !important;
+}
+.popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
+	background-color: #1113 !important;
+}
+/* Padding */
+.permission-popup-section {
+	padding-bottom: 4px !important;
+}
+#overflowMenu-customize-button {
+	margin-bottom: 3px !important;
+}
+#appMenu-fxa-status2:not([fxastatus]) {
+  padding-inline: 8px 8px !important
+}

@@ -1,0 +1,58 @@
+/* Misc. stuff */
+:root {
+	--misc-css: 1px;
+}
+/* Libraries */
+@-moz-document url(chrome://browser/content/places/places.xhtml) {
+	#forward-button, #searchFilter, #placesMenu > menu {
+		border-radius: var(--photon-border-radius) !important;
+	}
+	#back-button:hover {
+		background-color: transparent !important;
+	}
+	:is(#back-button, #forward-button) > image {
+		padding: 5px !important;
+	}
+	#organizeButton {
+		list-style-image: url("./icons/settings.svg") !important;
+	}
+	#viewMenu {
+		list-style-image: url("./icons/sort.svg") !important;
+	}
+	#maintenanceButton {
+		list-style-image: url("./icons/import-export.svg") !important;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		* {
+			--organizer-pane-background: #323234 !important;
+			--organizer-toolbar-background: #323234 !important;
+			--organizer-pane-field-border-color: transparent !important;
+			--dark-menu-border-color: #5b5b5d !important;
+			--organizer-border-color: #3e3e40 !important;
+			--organizer-content-background: #222225 !important;
+			--organizer-toolbar-field-background: #222225 !important;
+			--organizer-hover-background: rgb(83,83,85) !important;
+			--organizer-selected-background: rgb(92,92,95) !important;
+		}
+		treecol[data-l10n-id*="places-view-sort-col"] {
+			background-color: rgb(50,50,52) !important;
+		}
+		window {
+			background: #333 !important;
+		}
+	}
+}
+/* Aero glass/Mica for faitfulPhoton *
+@supports -moz-bool-pref("photon.win-glass") {
+	#navigator-toolbox-background, #navigator-toolbox, html {
+    background: transparent !important;
+		appearance: -moz-win-glass !important;
+	}
+	[class*="titlebar"][class*="button"] {
+		list-style-image: none !important;
+	}
+	[class*="titlebar"][class*="button"][class*="close"] {
+		opacity: 0.5 !important;
+	}
+}*/

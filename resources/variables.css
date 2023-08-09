@@ -1,0 +1,71 @@
+/* Variables */
+/* fun fact: the mega-ultra-giga-tera-peta-zeta-exa-giganto-big-chungus-bar is smaller in proton than in photon */
+/* Change these to change some stuff */
+/* If you're using a dark theme or some colors are not applying, change the stuff thats in the @media query :) */
+:root {
+	--photon-back: transparent;
+	--photon-back-hover: transparent;
+	--photon-back-active: #0002;
+	--photon-back-outline: #2227;
+	--photon-back-shadow: #7771;
+	--photon-back-shadow-hover: #2225;
+	/* Border-radius things */
+	--photon-border-radius: 2px;
+	--photon-panel-border-radius: 0px;
+	--appmenu-icon-inline-end: 8px;
+	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
+	--arrowpanel-menuitem-border-radius: 0px !important;
+	--variables-css: 1px;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--photon-back: #fff3;
+		--photon-back-hover: #fff5;
+		--photon-back-active: #fff7;
+		--photon-back-outline: #222a;
+		--photon-back-shadow: #2225;
+		--photon-back-shadow-hover: #222a;
+	}
+}
+
+/* Makes a bunch of things have Photon's border rounding */
+/* Change the two border radius vars up top to change these */
+#urlbar-background, #searchbar, input,
+toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
+#identity-icon-box, #tabs-newtab-button image, #tracking-protection-icon-container,
+menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
+#scrollbutton-up, #scrollbutton-down, 
+button, button hbox, hbox menulist,
+/* i'm lazy */
+#urlbar :not([class*="icon"], [class*="urlbarView-body"], .urlbar-page-action), #urlbar-go-button,
+findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section * {
+	border-radius: var(--photon-border-radius) !important;
+	--panel-border-radius: var(--photon-panel-border-radius) !important;
+}
+#PlacesToolbar menupopup, #downloadsPanel-multiView *,
+.urlbar-page-action {
+	border-radius: 0px !important;
+}
+menupopup {
+	--panel-border-radius: var(--photon-panel-border-radius) !important;
+	border-radius: var(--photon-panel-border-radius) !important;
+	/* Makes the colors of the context menus the same as the app menu */
+	--menu-background-color: var(--arrowpanel-background) !important; /* Change the #0aa5ff to whatever hex color you want */
+	--menuitem-hover-background-color: color-mix(in srgb, transparent 60%, highlight) !important;
+	--menu-color: var(--arrowpanel-color) !important;
+	--panel-border-color: var(--arrowpanel-border-color) !important;
+}
+menuseparator {
+	border-color: var(--panel-separator-color) !important;
+}
+/* ^^^^^ but for dark mode */
+@media (prefers-color-scheme: dark) {
+	menupopup {
+		--menuitem-hover-background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+		--panel-border-color: transparent !important;
+	}
+}
+/* Isn't actually in either Photon or Proton, but it's usefel for Side View */
+#sidebar {
+	max-width: 100vw !important;
+}

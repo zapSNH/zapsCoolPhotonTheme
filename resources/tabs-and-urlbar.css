@@ -1,0 +1,312 @@
+/* Tabs and Urlbar */
+:root {
+	--tabs-and-urlbar-css: 1px;
+}
+/* Changes the tab height */
+:root:not([uidensity="compact"], [uidensity="touch"]) {
+	--tab-min-height: 32px !important;
+}
+:root[uidensity="compact"] {
+	--tab-min-height: 26px !important;
+}
+/* Makes the tab photon-like + adds a transition */
+/* Delete the transition things if unwanted */
+.tab-close-button {
+	border-radius: var(--photon-border-radius) !important;
+	transition: background 0.2s !important;
+}
+.tabbrowser-tab > .tab-stack > .tab-background {
+	border-radius: 0 !important;
+	transition: background 0.2s !important;
+}
+.tab-background {
+	margin: 0 !important;
+	box-shadow: none !important
+}
+.tabbrowser-tab {
+	z-index: 1 !important;
+}
+/* Pushes the sound icon off to the side and makes the website favicon always show to make it
+so that the sound icon doesn't look out of place */
+.tabbrowser-tab:not([pinned]) .tab-icon-overlay {
+	margin-inline-start: 18px !important;
+	margin-inline-end: 0px !important;
+	border-radius: 0px !important;
+	transition: background 0.2s !important;
+	opacity: 1 !important;
+	padding: 0px !important;
+}
+.tab-icon-image {
+	opacity: 1 !important;
+}
+.tab-icon-image:not([busy]) {
+	display: block !important;
+}
+/* Fixes for pinned tabs */
+.tabbrowser-tab[pinned] .tab-icon-overlay {
+	transition: background 0.2s !important;
+	padding: 1px !important;
+	background-image: linear-gradient(var(--lwt-selected-tab-background-color, transparent),
+		var(--lwt-selected-tab-background-color, transparent)),
+		linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
+		var(--lwt-header-image, none) !important;
+}
+:root[sizemode=normal] .tabbrowser-tab[pinned] .tab-background {
+	height: 33px !important;
+}
+#navigator-toolbox:-moz-lwtheme .tabbrowser-tab:not([selected])[pinned] .tab-icon-overlay {
+	background: var(--lwt-accent-color) !important;
+}
+/* This will hide the label for pinned tabs cuz i'm lazy and dont wanna properly push the label off of the tab */
+.tabbrowser-tab[pinned] .tab-label-container {
+	display: none !important;
+}
+/* Photon sound icons */
+.tab-icon-overlay[soundplaying] {
+	list-style-image: url(./icons/tab-audio-playing.svg) !important;
+}
+.tab-icon-overlay[muted] {
+	list-style-image: url(./icons/tab-audio-muted.svg) !important;
+}
+.tab-icon-overlay[activemedia-blocked] {
+	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
+}
+.tabbrowser-tab:is([pinned][first-visible-tab]) {
+	margin: 0 !important;
+}
+/* Removes Proton's own border around the tab */
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+	border: none !important;
+}
+/* Hides the "PLAYING"/"MUTED"/"PICTURE-IN-PICTURE"/"AUTOPLAY BLOCKED" text */
+.tab-secondary-label {
+	display: none !important;
+}
+/* Adds the Photon highlight around the tab */
+/* NOTE: If you don't see the tab highlight or you want to change the highlight, then change --lwt-tab-line-color */
+.tab-background {
+	--lwt-tab-line-color: #0000 !important
+}
+.tab-background::before {
+  --lwt-tab-line-color: #0a84ff !important /* <<<<< */
+}
+.tab-background::before {
+	display: block;
+	content: "";
+	height: 2px;
+	transition: all .25s;
+	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
+}
+.tab-background:not([selected])::before {
+	scale: 0 1;
+	opacity: 0;
+	filter: grayscale(100%);
+}
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected])::before {
+	display: block;
+	content: "";
+	height: 2px;
+	scale: 1;
+	opacity: .5;
+	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
+	filter: grayscale(100%);
+}
+/**/
+:root[sizemode="normal"] .tab-background::before {
+	height: 3px !important;
+}
+/* Adds an effect to the highlight that wasn't there in Photon */
+/* Remove if unwanted */
+.tabbrowser-tab:hover > .tab-stack > .tab-background[selected]::before {
+	filter: brightness(125%) saturate(150%)
+}
+/* Removes the spacing between tabs */
+.tabbrowser-tab {
+	padding: 0 !important;
+}
+/* Makes the new tab button more Photon-like */
+#tabs-newtab-button, #new-tab-button {
+	width: 32px !important;
+	height: 32px !important;
+}
+:is(#tabs-newtab-button, #new-tab-button) > image {
+	padding: 6px !important;
+	width: 28px !important;
+	height: 28px !important;
+	list-style-image: url(./icons/add.svg) !important;
+}
+/* Photonize the All tabs button */
+#alltabs-button {
+	list-style-image: url(./icons/back-12.svg) !important;
+	rotate: -90deg
+}
+/* Adds back the Photon tab-separators */
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
+:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+.tabbrowser-tab:not([selected="true"], :hover) 
+.tab-stack::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 64px;
+	right: 0;
+	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+.tabbrowser-tab:not([selected="true"], [beforeselected-visible]) 
+.tab-stack::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 64px;
+	right: 0;
+	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"])[first-visible-tab] 
+.tab-stack::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 64px;
+	left: 0;
+	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+#tabbrowser-tabs::after {
+	display: none !important;
+}
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[first-visible-unpinned-tab] {
+	margin-inline-start: 0px !important;
+}
+/* Change the N in "left: Npx !important;" to different values if you're having issues or change left to right for rtl languages */
+.tabbrowser-tab[pinned][first-visible-tab] {
+	position: absolute !important;
+	left: 0px !important;
+}
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab[pinned][first-visible-tab] {
+	position: absolute !important;
+	left: 40px !important;
+}
+/* Makes the container tab label more-photon like */
+.tabbrowser-tab:not([pinned])[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+	translate: 0 30px !important;
+	border-radius: 0px !important;
+	margin-left: 30px !important;
+	margin-right: 30px !important;
+	transition: margin .2s !important
+}
+.tabbrowser-tab:not([pinned])[usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+.tabbrowser-tab[pinned][usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+	translate: 0 30px !important;
+	border-radius: 0px !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+	transition: margin .2s !important
+}
+.tabbrowser-tab[pinned][usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
+	margin-left: 2px !important;
+	margin-right: 2px !important;
+}
+
+/* Adds a separator between the tracking-protection icon and the rest of the urlbar */
+#tracking-protection-icon-container {
+	margin-right: 1px !important;
+}
+#tracking-protection-icon-container:not(:hover, :active, [open])::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: calc(var(--urlbar-height) - 8px);
+	right: -1px;
+	top: 2px;
+	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+/* Adds a separator between the Firefox/Nightly label and the urlbar */
+:is(:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], 
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
+#identity-box.chromeUI[pageproxystate="invalid"] #identity-icon-box {
+	margin-right: 5px !important;
+}
+:is(:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], 
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
+#identity-box.chromeUI #identity-icon-box::after {
+	content: "";
+	display: block;
+	translate: 8px 0px;
+	height: calc(var(--urlbar-height) - 8px);
+	border-left: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	opacity: 0
+}
+:is(:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], 
+:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
+#identity-box.chromeUI #identity-icon-box:not(:hover, :active, [open])::after {
+	opacity: 1;
+}
+/* Adds the Photon separator to the right of the hamburger menu button (the button with the three horizontal lines) */
+#PanelUI-menu-button::before {
+	content: "";
+	display: block;
+	height: 28px;
+	border-left: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	padding-right: 2px !important;
+}
+#PanelUI-menu-button {
+	padding-right: 2px !important;
+	padding-left: 0px !important;
+}
+
+/* Photonizes the back button */
+#back-button > image {
+	border-radius: 50% !important;
+	background-color: var(--photon-back) !important;
+	outline: var(--photon-back-outline) 1px solid;
+	box-shadow: 0px 0px 4px var(--photon-back-shadow) !important;
+	transition: box-shadow .2s !important;
+}
+#back-button:not([disabled]):hover > image {
+	background-color: var(--photon-back-hover) !important;
+	box-shadow: 0px 0px 5px var(--photon-back-shadow-hover) !important;
+}
+#back-button:not([disabled]):active > image {
+	background-color: var(--photon-back-active) !important;
+}
+@media (prefers-color-scheme: dark) {
+	#back-button {
+		fill: #cdcdcd !important;
+	}
+}
+/* Navigation button padding stuff */
+#nav-bar-customization-target {
+	padding-left: 2px !important;
+}
+#nav-bar-customization-target toolbarbutton {
+	padding-inline: 1px !important;
+}
+.container.infobar :is(.icon, .close) {
+	translate: 0 1px !important;
+}
+/* Full-size scrollbox buttons *//*
+#scrollbutton-down[part="scrollbutton-down"]:hover:not([disabled], .menupopup-scrollbutton),
+#scrollbutton-up[part="scrollbutton-up"]:hover:not([disabled], .menupopup-scrollbutton) {
+	border: 4px var(--toolbarbutton-hover-background) solid !important;
+}
+#scrollbutton-down[part="scrollbutton-down"]:hover:active:not([disabled], .menupopup-scrollbutton),
+#scrollbutton-up[part="scrollbutton-up"]:hover:active:not([disabled], .menupopup-scrollbutton) {
+	border: 4px var(--toolbarbutton-active-background) solid !important;
+	border-radius: 0 !important;
+}*/
+/* Makes the page-action buttons full sized */
+#page-action-buttons {
+	margin: -1px !important;
+}
+.urlbar-page-action {
+	padding-block: calc(var(--urlbar-icon-padding) + 1px) !important;
+	width: 30px !important;
+	height: 30px !important;
+}
+.urlbar-page-action image {
+	translate: 1px !important;
+}

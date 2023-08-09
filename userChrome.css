@@ -1,0 +1,13 @@
+/* zap's photon theme */
+/* General theme colors (If you're not using a light-weight theme/persona) */
+@import url(./resources/theme.css);
+/* Variables (colors, border-radii, padding, etc.) + some other stuff */
+@import url(./resources/variables.css);
+/* Tab and Urlbar design */
+@import url(./resources/tabs-and-urlbar.css);
+/* Icons */
+@import url(./resources/icons.css);
+/* Panels (App menu, context menus, popup menus, tooltips, etc.) */
+@import url(./resources/panels.css);
+/* Misc. stuff */
+@import url(./resources/misc.css);
