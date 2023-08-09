@@ -218,6 +218,6 @@ menuitem, menu {
 #contentAreaContextMenu menuitem .menu-text {
 	padding-left: 24px !important;
 }
-#context-sendpagetodevice {
+#context-sendpagetodevice, #contentAreaContextMenu menu {
 	padding-left: 34px !important;
 }
