@@ -11,6 +11,7 @@
 	--photon-back-shadow-hover: #2225;
 	/* Border-radius things */
 	--photon-border-radius: 2px;
+	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
 	--appmenu-icon-inline-end: 8px;
 	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
@@ -32,19 +33,23 @@
 /* Change the two border radius vars up top to change these */
 #urlbar-background, #searchbar, input,
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
-#identity-icon-box, #tabs-newtab-button image, #tracking-protection-icon-container,
+#identity-icon-box, #tabs-newtab-button image,
 menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
 button, button hbox, hbox menulist,
 /* i'm lazy */
-#urlbar :not([class*="icon"], [class*="urlbarView-body"], .urlbar-page-action), #urlbar-go-button,
+#urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section * {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
+#urlbar .urlbarView-row {
+	border-radius: var(--photon-border-radius-1) !important;
+}
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
-.urlbar-page-action {
-	border-radius: 0px !important;
+.urlbar-page-action, #tracking-protection-icon-container,
+#urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *) {
+	border-radius: 0 !important;
 }
 menupopup {
 	--panel-border-radius: var(--photon-panel-border-radius) !important;

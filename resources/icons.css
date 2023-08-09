@@ -3,6 +3,9 @@
 :root {
 	--icons-css: 1px;
 }
+.urlbar-page-action * {
+	transform: translateY(-1px)
+}
 /* More visible close button */
 .tab-close-button {
 	list-style-image: url(./icons/close-icon2.svg) !important;
@@ -39,10 +42,12 @@
 }
 /* Changes the tracking protection icons to Photon's */
 #tracking-protection-icon-container[aria-label*="No trackers"] > #tracking-protection-icon-box > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important
+	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important;
+	fill: var(--toolbarbutton-icon-fill) 
 }
 #tracking-protection-icon-container[aria-label*="OFF"] > #tracking-protection-icon-box > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection-disabled.svg) !important
+	list-style-image: url(./icons/tracking-protection-disabled.svg) !important;
+	fill: var(--toolbarbutton-icon-fill) 
 }
 #tracking-protection-icon-container[aria-label*="Blocking"] > #tracking-protection-icon-box > #tracking-protection-icon {
 	list-style-image: url(./icons/tracking-protection.svg) !important

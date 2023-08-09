@@ -221,7 +221,7 @@ so that the sound icon doesn't look out of place */
 	display: block;
 	height: calc(var(--urlbar-height) - 8px);
 	right: -1px;
-	top: 2px;
+	top: 3px;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
 }
 /* Adds a separator between the Firefox/Nightly label and the urlbar */
@@ -288,7 +288,7 @@ so that the sound icon doesn't look out of place */
 .container.infobar :is(.icon, .close) {
 	translate: 0 1px !important;
 }
-/* Full-size scrollbox buttons *//*
+/* Full-size scrollbox buttons */
 #scrollbutton-down[part="scrollbutton-down"]:hover:not([disabled], .menupopup-scrollbutton),
 #scrollbutton-up[part="scrollbutton-up"]:hover:not([disabled], .menupopup-scrollbutton) {
 	border: 4px var(--toolbarbutton-hover-background) solid !important;
@@ -297,15 +297,40 @@ so that the sound icon doesn't look out of place */
 #scrollbutton-up[part="scrollbutton-up"]:hover:active:not([disabled], .menupopup-scrollbutton) {
 	border: 4px var(--toolbarbutton-active-background) solid !important;
 	border-radius: 0 !important;
-}*/
+}
+/* URL bar */ 
+#urlbar {
+	--urlbar-height: 30px !important;
+}
+:root[uidensity="touch"] #urlbar {
+	--urlbar-height: 36px !important;
+}
+#urlbar:not([breakout-extend="true"]) #urlbar-background {
+  height: var(--urlbar-height);
+}
+:root:not([uidensity="touch"]) #urlbar[breakout-extend="true"] {
+	translate: 0 1px 
+}
+#urlbar-input-container {
+	margin-top: -1px !important;
+}
+:root[uidensity="touch"] #urlbar-input-container {
+	margin-top: 0px !important;
+}
+#urlbar:not([breakout-extend="true"]) #urlbar-input-container {
+	padding-inline: 0 !important;
+}
+#urlbar-input-container {
+	padding-inline: 5px !important;
+}
 /* Makes the page-action buttons full sized */
 #page-action-buttons {
 	margin: -1px !important;
 }
 .urlbar-page-action {
 	padding-block: calc(var(--urlbar-icon-padding) + 1px) !important;
+	height: calc(var(--urlbar-height) - 2px) !important;
 	width: 30px !important;
-	height: 30px !important;
 }
 .urlbar-page-action image {
 	translate: 1px !important;
