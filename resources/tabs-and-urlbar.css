@@ -126,6 +126,8 @@ so that the sound icon doesn't look out of place */
 }
 /* Makes the new tab button more Photon-like */
 #tabs-newtab-button, #new-tab-button {
+	margin-top: 1px !important;
+	margin-bottom: -1px !important;
 	width: 32px !important;
 	height: 32px !important;
 }
@@ -152,7 +154,7 @@ so that the sound icon doesn't look out of place */
 	right: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
 }
-.tabbrowser-tab:not([selected="true"], [beforeselected-visible]) 
+.tabbrowser-tab:not([selected="true"]) 
 .tab-stack::before {
 	content: "";
 	position: absolute;
@@ -161,7 +163,11 @@ so that the sound icon doesn't look out of place */
 	right: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
 }
-:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"])[first-visible-tab] 
+.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]) 
+.tab-stack::before {
+	border-right-color: transparent !important;
+}
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"]):first-child
 .tab-stack::after {
 	content: "";
 	position: absolute;
@@ -321,7 +327,18 @@ so that the sound icon doesn't look out of place */
 	padding-inline: 0 !important;
 }
 #urlbar-input-container {
-	padding-inline: 5px !important;
+	padding-left: 5px !important;
+}
+.urlbarView-favicon {
+	margin-inline: 0px !important;
+	margin-right: 10px !important;
+}
+.urlbarView-url {
+	margin-left: 26px !important;
+}
+/* Search icon */
+#identity-box.localResource #identity-icon-box {
+	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
 #page-action-buttons {

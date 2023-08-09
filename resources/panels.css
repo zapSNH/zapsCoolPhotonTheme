@@ -28,7 +28,9 @@ menuitem[disabled="true"] {
 	/* You can remove this if you're not suffering from this problem */
 	color: GrayText !important;
 }
-
+menuseparator {
+	padding-inline: 0 !important;
+}
 /* Fixes the border for the "Photon Dark theme" */
 @media (prefers-color-scheme: dark) {
 	slot[part="content"]:only-child {
@@ -208,4 +210,14 @@ menuitem, menu {
 }
 #appMenu-fxa-status2:not([fxastatus]) {
   padding-inline: 8px 8px !important
+}
+#context-navigation {
+	margin-inline: 4px !important;
+	margin-bottom: 1px !important;
+}
+#contentAreaContextMenu menuitem .menu-text {
+	padding-left: 24px !important;
+}
+#context-sendpagetodevice {
+	padding-left: 34px !important;
 }

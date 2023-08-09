@@ -8,6 +8,7 @@ Only tested on Firefox 118.0a1 (2023-08-08) on Windows 11
 Open `about:config` and set:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * `svg.context-properties.content.enabled` to `true`
+* `layout.css.has-selector.enabled` to `true`
 
 Click on the green code button and download the zip
 
