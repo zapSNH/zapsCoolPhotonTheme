@@ -2,7 +2,7 @@
 A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
 Only tested on Firefox 118.0a1 (2023-08-08) on Windows 11
-![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/eea185e1-a442-4231-8608-155a7e5ea46a)
+![unfaithton](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/a2690e89-774b-4c4d-9f02-ce160b025bbb)
 
 ## Installation
 Open `about:config` and set:
