@@ -329,6 +329,9 @@ so that the sound icon doesn't look out of place */
 #urlbar-input-container {
 	padding-left: 5px !important;
 }
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]) #urlbar-input-container {
+	padding-right: 5px !important;
+}
 .urlbarView-favicon {
 	margin-inline: 0px !important;
 	margin-right: 10px !important;
