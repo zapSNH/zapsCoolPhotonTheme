@@ -35,7 +35,7 @@
 		border-top-left-radius: 0 !important;
 		border-top-right-radius: 0 !important;
 	}
-	button, menulist, #label-box, .category, .sidebar-footer-link {
+	button, menulist, #label-box, .category, .sidebar-footer-link, input:not(type="radio") {
 		font-weight: 400 !important;
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
@@ -181,11 +181,11 @@
 	}
 	checkbox:not([disabled="true"]):hover > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:hover > .radio-check, .reload-tabs-button:hover {
-		background-color: var(--blue-70) !important;
+		background-color: var(--blue-40) !important;
 	}
 	checkbox:not([disabled="true"]):active > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:active > .radio-check, .reload-tabs-button:active {
-		background-color: var(--blue-80) !important;
+		background-color: var(--blue-60) !important;
 	}
 	.text-link:not(.sidebar-footer-link), addon-details a {
 		color: -moz-nativehyperlinktext !important;
