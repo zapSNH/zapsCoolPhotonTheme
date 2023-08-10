@@ -218,6 +218,21 @@ menuitem, menu {
 #contentAreaContextMenu menuitem .menu-text {
 	padding-left: 24px !important;
 }
-#context-sendpagetodevice, #contentAreaContextMenu menu {
+#context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), #context-reveal-password {
 	padding-left: 34px !important;
+}
+/* Enhanced TP Toggle */
+#protections-popup-tp-switch {
+	border-radius: 8px !important;
+	padding-block: 1px !important;
+}
+#protections-popup-tp-switch:not([enabled]) {
+	padding-left: 1px !important;
+	padding-right: 18px !important;
+}
+#protections-popup-tp-switch[enabled] {
+	padding-left: 18px !important;
+	padding-right: 1px !important;
+	background: var(--photon-accent-dark) !important;
+	border-color: var(--photon-accent) !important;
 }

@@ -26,12 +26,15 @@
 .tabbrowser-tab {
 	z-index: 1 !important;
 }
+.tabbrowser-tab[selected] {
+	z-index: 2 !important;
+}
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
 so that the sound icon doesn't look out of place */
 .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
 	margin-inline-start: 18px !important;
 	margin-inline-end: 0px !important;
-	border-radius: 0px !important;
+	border-radius: 1px !important;
 	transition: background 0.2s !important;
 	opacity: 1 !important;
 	padding: 0px !important;
@@ -167,7 +170,9 @@ so that the sound icon doesn't look out of place */
 .tab-stack::before {
 	border-right-color: transparent !important;
 }
-:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"]):first-child
+:root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
+[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
+[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
 .tab-stack::after {
 	content: "";
 	position: absolute;
@@ -228,7 +233,7 @@ so that the sound icon doesn't look out of place */
 	height: calc(var(--urlbar-height) - 8px);
 	right: -1px;
 	top: 3px;
-	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 }
 /* Adds a separator between the Firefox/Nightly label and the urlbar */
 :is(:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], 

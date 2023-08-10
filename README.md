@@ -10,6 +10,8 @@ Open `about:config` and set:
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
 
+Create `change security.secure_connection_icon_color_gray` as a boolean and set it to `false` if you want the green connection icon.
+
 Click on the green code button and download the zip
 
 ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/022952df-a69e-4b71-96c5-bc45dc9d84b8)

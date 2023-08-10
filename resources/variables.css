@@ -24,7 +24,7 @@
 	--tab-attention-icon-color: var(--photon-accent) !important;
 	--urlbar-popup-url-color: var(--photon-accent) !important;
 	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
-} 
+}
 @media (prefers-color-scheme: dark) {
 	:root {
 		--photon-back: #fff3;
@@ -39,6 +39,9 @@
 }
 :root[lwt-toolbar-field-brighttext] :is(#urlbar, #searchbar) {
 	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
+} 
+button {
+	--in-content-primary-button-background: var(--photon-accent) !important;
 }
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
@@ -50,7 +53,8 @@ menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
 button, button hbox, hbox menulist,
 /* i'm lazy */
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
-findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section * {
+findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
+.dialogBox {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
@@ -62,7 +66,7 @@ findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section * {
 #urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *) {
 	border-radius: 0 !important;
 }
-menupopup {
+:root menupopup, :root panel {
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 	border-radius: var(--photon-panel-border-radius) !important;
 	/* Makes the colors of the context menus the same as the app menu */

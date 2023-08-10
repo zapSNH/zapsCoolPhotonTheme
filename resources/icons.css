@@ -23,6 +23,13 @@
 #identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
 	list-style-image: url(./icons/connection-secure.svg) !important
 }
+/* Pretend it still exists */
+@supports not -moz-bool-pref("security.secure_connection_icon_color_gray") {
+	#identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
+		-moz-context-properties: fill !important;
+		fill: #12bc00 !important;
+	}
+}
 #identity-box.notSecure #identity-icon {
 	list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
 }
