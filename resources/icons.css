@@ -57,7 +57,7 @@
 	fill: var(--toolbarbutton-icon-fill) 
 }
 #tracking-protection-icon-container[aria-label*="Blocking"] > #tracking-protection-icon-box > #tracking-protection-icon {
-	list-style-image: url(./icons/tracking-protection.svg) !important
+	list-style-image: url(./icons/tracking-protection-animation.svg) !important
 }
 /* Changes the extension icon to Photon's */
 #identity-box.extensionPage #identity-icon {
@@ -69,8 +69,7 @@
 		/*
 		list-style-image: url(./icons/tracking-protection-dark-theme.svg) !important;
 		*/
-		list-style-image: url(./icons/tracking-protection.svg) !important;
-		filter: brightness(200%) hue-rotate(-10deg)
+		list-style-image: url(./icons/tracking-protection-animation-brighttext.svg) !important;
 	}
 }
 
@@ -208,7 +207,7 @@
 	> :is(#stop-button, #reload-button)
 	> .toolbarbutton-animatable-box 
 	> .toolbarbutton-animatable-image  {
-	translate: 1px !important;
+	translate: 1px -1px !important;
 }
 @keyframes userChrome-reload-to-stop {
   from { transform: translateX(0); }

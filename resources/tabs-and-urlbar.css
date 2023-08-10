@@ -157,7 +157,13 @@ so that the sound icon doesn't look out of place */
 /* Photonize the All tabs button */
 #alltabs-button {
 	list-style-image: url(./icons/back-12.svg) !important;
-	rotate: -90deg
+	rotate: -90deg;
+}
+#alltabs-button {
+	margin-top: 1px !important;
+	margin-bottom: -1px !important;
+	width: 32px !important;
+	height: 32px !important;
 }
 /* Adds back the Photon tab-separators */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
@@ -354,6 +360,9 @@ so that the sound icon doesn't look out of place */
 #urlbar:not([breakout-extend="true"]) #urlbar-input-container {
 	padding-inline: 0 !important;
 }
+#urlbar[breakout-extend="true"] #urlbar-input-container {
+	padding-right: 5px !important;
+}
 #urlbar-input-container {
 	padding-left: 5px !important;
 }
@@ -364,7 +373,7 @@ so that the sound icon doesn't look out of place */
 	margin-inline: 0px !important;
 	margin-right: 10px !important;
 }
-.urlbarView-url {
+#urlbar-results[wrap] .urlbarView-url {
 	margin-left: 26px !important;
 }
 /* Search icon */
