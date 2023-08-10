@@ -4,7 +4,7 @@
 }
 /* Changes the tab height */
 :root:not([uidensity="compact"], [uidensity="touch"]) {
-	--tab-min-height: 32px !important;
+	--tab-min-height: 33px !important;
 }
 :root[uidensity="compact"] {
 	--tab-min-height: 26px !important;
@@ -14,6 +14,17 @@
 .tab-close-button {
 	border-radius: var(--photon-border-radius) !important;
 	transition: background 0.2s !important;
+}
+.tabbrowser-tab:not(:hover) .tab-close-button {
+	padding-inline: 4px !important;
+	padding-block: 7px !important;
+	margin-right: -3px !important;
+}
+.tabbrowser-tab:hover .tab-close-button {
+	padding-inline: 5px !important;
+	padding-block: 5px !important;
+	width: 20px !important;
+	height: 20px !important;
 }
 .tabbrowser-tab > .tab-stack > .tab-background {
 	border-radius: 0 !important;
@@ -59,6 +70,9 @@ so that the sound icon doesn't look out of place */
 }
 #navigator-toolbox:-moz-lwtheme .tabbrowser-tab:not([selected])[pinned] .tab-icon-overlay {
 	background: var(--lwt-accent-color) !important;
+}
+#tabbrowser-tabs[haspinnedtabs]:not([overflow="true"]) .tabbrowser-tab {
+	margin-left: 0 !important;
 }
 /* This will hide the label for pinned tabs cuz i'm lazy and dont wanna properly push the label off of the tab */
 .tabbrowser-tab[pinned] .tab-label-container {
@@ -156,6 +170,7 @@ so that the sound icon doesn't look out of place */
 	height: 64px;
 	right: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	z-index: 0;
 }
 .tabbrowser-tab:not([selected="true"]) 
 .tab-stack::before {
@@ -165,6 +180,7 @@ so that the sound icon doesn't look out of place */
 	height: 64px;
 	right: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	z-index: 0;
 }
 .tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]) 
 .tab-stack::before {
@@ -180,6 +196,12 @@ so that the sound icon doesn't look out of place */
 	height: 64px;
 	left: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	z-index: 0;
+  bottom: 0px !important;
+}
+.tabbrowser-tab[pinned]
+.tab-stack::before {
+  bottom: 0px !important;
 }
 #tabbrowser-tabs::after {
 	display: none !important;
@@ -276,6 +298,7 @@ so that the sound icon doesn't look out of place */
 	outline: var(--photon-back-outline) 1px solid;
 	box-shadow: 0px 0px 4px var(--photon-back-shadow) !important;
 	transition: box-shadow .2s !important;
+	margin-left: 1px !important
 }
 #back-button:not([disabled]):hover > image {
 	background-color: var(--photon-back-hover) !important;
@@ -345,7 +368,7 @@ so that the sound icon doesn't look out of place */
 	margin-left: 26px !important;
 }
 /* Search icon */
-#identity-box.localResource #identity-icon-box {
+#identity-box #identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
@@ -359,4 +382,15 @@ so that the sound icon doesn't look out of place */
 }
 .urlbar-page-action image {
 	translate: 1px !important;
+}
+/* Resize toolbar buttons */
+.toolbarbutton-1 stack {
+	padding: 6px !important;
+	margin-inline: 2px !important;
+}
+#nav-bar .toolbarbutton-1:not(#back-button) > image {
+	width: 28px !important;
+	height: 28px !important;
+	padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
+	margin-inline: 1px !important;
 }

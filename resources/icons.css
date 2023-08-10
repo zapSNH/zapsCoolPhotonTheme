@@ -10,7 +10,7 @@
 .tab-close-button {
 	list-style-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: stroke !important;
-	stroke: var(--toolbarbutton-icon-fill) !important;
+	stroke: currentColor !important;
   fill-opacity: 1 !important;
 	stroke-linecap: round !important;
 }

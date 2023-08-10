@@ -43,6 +43,26 @@
 		}
 	}
 }
+/* Autoscroller */
+.autoscroller {
+	opacity: 0.8 !important;
+	background-color: white !important;
+	background: no-repeat center var(--autoscroll-background-image);
+	padding: 15px !important;
+	outline: red inset 200px !important;
+	/*box-shadow: 0 0 20px 0px rgba(0,0,0,0.75) inset;*/
+	clip-path: circle(40% at 50% 50%) !important;
+}
+.autoscroller::after {
+	display: block;
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #1110;
+	border: inset #111d 2px;
+	translate: -12px -22px
+}
 /* Aero glass/Mica for faitfulPhoton *
 @supports -moz-bool-pref("photon.win-glass") {
 	#navigator-toolbox-background, #navigator-toolbox, html {
