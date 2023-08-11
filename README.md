@@ -23,8 +23,8 @@ Open `about:config` and set:
 Create `change security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
 Download the release for your version:
-[Firefox 115esr]()
-[Firefox 116 - 118]()
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
+* [Firefox 116 - 118](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 
 Extract the zip and move `zapsCoolPhotonTheme-main` to your profile which you can find by going to `about:profiles` and opening the root directory's folder.
 
