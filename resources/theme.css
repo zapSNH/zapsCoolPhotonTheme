@@ -18,7 +18,7 @@
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-#urlbar-background {
+:is(#urlbar-background, #searchbar) {
 	background-color: white !important;
 	border: solid 1px #cccccc !important;
 }

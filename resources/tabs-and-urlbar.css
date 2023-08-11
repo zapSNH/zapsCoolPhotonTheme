@@ -93,6 +93,9 @@ so that the sound icon doesn't look out of place */
 .tab-icon-overlay[activemedia-blocked] {
 	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
 }
+.tab-icon-overlay[pictureinpicture] {
+	list-style-image: url(./icons/pictureinpicture.svg) !important;
+}
 .tabbrowser-tab:is([pinned][first-visible-tab]) {
 	margin: 0 !important;
 }
@@ -295,7 +298,7 @@ so that the sound icon doesn't look out of place */
 #PanelUI-menu-button::before {
 	content: "";
 	display: block;
-	height: 28px;
+	height: 34px;
 	border-left: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 	padding-right: 2px !important;
 }
@@ -303,7 +306,9 @@ so that the sound icon doesn't look out of place */
 	padding-right: 2px !important;
 	padding-left: 0px !important;
 }
-
+#nav-bar-customization-target {
+	margin-inline-end: 3px !important;
+}
 /* Photonizes the back button */
 #back-button > image {
 	border-radius: 50% !important;
@@ -332,12 +337,16 @@ so that the sound icon doesn't look out of place */
 #nav-bar-customization-target toolbarbutton {
 	padding-inline: 1px !important;
 }
+#nav-bar-customization-target .unified-extensions-item {
+	padding-inline: 0px !important;
+	margin-inline: 0 !important;
+}
 .container.infobar :is(.icon, .close) {
 	translate: 0 1px !important;
 }
 /* Full-size scrollbox buttons */
-#scrollbutton-down[part="scrollbutton-down"]:hover:not([disabled], .menupopup-scrollbutton),
-#scrollbutton-up[part="scrollbutton-up"]:hover:not([disabled], .menupopup-scrollbutton) {
+#tabbrowser-arrowscrollbox::part(scrollbutton-up):hover:not([disabled], .menupopup-scrollbutton),
+#tabbrowser-arrowscrollbox::part(scrollbutton-up):hover:not([disabled], .menupopup-scrollbutton) {
 	border: 4px var(--toolbarbutton-hover-background) solid !important;
 }
 #scrollbutton-down[part="scrollbutton-down"]:hover:active:not([disabled], .menupopup-scrollbutton),
@@ -351,6 +360,12 @@ so that the sound icon doesn't look out of place */
 }
 :root[uidensity="touch"] #urlbar {
 	--urlbar-height: 36px !important;
+}
+#searchbar {
+	--urlbar-min-height: 30px !important;
+}
+:root[uidensity="touch"] #searchbar {
+	--urlbar-min-height: 36px !important;
 }
 #urlbar:not([breakout-extend="true"]) #urlbar-background {
   height: var(--urlbar-height);

@@ -18,6 +18,7 @@
 	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
 	--appmenu-icon-inline-end: 8px;
+	--appmenu-noicon-inline-end: 24px;
 	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--variables-css: 1px;
@@ -54,7 +55,7 @@ button, button hbox, hbox menulist,
 /* i'm lazy */
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
-.dialogBox {
+.dialogBox, #sidebar-switcher-target, .close-icon {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }

@@ -14,6 +14,10 @@
   fill-opacity: 1 !important;
 	stroke-linecap: round !important;
 }
+/* info icon */
+.panel-info-button image {
+	list-style-image: url(./icons/info.svg) !important;
+}
 /* Changes the Firefox logo to that of the Photon grayscale one */
 #identity-box.chromeUI > #identity-icon-box > #identity-icon {
 	list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
@@ -307,6 +311,9 @@
 #PanelUI-menu-button {
 	list-style-image: url(./icons/menu.svg) !important;
 }
+.unified-extensions-item-menu-button.subviewbutton {
+	list-style-image: url(./icons/settings.svg) !important;
+}
 /* Tab scrollbuttons */
 #tabbrowser-arrowscrollbox {
 	--arrow-image: url(./icons/back-12.svg) !important;
@@ -512,20 +519,28 @@
 .tab-icon-image[src="chrome://browser/skin/customize.svg"] {
 	content: url(./icons/personalize.svg) !important;
 }
+.tab-icon-image[src="chrome://global/skin/icons/info.svg"] {
+	content: url(./icons/info.svg) !important;
+}
 .tab-icon-image:not([src]) {
 	content: url(./icons/globe1.svg) !important;
 }
 /* URLBar icons */
-#urlbar-go-button {
+.searchbar-search-icon {
+	list-style-image: url(./icons/find-in-page.svg) !important;
+	-moz-context-properties: fill !important;
+	fill: var(--urlbar-box-text-color) !important;
+}
+#urlbar-go-button, :root .search-go-button {
 	list-style-image: url(./icons/forward.svg) !important;
 }
-#urlbar-anon-search-settings image {
+#urlbar-anon-search-settings image, #searchbar-anon-search-settings image {
 	list-style-image: url(./icons/settings.svg) !important;
 }
 #urlbar-engine-one-off-item-tabs image {
 	list-style-image: url(./icons/tab.svg) !important;
 }
-#urlbar-engine-one-off-item-history image {
+#urlbar-engine-one-off-item-history image, .search-panel-tree > .autocomplete-richlistitem[originaltype="fromhistory"] > .ac-type-icon {
 	list-style-image: url(./icons/history.svg) !important;
 }
 #password-notification-icon {
@@ -541,4 +556,183 @@
 }
 #translations-button-locale {
 	margin: 0px !important;
+}
+/* Other more minor icons (appmenu) */
+#PanelUI-helpItems .toolbarbutton-icon,
+#appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon),
+#PanelUI-history .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appMenu_historyMenu .toolbarbutton-icon),
+#PanelUI-bookmarks .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #panelMenu_bookmarksMenu .toolbarbutton-icon),
+#PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon) {
+	margin-inline-end: var(--appmenu-noicon-inline-end) !important;
+}
+:is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) .toolbarbutton-icon {
+	margin-inline-start: -11px !important;
+}
+/* help */
+#appMenu_menu_openHelp .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/help.svg) !important;
+}
+#appMenu_helpSwitchDevice .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/import.svg) !important;
+}
+#appMenu_aboutName .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/info.svg) !important;
+}
+/* more tools */
+#appmenu-moreTools-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/personalize.svg) !important;
+	width: 16px !important;
+}
+#appmenu-moreTools-button {
+	margin-bottom: 1px !important;
+	margin-top: -3px !important;
+}
+/* history */
+/* specificticiyicity is very important in css - :nerd_face: */
+:root #PanelUI-history #appMenuRecentlyClosedTabs .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/tab.svg) !important;
+}
+#appMenuRecentlyClosedTabs, #panelMenuBookmarkThisPage {
+	margin-top: -3px !important;
+}
+:root #PanelUI-history #appMenuRecentlyClosedWindows .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/window.svg) !important;
+}
+:root #PanelUI-history #appMenuSearchHistory .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/find-in-page.svg) !important;
+}
+:root #PanelUI-history #appMenu-restoreSession .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/restore-session.svg) !important;
+}
+:root #PanelUI-history #appMenuClearRecentHistory .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/forget.svg) !important;
+}
+:root #PanelUI-history #PanelUI-historyMore .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/library.svg) !important;
+}
+/* bookmarks */
+:root #PanelUI-bookmarks #panelMenuBookmarkThisPage .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/bookmark-hollow.svg) !important;
+}
+:root #PanelUI-bookmarks #panelMenu_searchBookmarks .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/find-in-page.svg) !important;
+}
+:root #PanelUI-bookmarks #panelMenu_viewBookmarksToolbar .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
+}
+:root #PanelUI-bookmarks #panelMenu_showAllBookmarks .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/library.svg) !important;
+}
+/* fxa menu */
+:root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
+	margin-top: -3px !important;
+}
+:root #PanelUI-fxa #fxa-manage-account-button::before {	
+	content: "";
+	display: -moz-inline-box;
+	width: 30px !important;
+	height: 30px !important;
+	border-radius: 50%;
+	background-size: 30px;
+	background-image: var(--avatar-image-url);
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 2px !important;
+	outline: solid #ffffff33 1px;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button {
+	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button::before {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	display: block;
+	content: url(./icons/sync.svg);
+	width: 16px;
+	height: 16px;
+	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1) !important;
+	-moz-context-properties: fill !important;
+	fill: var(--panel-color) !important;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button image {
+	list-style-image: url(./icons/sync.svg) !important;
+	width: 16px !important;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-connect-device-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/add-device.svg) !important;
+	width: 16px !important;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-sendtab-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/send-to-device.svg) !important;
+}
+:root #PanelUI-fxa :is(#PanelUI-fxa-menu-sync-prefs-button, #PanelUI-fxa-menu-setup-sync-button) .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/sync.svg) !important;
+}
+:root #PanelUI-fxa #PanelUI-fxa-menu-account-signout-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/sign-out.svg) !important;
+	width: 16px !important;
+}
+/* */
+#sidebarMenu-popup menuitem {
+	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
+}
+#sidebarMenu-popup menuitem::before {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1) !important;
+	margin-inline-end: calc(var(--appmenu-noicon-inline-end) * -1 + 10px) !important;
+	-moz-context-properties: fill !important;
+	fill: var(--panel-color) !important;
+}
+#sidebar-switcher-bookmarks::before {
+	content: url(./icons/bookmark.svg);
+}
+#sidebar-switcher-history::before {
+	content: url(./icons/history.svg);
+}
+#sidebar-switcher-tabs::before {
+	content: url(./icons/tab.svg);
+}
+#sidebar-reverse-position::before {
+	content: url(./icons/import-export.svg);
+	rotate: 90deg
+}
+menuitem[data-l10n-id="sidebar-menu-close"]::before {
+	content: url(./icons/add.svg);
+	rotate: 45deg; /* don't tell anyone about this */
+}
+/* side panel */
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header 
+  > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url(./icons/bookmark.svg) !important;
+}
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header 
+  > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url(./icons/history.svg) !important;
+}
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header 
+  > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url(./icons/tab.svg) !important;
+}
+.close-icon image {
+	list-style-image: url(./icons/add.svg) !important;
+	rotate: 45deg; /* guh */
 }

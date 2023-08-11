@@ -211,23 +211,38 @@ menuitem, menu {
 #appMenu-fxa-status2:not([fxastatus]) {
   padding-inline: 8px 8px !important
 }
+#unified-extensions-panel panelview, #permission-popup panelview {
+	margin-bottom: 4px !important;
+}
 @media (-moz-platform: windows) {
   #context-navigation {
   	margin-inline: 4px !important;
   	margin-bottom: 1px !important;
   }
-  #contentAreaContextMenu menuitem .menu-text {
+  :is(#main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
   	padding-left: 24px !important;
   }
-  #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), #context-reveal-password {
+  #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
+	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
+  menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
+	menupopup > menu:not(.menu-iconic) { 
   	padding-left: 34px !important;
   }
+	menuitem[checked="true"] > .menu-iconic-left {
+	 list-style-image: url("./icons/check.svg") !important;
+	}
 }
-/* Enhanced TP Toggle */
+#sidebarMenu-popup > menuitem {
+	margin-inline: 0 !important;
+}
+/* Enhanced TP (toilet paper) */
 #protections-popup-tp-switch {
 	border-radius: 8px !important;
 	padding-block: 1px !important;
 }
+#moz-toggle-button {
+	border-radius: 8px !important;
+}/*
 #protections-popup-tp-switch:not([enabled]) {
 	padding-left: 1px !important;
 	padding-right: 18px !important;
@@ -237,4 +252,13 @@ menuitem, menu {
 	padding-right: 1px !important;
 	background: var(--photon-accent-dark) !important;
 	border-color: var(--photon-accent) !important;
+}*/
+#protections-popup-tp-switch-section-header, #protections-popup-siteNotWorkingView-header {
+	margin-inline: 3px !important;
+}
+#protections-popup-siteNotWorkingView-body {
+	margin-inline: 11px !important;
+}
+#protections-popup-content toolbarbutton {
+	padding-inline: 24px !important;
 }
