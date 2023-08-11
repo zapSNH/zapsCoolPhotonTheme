@@ -10,7 +10,7 @@ ____
 | | Windows 10/11 | Linux (Ubuntu) | MacOS |
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
-| **115esr** | ✔️ | ✔️ | ? |
+| **115esr** | ✔️ | Semi-broken | ? |
 | **116** | ✔️ | ✔️ | ? |
 | **118** | ✔️ | ✔️ | ? | 
 ## Installation
