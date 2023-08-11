@@ -26,9 +26,9 @@ Download the release for your version:
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 * [Firefox 116 - 118](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 
-Extract the zip and move `zapsCoolPhotonTheme-main` to your profile which you can find by going to `about:profiles` and opening the root directory's folder.
+Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:profiles` and opening the root directory's folder.
 
-Rename `zapsCoolPhotonTheme-main` to `chrome`
+Rename `zapsCoolPhotonTheme-*` to `chrome`
 
 
 Make sure the directory is like this:
