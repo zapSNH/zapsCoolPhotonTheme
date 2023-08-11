@@ -177,15 +177,15 @@ menuitem, menu {
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
-.popup-notification-primary-button, #editBookmarkPanelDoneButton {
+.popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
 	background-color: #0074df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
-.popup-notification-primary-button:hover, #editBookmarkPanelDoneButton:hover {
+.popup-notification-primary-button:hover, .popup-notification-dropmarker:hover, #editBookmarkPanelDoneButton:hover {
 	background-color: #0a84ff !important;
 }
-.popup-notification-primary-button:active, #editBookmarkPanelDoneButton:active {
+.popup-notification-primary-button:active, .popup-notification-dropmarker:active,  #editBookmarkPanelDoneButton:active {
 	background-color: #0064cf !important;
 }
 .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
@@ -211,15 +211,17 @@ menuitem, menu {
 #appMenu-fxa-status2:not([fxastatus]) {
   padding-inline: 8px 8px !important
 }
-#context-navigation {
-	margin-inline: 4px !important;
-	margin-bottom: 1px !important;
-}
-#contentAreaContextMenu menuitem .menu-text {
-	padding-left: 24px !important;
-}
-#context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), #context-reveal-password {
-	padding-left: 34px !important;
+@media (-moz-platform: windows) {
+  #context-navigation {
+  	margin-inline: 4px !important;
+  	margin-bottom: 1px !important;
+  }
+  #contentAreaContextMenu menuitem .menu-text {
+  	padding-left: 24px !important;
+  }
+  #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), #context-reveal-password {
+  	padding-left: 34px !important;
+  }
 }
 /* Enhanced TP Toggle */
 #protections-popup-tp-switch {

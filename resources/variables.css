@@ -26,7 +26,7 @@
 	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
 }
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
 		--photon-back: #fff3;
 		--photon-back-hover: #fff5;
 		--photon-back-active: #fff7;

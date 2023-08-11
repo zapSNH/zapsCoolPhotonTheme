@@ -137,6 +137,11 @@
 	content: url(./icons/back-12.svg) !important;
 	scale: -1 1 !important;
 }
+@media (-moz-platform: linux) {
+  .menu-right {
+  	scale: 1 1 !important;
+  }
+}
 .menu-right {
 	padding-inline: 4px !important;
 	margin-right: 0 !important;
@@ -392,9 +397,17 @@
 	list-style-image: url(chrome://browser/skin/translations.svg);
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
-/* This pushes down the find button and aligns the zoom seperator */
-#appMenu-translate-button {
-	margin-bottom: 8px !important;
+/* This pushes down the find/translate button and aligns the zoom seperator */
+#appMenu-find-button2 {
+  margin-bottom: 8px !important;
+}
+@supports -moz-bool-pref("browser.translations.enable") {
+  #appMenu-translate-button {
+  	margin-bottom: 8px !important;
+  }
+	#appMenu-find-button2 {
+    margin-bottom: unset !important;
+  }
 }
 /* Zoom controls */
 #appMenu-zoom-controls toolbarbutton {
@@ -514,6 +527,9 @@
 }
 #urlbar-engine-one-off-item-history image {
 	list-style-image: url(./icons/history.svg) !important;
+}
+#password-notification-icon {
+	list-style-image: url(./icons/login.svg) !important;
 }
 .urlbarView-favicon[src="chrome://browser/skin/history.svg"] {
 	content: url(./icons/history.svg) !important;/*

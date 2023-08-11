@@ -9,6 +9,11 @@
 :root[uidensity="compact"] {
 	--tab-min-height: 26px !important;
 }
+@media (-moz-platform: linux) {
+	.tabbrowser-tab {
+		height: calc(var(--tab-min-height) + 1px) !important;
+	}
+}
 /* Makes the tab photon-like + adds a transition */
 /* Delete the transition things if unwanted */
 .tab-close-button {
@@ -129,8 +134,10 @@ so that the sound icon doesn't look out of place */
 	filter: grayscale(100%);
 }
 /**/
+@media (-moz-platform: windows) {
 :root[sizemode="normal"] .tab-background::before {
-	height: 3px !important;
+  	height: 3px !important;
+	}
 }
 /* Adds an effect to the highlight that wasn't there in Photon */
 /* Remove if unwanted */
@@ -314,7 +321,7 @@ so that the sound icon doesn't look out of place */
 	background-color: var(--photon-back-active) !important;
 }
 @media (prefers-color-scheme: dark) {
-	#back-button {
+	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) #back-button {
 		fill: #cdcdcd !important;
 	}
 }

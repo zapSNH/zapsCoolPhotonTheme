@@ -10,9 +10,9 @@ ____
 | | Windows 10/11 | Linux (Ubuntu) | MacOS |
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
-| **115esr** | ✔️ | Semi-broken | ? |
-| **116** | ✔️ | Semi-broken | ? |
-| **118** | ✔️ | Semi-broken | ? | 
+| **115esr** | ✔️ | ✔️ | ? |
+| **116** | ✔️ | ✔️ | ? |
+| **118** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -22,9 +22,9 @@ Open `about:config` and set:
 
 Create `change security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
-Click on the green code button and download the zip
-
-![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/022952df-a69e-4b71-96c5-bc45dc9d84b8)
+Download the release for your version:
+[Firefox 115esr]()
+[Firefox 116 - 118]()
 
 Extract the zip and move `zapsCoolPhotonTheme-main` to your profile which you can find by going to `about:profiles` and opening the root directory's folder.
 
