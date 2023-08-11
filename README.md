@@ -18,7 +18,6 @@ Open `about:config` and set:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
-* `browser.translations.enable` to `true` (recommended because of layout issues)
 
 Create `change security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
