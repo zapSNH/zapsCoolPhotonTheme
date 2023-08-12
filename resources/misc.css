@@ -85,7 +85,7 @@
 	border: inset #111d 2px;
 	translate: -12px -22px
 }
-/* Aero glass/Mica for faitfulPhoton *
+/* Aero glass/Mica *
 @supports -moz-bool-pref("photon.win-glass") {
 	#navigator-toolbox-background, #navigator-toolbox, html {
     background: transparent !important;

@@ -5,6 +5,14 @@
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 }
+.menupopup-arrowscrollbox {
+  background-color: var(--arrowpanel-background) !important;
+}
+
+menu:where([_moz-menuactive="true"]):not([disabled="true"]), menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigation menuitem),
+#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) .menu-iconic-icon {
+	background: var(--button-hover-bgcolor) !important;
+}
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
