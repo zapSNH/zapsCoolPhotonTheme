@@ -55,7 +55,8 @@ button, button hbox, hbox menulist,
 /* i'm lazy */
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
-.dialogBox, #sidebar-switcher-target, .close-icon {
+.dialogBox, #sidebar-switcher-target, .close-icon,
+#firefox-view-button .toolbarbutton-icon {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
@@ -64,7 +65,8 @@ findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
 }
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
 .urlbar-page-action, #tracking-protection-icon-container,
-#urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *) {
+#urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *),
+#TabsToolbar #firefox-view-button .toolbarbutton-icon {
 	border-radius: 0 !important;
 }
 :root menupopup, :root panel {

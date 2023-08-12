@@ -14,7 +14,10 @@
 	--button-active-bgcolor: #d2d3d4 !important;
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 	--arrowpanel-border-color: #cccccc !important;
-	--urlbar-box-text-color: #747576 !important
+	--urlbar-box-text-color: #747576 !important;
+	--panel-separator-color: hsla(210,4%,10%,.14) !important;
+	--button-hover-bgcolor: #bdbec0 !important;
+	--button-active-bgcolor: #b3b4b6 !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
@@ -39,22 +42,12 @@
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
-:is(#new-tab-button:hover > image, #tabs-newtab-button:hover > image) {
-	background: #bdbec0 !important;
-}
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
-:is(#new-tab-button:hover:active > image, #tabs-newtab-button:hover:active > image) {
-	background: #b3b4b6 !important;
-}
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
 #nav-bar {
     box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
-.tabbrowser-tab[selected] {
+:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
     box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 }
 /* Dark theme */
@@ -76,6 +69,7 @@
 	--input-border-color: rgb(90, 90, 94) !important;
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 	--urlbar-box-text-color: #bababc !important;
+	--panel-separator-color: rgba(249, 249, 250, .1) !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -97,7 +91,7 @@
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #star-button[starred] {
 	fill: #45a1ff !important;
 }
-:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] .tab-background[selected] {
+:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] :is(.tab-background[selected], #firefox-view-button[open] .toolbarbutton-icon) {
 	background: #323234 !important;
 }
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme {
@@ -149,6 +143,7 @@
   	--lwt-tab-line-color: var(--photon-tab-outline) !important;
   }
 }
+/* Ubuntu */
 @media (-moz-platform: linux) {
 	:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0); "] {
 	  --toolbarbutton-icon-fill: #555 !important;
@@ -171,4 +166,37 @@
   :is(#new-tab-button:hover:active > image, #tabs-newtab-button:hover:active > image, #alltabs-button:hover:active > stack) {
   	background: #434345 !important;
   }
+}
+/* Alpenglow a.k.a Background Noodles */
+:root[style*="background-noodles"] .tab-background::before {
+	--lwt-tab-line-color: #ac70ff !important;
+}
+:root[style*="background-noodles"] .tab-background[selected] {
+	background: var(--toolbar-bgcolor) !important;
+}
+@media (prefers-color-scheme: dark) {
+	:root[style*="background-noodles"] {
+		--tabs-border-color: rgba(232, 224, 255, 0.32) !important;
+	}
+  :root[style*="background-noodles"]
+  :is(#urlbar-background, #searchbar) {
+  	border: solid 1px var(--tabs-border-color) !important;
+  }
+}
+@media (prefers-color-scheme: light) {
+	:root[style*="background-noodles"] {
+		--tabs-border-color: rgb(32, 18, 59) !important;
+	}
+  :root[style*="background-noodles"]
+  :is(#urlbar-background, #searchbar) {
+  	border: solid 1px rgba(32, 18, 59, 0.32) !important;
+  }
+}
+:root[style*="background-noodles"]
+#nav-bar {
+    box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--tabs-border-color) !important;
+}
+:root[style*="background-noodles"]
+:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
+    box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color) !important;
 }

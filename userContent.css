@@ -24,7 +24,8 @@
 			--in-content-table-background: #202023 !important;
 		}
 	}
-	listheader, richlistbox, search-textbox, .info-box-container {
+	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
+	.page-section-header > .twisty, [class^="closed-tab-li"] {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -310,4 +311,16 @@
 	.category[name="plugin"] {
 		background-image: url("./resources/icons/plugin.svg") !important;
 	}
+}
+
+@-moz-document url-prefix("about:firefoxview") {
+	@media (prefers-color-scheme: dark) {	
+		* {
+			--fxview-background-color: #2a2a2e !important;
+			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
+		}
+	}
+	* {
+		--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent)
+  }
 }

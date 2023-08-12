@@ -22,7 +22,29 @@
 	#maintenanceButton {
 		list-style-image: url("./icons/import-export.svg") !important;
 	}
-
+  
+  /* Bigger Buttons */
+  .download-state .downloadButton:not(:hover, :active) {
+  	background: transparent !important;
+  }
+  .downloadButton {
+  	height: 5.5em !important;
+  }
+  /* Seperator */
+  .download-state .downloadButton::before {
+  	width: 1px !important;
+  	height: 46px !important;
+  	content: "";
+  	display: block;
+  	background: color-mix(in srgb, currentColor 10%, transparent);
+  	margin-top: calc(((5.5em - 46px)/2) - 10px);
+  	position: relative;
+  	translate: -8px
+  }
+  .download-state .downloadButton:hover::before {
+  	background: color-mix(in srgb, currentColor 10%, transparent);
+  }
+	
 	@media (prefers-color-scheme: dark) {
 		* {
 			--organizer-pane-background: #323234 !important;

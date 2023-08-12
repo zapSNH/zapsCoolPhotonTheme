@@ -126,10 +126,17 @@ menuitem, menu {
 #downloadsFooterButtons > toolbarseparator {
 	margin: 0 !important;
 }
-/* 9px bottom padding looks better than 8px since there's a separator up top */
+
 #downloadsHistory {
 	margin: 0px !important;
-	padding-bottom: 9px !important;
+	padding: 13px !important;
+	background: color-mix(in srgb, currentColor 9%, transparent) !important;
+}
+#downloadsHistory:hover {
+	background: color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+#downloadsHistory:hover:active {
+	background: color-mix(in srgb, currentColor 30%, transparent) !important;
 }
 #downloadsPanel-mainView {
 	padding: 0 !important;
@@ -139,7 +146,7 @@ menuitem, menu {
 }
 /* Icons but too lazy to put them in icons.css */
 .download-state .downloadButton.downloadIconShow image {
-	list-style-image: url(./icons/folder.svg) !important;
+	list-style-image: url(./icons/findFIle.svg) !important;
 }
 .download-state .downloadButton.downloadIconRetry image {
 	list-style-image: url(./icons/reload.svg) !important;
@@ -149,14 +156,41 @@ menuitem, menu {
 }
 /* Bigger Buttons */
 .download-state .downloadButton {
-	width: 48px !important;
+	width: 60px !important;
 	margin-inline-end: -4px !important;
+}
+.download-state:not(:last-child) .downloadButton:not(:hover, :active) {
+	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
+}
+.download-state .downloadButton:not(:hover, :active) {
+	background: var(--arrowpanel-background) !important;
+}
+.downloadButton {
+	height: 5.5em !important;
+}
+/* Seperator */
+.download-state .downloadButton::before {
+	width: 1px !important;
+	height: 46px !important;
+	content: "";
+	display: block;
+	background: color-mix(in srgb, var(--panel-color) 10%, transparent);
+	margin-top: calc(((5.5em - 46px)/2) - 1px);
+	position: relative;
+	translate: -1px
+}
+.download-state .downloadButton:hover::before {
+	background: color-mix(in srgb, var(--panel-color) 0%, transparent);
+}
+.download-state .downloadButton:hover {
+  border: none !important;
 }
 .download-state {
 	margin-bottom: 0 !important;
+	height: 5.5em !important;
 }
-.downloadButton {
-	height: 52.2px !important;
+#downloadsListBox .download-state:not(:last-child) {
+	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
 }
 /* Panel button styling */
 .panel-footer {
@@ -212,14 +246,42 @@ menuitem, menu {
   padding-inline: 8px 8px !important
 }
 #unified-extensions-panel panelview, #permission-popup panelview {
-	margin-bottom: 4px !important;
+	margin-bottom: 3px !important;
+}
+#identity-popup[mainviewshowing] panelview {
+	margin-bottom: -2px !important;
+	margin-top: -3px !important;
+}
+#identity-popup-security-button {
+	margin-bottom: 0px !important;
+}
+#identity-popup:not([mainviewshowing]) panelview, #identity-popup[connection="chrome"] panelview {
+	margin-bottom: 3px !important;
+}
+#protections-popup-settings-button {
+	margin-block: -1px !important;
+}
+#protections-popup-show-report-stack {
+	margin-top: -1px !important;
+	margin-bottom: -2px !important;
+}
+#protections-popup-cookiesView-settings-button, #protections-popup-trackersView-settings-button {
+	margin-bottom: 3px !important;
+}
+#BMB_bookmarksPopup menu {
+	margin-inline: 0 !important;
+	padding-inline: 11px !important;
+}
+
+#PanelUI-developer-tools-view toolbarbutton {
+	margin-inline-start: var(--appmenu-noicon-inline-end) !important;
 }
 @media (-moz-platform: windows) {
   #context-navigation {
   	margin-inline: 4px !important;
   	margin-bottom: 1px !important;
   }
-  :is(#main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
+  :is( #BMB_bookmarksPopup, #main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
   	padding-left: 24px !important;
   }
   #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
@@ -256,7 +318,7 @@ menuitem, menu {
 #protections-popup-tp-switch-section-header, #protections-popup-siteNotWorkingView-header {
 	margin-inline: 3px !important;
 }
-#protections-popup-siteNotWorkingView-body {
+#protections-popup-siteNotWorkingView-body, .protections-popup-list {
 	margin-inline: 11px !important;
 }
 #protections-popup-content toolbarbutton {

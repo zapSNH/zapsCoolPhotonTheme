@@ -116,7 +116,7 @@
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill, stroke !important;
 }
-#identity-popup[connection="secure"] .identity-popup-security-connection {
+#identity-popup:is([connection="secure"],  [connection="chrome"]) .identity-popup-security-connection {
   list-style-image: url(./icons/connection-secure.svg) !important;/*
 	fill: currentColor !important;
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
@@ -423,6 +423,18 @@
 #appMenu-zoom-controls toolbarbutton:not(:last-child) .toolbarbutton-icon {
 	border-radius: 50% !important;
 }
+#appMenu-zoomReset-button2 .toolbarbutton-text {
+	border-radius: 9px !important;
+	border: 1px solid var(--panel-separator-color) !important;
+	padding-inline: 6px !important;
+	background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
+}
+#appMenu-zoomReset-button2:hover .toolbarbutton-text {
+	background-color: color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+#appMenu-zoomReset-button2:hover:active .toolbarbutton-text {
+	background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+}
 #appMenu-zoom-controls toolbarbutton:not(:hover, :active, :last-child) .toolbarbutton-icon {
 	background-color: color-mix(in srgb, transparent 25%, var(--button-bgcolor)) !important;
 }
@@ -556,6 +568,9 @@
 }
 #translations-button-locale {
 	margin: 0px !important;
+}
+#picture-in-picture-button-icon {
+	list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
@@ -735,4 +750,62 @@ menuitem[data-l10n-id="sidebar-menu-close"]::before {
 .close-icon image {
 	list-style-image: url(./icons/add.svg) !important;
 	rotate: 45deg; /* guh */
+}
+/* Libraries */
+#appMenu-library-bookmarks-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/bookmark.svg) !important;
+}
+#appMenu-library-history-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/history.svg) !important;
+}
+#appMenu-library-downloads-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
+}
+/* Findbar */
+.findbar-find-next, .findbar-find-previous {
+	border: 1px solid var(--input-border-color, var(--toolbar-field-border-color)) !important;
+	padding-block: 0 !important;
+	padding-inline: 5px !important;
+	background: color-mix(in srgb, currentColor 14%, transparent);
+  border-inline-start: 0px !important;
+}
+.findbar-find-next {
+	list-style-image: url(./icons/find-next-arrow.svg) !important;
+	border-radius: 0 var(--photon-border-radius) var(--photon-border-radius) 0 !important;
+}
+.findbar-find-previous {
+	list-style-image: url(./icons/find-previous-arrow.svg) !important;
+	border-radius: 0 !important;
+	margin-inline-start: 0 !important;
+}
+.findbar-textbox {
+  border-radius: var(--photon-border-radius) 0 0 var(--photon-border-radius) !important;
+}
+/* All tabs list */
+.all-tabs-close-button {
+	list-style-image: url(./icons/close-icon2.svg) !important;
+}
+.all-tabs-mute-button:not([muted]) {
+	list-style-image: url(./icons/tab-audio-playing.svg) !important;
+}
+.all-tabs-mute-button[muted] {
+	list-style-image: url(./icons/tab-audio-muted.svg) !important;
+}
+#allTabsMenu-searchTabs .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/find-in-page.svg) !important;
+}
+#allTabsMenu-containerTabsButton .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/add.svg) !important;
+}
+#allTabsMenu-containerTabsView vbox .subviewbutton:last-child .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/settings.svg) !important;
+}
+#allTabsMenu-containerTabsView vbox .subviewbutton:last-child {
+	margin-bottom: 0px !important;
 }

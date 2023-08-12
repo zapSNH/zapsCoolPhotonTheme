@@ -39,7 +39,7 @@
 	margin: 0 !important;
 	box-shadow: none !important
 }
-.tabbrowser-tab {
+.tabbrowser-tab, #TabsToolbar #firefox-view-button {
 	z-index: 1 !important;
 }
 .tabbrowser-tab[selected] {
@@ -109,10 +109,10 @@ so that the sound icon doesn't look out of place */
 }
 /* Adds the Photon highlight around the tab */
 /* NOTE: If you don't see the tab highlight or you want to change the highlight, then change --lwt-tab-line-color */
-.tab-background {
+.tab-background, #firefox-view-button {
 	--lwt-tab-line-color: #0000 !important
 }
-.tab-background::before {
+.tab-background::before, #firefox-view-button::before {
   --lwt-tab-line-color: #0a84ff !important /* <<<<< */
 }
 .tab-background::before {
@@ -138,7 +138,7 @@ so that the sound icon doesn't look out of place */
 }
 /**/
 @media (-moz-platform: windows) {
-:root[sizemode="normal"] .tab-background::before {
+  :root[sizemode="normal"] .tab-background::before {
   	height: 3px !important;
 	}
 }
@@ -163,6 +163,41 @@ so that the sound icon doesn't look out of place */
 	width: 28px !important;
 	height: 28px !important;
 	list-style-image: url(./icons/add.svg) !important;
+}
+/* Firefox View */
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+	padding-inline-start: 0 !important;
+}
+#TabsToolbar #firefox-view-button {
+	margin-bottom: 0 !important
+}
+#TabsToolbar #firefox-view-button .toolbarbutton-icon {
+	box-shadow: none !important;
+}
+#TabsToolbar #firefox-view-button::before {
+	display: block;
+	content: "";
+	height: 2px;
+	width: 33px;
+	transition: all .25s;
+	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
+	position: absolute !important;
+	top: 0 !important;
+	filter: grayscale(100%);
+}
+#TabsToolbar #firefox-view-button[aria-pressed="true"]::before {
+	filter: grayscale(0%);
+}
+#TabsToolbar #firefox-view-button:not([aria-pressed="true"], :hover)::before {
+	opacity: 0;
+	width: 0;
+}
+#TabsToolbar #firefox-view-button:not([aria-pressed="true"]):hover::before {
+	filter: grayscale(100%);
+	opacity: .5;
+}
+:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
+	height: 3px;
 }
 /* Photonize the All tabs button */
 #alltabs-button {
@@ -204,7 +239,7 @@ so that the sound icon doesn't look out of place */
 }
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
 [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
-[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
+[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"], :not([firefoxviewhidden])):first-child
 .tab-stack::after {
 	content: "";
 	position: absolute;
@@ -425,3 +460,4 @@ so that the sound icon doesn't look out of place */
 	padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
 	margin-inline: 1px !important;
 }
+/* Findbar */
