@@ -19,7 +19,7 @@ Open `about:config` and set:
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
 
-Create `change security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
+Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
 Download the release for your version:
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
