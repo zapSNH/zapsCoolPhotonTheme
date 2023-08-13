@@ -268,7 +268,7 @@ menuitem, menu {
 #protections-popup-cookiesView-settings-button, #protections-popup-trackersView-settings-button {
 	margin-bottom: 3px !important;
 }
-#BMB_bookmarksPopup menu {
+#BMB_bookmarksPopup menu, menu.bookmark-item {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
 }
@@ -287,7 +287,7 @@ menuitem, menu {
   #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
 	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
   menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
-	menupopup > menu:not(.menu-iconic) { 
+	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic) { 
   	padding-left: 34px !important;
   }
 	menuitem[checked="true"] > .menu-iconic-left {

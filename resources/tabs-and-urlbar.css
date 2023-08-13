@@ -7,7 +7,7 @@
 	--tab-min-height: 33px !important;
 }
 :root[uidensity="compact"] {
-	--tab-min-height: 26px !important;
+	--tab-min-height: 31px !important;
 }
 @media (-moz-platform: linux) {
 	.tabbrowser-tab {
@@ -212,7 +212,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	content: "";
 	height: 2px;
-	width: 33px;
+	width: var(--tab-min-height);
 	transition: all .25s;
 	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
 	position: absolute !important;
@@ -364,7 +364,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	opacity: 1;
 }
 /* Adds the Photon separator to the right of the hamburger menu button (the button with the three horizontal lines) */
-#PanelUI-menu-button::before {
+:root:not([uidensity="compact"]) #PanelUI-menu-button::before {
 	content: "";
 	display: block;
 	height: 34px;
@@ -375,11 +375,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	padding-right: 2px !important;
 	padding-left: 0px !important;
 }
-#nav-bar-customization-target {
+:root:not([uidensity="compact"]) #nav-bar-customization-target {
 	margin-inline-end: 3px !important;
 }
 /* Photonizes the back button */
-#back-button > image {
+:root:not([uidensity="compact"]) #back-button > image {
 	border-radius: 50% !important;
 	background-color: var(--photon-back) !important;
 	outline: var(--photon-back-outline) 1px solid;
@@ -387,11 +387,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	transition: box-shadow .2s !important;
 	margin-left: 1px !important
 }
-#back-button:not([disabled]):hover > image {
+:root:not([uidensity="compact"]) #back-button:not([disabled]):hover > image {
 	background-color: var(--photon-back-hover) !important;
 	box-shadow: 0px 0px 5px var(--photon-back-shadow-hover) !important;
 }
-#back-button:not([disabled]):active > image {
+:root:not([uidensity="compact"]) #back-button:not([disabled]):active > image {
 	background-color: var(--photon-back-active) !important;
 }
 @media (prefers-color-scheme: dark) {
@@ -430,11 +430,17 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 :root[uidensity="touch"] #urlbar {
 	--urlbar-height: 36px !important;
 }
+:root[uidensity="compact"] #urlbar {
+	--urlbar-height: 26px !important;
+}
 #searchbar {
 	--urlbar-min-height: 30px !important;
 }
 :root[uidensity="touch"] #searchbar {
 	--urlbar-min-height: 36px !important;
+}
+:root[uidensity="compact"] #searchbar {
+	--urlbar-min-height: 26px !important;
 }
 #urlbar:not([breakout-extend="true"]) #urlbar-background {
   height: var(--urlbar-height);
@@ -468,7 +474,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-left: 26px !important;
 }
 /* Search icon */
-#identity-box #identity-icon-box {
+#identity-box.localResource #identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
@@ -483,15 +489,68 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 .urlbar-page-action image {
 	translate: 1px !important;
 }
+/* compact */
+:root[uidensity="compact"] #page-action-buttons {
+	margin: -1px !important;
+}
+:root[uidensity="compact"] .urlbar-page-action {
+	padding-block: calc(var(--urlbar-icon-padding) + 2px) !important;
+	height: calc(var(--urlbar-height) - 2px) !important;
+	width: var(--urlbar-height) !important;
+}
+:root[uidensity="compact"] .urlbar-page-action image {
+	translate: 2px !important;
+}
+:root[uidensity="compact"] #urlbar-input-container {
+	height: calc(var(--urlbar-height) + 2px) !important;
+}
+/* touch */
+:root[uidensity="touch"] #page-action-buttons {
+	margin: -1px !important;
+}
+:root[uidensity="touch"] .urlbar-page-action {
+	padding-block: calc(var(--urlbar-icon-padding) + 3px) !important;
+	height: calc(var(--urlbar-height) - 0px) !important;
+	width: var(--urlbar-height) !important;
+}
+:root[uidensity="touch"] .urlbar-page-action image {
+	translate: 3px !important;
+}
 /* Resize toolbar buttons */
-.toolbarbutton-1 stack {
+:root:not([uidensity]) .toolbarbutton-1 stack {
 	padding: 6px !important;
 	margin-inline: 2px !important;
 }
-#nav-bar .toolbarbutton-1:not(#back-button) > image {
+:root:not([uidensity]) #nav-bar .toolbarbutton-1:not(#back-button) > image {
 	width: 28px !important;
 	height: 28px !important;
 	padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
 	margin-inline: 1px !important;
 }
-/* Findbar */
+/* Fixes for compact mode */
+:root[uidensity="compact"] #urlbar[breakout-extend="true"] {
+  padding-top: 4px !important;
+}
+:root[uidensity="compact"] #urlbar[breakout-extend="true"] #tracking-protection-icon-container:not(:hover, :active, [open])::after {
+	top: 2px;
+}
+:root[uidensity="compact"] #urlbar[breakout-extend="true"] :is(#tracking-protection-icon-container, #identity-box) {
+	height: calc(var(--urlbar-height) - 4px) !important;
+	margin-block: -4px !important;
+}
+:root[uidensity="compact"] #nav-bar {
+	height: 32px !important;
+	/*align-items: center !important;*/
+}
+/* Fixes for touch mode */
+:root[uidensity="touch"] #tracking-protection-icon-container:not(:hover, :active, [open])::after {
+	top: 2px;
+}
+:root[uidensity="touch"] :is(#tabs-newtab-button image, #new-tab-button image) {
+	height: var(--tab-min-height) !important;
+	margin-top: 8px !important;
+}
+:root[uidensity="touch"] #alltabs-button {
+	height: var(--tab-min-height) !important;
+	margin-left: 4px !important;
+}

@@ -66,7 +66,7 @@ findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
 .urlbar-page-action, #tracking-protection-icon-container,
 #urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *),
-#TabsToolbar #firefox-view-button .toolbarbutton-icon {
+#TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item {
 	border-radius: 0 !important;
 }
 :root menupopup, :root panel {
