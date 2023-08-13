@@ -6,6 +6,9 @@
 :root:not([uidensity="compact"], [uidensity="touch"]) {
 	--tab-min-height: 33px !important;
 }
+:root[sizemode="normal"]:not([uidensity="compact"], [uidensity="touch"]) {
+	--tab-min-height: 34px !important;
+}
 :root[uidensity="compact"] {
 	--tab-min-height: 31px !important;
 }
@@ -156,7 +159,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	transition: all .25s;
 	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
 }
-.tab-background:not([selected])::before {
+.tab-background:not([selected], [multiselected="true"])::before {
 	scale: 0 1;
 	opacity: 0;
 	filter: grayscale(100%);
@@ -169,6 +172,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	opacity: .5;
 	background: var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff));
 	filter: grayscale(100%);
+}
+.tabbrowser-tab:hover > .tab-stack > .tab-background[multiselected="true"]::before {
+	filter: grayscale(0%)
 }
 /**/
 @media (-moz-platform: windows) {
@@ -343,6 +349,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	top: 3px;
 	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 }
+#urlbar[breakout][breakout-extend="true"] #tracking-protection-icon-container:not(:hover, :active, [open])::after {
+	top: 2px;
+}
 /* Adds a separator between the Firefox/Nightly label and the urlbar */
 :is(:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], 
 :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
@@ -370,11 +379,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	height: 34px;
 	border-left: 1px solid color-mix(in srgb, currentColor 20%, transparent);
-	padding-right: 2px !important;
+	margin-inline-end: 4px !important;
+	margin-inline-start: -2px !important;
 }
 #PanelUI-menu-button {
-	padding-right: 2px !important;
-	padding-left: 0px !important;
+	padding-inline-end: 4px !important;
 }
 :root:not([uidensity="compact"]) #nav-bar-customization-target {
 	margin-inline-end: 3px !important;
@@ -515,7 +524,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 :root[uidensity="touch"] .urlbar-page-action {
 	padding-block: calc(var(--urlbar-icon-padding) + 3px) !important;
-	height: calc(var(--urlbar-height) - 0px) !important;
+	height: calc(var(--urlbar-height) - 1px) !important;
 	width: var(--urlbar-height) !important;
 }
 :root[uidensity="touch"] .urlbar-page-action image {
@@ -541,7 +550,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 :root[uidensity="compact"] #urlbar[breakout-extend="true"] :is(#tracking-protection-icon-container, #identity-box) {
 	height: calc(var(--urlbar-height) - 4px) !important;
-	margin-block: -4px !important;
+	margin-block: -2px !important;
 }
 :root[uidensity="compact"] #nav-bar {
 	height: 32px !important;
@@ -558,4 +567,24 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 :root[uidensity="touch"] #alltabs-button {
 	height: var(--tab-min-height) !important;
 	margin-left: 4px !important;
+}
+/* Megabar */
+@supports not -moz-bool-pref("uc.reduced-megabar") {
+  #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+  	width: calc(100% + 2 * var(--urlbar-margin-inline)) !important;
+  	margin-inline: calc(var(--urlbar-margin-inline) * -1) !important;
+  	margin-block: calc(var(--urlbar-margin-inline) * -1) !important;
+  	height: calc(var(--urlbar-height) + 10px) !important;
+  	outline-width: 0px !important;
+  	border: 1px solid var(--urlbar-border-color) !important;
+  }
+  #urlbar[breakout][breakout-extend="true"] {
+  	--urlbar-margin-inline: 7px !important;
+  	padding: 2px !important;
+  	margin-top: -2px !important;
+  }
+}
+/* Multiselected tabs */
+.tab-background[multiselected="true"] {
+	outline: none !important;
 }

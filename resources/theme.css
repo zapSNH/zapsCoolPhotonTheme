@@ -2,16 +2,21 @@
 :root {
 	--theme-css: 1px;
 	--photon-tab-outline: #0a84ff;
+	--urlbar-border-color: #0a84ff;
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 }
-.menupopup-arrowscrollbox {
-  background-color: var(--arrowpanel-background) !important;
-}
 
-menu:where([_moz-menuactive="true"]):not([disabled="true"]), menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigation menuitem),
-#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) .menu-iconic-icon {
-	background: var(--button-hover-bgcolor) !important;
+@media (-moz-platform: windows) {
+  .menupopup-arrowscrollbox {
+    background-color: var(--arrowpanel-background) !important;
+  	box-shadow: 2px 2px 2px #0006 !important;
+  }
+  
+  menu:where([_moz-menuactive="true"]):not([disabled="true"]), menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigation menuitem),
+  #context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) .menu-iconic-icon {
+  	background: var(--button-hover-bgcolor) !important;
+  }
 }
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
@@ -101,10 +106,10 @@ menu:where([_moz-menuactive="true"]):not([disabled="true"]), menuitem:where([_mo
 }
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] :is(.tab-background[selected], #firefox-view-button[open] .toolbarbutton-icon) {
 	background: #323234 !important;
-}
+}/*
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme {
 	background: #464648 !important;
-}
+}*/
 /* System themes */
 :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"],
 :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
@@ -181,6 +186,9 @@ menu:where([_moz-menuactive="true"]):not([disabled="true"]), menuitem:where([_mo
 }
 :root[style*="background-noodles"] .tab-background[selected] {
 	background: var(--toolbar-bgcolor) !important;
+}
+:root[style*="background-noodles"] {
+	--urlbar-border-color: var(--tabs-border-color) !important;
 }
 @media (prefers-color-scheme: dark) {
 	:root[style*="background-noodles"] {

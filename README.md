@@ -14,10 +14,13 @@ ____
 | **116** | ✔️ | ✔️ | ? |
 | **118** | ✔️ | ✔️ | ? | 
 ## Installation
-Open `about:config` and set:
+Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
+* `uc.reduced-megabar` to `false`
+
+Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Proton's size. Yes, the highlighted/open megabar is smaller in Proton.
 
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 

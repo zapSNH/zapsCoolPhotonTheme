@@ -296,6 +296,9 @@
 	img[src="chrome://global/skin/icons/settings.svg"] {
 		content: url(./resources/icons/settings.svg) !important;
 	}
+	.more-options-button {
+		background-image: url(./resources/icons/settings.svg) !important
+	}
 	#help-button img {
 		content: url(./resources/icons/help1.svg) !important;
 	}

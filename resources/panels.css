@@ -97,6 +97,7 @@ menuitem, menu {
 	margin: 0 !important;
 	padding: 0px 11px !important;
 }
+/* OLD CSS please ignore */
 /* Photon like tab tooltips */
 /* browser.proton.places-tooltip.enabled should be true */
 /* Remove if unwanted */
@@ -108,6 +109,8 @@ menuitem, menu {
 #tabbrowser-tab-tooltip {
 	font-weight: 400 !important;
 }
+/* end */
+
 /* Makes the size of the Firefox account button in the app menu smaller */
 #appMenu-fxa-status2 {
 	padding: 0 !important;
@@ -272,7 +275,9 @@ menuitem, menu {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
 }
-
+:root .all-tabs-item {
+	padding-inline: 0 !important;
+}
 #PanelUI-developer-tools-view toolbarbutton {
 	margin-inline-start: var(--appmenu-noicon-inline-end) !important;
 }
@@ -287,16 +292,26 @@ menuitem, menu {
   #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
 	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
   menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
-	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic) { 
+	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic),
+	#allTabsMenu-hiddenTabsButton { 
   	padding-left: 34px !important;
   }
 	menuitem[checked="true"] > .menu-iconic-left {
 	 list-style-image: url("./icons/check.svg") !important;
 	}
 }
+@media (-moz-platform: linux) {
+	.menupopup-arrowscrollbox {
+		padding-block: 4px !important;
+	}
+	#context-navigation {
+  	margin-inline: 4px !important;
+	}
+}
 #sidebarMenu-popup > menuitem {
 	margin-inline: 0 !important;
 }
+
 /* Enhanced TP (toilet paper) */
 #protections-popup-tp-switch {
 	border-radius: 8px !important;
