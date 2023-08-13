@@ -56,7 +56,7 @@ button, button hbox, hbox menulist,
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
-#firefox-view-button .toolbarbutton-icon {
+#firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
@@ -88,7 +88,7 @@ menuseparator {
 		--panel-border-color: transparent !important;
 	}
 }
-/* Isn't actually in either Photon or Proton, but it's usefel for Side View */
-#sidebar {
+/* Isn't actually in either Photon or Proton, but it makes Side View usable lol */
+#sidebar-box {
 	max-width: 100vw !important;
 }

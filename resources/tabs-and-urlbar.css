@@ -267,6 +267,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
 	z-index: 0;
 }
+/* :has is kinda broken: https://bugzilla.mozilla.org/show_bug.cgi?id=1792501 */
 .tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]) 
 .tab-stack::before {
 	border-right-color: transparent !important;
@@ -473,8 +474,12 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #urlbar-results[wrap] .urlbarView-url {
 	margin-left: 26px !important;
 }
+.urlbarView-dynamic-quickactions-buttons > span {
+	box-shadow: none !important;
+	border: 1px solid color-mix(in srgb, currentColor 30%, transparent)
+}
 /* Search icon */
-#identity-box.localResource #identity-icon-box {
+#identity-box.localResource #identity-icon-box, #urlbar[usertyping] #identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */

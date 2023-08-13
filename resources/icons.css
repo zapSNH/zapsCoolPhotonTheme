@@ -704,10 +704,10 @@
 	width: 16px !important;
 }
 /* */
-#sidebarMenu-popup menuitem {
+#sidebarMenu-popup menuitem:not(.menuitem-iconic) {
 	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
 }
-#sidebarMenu-popup menuitem::before {
+#sidebarMenu-popup menuitem:not(.menuitem-iconic)::before {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	display: block;
 	width: 16px;
