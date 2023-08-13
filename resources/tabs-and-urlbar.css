@@ -46,20 +46,36 @@
 	z-index: 2 !important;
 }
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
-so that the sound icon doesn't look out of place */
+so that the sound icon doesn't look out of place
+credits to phroton for some of this stuff */
 .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
-	margin-inline-start: 18px !important;
-	margin-inline-end: 0px !important;
 	border-radius: 1px !important;
 	transition: background 0.2s !important;
 	opacity: 1 !important;
 	padding: 0px !important;
+}
+.tabbrowser-tab:not([pinned]) .tab-icon-overlay {
+	position: relative !important;
+	left: 100% !important;
 }
 .tab-icon-image {
 	opacity: 1 !important;
 }
 .tab-icon-image:not([busy]) {
 	display: block !important;
+}
+.tabbrowser-tab:not([pinned]) .tab-icon-stack {
+	position: absolute !important;
+	width: calc(100% - 6px - 48px) !important;
+}
+tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
+  width: calc(100% - 32px) !important;
+}
+.tabbrowser-tab:not([pinned]) .tab-label-container {
+	margin-inline-start: 21px !important;
+}
+.tabbrowser-tab:is([muted], [soundplaying], [activemedia-blocked]) .tab-label-container {
+  margin-right: 20px;
 }
 /* Fixes for pinned tabs */
 .tabbrowser-tab[pinned] .tab-icon-overlay {
@@ -94,10 +110,28 @@ so that the sound icon doesn't look out of place */
 	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
 }
 .tab-icon-overlay[pictureinpicture] {
-	list-style-image: url(./icons/pictureinpicture.svg) !important;
+  list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
 .tabbrowser-tab:is([pinned][first-visible-tab]) {
 	margin: 0 !important;
+}
+/* credits to phroton or lepton idk */
+.tabbrowser-tab:not([pinned]) .tab-icon-overlay[pictureinpicture] {
+  /* Shape */
+  display: flex !important;
+  order: 2 !important;
+  
+  /* Color */
+  fill: currentColor;
+  opacity: 0.8;
+  -moz-context-properties: fill;
+}
+/* i dunno how to separate the icon in to two so i just made some icons lol */
+.tab-icon-overlay[pictureinpicture][soundplaying] {
+  list-style-image: url(./icons/pictureinpicture-sound.svg) !important;
+}
+.tab-icon-overlay[pictureinpicture][muted] {
+  list-style-image: url(./icons/pictureinpicture-muted2.svg) !important;
 }
 /* Removes Proton's own border around the tab */
 .tab-background:is([selected], [multiselected]):-moz-lwtheme {
