@@ -77,7 +77,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 .tabbrowser-tab:not([pinned]) .tab-label-container {
 	margin-inline-start: 21px !important;
 }
-.tabbrowser-tab:is([muted], [soundplaying], [activemedia-blocked]) .tab-label-container {
+.tabbrowser-tab:is([muted], [soundplaying], [activemedia-blocked], [crashed="true"]) .tab-label-container {
   margin-right: 20px;
 }
 /* Fixes for pinned tabs */
@@ -488,7 +488,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border: 1px solid color-mix(in srgb, currentColor 30%, transparent)
 }
 /* Search icon */
-#identity-box.localResource #identity-icon-box, #urlbar[usertyping] #identity-icon-box {
+#identity-box.localResource #identity-icon-box, #urlbar:is([usertyping], :not([domaindir])) #identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
