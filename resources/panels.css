@@ -88,6 +88,14 @@ menuitem, menu {
 	margin-bottom: 4px !important;
 	margin-top: 1px !important;
 }
+#appMenu-proton-update-banner {
+	padding-block: 8px !important;
+	margin-top: -4px !important;
+	margin-bottom: 5px !important;
+	padding-inline-start: var(--appmenu-icon-inline-end) !important;
+	align-items: center !important;
+	outline: 1px solid var(--panel-separator-color)
+}
 /* Dims the shortcut items */
 .panel-subview-body > toolbarbutton:not([disabled])[shortcut*="+"]::after {
 	opacity: .5 !important;
