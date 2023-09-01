@@ -11,8 +11,8 @@ ____
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
 | **115esr** | ✔️ | Semi-broken | ? |
-| **117** | ✔️ | ✔️ | ? |
-| **119a** | ✔️ | ✔️ | ? | 
+| **116** | ✔️ | ✔️ | ? |
+| **118** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
