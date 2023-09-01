@@ -207,19 +207,18 @@ menuitem, menu {
 .panel-footer {
 	justify-content: center !important;
 	margin: 0 !important;
-	margin-top: 16px !important;
-	gap: 0px !important;
+	margin-top: 16px !important
 }
-#editBookmarkPanel .panel-footer {
+#editBookmarkPanelBottomButtons {
 	margin-bottom: -4px !important;
 }
-#editBookmarkPanel .panel-footer button {
+#editBookmarkPanelBottomButtons button {
 	width: 0px !important;
 }
 .panel-footer > button {
 	border-radius: 0 !important;
 	margin: 0 !important;
-	margin-inline: 0px !important;
+	margin-inline: 0 !important;
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
