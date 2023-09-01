@@ -19,8 +19,7 @@
   }
 }
 /* Light theme */
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) {
 	--lwt-accent-color: #d7d7db !important;
 	--toolbar-bgcolor: #f9f9fa !important;
 	--button-hover-bgcolor: #dddedf !important;
@@ -32,36 +31,69 @@
 	--button-hover-bgcolor: #bdbec0 !important;
 	--button-active-bgcolor: #b3b4b6 !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
 	background-color: white !important;
 	border: solid 1px #cccccc !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 #urlbar:not([breakout-extend], :hover) #urlbar-background {
 	box-shadow: 0px 0px 4px #0001 !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
 #urlbar:not([breakout-extend]):hover #urlbar-background {
 	box-shadow: 0px 0px 5px #0002 !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
 .tab-background[selected] {
 	background: #f9f9fa !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
 #nav-bar {
     box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
 }
-:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
-:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
 :is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
     box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+}
+@media (prefers-color-scheme: light) {
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
+  	--lwt-accent-color: #d7d7db !important;
+  	--toolbar-bgcolor: #f9f9fa !important;
+  	--button-hover-bgcolor: #dddedf !important;
+  	--button-active-bgcolor: #d2d3d4 !important;
+  	--in-content-page-background: var(--toolbar-bgcolor) !important;
+  	--arrowpanel-border-color: #cccccc !important;
+  	--urlbar-box-text-color: #747576 !important;
+  	--panel-separator-color: hsla(210,4%,10%,.14) !important;
+  	--button-hover-bgcolor: #bdbec0 !important;
+  	--button-active-bgcolor: #b3b4b6 !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+  :is(#urlbar-background, #searchbar) {
+  	background-color: white !important;
+  	border: solid 1px #cccccc !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  #urlbar:not([breakout-extend], :hover) #urlbar-background {
+  	box-shadow: 0px 0px 4px #0001 !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+  #urlbar:not([breakout-extend]):hover #urlbar-background {
+  	box-shadow: 0px 0px 5px #0002 !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+  .tab-background[selected] {
+  	background: #f9f9fa !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+  #nav-bar {
+      box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
+  }
+  :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
+  :is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
+      box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+  }
 }
 /* Dark theme */
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] {
@@ -91,6 +123,41 @@
 	.container.infobar button {
 		background-color: rgb(55, 55, 55) !important;
 	}
+	:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] {
+  	--lwt-accent-color: #0c0c0d !important;
+  	--toolbar-bgcolor: #323234 !important;
+  	--toolbar-field-background-color: #474749 !important;
+  	--toolbar-field-border-color: #5a5a5c !important;
+  	--button-hover-bgcolor: #aaa6 !important;
+  	--toolbarbutton-icon-fill: #bebebe !important;
+  	--toolbar-field-focus-background-color: #474749 !important;
+  	--button-bgcolor: rgb(55, 55, 55) !important;
+  	--toolbarbutton-active-background: #7f7f80 !important;
+  	--arrowpanel-background: #4a4a4f !important;
+  	--arrowpanel-border: #2a2a2e !important;
+  	--arrowpanel-border-color: #27272b !important;
+  	--button-active-bgcolor: rgb(92, 92, 94) !important;
+  	--input-bgcolor: rgb(60, 60, 64) !important;
+  	--input-border-color: rgb(90, 90, 94) !important;
+  	--in-content-page-background: var(--toolbar-bgcolor) !important;
+  	--urlbar-box-text-color: #bababc !important;
+  	--panel-separator-color: rgba(249, 249, 250, .1) !important;
+  }
+  :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
+  	border-color: var(--toolbar-field-border-color) !important;
+  }
+  :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #identity-icon-box {
+  	--urlbar-box-focus-bgcolor: #474749 !important
+  }
+  :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] :is(.urlbar-icon, #identity-box) {
+  	fill: #b1b1b3 !important
+  }
+  :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #star-button[starred] {
+  	fill: #45a1ff !important;
+  }
+  :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] :is(.tab-background[selected], #firefox-view-button[open] .toolbarbutton-icon) {
+  	background: #323234 !important;
+  }
 }
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #urlbar {
 	border-color: var(--toolbar-field-border-color) !important;
@@ -125,7 +192,7 @@
 	color: var( --lwt-text-color) !important;
 }
 /* Accent color for the titlebar */
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows), (-moz-windows-accent-color-in-titlebar) {
   :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] 
   #navigator-toolbox:not(:-moz-window-inactive) {
   	background: AccentColor !important
