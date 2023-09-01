@@ -11,8 +11,8 @@ ____
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
 | **115esr** | ✔️ | Semi-broken | ? |
-| **117** | ✔️ | ✔️ | ? |
-| **119a** | ✔️ | ✔️ | ? | 
+| **116** | ✔️ | ✔️ | ? |
+| **118** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -27,6 +27,7 @@ Create `security.secure_connection_icon_color_gray` as a boolean and set it to `
 Download the release for your version:
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 * [Firefox 116 - 118](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
 
 Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:profiles` and opening the root directory's folder.
 
