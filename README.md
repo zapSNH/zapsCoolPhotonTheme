@@ -43,7 +43,7 @@ and not like this:
 Restart Firefox
 
 # Tab separators
-Sometimes the tab separators go missing. If you want them to show up always then remove line 277 (https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277) from `tabs-and-urlbar.css`.
+Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
 
 This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
