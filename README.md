@@ -11,8 +11,8 @@ ____
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
 | **115esr** | ✔️ | Semi-broken | ? |
-| **116** | ✔️ | ✔️ | ? |
-| **118** | ✔️ | ✔️ | ? | 
+| **117** | ✔️ | ✔️ | ? |
+| **119** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -41,6 +41,11 @@ and not like this:
 * `Profiles` > `your profile` > `chrome` > `zapsCoolPhotonTheme-main`
 
 Restart Firefox
+
+# Tab separators
+Sometimes the tab separators go missing. If you want them to show up always then remove line 277 (https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277) from `tabs-and-urlbar.css`.
+
+This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
 # Misc.
 Photon Firefox icons are taken from the `omni.ja` file from Firefox 87 
