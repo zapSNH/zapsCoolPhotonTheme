@@ -25,6 +25,7 @@ Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Prot
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
 Download the release for your version:
+* [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 * [Firefox 116 - 118](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
