@@ -100,14 +100,40 @@
 .geo-icon:not(.blocked-permission-icon) {
 	list-style-image: url(./icons/geo.svg) !important;
 }
-.webRTC-selectDevice-icon.blocked-permission-icon {
+.webRTC-selectDevice-icon.blocked-permission-icon, .camera-icon.blocked-permission-icon {
 	list-style-image: url(./icons/camera-blocked.svg) !important;
 }
-.webRTC-selectDevice-icon:not(.blocked-permission-icon) {
+.webRTC-selectDevice-icon:not(.blocked-permission-icon), .camera-icon, #webrtc-sharing-icon[sharing="camera"] {
 	list-style-image: url(./icons/camera.svg) !important;
 }
-#addons-notification-icon {
-	list-style-image: url(./icons/extensions.svg) !important;
+.persistent-storage-icon {
+  list-style-image: url(./icons/persistent-storage.svg) !important;
+}
+.persistent-storage-icon.blocked-permission-icon {
+  list-style-image: url(./icons/persistent-storage-blocked.svg) !important;
+}
+#notification-popup-box .persistent-storage-icon {
+	width: 30px !important;
+}
+.microphone-icon {
+  list-style-image: url(./icons/microphone.svg) !important;
+}
+.microphone-icon.blocked-permission-icon {
+  list-style-image: url(./icons/microphone-blocked.svg) !important;
+}
+.screen-icon, #webrtc-sharing-icon[sharing="screen"] {
+  list-style-image: url(./icons/screen.svg) !important;
+}
+.screen-icon.blocked-permission-icon {
+  list-style-image: url(./icons/screen-blocked.svg) !important;
+}
+#display-share-icon {
+	background-image: url(./icons/screen.svg) !important;
+}
+@-moz-document url(chrome://browser/content/webrtcIndicator.xhtml) {
+  #addons-notification-icon {
+	 list-style-image: url(./icons/extensions.svg) !important;
+	}
 }
 .identity-popup-security-connection {
   list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
