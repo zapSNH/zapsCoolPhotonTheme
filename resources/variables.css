@@ -9,67 +9,44 @@
 	--photon-back-outline: #2227;
 	--photon-back-shadow: #7771;
 	--photon-back-shadow-hover: #2225;
-	--photon-accent: #0a84ff;
-	
-	--photon-accent-dark: #0a84ff;
-	--photon-accent-light: #74c0ff;
 	/* Border-radius things */
 	--photon-border-radius: 2px;
-	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
 	--appmenu-icon-inline-end: 8px;
-	--appmenu-noicon-inline-end: 24px;
 	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--variables-css: 1px;
-	--tab-attention-icon-color: var(--photon-accent) !important;
-	--urlbar-popup-url-color: var(--photon-accent) !important;
-	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
 }
 @media (prefers-color-scheme: dark) {
-	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
+	:root {
 		--photon-back: #fff3;
 		--photon-back-hover: #fff5;
 		--photon-back-active: #fff7;
 		--photon-back-outline: #222a;
 		--photon-back-shadow: #2225;
 		--photon-back-shadow-hover: #222a;
-	  --photon-accent: #74c0ff;
-		--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
 	}
 }
-:root[lwt-toolbar-field-brighttext] :is(#urlbar, #searchbar) {
-	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
-} 
-button {
-	--in-content-primary-button-background: var(--photon-accent) !important;
-}
+
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
 #urlbar-background, #searchbar, input,
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
-#identity-icon-box, #tabs-newtab-button image,
+#identity-icon-box, #tabs-newtab-button image, #tracking-protection-icon-container,
 menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
 button, button hbox, hbox menulist,
 /* i'm lazy */
-#urlbar :is(button, .urlbarView-action), #urlbar-go-button,
-findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
-.dialogBox, #sidebar-switcher-target, .close-icon,
-#firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span {
+#urlbar :not([class*="icon"], [class*="urlbarView-body"], .urlbar-page-action), #urlbar-go-button,
+findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section * {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
-#urlbar .urlbarView-row {
-	border-radius: var(--photon-border-radius-1) !important;
-}
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
-.urlbar-page-action, #tracking-protection-icon-container,
-#urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *),
-#TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item {
-	border-radius: 0 !important;
+.urlbar-page-action {
+	border-radius: 0px !important;
 }
-:root menupopup, :root panel {
+menupopup {
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 	border-radius: var(--photon-panel-border-radius) !important;
 	/* Makes the colors of the context menus the same as the app menu */
@@ -88,7 +65,7 @@ menuseparator {
 		--panel-border-color: transparent !important;
 	}
 }
-/* Isn't actually in either Photon or Proton, but it makes Side View usable lol */
-#sidebar-box {
+/* Isn't actually in either Photon or Proton, but it's usefel for Side View */
+#sidebar {
 	max-width: 100vw !important;
 }

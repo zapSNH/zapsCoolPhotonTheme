@@ -1,4 +1,4 @@
-/* zap's photon theme */
+/* faitful photon content */
 /* will be much less documented */
 :root {
 	--photon-primary-border-radius: 4px;
@@ -24,8 +24,7 @@
 			--in-content-table-background: #202023 !important;
 		}
 	}
-	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
-	.page-section-header > .twisty, [class^="closed-tab-li"] {
+	listheader, richlistbox, search-textbox, .info-box-container {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -36,12 +35,9 @@
 		border-top-left-radius: 0 !important;
 		border-top-right-radius: 0 !important;
 	}
-	button, menulist, #label-box, .category, .sidebar-footer-link, input:not(type="radio") {
+	button, menulist, #label-box, .category, .sidebar-footer-link {
 		font-weight: 400 !important;
 		border-radius: var(--photon-secondary-border-radius) !important;
-	}
-	.toggle-button {
-		border-radius: 8px !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
@@ -182,11 +178,11 @@
 	}
 	checkbox:not([disabled="true"]):hover > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:hover > .radio-check, .reload-tabs-button:hover {
-		background-color: var(--blue-40) !important;
+		background-color: var(--blue-70) !important;
 	}
 	checkbox:not([disabled="true"]):active > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:active > .radio-check, .reload-tabs-button:active {
-		background-color: var(--blue-60) !important;
+		background-color: var(--blue-80) !important;
 	}
 	.text-link:not(.sidebar-footer-link), addon-details a {
 		color: -moz-nativehyperlinktext !important;
@@ -296,9 +292,6 @@
 	img[src="chrome://global/skin/icons/settings.svg"] {
 		content: url(./resources/icons/settings.svg) !important;
 	}
-	.more-options-button {
-		background-image: url(./resources/icons/settings.svg) !important
-	}
 	#help-button img {
 		content: url(./resources/icons/help1.svg) !important;
 	}
@@ -314,16 +307,4 @@
 	.category[name="plugin"] {
 		background-image: url("./resources/icons/plugin.svg") !important;
 	}
-}
-
-@-moz-document url-prefix("about:firefoxview") {
-	@media (prefers-color-scheme: dark) {	
-		* {
-			--fxview-background-color: #2a2a2e !important;
-			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
-		}
-	}
-	* {
-		--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent)
-  }
 }

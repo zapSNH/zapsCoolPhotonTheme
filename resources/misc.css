@@ -22,29 +22,7 @@
 	#maintenanceButton {
 		list-style-image: url("./icons/import-export.svg") !important;
 	}
-  
-  /* Bigger Buttons */
-  .download-state .downloadButton:not(:hover, :active) {
-  	background: transparent !important;
-  }
-  .downloadButton {
-  	height: 5.5em !important;
-  }
-  /* Seperator */
-  .download-state .downloadButton::before {
-  	width: 1px !important;
-  	height: 46px !important;
-  	content: "";
-  	display: block;
-  	background: color-mix(in srgb, currentColor 10%, transparent);
-  	margin-top: calc(((5.5em - 46px)/2) - 10px);
-  	position: relative;
-  	translate: -8px
-  }
-  .download-state .downloadButton:hover::before {
-  	background: color-mix(in srgb, currentColor 10%, transparent);
-  }
-	
+
 	@media (prefers-color-scheme: dark) {
 		* {
 			--organizer-pane-background: #323234 !important;
@@ -65,36 +43,3 @@
 		}
 	}
 }
-/* Autoscroller */
-.autoscroller {
-	opacity: 0.8 !important;
-	background-color: white !important;
-	background: no-repeat center var(--autoscroll-background-image);
-	padding: 15px !important;
-	outline: red inset 200px !important;
-	/*box-shadow: 0 0 20px 0px rgba(0,0,0,0.75) inset;*/
-	clip-path: circle(40% at 50% 50%) !important;
-}
-.autoscroller::after {
-	display: block;
-	content: "";
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background: #1110;
-	border: inset #111d 2px;
-	translate: -12px -22px
-}
-/* Aero glass/Mica *
-@supports -moz-bool-pref("photon.win-glass") {
-	#navigator-toolbox-background, #navigator-toolbox, html {
-    background: transparent !important;
-		appearance: -moz-win-glass !important;
-	}
-	[class*="titlebar"][class*="button"] {
-		list-style-image: none !important;
-	}
-	[class*="titlebar"][class*="button"][class*="close"] {
-		opacity: 0.5 !important;
-	}
-}*/
