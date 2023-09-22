@@ -583,8 +583,35 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
   	padding: 2px !important;
   	margin-top: -2px !important;
   }
+  :root[uidensity="compact"] #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+  	width: calc(100% + 2 * var(--urlbar-margin-inline)) !important;
+  	margin-inline: calc(var(--urlbar-margin-inline) * -1) !important;
+  	margin-block: calc(var(--urlbar-margin-inline) * -0.5) !important;
+  	height: calc(var(--urlbar-height) + 4px) !important;
+  	outline-width: 0px !important;
+  	border: 1px solid var(--urlbar-border-color) !important;
+  }
+  :root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] {
+  	--urlbar-margin-inline: 7px !important;
+  	padding: 2px !important;
+  	margin-top: 0px !important;
+  }
+  :root[uidensity="touch"] #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+  	width: calc(100% + 2 * var(--urlbar-margin-inline)) !important;
+  	margin-inline: calc(var(--urlbar-margin-inline) * -1) !important;
+  	margin-block: calc(var(--urlbar-margin-inline) * -0.5) !important;
+  	height: calc(var(--urlbar-height) + 4px) !important;
+  	outline-width: 0px !important;
+  	border: 1px solid var(--urlbar-border-color) !important;
+  }
+  :root[uidensity="touch"] #urlbar[breakout][breakout-extend="true"] {
+  	--urlbar-margin-inline: 7px !important;
+  	padding: 2px !important;
+  	margin-top: -2px !important;
+  }
 }
 /* Multiselected tabs */
 .tab-background[multiselected="true"] {
 	outline: none !important;
+	background: var(--button-hover-bgcolor) !important;
 }
