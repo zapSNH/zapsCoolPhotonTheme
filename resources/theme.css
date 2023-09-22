@@ -30,6 +30,7 @@
 	--panel-separator-color: hsla(210,4%,10%,.14) !important;
 	--button-hover-bgcolor: #bdbec0 !important;
 	--button-active-bgcolor: #b3b4b6 !important;
+  --link-color: var(--photon-accent-dark) !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -115,6 +116,7 @@
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 	--urlbar-box-text-color: #bababc !important;
 	--panel-separator-color: rgba(249, 249, 250, .1) !important;
+  --link-color: var(--photon-accent-light) !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -256,6 +258,7 @@
 }
 :root[style*="background-noodles"] {
 	--urlbar-border-color: var(--tabs-border-color) !important;
+  --link-color: var(--photon-accent-light) !important;
 }
 @media (prefers-color-scheme: dark) {
 	:root[style*="background-noodles"] {
