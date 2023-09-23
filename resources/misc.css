@@ -98,3 +98,111 @@
 		opacity: 0.5 !important;
 	}
 }*/
+/* Old style context menus */
+@supports -moz-bool-pref("uc.contextmenu.win-10") {
+	@supports -moz-bool-pref("uc.contextmenu.dark") {
+		.menupopup-arrowscrollbox {
+			--arrowpanel-background: #2b2b2b !important;
+			border-color: #a0a0a0 !important;
+			color: white !important;
+    }
+		menupopup menuseparator::before {
+			border-color: #808080 !important;
+		}
+		menupopup :is(menu, menuitem) {
+			color: white !important;
+		}
+	}
+	@supports -moz-bool-pref("uc.contextmenu.light") {
+		.menupopup-arrowscrollbox {
+			--arrowpanel-background: #fff !important;
+			border-color: #a0a0a0 !important;
+			color: black !important;
+    }
+		menupopup menuseparator::before {
+			border-color: #d7d7d7 !important;
+		}
+		menupopup :is(menu, menuitem) {
+			color: black !important;
+		}
+	}
+	.menupopup-arrowscrollbox {
+		padding-inline: 2px !important;
+  }
+	menupopup menuseparator::before {
+		margin-inline: 8px !important;
+	}
+	menupopup .menu-right {
+		content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+		scale: 1 1 !important;
+	}
+	menuitem[checked="true"] > .menu-iconic-left {
+    list-style-image: none !important;
+		background: currentColor;
+		border-radius: 50% !important;
+		width: 6px !important;
+		height: 6px;
+		margin-inline-start: 5px !important;
+		margin-inline-end: 12px !important;
+  }
+	#context-navigation {
+		margin-inline: 2px !important;
+	}
+}
+
+/* kinda looks like the gnome context menu too */
+@supports -moz-bool-pref("uc.contextmenu.win-11") {
+	@supports -moz-bool-pref("uc.contextmenu.dark") {
+		.menupopup-arrowscrollbox {
+			--arrowpanel-background: #2c2c2c !important;
+			border-color: #3e3e3e !important;
+			color: white !important;
+    }
+		menupopup menuseparator::before {
+			border-color: #3e3e3e !important;
+		}
+		menupopup :is(menu, menuitem) {
+			color: white !important;
+		}
+	}
+	@supports -moz-bool-pref("uc.contextmenu.light") {
+		.menupopup-arrowscrollbox {
+			--arrowpanel-background: #fff !important;
+			border-color: #a0a0a0 !important;
+			color: black !important;
+    }
+		menupopup menuseparator::before {
+			border-color: #e7e7e7 !important;
+		}
+		menupopup :is(menu, menuitem) {
+			color: black !important;
+		}
+	}
+	.menupopup-arrowscrollbox {
+		border-radius: 6px !important;
+		box-shadow: 0 2px 4px #1118 !important;
+  }
+	menupopup menuseparator::before {
+		margin-inline: 8px !important;
+	}
+	menupopup .menu-right {
+		content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+		scale: 1 1 !important;
+	}
+	menuitem[checked="true"] > .menu-iconic-left {
+    list-style-image: none !important;
+		background: currentColor;
+		border-radius: 50% !important;
+		width: 6px !important;
+		height: 6px;
+		margin-inline-start: 5px !important;
+		margin-inline-end: 12px !important;
+  }
+	menupopup :is(menu, menuitem) {
+		--panel-border-radius: 4px !important;
+		margin-inline: 4px !important;
+	}
+	#context-navigation menuitem * {
+		border-radius: 2px !important;
+  }
+}
