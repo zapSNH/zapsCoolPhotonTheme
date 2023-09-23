@@ -11,8 +11,8 @@ ____
 |-|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? |
 | **115esr** | ✔️ | Semi-broken | ? |
-| **116** | ✔️ | ✔️ | ? |
-| **118** | ✔️ | ✔️ | ? | 
+| **117** | ✔️ | ✔️ | ? |
+| **119** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -25,6 +25,7 @@ Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Prot
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
 Download the release for your version:
+* [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 * [Firefox 116 - 118](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
@@ -41,6 +42,25 @@ and not like this:
 * `Profiles` > `your profile` > `chrome` > `zapsCoolPhotonTheme-main`
 
 Restart Firefox
+
+# Context menus
+In `about:config`, if you want native (Windows) context menus, you can create:
+**Note: These context menus have not been tested on platforms other than Windows**
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.contextmenu.win-10` | Windows 10 styled menu | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e4720c5f-ce0c-4178-9b5c-dc60844a265d) |
+| `uc.contextmenu.win-11` | Windows 11 styled menu, Also kinda looks the GNOME context menu | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/7c1c78bf-0b67-410a-85bf-133bdba1fce6) |
+| `uc.contextmenu.dark` | Makes the context menu dark | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/7c1c78bf-0b67-410a-85bf-133bdba1fce6) ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e4720c5f-ce0c-4178-9b5c-dc60844a265d) |
+| `uc.contextmenu.light` | Makes the context menu light | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/3ee54b09-3c05-420c-9693-4fe5e76f8aa1) ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e9a1f904-fe21-415e-9421-1d995edc1781) |
+
+If you don't set `uc.contextmenu.light` or `uc.contextmenu.dark`, then the context menu will take the colors from the theme:
+![Windows 11 style context menu with the dark Alpenglow theme](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/09246fb9-66ab-4406-bc94-4e46157dd167)
+
+
+# Tab separators
+Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
+
+This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
 # Misc.
 Photon Firefox icons are taken from the `omni.ja` file from Firefox 87 
