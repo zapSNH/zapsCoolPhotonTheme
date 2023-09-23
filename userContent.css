@@ -43,6 +43,9 @@
 	.toggle-button {
 		border-radius: 8px !important;
 	}
+	.button-delete {
+		
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -177,6 +180,10 @@
 		fill: white !important;
 		fill-opacity: 1 !important;
 	}
+	.checkbox-check {
+		height: 20px !important;
+		width: 20px !important;
+	}
 	.category:is([current], [selected]), .tab-group *[selected] {
 		color: #45a1ff !important;
 	}
@@ -213,7 +220,7 @@
 		list-style-image: url("./resources/icons/extensions.svg") !important;
 	}
 	.help-icon {
-		list-style-image: url("./resources/icons/help1.svg") !important;
+		content: url("./resources/icons/help1.svg") !important;
 	}
 	#trackingProtectionShield {
 		list-style-image: url(./resources/icons/tracking-protection-big.svg) !important;
