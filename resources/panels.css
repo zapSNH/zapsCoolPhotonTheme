@@ -256,19 +256,16 @@ menuitem, menu {
 }
 #appMenu-fxa-status2:not([fxastatus]) {
   padding-inline: 8px 8px !important
-}
-#unified-extensions-panel panelview, #permission-popup panelview {
+}/*
+#unified-extensions-panel panelview, */#permission-popup panelview {
 	margin-bottom: 3px !important;
 }
 #identity-popup[mainviewshowing] panelview {
-	margin-bottom: -2px !important;
+	margin-bottom: -5px !important;
 	margin-top: -3px !important;
 }
 #identity-popup-security-button {
 	margin-bottom: 0px !important;
-}
-#identity-popup:not([mainviewshowing]) panelview, #identity-popup[connection="chrome"] panelview {
-	margin-bottom: 3px !important;
 }
 #protections-popup-settings-button {
 	margin-block: -1px !important;
@@ -276,9 +273,6 @@ menuitem, menu {
 #protections-popup-show-report-stack {
 	margin-top: -1px !important;
 	margin-bottom: -2px !important;
-}
-#protections-popup-cookiesView-settings-button, #protections-popup-trackersView-settings-button {
-	margin-bottom: 3px !important;
 }
 #BMB_bookmarksPopup menu, menu.bookmark-item {
 	margin-inline: 0 !important;
@@ -328,6 +322,13 @@ menuitem, menu {
 }
 #moz-toggle-button {
 	border-radius: 8px !important;
+}
+#moz-toggle-button::before {
+	background: currentColor !important;
+}
+.toggle-button[aria-pressed="true"] {
+	background: var(--photon-accent-dark) !important;
+	outline: color-mix(in srgb, black 20%, var(--photon-accent-dark)) 1px solid !important;
 }/*
 #protections-popup-tp-switch:not([enabled]) {
 	padding-left: 1px !important;
@@ -340,11 +341,56 @@ menuitem, menu {
 	border-color: var(--photon-accent) !important;
 }*/
 #protections-popup-tp-switch-section-header, #protections-popup-siteNotWorkingView-header {
-	margin-inline: 3px !important;
+	margin-inline: 8px !important;
+}
+#protections-popup-settings-button {
+	padding-inline-end: 16px !important;
 }
 #protections-popup-siteNotWorkingView-body, .protections-popup-list {
 	margin-inline: 11px !important;
 }
-#protections-popup-content toolbarbutton {
-	padding-inline: 24px !important;
+#protections-popup-content toolbarbutton, #protections-popup-tp-switch-breakage-fixed-link, #protections-popup-tp-switch-breakage-link {
+	padding-inline: 16px !important;
+}
+#protections-popup-mainView-panel-header-section {
+  overflow: hidden;
+  color: white;
+  background: radial-gradient(circle farthest-side at top right, #9059FF, #0250BB);
+}
+#protections-popup-mainView-panel-header-section toolbarseparator {
+	margin-block: 0px !important;
+}
+/* Extensions Menu That I Totally Do Not Dislike */
+#unified-extensions-area > toolbaritem, unified-extensions-item {
+	margin: 0 !important;
+}
+:is(#unified-extensions-area > toolbaritem, unified-extensions-item) > :last-child {
+  padding: 0 !important;
+}
+#unified-extensions-area > toolbaritem .subviewbutton-iconic image {
+	border-radius: 0 !important;
+}
+.panel-subview-body {
+	--uei-icon-size: 16px !important;
+}
+/* Big button thing */
+/* yes i know there's an easier way to do this but separating them gives me more control */
+:is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
+#identity-popup-clear-sitedata-button, #identity-popup-more-info) {
+	height: 46px !important;
+	margin-top: -4px !important;
+	font-size: 14px !important;
+	background: color-mix(in srgb, currentColor 9%, transparent) !important;
+}
+:is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
+#identity-popup-clear-sitedata-button, #identity-popup-more-info) .toolbarbutton-text {
+	text-align: center !important;
+}
+:is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
+#identity-popup-clear-sitedata-button, #identity-popup-more-info):hover {
+	background: color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+:is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
+#identity-popup-clear-sitedata-button, #identity-popup-more-info):hover:active {
+	background: color-mix(in srgb, currentColor 30%, transparent) !important;
 }
