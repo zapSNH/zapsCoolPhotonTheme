@@ -7,6 +7,7 @@
 }
 @-moz-document url-prefix("about:") {
 	* {
+		--brand-color-accent: light-dark(var(--blue-50), var(--blue-50)) !important;
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
 	}
@@ -42,9 +43,6 @@
 	}
 	.toggle-button {
 		border-radius: 8px !important;
-	}
-	.button-delete {
-		
 	}
 }
 @-moz-document url("about:privatebrowsing") {

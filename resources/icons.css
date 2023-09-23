@@ -884,3 +884,30 @@ menuitem[data-l10n-id="sidebar-menu-close"]::before {
 #firefox-view-button {
   list-style-image: url(./icons/firefox-view.svg) !important;
 }
+/* enhanced tp */
+#protections-popup-settings-button .protections-popup-footer-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 9px !important;
+	list-style-image: url(./icons/settings.svg) !important;
+}
+#protections-popup-show-report-button .protections-popup-footer-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 9px !important;
+	list-style-image: url(./icons/dashboard.svg) !important;
+	width: 16px !important;
+}
+.thirdpartycookies-icon {
+	list-style-image: url(./icons/3rdpartycookies.svg) !important;
+}
+.trackers-icon {
+	list-style-image: url(./icons/tracker-image.svg) !important;
+}
+.socialblock-icon {
+	list-style-image: url(./icons/socialblock.svg) !important;
+}
+.fingerprinters-icon {
+	list-style-image: url(./icons/fingerprinters.svg) !important;
+}
+.cryptominers-icon {
+	list-style-image: url(./icons/cryptominers.svg) !important;
+}
