@@ -239,6 +239,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 :root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
 	height: 3px;
 }
+:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+  border-inline-start-color: transparent !important;
+}
 /* Photonize the All tabs button */
 #alltabs-button {
 	list-style-image: url(./icons/back-12.svg) !important;
@@ -260,7 +263,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	height: 64px;
 	right: 0;
-	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 	z-index: 0;
 }
 .tabbrowser-tab:not([selected="true"]) 
@@ -270,7 +273,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	height: 64px;
 	right: 0;
-	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 	z-index: 0;
 }
 /* :has is kinda broken: https://bugzilla.mozilla.org/show_bug.cgi?id=1792501 */
@@ -280,14 +283,14 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
 [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
-[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"], :not([firefoxviewhidden])):first-child
+[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
 .tab-stack::after {
 	content: "";
 	position: absolute;
 	display: block;
 	height: 64px;
 	left: 0;
-	border-right: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 	z-index: 0;
   bottom: 0px !important;
 }
@@ -488,7 +491,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border: 1px solid color-mix(in srgb, currentColor 30%, transparent)
 }
 /* Search icon */
-#identity-box.localResource #identity-icon-box, #urlbar:is([usertyping], :not([domaindir])) #identity-icon-box {
+/*#identity-box.localResource #identity-icon-box, #urlbar:is([usertyping], :not([domaindir])) #identity-box:is(.localResource, .chromeUI):not([pageproxystate="valid"])*/ #identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
@@ -579,9 +582,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
   	border: 1px solid var(--urlbar-border-color) !important;
   }
   #urlbar[breakout][breakout-extend="true"] {
-  	--urlbar-margin-inline: 7px !important;
-  	padding: 2px !important;
-  	margin-top: -2px !important;
+  	--urlbar-margin-inline: 8px !important;
+  	padding: 3px !important;
+  	margin-top: -3px !important;
   }
   :root[uidensity="compact"] #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
   	width: calc(100% + 2 * var(--urlbar-margin-inline)) !important;
@@ -609,6 +612,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
   	padding: 2px !important;
   	margin-top: -2px !important;
   }
+}
+#urlbar[breakout][breakout-extend][open] > #urlbar-background {
+    box-shadow: 0 5px 18px rgba(0,0,0,.2) !important;
 }
 /* Multiselected tabs */
 .tab-background[multiselected="true"] {

@@ -612,6 +612,24 @@
 #picture-in-picture-button-icon {
 	list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
+#urlbar-engine-one-off-item-actions {
+	list-style-image: url(./icons/quick-actions.svg) !important;
+}
+[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
+	content: url(./icons/extensions.svg) !important;
+}
+[src="chrome://global/skin/icons/settings.svg"] {
+	content: url(./icons/settings.svg) !important;
+}
+[src="chrome://global/skin/icons/print.svg"] {
+	content: url(./icons/print1.svg) !important;
+}
+[src="chrome://browser/skin/downloads/downloads.svg"] {
+	content: url(./icons/download-icons.svg#arrow-with-bar) !important;
+}
+[src="chrome://devtools/skin/images/open-inspector.svg"] {
+	content: url(./icons/developer.svg) !important;
+}]
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
 #appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon),
@@ -861,4 +879,8 @@ menuitem[data-l10n-id="sidebar-menu-close"]::before {
 #editBookmarkPanel .expander-up {
 	list-style-image: url(./icons/arrow-dropdown-16.svg) !important;
 	transform: scaleY(-1) /* There's no laziness here, this is how they do it in Photon too! ;) */
+}
+/* firefox view */
+#firefox-view-button {
+  list-style-image: url(./icons/firefox-view.svg) !important;
 }
