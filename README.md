@@ -43,6 +43,20 @@ and not like this:
 
 Restart Firefox
 
+# Context menus
+In `about:config`, if you want native (Windows) context menus, you can create:
+**Note: These context menus have not been tested on platforms other than Windows**
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.contextmenu.win-10` | Windows 10 styled menu | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e4720c5f-ce0c-4178-9b5c-dc60844a265d) |
+| `uc.contextmenu.win-11` | Windows 11 styled menu, Also kinda looks the GNOME context menu | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/7c1c78bf-0b67-410a-85bf-133bdba1fce6) |
+| `uc.contextmenu.dark` | Makes the context menu dark | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/7c1c78bf-0b67-410a-85bf-133bdba1fce6) ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e4720c5f-ce0c-4178-9b5c-dc60844a265d) |
+| `uc.contextmenu.light` | Makes the context menu light | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/3ee54b09-3c05-420c-9693-4fe5e76f8aa1) ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e9a1f904-fe21-415e-9421-1d995edc1781) |
+
+If you don't set `uc.contextmenu.light` or `uc.contextmenu.dark`, then the context menu will take the colors from the theme:
+![Windows 11 style context menu with the dark Alpenglow theme](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/09246fb9-66ab-4406-bc94-4e46157dd167)
+
+
 # Tab separators
 Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
 
