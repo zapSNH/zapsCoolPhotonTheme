@@ -21,6 +21,9 @@ toolbarseparator {
 panel toolbarseparator {
 	margin-inline: 0 !important;
 }
+.menupopup-arrowscrollbox {
+	padding-inline: 0 !important;
+}
 menuitem[disabled="true"] {
 	pointer-events: none !important;
 	opacity: 1 !important;
