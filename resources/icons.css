@@ -629,7 +629,7 @@
 }
 [src="chrome://devtools/skin/images/open-inspector.svg"] {
 	content: url(./icons/developer.svg) !important;
-}]
+}
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
 #appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon),
