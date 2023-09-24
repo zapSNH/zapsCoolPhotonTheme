@@ -621,3 +621,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	outline: none !important;
 	background: var(--button-hover-bgcolor) !important;
 }
+/* Private browsing icon */
+#private-browsing-indicator-with-label label {
+	display: none;
+}
+#private-browsing-indicator-with-label image {
+	height: 20px !important;
+	width: 20px !important;
+}

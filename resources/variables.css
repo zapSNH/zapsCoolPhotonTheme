@@ -41,6 +41,12 @@
 :root[lwt-toolbar-field-brighttext] :is(#urlbar, #searchbar) {
 	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
 } 
+/* Linux is rounder in Photon */
+@media (-moz-platform: linux) {
+	:root {
+    --photon-border-radius: 4px;
+  }
+}
 button {
 	--in-content-primary-button-background: var(--photon-accent) !important;
 }
