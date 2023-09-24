@@ -21,6 +21,9 @@ toolbarseparator {
 panel toolbarseparator {
 	margin-inline: 0 !important;
 }
+.menupopup-arrowscrollbox {
+	padding-inline: 0 !important;
+}
 menuitem[disabled="true"] {
 	pointer-events: none !important;
 	opacity: 1 !important;
@@ -75,6 +78,9 @@ toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info
 }
 menuitem, menu {
 	padding: 2px 10px !important;
+}
+#sidebarMenu-popup :is(menuitem, menu) {
+	padding: 5px 10px !important;
 }
 #context-navigation menuitem {
 	padding: 0 !important;
@@ -194,9 +200,9 @@ menuitem, menu {
 	background: color-mix(in srgb, var(--panel-color) 0%, transparent);
 }
 .download-state .downloadButton:hover {
-  border: none !important;
+	border: none !important;
 }
-.download-state {
+.download-state:not(menupopup) {
 	margin-bottom: 0 !important;
 	height: 5.5em !important;
 }

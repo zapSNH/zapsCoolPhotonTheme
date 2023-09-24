@@ -95,8 +95,8 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #navigator-toolbox:-moz-lwtheme .tabbrowser-tab:not([selected])[pinned] .tab-icon-overlay {
 	background: var(--lwt-accent-color) !important;
 }
-#tabbrowser-tabs[haspinnedtabs]:not([overflow="true"]) .tabbrowser-tab {
-	margin-left: 0 !important;
+#tabbrowser-tabs[haspinnedtabs]:not([overflow]) .tabbrowser-tab {
+	margin-inline-start: 0 !important;
 }
 /* This will hide the label for pinned tabs cuz i'm lazy and dont wanna properly push the label off of the tab */
 .tabbrowser-tab[pinned] .tab-label-container {
@@ -205,8 +205,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	list-style-image: url(./icons/add.svg) !important;
 }
 /* Firefox View */
-:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden], [sizemode="normal"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
 	padding-inline-start: 0 !important;
+}
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden])[sizemode="normal"] :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+	padding-inline-start: 72px !important;
 }
 #TabsToolbar #firefox-view-button {
 	margin-bottom: 0 !important;
@@ -282,7 +285,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* :has is kinda broken: https://bugzilla.mozilla.org/show_bug.cgi?id=1792501 */
 .tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
-.tab-stack::before {
+.tab-stack::before, :root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
 	border-right-color: transparent !important;
 }
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
@@ -428,13 +431,14 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	translate: 0 1px !important;
 }
 /* Full-size scrollbox buttons */
-#tabbrowser-arrowscrollbox::part(scrollbutton-up):hover:not([disabled], .menupopup-scrollbutton),
-#tabbrowser-arrowscrollbox::part(scrollbutton-up):hover:not([disabled], .menupopup-scrollbutton) {
-	border: 4px var(--toolbarbutton-hover-background) solid !important;
+#scrollbutton-down[part="scrollbutton-down"]:hover:not([disabled], .menupopup-scrollbutton),
+#scrollbutton-up[part="scrollbutton-up"]:hover:not([disabled], .menupopup-scrollbutton) {
+	border-color: var(--toolbarbutton-hover-background) !important;
+	border-radius: 0 !important;
 }
 #scrollbutton-down[part="scrollbutton-down"]:hover:active:not([disabled], .menupopup-scrollbutton),
 #scrollbutton-up[part="scrollbutton-up"]:hover:active:not([disabled], .menupopup-scrollbutton) {
-	border: 4px var(--toolbarbutton-active-background) solid !important;
+	border-color: var(--toolbarbutton-active-background) !important;
 	border-radius: 0 !important;
 }
 /* URL bar */ 
@@ -617,11 +621,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #urlbar[breakout][breakout-extend][open] > #urlbar-background {
     box-shadow: 0 5px 18px rgba(0,0,0,.2) !important;
 }
+
 /* Multiselected tabs */
 .tab-background[multiselected="true"] {
 	outline: none !important;
 	background: var(--button-hover-bgcolor) !important;
 }
+
 /* Private browsing icon */
 #private-browsing-indicator-with-label label {
 	display: none;
@@ -629,4 +635,32 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #private-browsing-indicator-with-label image {
 	height: 20px !important;
 	width: 20px !important;
+}
+
+/* URL bar zoom button */
+#urlbar-zoom-button {
+	border-radius: 9px !important;
+	border: 1px solid var(--panel-separator-color) !important;
+	background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
+	padding-block: 0 !important;
+}
+#urlbar-zoom-button .toolbarbutton-text {
+	padding-inline: 4px !important;
+}
+#urlbar-zoom-button:hover{
+	background-color: color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+#urlbar-zoom-button:hover:active {
+	background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+}
+
+/* Notications below URLBar */
+.container.infobar::before {
+	display: none !important;
+}
+.container.infobar .close {
+	margin-inline: 5px !important;
+}
+.container.infobar .icon {
+	margin-inline-start: 11px !important;
 }
