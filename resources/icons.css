@@ -122,10 +122,16 @@
   list-style-image: url(./icons/microphone-blocked.svg) !important;
 }
 .screen-icon, #webrtc-sharing-icon[sharing="screen"] {
-  list-style-image: url(./icons/screen.svg) !important;
+	list-style-image: url(./icons/screen.svg) !important;
 }
 .screen-icon.blocked-permission-icon {
-  list-style-image: url(./icons/screen-blocked.svg) !important;
+	list-style-image: url(./icons/screen-blocked.svg) !important;
+}
+.popup-icon {
+	list-style-image: url(./icons/window.svg) !important;
+}
+.popup-icon.blocked-permission-icon {
+	list-style-image: url(./icons/popup.svg) !important;
 }
 #display-share-icon {
 	background-image: url(./icons/screen.svg) !important;
@@ -920,4 +926,11 @@ menuitem[data-l10n-id="sidebar-menu-close"]::before {
 }
 .cryptominers-icon {
 	list-style-image: url(./icons/cryptominers.svg) !important;
+}
+/* notifications */
+.container.infobar .close {
+	background-image: url(./icons/close-icon2.svg) !important;
+}
+.container.infobar .icon::after {
+	background-image: url(./icons/info-color.svg) !important;
 }
