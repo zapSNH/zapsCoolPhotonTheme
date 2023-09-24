@@ -270,6 +270,16 @@
 	width: 12px !important;
 	height: 12px !important;
 }
+/* transition for downloads */
+#downloads-indicator-start-image {
+	list-style-image: url(./icons/notification-start-animation-r1.svg) !important;
+}
+#downloads-indicator-finish-image {
+	list-style-image: url(./icons/notification-finish-animation-r2.svg) !important;
+}
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon {
+  fill: var(--photon-accent) !important;
+}
 #library-button {
 	list-style-image: url(./icons/library.svg) !important;
 }
