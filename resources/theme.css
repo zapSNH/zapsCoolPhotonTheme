@@ -1,7 +1,6 @@
 /* Theme */
 :root {
 	--theme-css: 1px;
-	--photon-tab-outline: #0a84ff;
 	--urlbar-border-color: #0a84ff;
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
@@ -31,6 +30,7 @@
 	--button-hover-bgcolor: #bdbec0 !important;
 	--button-active-bgcolor: #b3b4b6 !important;
   --link-color: var(--photon-accent-dark) !important;
+  --photon-tab-outline: var(--photon-accent-dark);
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -59,7 +59,7 @@
 }
 @media (prefers-color-scheme: light) {
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
-  	--lwt-accent-color: #d7d7db !important;
+  	--lwt-accent-color: #202340 !important;
   	--toolbar-bgcolor: #f9f9fa !important;
   	--button-hover-bgcolor: #dddedf !important;
   	--button-active-bgcolor: #d2d3d4 !important;
@@ -69,6 +69,7 @@
   	--panel-separator-color: hsla(210,4%,10%,.14) !important;
   	--button-hover-bgcolor: #bdbec0 !important;
   	--button-active-bgcolor: #b3b4b6 !important;
+    --photon-tab-outline: var(--photon-accent-dark);
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -89,11 +90,28 @@
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   #nav-bar {
-      box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
+    box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
-      box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+    box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+  }
+  :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
+  #navigator-toolbox {
+  	background: #d7d7db !important
+  }
+  @media not (-moz-windows-accent-color-in-titlebar) {
+    :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
+    #navigator-toolbox {
+    	background: #202340 !important
+    }
+    :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
+    #titlebar {
+    	color: rgb(251, 251, 254) !important;
+    }
+  }
+  :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar[breakout-extend] #urlbar-background {
+  	border-color: solid 1px var(--photon-tab-outline) !important;
   }
 }
 /* Dark theme */
@@ -117,6 +135,7 @@
 	--urlbar-box-text-color: #bababc !important;
 	--panel-separator-color: rgba(249, 249, 250, .1) !important;
   --link-color: var(--photon-accent-light) !important;
+  --photon-tab-outline: var(--photon-accent-dark);
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -159,6 +178,12 @@
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] :is(.tab-background[selected], #firefox-view-button[open] .toolbarbutton-icon) {
   	background: #323234 !important;
+  }
+  @media not (-moz-windows-accent-color-in-titlebar) {
+    :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
+    #navigator-toolbox {
+    	background: #0c0c0d !important
+    }
   }
 }
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #urlbar {
@@ -203,7 +228,7 @@
   	--lwt-accent-color: AccentColor !important;
   }
   :root[lwt-default-theme-in-dark-mode] *:-moz-window-inactive {
-	 --lwt-accent-color: revert !important;
+    --lwt-accent-color: revert !important;
   }
   /**/
   :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
