@@ -205,11 +205,17 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	list-style-image: url(./icons/add.svg) !important;
 }
 /* Firefox View */
-:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden], [sizemode="normal"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden], [sizemode="normal"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs:not([overflow]) {
 	padding-inline-start: 0 !important;
 }
-:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden])[sizemode="normal"] :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
-	padding-inline-start: 72px !important;
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden], [sizemode="normal"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs[overflow] {
+	padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
+}
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden])[sizemode="normal"] :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs:not([overflow]) {
+	padding-inline-start: 0px !important;
+}
+:root:not([privatebrowsingmode="temporary"], [firefoxviewhidden])[sizemode="normal"] :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs[overflow] {
+	padding-inline-start: var(--tab-overflow-pinned-tabs-width) !important;
 }
 #TabsToolbar #firefox-view-button {
 	margin-bottom: 0 !important;
