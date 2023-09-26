@@ -11,7 +11,7 @@
 	list-style-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: stroke !important;
 	stroke: currentColor !important;
-  fill-opacity: 1 !important;
+  	fill-opacity: 1 !important;
 	stroke-linecap: round !important;
 }
 /* info icon */
@@ -325,13 +325,18 @@
 }
 #zoom-in-button image {
 	list-style-image: url(./icons/zoom-in.svg) !important;
-	padding-left: 8px !important;
 }
 #widget-overflow-fixed-list #zoom-in-button image {
 	padding-left: revert !important;
 }
 #zoom-out-button {
 	list-style-image: url(./icons/zoom-out.svg) !important;
+}
+#print-button {
+	list-style-image: url(./icons/print1.svg) !important;
+}
+#logins-button {
+	list-style-image: url(./icons/login.svg) !important;
 }
 #PlacesChevron,
 #nav-bar-overflow-button {
@@ -753,7 +758,7 @@
 	height: 16px;
 	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1) !important;
 	-moz-context-properties: fill !important;
-	fill: var(--panel-color) !important;
+	fill: currentColor !important;
 }
 :root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button image {
 	list-style-image: url(./icons/sync.svg) !important;

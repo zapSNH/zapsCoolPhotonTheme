@@ -10,6 +10,7 @@
 		--brand-color-accent: light-dark(var(--blue-50), var(--blue-50)) !important;
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
+		--newtab-primary-action-background: #0a84ff !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -44,6 +45,20 @@
 	.toggle-button {
 		border-radius: 8px !important;
 	}
+	.slider::before {
+		background-color: white !important;
+		width: 12px !important;
+		height: 12px !important;
+		bottom: 2px !important;
+		inset-inline-start: 7px !important;
+	}
+	.switch {
+		height: 18px !important;
+		width: 32px !important;
+  }
+	#moz-toggle-button::before {
+		background-color: white !important;
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -64,6 +79,11 @@
 	.card-outer, .card :not(.card-context), .icon-wrapper, .top-site-outer {
 		border-radius: var(--photon-primary-border-radius) !important;
 	}
+	@media (min-height: 701px) {
+    body:not(.inline-onboarding) .fixed-search > main {
+      padding-top: 124px !important;
+    }
+  }
 	.search-wrapper .search-handoff-button {
 		background-color: white !important;
 		border: solid 1px #c4c4c5 !important;
