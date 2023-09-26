@@ -5,7 +5,6 @@
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 }
-
 @media (-moz-platform: windows) {
   .menupopup-arrowscrollbox {
     background-color: var(--arrowpanel-background) !important;
@@ -16,6 +15,9 @@
   #context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) .menu-iconic-icon {
   	background: var(--button-hover-bgcolor) !important;
   }
+}
+#sidebar, #sidebar-box {
+	background: var(--sidebar-background, var(--toolbar-bgcolor)) !important;
 }
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) {
@@ -31,6 +33,7 @@
 	--button-active-bgcolor: #b3b4b6 !important;
   --link-color: var(--photon-accent-dark) !important;
   --photon-tab-outline: var(--photon-accent-dark);
+ 	--sidebar-background: #fff !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -69,7 +72,9 @@
   	--panel-separator-color: hsla(210,4%,10%,.14) !important;
   	--button-hover-bgcolor: #bdbec0 !important;
   	--button-active-bgcolor: #b3b4b6 !important;
+  	--link-color: var(--photon-accent-dark) !important;
     --photon-tab-outline: var(--photon-accent-dark);
+  	--sidebar-background: #fff !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -136,6 +141,7 @@
 	--panel-separator-color: rgba(249, 249, 250, .1) !important;
   --link-color: var(--photon-accent-light) !important;
   --photon-tab-outline: var(--photon-accent-dark);
+  --sidebar-background: #38383d !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -163,9 +169,13 @@
   	--in-content-page-background: var(--toolbar-bgcolor) !important;
   	--urlbar-box-text-color: #bababc !important;
   	--panel-separator-color: rgba(249, 249, 250, .1) !important;
+  	--link-color: var(--photon-accent-light) !important;
+  	--photon-tab-outline: var(--photon-accent-dark);
+  	--sidebar-background: #38383d !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;
+     --lwt-text-color: rgba(251, 251, 254) !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #identity-icon-box {
   	--urlbar-box-focus-bgcolor: #474749 !important
@@ -185,6 +195,7 @@
     	background: #0c0c0d !important
     }
   }
+  
 }
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] #urlbar {
 	border-color: var(--toolbar-field-border-color) !important;
@@ -250,6 +261,7 @@
   	--lwt-tab-line-color: var(--photon-tab-outline) !important;
   }
 }
+
 /* Ubuntu */
 @media (-moz-platform: linux) {
 	:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0); "] {

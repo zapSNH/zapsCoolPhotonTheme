@@ -501,6 +501,14 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	box-shadow: none !important;
 	border: 1px solid color-mix(in srgb, currentColor 30%, transparent)
 }
+#searchbar:focus-within {
+	border: 1px solid var(--photon-accent-dark) !important;
+	outline: none !important;
+}
+.search-go-button {
+	margin: 0 !important;
+	height: 100% !important;
+}
 /* Search icon */
 /*#identity-box.localResource #identity-icon-box, #urlbar:is([usertyping], :not([domaindir])) #identity-box:is(.localResource, .chromeUI):not([pageproxystate="valid"])*/ #identity-icon-box {
 	padding: 6px !important;
@@ -547,7 +555,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 /* Resize toolbar buttons */
 :root:not([uidensity]) .toolbarbutton-1 stack {
 	padding: 6px !important;
-	margin-inline: 2px !important;
+	margin-inline: 1px !important;
 }
 :root:not([uidensity]) #nav-bar .toolbarbutton-1:not(#back-button) > image {
 	width: 28px !important;

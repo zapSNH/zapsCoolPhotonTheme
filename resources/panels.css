@@ -330,22 +330,23 @@ menuitem, menu {
 	border-radius: 8px !important;
 }
 #moz-toggle-button::before {
-	background: currentColor !important;
+	background: white !important;
 }
 .toggle-button[aria-pressed="true"] {
 	background: var(--photon-accent-dark) !important;
 	outline: color-mix(in srgb, black 20%, var(--photon-accent-dark)) 1px solid !important;
-}/*
-#protections-popup-tp-switch:not([enabled]) {
+}
+#protections-popup-tp-switch:has(image):not([enabled]) {
 	padding-left: 1px !important;
 	padding-right: 18px !important;
 }
-#protections-popup-tp-switch[enabled] {
+#protections-popup-tp-switch:has(image)[enabled] {
 	padding-left: 18px !important;
 	padding-right: 1px !important;
 	background: var(--photon-accent-dark) !important;
-	border-color: var(--photon-accent) !important;
-}*/
+	outline: color-mix(in srgb, black 20%, var(--photon-accent-dark)) 1px solid !important;
+	border: 0px !important;
+}
 #protections-popup-tp-switch-section-header, #protections-popup-siteNotWorkingView-header {
 	margin-inline: 8px !important;
 }
@@ -363,7 +364,7 @@ menuitem, menu {
   color: white;
   background: radial-gradient(circle farthest-side at top right, #9059FF, #0250BB);
 }
-#protections-popup-mainView-panel-header-section toolbarseparator {
+#protections-popup-mainView-panel-header-section toolbarseparator, #protections-popup-mainView-panel-header-section + toolbarseparator {
 	margin-block: 0px !important;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
@@ -399,4 +400,14 @@ menuitem, menu {
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
 #identity-popup-clear-sitedata-button, #identity-popup-more-info):hover:active {
 	background: color-mix(in srgb, currentColor 30%, transparent) !important;
+}
+/* Notification box */
+#commonDialogWindow, #commonDialogWindow .titleIcon {
+	background-color: light-dark(#f9f9fa, #323234) !important;
+}
+/* Tooltips */
+tooltip {
+	background: var(--arrowpanel-background) !important;
+	border-radius: var(--tooltip-border-radius) !important;
+	border-color: var(--arrowpanel-border-color) !important;
 }
