@@ -323,3 +323,17 @@
 :is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon, .tabbrowser-tab[selected]) {
     box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color) !important;
 }
+/* Use navbar color in tab */
+@supports -moz-bool-pref("uc.theme.tab-color-same-as-navbar") and (not -moz-bool-pref("uc.theme.navbar-color-same-as-tab")) {
+  :root {
+    --lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
+    --lwt-tab-text: var(--toolbar-color) !important;
+	}
+}
+/* Use tab color in navbar */
+@supports -moz-bool-pref("uc.theme.navbar-color-same-as-tab") and (not -moz-bool-pref("uc.theme.tab-color-same-as-navbar")) {
+  :root {
+    --toolbar-bgcolor: var(--lwt-selected-tab-background-color) !important;
+    --toolbar-color: var(--lwt-tab-text) !important;
+	}
+}

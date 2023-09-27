@@ -21,7 +21,7 @@
 /* Delete the transition things if unwanted */
 .tab-close-button {
 	border-radius: var(--photon-border-radius) !important;
-	transition: background 0.2s !important;
+	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
 }
 .tabbrowser-tab:not(:hover) .tab-close-button {
 	padding-inline: 4px !important;
@@ -53,7 +53,7 @@ so that the sound icon doesn't look out of place
 credits to phroton for some of this stuff */
 .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
 	border-radius: 1px !important;
-	transition: background 0.2s !important;
+	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
 	opacity: 1 !important;
 	padding: 0px !important;
 }
@@ -82,7 +82,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* Fixes for pinned tabs */
 .tabbrowser-tab[pinned] .tab-icon-overlay {
-	transition: background 0.2s !important;
+	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
 	padding: 1px !important;
 	background-image: linear-gradient(var(--lwt-selected-tab-background-color, transparent),
 		var(--lwt-selected-tab-background-color, transparent)),
@@ -156,19 +156,20 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	content: "";
 	height: 2px;
-	transition: all .25s;
+	transition: all .25s cubic-bezier(.07,.95,0,1);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
+	width: 100%;
 }
 .tab-background:not([selected], [multiselected="true"])::before {
-	scale: 0 1;
+	width: 0px;
 	opacity: 0;
 	filter: grayscale(100%);
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected])::before {
 	display: block;
 	content: "";
-	height: 2px;
-	scale: 1;
+	height: 2px;	
+	width: 100%;
 	opacity: .5;
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	filter: grayscale(100%);
@@ -178,8 +179,8 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /**/
 @media (-moz-platform: windows) {
-  :root[sizemode="normal"] .tab-background::before {
-  	height: 3px !important;
+	:root[sizemode="normal"] .tab-background::before {
+		height: 3px !important;
 	}
 }
 /* Adds an effect to the highlight that wasn't there in Photon */
@@ -229,7 +230,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	content: "";
 	height: 2px;
 	width: var(--tab-min-height);
-	transition: all .25s;
+	transition: all .25s cubic-bezier(.07,.95,0,1);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	position: absolute !important;
 	top: 0 !important;
@@ -334,7 +335,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 30px !important;
 	margin-right: 30px !important;
-	transition: margin .2s !important
+	transition: margin .2s cubic-bezier(.07,.95,0,1) !important
 }
 .tabbrowser-tab:not([pinned])[usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 20px !important;
@@ -345,7 +346,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 10px !important;
 	margin-right: 10px !important;
-	transition: margin .2s !important
+	transition: margin .2s cubic-bezier(.07,.95,0,1) !important
 }
 .tabbrowser-tab[pinned][usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 2px !important;
@@ -509,8 +510,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin: 0 !important;
 	height: 100% !important;
 }
+#urlbar-go-button {
+	margin: 0 !important;
+}
 /* Search icon */
-/*#identity-box.localResource #identity-icon-box, #urlbar:is([usertyping], :not([domaindir])) #identity-box:is(.localResource, .chromeUI):not([pageproxystate="valid"])*/ #identity-icon-box {
+#identity-icon-box {
 	padding: 6px !important;
 }
 /* Makes the page-action buttons full sized */
@@ -591,7 +595,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-left: 4px !important;
 }
 /* Megabar */
-@supports not -moz-bool-pref("uc.reduced-megabar") {
+@supports not (-moz-bool-pref("uc.reduced-megabar") or -moz-bool-pref("uc.no-megabar")) {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) {
 		z-index: 3
 	}
@@ -642,7 +646,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		outline: none !important;
 	}
 }
-/*
+
 @supports -moz-bool-pref("uc.no-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
@@ -656,16 +660,27 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	}
 	#urlbar .urlbarView {
 		background: var(--toolbar-field-background-color) !important;
-		padding-inline: 4px !important;
+		padding-inline: 5px !important;
 	}
 	#urlbar .urlbarView-body-inner {
 		border: transparent !important;
 	}
-}*/
+	#urlbar .urlbarView-row {
+		margin-block: -4px !important;
+	}
+	#urlbar .urlbarView-row:is(:first-child, :last-child) {
+		margin-block: 0px !important;
+	}
+	[label="Firefox Suggest"]::before {
+		display: none !important;
+	}
+}
 #urlbar[breakout][breakout-extend][open] > #urlbar-background {
     box-shadow: 0 5px 18px rgba(0,0,0,.2) !important;
 }
-
+#urlbar .search-one-offs *:not(toolbarseparator) {
+	color: var(--toolbarbutton-icon-fill) !important;
+}
 /* Multiselected tabs */
 .tab-background[multiselected="true"] {
 	outline: none !important;
