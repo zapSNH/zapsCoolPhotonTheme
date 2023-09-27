@@ -7,10 +7,11 @@
 }
 @-moz-document url-prefix("about:") {
 	* {
-		--brand-color-accent: light-dark(var(--blue-50), var(--blue-50)) !important;
+		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
 		--newtab-primary-action-background: #0a84ff !important;
+		--toggle-background-color-pressed: #0a84ff !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -107,8 +108,15 @@
 		display: flex !important;
 	}
 	.top-site-outer:hover {
-		background-color: #d7d7db !important;
+		background-color: transparent !important;
 	}
+	.top-site-outer .tile {
+  	outline: 0px solid transparent !important;
+		transition: outline 0.1s cubic-bezier(.07,.95,0,1) !important;
+  }
+	.top-site-outer:hover .tile {
+		outline: 5px solid #d7d7db !important;
+  }
 	.tile, .icon-wrapper .top-site-icon {
 		background-color: rgb(251, 251, 254) !important;
 	}
@@ -154,6 +162,11 @@
 	body {
 		background-color: #f9f9fa !important;
 	}
+	.top-site-outer .search-topsite {
+		background-image: url(./resources/icons/find-in-page.svg) !important;
+    -moz-context-properties: fill !important;
+		fill: white !important;
+	}
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--newtab-background-color-secondary: #38383d !important;
@@ -167,9 +180,12 @@
 			background-color: #38383d !important;
 			border: solid 1px #5f5f63 !important;
 		}
-	 .top-site-outer:hover {
-			background-color: #4a4a4f !important;
+	  .top-site-outer:hover {
+			background-color: transparent !important;
 		}
+		.top-site-outer:hover .tile {
+			outline: 5px solid #4a4a4f !important;
+    }
 	}
 }
 @-moz-document url-prefix("about:preferences"), url("about:addons") {
