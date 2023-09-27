@@ -67,7 +67,7 @@ In `about:config`, if you want to reduce the megabar or disable it, create:
 
 
 # Megabar
-For themes where the tab color and navbar color are different (and people who want them to be the same), go to `about:config` and create:
+For themes where the tab color and navbar color are different (and for people who want them to be the same), go to `about:config` and create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
 | _none_ | Default behavior <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Normal](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/9e5023be-b76a-4ec1-bfcb-ec693490d4c6) |
