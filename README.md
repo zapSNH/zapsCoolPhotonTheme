@@ -58,7 +58,7 @@ If you don't set `uc.contextmenu.light` or `uc.contextmenu.dark`, then the conte
 ![Windows 11 style context menu with the dark Alpenglow theme](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/09246fb9-66ab-4406-bc94-4e46157dd167)
 
 # Megabar
-In `about:config`, if you to reduce the megabar or disable it, create:
+In `about:config`, if you want to reduce the megabar or disable it, create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
 | _none_ | Default Photon Megabar | ![normal](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/ef1bc738-28bf-439b-8c6f-68c188e8e942) |
@@ -70,9 +70,9 @@ In `about:config`, if you to reduce the megabar or disable it, create:
 For themes where the tab color and navbar color are different (and people who want them to be the same), go to `about:config` and create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
-| _none_ | Default behavior <br> Top: Theme in Proton / Bottom: Theme with config | ![Normal](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/9e5023be-b76a-4ec1-bfcb-ec693490d4c6) |
-| `uc.theme.tab-color-same-as-navbar` | Tab color takes the navbar color <br> Top: Theme in Proton / Bottom: Theme with config | ![Navbar Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/10fdd8a3-895a-4c25-b485-9df1f22d62b4) |
-| `uc.theme.navbar-color-same-as-tab` | Navbar color takes the tab color <br> Top: Theme in Proton / Bottom: Theme with config | ![Tab Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/ceee4529-ca7a-48df-83d9-7ce11e7ded92) |
+| _none_ | Default behavior <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Normal](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/9e5023be-b76a-4ec1-bfcb-ec693490d4c6) |
+| `uc.theme.tab-color-same-as-navbar` | Tab color takes the navbar color <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Navbar Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/10fdd8a3-895a-4c25-b485-9df1f22d62b4) |
+| `uc.theme.navbar-color-same-as-tab` | Navbar color takes the tab color <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Tab Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/ceee4529-ca7a-48df-83d9-7ce11e7ded92) |
 
 # Tab separators (v118 or lower)
 Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
