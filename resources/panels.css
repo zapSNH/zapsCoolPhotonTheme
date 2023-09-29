@@ -257,6 +257,9 @@ menuitem, menu {
 .permission-popup-section {
 	padding-bottom: 4px !important;
 }
+#identity-popup-mainView:not([footerVisible]) .panel-subview-body {
+	margin-bottom: 8px !important;
+}
 #overflowMenu-customize-button {
 	margin-bottom: 3px !important;
 }
