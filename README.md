@@ -66,7 +66,7 @@ In `about:config`, if you want to reduce the megabar or disable it, create:
 | `uc.no-megabar` | No megabar | ![nomegabar](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/a60585ff-d7fe-4ef1-af0c-09269160bc6b) |
 
 
-# Megabar
+# Themes
 For themes where the tab color and navbar color are different (and for people who want them to be the same), go to `about:config` and create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
