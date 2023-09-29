@@ -656,7 +656,9 @@
 #appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon),
 #PanelUI-history .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appMenu_historyMenu .toolbarbutton-icon),
 #PanelUI-bookmarks .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #panelMenu_bookmarksMenu .toolbarbutton-icon),
-#PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon) {
+#PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon),
+#appMenu-library-recentlyClosedWindows .panel-subview-footer-button .toolbarbutton-icon, #appMenu-library-recentlyClosedTabs .panel-subview-footer-button .toolbarbutton-icon,
+#PanelUI-sendTabToDevice .panel-subview-body toolbarseparator.sync-menuitem ~ .subviewbutton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-noicon-inline-end) !important;
 }
 :is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) .toolbarbutton-icon {

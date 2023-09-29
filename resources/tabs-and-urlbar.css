@@ -113,7 +113,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
 }
 .tab-icon-overlay[pictureinpicture] {
-  list-style-image: url(./icons/pictureinpicture.svg) !important;
+	list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
 .tabbrowser-tab:is([pinned][first-visible-tab]) {
 	margin: 0 !important;
