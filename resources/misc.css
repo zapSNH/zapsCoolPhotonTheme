@@ -104,7 +104,7 @@
 /* Old style context menus */
 @supports -moz-bool-pref("uc.contextmenu.win-10") {
 	@supports -moz-bool-pref("uc.contextmenu.dark") {
-		.menupopup-arrowscrollbox tooltip {
+		.menupopup-arrowscrollbox, tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			border-color: #a0a0a0 !important;
 			color: white !important;
@@ -117,11 +117,11 @@
 		}
 	}
 	@supports -moz-bool-pref("uc.contextmenu.light") {
-		.menupopup-arrowscrollbox tooltip {
+		.menupopup-arrowscrollbox, tooltip {
 			--arrowpanel-background: #fff !important;
 			border-color: #a0a0a0 !important;
 			color: black !important;
-    }
+		}
 		menupopup menuseparator::before {
 			border-color: #d7d7d7 !important;
 		}
@@ -131,7 +131,7 @@
 	}
 	.menupopup-arrowscrollbox {
 		padding-inline: 2px !important;
-  }
+	}
 	menupopup menuseparator::before {
 		margin-inline: 8px !important;
 	}
@@ -160,7 +160,7 @@
 			--arrowpanel-background: #2c2c2c !important;
 			border-color: #3e3e3e !important;
 			color: white !important;
-	}
+		}
 		menupopup menuseparator::before {
 			border-color: #3e3e3e !important;
 		}
@@ -173,7 +173,7 @@
 			--arrowpanel-background: #fff !important;
 			border-color: #a0a0a0 !important;
 			color: black !important;
-    }
+		}
 		menupopup menuseparator::before {
 			border-color: #e7e7e7 !important;
 		}
