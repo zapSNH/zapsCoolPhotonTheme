@@ -2,8 +2,8 @@
 A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
 See Compatibility for version compatibility
-![unfaithton](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/a2690e89-774b-4c4d-9f02-ce160b025bbb)
 
+![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
 ____
 
 #### Compatibility
