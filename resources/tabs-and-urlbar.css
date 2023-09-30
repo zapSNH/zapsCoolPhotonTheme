@@ -513,6 +513,10 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #urlbar-go-button {
 	margin: 0 !important;
 }
+.urlbarView-type-icon {
+	margin-inline-start: calc(var(--urlbarView-favicon-width) - 6px) !important;
+	filter: drop-shadow(0px 0px 1px var(--arrowpanel-background))
+}
 /* Search icon */
 #identity-icon-box {
 	padding: 6px !important;
@@ -646,7 +650,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		outline: none !important;
 	}
 }
-
 @supports -moz-bool-pref("uc.no-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
@@ -661,6 +664,8 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	#urlbar .urlbarView {
 		background: var(--toolbar-field-background-color) !important;
 		padding-inline: 5px !important;
+    	box-shadow: 0 5px 18px rgba(0,0,0,.2);
+		border-radius: var(--photon-border-radius);
 	}
 	#urlbar .urlbarView-body-inner {
 		border: transparent !important;
@@ -673,6 +678,27 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	}
 	[label="Firefox Suggest"]::before {
 		display: none !important;
+	}
+	#urlbar .urlbarView:not([dynamicType="quickactions"]) .urlbarView-type-icon {
+		filter: none;
+		margin: 0 !important;
+		margin-inline-end: 4px !important;
+		position: static !important;
+		width: 16px !important;
+		height: 16px !important;
+		order: 0;
+	}
+	#urlbar .urlbarView:not([dynamicType="quickactions"]) :is(.urlbarView-favicon, .urlbarView-tail-prefix) {
+		order: 1;
+	}
+	#urlbar .urlbarView:not([dynamicType="quickactions"]) .urlbarView-title {
+		order: 2;
+	}
+	#urlbar .urlbarView:not([dynamicType="quickactions"]) :is(.urlbarView-title-separator, .urlbarView-action) {
+		order: 3;
+	}
+	#urlbar-results[wrap] .urlbarView-url {
+		margin-left: 46px !important;
 	}
 }
 #urlbar[breakout][breakout-extend][open] > #urlbar-background {
