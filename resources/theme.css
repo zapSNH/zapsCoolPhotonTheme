@@ -75,6 +75,8 @@
   	--link-color: var(--photon-accent-dark) !important;
     --photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #fff !important;
+    --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
+    --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -108,11 +110,16 @@
   @media not (-moz-windows-accent-color-in-titlebar) {
     :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
     #navigator-toolbox {
-    	background: #202340 !important
+    	background: #202340 !important;
     }
     :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
     #titlebar {
     	color: rgb(251, 251, 254) !important;
+      --toolbarbutton-icon-fill: rgb(251, 251, 254);
+    }
+    :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]
+    #titlebar #firefox-view-button[open] {
+      --toolbarbutton-icon-fill: #5b5b66;
     }
   }
   :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar[breakout-extend] #urlbar-background {
@@ -246,15 +253,26 @@
   #titlebar:not(:-moz-window-inactive) {
   	color: rgb(251, 251, 254) !important;
   }
-  /* Comment ^^^^ if it's unreadable using your accent color */
-  /**/
   :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
   #new-tab-button:not(:-moz-window-inactive), 
   :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
   #tabs-newtab-button:not(:-moz-window-inactive) {
   	fill: rgb(251, 251, 254) !important;
   }
-  /* Comment ^^^^ if it's unreadable using your accent color */
+  
+  @supports -moz-bool-pref("uc.titlebar-accent.darktext") {
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#titlebar:not(:-moz-window-inactive) {
+  		color: black !important;
+  	}
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#new-tab-button:not(:-moz-window-inactive), 
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#tabs-newtab-button:not(:-moz-window-inactive) {
+  		fill: black !important;
+  	}
+  }
+  
   /* All themes */
   /* Use photon's default outline on themes with no border */
   #tabbrowser-tabs[style*="--lwt-tab-line-color: rgba(0, 0, 0, 0)"] {

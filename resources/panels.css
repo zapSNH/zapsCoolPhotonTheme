@@ -145,8 +145,8 @@ menuitem, menu {
 }
 
 #downloadsHistory {
-	margin: 0px !important;
-	padding: 13px !important;
+	margin: -1px !important;
+	padding: 14px !important;
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
 }
 #downloadsHistory:hover {
