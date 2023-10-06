@@ -74,6 +74,7 @@
 @-moz-document url("about:newtab"), url("about:home") {
 	* {
 		--newtab-background-color-secondary: #fff !important;
+		--newtab-background-color: #fff !important;
 		--newtab-text-primary-color: #373737 !important;
 	}
 	.tile, .search-wrapper .search-handoff-button, .ds-card,
@@ -170,6 +171,7 @@
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--newtab-background-color-secondary: #38383d !important;
+			--newtab-background-color: #2a2a2e !important;
 		 	--newtab-text-primary-color: #cfcfd1 !important;
 			--newtab-overlay-color: #2a2a2ad8 !important;
 		}
