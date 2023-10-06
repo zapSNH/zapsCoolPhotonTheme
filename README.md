@@ -83,9 +83,24 @@ If the tab title text color is unreadable with your accent color, go to `about:c
 | `uc.titlebar-accent.lighttext` | Light tab title color | ![lightondark](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/88f1fb0e-8f77-43d7-bd51-b62958096257) |
 
 ## Tab separators (v118 or lower)
-Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
+Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
+
+```css
+.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
+.tab-stack::before, :root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
+	border-right-color: transparent !important;
+}
+```
 
 This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
 ## Misc.
-Photon Firefox icons are taken from the `omni.ja` file from Firefox 87 
+Photon Firefox icons are taken from the `omni.ja` file from Firefox 87.
+Some other icons are modified/made by me.
+
+Special thanks to:
+- [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
+- [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton/)
+- The folks over on r/FirefoxCSS
+- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and they made Photon)
+- Windows 11 for opening Edge everytime I accidentally press F1 instead of F2 to rename stuff in explorer. I think YOU need to get help Microsoft.
