@@ -107,26 +107,20 @@
 		.menupopup-arrowscrollbox, tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			border-color: #a0a0a0 !important;
-			color: white !important;
+			color: white;
 		}
 		menupopup menuseparator::before {
 			border-color: #808080 !important;
-		}
-		menupopup :is(menu, menuitem), tooltip {
-			color: white !important;
 		}
 	}
 	@supports -moz-bool-pref("uc.contextmenu.light") {
 		.menupopup-arrowscrollbox, tooltip {
 			--arrowpanel-background: #fff !important;
 			border-color: #a0a0a0 !important;
-			color: black !important;
+			color: black;
 		}
 		menupopup menuseparator::before {
 			border-color: #d7d7d7 !important;
-		}
-		menupopup :is(menu, menuitem), tooltip {
-			color: black !important;
 		}
 	}
 	.menupopup-arrowscrollbox {
@@ -159,14 +153,14 @@
 		.menupopup-arrowscrollbox, tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			border-color: #3e3e3e !important;
-			color: white !important;
+			color: white;
 		}
 		menupopup menuseparator::before {
 			border-color: #3e3e3e !important;
-		}
-		menupopup :is(menu, menuitem), tooltip {
+		}/*
+		menupopup :is(menu, menuitem):hover, tooltip {
 			color: white !important;
-		}
+		}*/
 	}
 	@supports -moz-bool-pref("uc.contextmenu.light") {
 		.menupopup-arrowscrollbox, tooltip {
@@ -176,10 +170,10 @@
 		}
 		menupopup menuseparator::before {
 			border-color: #e7e7e7 !important;
-		}
-		menupopup :is(menu, menuitem), tooltip {
+		}/*
+		menupopup :is(menu, menuitem):hover, tooltip {
 			color: black !important;
-		}
+		}*/
 	}
 	.menupopup-arrowscrollbox {
 		border-radius: 6px !important;
