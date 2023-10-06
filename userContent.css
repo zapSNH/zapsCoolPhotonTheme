@@ -74,6 +74,7 @@
 @-moz-document url("about:newtab"), url("about:home") {
 	* {
 		--newtab-background-color-secondary: #fff !important;
+		--newtab-background-color: #fff !important;
 		--newtab-text-primary-color: #373737 !important;
 	}
 	.tile, .search-wrapper .search-handoff-button, .ds-card,
@@ -170,6 +171,7 @@
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--newtab-background-color-secondary: #38383d !important;
+			--newtab-background-color: #2a2a2e !important;
 		 	--newtab-text-primary-color: #cfcfd1 !important;
 			--newtab-overlay-color: #2a2a2ad8 !important;
 		}
@@ -186,6 +188,22 @@
 		.top-site-outer:hover .tile {
 			outline: 5px solid #4a4a4f !important;
     }
+	}
+	@supports -moz-bool-pref("uc.newtab.background") {
+		body {
+			background: fixed;
+			background-image: url(./resources/background.png);	
+      background-position: center;
+    }
+		.top-site-inner {
+			background-color: var(--in-content-page-background) !important;
+			border-radius: 8px;
+			box-shadow: 0px 2px 4px #0006 !important;
+			padding: 4px;
+		}
+		.top-sites-list .title {
+			padding-block: 2px !important;
+		}
 	}
 }
 @-moz-document url-prefix("about:preferences"), url("about:addons") {

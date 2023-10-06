@@ -512,6 +512,12 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 #urlbar-go-button {
 	margin: 0 !important;
+	width: calc(var(--urlbar-height) - 2px) !important;
+	margin-inline-end: 1px !important;
+}
+#urlbar[breakout-extend="true"] #urlbar-go-button {
+	margin-top: -1px !important;
+	margin-inline-end: 1px !important;
 }
 .urlbarView-type-icon {
 	margin-inline-start: calc(var(--urlbarView-favicon-width) - 6px) !important;
