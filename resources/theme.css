@@ -273,6 +273,19 @@
   	}
   }
   
+  @supports -moz-bool-pref("uc.titlebar-accent.lighttext") {
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#titlebar:not(:-moz-window-inactive) {
+  		color: rgb(251, 251, 254) !important;
+  	}
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#new-tab-button:not(:-moz-window-inactive), 
+  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  	#tabs-newtab-button:not(:-moz-window-inactive) {
+  		fill: rgb(251, 251, 254) !important;
+  	}
+  }
+  
   /* All themes */
   /* Use photon's default outline on themes with no border */
   #tabbrowser-tabs[style*="--lwt-tab-line-color: rgba(0, 0, 0, 0)"] {
