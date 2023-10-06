@@ -43,7 +43,7 @@ and not like this:
 
 Restart Firefox
 
-# Context menus
+## Context menus
 In `about:config`, if you want native (Windows) context menus, you can create:
 **Note: These context menus have not been tested on platforms other than Windows**
 | Config Name | Result | Image |
@@ -57,7 +57,7 @@ If you don't set `uc.contextmenu.light` or `uc.contextmenu.dark`, then the conte
 
 ![Windows 11 style context menu with the dark Alpenglow theme](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/09246fb9-66ab-4406-bc94-4e46157dd167)
 
-# Megabar
+## Megabar
 In `about:config`, if you want to reduce the megabar or disable it, create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
@@ -66,7 +66,7 @@ In `about:config`, if you want to reduce the megabar or disable it, create:
 | `uc.no-megabar` | No megabar | ![nomegabar](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/a60585ff-d7fe-4ef1-af0c-09269160bc6b) |
 
 
-# Themes
+## Themes
 For themes where the tab color and navbar color are different (and for people who want them to be the same), go to `about:config` and create:
 | Config Name | Result | Image |
 |-|:-:|:-:|
@@ -74,10 +74,18 @@ For themes where the tab color and navbar color are different (and for people wh
 | `uc.theme.tab-color-same-as-navbar` | Tab color takes the navbar color <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Navbar Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/10fdd8a3-895a-4c25-b485-9df1f22d62b4) |
 | `uc.theme.navbar-color-same-as-tab` | Navbar color takes the tab color <br><br> Top: Theme in Proton <br> Bottom: Theme with config | ![Tab Color](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/ceee4529-ca7a-48df-83d9-7ce11e7ded92) |
 
-# Tab separators (v118 or lower)
+## Tab title text color
+If the tab title text color is unreadable with your accent color, go to `about:config` and create:
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| _none_ | Default color | ![whiteonlight](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/4fb2df18-8701-45fc-954e-7de875888f91) |
+| `uc.titlebar-accent.darktext` | Dark tab title color | ![blackonlight](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/25c46b14-fb64-4e41-814a-c32a036bf747) |
+| `uc.titlebar-accent.lighttext` | Light tab title color | ![lightondark](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/88f1fb0e-8f77-43d7-bd51-b62958096257) |
+
+## Tab separators (v118 or lower)
 Sometimes the tab separators go missing. If you want them to show up always then remove line 277 from `tabs-and-urlbar.css`. https://github.com/zapSNH/zapsCoolPhotonTheme/blob/b9b6adae9a3844568fc394885cdd5334224d4476/resources/tabs-and-urlbar.css#L277 
 
 This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
-# Misc.
+## Misc.
 Photon Firefox icons are taken from the `omni.ja` file from Firefox 87 
