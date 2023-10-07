@@ -87,6 +87,7 @@
 	background: no-repeat center var(--autoscroll-background-image) rgba(249,249,250,.8);
 	border: solid rgba(0,0,0,.4) 1.5px;
 	translate: -12px -22px;
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 /* Aero glass/Mica *
 @supports -moz-bool-pref("photon.win-glass") {
