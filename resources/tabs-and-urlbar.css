@@ -193,7 +193,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	padding: 0 !important;
 }
 /* Makes the new tab button more Photon-like */
-#tabs-newtab-button, #new-tab-button {
+#tabs-newtab-button, #TabsToolbar #new-tab-button {
 	margin-top: 1px !important;
 	margin-bottom: -1px !important;
 	width: 32px !important;
