@@ -34,6 +34,8 @@
   --link-color: var(--photon-accent-dark) !important;
   --photon-tab-outline: var(--photon-accent-dark);
  	--sidebar-background: #fff !important;
+	--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
+  --autocomplete-popup-highlight-color: #fff !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -76,7 +78,9 @@
     --photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #fff !important;
     --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-    --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
+    --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+    --autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
+    --autocomplete-popup-highlight-color: #fff !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -234,7 +238,6 @@
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) 
 .urlbarView-row[selected] span {
 	--autocomplete-popup-highlight-background: var(--photon-tab-outline) !important;
-	color: var( --lwt-text-color) !important;
 }
 /* Accent color for the titlebar */
 @media (-moz-platform: windows) and (-moz-windows-accent-color-in-titlebar) {
