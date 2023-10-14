@@ -105,23 +105,31 @@
 /* Old style context menus */
 @supports -moz-bool-pref("uc.contextmenu.win-10") {
 	@supports -moz-bool-pref("uc.contextmenu.dark") {
-		.menupopup-arrowscrollbox, tooltip {
+		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2b2b2b !important;
-			border-color: #a0a0a0 !important;
-			color: white;
+			--button-hover-bgcolor: #5f5f5f !important;
+			--panel-color: #fff !important;
+			--panel-border-color: #a0a0a0 !important;
 		}
 		menupopup menuseparator::before {
 			border-color: #808080 !important;
 		}
+		menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+			color: #fff !important;
+		}
 	}
 	@supports -moz-bool-pref("uc.contextmenu.light") {
-		.menupopup-arrowscrollbox, tooltip {
+		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
-			border-color: #a0a0a0 !important;
-			color: black;
+			--button-hover-bgcolor: #e3e2e3 !important;
+			--panel-color: #000 !important;
+			--panel-border-color: #a0a0a0 !important;
 		}
 		menupopup menuseparator::before {
 			border-color: #d7d7d7 !important;
+		}
+		menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+			color: #000 !important;
 		}
 	}
 	.menupopup-arrowscrollbox {
@@ -151,30 +159,33 @@
 /* kinda looks like the gnome context menu too */
 @supports -moz-bool-pref("uc.contextmenu.win-11") {
 	@supports -moz-bool-pref("uc.contextmenu.dark") {
-		.menupopup-arrowscrollbox, tooltip {
+		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2c2c2c !important;
-			border-color: #3e3e3e !important;
-			color: white;
+			--button-hover-bgcolor: #5f5f5f !important;
+			--panel-color: #fff !important;
+			--panel-border-color: #3e3e3e !important;
 		}
 		menupopup menuseparator::before {
 			border-color: #3e3e3e !important;
-		}/*
-		menupopup :is(menu, menuitem):hover, tooltip {
-			color: white !important;
-		}*/
+		}
+		menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+			color: #fff !important;
+		}
 	}
 	@supports -moz-bool-pref("uc.contextmenu.light") {
-		.menupopup-arrowscrollbox, tooltip {
+		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
-			border-color: #a0a0a0 !important;
-			color: black !important;
+			--button-hover-bgcolor: #e3e2e3 !important;
+			--button-hover-color: #000 !important;
+			--panel-color: #000 !important;
+			--panel-border-color: #a0a0a0 !important;
 		}
 		menupopup menuseparator::before {
 			border-color: #e7e7e7 !important;
-		}/*
-		menupopup :is(menu, menuitem):hover, tooltip {
-			color: black !important;
-		}*/
+		}
+		menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+			color: #000 !important;
+		}
 	}
 	.menupopup-arrowscrollbox {
 		border-radius: 6px !important;
