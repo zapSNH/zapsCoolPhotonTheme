@@ -338,6 +338,9 @@
 #logins-button {
 	list-style-image: url(./icons/login.svg) !important;
 }
+#translations-button-icon {
+	list-style-image: url(./icons/translations.svg) !important;
+}
 #PlacesChevron,
 #nav-bar-overflow-button {
 	list-style-image: url(./icons/command-chevron.svg) !important;
@@ -462,7 +465,7 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
 #appMenu-translate-button .toolbarbutton-icon {
-	list-style-image: url(chrome://browser/skin/translations.svg);
+	list-style-image: url(./icons/translations.svg);
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
 /* This pushes down the find/translate button and aligns the zoom seperator */
