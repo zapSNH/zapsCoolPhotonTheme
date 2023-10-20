@@ -189,7 +189,7 @@
 			outline: 5px solid #4a4a4f !important;
     }
 	}
-	@supports -moz-bool-pref("uc.newtab.background") {
+	@media (-moz-bool-pref: "uc.newtab.background") {
 		body {
 			background: fixed;
 			background-image: url(./resources/background.png);	

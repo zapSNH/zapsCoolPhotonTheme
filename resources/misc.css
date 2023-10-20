@@ -90,7 +90,7 @@
 	box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 /* Aero glass/Mica *
-@supports -moz-bool-pref("photon.win-glass") {
+@media (-moz-bool-pref: "photon.win-glass") {
 	#navigator-toolbox-background, #navigator-toolbox, html {
     background: transparent !important;
 		appearance: -moz-win-glass !important;
@@ -103,8 +103,8 @@
 	}
 }*/
 /* Old style context menus */
-@supports -moz-bool-pref("uc.contextmenu.win-10") {
-	@supports -moz-bool-pref("uc.contextmenu.dark") {
+@media (-moz-bool-pref: "uc.contextmenu.win-10") {
+	@media (-moz-bool-pref: "uc.contextmenu.dark") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
@@ -118,7 +118,7 @@
 			color: #fff !important;
 		}
 	}
-	@supports -moz-bool-pref("uc.contextmenu.light") {
+	@media (-moz-bool-pref: "uc.contextmenu.light") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
@@ -157,8 +157,8 @@
 }
 
 /* kinda looks like the gnome context menu too */
-@supports -moz-bool-pref("uc.contextmenu.win-11") {
-	@supports -moz-bool-pref("uc.contextmenu.dark") {
+@media (-moz-bool-pref: "uc.contextmenu.win-11") {
+	@media (-moz-bool-pref: "uc.contextmenu.dark") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			--button-hover-bgcolor: #5f5f5f !important;
@@ -172,7 +172,7 @@
 			color: #fff !important;
 		}
 	}
-	@supports -moz-bool-pref("uc.contextmenu.light") {
+	@media (-moz-bool-pref: "uc.contextmenu.light") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;

@@ -28,7 +28,7 @@
 	list-style-image: url(./icons/connection-secure.svg) !important
 }
 /* Pretend it still exists */
-@supports not -moz-bool-pref("security.secure_connection_icon_color_gray") {
+@media not (-moz-bool-pref: "security.secure_connection_icon_color_gray") {
 	#identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
 		-moz-context-properties: fill !important;
 		fill: #12bc00 !important;
@@ -472,7 +472,7 @@
 #appMenu-find-button2 {
   margin-bottom: 8px !important;
 }
-@supports -moz-bool-pref("browser.translations.enable") {
+@media (-moz-bool-pref: "browser.translations.enable") {
   #appMenu-translate-button {
   	margin-bottom: 8px !important;
   }
