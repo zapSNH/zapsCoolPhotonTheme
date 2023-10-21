@@ -690,7 +690,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		margin: 0 !important;
 		margin-inline-end: 4px !important;
 		position: static !important;
-		width: 16px !important;
+		min-width: 16px !important;
 		height: 16px !important;
 		order: 0;
 	}
