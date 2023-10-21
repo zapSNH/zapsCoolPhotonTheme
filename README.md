@@ -82,6 +82,19 @@ If the tab title text color is unreadable with your accent color, go to `about:c
 | `uc.titlebar-accent.darktext` | Dark tab title color | ![blackonlight](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/25c46b14-fb64-4e41-814a-c32a036bf747) |
 | `uc.titlebar-accent.lighttext` | Light tab title color | ![lightondark](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/88f1fb0e-8f77-43d7-bd51-b62958096257) |
 
+## Sidebery
+There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You can turn it on with:
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.sidebery` | Vertical Tabs | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/e3514bd2-13d5-4eca-aee6-9415c0f8a97a) |
+
+#### Notes:
+- You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
+- The sidebar does not collapse or hide.
+- Only normal mode is supported for now (no compact or touch mode).
+- The bookmarks bar will not appear when saving a bookmark.
+- You will need to set the bookmarks bar to `Only Show on New Tab` or `Never Show`.
+
 ## Tab separators (v118 or lower)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
 
