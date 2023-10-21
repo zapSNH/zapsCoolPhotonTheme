@@ -215,3 +215,44 @@
 		border-radius: 2px !important;
 	}
 }
+
+/* Sidebery */
+@media (-moz-bool-pref: "uc.sidebery") {
+	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+		display: none !important;
+	}
+	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+		margin-top: -1px;
+		width: 230px !important;
+	}
+	#nav-bar {
+		margin-top: -40px;
+		margin-inline-end: 167px;
+		margin-inline-start: 20px;
+	}
+	.tabbrowser-tab, #new-tab-button, #tabs-newtab-button {
+		display: none !important;
+	}
+	.titlebar-button {
+		height: 40px !important;
+	}
+	.titlebar-color {
+		background-color: var(--toolbar-bgcolor);
+	}
+	:root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox {
+		border-bottom-color: var(--toolbar-bgcolor) !important;
+	}
+	:root[BookmarksToolbarOverlapsBrowser] #browser {
+		margin-top: 26px
+	}
+	:root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
+		margin-top: -27px
+	}
+	#PersonalToolbar {
+		position: absolute;
+		top: 40px;
+		border-bottom: 1px solid var(--chrome-content-separator-color);
+		right: 0;
+		width: calc(100% - 230px)
+	}
+}
