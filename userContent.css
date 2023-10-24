@@ -5,6 +5,9 @@
 	--photon-secondary-border-radius: 2px;
 	--content-css: 1px;
 }
+button {
+	border-radius: var(--photon-secondary-border-radius) !important;
+}
 @-moz-document url-prefix("about:") {
 	* {
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
@@ -81,11 +84,6 @@
 	.card-outer, .card :not(.card-context), .icon-wrapper, .top-site-outer {
 		border-radius: var(--photon-primary-border-radius) !important;
 	}
-	@media (min-height: 701px) {
-    body:not(.inline-onboarding) .fixed-search > main {
-      padding-top: 124px !important;
-    }
-  }
 	.search-wrapper .search-handoff-button {
 		background-color: white !important;
 		border: solid 1px #c4c4c5 !important;
@@ -101,12 +99,6 @@
 	}
 	.sponsored-label {
 		display: none !important;
-	}
-	.logo-and-wordmark {
-		display: none !important;
-	}
-	.only-search .logo-and-wordmark {
-		display: flex !important;
 	}
 	.top-site-outer:hover {
 		background-color: transparent !important;
@@ -137,7 +129,7 @@
 		opacity: 0.75 !important;
 	}
 	.top-sites > div:not([class])::before, .section-title {
-		content: "Top sites";
+		content: "Top Sites";
 		background-image: url(./resources/icons/glyph-topsites.svg) !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
