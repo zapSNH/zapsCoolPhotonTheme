@@ -218,12 +218,31 @@
 
 /* Sidebery */
 @supports -moz-bool-pref("uc.sidebery") {
+	:root {
+		--sidebar-width: 35px;
+	}
 	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
 		display: none !important;
 	}
 	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 		margin-top: -1px;
-		width: 230px !important;
+		max-width: var(--sidebar-width) !important;
+		width: var(--sidebar-width) !important;
+		min-width: var(--sidebar-width) !important;
+		height: 100vh !important;
+		position: absolute;
+		transition: 0.3s ease;
+	}
+	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+		width: var(--sidebar-width) !important;
+		transition: 0.3s ease;
+		z-index: 1;
+	}
+	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+		--sidebar-width: 235px;
+	}
+	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ #appcontent {
+		margin-inline-start: 35px;
 	}
 	#nav-bar {
 		margin-top: -40px;
@@ -234,25 +253,29 @@
 		display: none !important;
 	}
 	.titlebar-button {
-		height: 40px !important;
+		height: 42px !important;
 	}
 	.titlebar-color {
 		background-color: var(--toolbar-bgcolor);
 	}
-	:root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox {
-		border-bottom-color: var(--toolbar-bgcolor) !important;
+	
+	:root[uidensity="compact"] #titlebar:has(#toolbar-menubar[inactive="true"]) {
+		height: 35px !important;
 	}
-	:root[BookmarksToolbarOverlapsBrowser] #browser {
-		margin-top: 26px
+	:root[uidensity="compact"] #toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
+		height: 35px !important;
 	}
-	:root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
-		margin-top: -27px
+	:root[uidensity="compact"] #titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
+		margin-top: -33px;
 	}
-	#PersonalToolbar {
-		position: absolute;
-		top: 40px;
-		border-bottom: 1px solid var(--chrome-content-separator-color);
-		right: 0;
-		width: calc(100% - 230px)
+	
+	:root[uidensity="touch"] #titlebar:has(#toolbar-menubar[inactive="true"]) {
+		height: 47px !important;
+	}
+	:root[uidensity="touch"] #toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
+		height: 47px !important;
+	}
+	:root[uidensity="touch"] #titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
+		margin-top: -45px;
 	}
 }
