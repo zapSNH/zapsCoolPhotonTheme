@@ -91,10 +91,7 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 
 #### Notes:
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
-- The sidebar does not collapse or hide.
-- Only normal mode is supported for now (no compact or touch mode).
-- The bookmarks bar will not appear when saving a bookmark.
-- You will need to set the bookmarks bar to `Only Show on New Tab` or `Never Show`.
+- You will need to (re)move Firefox View and any other buttons in the tabbar to the navigation bar.
 
 ## Tab separators (v118 or lower)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
