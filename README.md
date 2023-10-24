@@ -94,7 +94,7 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
 - You will need to (re)move Firefox View and any other buttons in the tabbar to the navigation bar.
 
-## Tab separators (v118 or lower)
+## Tab separators (Firefox ESR)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
 
 ```css
