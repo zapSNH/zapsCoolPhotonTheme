@@ -19,6 +19,7 @@ Open `about:config` and set/create:
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
 * `uc.reduced-megabar` to `false`
+* `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `true`
 
 Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Proton's size. Yes, the highlighted/open megabar is smaller in Proton.
 
