@@ -30,6 +30,9 @@ button {
 			--in-content-table-background: #202023 !important;
 		}
 	}
+	button {
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
 	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"] {
 		border-radius: var(--photon-secondary-border-radius) !important;
