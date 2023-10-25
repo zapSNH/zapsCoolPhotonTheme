@@ -5,9 +5,6 @@
 	--photon-secondary-border-radius: 2px;
 	--content-css: 1px;
 }
-button {
-	border-radius: var(--photon-secondary-border-radius) !important;
-}
 @-moz-document url-prefix("about:") {
 	* {
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
