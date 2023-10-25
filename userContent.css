@@ -5,9 +5,6 @@
 	--photon-secondary-border-radius: 2px;
 	--content-css: 1px;
 }
-button {
-	border-radius: var(--photon-secondary-border-radius) !important;
-}
 @-moz-document url-prefix("about:") {
 	* {
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
@@ -29,6 +26,9 @@ button {
 			--in-content-button-background-active: rgba(249,249,250,0.2) !important;
 			--in-content-table-background: #202023 !important;
 		}
+	}
+	button {
+		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"] {
