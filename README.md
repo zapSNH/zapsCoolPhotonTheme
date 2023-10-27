@@ -1,8 +1,6 @@
 # Zap's Cool Photon Theme
 A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
-See Compatibility for version compatibility
-
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
 ____
 
@@ -19,7 +17,7 @@ Open `about:config` and set/create:
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
 * `uc.reduced-megabar` to `false`
-* `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `true`
+* `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `false`
 
 Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Proton's size. Yes, the highlighted/open megabar is smaller in Proton.
 
