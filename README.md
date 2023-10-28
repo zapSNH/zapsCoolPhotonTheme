@@ -1,4 +1,4 @@
-# Zap's Cool Photon Theme
+# Zap's Cool Photon Theme (Firefox 116 - 119)
 A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
@@ -7,10 +7,7 @@ ____
 #### Compatibility
 | | Windows 10/11 | Linux (Ubuntu) | MacOS |
 |-|:-:|:-:|:-:|
-| **102esr** | Semi-broken | ? | ? |
-| **115esr** | ✔️ | Semi-broken | ? |
 | **119** | ✔️ | ✔️ | ? |
-| **121** | ✔️ | ✔️ | ? | 
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -24,16 +21,11 @@ Switching `uc.reduced-megabar` to `true` reduces the size of the megabar to Prot
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 
 Download the release for your version:
-* [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
-* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 * [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
-* [Firefox 120](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
-* [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
 
-Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:support` and opening your profile folder/directory.
+Extract the zip and move `zapsCoolPhotonTheme-119` to your profile which you can find by going to `about:support` and opening your profile folder/directory.
 
-Rename `zapsCoolPhotonTheme-*` to `chrome`
-
+Rename `zapsCoolPhotonTheme-119` to `chrome`
 
 Make sure the directory is like this:
 * `Profiles` > `your profile` > `chrome`
@@ -91,18 +83,6 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 #### Notes:
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
 - You will need to (re)move Firefox View and any other buttons in the tabbar to the navigation bar.
-
-## Tab separators (Firefox ESR)
-Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
-
-```css
-.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
-.tab-stack::before, :root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
-	border-right-color: transparent !important;
-}
-```
-
-This will result in a separator before the selected tab, so if you don't want that look and are fine with separators sometimes going missing, then don't remove it.
 
 ## Misc.
 Photon Firefox icons are taken from the `omni.ja` file from Firefox 87.
