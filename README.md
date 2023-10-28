@@ -5,12 +5,12 @@ A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 
 ____
 
 #### Compatibility
-| | Windows 10/11 | Linux (Ubuntu) | MacOS |
-|-|:-:|:-:|:-:|
-| **102esr** | Semi-broken | ? | ? |
-| **115esr** | ✔️ | Semi-broken | ? |
-| **119** | ✔️ | ✔️ | ? |
-| **121** | ✔️ | ✔️ | ? | 
+| | Windows 10/11 | Linux (Ubuntu) | MacOS | Notes |
+|-|:-:|:-:|:-:|:-:|
+| **102esr** | Semi-broken | ? | ? | No Updates |
+| **115esr** | ✔️ | Semi-broken | ? | No Updates |
+| **119** | ✔️ | ✔️ | ? | |
+| **121** | ✔️ | ✔️ | ? | |
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
