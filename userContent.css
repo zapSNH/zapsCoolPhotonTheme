@@ -81,7 +81,7 @@
 		--newtab-text-primary-color: #373737 !important;
 	}
 	.tile, .search-wrapper .search-handoff-button, .ds-card,
-	.card-outer, .card :not(.card-context), .icon-wrapper, .top-site-outer {
+	.card-outer, .card :not(.card-context), .icon-wrapper, .top-site-outer, #newtab-search-text {
 		border-radius: var(--photon-primary-border-radius) !important;
 	}
 	.search-wrapper .search-handoff-button {
@@ -170,7 +170,7 @@
 		body {
 			background-color: #2a2a2e !important;
 		}
-		.search-wrapper .search-handoff-button {
+		.search-wrapper .search-handoff-button, #newtab-search-text {
 			background-color: #38383d !important;
 			border: solid 1px #5f5f63 !important;
 		}
