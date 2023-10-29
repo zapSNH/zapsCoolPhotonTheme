@@ -659,7 +659,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		outline: none !important;
 	}
 }
-@media (-moz-bool-pref: "uc.no-megabar") {
+@supports -moz-bool-pref("uc.no-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;

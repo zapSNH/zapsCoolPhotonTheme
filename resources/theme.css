@@ -287,7 +287,7 @@
   	fill: rgb(251, 251, 254) !important;
   }
   
-  @supports -moz-bool-pref("uc.titlebar-accent.darktext") {
+  @supports -moz-bool-pref("uc.titlebar-accent.lighttext") {
   	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
   	#titlebar:not(:-moz-window-inactive) {
   		color: black !important;
