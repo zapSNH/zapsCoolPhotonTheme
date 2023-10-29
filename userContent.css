@@ -105,7 +105,7 @@
 	}
 	.top-site-outer .tile {
   	outline: 0px solid transparent !important;
-		transition: outline var(--photon-speed-1) var(--photon-easing-function) !important;
+		transition: outline var(--photon-speed-1) ease !important;
   }
 	.top-site-outer:hover .tile {
 		outline: 5px solid #d7d7db !important;
