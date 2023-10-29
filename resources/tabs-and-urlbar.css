@@ -21,7 +21,7 @@
 /* Delete the transition things if unwanted */
 .tab-close-button {
 	border-radius: var(--photon-border-radius) !important;
-	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
+	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 }
 .tabbrowser-tab:not(:hover) .tab-close-button {
 	padding-inline: 4px !important;
@@ -36,7 +36,7 @@
 }
 .tabbrowser-tab > .tab-stack > .tab-background {
 	border-radius: 0 !important;
-	transition: background 0.2s !important;
+	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 }
 .tab-background {
 	margin: 0 !important;
@@ -53,7 +53,7 @@ so that the sound icon doesn't look out of place
 credits to phroton for some of this stuff */
 .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
 	border-radius: 1px !important;
-	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
+	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 	opacity: 1 !important;
 	padding: 0px !important;
 }
@@ -82,7 +82,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* Fixes for pinned tabs */
 .tabbrowser-tab[pinned] .tab-icon-overlay {
-	transition: background 0.2s cubic-bezier(.07,.95,0,1) !important;
+	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 	padding: 1px !important;
 	background-image: linear-gradient(var(--lwt-selected-tab-background-color, transparent),
 		var(--lwt-selected-tab-background-color, transparent)),
@@ -156,7 +156,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	content: "";
 	height: 2px;
-	transition: all .25s cubic-bezier(.07,.95,0,1);
+	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	width: 100%;
 }
@@ -230,7 +230,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	content: "";
 	height: 2px;
 	width: var(--tab-min-height);
-	transition: all .25s cubic-bezier(.07,.95,0,1);
+	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	position: absolute !important;
 	top: 0 !important;
@@ -335,7 +335,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 30px !important;
 	margin-right: 30px !important;
-	transition: margin .2s cubic-bezier(.07,.95,0,1) !important
+	transition: margin var(--photon-speed-1) var(--photon-easing-function) !important
 }
 .tabbrowser-tab:not([pinned])[usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 20px !important;
@@ -346,7 +346,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 10px !important;
 	margin-right: 10px !important;
-	transition: margin .2s cubic-bezier(.07,.95,0,1) !important
+	transition: margin var(--photon-speed-1) var(--photon-easing-function) !important
 }
 .tabbrowser-tab[pinned][usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 2px !important;
@@ -408,7 +408,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	background-color: var(--photon-back) !important;
 	outline: var(--photon-back-outline) 1px solid;
 	box-shadow: 0px 0px 4px var(--photon-back-shadow) !important;
-	transition: box-shadow .2s !important;
+	transition: box-shadow var(--photon-speed-1) var(--photon-easing-function) !important;
 	margin-left: 1px !important
 }
 :root:not([uidensity="compact"]) #back-button:not([disabled]):hover > image {

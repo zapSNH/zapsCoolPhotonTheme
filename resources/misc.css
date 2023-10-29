@@ -231,11 +231,11 @@
 		min-width: var(--sidebar-width) !important;
 		height: 100vh !important;
 		position: absolute;
-		transition: 0.3s ease;
+		transition: var(--photon-speed-3) var(--photon-easing-function);
 	}
 	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
 		width: var(--sidebar-width) !important;
-		transition: 0.3s ease;
+		transition: var(--photon-speed-3) var(--photon-easing-function);
 		z-index: 1;
 	}
 	#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {

@@ -36,6 +36,8 @@
  	--sidebar-background: #fff !important;
 	--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
   --autocomplete-popup-highlight-color: #fff !important;
+	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarView-highlight-color: #fff !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -81,6 +83,8 @@
     --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
     --autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
     --autocomplete-popup-highlight-color: #fff !important;
+  	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+    --urlbarView-highlight-color: #fff !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -153,6 +157,8 @@
   --link-color: var(--photon-accent-light) !important;
   --photon-tab-outline: var(--photon-accent-dark);
   --sidebar-background: #38383d !important;
+	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarView-highlight-color: #fff !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -183,6 +189,8 @@
   	--link-color: var(--photon-accent-light) !important;
   	--photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #38383d !important;
+	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarView-highlight-color: #fff !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;
