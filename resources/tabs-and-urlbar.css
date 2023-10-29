@@ -536,6 +536,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	height: calc(var(--urlbar-height) - 2px) !important;
 	width: 30px !important;
 }
+.urlbar-page-action[translationsactive=true] {
+	width: 48px !important;
+}
 .urlbar-page-action image {
 	translate: 1px !important;
 }
