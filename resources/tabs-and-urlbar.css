@@ -36,7 +36,7 @@
 }
 .tabbrowser-tab > .tab-stack > .tab-background {
 	border-radius: 0 !important;
-	transition: background var(--photon-speed-1) !important;
+	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 }
 .tab-background {
 	margin: 0 !important;
@@ -156,7 +156,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: block;
 	content: "";
 	height: 2px;
-	transition: all .25s var(--photon-easing-function);
+	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	width: 100%;
 }
@@ -230,7 +230,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	content: "";
 	height: 2px;
 	width: var(--tab-min-height);
-	transition: all .25s var(--photon-easing-function);
+	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	position: absolute !important;
 	top: 0 !important;
@@ -335,7 +335,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 30px !important;
 	margin-right: 30px !important;
-	transition: margin .2s var(--photon-easing-function) !important
+	transition: margin var(--photon-speed-1) var(--photon-easing-function) !important
 }
 .tabbrowser-tab:not([pinned])[usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 20px !important;
@@ -346,7 +346,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-radius: 0px !important;
 	margin-left: 10px !important;
 	margin-right: 10px !important;
-	transition: margin .2s var(--photon-easing-function) !important
+	transition: margin var(--photon-speed-1) var(--photon-easing-function) !important
 }
 .tabbrowser-tab[pinned][usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
 	margin-left: 2px !important;
@@ -408,7 +408,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	background-color: var(--photon-back) !important;
 	outline: var(--photon-back-outline) 1px solid;
 	box-shadow: 0px 0px 4px var(--photon-back-shadow) !important;
-	transition: box-shadow .2s !important;
+	transition: box-shadow var(--photon-speed-1) var(--photon-easing-function) !important;
 	margin-left: 1px !important
 }
 :root:not([uidensity="compact"]) #back-button:not([disabled]):hover > image {
@@ -536,6 +536,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	height: calc(var(--urlbar-height) - 2px) !important;
 	width: 30px !important;
 }
+.urlbar-page-action[translationsactive=true] {
+	width: 48px !important;
+}
 .urlbar-page-action image {
 	translate: 1px !important;
 }
@@ -656,7 +659,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		outline: none !important;
 	}
 }
-@supports -moz-bool-pref("uc.no-megabar") {
+@media (-moz-bool-pref: "uc.no-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;

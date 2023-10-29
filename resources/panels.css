@@ -222,6 +222,9 @@ menuitem, menu {
 #editBookmarkPanel .panel-footer button {
 	width: 0px !important;
 }
+#reset-pbm-panel-footer {
+	margin-inline: -16px !important;
+}
 .panel-footer > button {
 	border-radius: 0 !important;
 	margin: 0 !important;
@@ -229,28 +232,29 @@ menuitem, menu {
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
-.popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
+/* I am stubbbboooorrrnnnn */
+#reset-pbm-panel-confirm-button, #translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
 	background-color: #0074df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
-.popup-notification-primary-button:hover, .popup-notification-dropmarker:hover, #editBookmarkPanelDoneButton:hover {
+#reset-pbm-panel-confirm-button:hover, #translations-panel-translate:hover, .popup-notification-primary-button:hover, .popup-notification-dropmarker:hover, #editBookmarkPanelDoneButton:hover {
 	background-color: #0a84ff !important;
 }
-.popup-notification-primary-button:active, .popup-notification-dropmarker:active,  #editBookmarkPanelDoneButton:active {
+#reset-pbm-panel-confirm-button:active, #translations-panel-translate:active, .popup-notification-primary-button:active, .popup-notification-dropmarker:active,  #editBookmarkPanelDoneButton:active {
 	background-color: #0064cf !important;
 }
-.popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
+.panel-footer > button, .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
-.popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
+.panel-footer > button:hover, .popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
 	background-color: #aaa4 !important;
 }
-.popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
+.panel-footer > button:active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
 	background-color: #1113 !important;
 }
 /* Padding */

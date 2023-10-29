@@ -29,9 +29,9 @@
 	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
 
 	--photon-easing-function: cubic-bezier(.07,.95,0,1);
-	--photon-speed-1: var(--photon-speed-1);
-	--photon-speed-2: var(--photon-speed-2);
-	--photon-speed-3: var(--photon-speed-3);
+	--photon-speed-1: 0.2s;
+	--photon-speed-2: 0.25s;
+	--photon-speed-3: 0.3s;
 }
 @media (prefers-color-scheme: dark) {
 	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]), :root:not(:-moz-lwtheme) {

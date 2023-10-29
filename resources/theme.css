@@ -3,7 +3,7 @@
 	--theme-css: 1px;
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
-	--urlbar-border-color: var( --arrowpanel-border-color);
+	--urlbar-border-color: var(--arrowpanel-border-color);
 }
 @media (-moz-platform: windows) {
   .menupopup-arrowscrollbox {
@@ -39,6 +39,9 @@
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
   --urlbar-border-color: var(--photon-accent-dark);
+  --toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
+  --button-primary-bgcolor: var(--photon-accent-dark) !important;
+  --button-primary-color: #fff !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -87,6 +90,9 @@
   	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
     --urlbarView-highlight-color: #fff !important;
   	--urlbar-border-color: var(--photon-accent-dark);
+  	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
+  	--button-primary-bgcolor: var(--photon-accent-dark) !important;
+  	--button-primary-color: #fff !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -162,6 +168,9 @@
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
   --urlbar-border-color: var(--photon-accent-dark);
+  --toolbarbutton-icon-fill-attention: var(--photon-accent-light) !important;
+  --button-primary-bgcolor: var(--photon-accent-dark) !important;
+  --button-primary-color: #fff !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -193,8 +202,11 @@
   	--photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #38383d !important;
 		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
-		--urlbarView-highlight-color: #fff !important; 
+		--urlbarView-highlight-color: #fff !important;
   	--urlbar-border-color: var(--photon-accent-dark);
+  	--toolbarbutton-icon-fill-attention: var(--photon-accent-light) !important;
+  	--button-primary-bgcolor: var(--photon-accent-dark) !important;
+  	--button-primary-color: #fff !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;
@@ -288,7 +300,7 @@
   	}
   }
   
-  @supports -moz-bool-pref("uc.titlebar-accent.lighttext") {
+  @media (-moz-bool-pref: "uc.titlebar-accent.lighttext") {
   	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
   	#titlebar:not(:-moz-window-inactive) {
   		color: rgb(251, 251, 254) !important;
