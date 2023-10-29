@@ -1,9 +1,9 @@
 /* Theme */
 :root {
 	--theme-css: 1px;
-	--urlbar-border-color: #0a84ff;
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
+	--urlbar-border-color: var( --arrowpanel-border-color) !important;
 }
 @media (-moz-platform: windows) {
   .menupopup-arrowscrollbox {
@@ -36,6 +36,10 @@
  	--sidebar-background: #fff !important;
 	--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
   --autocomplete-popup-highlight-color: #fff !important;
+	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarView-highlight-color: #fff !important;
+  --arrowpanel-border-color: var(--photon-accent-dark) !important;
+  --urlbar-border-color: var(--photon-accent-dark);
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -81,6 +85,10 @@
     --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
     --autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
     --autocomplete-popup-highlight-color: #fff !important;
+  	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+    --urlbarView-highlight-color: #fff !important;
+  	--arrowpanel-border-color: var(--photon-accent-dark) !important;
+  	--urlbar-border-color: var(--photon-accent-dark);
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -153,6 +161,10 @@
   --link-color: var(--photon-accent-light) !important;
   --photon-tab-outline: var(--photon-accent-dark);
   --sidebar-background: #38383d !important;
+	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarView-highlight-color: #fff !important;
+  --arrowpanel-border-color: var(--photon-accent-dark) !important;
+  --urlbar-border-color: var(--photon-accent-dark);
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -183,6 +195,10 @@
   	--link-color: var(--photon-accent-light) !important;
   	--photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #38383d !important;
+		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+		--urlbarView-highlight-color: #fff !important; 
+  	--arrowpanel-border-color: var(--photon-accent-dark) !important;
+  	--urlbar-border-color: var(--photon-accent-dark);
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;
