@@ -38,7 +38,6 @@
   --autocomplete-popup-highlight-color: #fff !important;
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
-  --arrowpanel-border-color: var(--photon-accent-dark) !important;
   --urlbar-border-color: var(--photon-accent-dark);
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
@@ -87,7 +86,6 @@
     --autocomplete-popup-highlight-color: #fff !important;
   	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
     --urlbarView-highlight-color: #fff !important;
-  	--arrowpanel-border-color: var(--photon-accent-dark) !important;
   	--urlbar-border-color: var(--photon-accent-dark);
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
@@ -163,7 +161,6 @@
   --sidebar-background: #38383d !important;
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
-  --arrowpanel-border-color: var(--photon-accent-dark) !important;
   --urlbar-border-color: var(--photon-accent-dark);
 }
 @media (prefers-color-scheme: dark) {
@@ -197,7 +194,6 @@
   	--sidebar-background: #38383d !important;
 		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 		--urlbarView-highlight-color: #fff !important; 
-  	--arrowpanel-border-color: var(--photon-accent-dark) !important;
   	--urlbar-border-color: var(--photon-accent-dark);
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
