@@ -39,6 +39,7 @@
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
   --urlbar-border-color: var(--photon-accent-dark);
+  --toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -87,6 +88,7 @@
   	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
     --urlbarView-highlight-color: #fff !important;
   	--urlbar-border-color: var(--photon-accent-dark);
+  	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -162,6 +164,7 @@
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
   --urlbar-border-color: var(--photon-accent-dark);
+  --toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -195,6 +198,7 @@
 		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 		--urlbarView-highlight-color: #fff !important;
   	--urlbar-border-color: var(--photon-accent-dark);
+  	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;
