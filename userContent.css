@@ -4,6 +4,12 @@
 	--photon-primary-border-radius: 4px;
 	--photon-secondary-border-radius: 2px;
 	--content-css: 1px;
+	--photon-speed-1: 0.1s;
+}
+@media (prefers-reduced-motion) {
+  :root {
+  	--photon-speed-1: 0s;
+  }
 }
 @-moz-document url-prefix("about:") {
 	* {
@@ -27,9 +33,9 @@
 			--in-content-table-background: #202023 !important;
 		}
 	}
-	button {
-		border-radius: var(--photon-secondary-border-radius) !important;
-	}
+  button {
+  	border-radius: var(--photon-secondary-border-radius) !important;
+  }
 	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"] {
 		border-radius: var(--photon-secondary-border-radius) !important;
@@ -181,7 +187,7 @@
 			outline: 5px solid #4a4a4f !important;
     }
 	}
-	@supports -moz-bool-pref("uc.newtab.background") {
+	@media (-moz-bool-pref: "uc.newtab.background") {
 		body {
 			background: fixed;
 			background-image: url(./resources/background.png);	
