@@ -335,6 +335,12 @@
 	.reload-tabs-button {
         list-style-image: url("./resources/icons/reload.svg") !important;
 	}
+	.web-appearance-choice img {
+		content: url(./resources/icons/web-appearance-light.svg) !important;
+	}
+	.web-appearance-choice.dark img {
+		content: url(./resources/icons/web-appearance-dark.svg) !important;
+	}
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;

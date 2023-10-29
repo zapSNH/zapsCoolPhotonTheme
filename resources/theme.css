@@ -3,7 +3,7 @@
 	--theme-css: 1px;
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
-	--urlbar-border-color: var( --arrowpanel-border-color);
+	--urlbar-border-color: var(--arrowpanel-border-color);
 }
 @media (-moz-platform: windows) {
   .menupopup-arrowscrollbox {
@@ -193,7 +193,7 @@
   	--photon-tab-outline: var(--photon-accent-dark);
   	--sidebar-background: #38383d !important;
 		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
-		--urlbarView-highlight-color: #fff !important; 
+		--urlbarView-highlight-color: #fff !important;
   	--urlbar-border-color: var(--photon-accent-dark);
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {

@@ -298,6 +298,9 @@
 #bookmarks-menu-button {
 	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
 }
+#characterencoding-button {
+	list-style-image: url(./icons/characterEncoding.svg) !important;
+}
 /* I don't have pocket so please tell me if there's an issue */
 #save-to-pocket-button {
 	list-style-image: url(./icons/pocket-outline.svg) !important;
