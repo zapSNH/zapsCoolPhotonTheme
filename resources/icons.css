@@ -8,9 +8,9 @@
 }
 /* More visible close button */
 .tab-close-button {
-	list-style-image: url(./icons/close-icon2.svg) !important;
-	-moz-context-properties: stroke !important;
-	stroke: currentColor !important;
+	list-style-image: url(./icons/close-tab.svg) !important;
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
   	fill-opacity: 1 !important;
 	stroke-linecap: round !important;
 }
