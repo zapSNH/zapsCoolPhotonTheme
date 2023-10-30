@@ -385,13 +385,15 @@
 @supports -moz-bool-pref("uc.theme.tab-color-same-as-navbar") and (not -moz-bool-pref("uc.theme.navbar-color-same-as-tab")) {
   :root {
     --lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
+    --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
     --lwt-tab-text: var(--toolbar-color) !important;
+    --tab-selected-textcolor: var(--toolbar-color) !important;
 	}
 }
 /* Use tab color in navbar */
 @supports -moz-bool-pref("uc.theme.navbar-color-same-as-tab") and (not -moz-bool-pref("uc.theme.tab-color-same-as-navbar")) {
   :root {
-    --toolbar-bgcolor: var(--lwt-selected-tab-background-color) !important;
-    --toolbar-color: var(--lwt-tab-text) !important;
+    --toolbar-bgcolor: var(--lwt-selected-tab-background-color, var(--tab-selected-bgcolor)) !important;
+    --toolbar-color: var(--lwt-tab-text, var(--tab-selected-textcolor)) !important;
 	}
 }
