@@ -301,8 +301,8 @@
 #characterencoding-button {
 	list-style-image: url(./icons/characterEncoding.svg) !important;
 }
-#characterencoding-button {
-	list-style-image: url(./icons/characterEncoding.svg) !important;
+#reset-pbm-toolbar-button {
+	list-style-image: url(./icons/flame.svg) !important;
 }
 /* I don't have pocket so please tell me if there's an issue */
 #save-to-pocket-button {
@@ -350,6 +350,9 @@
 #PlacesChevron,
 #nav-bar-overflow-button {
 	list-style-image: url(./icons/command-chevron.svg) !important;
+}
+#fxa-toolbar-menu-button image {
+	list-style-image: url(./icons/avatar-empty.svg) !important;
 }
 #PlacesChevron[open],
 #nav-bar-overflow-button[open] {
@@ -408,6 +411,20 @@
 	margin-inline-end: var(--appmenu-icon-inline-end);
 }
 /* FF profile picture */
+#appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])::before {
+	content: "";
+	display: -moz-inline-box;
+	width: 18px !important;
+	height: 18px !important;
+	background-size: 18px;
+	background-image: url(./icons/avatar-empty.svg);
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 2px !important;
+}
+#appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])
+	#appMenu-fxa-label2 {
+	margin-inline-end: -4px !important;
+}
 #appMenu-fxa-status2:is([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])
 	#appMenu-fxa-label2::before {
 	content: "";
@@ -472,7 +489,7 @@
 }
 #appMenu-translate-button .toolbarbutton-icon {
 	list-style-image: url(./icons/translations.svg);
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-end: calc(var(--appmenu-icon-inline-end) - 1px) !important;
 }
 /* This pushes down the find/translate button and aligns the zoom seperator */
 #appMenu-find-button2 {
@@ -749,7 +766,7 @@
 :root #PanelUI-fxa #fxa-manage-account-button::before {	
 	content: "";
 	display: -moz-inline-box;
-	width: 30px !important;
+	min-width: 30px !important;
 	height: 30px !important;
 	border-radius: 50%;
 	background-size: 30px;
