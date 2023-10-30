@@ -24,15 +24,19 @@
 	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 }
 .tabbrowser-tab:not(:hover) .tab-close-button {
-	padding-inline: 4px !important;
-	padding-block: 7px !important;
-	margin-right: -3px !important;
-}
-.tabbrowser-tab:hover .tab-close-button {
-	padding-inline: 5px !important;
-	padding-block: 5px !important;
+	padding-inline: 0px !important;
+	padding-block: 0px !important;
+	margin-inline-end: -2px !important;
+	image-rendering: pixelated !important;
 	width: 20px !important;
 	height: 20px !important;
+}
+.tabbrowser-tab:hover .tab-close-button {
+	padding-inline: 0px !important;
+	padding-block: 0px !important;
+	width: 20px !important;
+	height: 20px !important;
+	margin-inline-end: -2px !important;
 }
 .tabbrowser-tab > .tab-stack > .tab-background {
 	border-radius: 0 !important;
