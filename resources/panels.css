@@ -246,17 +246,17 @@ menuitem, menu {
 #reset-pbm-panel-confirm-button:active, #translations-panel-translate:active, .popup-notification-primary-button:active, .popup-notification-dropmarker:active,  #editBookmarkPanelDoneButton:active {
 	background-color: #0064cf !important;
 }
-.panel-footer > button, .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
+.panel-footer > button:not(.primary), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
-.panel-footer > button:hover, .popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
+.panel-footer > button:not(.primary):hover, .popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
 	background-color: #aaa4 !important;
 }
-.panel-footer > button:active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
+.panel-footer > button:not(.primary):active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
 	background-color: #1113 !important;
 }
 /* Padding */
