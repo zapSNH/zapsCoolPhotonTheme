@@ -351,9 +351,6 @@
 #nav-bar-overflow-button {
 	list-style-image: url(./icons/command-chevron.svg) !important;
 }
-#fxa-toolbar-menu-button image {
-	list-style-image: url(./icons/avatar-empty.svg) !important;
-}
 #PlacesChevron[open],
 #nav-bar-overflow-button[open] {
 	rotate: 90deg
