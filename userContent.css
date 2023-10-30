@@ -11,7 +11,7 @@
   	--photon-speed-1: 0s;
   }
 }
-@-moz-document url-prefix("about:") {
+@-moz-document regexp("about:(?!blank|devtools).*") {
 	* {
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
 		--in-content-page-background: #f9f9fa !important;
