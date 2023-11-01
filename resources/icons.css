@@ -51,6 +51,13 @@
 #urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important
 }
+#identity-box.localResource[pageproxystate="valid"] > #identity-icon-box > #identity-icon:has(+ #identity-icon-label:not([value="Nightly"])), 
+#identity-popup[connection="file"] .identity-popup-security-connection-icon {
+	list-style-image: url(./icons/document.svg) !important
+}
+#identity-popup[connection="extension"] .identity-popup-security-connection-icon {
+	list-style-image: url(./icons/extensions.svg) !important
+}
 /* Changes the tracking protection icons to Photon's */
 #tracking-protection-icon-container[aria-label*="No trackers"] > #tracking-protection-icon-box > #tracking-protection-icon {
 	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important;
@@ -149,20 +156,11 @@
 	-moz-context-properties: fill, stroke !important;
 }
 #identity-popup:is([connection="secure"],  [connection="chrome"]) .identity-popup-security-connection {
-  list-style-image: url(./icons/connection-secure.svg) !important;/*
-	fill: currentColor !important;
-	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
-	-moz-context-properties: fill, stroke !important;
-	width: 1px !important;
-	height: 1px !important;*/
+  list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
 }
 #identity-popup[ciphers="weak"] .identity-popup-security-connection,
 #identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
   list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
-	/*stroke: #ebc778 !important;
-	fill: currentColor !important;
-	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
-	-moz-context-properties: fill, stroke !important;*/
 }
 /* Context menu ">" icon */
 #protections-popup-mainView .subviewbutton-nav:not(.notFound)::after,
@@ -350,9 +348,6 @@
 #PlacesChevron,
 #nav-bar-overflow-button {
 	list-style-image: url(./icons/command-chevron.svg) !important;
-}
-#fxa-toolbar-menu-button image {
-	list-style-image: url(./icons/avatar-empty.svg) !important;
 }
 #PlacesChevron[open],
 #nav-bar-overflow-button[open] {

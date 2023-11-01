@@ -279,6 +279,9 @@ menuitem, menu {
 	margin-bottom: -5px !important;
 	margin-top: -3px !important;
 }
+#identity-popup[mainviewshowing] panelview[footerVisible="false"] {
+	margin-bottom: 4px !important;
+}
 #identity-popup-security-button {
 	margin-bottom: 0px !important;
 }
@@ -323,7 +326,7 @@ menuitem, menu {
 		padding-block: 4px !important;
 	}
 	#context-navigation {
-  	margin-inline: 4px !important;
+		margin-inline: 4px !important;
 	}
 }
 #sidebarMenu-popup > menuitem {
