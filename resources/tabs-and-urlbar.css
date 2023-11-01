@@ -184,7 +184,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 /**/
 @media (-moz-platform: windows) {
 	:root[sizemode="normal"] .tab-background::before {
-		height: 3px !important;
+		translate: 0 1px
 	}
 }
 /* Adds an effect to the highlight that wasn't there in Photon */
@@ -237,7 +237,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	position: absolute !important;
-	top: 0 !important;
+	translate: 0 calc(-1 * var(--tab-min-height)/2 + 1px);
 	filter: grayscale(100%);
 }
 #TabsToolbar #firefox-view-button[aria-pressed="true"]::before {
@@ -254,8 +254,10 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #TabsToolbar #firefox-view-button + #tabbrowser-tabs {
 	margin-inline-start: -1px !important;
 }
-:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
-	height: 3px;
+@media (-moz-platform: windows) {
+	:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
+		translate: 0 calc(-1 * var(--tab-min-height)/2 + 2px);
+	}
 }
 :root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
   border-inline-start-color: transparent !important;
@@ -761,4 +763,53 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 .container.infobar .icon {
 	margin-inline-start: 11px !important;
+}
+
+/* Bottom tabs */
+@media (-moz-bool-pref: "uc.bottom-tabs") {
+	#titlebar, #PersonalToolbar {
+		order: 2 !important;
+	}
+	#nav-bar, #TabsToolbar {
+		order: 1 !important;
+	}
+	.titlebar-buttonbox-container {
+		position: absolute !important;
+		top: 0;
+		right: 0;
+		background: var(--toolbar-bgcolor);
+		height: 40px
+	}
+	:root[uidensity="touch"] .titlebar-buttonbox-container {
+		height: 44px
+	}
+	:root[uidensity="compact"] .titlebar-buttonbox-container {
+		height: 32px
+	}
+	#nav-bar {
+		margin-inline-end: 138px;
+		padding-inline-end: 40px;
+	}
+	#nav-bar-customization-target {
+		margin-inline-start: 30px;
+	}
+	@media (-moz-platform: windows) {
+		:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
+			translate: 0 calc(-1 * var(--tab-min-height)/2 + 1px);
+		}
+		:root[sizemode="normal"] .tab-background::before {
+			translate: 0 0
+		}
+	}
+	.titlebar-spacer {
+		width: 0 !important;
+	}
+	@media (-moz-bool-pref: "uc.bottom-tabs.bookmark-on-top") {
+		#PersonalToolbar {
+			order: 1 !important;
+		}
+		#TabsToolbar {
+			order: 2 !important;
+		}
+	}
 }
