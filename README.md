@@ -102,7 +102,7 @@ In `about:config`, you can turn on bottom tabs with:
 #### Notes:
 - Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
 
-## Bottom Tabs
+## New Tab Background
 In `about:config`, you can turn on a new tab background with:
 | Config Name | Result | Image |
 |-|:-:|:-:|
