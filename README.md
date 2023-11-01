@@ -90,6 +90,17 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 #### Notes:
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
 - You will need to (re)move Firefox View and any other buttons in the tabbar to the navigation bar.
+- Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
+
+## Bottom Tabs
+In `about:config`, you can turn on bottom tabs with:
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.bottom-tabs` | Bottom Tabs | ![bottombook](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/6071b70b-2ca0-4d10-89a5-c532f24f189c) |
+| `uc.bottom-tabs.bookmark-on-top` | Bottom Tabs with bookmarks on top | ![topbook](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/f1f72e70-c736-4ad6-a6f9-9c9b3177187c) |
+
+#### Notes:
+- Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
 
 ## Tab separators (Firefox ESR)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
