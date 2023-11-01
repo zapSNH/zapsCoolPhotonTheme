@@ -102,6 +102,15 @@ In `about:config`, you can turn on bottom tabs with:
 #### Notes:
 - Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
 
+## Bottom Tabs
+In `about:config`, you can turn on a new tab background with:
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.newtab.background` | New tab background | ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/1bbda37a-2577-4592-aac7-e8848cb1a30d) |
+
+#### Notes:
+- Replace `background.png` in `resources` with your own PNG image.
+
 ## Tab separators (Firefox ESR)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
 
