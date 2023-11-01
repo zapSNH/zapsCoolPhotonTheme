@@ -155,7 +155,10 @@
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill, stroke !important;
 }
-#identity-popup:is([connection="secure"],  [connection="chrome"]) .identity-popup-security-connection {
+#identity-popup:is([connection="secure"]) .identity-popup-security-connection {
+  list-style-image: url(./icons/connection-secure.svg) !important;
+}
+#identity-popup:is([connection="chrome"]) .identity-popup-security-connection {
   list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
 }
 #identity-popup[ciphers="weak"] .identity-popup-security-connection,
