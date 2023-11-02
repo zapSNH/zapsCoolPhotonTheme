@@ -42,6 +42,11 @@ and not like this:
 
 Restart Firefox
 
+# Configuration
+If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/ and let it generate a `user.js` file that you can put in your profile folder.
+
+Make sure to delete it after you start Firefox so that it doesn't override any changes you make in `about:config`.
+
 ## Context menus
 In `about:config`, if you want native (Windows) context menus, you can create:
 **Note: These context menus have not been tested on platforms other than Windows**
