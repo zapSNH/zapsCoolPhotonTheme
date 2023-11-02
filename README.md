@@ -17,9 +17,13 @@ Open `about:config` and set/create:
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
 * `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `false`
+____
+If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and generate a `user.js` file that you can put in your profile folder.
+
+Make sure to delete it after you start Firefox so that it doesn't override any changes you make in `about:config`.
 
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
-
+____
 Download the release for your version:
 * [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
@@ -43,9 +47,6 @@ and not like this:
 Restart Firefox
 
 # Configuration
-If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/ and let it generate a `user.js` file that you can put in your profile folder.
-
-Make sure to delete it after you start Firefox so that it doesn't override any changes you make in `about:config`.
 
 ## Context menus
 In `about:config`, if you want native (Windows) context menus, you can create:
