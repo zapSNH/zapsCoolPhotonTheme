@@ -232,16 +232,19 @@ menuitem, menu {
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
-/* I am stubbbboooorrrnnnn */
-#reset-pbm-panel-confirm-button, #translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
+/* I am stubbbbbboooooorrrrrnnnnnn */
+#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
+#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
 	background-color: #0074df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
-#reset-pbm-panel-confirm-button:hover, #translations-panel-translate:hover, .popup-notification-primary-button:hover, .popup-notification-dropmarker:hover, #editBookmarkPanelDoneButton:hover {
+:is(#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
+#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton):hover {
 	background-color: #0a84ff !important;
 }
-#reset-pbm-panel-confirm-button:active, #translations-panel-translate:active, .popup-notification-primary-button:active, .popup-notification-dropmarker:active,  #editBookmarkPanelDoneButton:active {
+:is(#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
+#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton):active {
 	background-color: #0064cf !important;
 }
 .panel-footer > button:not(.primary), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
@@ -256,6 +259,17 @@ menuitem, menu {
 }
 .panel-footer > button:not(.primary):active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
 	background-color: #1113 !important;
+}
+#protections-popup-cookieBannerView-cancel {
+	/* i don;t even know anymore */
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+.protections-popup-cookieBannerView-footer {
+	position: /* this is */absolute;/*ly insane but it works */
+	width: 100%;
+	bottom: 0;
 }
 /* Padding */
 .permission-popup-section {
