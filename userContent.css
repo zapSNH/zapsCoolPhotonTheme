@@ -134,8 +134,13 @@
 		font-size: 100px !important;
 		opacity: 0.75 !important;
 	}
-	.top-sites > div:not([class])::before, .section-title {
-		content: "Top Sites";
+	.section-top-bar {
+		display: block !important;
+	}
+	.section-title-container {
+		visibility: visible !important;
+	}
+	.section-title {
 		background-image: url(./resources/icons/glyph-topsites.svg) !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
@@ -149,7 +154,6 @@
 		font-size: 17px;
 		font-weight: 600;
 		line-height: 20px;
-		cursor: text;
 	}
 	section[data-section-id="topstories"] .section-title {
 		background-image: url(./resources/icons/pocket.svg) !important;
@@ -165,6 +169,25 @@
 		background-image: url(./resources/icons/find-in-page.svg) !important;
     -moz-context-properties: fill !important;
 		fill: white !important;
+	}
+	.context-menu-button {
+		border-radius: 50% !important;
+		width: 28px !important;
+		height: 28px !important;
+		background-size: 18px !important;
+		background-color: var(--newtab-background-color-secondary) !important;
+		border: 1px solid var(--newtab-border-color) !important;
+		transition: 0.1s !important;
+	}
+	.top-site-outer .context-menu-button {
+		margin-top: 2px;
+	}
+	.top-site-outer:not(:hover, .active) .context-menu-button {
+		width: 8px !important;
+		height: 8px !important;
+		margin-top: 10px;
+		margin-inline-end: 10px;
+		background-size: 2px !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -385,10 +408,16 @@
 			--fxview-background-color: #2a2a2e !important;
 			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
 		}
+		button[selected]:not(:hover) {
+			--in-content-accent-color: #74c0ff !important;
+		}
 	}
 	* {
 		--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent)
-  }
+	}
+	.card-container {
+		border-radius: var(--photon-primary-border-radius) !important;
+	}
 }
 
 /* Error page illustrations */

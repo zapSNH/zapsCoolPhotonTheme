@@ -165,7 +165,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	width: 100%;
 }
 .tab-background:not([selected], [multiselected="true"])::before {
-	width: 0px;
+	width: 0%;
 	opacity: 0;
 	filter: grayscale(100%);
 }
@@ -733,8 +733,8 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	display: none;
 }
 #private-browsing-indicator-with-label image {
-	height: 20px !important;
-	width: 20px !important;
+	height: 24px !important;
+	width: 24px !important;
 }
 
 /* URL bar zoom button */

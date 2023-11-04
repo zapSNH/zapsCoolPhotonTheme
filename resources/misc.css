@@ -259,6 +259,11 @@
 		background-color: var(--toolbar-bgcolor);
 	}
 	
+	:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
+	#nav-bar {
+	    box-shadow: none !important;
+	}
+		
 	:root[uidensity="compact"] #titlebar:has(#toolbar-menubar[inactive="true"]) {
 		height: 35px !important;
 	}
