@@ -1,17 +1,17 @@
 /* zap's photon theme */
 /* will be much less documented */
-:root {
-	--photon-primary-border-radius: 4px;
-	--photon-secondary-border-radius: 2px;
-	--content-css: 1px;
-	--photon-speed-1: 0.1s;
-}
-@media (prefers-reduced-motion) {
-  :root {
-  	--photon-speed-1: 0s;
-  }
-}
 @-moz-document regexp("about:(?!blank|devtools).*") {
+	:root {
+		--photon-primary-border-radius: 4px;
+		--photon-secondary-border-radius: 2px;
+		--content-css: 1px;
+		--photon-speed-1: 0.1s;
+	}
+	@media (prefers-reduced-motion) {
+	  :root {
+	  	--photon-speed-1: 0s;
+	  }
+	}
 	* {
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
 		--in-content-page-background: #f9f9fa !important;
