@@ -820,35 +820,26 @@
 	width: 16px !important;
 }
 /* */
-#sidebarMenu-popup menuitem:not(.menuitem-iconic) {
-	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
+#sidebarMenu-popup menuitem .menu-text {
+	background-repeat: no-repeat !important;
+	-moz-context-properties: fill, stroke;
+	fill: currentColor;
 }
-#sidebarMenu-popup menuitem:not(.menuitem-iconic)::before {
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1) !important;
-	margin-inline-end: calc(var(--appmenu-noicon-inline-end) * -1 + 10px) !important;
-	-moz-context-properties: fill !important;
-	fill: var(--panel-color) !important;
+#sidebar-switcher-bookmarks:is(menuitem) .menu-text {
+	background-image: url(./icons/bookmark.svg);
 }
-#sidebar-switcher-bookmarks::before {
-	content: url(./icons/bookmark.svg);
+#sidebar-switcher-history:is(menuitem) .menu-text {
+	background-image: url(./icons/history.svg);
 }
-#sidebar-switcher-history::before {
-	content: url(./icons/history.svg);
+#sidebar-switcher-tabs:is(menuitem) .menu-text {
+	background-image: url(./icons/tab.svg);
 }
-#sidebar-switcher-tabs::before {
-	content: url(./icons/tab.svg);
+#sidebar-reverse-position:is(menuitem) .menu-text {
+	background-image: url(./icons/import-export-rotate90.svg);
 }
-#sidebar-reverse-position::before {
-	content: url(./icons/import-export.svg);
-	rotate: 90deg
-}
-menuitem[data-l10n-id="sidebar-menu-close"]::before {
-	content: url(./icons/add.svg);
-	rotate: 45deg; /* don't tell anyone about this */
+menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
+	background-image: url(./icons/close-icon2.svg);
+	background-position: 2px 2px
 }
 /* side panel */
 #sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header 
