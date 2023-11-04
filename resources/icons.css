@@ -960,6 +960,19 @@ menuitem[data-l10n-id="sidebar-menu-close"]::before {
 	list-style-image: url(./icons/dashboard.svg) !important;
 	width: 16px !important;
 }
+#protections-popup-cookie-banner-switch {
+	padding-inline-start: 42px !important;
+	padding-inline-end: calc(var(--appmenu-icon-inline-end) + 9px ) !important;
+	-moz-context-properties: fill;
+	fill: currentColor;
+	background-image: url(./icons/3rdpartycookies.svg);
+	background-repeat: no-repeat;
+	background-position: 16px;
+	margin-bottom: 0px !important;
+}
+#protections-popup-cookie-banner-section[data-state="site-disabled"] #protections-popup-cookie-banner-switch {
+	background-image: url(./icons/3rdpartycookies-disabled.svg);
+}
 .thirdpartycookies-icon {
 	list-style-image: url(./icons/3rdpartycookies.svg) !important;
 }
