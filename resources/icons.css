@@ -1010,7 +1010,7 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
 /* History folders */
 treechildren::-moz-tree-image(title, query, dayContainer),
 treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
-  list-style-image: url(./icons/history.svg) !important;
+  list-style-image: url(./icons/history-sidebar.svg) !important;
 }
 /* Downloads folder */
 treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
