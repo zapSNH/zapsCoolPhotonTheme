@@ -237,7 +237,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	transition: all var(--photon-speed-2) var(--photon-easing-function);
 	background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
 	position: absolute !important;
-	translate: 0 calc(-1 * var(--tab-min-height)/2 + 1px);
+	translate: 0 calc(-1 * var(--tab-min-height)/2);
 	filter: grayscale(100%);
 }
 #TabsToolbar #firefox-view-button[aria-pressed="true"]::before {
