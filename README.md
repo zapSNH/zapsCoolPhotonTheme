@@ -95,6 +95,7 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 
 #### Notes:
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
+- To be able to switch between vertical tabs mode and normal mode, turn on `Add preface to the browser window's title if Sidebery sidebar is active` and set the preface value to `[VT]` (incl. space at the end).
 - Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
 
 ## Bottom Tabs
