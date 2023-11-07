@@ -527,7 +527,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 .urlbarView-type-icon {
 	margin-inline-start: calc(var(--urlbarView-favicon-width) - 6px) !important;
-	filter: drop-shadow(0px 0px 1px var(--arrowpanel-background))
 }
 /* Search icon */
 #identity-icon-box {
