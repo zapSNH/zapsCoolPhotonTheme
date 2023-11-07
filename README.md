@@ -95,7 +95,6 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 
 #### Notes:
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
-- You will need to (re)move Firefox View and any other buttons in the tabbar to the navigation bar.
 - Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
 
 ## Bottom Tabs
