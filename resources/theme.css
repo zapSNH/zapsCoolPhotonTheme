@@ -16,8 +16,16 @@
   	background: var(--button-hover-bgcolor) !important;
   }
 }
+@media not (prefers-contrast) {
+	:root:-moz-lwtheme {
+		--focus-outline-color: var(--photon-accent) !important;
+	}
+}
 #sidebar, #sidebar-box {
 	background: var(--sidebar-background, var(--toolbar-bgcolor)) !important;
+}
+input.findbar-textbox:focus {
+	outline: 2px var(--photon-accent-dark) solid !important;
 }
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) {

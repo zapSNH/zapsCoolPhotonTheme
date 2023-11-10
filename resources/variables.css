@@ -77,7 +77,8 @@ button, button hbox, hbox menulist,
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
-#firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span {
+#firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span,
+:root[uidensity="compact"] #back-button .toolbarbutton-icon, #translations-panel-lang-selection menulist {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }

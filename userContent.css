@@ -9,7 +9,7 @@
 	}
 	@media (prefers-reduced-motion) {
 	  :root {
-		  --photon-speed-1: 0s;
+	  	--photon-speed-1: 0s;
 	  }
 	}
 	* {
@@ -413,10 +413,59 @@
 		}
 	}
 	* {
-		--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent)
+		--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent);
 	}
 	.card-container {
 		border-radius: var(--photon-primary-border-radius) !important;
+	}
+	span[part="icon"] {
+		visibility: hidden;
+	}
+	.category-nav-header {
+		padding-inline-start: 32px !important;
+	}
+	.category-nav-header::before {
+		content: "";
+		position: absolute;
+		background-image: url(./resources/icons/firefox-view.svg);
+		background-repeat: no-repeat;
+		-moz-context-properties: fill;
+		fill: currentColor;
+		width: 16px;
+		height: 16px;
+		translate: -28px 10px
+	}
+	fxview-category-button::before {
+		content: "";
+		position: absolute;
+		background-image: url(./resources/icons/glyph-topsites.svg);
+		background-repeat: no-repeat;
+		-moz-context-properties: fill;
+		fill: currentColor;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 12px;
+		margin-top: 10px;
+	} 
+	fxview-category-button[name="recentbrowsing"]::before {
+		background-image: url(./resources/icons/glyph-highlights-16.svg);
+	}
+	fxview-category-button[name="opentabs"]::before {
+		background-image: url(./resources/icons/tab.svg);
+	}
+	fxview-category-button[name="recentlyclosed"]::before {
+		background-image: url(./resources/icons/tab-close.svg);
+	}
+	fxview-category-button[name="syncedtabs"]::before {
+		background-image: url(./resources/icons/sync.svg);
+	}
+	fxview-category-button[name="history"]::before {
+		background-image: url(./resources/icons/history.svg);
+	}
+	@media (-moz-platform: windows) {
+		slot {
+			font-family: "Segoe UI", sans-serif !important;
+		}
 	}
 }
 

@@ -414,6 +414,17 @@
 	margin-inline-start: 3px;
 	margin-inline-end: var(--appmenu-icon-inline-end);
 }
+/* Addon banners */
+#appMenu-proton-addon-banners .addon-banner-item image {
+	display: block !important;
+	width: 16px;
+	margin-inline-start: 3px !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-proton-addon-banners #webext-perms-update-menu-item::after {
+	background: no-repeat url(./icons/warning-16.svg) !important;
+	background-size: 16px !important;
+}
 /* FF profile picture */
 #appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])::before {
 	content: "";
@@ -893,7 +904,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	padding-inline: 5px !important;
 	border-inline-start: 0px !important;
 }
-:is(.findbar-find-next, .findbar-find-previous):not(:hover) {
+:is(.findbar-find-next, .findbar-find-previous):not(:hover),
+:is(.findbar-find-next, .findbar-find-previous)[disabled] {
 	background: color-mix(in srgb, currentColor 14%, transparent) !important;
 }
 .findbar-find-next {
@@ -925,6 +937,13 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 #allTabsMenu-containerTabsButton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/add.svg) !important;
+}
+:root #allTabsMenu-hiddenTabsButton {
+	padding-inline-start: 11px !important;
+}
+#allTabsMenu-hiddenTabsButton .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/glyph-topsites.svg) !important;
 }
 #allTabsMenu-containerTabsView vbox .subviewbutton:last-child .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
