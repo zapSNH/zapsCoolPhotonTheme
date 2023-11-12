@@ -104,6 +104,9 @@
 .geo-icon.blocked-permission-icon {
 	list-style-image: url(./icons/geo-blocked.svg) !important;
 }
+#geo-sharing-icon {
+	background-image: url(./icons/geo.svg) !important;
+}
 .geo-icon:not(.blocked-permission-icon) {
 	list-style-image: url(./icons/geo.svg) !important;
 }
@@ -114,19 +117,22 @@
 	list-style-image: url(./icons/camera.svg) !important;
 }
 .persistent-storage-icon {
-  list-style-image: url(./icons/persistent-storage.svg) !important;
+	list-style-image: url(./icons/persistent-storage.svg) !important;
 }
 .persistent-storage-icon.blocked-permission-icon {
-  list-style-image: url(./icons/persistent-storage-blocked.svg) !important;
+	list-style-image: url(./icons/persistent-storage-blocked.svg) !important;
 }
 #notification-popup-box .persistent-storage-icon {
 	width: 30px !important;
 }
 .microphone-icon {
-  list-style-image: url(./icons/microphone.svg) !important;
+	list-style-image: url(./icons/microphone.svg) !important;
+}
+#webrtc-sharing-icon[sharing="microphone"] {
+	background-image: url(./icons/microphone.svg) !important;
 }
 .microphone-icon.blocked-permission-icon {
-  list-style-image: url(./icons/microphone-blocked.svg) !important;
+	list-style-image: url(./icons/microphone-blocked.svg) !important;
 }
 .screen-icon, #webrtc-sharing-icon[sharing="screen"] {
 	list-style-image: url(./icons/screen.svg) !important;
@@ -164,6 +170,9 @@
 #identity-popup[ciphers="weak"] .identity-popup-security-connection,
 #identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
   list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
+}
+.permission-popup-permission-remove-button > .button-box > .button-icon {
+	list-style-image: url(./icons/close-icon2.svg) !important;
 }
 /* Context menu ">" icon */
 #protections-popup-mainView .subviewbutton-nav:not(.notFound)::after,
@@ -374,6 +383,11 @@
 #PanelUI-menu-button {
 	list-style-image: url(./icons/menu.svg) !important;
 }
+#PanelUI-menu-button .toolbarbutton-badge {
+	background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
+	border-radius: 50% !important;
+	outline: 2px var(--toolbar-bgcolor) solid;
+}
 .unified-extensions-item-menu-button.subviewbutton {
 	list-style-image: url(./icons/settings.svg) !important;
 }
@@ -403,7 +417,7 @@
 /* Update Available button */
 #appMenu-proton-update-banner .toolbarbutton-icon {
 	background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
-  border-radius: 50% !important;
+	border-radius: 50% !important;
 }
 #appMenu-proton-update-banner::before {
 	background: no-repeat url(chrome://branding/content/icon16.png);
@@ -729,6 +743,27 @@
 #appMenu_aboutName .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/info.svg) !important;
+}
+#appMenu_menu_HelpPopup_reportPhishingtoolmenu .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/socialblock.svg) !important;
+	width: 16px !important;
+}
+#appMenu_help_reportSiteIssue .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/warning-16.svg) !important;
+}
+#appMenu_troubleShooting .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/developer.svg) !important;
+}
+#appMenu_helpSafeMode .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/cryptominers.svg) !important;
+}
+#appMenu_feedbackPage .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/tip.svg) !important;
 }
 /* more tools */
 #appmenu-moreTools-button .toolbarbutton-icon {

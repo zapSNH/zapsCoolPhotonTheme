@@ -181,11 +181,17 @@ menuitem, menu {
 .download-state:not(:last-child) .downloadButton:not(:hover, :active) {
 	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
 }
-.download-state .downloadButton:not(:hover, :active) {
+.download-state:not(.downloadHoveringButton) .downloadButton:not(:hover, :active) {
 	background: var(--arrowpanel-background) !important;
+}
+.download-state.downloadHoveringButton  {
+	background: none !important;
 }
 .downloadButton {
 	height: 5.5em !important;
+}
+.downloadProgress {
+	--download-progress-fill-color: var(--photon-accent);
 }
 /* Seperator */
 .download-state .downloadButton::before {
@@ -275,7 +281,8 @@ menuitem, menu {
 }
 /* Padding */
 .permission-popup-section {
-	padding-bottom: 4px !important;
+	padding-bottom: 8px !important;
+	padding-top: 8px !important;
 }
 #identity-popup-mainView:not([footerVisible]) .panel-subview-body {
 	margin-bottom: 8px !important;
@@ -392,6 +399,9 @@ menuitem, menu {
 }
 #protections-popup-mainView-panel-header-section toolbarseparator, #protections-popup-mainView-panel-header-section + toolbarseparator {
 	margin-block: 0px !important;
+}
+#protections-popup-cookie-banner-section-separator {
+	margin-top: 4px !important;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
 #unified-extensions-area > toolbaritem, unified-extensions-item {
