@@ -678,7 +678,7 @@
 .all-tabs-item:has(.all-tabs-button image:not([src])) > .all-tabs-button::before {
 	content: url(./icons/globe1.svg) !important;
 }
-.tab-icon-stack:has(.tab-icon-image:not([src])) {
+.tab-icon-stack:not([busy]):has(.tab-icon-image:not([src])) {
 	visibility: collapse !important;
 }
 
