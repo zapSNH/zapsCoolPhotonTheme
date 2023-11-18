@@ -215,7 +215,7 @@
 		.top-site-outer:hover .tile {
 			outline: 5px solid #4a4a4f !important;
 		}
-		.top-site-outer .tile, .top-site-outer .rich-icon, :root .top-site-icon {
+		.top-site-outer .tile, .top-site-outer .rich-icon, :root .top-site-icon:not(.search-topsite) {
 			background-color: #38383d !important;
 		}
 	}
