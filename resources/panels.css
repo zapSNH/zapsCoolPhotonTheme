@@ -291,7 +291,7 @@ menuitem, menu {
 	margin-bottom: 3px !important;
 }
 #appMenu-fxa-status2:not([fxastatus]) {
-  padding-inline: 8px 8px !important
+	padding-inline: 8px 8px !important
 }/*
 #unified-extensions-panel panelview, */#permission-popup panelview {
 	margin-bottom: 3px !important;

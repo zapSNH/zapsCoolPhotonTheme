@@ -125,7 +125,7 @@
 #notification-popup-box .persistent-storage-icon {
 	width: 30px !important;
 }
-.microphone-icon {
+.microphone-icon, #webRTC-selectMicrophone-icon {
 	list-style-image: url(./icons/microphone.svg) !important;
 }
 #webrtc-sharing-icon[sharing="microphone"] {
@@ -638,21 +638,49 @@
 	margin-top: 4px !important;
 }
 /* Favicons */
-.tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
+.all-tabs-item:has(.toolbarbutton-icon:is([src^="chrome://"], :not([src]))) > .all-tabs-button::before {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-size: 18px;
+	margin-inline-end: 0px;
+	-moz-context-properties: fill, stroke;
+	fill: currentColor;
+	margin-inline-end: calc(var(--appmenu-noicon-inline-end)  * -1) !important;
+	padding-inline-end: 6px !important;
+}
+.all-tabs-item .all-tabs-button image:is([src^="chrome://"], :not([src])) {
+	opacity: 0;
+}
+
+.tab-icon-image[src="chrome://global/skin/icons/settings.svg"],
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/settings.svg"]) > .all-tabs-button::before {
 	content: url(./icons/settings.svg) !important;
 }
-.tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"] {
+.tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"],
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://mozapps/skin/extensions/extension.svg"]) > .all-tabs-button::before {
 	content: url(./icons/extensions.svg) !important;
 }
-.tab-icon-image[src="chrome://browser/skin/customize.svg"] {
+.tab-icon-image[src="chrome://browser/skin/customize.svg"],
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://browser/skin/customize.svg"]) > .all-tabs-button::before {
 	content: url(./icons/personalize.svg) !important;
 }
-.tab-icon-image[src="chrome://global/skin/icons/info.svg"] {
+.tab-icon-image[src="chrome://global/skin/icons/info.svg"],
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/info.svg"]) > .all-tabs-button::before {
 	content: url(./icons/info.svg) !important;
 }
-.tab-icon-image:not([src]) {
+.tab-icon-image[src="chrome://global/skin/icons/warning.svg"],
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/warning.svg"]) > .all-tabs-button::before {
+	content: url(./icons/warning-16.svg) !important;
+}
+.tab-icon-image:not([src]),
+.all-tabs-item:has(.all-tabs-button image:not([src])) > .all-tabs-button::before {
 	content: url(./icons/globe1.svg) !important;
 }
+.tab-icon-stack:has(.tab-icon-image:not([src])) {
+	visibility: collapse !important;
+}
+
 /* URLBar icons */
 .searchbar-search-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important;

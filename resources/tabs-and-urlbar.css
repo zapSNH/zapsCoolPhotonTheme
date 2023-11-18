@@ -76,13 +76,13 @@ credits to phroton for some of this stuff */
 	width: calc(100% - 6px - 48px) !important;
 }
 tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
-  width: calc(100% - 32px) !important;
+	width: calc(100% - 32px) !important;
 }
-.tabbrowser-tab:not([pinned]) .tab-label-container {
+.tabbrowser-tab:not([pinned]):has(.tab-icon-image[src]) .tab-label-container {
 	margin-inline-start: 21px !important;
 }
 .tabbrowser-tab:is([muted], [soundplaying], [activemedia-blocked], [crashed="true"]) .tab-label-container {
-  margin-right: 20px;
+	margin-right: 20px;
 }
 /* Fixes for pinned tabs */
 .tabbrowser-tab[pinned] .tab-icon-overlay {
