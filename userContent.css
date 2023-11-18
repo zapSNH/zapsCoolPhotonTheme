@@ -215,6 +215,9 @@
 		.top-site-outer:hover .tile {
 			outline: 5px solid #4a4a4f !important;
 		}
+		.top-site-outer .tile, .top-site-outer .rich-icon, :root .top-site-icon {
+			background-color: #38383d !important;
+		}
 	}
 	@media (-moz-bool-pref: "uc.newtab.background") {
 		body {
