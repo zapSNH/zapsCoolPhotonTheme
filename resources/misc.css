@@ -218,7 +218,7 @@
 
 /* Sidebery */
 @supports -moz-bool-pref("uc.sidebery") {
-	:root[titlepreface="[VT] "] {
+	:root[titlepreface="[VT] "]:not([sizemode="fullscreen"], [customizing="true"]) {
 		
 		--sidebar-width: 35px;
 		
@@ -230,7 +230,7 @@
 			max-width: var(--sidebar-width) !important;
 			width: var(--sidebar-width) !important;
 			min-width: var(--sidebar-width) !important;
-			height: 100vh !important;
+			height: calc(100% - 41px) !important;
 			position: absolute;
 			transition: var(--photon-speed-3) ease;
 		}
@@ -238,6 +238,7 @@
 			width: var(--sidebar-width) !important;
 			transition: var(--photon-speed-3) ease;
 			z-index: 1;
+			border-right: 1px solid var(--sidebar-border-color);
 		}
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
 			--sidebar-width: 235px;
@@ -260,30 +261,53 @@
 			background-color: var(--toolbar-bgcolor);
 		}
 		
-		:is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"])
-		#nav-bar {
-		    box-shadow: none !important;
-		}
-			
-		:root[uidensity="compact"] #titlebar:has(#toolbar-menubar[inactive="true"]) {
-			height: 35px !important;
-		}
-		:root[uidensity="compact"] #toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
-			height: 35px !important;
-		}
-		:root[uidensity="compact"] #titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
-			margin-top: -33px;
+		#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
+		    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
 		}
 		
-		:root[uidensity="touch"] #titlebar:has(#toolbar-menubar[inactive="true"]) {
-			height: 47px !important;
+		#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
+		    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 		}
-		:root[uidensity="touch"] #toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
-			height: 47px !important;
+		.titlebar-spacer {
+		    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 		}
-		:root[uidensity="touch"] #titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
-			margin-top: -45px;
+		
+		&[uidensity="compact"] {
+			#titlebar:has(#toolbar-menubar[inactive="true"]) {
+				height: 35px !important;
+			}
+			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
+				height: 35px !important;
+			}
+			#titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
+				margin-top: -33px;
+			}
+			#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+				height: calc(100% - 34px) !important;
+			}
+			.titlebar-spacer {
+			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			}
 		}
+		
+		&[uidensity="touch"] {
+			#titlebar:has(#toolbar-menubar[inactive="true"]) {
+				height: 47px !important;
+			}
+			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
+				height: 47px !important;
+			}
+			#titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
+				margin-top: -45px;
+			}
+			#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+				height: calc(100% - 46px) !important;
+			}
+			.titlebar-spacer {
+			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			}
+		}
+		
 		#TabsToolbar-customization-target toolbarbutton {
 			display: none !important;
 		}
