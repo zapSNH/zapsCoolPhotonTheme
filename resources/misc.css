@@ -218,7 +218,7 @@
 
 /* Sidebery */
 @media (-moz-bool-pref: "uc.sidebery") {
-	:root[titlepreface="[VT] "]:not([sizemode="fullscreen"], [customizing="true"]) {
+	:root[titlepreface="[VT] "] {
 		
 		--sidebar-width: 35px;
 		
@@ -312,6 +312,41 @@
 			display: none !important;
 		}
 		
+		&[sizemode="fullscreen"] {
+			&[BookmarksToolbarOverlapsBrowser=""] {
+				#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+					height: calc(100% - 13px) !important;
+				}
+				&[uidensity="compact"] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+					height: calc(100% - 6px) !important;
+				}
+				&[uidensity="compact"] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+					height: calc(100% - 18px) !important;
+				}
+			}
+			#navigator-toolbox[style*="margin-top:"] + #browser #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+				height: 100% !important;
+				
+				&:not([hidden]) ~ #appcontent {
+					margin-inline-start: 0px;
+				}
+				&:not(:hover) {
+					margin-inline-start: -34px;
+				}
+			}
+		}
+		
+		&[customizing="true"] #browser {
+			display: block !important;
+			max-height: 0 !important;
+		}
+		
+		&[customizing="true"] #browser #appcontent {
+			display: none !important;
+		}
+		&[customizing="true"] #customization-container {
+			margin-inline-start: 35px;
+		}
 		@media (-moz-bool-pref: "uc.bottom-tabs") {
 			#nav-bar {
 				margin-top: 1px;
