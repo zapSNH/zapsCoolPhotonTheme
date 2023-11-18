@@ -1,6 +1,6 @@
 /* zap's photon theme */
 /* will be much less documented */
-@-moz-document regexp("about:(?!blank|devtools).*") {
+@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank).*")  {
 	:root {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
@@ -24,20 +24,23 @@
 		 	--in-content-page-background: #2a2a2e !important;
 			--in-content-accent-color: #0060df !important;
 			--checkbox-checked-bgcolor: #0060df !important;
-			--in-content-button-background: rgba(249, 249, 250, 0.15) !important;
-			--in-content-primary-button-background: #2a8aff !important;
 			--in-content-box-background: #202023 !important;
 			--in-content-box-border-color: #4b4b4e !important;
+			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
 			--in-content-button-background-hover: rgba(249,249,250,0.15) !important;
-			--in-content-button-background-active: rgba(249,249,250,0.2) !important;
+			--in-content-button-background-active: rgba(249,249,250,0.25) !important;
+			--in-content-primary-button-background: #0060df !important;
+			--in-content-primary-button-background-hover: #003eaa !important;
+			--in-content-primary-button-background-active: #002275 !important;
 			--in-content-table-background: #202023 !important;
 		}
 	}
-  button {
-  	border-radius: var(--photon-secondary-border-radius) !important;
-  }
-	listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
-	.page-section-header > .twisty, [class^="closed-tab-li"] {
+	.dialogBox {
+		border-radius: var(--photon-primary-border-radius) !important;
+	}
+	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
+	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
+	.web-appearance-choice {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -65,9 +68,12 @@
 	.switch {
 		height: 18px !important;
 		width: 32px !important;
-  }
+	}
 	#moz-toggle-button::before {
 		background-color: white !important;
+	}
+	.close-icon {
+		list-style-image: url(./resources/icons/close-tab.svg) !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
@@ -110,12 +116,12 @@
 		background-color: transparent !important;
 	}
 	.top-site-outer .tile {
-  	outline: 0px solid transparent !important;
+  		outline: 0px solid transparent !important;
 		transition: outline var(--photon-speed-1) ease !important;
-  }
+	}
 	.top-site-outer:hover .tile {
 		outline: 5px solid #d7d7db !important;
-  }
+	}
 	.tile, .icon-wrapper .top-site-icon {
 		background-color: rgb(251, 251, 254) !important;
 	}
@@ -167,7 +173,7 @@
 	}
 	.top-site-outer .search-topsite {
 		background-image: url(./resources/icons/find-in-page.svg) !important;
-    -moz-context-properties: fill !important;
+		-moz-context-properties: fill !important;
 		fill: white !important;
 	}
 	.context-menu-button {
@@ -203,19 +209,19 @@
 			background-color: #38383d !important;
 			border: solid 1px #5f5f63 !important;
 		}
-	  .top-site-outer:hover {
+		.top-site-outer:hover {
 			background-color: transparent !important;
 		}
 		.top-site-outer:hover .tile {
 			outline: 5px solid #4a4a4f !important;
-    }
+		}
 	}
 	@supports -moz-bool-pref("uc.newtab.background") {
 		body {
 			background: fixed;
 			background-image: url(./resources/background.png);	
-      background-position: center;
-    }
+			background-position: center;
+		}
 		.top-site-inner {
 			background-color: var(--in-content-page-background) !important;
 			border-radius: 8px;
@@ -363,6 +369,9 @@
 	}
 	.web-appearance-choice.dark img {
 		content: url(./resources/icons/web-appearance-dark.svg) !important;
+	}
+	.face-smile::before, .face-sad::before {
+		font-weight: 100 !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
