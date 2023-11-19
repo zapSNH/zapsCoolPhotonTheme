@@ -367,6 +367,42 @@
 			
 		}
 		
+		&:not([tabsintitlebar]) {
+			#nav-bar {
+				margin-top: 0px;
+				margin-inline-end: 35px;
+				margin-inline-start: 35px;
+			}
+			#navigator-toolbox {
+				background-color: var(--toolbar-bgcolor) !important;
+			}
+			#navigator-toolbox:has(#PersonalToolbar[collapsed="true"]) {
+				border-bottom: 1px var(--chrome-content-separator-color) solid !important;
+			}
+		
+			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
+			    box-shadow: none !important;
+			}
+		}
+		
+		&:has(#toolbar-menubar[autohide="false"]) {
+			#nav-bar {
+				margin-top: 0px;
+				margin-inline-end: 0;
+				margin-inline-start: 0;
+			}
+			#navigator-toolbox {
+				background-color: var(--toolbar-bgcolor) !important;
+			}
+			#navigator-toolbox:has(#PersonalToolbar[collapsed="true"]) {
+				border-bottom: 1px var(--chrome-content-separator-color) solid !important;
+			}
+		
+			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]), #titlebar:has(~ #PersonalToolbar)  .titlebar-button {
+			    box-shadow: none !important;
+			}
+		}
+		
 		&[sizemode="fullscreen"] {
 			&[BookmarksToolbarOverlapsBrowser=""] {
 				#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {

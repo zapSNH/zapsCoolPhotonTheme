@@ -800,6 +800,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 			translate: 0 0
 		}
 	}
+	#toolbar-menubar {
+		position: absolute !important;
+		width: 100%;
+		top: 0 !important;
+	}
 	.titlebar-spacer {
 		width: 0 !important;
 	}
@@ -810,5 +815,28 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		#TabsToolbar {
 			order: 2 !important;
 		}
+	}
+	:root:not([tabsintitlebar]) {
+		#nav-bar {
+			margin-inline-end: 0;
+		}
+		#nav-bar-customization-target {
+			margin-inline-start: 0;
+		}
+	}
+	:root:has(#toolbar-menubar:is([collapsed="false"], :not([inactive="true"]))) {
+		#nav-bar {
+			padding-top: 32px !important;
+			margin-inline-end: 0 !important;
+		}
+		.titlebar-button {
+			height: 32px !important;
+		}
+	}
+}
+
+@media (-moz-bool-pref: "uc.full-width-tabs") {
+	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
+		max-width: 100vw !important;
 	}
 }
