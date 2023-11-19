@@ -231,6 +231,9 @@ menuitem, menu {
 #reset-pbm-panel-footer {
 	margin-inline: -16px !important;
 }
+.popup-notification-dropmarker {
+	min-width: 38px !important;
+}
 .panel-footer > button {
 	border-radius: 0 !important;
 	margin: 0 !important;
@@ -238,33 +241,33 @@ menuitem, menu {
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
-/* I am stubbbbbboooooorrrrrnnnnnn */
-#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
-#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton {
+/* I was stubbbbbboooooorrrrrnnnnnn */
+.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]) {
 	background-color: #0074df !important;
 	color: white !important;
-	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
+	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 }
-:is(#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
-#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton):hover {
+.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]):hover {
 	background-color: #0a84ff !important;
 }
-:is(#protections-popup-cookieBannerView-enable-button, #protections-popup-cookieBannerView-disable-button, #reset-pbm-panel-confirm-button,
-#translations-panel-translate, .popup-notification-primary-button, .popup-notification-dropmarker, #editBookmarkPanelDoneButton):active {
+.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]):active {
 	background-color: #0064cf !important;
-}
-.panel-footer > button:not(.primary), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
-	background-color: #aaa2 !important;
-	border-top: solid 1px color-mix(in srgb, transparent 80%, white) !important;
 }
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
+}
+.panel-footer > button:not(.primary), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
+	background-color: #aaa2 !important;
+	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 }
 .panel-footer > button:not(.primary):hover, .popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
 	background-color: #aaa4 !important;
 }
 .panel-footer > button:not(.primary):active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
 	background-color: #1113 !important;
+}
+.panel-footer > button[type="menu"] {
+	border-inline-start: solid 1px color-mix(in srgb, transparent 90%, currentColor) !important;
 }
 #protections-popup-cookieBannerView-cancel {
 	/* i don;t even know anymore */
@@ -273,7 +276,7 @@ menuitem, menu {
 	align-content: center;
 }
 .protections-popup-cookieBannerView-footer {
-	position: /* this is */absolute;/*ly insane but it works */
+	position: /* this is */absolute/*ly insane but it works */;
 	width: 100%;
 	bottom: 0;
 }
@@ -444,4 +447,52 @@ tooltip {
 	background: var(--arrowpanel-background) !important;
 	border-radius: var(--tooltip-border-radius) !important;
 	border-color: var(--arrowpanel-border-color) !important;
+}
+/* passwords */
+#PopupAutoComplete > richlistbox > richlistitem[originaltype="loginsFooter"] {
+	background: color-mix(in srgb, currentColor 9%, transparent) !important;
+	border-top: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
+	
+	&:hover {
+		background: color-mix(in srgb, currentColor 25%, transparent) !important;
+	}
+	&:active {
+		background: color-mix(in srgb, currentColor 30%, transparent) !important;
+	}
+}
+.ac-login-item {
+	padding-inline-start: 8px !important;
+}
+
+.autocomplete-richlistitem:not(:first-child) .two-line-wrapper {
+	box-shadow: 0px 1px color-mix(in srgb, currentColor 10%, transparent) inset !important; 
+}
+#PopupAutoComplete > richlistbox > richlistitem[originaltype="loginWithOrigin"] + richlistitem[originaltype="generatedPassword"] {
+	border-top: 0px !important;
+}
+
+.autocomplete-richlistitem[selected] {
+	background: var(--photon-accent-dark) !important;
+	color: #eee !important;
+}
+.ac-site-icon[src^="chrome://"] {
+	margin-top: 8px;
+	translate: 4px;
+	margin-inline: 8px !important;
+}
+.two-line-wrapper {
+	width: 100%
+}
+.ac-site-icon[src="chrome://browser/skin/login.svg"] {
+	display: none !important;
+}
+.two-line-wrapper:has(.ac-site-icon[src="chrome://browser/skin/login.svg"])::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	background: no-repeat url(./icons/login.svg);
+	margin-inline-start: 12px;
+	margin-inline-end: 4px;
+	-moz-context-properties: fill;
+	fill: currentColor;
 }

@@ -6,7 +6,7 @@
 	--urlbar-border-color: var(--arrowpanel-border-color);
 }
 @media (-moz-platform: windows) {
-  .menupopup-arrowscrollbox {
+  .menupopup-arrowscrollbox, richlistbox {
     background-color: var(--arrowpanel-background) !important;
   	box-shadow: 2px 2px 2px #0006 !important;
   }
@@ -50,6 +50,8 @@ input.findbar-textbox:focus {
   --toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
   --button-primary-bgcolor: var(--photon-accent-dark) !important;
   --button-primary-color: #fff !important;
+  --button-primary-active-bgcolor: var(--photon-accent-light) !important;
+  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -101,6 +103,8 @@ input.findbar-textbox:focus {
   	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
   	--button-primary-bgcolor: var(--photon-accent-dark) !important;
   	--button-primary-color: #fff !important;
+  	--button-primary-active-bgcolor: var(--photon-accent-light) !important;
+	  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -180,6 +184,8 @@ input.findbar-textbox:focus {
   --button-primary-bgcolor: var(--photon-accent-dark) !important;
   --button-primary-color: #fff !important;
   --lwt-toolbar-field-highlight: var(--photon-accent-dark);
+  --button-primary-active-bgcolor: var(--photon-accent-light) !important;
+  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -217,6 +223,8 @@ input.findbar-textbox:focus {
   	--button-primary-bgcolor: var(--photon-accent-dark) !important;
   	--button-primary-color: #fff !important;
   	--lwt-toolbar-field-highlight: var(--photon-accent-dark);
+  	--button-primary-active-bgcolor: var(--photon-accent-light) !important;
+  	--button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;

@@ -40,7 +40,7 @@
 	}
 	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
-	.web-appearance-choice {
+	.web-appearance-choice, .toolbar {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -74,6 +74,23 @@
 	}
 	.close-icon {
 		list-style-image: url(./resources/icons/close-tab.svg) !important;
+	}
+	.button-delete {
+		background-image: url(./resources/icons/delete.svg) !important;
+	}
+	.button-add {
+		background-image: url(./resources/icons/add.svg) !important;
+	}
+	input[type="checkbox"] {
+		width: 20px !important;
+		height: 20px !important;
+	}
+	input[type="checkbox"]:checked, .button-save {
+		background-image: url(./resources/icons/check.svg) !important;
+		fill: #eee !important;
+	}
+	#about-config-search {
+		background-image: url(./resources/icons/find-in-page.svg) !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
@@ -361,6 +378,7 @@
 	#contentBlockingFingerprintersCheckbox[checked] > .checkbox-label-box {
         list-style-image: url("./resources/icons/fingerprinters-disabled.svg") !important;
 	}
+	
 	.info-icon {
         list-style-image: url("./resources/icons/info.svg") !important;
 	}
@@ -376,6 +394,29 @@
 	.face-smile::before, .face-sad::before {
 		font-weight: 100 !important;
 	}
+	
+	.geo-icon {
+		list-style-image: url(./resources/icons/geo.svg) !important;
+	}
+	.xr-icon {
+		list-style-image: url(./resources/icons/vr.svg) !important;
+	}
+	.camera-icon {
+		list-style-image: url(./resources/icons/camera.svg) !important;
+	}
+	.microphone-icon {
+		list-style-image: url(./resources/icons/microphone.svg) !important;
+	}
+	.speaker-icon {
+		list-style-image: url(./resources/icons/tab-audio-playing.svg) !important;
+	}
+	.desktop-notification-icon {
+		list-style-image: url(./resources/icons/desktop-notification.svg) !important;
+	}
+	.autoplay-icon {
+		list-style-image: url(./resources/icons/autoplay-media.svg) !important;
+	}
+	
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;
@@ -481,6 +522,23 @@
 	}
 }
 
+@-moz-document url-prefix("about:reader") {
+	:root {
+		--dark-theme-background: #2a2a2e !important;
+	}
+	* {
+		--toolbar-button-foreground-active: light-dark(#0a84ff, #74c0ff) !important;
+		--primary-color: light-dark(#0a84ff, #74c0ff) !important;
+		--selected-background: color-mix(in srgb, light-dark(#0a84ff, #74c0ff) 30%, transparent) !important;
+	}
+	.dark * {
+		--popup-background: #4a4a4f !important;
+		--popup-button-background-hover: #5c5c60 !important;
+		--popup-button-background-active: #646468 !important;
+		--toolbar-button-background-hover: #626263 !important;
+		--toolbar-button-background-active: #7f7f80 !important;
+	}
+}
 /* Error page illustrations */
 /* From Lepton https://github.com/black7375/Firefox-UI-Fix/blob/master/src/contents/_error_page.scss */
 @-moz-document url-prefix("about:neterror"), url-prefix("about:restartrequired"), url("chrome://browser/content/aboutRestartRequired.xhtml"), url("about:sessionrestore"), url("chrome://browser/content/aboutSessionRestore.xhtml")
