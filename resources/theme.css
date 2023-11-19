@@ -286,8 +286,14 @@ input.findbar-textbox:focus {
 /* Accent color for the titlebar */
 @media (-moz-platform: windows) and (-moz-windows-accent-color-in-titlebar) {
   :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] 
-  #navigator-toolbox:not(:-moz-window-inactive) {
-  	background: AccentColor !important
+  :is(#navigator-toolbox #TabsToolbar, #titlebar):not(:-moz-window-inactive) {
+  	background: ActiveBorder !important;
+    color: AccentColorText !important;
+    --toolbarbutton-icon-fill: AccentColorText !important;
+  }
+  :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
+  :is(#TabsToolbar #firefox-view-button[open]) {
+    --toolbarbutton-icon-fill: var(--button-primary-color) !important;
   }
   :root[lwt-default-theme-in-dark-mode] * {
   	--lwt-accent-color: AccentColor !important;
@@ -299,16 +305,6 @@ input.findbar-textbox:focus {
     border-top: 0px !important;
   }
   /**/
-  :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  #titlebar:not(:-moz-window-inactive) {
-  	color: rgb(251, 251, 254) !important;
-  }
-  :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  #new-tab-button:not(:-moz-window-inactive), 
-  :is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  #tabs-newtab-button:not(:-moz-window-inactive) {
-  	fill: rgb(251, 251, 254) !important;
-  }
   
   @supports -moz-bool-pref("uc.titlebar-accent.darktext") {
   	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
@@ -316,10 +312,8 @@ input.findbar-textbox:focus {
   		color: black !important;
   	}
   	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  	#new-tab-button:not(:-moz-window-inactive), 
-  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  	#tabs-newtab-button:not(:-moz-window-inactive) {
-  		fill: black !important;
+  	:is(#TabsToolbar-customization-target):not(:-moz-window-inactive) {
+  	  --toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
   	}
   }
   
@@ -329,10 +323,8 @@ input.findbar-textbox:focus {
   		color: rgb(251, 251, 254) !important;
   	}
   	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  	#new-tab-button:not(:-moz-window-inactive), 
-  	:is(:root[lwt-default-theme-in-dark-mode], :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) 
-  	#tabs-newtab-button:not(:-moz-window-inactive) {
-  		fill: rgb(251, 251, 254) !important;
+  	:is(#TabsToolbar-customization-target):not(:-moz-window-inactive) {
+  	  --toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
   	}
   }
   
