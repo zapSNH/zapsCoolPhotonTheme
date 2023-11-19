@@ -690,7 +690,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	#urlbar .urlbarView-row:is(:first-child, :last-child) {
 		margin-block: 0px !important;
 	}
-	[label="Firefox Suggest"]::before {
+	.urlbarView-row[label]::before {
 		display: none !important;
 	}
 	#urlbar .urlbarView:not([dynamicType="quickactions"]) .urlbarView-type-icon {
