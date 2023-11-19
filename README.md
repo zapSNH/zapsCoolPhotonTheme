@@ -117,6 +117,16 @@ In `about:config`, you can turn on a new tab background with:
 #### Notes:
 - Replace `background.png` in `resources` with your own PNG image.
 
+## Full Width 
+In `about:config`, you can turn on full width tabs with:
+
+| Config Name | Result | Image |
+|-|:-:|:-:|
+| `uc.full-width-tabs` | Full width tabs<br>Can be coupled with uc.bottom-tabs if you want the 🤮Safari🤮 look.| ![image](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/6c965793-afb3-488e-b3b3-c6ef46905a71) |
+
+#### Notes:
+- Replace `background.png` in `resources` with your own PNG image.
+
 ## Tab separators (Firefox ESR)
 Sometimes the tab separators go missing. If you want them to show up always then find and remove these lines from `tabs-and-urlbar.css`
 
