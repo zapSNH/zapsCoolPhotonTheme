@@ -249,7 +249,7 @@
 	> .toolbarbutton-animatable-box 
 	> .toolbarbutton-animatable-image {
 	animation-timing-function: steps(25) !important;
-	animation-duration: .3s !important;
+	animation-duration: var(--photon-speed-3) !important;
 }
 :root:not([customizing]) #stop-reload-button:not([animate]) 
 	> :is(#stop-button, #reload-button)
