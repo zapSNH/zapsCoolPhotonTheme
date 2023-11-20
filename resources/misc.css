@@ -13,8 +13,35 @@
 	}
 }
 
+@-moz-document url-prefix("chrome://global/content/commonDialog.xhtml") {
+	:root {
+		--in-content-primary-button-background: var(--photon-accent) !important;
+		--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+		--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+	}
+	:root[sizemode] {
+		window {
+			background: var(--toolbar-bgcolor) !important;
+		}
+		input {
+			-moz-appearance: none !important;
+			border-radius: var(--photon-border-radius) !important;
+			padding: 4px !important;
+			padding-inline: 6px !important;
+			border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+			background: var(--input-bgcolor) !important;
+			@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+			&:focus {outline: var(--photon-accent-dark) solid 2px !important;}
+		}
+	}
+	button {
+		-moz-appearance: none !important;
+		border-radius: var(--photon-border-radius) !important;
+		border-color: color-mix(in srgb, transparent 100%, currentColor) !important;
+	}
+}
 /* Global */
-@-moz-document regexp("chrome:\/\/(?!devtools)(?!browser\/content\/browser\.xhtml)(?!global\/content\/commonDialog\.xhtml).*") {
+@-moz-document regexp("chrome:\/\/(?!devtools)(?!browser\/content\/browser\.xhtml)(?!global\/content\/commonDialog\.xhtml)(?!global\/content\/print\.html).*") {
 	/* ephichiencee :D */
 	@media (prefers-color-scheme: light) {
 		:root {
@@ -120,11 +147,18 @@
 	
 	
 	/* Bigger Buttons */
-	:root .download-state .downloadButton:not(:hover, :active) {
+	/* all my homies hate spehceiphyesciyeteiy */
+	/* cascading style sheets more like cascading style sheets */
+	/* how do i select a comment */
+	:root .download-state .downloadButton:is(:hover, :not(:hover)) {
 		background: none !important;
 	}
 	.downloadButton {
 		height: 5.5em !important;
+	}
+	.downloadButton hbox {
+		max-width: 32px;
+		margin-inline-start: 4px;
 	}
 	/* Seperator */
 	.download-state .downloadButton::before {
@@ -155,6 +189,11 @@
 		background: light-dark(var(--photon-accent-light), var(--photon-accent-dark)) !important;
 	}
 	
+	#downloadsListBox {
+		overflow-x: hidden;
+		border: 0px !important;
+	}
+	
 	@media (prefers-color-scheme: dark) {
 		* {
 			--organizer-pane-background: #323234 !important;
@@ -175,7 +214,6 @@
 		}
 		#downloadsListBox {
 			background-color: var(--organizer-content-background) !important;
-			border: 0px !important;
 		}
 		.menupopup-arrowscrollbox {
 			background-color: #4a4a4f !important;
@@ -260,6 +298,81 @@
 	}
 }
 
+/* Print Dialog */
+@-moz-document url-prefix("chrome://global/content/print.html") {
+	:root {
+		--in-content-primary-button-background: var(--photon-accent) !important;
+		--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+		--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+		--link-color: var(--photon-accent) !important;
+	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			--toolbar-bgcolor: #f9f9fa !important;
+			--button-hover-bgcolor: #dddedf !important;
+			--button-active-bgcolor: #d2d3d4 !important;
+			--in-content-page-background: var(--toolbar-bgcolor) !important;
+			--panel-separator-color: hsla(210,4%,10%,.14) !important;
+			--button-hover-bgcolor: #bdbec0 !important;
+			--button-active-bgcolor: #b3b4b6 !important;
+			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--toolbar-bgcolor: #323234 !important;
+			--toolbar-field-background-color: #474749 !important;
+			--toolbar-field-border-color: #5a5a5c !important;
+			--button-hover-bgcolor: #aaa6 !important;
+			--toolbarbutton-icon-fill: #bebebe !important;
+			--toolbar-field-focus-background-color: #474749 !important;
+			--button-bgcolor: rgb(55, 55, 55) !important;
+			--toolbarbutton-active-background: #7f7f80 !important;
+			--button-active-bgcolor: rgb(92, 92, 94) !important;
+			--input-bgcolor: rgb(60, 60, 64) !important;
+			--input-border-color: rgb(90, 90, 94) !important;
+			--in-content-page-background: var(--toolbar-bgcolor) !important;
+			--panel-separator-color: rgba(249, 249, 250, .1) !important;
+		}
+	}
+	body {
+		background: var(--toolbar-bgcolor) !important;
+	}
+	#print-button, #cancel-button {
+		width: 100%;
+	}
+	input[type="checkbox"] {
+		width: 20px !important;
+		height: 20px !important;
+	}
+	input[type="checkbox"]:checked {
+		background: var(--photon-accent-dark) url(./icons/check.svg) no-repeat !important;
+		background-size: 16px !important;
+		background-position: 1px 1px !important;
+		-moz-context-properties: fill !important;
+		fill: white !important;
+		
+		&:hover {background-color: color-mix(in srgb, var(--photon-accent-dark) 80%, white) !important;}
+		&:active {background-color: color-mix(in srgb, var(--photon-accent-dark) 60%, white) !important;}
+	}
+	#printer-picker {
+		background-image: url("./icons/arrow-dropdown-16.svg"),
+			url("./icons/print1.svg") !important;
+	}
+	.toggle-group #portrait + .toggle-group-label::before {
+		content: url("./icons/document.svg") !important;
+	}
+	.toggle-group #landscape + .toggle-group-label::before {
+		content: url("./icons/document.svg") !important;
+		rotate: 90deg;
+		scale: -1 1
+	}
+	select:not([size], [multiple]) {
+		background-image: url("./icons/arrow-dropdown-16.svg") !important;
+	}
+	
+}
 /* Autoscroller */
 .autoscroller {
 	padding: 15px !important;

@@ -147,6 +147,13 @@
 .popup-icon.blocked-permission-icon {
 	list-style-image: url(./icons/popup.svg) !important;
 }
+.install-icon {
+	list-style-image: url(./icons/extensions.svg) !important;
+	border-radius: 0 !important;
+}
+.question-icon {
+	list-style-image: url(./icons/help.svg) !important;
+}
 #display-share-icon {
 	background-image: url(./icons/screen.svg) !important;
 }
