@@ -40,7 +40,7 @@
 	}
 	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
-	.web-appearance-choice, .toolbar, input {
+	.web-appearance-choice, .toolbar, input:not([type="radio"]) {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
