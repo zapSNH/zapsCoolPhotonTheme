@@ -1,6 +1,6 @@
 /* zap's photon theme */
 /* will be much less documented */
-@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank).*")  {
+@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
@@ -40,7 +40,7 @@
 	}
 	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
-	.web-appearance-choice, .toolbar {
+	.web-appearance-choice, .toolbar, input {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -519,6 +519,36 @@
 		slot {
 			font-family: "Segoe UI", sans-serif !important;
 		}
+	}
+}
+
+@-moz-document url-prefix("about:logins") {
+	img[src="chrome://global/skin/icons/delete.svg"] {
+		content: url(./resources/icons/delete.svg);
+	}
+	img[src="chrome://global/skin/icons/plus.svg"] {
+		content: url(./resources/icons/add.svg);
+	}
+	.reveal-password-checkbox {
+		background: url(./resources/icons/delete.svg) 1px 1px no-repeat !important;
+	}
+	.menuitem-import-browser {
+		background-image: url(./resources/icons/import.svg) !important;
+	}
+	.menuitem-import-file {
+		background-image: url("./resources/icons/save.svg") !important;
+	}
+	.menuitem-export {
+		background-image: url("./resources/icons/sign-out.svg") !important;
+	}
+	.menuitem-remove-all-logins {
+		background-image: url("./resources/icons/delete.svg") !important;
+	}
+	.menuitem-preferences {
+		background-image: url("./resources/icons/settings.svg") !important;
+	}
+	.menuitem-help {
+		background-image: url("./resources/icons/help.svg") !important;
 	}
 }
 
