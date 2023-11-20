@@ -79,6 +79,9 @@ toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info
 menuitem, menu {
 	padding: 2px 10px !important;
 }
+#main-menubar menu {
+	padding: 0 !important;
+}
 #sidebarMenu-popup :is(menuitem, menu) {
 	padding: 5px 10px !important;
 }

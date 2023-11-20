@@ -52,6 +52,10 @@ input.findbar-textbox:focus {
   --button-primary-color: #fff !important;
   --button-primary-active-bgcolor: var(--photon-accent-light) !important;
   --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+    
+	--in-content-primary-button-background: var(--photon-accent) !important;
+	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 }
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) 
 :is(#urlbar-background, #searchbar) {
@@ -105,6 +109,10 @@ input.findbar-textbox:focus {
   	--button-primary-color: #fff !important;
   	--button-primary-active-bgcolor: var(--photon-accent-light) !important;
 	  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+    
+		--in-content-primary-button-background: var(--photon-accent) !important;
+		--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+		--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
   }
   :is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
   :is(#urlbar-background, #searchbar) {
@@ -186,6 +194,10 @@ input.findbar-textbox:focus {
   --lwt-toolbar-field-highlight: var(--photon-accent-dark);
   --button-primary-active-bgcolor: var(--photon-accent-light) !important;
   --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+    
+	--in-content-primary-button-background: var(--photon-accent) !important;
+	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {
@@ -225,6 +237,10 @@ input.findbar-textbox:focus {
   	--lwt-toolbar-field-highlight: var(--photon-accent-dark);
   	--button-primary-active-bgcolor: var(--photon-accent-light) !important;
   	--button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+    
+		--in-content-primary-button-background: var(--photon-accent) !important;
+		--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+		--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
   }
   :root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] #urlbar {
   	border-color: var(--toolbar-field-border-color) !important;

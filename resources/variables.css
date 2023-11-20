@@ -68,7 +68,7 @@ button {
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
 
-#urlbar-background, #searchbar, input,
+#urlbar-background, #searchbar, input:not([type="radio"]),
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
 #identity-icon-box, #tabs-newtab-button image,
 menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
@@ -80,9 +80,17 @@ findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
 #firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span,
 :root[uidensity="compact"] #back-button .toolbarbutton-icon, #translations-panel-lang-selection menulist,
-tree {
+tree, select {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
+}
+.toggle-group-label:first-of-type {
+	border-end-start-radius: var(--photon-border-radius) !important;
+	border-start-start-radius: var(--photon-border-radius) !important;
+}
+.toggle-group-label:last-of-type {
+	border-end-end-radius: var(--photon-border-radius) !important;
+	border-start-end-radius: var(--photon-border-radius) !important;
 }
 #urlbar .urlbarView-row {
 	border-radius: var(--photon-border-radius-1) !important;
@@ -90,7 +98,7 @@ tree {
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
 .urlbar-page-action, #tracking-protection-icon-container,
 #urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *),
-#TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item, #urlbar-go-button {
+#TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item, #urlbar-go-button, #appMenu-popup .subviewbutton .toolbarbutton-icon {
 	border-radius: 0 !important;
 }
 :root menupopup, :root panel {
