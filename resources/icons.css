@@ -178,6 +178,14 @@
 #PopupAutoComplete > richlistbox > richlistitem > .two-line-wrapper > .ac-secondary-action {
 	background-image: url(./icons/settings.svg) !important;
 }
+.autocomplete-richlistitem[originaltype=insecureWarning] .ac-site-icon {
+	list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
+	-moz-context-properties: fill, stroke;
+	fill: currentColor !important;
+	stroke: red !important;
+	margin-inline-start: 12px !important;
+	margin-inline-end: 8px !important;
+}
 /* Context menu ">" icon */
 #protections-popup-mainView .subviewbutton-nav:not(.notFound)::after,
 #identity-popup-mainView .subviewbutton-nav::after,
@@ -725,6 +733,9 @@
 #urlbar-engine-one-off-item-actions {
 	list-style-image: url(./icons/quick-actions.svg) !important;
 }
+#urlbar-engine-one-off-item-bookmarks {
+	list-style-image: url(./icons/bookmark.svg) !important;
+}
 #urlbar-search-mode-indicator-close {
 	background-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: stroke !important;
@@ -751,6 +762,9 @@
 .urlbarView-row[type="switchtab"] .urlbarView-type-icon {
 	background: url(./icons/tab-12.svg) !important;
 	fill: var(--photon-accent);
+}
+.urlbarView-row[type="bookmark"] .urlbarView-type-icon {
+	background: url(./icons/bookmark-12.svg) !important;
 }
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
@@ -838,6 +852,10 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/library.svg) !important;
 }
+:root :is(#appMenu-library-recentlyClosedTabs, #appMenu-library-recentlyClosedWindows) .restoreallitem .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/restore-session.svg) !important;
+}
 /* bookmarks */
 :root #PanelUI-bookmarks #panelMenuBookmarkThisPage .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -859,6 +877,9 @@
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
 	margin-top: -3px !important;
 }
+#fxa-manage-account-button {
+	margin-bottom: 8px !important;
+}
 :root #PanelUI-fxa #fxa-manage-account-button::before {	
 	content: "";
 	display: -moz-inline-box;
@@ -870,6 +891,15 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	margin-inline-start: 2px !important;
 	outline: solid #ffffff33 1px;
+}
+:root #PanelUI-fxa #fxa-manage-account-button::after {	
+	content: "";
+	min-width: 200%;
+	height: 1px;
+	background: var(--panel-separator-color);
+	position: relative;
+	left: -64%;
+	top: 20px
 }
 :root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button {
 	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
@@ -913,6 +943,25 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/sign-out.svg) !important;
 	width: 16px !important;
+}
+:root #PanelUI-sendTabToDevice .sendToDevice-device {
+	padding-top: 4px !important;
+}
+:root #PanelUI-sendTabToDevice toolbarseparator ~ .sendToDevice-device .toolbarbutton-text {
+	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1 + var(--appmenu-icon-inline-end)) !important;
+}
+:root #PanelUI-sendTabToDevice toolbarseparator ~ .sendToDevice-device .toolbarbutton-icon {
+	list-style-image: url(./icons/add-device.svg) !important;
+	width: 16px !important;
+}
+:root #PanelUI-sendTabToDevice toolbarseparator + .sendToDevice-device .toolbarbutton-icon {
+	list-style-image: url(./icons/send-to-device.svg) !important;
+}
+/* more tools */
+:root #appmenu-developer-tools-view > .subviewbutton[checked] .toolbarbutton-icon {
+	list-style-image: url(./icons/check.svg) !important;
+	translate: var(--appmenu-noicon-inline-end) !important;
+	margin-inline-start: calc(var(--appmenu-noicon-inline-end) * -1) !important;
 }
 /* */
 #sidebarMenu-popup menuitem .menu-text {

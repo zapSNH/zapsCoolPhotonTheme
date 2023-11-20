@@ -143,7 +143,9 @@ menuitem, menu {
 #downloadsFooterButtons > toolbarseparator {
 	margin: 0 !important;
 }
-
+#emptyDownloads {
+	padding-inline: 12px !important;
+}
 #downloadsHistory {
 	margin: -1px !important;
 	padding: 14px !important;
@@ -405,13 +407,13 @@ menuitem, menu {
 	margin-top: 4px !important;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
-#unified-extensions-area > toolbaritem, unified-extensions-item {
+:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem, unified-extensions-item {
 	margin: 0 !important;
 }
-:is(#unified-extensions-area > toolbaritem, unified-extensions-item) > :last-child {
-  padding: 0 !important;
+:is(:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem, unified-extensions-item) > :last-child {
+	padding: 0 !important;
 }
-#unified-extensions-area > toolbaritem .subviewbutton-iconic image {
+:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem .subviewbutton-iconic image {
 	border-radius: 0 !important;
 }
 .panel-subview-body {
@@ -495,4 +497,7 @@ tooltip {
 	margin-inline-end: 4px;
 	-moz-context-properties: fill;
 	fill: currentColor;
+}
+.autocomplete-richlistitem[originaltype="insecureWarning"] {
+	background: transparent !important
 }

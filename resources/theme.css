@@ -185,7 +185,7 @@ input.findbar-textbox:focus {
   --button-primary-color: #fff !important;
   --lwt-toolbar-field-highlight: var(--photon-accent-dark);
   --button-primary-active-bgcolor: var(--photon-accent-light) !important;
-  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+  --button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;s
 }
 @media (prefers-color-scheme: dark) {
 	.container.infobar {

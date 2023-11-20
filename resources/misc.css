@@ -3,6 +3,97 @@
 	--misc-css: 1px;
 }
 
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+	tree {
+	  background: var(--input-bgcolor) !important;
+	  border: 1px solid var(--input-border-color) !important;
+	}
+	treechildren::-moz-tree-row(selected) {
+	  background: var(--photon-accent) !important;
+	}
+}
+
+/* Global */
+@-moz-document regexp("chrome:\/\/(?!devtools)(?!browser\/content\/browser\.xhtml)(?!global\/content\/commonDialog\.xhtml).*") {
+	/* ephichiencee :D */
+	@media (prefers-color-scheme: light) {
+		:root {
+			--toolbar-bgcolor: #f9f9fa !important;
+			--button-hover-bgcolor: #dddedf !important;
+			--button-active-bgcolor: #d2d3d4 !important;
+			--in-content-page-background: var(--toolbar-bgcolor) !important;
+			--panel-separator-color: hsla(210,4%,10%,.14) !important;
+			--button-hover-bgcolor: #bdbec0 !important;
+			--button-active-bgcolor: #b3b4b6 !important;
+			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--toolbar-bgcolor: #323234 !important;
+			--toolbar-field-background-color: #474749 !important;
+			--toolbar-field-border-color: #5a5a5c !important;
+			--button-hover-bgcolor: #aaa6 !important;
+			--toolbarbutton-icon-fill: #bebebe !important;
+			--toolbar-field-focus-background-color: #474749 !important;
+			--button-bgcolor: rgb(55, 55, 55) !important;
+			--toolbarbutton-active-background: #7f7f80 !important;
+			--button-active-bgcolor: rgb(92, 92, 94) !important;
+			--input-bgcolor: rgb(60, 60, 64) !important;
+			--input-border-color: rgb(90, 90, 94) !important;
+			--in-content-page-background: var(--toolbar-bgcolor) !important;
+			--panel-separator-color: rgba(249, 249, 250, .1) !important;
+		}
+	}
+	button {
+		-moz-appearance: none !important;
+		border-radius: var(--photon-border-radius) !important;
+		padding: 4px !important;
+		padding-inline: 6px !important;
+		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
+		background: var(--button-bgcolor) !important;
+		
+		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+		
+		&:hover:not([disabled]) {
+			background: var(--button-hover-bgcolor) !important;
+		}
+		&:active:not([disabled]) {
+			background: var(--button-active-bgcolor) !important;
+		}
+	}
+	window {
+		background: var(--toolbar-bgcolor) !important;
+	}
+	.wizard-header {
+		background: var(--toolbar-field-background-color) !important;
+		border-bottom: 1px solid var(--toolbar-field-border-color) !important;
+	}
+	:not(#places) input {
+		-moz-appearance: none !important;
+		border-radius: var(--photon-border-radius) !important;
+		padding: 4px !important;
+		padding-inline: 6px !important;
+		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		background: var(--input-bgcolor) !important;
+		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+		
+	}
+	:not(#places) input:focus {
+		outline: var(--photon-accent-dark) solid 2px !important;
+	}
+	#sidebar-search-container search-textbox {
+		-moz-appearance: none !important;
+		border-radius: var(--photon-border-radius) !important;
+		padding: 4px !important;
+		padding-inline: 6px !important;
+		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		background: var(--button-bgcolor) !important;
+		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+	}
+}
+
 /* Libraries */
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
 	#forward-button, #searchFilter, #placesMenu > menu {
@@ -28,32 +119,40 @@
 	}
 	
 	
-  /* Bigger Buttons */
-  :root .download-state .downloadButton:not(:hover, :active) {
-  	background: none !important;
-  }
-  .downloadButton {
-  	height: 5.5em !important;
-  }
-  /* Seperator */
-  .download-state .downloadButton::before {
-  	width: 1px !important;
-  	height: 46px !important;
-  	content: "";
-  	display: block;
-  	background: color-mix(in srgb, currentColor 10%, transparent);
-  	margin-top: calc(((5.5em - 46px)/2) - 10px);
-  	position: relative;
-  	translate: -8px;
-  }
-  .download-state .downloadButton:hover::before {
-  	background: color-mix(in srgb, currentColor 10%, transparent);
-  }
+	/* Bigger Buttons */
+	:root .download-state .downloadButton:not(:hover, :active) {
+		background: none !important;
+	}
+	.downloadButton {
+		height: 5.5em !important;
+	}
+	/* Seperator */
+	.download-state .downloadButton::before {
+		width: 1px !important;
+		height: 46px !important;
+		content: "";
+		display: block;
+		background: color-mix(in srgb, currentColor 10%, transparent);
+		margin-top: calc(((5.5em - 46px)/2) - 10px);
+		position: relative;
+		translate: -8px;
+	}
+	.download-state .downloadButton:hover::before {
+		background: color-mix(in srgb, currentColor 10%, transparent);
+	}
+	
+	#placesToolbox menu {
+		padding-block: 6px !important;
+	}
 	
 	richlistitem[selected="true"] {
 		background: var(--photon-accent) !important;
 		color: #111 !important;
 		border-radius: 0 !important;
+	}
+	
+	treechildren::-moz-tree-row(selected) {
+		background: light-dark(var(--photon-accent-light), var(--photon-accent-dark)) !important;
 	}
 	
 	@media (prefers-color-scheme: dark) {
@@ -74,6 +173,14 @@
 		window {
 			background: #333 !important;
 		}
+		#downloadsListBox {
+			background-color: var(--organizer-content-background) !important;
+			border: 0px !important;
+		}
+		.menupopup-arrowscrollbox {
+			background-color: #4a4a4f !important;
+			border-color: #2a2a2e !important;
+		}
 	}
 }
 
@@ -83,6 +190,8 @@
 	@media (prefers-color-scheme: light) {
 	  :root {
 	  	--toolbar-bgcolor: #f9f9fa !important;
+		--input-bgcolor: #ccc !important;
+		--input-border-color: #aaa 
 	  }
 	}
 	@media (prefers-color-scheme: dark) {
@@ -98,6 +207,56 @@
 	#topBar {
 		background: var(--toolbar-field-background-color) !important;
 		border-color: var(--toolbar-field-border-color) !important;
+	}
+    tree, #permList {
+		-moz-appearance: none !important;
+		border: 1px solid var(--input-border-color) !important;
+		border-radius: var(--photon-border-radius) !important;
+		background: var(--input-bgcolor) !important;
+	}
+	treechildren::-moz-tree-row(odd), .permission {
+		background: color-mix(in srgb, var(--input-bgcolor) 20%, var(--toolbar-bgcolor)) !important;
+	}
+	treechildren::-moz-tree-row(selected) {
+		background: var(--photon-accent) !important;
+	}
+    treecol {
+		background: var(--toolbar-field-background-color) !important;
+	}
+	#viewGroup radio {
+		padding: 4px !important;
+		margin-block: 4px !important;
+		margin-inline: 2px !important;
+		border-radius: var(--photon-border-radius) !important;
+	}
+	#viewGroup radio[selected] {
+		background: var(--photon-accent-light) !important;
+	}
+	#viewGroup radio:hover:not([selected]) {
+		background: color-mix(in srgb, var(--photon-accent-dark) 20%, transparent) !important;
+		color: unset !important;
+	}
+	
+    #viewGroup .radio-icon {
+		background-size: 32px;
+		-moz-context-properties: fill, stroke;
+		fill: currentColor;
+		stroke: currentColor !important;
+	}
+    #generalTab .radio-icon {
+     	background-image: url(./icons/document.svg) !important;
+    }
+    #mediaTab .radio-icon {
+    	background-image: url(./icons/tracker-image.svg) !important;
+    }
+    #permTab .radio-icon {
+    	background-image: url(./icons/permissions.svg) !important;
+    }
+    #securityTab .radio-icon {
+    	background-image: url(./icons/security-state-secure.svg) !important;
+    }
+	input {
+		max-width: calc(100% - 23px) !important;
 	}
 }
 
