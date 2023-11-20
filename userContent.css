@@ -200,7 +200,7 @@
 		background-size: 18px !important;
 		background-color: var(--newtab-background-color-secondary) !important;
 		border: 1px solid var(--newtab-border-color) !important;
-		transition: 0.1s !important;
+		transition: var(--photon-speed-1) !important;
 	}
 	.top-site-outer .context-menu-button {
 		margin-top: 2px;
