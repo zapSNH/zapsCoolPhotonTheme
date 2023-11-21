@@ -689,11 +689,13 @@
 }
 
 .tab-icon-image[src="chrome://global/skin/icons/settings.svg"],
-.all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/settings.svg"]) > .all-tabs-button::before {
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/settings.svg"]) > .all-tabs-button::before,
+.urlbarView-favicon[src="page-icon:about:preferences"] {
 	content: url(./icons/settings.svg) !important;
 }
 .tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"],
-.all-tabs-item:has(.toolbarbutton-icon[src="chrome://mozapps/skin/extensions/extension.svg"]) > .all-tabs-button::before {
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://mozapps/skin/extensions/extension.svg"]) > .all-tabs-button::before,
+.urlbarView-favicon[src="page-icon:about:addons"] {
 	content: url(./icons/extensions.svg) !important;
 }
 .tab-icon-image[src="chrome://browser/skin/customize.svg"],
