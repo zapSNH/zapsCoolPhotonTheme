@@ -9,8 +9,8 @@ ____
 |-|:-:|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? | No Updates |
 | **115esr** | ✔️ | Semi-broken | ? | No Updates |
-| **119** | ✔️ | ✔️ | ? | |
-| **121** | ✔️ | ✔️ | ? | |
+| **120** | ✔️ | ✔️ | ? | |
+| **122** | ✔️ | ✔️ | ? | |
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -25,11 +25,17 @@ Make sure to delete it after you start Firefox so that it doesn't override any c
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 ____
 Download the release for your version:
-* [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
-* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
-* [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
 * [Firefox 120](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
+
+<details>
+	<summary>Older Versions</summary>
+	
+* [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
+* [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
+</details>
 
 _Note: Firefox versions other than the latest versions (nightly, beta/dev, and stable, but NOT esr) will not get feature updates._
 
