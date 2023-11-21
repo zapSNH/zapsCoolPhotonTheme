@@ -447,7 +447,7 @@
 	padding: 2px !important;
 }
 /* Update Available button */
-#appMenu-proton-update-banner .toolbarbutton-icon {
+:root #appMenu-proton-update-banner .toolbarbutton-icon {
 	background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
 	border-radius: 50% !important;
 }
