@@ -76,18 +76,16 @@
 	button {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
-		padding: 4px !important;
-		padding-inline: 6px !important;
 		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
-		background: var(--button-bgcolor) !important;
+		background-color: var(--button-bgcolor) !important;
 		
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
 		
 		&:hover:not([disabled]) {
-			background: var(--button-hover-bgcolor) !important;
+			background-color: var(--button-hover-bgcolor) !important;
 		}
 		&:active:not([disabled]) {
-			background: var(--button-active-bgcolor) !important;
+			background-color: var(--button-active-bgcolor) !important;
 		}
 	}
 	window {
@@ -100,12 +98,13 @@
 	:not(#places) input {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
+		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		background-color: var(--input-bgcolor) !important;
+		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+	}
+	:root:not(#places, #webrtcIndicator) :is(input, button) {
 		padding: 4px !important;
 		padding-inline: 6px !important;
-		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
-		background: var(--input-bgcolor) !important;
-		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
-		
 	}
 	:not(#places) input:focus {
 		outline: var(--photon-accent-dark) solid 2px !important;
@@ -372,6 +371,52 @@
 		background-image: url("./icons/arrow-dropdown-16.svg") !important;
 	}
 	
+}
+
+/* WebRTC Indicator */
+@-moz-document url(chrome://browser/content/webrtcIndicator.xhtml) {
+	:root {
+		min-height: 32px !important;
+		margin-top: -12px !important;
+	}
+	#minimize {
+		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+		padding: 9px !important;
+	}
+	#device-share .control-icon {
+		&:hover:not([disabled]) {
+			background-color: var(--button-hover-bgcolor) !important;
+		}
+		&:active:not([disabled]) {
+			background-color: var(--button-active-bgcolor) !important;
+		}
+	}
+	/* icons */
+	#display-share-icon {
+		background-image: url("./icons/screen.svg") !important;
+	}
+	#camera-mute-toggle {
+		background-image: url("./icons/camera.svg") !important;
+	}
+	#camera-mute-toggle:checked {
+		background-image: url("./icons/camera-blocked.svg") !important;
+	}
+	#microphone-mute-toggle {
+		background-image: url("./icons/microphone.svg") !important;
+	}
+	#microphone-mute-toggle:checked {
+		background-image: url("./icons/microphone-blocked.svg") !important;
+	}
+	#webRTC-sharingCamera-menu {
+		list-style-image: url("./icons/camera.svg") !important;
+	}
+	#webRTC-sharingMicrophone-menu {
+		list-style-image: url("./icons/microphone.svg") !important;
+	}
+	#webRTC-sharingScreen-menu {
+		list-style-image: url("./icons/screen.svg") !important;
+	}
 }
 /* Autoscroller */
 .autoscroller {

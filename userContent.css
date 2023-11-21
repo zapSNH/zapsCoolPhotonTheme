@@ -9,7 +9,7 @@ select {
 	border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
 }
 option:checked {
-	background: #0a84ff;
+	background-color: #0a84ff;
 	color: inherit;
 }
 button, input:is([type="button"], [type="submit"]) {
@@ -17,11 +17,11 @@ button, input:is([type="button"], [type="submit"]) {
 	border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
 	padding: 2px 4px;
 	border-radius: 2px;
-	background: light-dark(#f9f9fa, #2a2a2e);
-	&:hover {background: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
-	&:active {background: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
+	background-color: light-dark(#f9f9fa, #2a2a2e);
+	&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
+	&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
 }
-
+/* about and chrome stylynh */
 @-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
 		--photon-primary-border-radius: 4px;
@@ -340,6 +340,13 @@ button, input:is([type="button"], [type="submit"]) {
 	.addons-icon {
 		list-style-image: url("./resources/icons/extensions.svg") !important;
 	}
+	img[src="chrome://global/skin/icons/plugin.svg"] {
+		content: url(./resources/icons/plugin.svg) !important;
+	}
+	
+	.category[name="recent-updates"] {
+		background-image: url("./resources/icons/category-recent.svg") !important;
+	}
 	.help-icon {
 		content: url("./resources/icons/help1.svg") !important;
 	}
@@ -477,6 +484,7 @@ button, input:is([type="button"], [type="submit"]) {
 	}
 }
 
+/* firefox view */
 @-moz-document url-prefix("about:firefoxview") {
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -544,6 +552,7 @@ button, input:is([type="button"], [type="submit"]) {
 	}
 }
 
+/* lockwise */
 @-moz-document url-prefix("about:logins") {
 	img[src="chrome://global/skin/icons/delete.svg"] {
 		content: url(./resources/icons/delete.svg);
@@ -574,6 +583,7 @@ button, input:is([type="button"], [type="submit"]) {
 	}
 }
 
+/* reader mode */
 @-moz-document url-prefix("about:reader") {
 	:root {
 		--dark-theme-background: #2a2a2e !important;
@@ -589,6 +599,164 @@ button, input:is([type="button"], [type="submit"]) {
 		--popup-button-background-active: #646468 !important;
 		--toolbar-button-background-hover: #626263 !important;
 		--toolbar-button-background-active: #7f7f80 !important;
+	}
+}
+
+/* pdf */
+/* screw regex */
+@-moz-document regexp(".*\.pdf") {
+	:root {
+		--loading-icon: url(./resources/icons/pdfjs/loading.svg) !important;
+		--treeitem-expanded-icon: url(./resources/icons/pdfjs/treeitem-expanded.svg) !important;
+		--treeitem-collapsed-icon: url(./resources/icons/pdfjs/treeitem-collapsed.svg) !important;
+		--toolbarButton-editorFreeText-icon: url(./resources/icons/pdfjs/toolbarButton-editorFreeText-1.svg) !important;
+		--toolbarButton-editorInk-icon: url(./resources/icons/pdfjs/toolbarButton-editorInk-1.svg) !important;
+		--toolbarButton-editorStamp-icon: url(./resources/icons/pdfjs/toolbarButton-editorStamp-1.svg) !important;
+		--toolbarButton-menuArrow-icon: url(./resources/icons/pdfjs/toolbarButton-menuArrow.svg) !important;
+		--toolbarButton-sidebarToggle-icon: url(./resources/icons/pdfjs/toolbarButton-sidebarToggle.svg) !important;
+		--toolbarButton-secondaryToolbarToggle-icon: url(./resources/icons/pdfjs/toolbarButton-secondaryToolbarToggle.svg) !important;
+		--toolbarButton-pageUp-icon: url(./resources/icons/pdfjs/toolbarButton-pageUp.svg) !important;
+		--toolbarButton-pageDown-icon: url(./resources/icons/pdfjs/toolbarButton-pageDown.svg) !important;
+		--toolbarButton-zoomOut-icon: url(./resources/icons/pdfjs/toolbarButton-zoomOut.svg) !important;
+		--toolbarButton-zoomIn-icon: url(./resources/icons/pdfjs/toolbarButton-zoomIn.svg) !important;
+		--toolbarButton-presentationMode-icon: url(./resources/icons/pdfjs/toolbarButton-presentationMode.svg) !important;
+		--toolbarButton-print-icon: url(./resources/icons/pdfjs/toolbarButton-print.svg) !important;
+		--toolbarButton-download-icon: url(./resources/icons/pdfjs/toolbarButton-download.svg) !important;
+		--toolbarButton-bookmark-icon: url(./resources/icons/pdfjs/toolbarButton-bookmark.svg) !important;
+		--toolbarButton-viewThumbnail-icon: url(./resources/icons/pdfjs/toolbarButton-viewThumbnail.svg) !important;
+		--toolbarButton-viewOutline-icon: url(./resources/icons/pdfjs/toolbarButton-viewOutline.svg) !important;
+		--toolbarButton-viewAttachments-icon: url(./resources/icons/pdfjs/toolbarButton-viewAttachments.svg) !important;
+		--toolbarButton-viewLayers-icon: url(./resources/icons/pdfjs/toolbarButton-viewLayers.svg) !important;
+		--toolbarButton-currentOutlineItem-icon: url(./resources/icons/pdfjs/toolbarButton-currentOutlineItem.svg) !important;
+		--toolbarButton-search-icon: url(./resources/icons/pdfjs/toolbarButton-search.svg) !important;
+		--findbarButton-previous-icon: url(./resources/icons/pdfjs/findbarButton-previous.svg) !important;
+		--findbarButton-next-icon: url(./resources/icons/pdfjs/findbarButton-next.svg) !important;
+		--secondaryToolbarButton-firstPage-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-firstPage.svg) !important;
+		--secondaryToolbarButton-lastPage-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-lastPage.svg) !important;
+		--secondaryToolbarButton-rotateCcw-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-rotateCcw.svg) !important;
+		--secondaryToolbarButton-rotateCw-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-rotateCw.svg) !important;
+		--secondaryToolbarButton-selectTool-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-selectTool.svg) !important;
+		--secondaryToolbarButton-handTool-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-handTool.svg) !important;
+		--secondaryToolbarButton-scrollPage-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-scrollPage-1.svg) !important;
+		--secondaryToolbarButton-scrollVertical-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-scrollVertical.svg) !important;
+		--secondaryToolbarButton-scrollHorizontal-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-scrollHorizontal.svg) !important;
+		--secondaryToolbarButton-scrollWrapped-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-scrollWrapped.svg) !important;
+		--secondaryToolbarButton-spreadNone-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-spreadNone.svg) !important;
+		--secondaryToolbarButton-spreadOdd-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-spreadOdd.svg) !important;
+		--secondaryToolbarButton-spreadEven-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-spreadEven.svg) !important;
+		--secondaryToolbarButton-documentProperties-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-documentProperties.svg) !important;
+		--editorParams-stampAddImage-icon: url(./resources/icons/pdfjs/toolbarButton-zoomIn.svg) !important;
+	}
+	#sidebarToggle::before {
+		mask-image:var(--toolbarButton-sidebarToggle-icon) !important;
+	}
+	#secondaryToolbarToggle::before {
+		mask-image:var(--toolbarButton-secondaryToolbarToggle-icon) !important;
+	}
+	#findPrevious::before {
+		mask-image:var(--findbarButton-previous-icon) !important;
+	}
+	#findNext::before {
+		mask-image:var(--findbarButton-next-icon) !important;
+	}
+	#previous::before {
+		mask-image:var(--toolbarButton-pageUp-icon) !important;
+	}
+	#next::before {
+		mask-image:var(--toolbarButton-pageDown-icon) !important;
+	}
+	#zoomOut::before {
+		mask-image:var(--toolbarButton-zoomOut-icon) !important;
+	}
+	#zoomIn::before {
+		mask-image:var(--toolbarButton-zoomIn-icon) !important;
+	}
+	#presentationMode::before {
+		mask-image:var(--toolbarButton-presentationMode-icon) !important;
+	}
+	#editorFreeText::before {
+		mask-image:var(--toolbarButton-editorFreeText-icon) !important;
+	}
+	#editorInk::before {
+		mask-image:var(--toolbarButton-editorInk-icon) !important;
+	}
+	#editorStamp::before {
+		mask-image:var(--toolbarButton-editorStamp-icon) !important;
+	}
+	:is(#print, #secondaryPrint)::before {
+		mask-image:var(--toolbarButton-print-icon) !important;
+	}
+	:is(#download, #secondaryDownload)::before {
+		mask-image:var(--toolbarButton-download-icon) !important;
+	}
+	#viewBookmark::before {
+		mask-image:var(--toolbarButton-bookmark-icon) !important;
+	}
+	#viewThumbnail::before {
+		mask-image:var(--toolbarButton-viewThumbnail-icon) !important;
+	}
+	#viewOutline::before {
+		mask-image:var(--toolbarButton-viewOutline-icon) !important;
+	}
+	#viewAttachments::before {
+		mask-image:var(--toolbarButton-viewAttachments-icon) !important;
+	}
+	#viewLayers::before {
+		mask-image:var(--toolbarButton-viewLayers-icon) !important;
+	}
+	#currentOutlineItem::before {
+		mask-image:var(--toolbarButton-currentOutlineItem-icon) !important;
+	}
+	#viewFind::before {
+		mask-image:var(--toolbarButton-search-icon) !important;
+	}
+	#firstPage::before {
+		mask-image:var(--secondaryToolbarButton-firstPage-icon) !important;
+	}
+	#lastPage::before {
+		mask-image:var(--secondaryToolbarButton-lastPage-icon) !important;
+	}
+	#pageRotateCcw::before {
+		mask-image:var(--secondaryToolbarButton-rotateCcw-icon) !important;
+	}
+	#pageRotateCw::before {
+		mask-image:var(--secondaryToolbarButton-rotateCw-icon) !important;
+	}
+	#cursorSelectTool::before {
+		mask-image:var(--secondaryToolbarButton-selectTool-icon) !important;
+	}
+	#cursorHandTool::before {
+		mask-image:var(--secondaryToolbarButton-handTool-icon) !important;
+	}
+	#scrollPage::before {
+		mask-image:var(--secondaryToolbarButton-scrollPage-icon) !important;
+	}
+	#scrollVertical::before {
+		mask-image:var(--secondaryToolbarButton-scrollVertical-icon) !important;
+	}
+	#scrollHorizontal::before {
+		mask-image:var(--secondaryToolbarButton-scrollHorizontal-icon) !important;
+	}
+	#scrollWrapped::before {
+		mask-image:var(--secondaryToolbarButton-scrollWrapped-icon) !important;
+	}
+	#spreadNone::before {
+		mask-image:var(--secondaryToolbarButton-spreadNone-icon) !important;
+	 }
+	#spreadOdd::before {
+		mask-image:var(--secondaryToolbarButton-spreadOdd-icon) !important;
+	}
+	#spreadEven::before {
+		mask-image:var(--secondaryToolbarButton-spreadEven-icon) !important;
+	}
+	#documentProperties::before {
+		mask-image:var(--secondaryToolbarButton-documentProperties-icon) !important;
+	}
+	#editorStampAddImage::before {
+		mask-image:var(--editorParams-stampAddImage-icon) !important;
+	}
+	.dropdownToolbarButton::after {
+		mask-image: var(--toolbarButton-menuArrow-icon) !important;
 	}
 }
 /* Error page illustrations */
