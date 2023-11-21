@@ -637,6 +637,10 @@
 	list-style-image: url(./icons/developer.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
+#appMenu-report-broken-site-button .toolbarbutton-icon {
+	list-style-image: url(./icons/warning-16.svg) !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
 #appMenu-help-button2 .toolbarbutton-icon {
 	list-style-image: url(./icons/help.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -803,7 +807,7 @@
 	list-style-image: url(./icons/socialblock.svg) !important;
 	width: 16px !important;
 }
-#appMenu_help_reportSiteIssue .toolbarbutton-icon {
+#appMenu_help_reportSiteIssue .toolbarbutton-icon, #appMenu_help_reportBrokenSite .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/warning-16.svg) !important;
 }
@@ -1114,7 +1118,7 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 #protections-popup-cookie-banner-switch {
 	padding-inline-start: 42px !important;
-	padding-inline-end: calc(var(--appmenu-icon-inline-end) + 9px ) !important;
+	padding-inline-end: calc(var(--appmenu-icon-inline-end) + 9px) !important;
 	-moz-context-properties: fill;
 	fill: currentColor;
 	background-image: url(./icons/3rdpartycookies.svg);
@@ -1124,6 +1128,15 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 #protections-popup-cookie-banner-section[data-state="site-disabled"] #protections-popup-cookie-banner-switch {
 	background-image: url(./icons/3rdpartycookies-disabled.svg);
+}
+#protections-popup-report-broken-site-button .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	margin-inline-start: 6px !important;
+	list-style-image: url(./icons/warning-16.svg) !important;
+}
+#protections-popup-report-broken-site-button,
+#protections-popup-cookie-banner-section #protections-popup-cookie-banner-switch {
+	padding-inline-end: calc(var(--appmenu-icon-inline-end) + 8px) !important;
 }
 .thirdpartycookies-icon {
 	list-style-image: url(./icons/3rdpartycookies.svg) !important;

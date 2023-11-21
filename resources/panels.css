@@ -287,6 +287,13 @@ menuitem, menu {
 	width: 100%;
 	bottom: 0;
 }
+/* deja vu i've just been in this place before */
+#report-broken-site-panel-container .panel-footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin-inline-start: -16px !important;
+}
 /* Padding */
 .permission-popup-section {
 	padding-bottom: 8px !important;
