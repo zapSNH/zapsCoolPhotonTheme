@@ -294,8 +294,10 @@ menuitem, menu {
 }
 /* Padding */
 .permission-popup-section {
-	padding-bottom: 8px !important;
-	padding-top: 8px !important;
+	padding-block: 4px !important;
+}
+.permission-popup-permission-remove-button {
+	margin-inline-end: -4px !important;
 }
 #identity-popup-mainView:not([footerVisible]) .panel-subview-body {
 	margin-bottom: 8px !important;
@@ -329,6 +331,9 @@ menuitem, menu {
 #BMB_bookmarksPopup menu, menu.bookmark-item {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
+}
+#identity-popup-securityView-extended-info {
+	margin-inline-start: 32px !important;
 }
 :root .all-tabs-item {
 	padding-inline: 0 !important;
@@ -510,4 +515,23 @@ tooltip {
 }
 .autocomplete-richlistitem[originaltype="insecureWarning"] {
 	background: transparent !important
+}
+/* permission popup */
+#permission-popup .button-icon {
+	width: 18px !important;
+	height: 18px !important;
+	padding: 3px;
+	border-radius: 9px !important;
+	margin-inline-start: !important;
+	-moz-context-properties: fill, stroke !important;
+}
+.permission-popup-permission-remove-button {
+	background: transparent !important;
+	&:hover .button-icon {
+		background: color-mix(in srgb, currentColor 80%, transparent) !important;
+		stroke: var(--arrowpanel-background) !important;
+	}
+	&:hover:active .button-icon {
+		background: color-mix(in srgb, currentColor 100%, transparent) !important;
+	}
 }

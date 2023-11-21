@@ -65,7 +65,7 @@ credits to phroton for some of this stuff */
 	position: relative !important;
 	left: 100% !important;
 }
-.tab-icon-image {
+.tab-icon-image:not([sharing]) {
 	opacity: 1 !important;
 }
 .tab-icon-image:not([busy]) {

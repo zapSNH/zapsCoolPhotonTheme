@@ -151,15 +151,29 @@
 	list-style-image: url(./icons/extensions.svg) !important;
 	border-radius: 0 !important;
 }
+.focus-tab-by-prompt-icon {
+	list-style-image: url(./icons/tab.svg) !important;
+}
 .question-icon {
 	list-style-image: url(./icons/help.svg) !important;
+}
+.tab-sharing-icon-overlay {
+	&[sharing="camera"] {
+		list-style-image: url("./icons/camera.svg") !important;
+	}
+	&[sharing="microphone"] {
+		list-style-image: url("./icons/microphone.svg") !important;
+	}
+	&[sharing="screen"] {
+		list-style-image: url("./icons/screen.svg") !important;
+	}
 }
 #display-share-icon {
 	background-image: url(./icons/screen.svg) !important;
 }
 @-moz-document url(chrome://browser/content/webrtcIndicator.xhtml) {
-  #addons-notification-icon {
-	 list-style-image: url(./icons/extensions.svg) !important;
+	#addons-notification-icon {
+		list-style-image: url(./icons/extensions.svg) !important;
 	}
 }
 .identity-popup-security-connection {
