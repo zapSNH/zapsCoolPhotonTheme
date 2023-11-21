@@ -527,6 +527,7 @@ tooltip {
 }
 .permission-popup-permission-remove-button {
 	background: transparent !important;
+	stroke: currentColor !important;
 	&:hover .button-icon {
 		background: color-mix(in srgb, currentColor 80%, transparent) !important;
 		stroke: var(--arrowpanel-background) !important;
