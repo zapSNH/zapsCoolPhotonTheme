@@ -1,5 +1,27 @@
 /* zap's photon theme */
 /* will be much less documented */
+
+/* firefox control(?) styling */
+select {
+	-moz-appearance: none;
+	background: light-dark(#f9f9fa, #2a2a2e);
+	border-radius: 2px;
+	border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
+}
+option:checked {
+	background: #0a84ff;
+	color: inherit;
+}
+button, input:is([type="button"], [type="submit"]) {
+	-moz-appearance: none;
+	border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
+	padding: 2px 4px;
+	border-radius: 2px;
+	background: light-dark(#f9f9fa, #2a2a2e);
+	&:hover {background: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
+	&:active {background: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
+}
+
 @-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
 		--photon-primary-border-radius: 4px;
