@@ -103,8 +103,9 @@ There is basic support for [Sidebery](https://github.com/mbnuqw/sidebery). You c
 - You will need to insert [this](https://gist.github.com/zapSNH/1ad90c69ca59dc7139d9e0454d52728f) into Sidebery's style editor.
 - To be able to switch between vertical tabs mode and normal mode, turn on `Add preface to the browser window's title if Sidebery sidebar is active` and set the preface value to `[VT] ` (incl. space at the end).
 - Using `uc.reduced-megabar` or `uc.no-megabar` is recommended.
+- Set the font-size to `XXS` under Appearance section. [(where?)](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/af103b3b-d8d7-4a01-93ee-2a1347dca638)
 - Set the theme to `plain` under Appearance section. [(where?)](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/2df7e60f-7ecd-4821-a17c-293f2490d2c5)
-
+- Set the density to `relaxed` under Appearance section. [(where?)](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/a3c59c99-261a-4727-8438-404a8ad98aa0)
 
 ## Bottom Tabs
 In `about:config`, you can turn on bottom tabs with:
