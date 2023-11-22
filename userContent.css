@@ -604,7 +604,7 @@ button, input:is([type="button"], [type="submit"]) {
 
 /* pdf */
 /* screw regex */
-@-moz-document regexp(".*\.pdf(?=$|[?#]).*") {
+@-moz-document regexp("/.*\.pdf(?=$|[?#]).*/gi") {
 	:root {
 		--loading-icon: url(./resources/icons/pdfjs/loading.svg) !important;
 		--treeitem-expanded-icon: url(./resources/icons/pdfjs/treeitem-expanded.svg) !important;
