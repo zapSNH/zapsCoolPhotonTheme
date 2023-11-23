@@ -155,3 +155,9 @@ Special thanks to:
 - The folks over on r/FirefoxCSS
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and they made Photon)
 - Windows 11 for opening Edge everytime I accidentally press F1 instead of F2 to rename stuff in explorer. I think YOU need to get help Microsoft.
+
+
+<details>
+	<summary>experimental webextension version</summary>
+	https://github.com/zapSNH/zcpt-webextension
+</details>
