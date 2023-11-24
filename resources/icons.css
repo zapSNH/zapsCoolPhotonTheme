@@ -720,7 +720,9 @@
 .tab-icon-stack:not([busy]):has(.tab-icon-image:not([src])) {
 	visibility: collapse !important;
 }
-
+.urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {
+	content: url(./icons/edit-paste.svg) !important;
+}
 /* URLBar icons */
 .searchbar-search-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important;
