@@ -1,4 +1,6 @@
 /* Tabs and Urlbar */
+
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--tabs-and-urlbar-css: 1px;
 }
@@ -127,7 +129,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
   /* Shape */
   display: flex !important;
   order: 2 !important;
-  
+
   /* Color */
   fill: currentColor;
   opacity: 0.8;
@@ -358,7 +360,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-left: 2px !important;
 	margin-right: 2px !important;
 }
-
 /* Adds a separator between the tracking-protection icon and the rest of the urlbar */
 #tracking-protection-icon-container {
 	margin-right: 1px !important;
@@ -726,7 +727,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	outline: none !important;
 	background: var(--button-hover-bgcolor) !important;
 }
-
 /* Private browsing icon */
 #private-browsing-indicator-with-label label {
 	display: none;
@@ -735,7 +735,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	height: 24px !important;
 	width: 24px !important;
 }
-
 /* URL bar zoom button */
 #urlbar-zoom-button {
 	border-radius: 9px !important;
@@ -752,7 +751,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #urlbar-zoom-button:hover:active {
 	background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
 }
-
 /* Notications below URLBar */
 .container.infobar::before {
 	display: none !important;
@@ -763,7 +761,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 .container.infobar .icon {
 	margin-inline-start: 11px !important;
 }
-
 /* Bottom tabs */
 @media (-moz-bool-pref: "uc.bottom-tabs") {
 	#titlebar, #PersonalToolbar {
@@ -834,9 +831,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		}
 	}
 }
-
 @media (-moz-bool-pref: "uc.full-width-tabs") {
 	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
 		max-width: 100vw !important;
 	}
+}
 }

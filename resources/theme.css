@@ -1,4 +1,6 @@
 /* Theme */
+
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--theme-css: 1px;
 	--panel-separator-zap-gradient: none !important;
@@ -144,7 +146,7 @@ input.findbar-textbox:focus {
 		}
 		#navigator-toolbox {
 			background: #d7d7db !important
-    
+		
 		}
 		#urlbar[breakout-extend] #urlbar-background {
 			border-color: solid 1px var(--photon-tab-outline) !important;
@@ -274,12 +276,12 @@ input.findbar-textbox:focus {
 		}
 		#identity-icon-box {
 			--urlbar-box-focus-bgcolor: #474749 !important
-  	
+		
 		}
 		:is(.urlbar-icon,
 		#identity-box) {
 			fill: #b1b1b3 !important
-  	
+		
 		}
 		#star-button[starred] {
 			fill: #45a1ff !important;
@@ -353,7 +355,7 @@ input.findbar-textbox:focus {
 			}
 		}
 	}
-  
+
 	/* All themes */
 	/* Use photon's default outline on themes with no border */
 	/* a relic of the past but i feel like this is important */
@@ -361,7 +363,6 @@ input.findbar-textbox:focus {
 		--lwt-tab-line-color: var(--photon-tab-outline) !important;
 	}
 }
-
 /* Ubuntu */
 @media (-moz-platform: linux) {
 	:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0); "] {
@@ -370,7 +371,6 @@ input.findbar-textbox:focus {
 		--toolbar-field-color: #666 !important;
 		--panel-item-hover-bgcolor: #aaa8 !important;
 		--toolbar-color: #555 !important;
-		
 		.tabbrowser-tab[selected="true"] {
 			color: #555 !important;
 		}
@@ -393,7 +393,6 @@ input.findbar-textbox:focus {
 :root[style*="background-noodles"] {
 	--urlbar-border-color: var(--tabs-border-color) !important;
 	--link-color: var(--photon-accent-light) !important;
-	
 	.tab-background::before {
 		--lwt-tab-line-color: #ac70ff !important;
 	}
@@ -439,4 +438,5 @@ input.findbar-textbox:focus {
 		--toolbar-bgcolor: var(--lwt-selected-tab-background-color, var(--tab-selected-bgcolor)) !important;
 		--toolbar-color: var(--lwt-tab-text, var(--tab-selected-textcolor)) !important;
 	}
+}
 }

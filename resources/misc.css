@@ -421,6 +421,8 @@
 		list-style-image: url("./icons/screen.svg") !important;
 	}
 }
+
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 /* Autoscroller */
 .autoscroller {
 	padding: 15px !important;
@@ -502,7 +504,6 @@
 		margin-inline: 2px !important;
 	}
 }
-
 /* kinda looks like the gnome context menu too */
 @media (-moz-bool-pref: "uc.contextmenu.win-11") {
 	@media (-moz-bool-pref: "uc.contextmenu.dark") {
@@ -562,13 +563,10 @@
 		border-radius: 2px !important;
 	}
 }
-
 /* Sidebery */
 @media (-moz-bool-pref: "uc.sidebery") {
 	:root[titlepreface="[VT] "] {
-		
 		--sidebar-width: 35px;
-		
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
 			display: none !important;
 		}
@@ -607,18 +605,15 @@
 		.titlebar-color {
 			background-color: var(--toolbar-bgcolor);
 		}
-		
 		#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
 		    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
 		}
-		
 		#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
 		    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 		}
 		.titlebar-spacer {
 		    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 		}
-		
 		&[uidensity="compact"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
 				height: 35px !important;
@@ -639,7 +634,6 @@
 				bottom: -2px;
 			}
 		}
-		
 		&[uidensity="touch"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
 				height: 57px !important;
@@ -662,19 +656,15 @@
 				bottom: 0px;
 			}
 		}
-		
 		#TabsToolbar-customization-target toolbarbutton {
 			display: none !important;
 		}
-		
 		#private-browsing-indicator-with-label {
 			display: none !important;
 		}
-		
 		&[privatebrowsingmode="temporary"] #nav-bar {
 			overflow: visible !important;
 		}
-		
 		&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 			display: block;
 			position: absolute;
@@ -684,9 +674,7 @@
 			background: url(./icons/private-browsing.svg) no-repeat;
 			bottom: 2px;
 			inset-inline-end: -32px;
-			
 		}
-		
 		&:not([tabsintitlebar]) {
 			#nav-bar {
 				margin-top: 0px;
@@ -704,7 +692,6 @@
 			    box-shadow: none !important;
 			}
 		}
-		
 		&:has(#toolbar-menubar[autohide="false"]) {
 			#nav-bar {
 				margin-top: 0px;
@@ -722,7 +709,6 @@
 			    box-shadow: none !important;
 			}
 		}
-		
 		&[sizemode="fullscreen"] {
 			&[BookmarksToolbarOverlapsBrowser=""] {
 				#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
@@ -737,7 +723,6 @@
 			}
 			#navigator-toolbox[style*="margin-top:"] + #browser #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: 100% !important;
-				
 				&:not([hidden]) ~ #appcontent {
 					margin-inline-start: 0px;
 				}
@@ -746,18 +731,15 @@
 				}
 			}
 		}
-		
 		&[inDOMFullscreen] {
 			#appcontent {
 				margin-inline-start: 0 !important;
 			}
 		}
-		
 		&[customizing="true"] #browser {
 			display: block !important;
 			max-height: 0 !important;
 		}
-		
 		&[customizing="true"] #browser #appcontent {
 			display: none !important;
 		}
@@ -784,7 +766,6 @@
 				bottom: 2px;
 				inset-inline-end: 4px;
 			}
-			
 			&[uidensity="touch"] {
 				#titlebar:has(#toolbar-menubar[inactive="true"]) {
 					height: 0px !important;
@@ -796,7 +777,6 @@
 					bottom: 0px;
 				}
 			}
-			
 			&[uidensity="compact"] {
 				#titlebar:has(#toolbar-menubar[inactive="true"]) {
 					height: 0px !important;
@@ -813,4 +793,5 @@
 			}
 		}
 	}
+}
 }

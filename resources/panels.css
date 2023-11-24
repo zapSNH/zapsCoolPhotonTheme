@@ -1,5 +1,6 @@
 /* Panels */
 /* Full-width menu seperators */
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--panels-css: 1px;
 }
@@ -129,7 +130,6 @@ menuitem, menu {
 	font-weight: 400 !important;
 }
 /* end */
-
 /* Makes the size of the Firefox account button in the app menu smaller */
 #appMenu-fxa-status2 {
 	padding: 0 !important;
@@ -352,7 +352,7 @@ menuitem, menu {
   	padding-left: 24px !important;
   }
   #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
-	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
+	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), 	#toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
   menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
 	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic),
 	#allTabsMenu-hiddenTabsButton { 
@@ -373,7 +373,6 @@ menuitem, menu {
 #sidebarMenu-popup > menuitem {
 	margin-inline: 0 !important;
 }
-
 /* Enhanced TP (toilet paper) */
 #protections-popup-tp-switch {
 	border-radius: 8px !important;
@@ -471,7 +470,6 @@ tooltip {
 #PopupAutoComplete > richlistbox > richlistitem[originaltype="loginsFooter"] {
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
 	border-top: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
-	
 	&:hover {
 		background: color-mix(in srgb, currentColor 25%, transparent) !important;
 	}
@@ -482,14 +480,12 @@ tooltip {
 .ac-login-item {
 	padding-inline-start: 8px !important;
 }
-
 .autocomplete-richlistitem:not(:first-child) .two-line-wrapper {
 	box-shadow: 0px 1px color-mix(in srgb, currentColor 10%, transparent) inset !important; 
 }
 #PopupAutoComplete > richlistbox > richlistitem[originaltype="loginWithOrigin"] + richlistitem[originaltype="generatedPassword"] {
 	border-top: 0px !important;
 }
-
 .autocomplete-richlistitem[selected] {
 	background: var(--photon-accent-dark) !important;
 	color: #eee !important;
@@ -524,7 +520,6 @@ tooltip {
 	height: 18px !important;
 	padding: 3px;
 	border-radius: 9px !important;
-	margin-inline-start: !important;
 	-moz-context-properties: fill, stroke !important;
 }
 .permission-popup-permission-remove-button {
@@ -537,4 +532,5 @@ tooltip {
 	&:hover:active .button-icon {
 		background: color-mix(in srgb, currentColor 100%, transparent) !important;
 	}
+}
 }

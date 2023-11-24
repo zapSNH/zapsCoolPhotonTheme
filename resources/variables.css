@@ -2,6 +2,7 @@
 /* fun fact: the mega-ultra-giga-tera-peta-zeta-exa-giganto-big-chungus-bar is smaller in proton than in photon */
 /* Change these to change some stuff */
 /* If you're using a dark theme or some colors are not applying, change the stuff thats in the @media query :) */
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--photon-back: transparent;
 	--photon-back-hover: transparent;
@@ -10,7 +11,6 @@
 	--photon-back-shadow: #7771;
 	--photon-back-shadow-hover: #2225;
 	--photon-accent: #0a84ff;
-	
 	--photon-accent-dark: #0a84ff;
 	--photon-accent-light: #74c0ff;
 	/* Border-radius things */
@@ -27,7 +27,6 @@
 	--tab-attention-icon-color: var(--photon-accent) !important;
 	--urlbar-popup-url-color: var(--photon-accent) !important;
 	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
-
 	--photon-easing-function: cubic-bezier(.07,.95,0,1);
 	--photon-speed-1: 0.2s;
 	--photon-speed-2: 0.25s;
@@ -67,7 +66,6 @@ button {
 }
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
-
 #urlbar-background, #searchbar, input:not([type="radio"]),
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
 #identity-icon-box, #tabs-newtab-button image,
@@ -123,4 +121,5 @@ menuseparator {
 /* Isn't actually in either Photon or Proton, but it makes Side View usable lol */
 #sidebar-box {
 	max-width: 100vw !important;
+}
 }

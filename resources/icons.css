@@ -1,5 +1,7 @@
 /* Icons */
 /* >:D */
+
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--icons-css: 1px;
 }
@@ -83,7 +85,6 @@
 		list-style-image: url(./icons/tracking-protection-animation-brighttext.svg) !important;
 	}
 }
-
 /* Panel icons */
 /* I was too lazy to do all of them :P */
 #permissions-granted-icon {
@@ -170,11 +171,13 @@
 #display-share-icon {
 	background-image: url(./icons/screen.svg) !important;
 }
+}
 @-moz-document url(chrome://browser/content/webrtcIndicator.xhtml) {
 	#addons-notification-icon {
 		list-style-image: url(./icons/extensions.svg) !important;
 	}
 }
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 .identity-popup-security-connection {
   list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
 	stroke: red !important;
@@ -512,7 +515,6 @@
 	list-style-image: url(./icons/privateBrowsing.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
-
 /* Second section */
 #appMenu-bookmarks-button .toolbarbutton-icon {
 	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
@@ -534,7 +536,6 @@
 	list-style-image: url(./icons/extensions.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
-
 /* Third section */
 #appMenu-print-button2 .toolbarbutton-icon {
 	list-style-image: url("./icons/print1.svg");
@@ -641,7 +642,6 @@
 #appMenu-fullscreen-button2[checked] image {
 	list-style-image: url(./icons/fullscreen-exit.svg) !important;
 }
-
 /* Fifth section */
 #appMenu-settings-button .toolbarbutton-icon {
 	list-style-image: url(./icons/settings.svg) !important;
@@ -660,7 +660,6 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	width: 16px !important;
 }
-
 /* Exit icon */
 #appMenu-quit-button2 .toolbarbutton-icon {
 	list-style-image: url(./icons/quit.svg) !important;
@@ -687,7 +686,6 @@
 .all-tabs-item .all-tabs-button image:is([src^="chrome://"], :not([src])) {
 	opacity: 0;
 }
-
 .tab-icon-image[src="chrome://global/skin/icons/settings.svg"],
 .all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/settings.svg"]) > .all-tabs-button::before,
 .urlbarView-favicon[src="page-icon:about:preferences"] {
@@ -1178,10 +1176,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 .container.infobar .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
 }
-
 /* Library/Sidebar icons */
 /* https://gist.github.com/MrOtherGuy/8816d7b388200119279da6f735539acb */
-
 /* Folder Icon */
 treechildren::-moz-tree-image(title, container){
   list-style-image: url(./icons/folder2.svg) !important;
@@ -1211,4 +1207,5 @@ treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
 /* And finally all bookmarks folder */
 treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
   list-style-image: url(./icons/bookmark.svg) !important;
+}
 }
