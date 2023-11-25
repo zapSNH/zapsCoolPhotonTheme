@@ -221,7 +221,7 @@ button, input:is([type="button"], [type="submit"]) {
 		margin-inline-end: 10px;
 		background-size: 2px !important;
 	}
-	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251); --newtab-text-primary-color: rgba(21, 20, 26, 1); --in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
+	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--newtab-background-color-secondary: #fff !important;
 			--newtab-background-color: #fff !important;
@@ -242,7 +242,7 @@ button, input:is([type="button"], [type="submit"]) {
 			background-color: rgb(251, 251, 254) !important;
 		}
 	}
-	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style="--newtab-text-primary-color: rgba(251, 251, 254, 1); --newtab-background-color: rgb(43, 42, 51); --newtab-background-color-secondary: rgba(66, 65, 77, 1); --in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%); --lwt-sidebar-background-color: rgb(56, 56, 61); --lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {	
+	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style*="--newtab-text-primary-color: rgba(251, 251, 254, 1);"][style*="--newtab-background-color: rgb(43, 42, 51);"][style*="--newtab-background-color-secondary: rgba(66, 65, 77, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"][style*="--lwt-sidebar-background-color: rgb(56, 56, 61);"][style*="--lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {	
 		* {
 		 	--newtab-background-color-secondary: #38383d !important;
 			--newtab-background-color: #2a2a2e !important;
@@ -456,7 +456,7 @@ button, input:is([type="button"], [type="submit"]) {
 	
 	@media (prefers-color-scheme: dark) {	
 		* {
-		 	--in-content-page-background: #2a2a2e !important;
+		 	--in-content-page-background: #fff !important;
 			--in-content-accent-color: #0060df !important;
 			--checkbox-checked-bgcolor: #0060df !important;
 			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
@@ -494,18 +494,16 @@ button, input:is([type="button"], [type="submit"]) {
 
 /* firefox view */
 @-moz-document url-prefix("about:firefoxview") {
-	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251); --newtab-text-primary-color: rgba(21, 20, 26, 1); --in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
+	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent);
 		}
 	}
-	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style="--newtab-text-primary-color: rgba(251, 251, 254, 1); --newtab-background-color: rgb(43, 42, 51); --newtab-background-color-secondary: rgba(66, 65, 77, 1); --in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%); --lwt-sidebar-background-color: rgb(56, 56, 61); --lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {	
+	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style*="--newtab-text-primary-color: rgba(251, 251, 254, 1);"][style*="--newtab-background-color: rgb(43, 42, 51);"][style*="--newtab-background-color-secondary: rgba(66, 65, 77, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"][style*="--lwt-sidebar-background-color: rgb(56, 56, 61);"][style*="--lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {
 		* {
 			--fxview-background-color: #2a2a2e !important;
 			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
 		}
-	}
-	@media (prefers-color-scheme: dark) {
 		button[selected]:not(:hover) {
 			--in-content-accent-color: #74c0ff !important;
 		}
