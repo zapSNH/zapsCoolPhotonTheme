@@ -24,15 +24,22 @@ Make sure to delete it after you start Firefox so that it doesn't override any c
 
 Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
 ____
+
 Download the release for your version:
-* [Firefox 120](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
-* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
-* [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
+
+__Static Release (stability):__
+* [Firefox 120](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v120)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
+
+__Rolling Release (features and bugfixes):__
+* [Firefox 120 - 121](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
+
+__Experimental WebExtension Version (auto updates):__
+* [Firefox Nightly/Dev](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
 
 <details>
 	<summary>Older Versions</summary>
-	
 * [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
 </details>
@@ -45,14 +52,17 @@ Rename `zapsCoolPhotonTheme-*` to `chrome`
 
 
 Make sure the directory is like this:
-* `Profiles` > `your profile` > `chrome`
+* `Profiles` > `XXXXXXXX.profile` > `chrome`
 
 and not like this:
-* `Profiles` > `your profile` > `chrome` > `zapsCoolPhotonTheme-main`
+* `Profiles` > `XXXXXXXX.profile` > `chrome` > `zapsCoolPhotonTheme-*`
 
 Restart Firefox
 
 # Configuration
+An interactive configurator is available at https://zapsnh.github.io/zcpt-configurator/. To apply the settings, place the exported `user.js` file in your profile folder/directory (`Profiles` > `XXXXXXXX.profile`), launch Firefox, and then delete it afterwards.
+
+For the WebExtension version, the configurator is can be found in the extension's option page. The settings apply after you click `Apply`.
 
 ## Context menus
 In `about:config`, if you want native (Windows) context menus, you can create:
@@ -155,9 +165,3 @@ Special thanks to:
 - The folks over on r/FirefoxCSS
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and they made Photon)
 - Windows 11 for opening Edge everytime I accidentally press F1 instead of F2 to rename stuff in explorer. I think YOU need to get help Microsoft.
-
-
-<details>
-	<summary>experimental webextension version</summary>
-	https://github.com/zapSNH/zcpt-webextension
-</details>
