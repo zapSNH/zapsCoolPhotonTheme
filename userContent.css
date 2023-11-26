@@ -456,7 +456,7 @@ button, input:is([type="button"], [type="submit"]) {
 	
 	@media (prefers-color-scheme: dark) {	
 		* {
-		 	--in-content-page-background: #fff !important;
+		 	--in-content-page-background: #2a2a2e !important;
 			--in-content-accent-color: #0060df !important;
 			--checkbox-checked-bgcolor: #0060df !important;
 			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
