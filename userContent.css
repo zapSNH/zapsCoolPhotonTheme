@@ -21,6 +21,11 @@ button, input:is([type="button"], [type="submit"]) {
 	&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
 	&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
 }
+@-moz-document regexp("about:devtools-toolbox") {
+	.toolbox-tabs button {
+		border-radius: 0 !important;
+	}
+}
 /* about and chrome stylynh */
 @-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
@@ -113,6 +118,9 @@ button, input:is([type="button"], [type="submit"]) {
 	}
 	#about-config-search {
 		background-image: url(./resources/icons/find-in-page.svg) !important;
+	}
+	button-group button {
+		border-radius: 0 !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
