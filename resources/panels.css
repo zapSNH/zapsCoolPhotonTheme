@@ -24,7 +24,6 @@ panel toolbarseparator {
 }
 .menupopup-arrowscrollbox {
 	padding-inline: 0 !important;
-	padding-block: 4px !important;
 }
 menuitem[disabled="true"] {
 	pointer-events: none !important;
@@ -381,8 +380,6 @@ menuitem, menu {
 }
 #moz-toggle-button {
 	border-radius: 8px !important;
-	--toggle-width: 26px !important;
-	--toggle-height: 16px !important;
 }
 #moz-toggle-button::before {
 	background: white !important;

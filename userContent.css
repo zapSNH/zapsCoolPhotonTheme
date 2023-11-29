@@ -40,15 +40,11 @@ button, input:is([type="button"], [type="submit"]) {
 	  }
 	}
 	* {
-		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
 		--newtab-primary-action-background: #0a84ff !important;
 		--toggle-background-color-pressed: #0a84ff !important;
-		--in-content-button-background: color-mix(in srgb, var(--grey-90) 10%, transparent) !important;
-		--in-content-button-background-hover: color-mix(in srgb, var(--grey-90) 20%, transparent) !important;
-		--in-content-button-background-active: color-mix(in srgb, var(--grey-90) 30%, transparent) !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -64,8 +60,6 @@ button, input:is([type="button"], [type="submit"]) {
 			--in-content-primary-button-background-hover: #003eaa !important;
 			--in-content-primary-button-background-active: #002275 !important;
 			--in-content-table-background: #202023 !important;
-			--color-accent-primary-hover: var(--in-content-primary-button-background) !important;
-			--color-accent-primary-active: var(--in-content-primary-button-background-hover) !important;
 		}
 	}
 	.dialogBox {
@@ -125,19 +119,8 @@ button, input:is([type="button"], [type="submit"]) {
 	#about-config-search {
 		background-image: url(./resources/icons/find-in-page.svg) !important;
 	}
-	button-group button, button[role="menuitem"] {
+	button-group button {
 		border-radius: 0 !important;
-	}
-	.toggle-button::before {
-		margin-inline: 2px !important;
-		width: 10px !important;
-		height: 10px !important;
-		outline: solid 1px var(--border-color);
-	}
-	.toggle-button {
-		--toggle-width: 26px !important;
-		--border-color: hsla(210,4%,10%,.14);
-		border-color: var(--border-color) !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
@@ -161,18 +144,8 @@ button, input:is([type="button"], [type="submit"]) {
 	.customize-menu :not(.switch *), .icon.icon-settings {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
-	:root :is(.card-preview-image-outer, .card-preview-image) {
-		border-bottom-left-radius: 0px !important;
-		border-bottom-right-radius: 0px !important;
-	}
 	.icon-settings, .home-section .external-link {
 		background-image: url(./resources/icons/settings.svg) !important;
-	}
-	.icon.icon-history-item {
-		background-image: url("./resources/icons/history.svg") !important;
-	}
-	.icon.icon-bookmark-added {
-		background-image: url("./resources/icons/bookmark.svg") !important;
 	}
 	.ds-card .img-wrapper img {
 		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
@@ -180,21 +153,12 @@ button, input:is([type="button"], [type="submit"]) {
 	.sponsored-label {
 		display: none !important;
 	}
-	.top-site-outer {
-		padding: 0 !important;
-		padding-bottom: 20px !important;
-	}
-	.top-site-outer:hover, .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+	.top-site-outer:hover {
 		background-color: transparent !important;
 	}
 	.top-site-outer .tile {
   		outline: 0px solid transparent !important;
 		transition: outline var(--photon-speed-1) ease !important;
-		width: 96px !important;
-		height: 96px !important;
-	}
-	.top-site-outer .title {
-		padding-top: 4px !important;
 	}
 	.top-site-outer:hover .tile {
 		outline: 5px solid var(--newtab-border-color) !important;
@@ -254,18 +218,16 @@ button, input:is([type="button"], [type="submit"]) {
 		background-color: var(--newtab-background-color-secondary) !important;
 		border: 1px solid var(--newtab-border-color) !important;
 		transition: var(--photon-speed-1) !important;
-		background-image: url("./resources/icons/more.svg") !important;
 	}
 	.top-site-outer .context-menu-button {
-		transition-delay: 333ms !important;
-		translate: -4px 2px;
+		margin-top: 2px;
 	}
 	.top-site-outer:not(:hover, .active) .context-menu-button {
 		width: 8px !important;
 		height: 8px !important;
-		background-size: 0px !important;
-		margin-inline-end: 8px;
 		margin-top: 10px;
+		margin-inline-end: 10px;
+		background-size: 2px !important;
 	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
@@ -521,9 +483,6 @@ button, input:is([type="button"], [type="submit"]) {
 	.more-options-button {
 		background-image: url(./resources/icons/settings.svg) !important
 	}
-	addon-card .more-options-button {
-		background-image: url(./resources/icons/more.svg) !important
-	}
 	#help-button img {
 		content: url(./resources/icons/help1.svg) !important;
 	}
@@ -544,17 +503,15 @@ button, input:is([type="button"], [type="submit"]) {
 /* firefox view */
 @-moz-document url-prefix("about:firefoxview") {
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
-		& {
+		* {
 			--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent);
 		}
 	}
 	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style*="--newtab-text-primary-color: rgba(251, 251, 254, 1);"][style*="--newtab-background-color: rgb(43, 42, 51);"][style*="--newtab-background-color-secondary: rgba(66, 65, 77, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"][style*="--lwt-sidebar-background-color: rgb(56, 56, 61);"][style*="--lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {
-		& {
+		* {
 			--fxview-background-color: #2a2a2e !important;
 			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
 		}
-	}
-	@media (prefers-color-scheme: dark) {
 		button[selected]:not(:hover) {
 			--in-content-accent-color: #74c0ff !important;
 		}
