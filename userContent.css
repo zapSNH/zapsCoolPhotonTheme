@@ -4,7 +4,7 @@
 /* firefox control(?) styling */
 select {
 	-moz-appearance: none;
-	background: light-dark(#f9f9fa, #2a2a2e);
+	background-color: light-dark(#f9f9fa, #2a2a2e);
 	border-radius: 2px;
 	border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
 }

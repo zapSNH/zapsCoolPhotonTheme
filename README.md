@@ -5,7 +5,7 @@ A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 
 ____
 
 #### Compatibility
-| | Windows 10/11 | Linux (Ubuntu) | MacOS | Notes |
+| | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **102esr** | Semi-broken | ? | ? | No Updates |
 | **115esr** | ✔️ | Semi-broken | ? | No Updates |
@@ -40,6 +40,7 @@ __Experimental WebExtension Version (auto updates):__
 
 <details>
 	<summary>Older Versions</summary>
+
 * [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
 </details>
