@@ -42,6 +42,8 @@ button, input:is([type="button"], [type="submit"]) {
 	* {
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
+		--brand-color-accent-hover: color-mix(in srgb, var(--brand-color-accent) 80%, currentColor) !important;
+		--brand-color-accent-active: color-mix(in srgb, var(--brand-color-accent) 60%, currentColor) !important;
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
 		--newtab-primary-action-background: #0a84ff !important;
@@ -138,6 +140,77 @@ button, input:is([type="button"], [type="submit"]) {
 		--toggle-width: 26px !important;
 		--border-color: hsla(210,4%,10%,.14);
 		border-color: var(--border-color) !important;
+	}
+	
+	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input {
+		border-radius: var(--photon-secondary-border-radius) !important;
+		width: 20px !important;
+		height: 20px !important;
+		appearance: none !important;
+		background-color: var(--in-content-button-background) !important;
+		border: 1px solid color-mix(in srgb, currentColor 9%, transparent) !important;
+		&:hover {
+			background-color: var(--in-content-button-background-hover) !important;
+		}
+		&:hover:active {
+			background-color: var(--in-content-button-background-active) !important;
+		}
+		&[checked] {
+			background-color: #0a84ff !important;
+			background-image: url(./resources/icons/check.svg) !important;
+			-moz-context-properties: fill !important;
+			fill: #fff !important;
+			border: 1px solid #0000 !important;
+			background-position: 1px 1px;
+			&:hover {
+				background-color: var(--color-accent-primary-hover) !important;
+			}
+			&:hover:active {
+				background-color: var(--color-accent-primary-active) !important;
+			}
+			&[disabled] {
+				background-color: #0a84ff !important;
+			}
+		}
+	}
+	input[type="radio"], .radio-check {
+		border-radius: 50% !important;
+		margin-top: 4px !important;
+		width: 16px !important;
+		height: 16px !important;
+		
+		&[selected], &:checked {
+			background-color: #0a84ff !important;
+			background-image: url("./resources/icons/radio.svg") !important;
+			-moz-context-properties: fill !important;
+			fill: #fff !important;
+			background-position: -1px -1px;
+		}
+	}
+	.info-icon {
+		content: url("./resources/icons/info.svg") !important;
+	}
+	.sync-engine-passwords .checkbox-icon, .sync-engine-passwords.sync-engine-image {
+		list-style-image: url("./resources/icons/login.svg") !important;
+	}
+	.sync-engine-history .checkbox-icon, .sync-engine-history.sync-engine-image {
+		list-style-image: url("./resources/icons/history.svg") !important;
+	}
+	.sync-engine-bookmarks .checkbox-icon, .sync-engine-bookmarks.sync-engine-image {
+		list-style-image: url("./resources/icons/bookmark.svg") !important;
+	}
+	.sync-engine-tabs .checkbox-icon, .sync-engine-tabs.sync-engine-image {
+		list-style-image: url("./resources/icons/tab.svg") !important;
+	}
+	.sync-engine-addons .checkbox-icon, .sync-engine-addons.sync-engine-image {
+		list-style-image: url("./resources/icons/extensions.svg") !important;
+	}
+	.sync-engine-prefs .checkbox-icon, .sync-engine-prefs.sync-engine-image {
+		list-style-image: url("./resources/icons/settings.svg") !important;
+	}
+	treechildren::-moz-tree-image(checked) {
+		list-style-image: url("./resources/icons/check.svg") !important;
+		fill: #2292d0 !important;
 	}
 }
 @-moz-document url("about:privatebrowsing") {
@@ -401,8 +474,8 @@ button, input:is([type="button"], [type="submit"]) {
 	.category[name="recent-updates"] {
 		background-image: url("./resources/icons/category-recent.svg") !important;
 	}
-	.help-icon {
-		content: url("./resources/icons/help1.svg") !important;
+	:root .help-icon {
+		list-style-image: url("./resources/icons/help.svg") !important;
 	}
 	#trackingProtectionShield {
 		list-style-image: url(./resources/icons/tracking-protection-big.svg) !important;
