@@ -187,6 +187,9 @@ button, input:is([type="button"], [type="submit"]) {
 			background-position: -1px -1px;
 		}
 	}
+	input[type="radio"] {
+		margin-top: 5px !important;
+	}
 	.info-icon {
 		content: url("./resources/icons/info.svg") !important;
 	}
@@ -573,6 +576,9 @@ button, input:is([type="button"], [type="submit"]) {
 		list-style-image: url(./resources/icons/autoplay-media.svg) !important;
 	}
 	
+	.addon-badge-private-browsing-allowed {
+		background-image: url(./resources/icons/private-browsing.svg) !important;
+	}
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;

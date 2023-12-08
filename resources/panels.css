@@ -84,6 +84,11 @@ menuitem, menu {
 #main-menubar > menu {
 	padding: 0 !important;
 }
+@media (-moz-platoform: linux) {
+	#main-menubar > menu {
+		padding-inline: 4px !important;
+	}
+}
 #sidebarMenu-popup :is(menuitem, menu) {
 	padding: 5px 10px !important;
 }
