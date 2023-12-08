@@ -176,7 +176,7 @@ menuitem, menu {
 }
 /* Icons but too lazy to put them in icons.css */
 .download-state .downloadButton.downloadIconShow image {
-	list-style-image: url(./icons/findFIle.svg) !important;
+	list-style-image: url(./icons/findFile.svg) !important;
 }
 .download-state .downloadButton.downloadIconRetry image {
 	list-style-image: url(./icons/reload.svg) !important;
