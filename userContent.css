@@ -142,7 +142,7 @@ button, input:is([type="button"], [type="submit"]) {
 		border-color: var(--border-color) !important;
 	}
 	
-	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input {
+	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input, input[type="checkbox"] {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		width: 20px !important;
 		height: 20px !important;
@@ -155,7 +155,7 @@ button, input:is([type="button"], [type="submit"]) {
 		&:hover:active {
 			background-color: var(--in-content-button-background-active) !important;
 		}
-		&[checked] {
+		&[checked], &:checked {
 			background-color: #0a84ff !important;
 			background-image: url(./resources/icons/check.svg) !important;
 			-moz-context-properties: fill !important;
@@ -394,14 +394,24 @@ button, input:is([type="button"], [type="submit"]) {
 			background-image: url(./resources/background.png);	
 			background-position: center;
 		}
-		.top-site-inner {
+		.top-site-inner, .section-top-bar {
 			background-color: var(--in-content-page-background) !important;
 			border-radius: 8px;
 			box-shadow: 0px 2px 4px #0006 !important;
-			padding: 4px;
+			padding: 8px;
 		}
 		.top-sites-list .title {
 			padding-block: 2px !important;
+		}
+		.top-site-outer {
+			padding-inline: 4px !important
+		}
+		.section-top-bar {
+			margin-inline: -8px
+		}
+		.top-site-outer .context-menu-button {
+			transition-delay: 333ms !important;
+			translate: 0px 8px;
 		}
 	}
 }
