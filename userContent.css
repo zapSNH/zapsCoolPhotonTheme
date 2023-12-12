@@ -170,6 +170,7 @@ button, input:is([type="button"], [type="submit"]) {
 			}
 			&[disabled] {
 				background-color: #0a84ff !important;
+				opacity: 0.5
 			}
 		}
 	}

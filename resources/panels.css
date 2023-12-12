@@ -49,12 +49,15 @@ menuseparator {
 .panel-subview-body toolbarbutton,
 .cui-widget-panel toolbarbutton:not(.subviewbutton-back),
 .cui-widget-panel toolbaritem, #OtherBookmarksPopup menuitem,
-[placespopup] :is(menuitem) {
+[placespopup] :is(menuitem:not(.menuitem-with-favicon)) {
 	border-radius: 0px !important;
 	margin: 0px !important;
 	padding: 0px 11px !important;
 }
-panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button) {
+:root .menuitem-with-favicon {
+	margin-inline: 0px !important;
+}
+panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button, .subviewbutton-back) {
 	border-radius: 0px !important;
 	margin: 0px !important;
 }
@@ -68,12 +71,22 @@ toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info
 	margin: 8px !important;
 	border-radius: inherit !important;
 }
-.panel-subview-body {
+.panel-subview-body:not(#report-broken-site-panel-container) {
 	padding: 4px 0 !important;
 }
 .subviewbutton-back {
-	margin: -4px 0px !important;
-	margin-top: -6px !important;
+	margin: -4px !important;
+	width: 32px !important;
+	height: 32px !important;
+	padding: 7px !important;
+}
+.panel-header + toolbarseparator {
+	margin-top: 0 !important;
+}
+.panel-header {
+	max-height: 40px !important;
+	height: 40px !important;
+	min-height: 40px !important;
 }
 .subview-subheader {
 	margin-left: 2px !important;
@@ -348,6 +361,9 @@ menuitem, menu {
 }
 #PanelUI-developer-tools-view toolbarbutton {
 	margin-inline-start: var(--appmenu-noicon-inline-end) !important;
+}
+.panel-info-button {
+	margin: 0 !important;
 }
 @media (-moz-platform: windows) {
   #context-navigation {
