@@ -339,13 +339,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 .tabbrowser-tab:not([pinned])[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	translate: 0 30px !important;
 	border-radius: 0px !important;
-	margin-left: 30px !important;
-	margin-right: 30px !important;
-	transition: margin var(--photon-speed-1) var(--photon-easing-function) !important
+	transition: all var(--photon-speed-1) var(--photon-easing-function) !important;
+	justify-self: center !important;
+	margin-inline: auto !important;
+	width: 60% !important;
 }
 .tabbrowser-tab:not([pinned])[usercontextid][selected] > .tab-stack > .tab-background > .tab-context-line {
-	margin-left: 20px !important;
-	margin-right: 20px !important;
+	width: 80% !important;
 }
 .tabbrowser-tab[pinned][usercontextid] > .tab-stack > .tab-background > .tab-context-line {
 	translate: 0 30px !important;

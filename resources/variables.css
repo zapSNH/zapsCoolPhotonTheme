@@ -71,12 +71,12 @@ button {
 #urlbar-background, #searchbar, input:not([type="radio"]),
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button) image, 
 #identity-icon-box, #tabs-newtab-button image,
-menupopup, panel, #PlacesChevron *, #editBookmarkPanelInfoArea *,
+menupopup, panel, #PlacesChevron *:not(.menuitem-with-favicon), #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
 button, button hbox, hbox menulist,
 /* i'm lazy */
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
-findbar *, .bookmark-item, .toolbarbutton-1, .permission-popup-section *,
+findbar *, .bookmark-item:not(.menuitem-with-favicon), .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
 #firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span,
 :root[uidensity="compact"] #back-button .toolbarbutton-icon, #translations-panel-lang-selection menulist,
@@ -99,7 +99,7 @@ tree, select {
 .urlbar-page-action, #tracking-protection-icon-container,
 #urlbar :is([id*="tracking-protection-icon-container"] *, [id*="identity-box"] *),
 #TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item, #urlbar-go-button,
-#appMenu-popup .subviewbutton .toolbarbutton-icon, button-group button {
+#appMenu-popup .subviewbutton .toolbarbutton-icon, button-group button, #protections-popup-not-blocking-section-why {
 	border-radius: 0 !important;
 }
 :root menupopup, :root panel {

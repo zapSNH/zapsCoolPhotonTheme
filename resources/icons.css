@@ -433,7 +433,7 @@
 #appMenu-multiView .subviewbutton::before,
 #appMenu-proton-update-banner::before,
 #downloadsHistory .button-icon,
-.subviewbutton > image {
+.subviewbutton:not([class*="identity-color"]) > image {
 	fill: currentColor !important;
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill !important;
@@ -713,6 +713,12 @@
 .tab-icon-image:not([src]),
 .all-tabs-item:has(.all-tabs-button image:not([src])) > .all-tabs-button::before {
 	content: url(./icons/globe1.svg) !important;
+}
+.all-tabs-item:has(.all-tabs-container-indicator image:not([src])) > .all-tabs-button::before {
+	background: none !important;
+	border-inline-start: 8px solid var(--identity-icon-color) !important;
+	padding-inline-start: 6px;
+	margin-top: 1px;
 }
 .tab-icon-stack:not([busy]):has(.tab-icon-image:not([src])) {
 	visibility: collapse !important;
