@@ -76,7 +76,7 @@
 	button {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
-		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
+		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		background-color: var(--button-bgcolor) !important;
 		
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}

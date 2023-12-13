@@ -153,6 +153,8 @@
 }
 .question-icon {
 	list-style-image: url(./icons/help.svg) !important;
+	fill: currentColor;
+	-moz-context-properties: fill;
 }
 .tab-sharing-icon-overlay {
 	&[sharing="camera"] {
@@ -401,7 +403,7 @@
 }
 #PlacesChevron[open],
 #nav-bar-overflow-button[open] {
-	rotate: 90deg
+	list-style-image: url(./icons/command-chevron-rotate-90.svg) !important;
 }
 #import-button {
 	list-style-image: url(./icons/import.svg) !important;
@@ -570,7 +572,7 @@
 	border-radius: 50% !important;
 }
 #appMenu-zoomReset-button2 .toolbarbutton-text {
-	border-radius: 9px !important;
+	border-radius: 1000px !important;
 	border: 1px solid var(--panel-separator-color) !important;
 	padding-inline: 6px !important;
 	background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
@@ -907,28 +909,44 @@
 	margin-top: -3px !important;
 }
 #fxa-manage-account-button {
-	margin-bottom: 8px !important;
 }
 :root #PanelUI-fxa #fxa-manage-account-button::before {	
 	content: "";
-	display: -moz-inline-box;
 	min-width: 30px !important;
+	width: 30px !important;
 	height: 30px !important;
 	border-radius: 50%;
 	background-size: 30px;
 	background-image: var(--avatar-image-url);
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	margin-inline-start: 2px !important;
+	margin-inline-start: 11px !important;
 	outline: solid #ffffff33 1px;
-}
-:root #PanelUI-fxa #fxa-manage-account-button::after {	
+}/*
+:root #PanelUI-fxa #fxa-manage-account-button::after {
 	content: "";
 	min-width: 200%;
 	height: 1px;
 	background: var(--panel-separator-color);
 	position: relative;
 	left: -64%;
-	top: 20px
+}*/
+:root #PanelUI-fxa #fxa-manage-account-button {
+	padding: 0 !important;
+	background-color: transparent !important;
+	border-bottom: 1px solid var(--panel-separator-color);
+	padding-bottom: 4px !important;
+	margin-bottom: 3px !important;
+}
+:root #PanelUI-fxa #fxa-manage-account-button vbox {
+	padding-inline: var(--arrowpanel-menuitem-padding) !important;
+	padding-inline-start: 51px !important;
+	translate: -41px;
+	&:hover {
+		background-color: var(--panel-item-hover-bgcolor);
+	}
+	&:hover:active {
+		background-color: var(--panel-item-active-bgcolor);
+	}
+	min-width: calc(100% + 30px) !important;
 }
 :root #PanelUI-fxa #PanelUI-fxa-menu-syncnow-button {
 	padding-inline-start: calc(var(--appmenu-noicon-inline-end) + 11px) !important;
@@ -997,6 +1015,7 @@
 	background-repeat: no-repeat !important;
 	-moz-context-properties: fill, stroke;
 	fill: currentColor;
+	padding-inline-start: 21px !important;
 }
 #sidebar-switcher-bookmarks:is(menuitem) .menu-text {
 	background-image: url(./icons/bookmark.svg);
