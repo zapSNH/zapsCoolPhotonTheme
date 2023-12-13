@@ -669,17 +669,25 @@ button, input:is([type="button"], [type="submit"]) {
 		height: 16px;
 		translate: -28px 10px
 	}
-	fxview-category-button::before {
-		content: "";
-		position: absolute;
-		background-image: url(./resources/icons/glyph-topsites.svg);
-		background-repeat: no-repeat;
-		-moz-context-properties: fill;
-		fill: currentColor;
-		width: 16px;
-		height: 16px;
-		margin-inline-start: 12px;
-		margin-top: 10px;
+	fxview-category-button {
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url(./resources/icons/glyph-topsites.svg);
+			background-repeat: no-repeat;
+			-moz-context-properties: fill;
+			fill: currentColor;
+			width: 16px;
+			height: 16px;
+			margin-inline-start: 12px;
+			margin-top: 10px;
+		}
+		@media (prefers-color-scheme: dark) {
+			--in-content-accent-color: #74c0ff !important;
+		}
+		&[aria-selected="true"]::before {
+			fill: var(--in-content-accent-color);
+		}
 	} 
 	fxview-category-button[name="recentbrowsing"]::before {
 		background-image: url(./resources/icons/glyph-highlights-16.svg);
