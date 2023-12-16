@@ -163,7 +163,9 @@ button, input:is([type="button"], [type="submit"]) {
 		}
 		&[checked], &:checked {
 			background-color: #0a84ff !important;
-			background-image: url(./resources/icons/check.svg) !important;
+			&:not(input[type="radio"], .radio-check) {
+				background-image: url(./resources/icons/check.svg) !important;
+			}
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
 			border: 1px solid #0000 !important;
@@ -191,7 +193,7 @@ button, input:is([type="button"], [type="submit"]) {
 			background-image: url("./resources/icons/radio.svg") !important;
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
-			background-position: -1px -1px;
+			background-position: -1px -1px !important;
 		}
 	}
 	input[type="radio"] {
