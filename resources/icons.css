@@ -422,6 +422,16 @@
 .unified-extensions-item-menu-button.subviewbutton {
 	list-style-image: url(./icons/settings.svg) !important;
 }
+/* Downloads panel */
+.download-state .downloadButton.downloadIconShow image {
+	list-style-image: url(./icons/findFile.svg) !important;
+}
+.download-state .downloadButton.downloadIconRetry image {
+	list-style-image: url(./icons/reload.svg) !important;
+}
+.download-state .downloadButton.downloadIconCancel image {
+	list-style-image: url(./icons/stop.svg) !important;
+}
 /* Tab scrollbuttons */
 #tabbrowser-arrowscrollbox {
 	--arrow-image: url(./icons/back-12.svg) !important;

@@ -73,7 +73,7 @@
 			--panel-separator-color: rgba(249, 249, 250, .1) !important;
 		}
 	}
-	button {
+	button:not(.control-button) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
@@ -95,11 +95,15 @@
 		background: var(--toolbar-field-background-color) !important;
 		border-bottom: 1px solid var(--toolbar-field-border-color) !important;
 	}
-	:not(#places) input {
+	:not(#places) input:not(#scrubber, #audio-scrubber) {
 		-moz-appearance: none !important;
-		border-radius: var(--photon-border-radius) !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
-		background-color: var(--input-bgcolor) !important;
+		&:not([type="radio"]) {
+			border-radius: var(--photon-border-radius) !important;
+		}
+		&:not([type="radio"]:checked) {
+			background-color: var(--input-bgcolor) !important;
+		}
 		@media (prefers-color-scheme: light) {
 			border-color: color-mix(in srgb, transparent 80%, currentColor) !important;
 			background-color: color-mix(in srgb, var(--input-bgcolor) 50%, transparent) !important;
@@ -111,6 +115,21 @@
 	}
 	:not(#places) input:focus {
 		outline: var(--photon-accent-dark) solid 2px !important;
+	}
+	input[type="radio"] {
+		&:checked {
+			background-color: var(--photon-accent-dark);
+			background-image: url(./icons/radio.svg);
+			fill: white !important;
+			-moz-context-properties: fill;
+			background-position: -1px -1px;
+		}
+	}
+	input:checked + .slider {
+		background-color: var(--photon-accent-dark) !important;
+		&:before {
+			background-color: white !important;
+		}
 	}
 	#sidebar-search-container search-textbox {
 		-moz-appearance: none !important;
@@ -419,6 +438,53 @@
 	}
 	#webRTC-sharingScreen-menu {
 		list-style-image: url("./icons/screen.svg") !important;
+	}
+}
+
+/* Picture in Picture */
+@-moz-document url(chrome://global/content/pictureinpicture/player.xhtml) {
+	button.control-item:enabled {
+		background-color: #111a !important;
+	}
+	#unpip, #close {
+		fill: #fff !important;
+	}
+	#unpip {
+		background-image: url("./icons/unpip.svg") !important;
+	}
+	#close {
+		background-image: url("./icons/close-pip.svg") !important;
+	}
+	#controls:not(.playing) #playpause {
+		background-image: url("./icons/play.svg") !important;
+	}
+	#controls.playing #playpause {
+		background-image: url("./icons/pause.svg") !important;
+	}
+	#controls:not(.muted) #audio {
+		background-image: url("./icons/audio.svg") !important;
+	}
+	#controls.muted #audio {
+		background-image: url("./icons/audio-mute.svg") !important;
+	}
+	body:not(:fullscreen) #fullscreen {
+		background-image: url("./icons/fullscreen.svg") !important;
+	}
+	body:fullscreen #fullscreen {
+		background-image: url("./icons/fullscreen-exit.svg") !important;
+	}
+	#seekForward {
+		background-image: url("./icons/scrub-forward.svg") !important;
+	}
+	#seekBackward {
+		background-image: url("./icons/scrub-back.svg") !important;
+	}
+	#closed-caption {
+		background-image: url("./icons/caption.svg") !important;
+		background-size: 32px !important;
+	}
+	.box {
+		background-color: #323234 !important;
 	}
 }
 /* Autoscroller */
