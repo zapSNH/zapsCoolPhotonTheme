@@ -187,20 +187,11 @@ menuitem, menu {
 .downloadTypeIcon {
 	margin-left: 8px !important;
 }
-/* Icons but too lazy to put them in icons.css */
-.download-state .downloadButton.downloadIconShow image {
-	list-style-image: url(./icons/findFile.svg) !important;
-}
-.download-state .downloadButton.downloadIconRetry image {
-	list-style-image: url(./icons/reload.svg) !important;
-}
-.download-state .downloadButton.downloadIconCancel image {
-	list-style-image: url(./icons/stop.svg) !important;
-}
 /* Bigger Buttons */
 .download-state .downloadButton {
 	width: 60px !important;
 	margin-inline-end: -4px !important;
+	border-color: transparent !important;
 }
 .download-state:not(:last-child) .downloadButton:not(:hover, :active) {
 	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 

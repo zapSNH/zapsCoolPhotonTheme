@@ -21,6 +21,12 @@ button, input:is([type="button"], [type="submit"]) {
 	&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
 	&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
 }
+.pip-wrapper {
+	--pip-border-radius-toggle: 1000px !important;
+}
+.pip-icon {
+ 	background-image: url("./resources/icons/pictureinpicture.svg") !important;
+}
 @-moz-document regexp("about:devtools-toolbox") {
 	.toolbox-tabs button {
 		border-radius: 0 !important;
@@ -142,7 +148,7 @@ button, input:is([type="button"], [type="submit"]) {
 		border-color: var(--border-color) !important;
 	}
 	
-	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input, input[type="checkbox"] {
+	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		width: 20px !important;
 		height: 20px !important;
@@ -220,12 +226,12 @@ button, input:is([type="button"], [type="submit"]) {
 @-moz-document url("about:privatebrowsing") {
 	* {
 		--in-content-page-background: #25003e !important;
-  }
+	}
 }
 @-moz-document url("about:protections") {
 	#protection-settings {
 		background-image: url("./resources/icons/settings.svg") !important;
-  }
+	}
 }
 @-moz-document url("about:newtab"), url("about:home") {
 	.search-wrapper .search-handoff-button {
@@ -719,8 +725,11 @@ button, input:is([type="button"], [type="submit"]) {
 	img[src="chrome://global/skin/icons/plus.svg"] {
 		content: url(./resources/icons/add.svg);
 	}
-	.reveal-password-checkbox {
-		background: url(./resources/icons/delete.svg) 1px 1px no-repeat !important;
+	input.reveal-password-checkbox {
+		background: url(./resources/icons/show-password.svg) 1px 1px no-repeat !important;
+	}
+	input.reveal-password-checkbox:checked {
+		background: url(./resources/icons/hide-password.svg) 1px 1px no-repeat !important;
 	}
 	.menuitem-import-browser {
 		background-image: url(./resources/icons/import.svg) !important;
@@ -763,7 +772,7 @@ button, input:is([type="button"], [type="submit"]) {
 
 /* pdf */
 /* screw regex */
-@-moz-document regexp("/.*\.pdf(?=$|[?#]).*/gi") {
+@-moz-document regexp(".+\.pdf$") {
 	:root {
 		--loading-icon: url(./resources/icons/pdfjs/loading.svg) !important;
 		--treeitem-expanded-icon: url(./resources/icons/pdfjs/treeitem-expanded.svg) !important;
@@ -805,6 +814,7 @@ button, input:is([type="button"], [type="submit"]) {
 		--secondaryToolbarButton-spreadEven-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-spreadEven.svg) !important;
 		--secondaryToolbarButton-documentProperties-icon: url(./resources/icons/pdfjs/secondaryToolbarButton-documentProperties.svg) !important;
 		--editorParams-stampAddImage-icon: url(./resources/icons/pdfjs/toolbarButton-zoomIn.svg) !important;
+		--toolbarButton-editorHighlight-icon: url(./resources/icons/pdfjs/toolbarButton-editorHighlight.svg) !important;
 	}
 	#sidebarToggle::before {
 		mask-image:var(--toolbarButton-sidebarToggle-icon) !important;
@@ -914,8 +924,29 @@ button, input:is([type="button"], [type="submit"]) {
 	#editorStampAddImage::before {
 		mask-image:var(--editorParams-stampAddImage-icon) !important;
 	}
+	#editorHighlight::before {
+		mask-image: var(--toolbarButton-editorHighlight-icon) !important;
+	}
 	.dropdownToolbarButton::after {
 		mask-image: var(--toolbarButton-menuArrow-icon) !important;
+	}
+}
+
+/* debugging */ 
+
+@-moz-document url-prefix("about:debugging") { 
+	:root {
+		--in-content-background-color: light-dark(#f9f9fa, #2a2a2e) !important;
+		--card-background-color: light-dark(#ffffff, #202023) !important;
+	}
+	@media (prefers-color-scheme: dark) {	
+		:root {
+			--button-background-color: rgba(249, 249, 250, 0.1) !important;
+			--button-hover-background-color: rgba(249, 249, 250, 0.15) !important;
+			--button-active-background-color: rgba(249,249,250,0.2) !important;
+			--sidebar-background-hover: rgba(249, 249, 250, 0.15) !important;
+			--sidebar-selected-color: rgb(69, 161, 255) !important;
+		}
 	}
 }
 /* Error page illustrations */
