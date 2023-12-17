@@ -2,30 +2,32 @@
 /* will be much less documented */
 
 /* firefox control(?) styling */
-select {
-	-moz-appearance: none;
-	background-color: light-dark(#f9f9fa, #2a2a2e);
-	background-image: url(./resources/icons/arrow-dropdown-16.svg);
-	background-repeat: no-repeat;
-	background-position: right 2px center;
-	border-radius: 2px;
-	border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
-	-moz-context-properties: fill;
-	fill: currentColor;
-	padding-inline-end: 16px;
-}
-option:checked {
-	background-color: #0a84ff;
-	color: inherit;
-}
-button, input:is([type="button"], [type="submit"]) {
-	-moz-appearance: none;
-	border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
-	padding: 2px 4px;
-	border-radius: 2px;
-	background-color: light-dark(#f9f9fa, #2a2a2e);
-	&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
-	&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
+@media (-moz-bool-pref: "uc.style-forms") {
+	select {
+		background-color: light-dark(#f9f9fa, #2a2a2e);
+		background-image: url(./resources/icons/arrow-dropdown-16.svg);
+		background-repeat: no-repeat;
+		background-position: right 2px center;
+		border-radius: 2px;
+		border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
+		-moz-context-properties: fill;
+		fill: currentColor;
+		padding-inline-end: 16px;
+		-moz-appearance: none !important;
+	}
+	option:checked {
+		background-color: #0a84ff;
+		color: inherit;
+	}
+	button, input:is([type="button"], [type="submit"]) {
+		-moz-appearance: none;
+		border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
+		padding: 2px 4px;
+		border-radius: 2px;
+		background-color: light-dark(#f9f9fa, #2a2a2e);
+		&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
+		&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
+	}
 }
 .pip-wrapper {
 	--pip-border-radius-toggle: 1000px !important;
