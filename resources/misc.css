@@ -164,6 +164,8 @@
 	}
 	#placesMenu > menu, #placesToolbar > toolbarbutton {
 	 	border-radius: var(--photon-border-radius) !important;	
+		fill: currentColor;
+		-moz-context-properties: fill;
 	}
 	
 	
@@ -671,15 +673,23 @@
 		.titlebar-color {
 			background-color: var(--toolbar-bgcolor);
 		}
-		#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
-		    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
+		@media (-moz-platform: windows) {
+			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
+			    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
+			}
+			
+			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
+			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			}
+			.titlebar-spacer {
+			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
+			}
 		}
-		#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
-		    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
-		}
-		.titlebar-spacer {
-		    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
-		}
+		@media (-moz-platform: linux) {
+			#sidebar-splitter {
+				visibility: collapse 
+			}
+		} 
 		&[uidensity="compact"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
 				height: 35px !important;
@@ -855,6 +865,43 @@
 				}
 				&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 					bottom: -2px;
+				}
+			}
+			@media (-moz-platform: linux) {
+				&:not(:-moz-lwtheme) {
+					.titlebar-button {
+						height: 16px !important;
+					}
+				}
+				&:-moz-lwtheme {
+					.titlebar-button {
+						min-height: 32px !important;
+						height: 32px !important;
+						max-height: 32px !important;
+					}
+				}
+				#nav-bar {
+					margin-inline-start: 40px;
+					margin-inline-end: 135px;
+				}
+			}
+		}
+		@media (-moz-platform: linux) {
+			#navigator-toolbox {
+				background-color: var(--toolbar-bgcolor) !important;
+			}
+			&:not(:-moz-lwtheme) {
+				.titlebar-button {
+					height: 16px !important;
+					margin-block: 8px !important;
+				}
+			}
+			&:-moz-lwtheme {
+				.titlebar-button {
+					min-height: 32px !important;
+					height: 32px !important;
+					max-height: 32px !important;
+					margin-block: 4px !important;
 				}
 			}
 		}
