@@ -5,8 +5,14 @@
 select {
 	-moz-appearance: none;
 	background-color: light-dark(#f9f9fa, #2a2a2e);
+	background-image: url(./resources/icons/arrow-dropdown-16.svg);
+	background-repeat: no-repeat;
+	background-position: right 2px center;
 	border-radius: 2px;
 	border: 1px solid light-dark(color-mix(in srgb, currentColor 40%, transparent), color-mix(in srgb, currentColor 20%, transparent));
+	-moz-context-properties: fill;
+	fill: currentColor;
+	padding-inline-end: 16px;
 }
 option:checked {
 	background-color: #0a84ff;
