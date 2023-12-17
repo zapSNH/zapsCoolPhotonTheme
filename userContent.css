@@ -360,6 +360,15 @@
 		margin-inline-end: 8px;
 		margin-top: 10px;
 	}
+	button.context-menu-button {
+		-moz-appearance: none;
+		border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
+		padding: 2px 4px;
+		border-radius: 2px;
+		background-color: light-dark(#f9f9fa, #2a2a2e);
+		&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
+		&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
+	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--newtab-background-color-secondary: #fff !important;

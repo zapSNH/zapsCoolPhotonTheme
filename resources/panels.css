@@ -96,7 +96,7 @@ menuitem, menu {
 #main-menubar > menu {
 	padding: 0 !important;
 }
-@media (-moz-platoform: linux) {
+@media (-moz-platform: linux) {
 	#main-menubar > menu {
 		padding-inline: 4px !important;
 	}

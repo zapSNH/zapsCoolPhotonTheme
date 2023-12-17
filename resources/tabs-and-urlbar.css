@@ -777,7 +777,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		top: 0;
 		right: 0;
 		background: var(--toolbar-bgcolor);
-		height: 40px
+		height: 40px;
 	}
 	:root[uidensity="touch"] .titlebar-buttonbox-container {
 		height: 44px
@@ -788,6 +788,12 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	#nav-bar {
 		margin-inline-end: 138px;
 		padding-inline-end: 40px;
+	}
+	@media (-moz-platform: linux) {
+		#nav-bar {
+			margin-inline-end: 96px;
+			padding-inline-end: 40px !important;
+		}
 	}
 	#nav-bar-customization-target {
 		margin-inline-start: 30px;
@@ -832,6 +838,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		.titlebar-button {
 			height: 32px !important;
 		}
+		@media (-moz-platform: linux) {
+			&:not(:-moz-lwtheme) {
+				.titlebar-button {
+					height: 16px !important;
+				}
+			}
+		} 
 	}
 }
 
