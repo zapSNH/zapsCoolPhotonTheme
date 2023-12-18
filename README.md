@@ -36,7 +36,7 @@ __Rolling Release (features and bugfixes):__
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
 
 __Experimental WebExtension Version (auto updates):__
-* [Firefox Nightly/Dev](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
+* [Firefox Nightly/Dev (ESR partially works)](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
 
 <details>
 	<summary>Older Versions</summary>
