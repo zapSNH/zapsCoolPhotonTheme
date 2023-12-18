@@ -15,6 +15,7 @@ Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * `svg.context-properties.content.enabled` to `true`
 * `layout.css.has-selector.enabled` to `true`
+* `layout.css.nesting.enabled` to `true`
 * `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `false`
 ____
 If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and generate a `user.js` file that you can put in your profile folder.
