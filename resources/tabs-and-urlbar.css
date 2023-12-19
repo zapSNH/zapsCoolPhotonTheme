@@ -613,7 +613,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-left: 4px !important;
 }
 /* Megabar */
-@media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
+@supports not (-moz-bool-pref("uc.reduced-megabar") or -moz-bool-pref("uc.no-megabar")) {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) {
 		z-index: 3
 	}
