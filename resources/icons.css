@@ -565,7 +565,7 @@
 #appMenu-find-button2 {
   margin-bottom: 8px !important;
 }
-@media (-moz-bool-pref: "browser.translations.enable") {
+@supports -moz-bool-pref("browser.translations.enable") {
   #appMenu-translate-button {
   	margin-bottom: 8px !important;
   }

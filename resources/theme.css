@@ -348,7 +348,7 @@ input.findbar-textbox:focus {
 		border-top: 0px !important;
 	}
 	/**/
-	@media (-moz-bool-pref: "uc.titlebar-accent.darktext") {
+	@supports -moz-bool-pref("uc.titlebar-accent.darktext") {
 		:is(:root[lwt-default-theme-in-dark-mode],
 		:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
 			#titlebar:not(:-moz-window-inactive) {
@@ -359,7 +359,7 @@ input.findbar-textbox:focus {
 			}
 		}
 	}
-	@media (-moz-bool-pref: "uc.titlebar-accent.lighttext") {
+	@supports -moz-bool-pref("uc.titlebar-accent.lighttext") {
 		:is(:root[lwt-default-theme-in-dark-mode],
 		:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
 			#titlebar:not(:-moz-window-inactive) {
@@ -425,7 +425,7 @@ input.findbar-textbox:focus {
 	}
 }
 /* Use navbar color in tab */
-@media (-moz-bool-pref: "uc.theme.tab-color-same-as-navbar") and (not (-moz-bool-pref: "uc.theme.navbar-color-same-as-tab")) {
+@supports -moz-bool-pref("uc.theme.tab-color-same-as-navbar") and (not -moz-bool-pref("uc.theme.navbar-color-same-as-tab")) {
 	:root {
 		--lwt-selected-tab-background-color: var(--toolbar-bgcolor) !important;
 		--tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
@@ -434,7 +434,7 @@ input.findbar-textbox:focus {
 	}
 }
 /* Use tab color in navbar */
-@media (-moz-bool-pref: "uc.theme.navbar-color-same-as-tab") and (not (-moz-bool-pref: "uc.theme.tab-color-same-as-navbar")) {
+@supports -moz-bool-pref("uc.theme.navbar-color-same-as-tab") and (not -moz-bool-pref("uc.theme.tab-color-same-as-navbar")) {
 	:root {
 		--toolbar-bgcolor: var(--lwt-selected-tab-background-color, var(--tab-selected-bgcolor)) !important;
 		--toolbar-color: var(--lwt-tab-text, var(--tab-selected-textcolor)) !important;
