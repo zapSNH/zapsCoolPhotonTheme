@@ -8,8 +8,8 @@ ____
 | | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | Semi-broken | ? | No Updates |
-| **120** | ✔️ | ✔️ | ? | |
-| **122** | ✔️ | ✔️ | ? | |
+| **121** | ✔️ | ✔️ | ? | |
+| **123** | ✔️ | ✔️ | ? | |
 ## Installation
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -28,11 +28,11 @@ ____
 Download the release for your version:
 
 __Static Release (stability):__
-* [Firefox 120](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v120)
+* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v121)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 
 __Rolling Release (features and bugfixes):__
-* [Firefox 120 - 121](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox 121 - 122](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
 
 __Experimental WebExtension Version (auto updates):__
@@ -43,7 +43,7 @@ __Experimental WebExtension Version (auto updates):__
 
 * [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
-* [Other Versions](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
+* [Other Versions (FF 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
 </details>
 
 _Note: Firefox versions other than the latest versions (nightly, beta/dev, and stable, but NOT esr) will not get feature updates._
