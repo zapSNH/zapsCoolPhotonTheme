@@ -7,7 +7,7 @@ ____
 #### Compatibility
 | | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | Semi-broken | ? | No Updates |
+| **115esr** | ✔️ | Semi-broken | ? | |
 | **121** | ✔️ | ✔️ | ? | |
 | **123** | ✔️ | ✔️ | ? | |
 ## Installation
@@ -34,9 +34,10 @@ __Static Release (stability):__
 __Rolling Release (features and bugfixes):__
 * [Firefox 121 - 122](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/tags/v121-v2.zip)
 
 __Experimental WebExtension Version (auto updates):__
-* [Firefox Nightly/Dev (ESR partially works)](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
+* [Firefox Nightly/Dev/ESR](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
 
 <details>
 	<summary>Older Versions</summary>
@@ -46,7 +47,7 @@ __Experimental WebExtension Version (auto updates):__
 * [Other Versions (FF 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
 </details>
 
-_Note: Firefox versions other than the latest versions (nightly, beta/dev, and stable, but NOT esr) will not get feature updates._
+_Note: Firefox versions other than the latest versions (nightly, beta/dev, stable, and esr) will not get feature updates._
 ____
 
 Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:support` and opening your profile folder/directory.
