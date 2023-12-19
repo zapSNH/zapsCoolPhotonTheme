@@ -61,15 +61,15 @@
 	list-style-image: url(./icons/extensions.svg) !important
 }
 /* Changes the tracking protection icons to Photon's */
-#tracking-protection-icon-container[data-l10n-id="tracking-protection-icon-no-trackers-detected-container"] > #tracking-protection-icon-box > #tracking-protection-icon {
+#tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
 	list-style-image: url(./icons/tracking-protection-no-trackers.svg) !important;
 	fill: var(--toolbarbutton-icon-fill) 
 }
-#tracking-protection-icon-container[data-l10n-id="tracking-protection-icon-disabled-container"] > #tracking-protection-icon-box > #tracking-protection-icon {
+#tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
 	list-style-image: url(./icons/tracking-protection-disabled.svg) !important;
 	fill: var(--toolbarbutton-icon-fill) 
 }
-#tracking-protection-icon-container[data-l10n-id="tracking-protection-icon-active-container"] > #tracking-protection-icon-box > #tracking-protection-icon {
+#tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
 	list-style-image: url(./icons/tracking-protection-animation.svg) !important
 }
 /* Changes the extension icon to Photon's */
@@ -78,7 +78,7 @@
 }
 /* Ensures that you can see the tracking protection icon in dark-mode */
 @media (prefers-color-scheme: dark) {
-	#tracking-protection-icon-container[data-l10n-id="tracking-protection-icon-active-container"] > #tracking-protection-icon-box > #tracking-protection-icon {
+	#tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
 		list-style-image: url(./icons/tracking-protection-animation-brighttext.svg) !important;
 	}
 }
