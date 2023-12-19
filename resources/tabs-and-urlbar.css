@@ -659,13 +659,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		overflow: visible !important;
 	}
 }
-@media (-moz-bool-pref: "uc.reduced-megabar") {
+@supports -moz-bool-pref("uc.reduced-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
 	}
 }
-@media (-moz-bool-pref: "uc.no-megabar") {
+@supports -moz-bool-pref("uc.no-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
@@ -762,7 +762,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-inline-start: 11px !important;
 }
 /* Bottom tabs */
-@media (-moz-bool-pref: "uc.bottom-tabs") {
+@supports -moz-bool-pref("uc.bottom-tabs") {
 	#titlebar, #PersonalToolbar {
 		order: 2 !important;
 	}
@@ -811,7 +811,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	.titlebar-spacer {
 		width: 0 !important;
 	}
-	@media (-moz-bool-pref: "uc.bottom-tabs.bookmark-on-top") {
+	@supports -moz-bool-pref("uc.bottom-tabs.bookmark-on-top") {
 		#PersonalToolbar {
 			order: 1 !important;
 		}
@@ -844,7 +844,8 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		} 
 	}
 }
-@media (-moz-bool-pref: "uc.full-width-tabs") {
+
+@supports -moz-bool-pref("uc.full-width-tabs") {
 	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
 		max-width: 100vw !important;
 	}
