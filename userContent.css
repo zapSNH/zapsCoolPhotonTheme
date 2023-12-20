@@ -232,6 +232,9 @@
 		list-style-image: url("./resources/icons/check.svg") !important;
 		fill: #2292d0 !important;
 	}
+	.back-button {
+		background-image: url("./resources/icons/back-12.svg") !important;
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
