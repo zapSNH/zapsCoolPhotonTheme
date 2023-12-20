@@ -115,6 +115,7 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background: var(--photon-accent) !important;
 			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
 			
 			#urlbar {
 				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
@@ -276,6 +277,8 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 			--sidebar-border-color: rgba(255, 255, 255, 0.1) !important;
+			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
+			
 			&:not(:-moz-window-inactive) {
 				::selection {
 					background: var(--photon-accent-dark)
@@ -348,36 +351,6 @@ input.findbar-textbox:focus {
 	}
 	#navigator-toolbox {
 		border-top: 0px !important;
-	}
-	/**/
-	@media (-moz-bool-pref: "uc.titlebar-accent.darktext") {
-		:is(:root[lwt-default-theme-in-dark-mode],
-		:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
-			#titlebar:not(:-moz-window-inactive) {
-				color: black !important;
-			}
-			:is(#TabsToolbar-customization-target):not(:-moz-window-inactive) {
-				--toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
-			}
-		}
-	}
-	@media (-moz-bool-pref: "uc.titlebar-accent.lighttext") {
-		:is(:root[lwt-default-theme-in-dark-mode],
-		:root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
-			#titlebar:not(:-moz-window-inactive) {
-				color: rgb(251, 251, 254) !important;
-			}
-			:is(#TabsToolbar-customization-target):not(:-moz-window-inactive) {
-				--toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
-			}
-		}
-	}
-  
-	/* All themes */
-	/* Use photon's default outline on themes with no border */
-	/* a relic of the past but i feel like this is important */
-	#tabbrowser-tabs[style*="--lwt-tab-line-color: rgba(0, 0, 0, 0)"] {
-		--lwt-tab-line-color: var(--photon-tab-outline) !important;
 	}
 }
 
