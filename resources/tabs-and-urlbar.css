@@ -46,14 +46,20 @@
 }
 .tab-background {
 	margin: 0 !important;
-	box-shadow: none !important
+	box-shadow: none !important;
 }
 .tabbrowser-tab, #TabsToolbar #firefox-view-button {
 	z-index: 1 !important;
 }
 .tabbrowser-tab[selected] {
 	z-index: 2 !important;
+}/*
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+	opacity: 1 !important;
 }
+:root[tabsintitlebar] #titlebar:-moz-window-inactive .tabbrowser-tab:not([selected]) {
+	opacity: 0.6;
+}*/
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
 so that the sound icon doesn't look out of place
 credits to phroton for some of this stuff */
