@@ -7,10 +7,17 @@ ____
 #### Compatibility
 | | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | Semi-broken | ? | No Updates |
+| **115esr** | ✔️ | Semi-broken | ? | |
 | **121** | ✔️ | ✔️ | ? | |
 | **123** | ✔️ | ✔️ | ? | |
 ## Installation
+There are 2 ways of installing this theme.
+* [Manually](#manually)
+* [As an Extension](#as-an-extension)
+
+### Manually
+Can be installed on all editions of Firefox. There is no auto-updating.
+
 Open `about:config` and set/create:
 * `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * `svg.context-properties.content.enabled` to `true`
@@ -29,14 +36,12 @@ Download the release for your version:
 
 __Static Release (stability):__
 * [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v121)
-* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/tags/v121-v2.zip)
 
 __Rolling Release (features and bugfixes):__
-* [Firefox 121 - 122](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
-* [Firefox Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
-
-__Experimental WebExtension Version (auto updates):__
-* [Firefox Nightly/Dev (ESR partially works)](https://github.com/zapSNH/zcpt-webextension) (follow the README.md instructions)
+* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox 122 - Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 
 <details>
 	<summary>Older Versions</summary>
@@ -46,21 +51,32 @@ __Experimental WebExtension Version (auto updates):__
 * [Other Versions (FF 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
 </details>
 
-_Note: Firefox versions other than the latest versions (nightly, beta/dev, and stable, but NOT esr) will not get feature updates._
+_Note: Firefox versions other than the latest versions (nightly, beta/dev, stable, and esr) will not get feature updates._
 ____
 
 Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:support` and opening your profile folder/directory.
 
 Rename `zapsCoolPhotonTheme-*` to `chrome`
 
-
 Make sure the directory is like this:
-* `Profiles` > `XXXXXXXX.profile` > `chrome`
+* `Profiles` > `XXXXXXXX.profile` > `chrome` > `userChrome.css` and others
 
 and not like this:
-* `Profiles` > `XXXXXXXX.profile` > `chrome` > `zapsCoolPhotonTheme-*`
+* `Profiles` > `XXXXXXXX.profile` > `chrome` > `zapsCoolPhotonTheme-*` > `userChrome.css` and others
 
 Restart Firefox
+
+### As an Extension
+Can only be installed on Firefox Developer Edition, Firefox Nightly, and Firefox ESR. Has auto-updating and a built-in configurator.
+This version is based on [Paxmod](https://github.com/numirias/paxmod).
+
+Open `about:config` and set:
+* `extensions.experiments.enabled` to `true`
+* `xpinstall.signatures.required` to `false` [(Why?)](https://github.com/numirias/paxmod#why-cant-i-install-paxmod-as-a-verified-extension-through-mozilla)
+
+Download the latest version: https://github.com/zapSNH/zcpt-webextension/releases
+
+You're done!
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
