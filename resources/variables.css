@@ -67,12 +67,11 @@ button {
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
 #urlbar-background, #searchbar, input:not([type="radio"]),
-toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item) image, 
-#identity-icon-box, #tabs-newtab-button image,
+toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item) image,
+#tabs-newtab-button image,
 menupopup, panel, #PlacesChevron *:not(.menuitem-with-favicon, .bookmark-item), #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
 button, button hbox, hbox menulist,
-/* i'm lazy */
 #urlbar :is(button, .urlbarView-action), #urlbar-go-button,
 findbar *, .bookmark-item:not(.menuitem-with-favicon), .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
@@ -82,13 +81,23 @@ tree, select {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
-.toggle-group-label:first-of-type, :root #tracking-protection-icon-container {
+.toggle-group-label:first-of-type {
 	border-end-start-radius: var(--photon-border-radius) !important;
 	border-start-start-radius: var(--photon-border-radius) !important;
 }
-.toggle-group-label:last-of-type, #page-action-buttons :last-child {
+.toggle-group-label:last-of-type{
 	border-end-end-radius: var(--photon-border-radius) !important;
 	border-start-end-radius: var(--photon-border-radius) !important;
+}
+#urlbar:not([focused]) {
+	#tracking-protection-icon-container, #identity-icon-box {
+		border-end-start-radius: var(--photon-border-radius) !important;
+		border-start-start-radius: var(--photon-border-radius) !important;
+	}
+	#page-action-buttons :last-child {
+		border-end-end-radius: var(--photon-border-radius) !important;
+		border-start-end-radius: var(--photon-border-radius) !important;
+	}
 }
 #urlbar .urlbarView-row {
 	border-radius: var(--photon-border-radius-1) !important;
