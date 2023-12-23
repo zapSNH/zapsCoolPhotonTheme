@@ -92,7 +92,7 @@ tree, select {
 	border-start-end-radius: var(--photon-border-radius) !important;
 }
 #urlbar:not([focused]) {
-	#tracking-protection-icon-container, #identity-icon-box {
+	#tracking-protection-icon-container, #identity-box.chromeUI #identity-icon-box {
 		border-end-start-radius: var(--photon-border-radius) !important;
 		border-start-start-radius: var(--photon-border-radius) !important;
 	}
