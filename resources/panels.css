@@ -41,8 +41,12 @@ menuseparator {
 		border-color: #27272B !important;
 	}
 }
+#appMenu_historyMenu, #panelMenu_bookmarksMenu {
+	padding: 0 !important;
+}
 :is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) toolbarbutton {
 	margin: 0 !important;
+	padding-inline: 22px !important;
 }
 /* Makes the menu items Photon sized and removes the rounding of the items */
 .panel-subview-body toolbarbutton,

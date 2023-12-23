@@ -5,17 +5,15 @@
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 	--urlbar-border-color: var(--arrowpanel-border-color);
 }
-@media (-moz-platform: windows) {
-	.menupopup-arrowscrollbox, richlistbox {
-		background-color: var(--arrowpanel-background) !important;
-		box-shadow: 2px 2px 2px #0006 !important;
-	}
-	menu:where([_moz-menuactive="true"]):not([disabled="true"]),
-	menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
-	#context-navigation menuitem),
-	#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
-		background: var(--button-hover-bgcolor) !important;
-	}
+.menupopup-arrowscrollbox, richlistbox {
+	background-color: var(--arrowpanel-background) !important;
+	box-shadow: 2px 2px 2px #0006 !important;
+}
+menu:where([_moz-menuactive="true"]):not([disabled="true"]),
+menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
+#context-navigation menuitem),
+#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
+	background: var(--button-hover-bgcolor) !important;
 }
 @media not (prefers-contrast) {
 	:root:-moz-lwtheme {
@@ -366,12 +364,10 @@ input.findbar-textbox:focus {
 :root[style*="background-noodles"] {
 	--urlbar-border-color: var(--tabs-border-color) !important;
 	--link-color: var(--photon-accent-light) !important;
+	--tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
 	
 	.tab-background::before {
 		--lwt-tab-line-color: #ac70ff !important;
-	}
-	.tab-background[selected] {
-		background: var(--toolbar-bgcolor) !important;
 	}
 	#nav-bar {
 		box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--tabs-border-color) !important;

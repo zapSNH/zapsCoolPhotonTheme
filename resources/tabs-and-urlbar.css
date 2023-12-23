@@ -52,6 +52,12 @@
 .tabbrowser-tab[selected] {
 	z-index: 2 !important;
 }
+#titlebar {
+	z-index: 1;
+}
+.tab-drop-indicator {
+	z-index: 3 !important;
+}
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
 	opacity: 1 !important;
 }
