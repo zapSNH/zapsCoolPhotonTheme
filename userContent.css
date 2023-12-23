@@ -664,12 +664,14 @@
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		& {
 			--fxview-contrast-border: color-mix(in srgb, currentColor 9%, transparent);
+			--fxview-border: #c4c4c5 !important;
 		}
 	}
 	:root:is(:not([style*="color"])[lwt-newtab-brighttext], [style*="--newtab-text-primary-color: rgba(251, 251, 254, 1);"][style*="--newtab-background-color: rgb(43, 42, 51);"][style*="--newtab-background-color-secondary: rgba(66, 65, 77, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"][style*="--lwt-sidebar-background-color: rgb(56, 56, 61);"][style*="--lwt-sidebar-text-color: rgba(249, 249, 250, 1);"]) {
 		& {
 			--fxview-background-color: #2a2a2e !important;
 			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
+			--fxview-border: #5f5f63 !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
