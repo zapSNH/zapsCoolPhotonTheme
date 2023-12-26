@@ -1,7 +1,7 @@
 /* Content Pages */
 
 /* firefox control(?) styling */
-@media (-moz-bool-pref: "uc.style-forms") {
+@supports -moz-bool-pref("uc.style-forms") {
 	select {
 		background-color: light-dark(#f9f9fa, #2a2a2e);
 		background-image: url(./resources/icons/arrow-dropdown-16.svg);
@@ -416,7 +416,7 @@
 			background-color: #38383d !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.newtab.background") {
+	@supports -moz-bool-pref("uc.newtab.background") {
 		body {
 			background: fixed;
 			background-image: url(./resources/background.png);	
