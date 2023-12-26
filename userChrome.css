@@ -11,3 +11,7 @@
 @import url(./resources/panels.css);
 /* Misc. stuff */
 @import url(./resources/misc.css);
+
+/* Your custom CSS files */
+/* You'll need to create customChrome.css in this folder since it doesn't exist by default */
+@import url(./customChrome.css);

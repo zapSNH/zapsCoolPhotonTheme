@@ -1258,4 +1258,15 @@ treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
 treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
   list-style-image: url(./icons/bookmark.svg) !important;
 }
+
+/* Back-Forward Menu */
+.unified-nav-back[_moz-menuactive]:-moz-locale-dir(ltr),
+.unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
+  list-style-image: url(./icons/back.svg) !important;
+}
+
+.unified-nav-forward[_moz-menuactive]:-moz-locale-dir(ltr),
+.unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
+  list-style-image: url(./icons/forward.svg) !important;
+}
 }
