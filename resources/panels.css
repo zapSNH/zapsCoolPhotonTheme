@@ -424,8 +424,11 @@ menuitem, menu {
 #protections-popup-settings-button {
 	padding-inline-end: 16px !important;
 }
-#protections-popup-siteNotWorkingView-body, .protections-popup-list {
+#protections-popup-siteNotWorkingView-body {
 	margin-inline: 11px !important;
+}
+.protections-popup-list {
+	margin-inline: 16px !important;
 }
 #protections-popup-content toolbarbutton, #protections-popup-tp-switch-breakage-fixed-link, #protections-popup-tp-switch-breakage-link {
 	padding-inline: 16px !important;
