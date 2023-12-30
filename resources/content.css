@@ -678,6 +678,9 @@
 			--in-content-accent-color: #74c0ff !important;
 		}
 	}
+	.search-container input[type="search"] {
+		background-color: var(--in-content-box-background) !important;
+	}
 	.card-container {
 		border-radius: var(--photon-primary-border-radius) !important;
 	}
@@ -717,7 +720,7 @@
 		&[aria-selected="true"]::before {
 			fill: var(--in-content-accent-color);
 		}
-	} 
+	}
 	fxview-category-button[name="recentbrowsing"]::before {
 		background-image: url(./icons/glyph-highlights-16.svg);
 	}
@@ -733,9 +736,27 @@
 	fxview-category-button[name="history"]::before {
 		background-image: url(./icons/history.svg);
 	}
+	.search-icon {
+        background-image: url(./icons/find-in-page.svg) !important;
+		fill: #939393 !important;
+		scale: -1 1;
+	}
+	.chevron-icon {
+        background-image: url(./icons/arrow-dropdown-16.svg) !important;
+	}
+	.card-container[open] .chevron-icon {
+		scale: 1 -1;
+	}
+	#fxview-tab-row-secondary-button {
+        background-image: url(./icons/close-icon2.svg) !important;
+		&[aria-haspopup] {
+        background-image: url(./icons/more.svg) !important;
+		}
+	}
+	
 	@media (-moz-platform: windows) {
 		slot {
-			font-family: "Segoe UI", sans-serif !important;
+			font-family: system-ui, serif !important;
 		}
 	}
 }
