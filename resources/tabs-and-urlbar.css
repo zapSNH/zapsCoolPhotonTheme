@@ -87,6 +87,8 @@ credits to phroton for some of this stuff */
 .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
 	position: relative !important;
 	left: 100% !important;
+	opacity: 1 !important;
+	padding: 0px !important;
 }
 .tab-icon-image:not([sharing]) {
 	opacity: 1 !important;
@@ -101,7 +103,7 @@ credits to phroton for some of this stuff */
 tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	width: calc(100% - 32px) !important;
 }
-.tabbrowser-tab:not([pinned]):has(.tab-icon-image[src]) .tab-label-container, .tabbrowser-tab[busy] .tab-label-container {
+.tabbrowser-tab:not([pinned])[image] .tab-label-container, .tabbrowser-tab[busy] .tab-label-container {
 	margin-inline-start: 21px !important;
 }
 .tabbrowser-tab:is([muted], [soundplaying], [activemedia-blocked], [crashed="true"]) .tab-label-container {
