@@ -8,7 +8,7 @@ assignees: ''
 ---
 **Prerequisites**
 <!-- Insert an x between the brackets like this: [x] -->
-- [] I have followed the installation guide
+- [ ] I have followed the installation guide
 
 **Describe the bug**
 <!-- A clear and concise description of what the bug is. (e.g. I can't hear videos with this theme) -->
