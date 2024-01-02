@@ -311,10 +311,10 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	z-index: 0;
 }
 /* :has is kinda broken: https://bugzilla.mozilla.org/show_bug.cgi?id=1792501 */
-.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
+/*.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
 .tab-stack::before, :root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
 	border-right-color: transparent !important;
-}
+}*/
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
 [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
 [style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
