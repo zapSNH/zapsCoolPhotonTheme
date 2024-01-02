@@ -1,0 +1,85 @@
+name: Bug Report
+description: File a bug report if an issue with the theme has occurred.
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Please fill out the information below.
+
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      options:
+        - label: I have followed the installation guide.
+
+  - type: textarea
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+      placeholder: (e.g. I can't hear videos with this theme)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: (e.g. I should be able to hear videos)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        Example:
+        1. Go to https://www.youtube.com/watch?v=P9702KioidU
+        2. Mute the video
+        3. I can't hear the video
+
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: |
+        (e.g. Screenshot of the lack of sound)
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Platform
+        Your device information. Please fill out the information below.
+
+  - type: input
+    attributes:
+      label: OS
+      description: Your operating system including its version number.
+      placeholder: (e.g. Windows 12, Fedora Kinoite 42)
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Browser Version
+      description: Your browser version. Can be found via Application Menu > Help > About Firefox
+      placeholder: (e.g. Firefox 123, Waterfox G6.9.0)
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Theme Version
+      description: The version of the theme you are using.
+      placeholder: (e.g. Rolling Release v123, Extension v1.0.0)
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+      placeholder: (e.g. My computer doesn't support sound output)

@@ -1,0 +1,45 @@
+name: Feature Request
+description: File a feature request you want to suggest an idea for the project.
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        Please fill out the information below.
+
+  - type: textarea
+    attributes:
+      label: Is your feature request related to a problem? Please describe.
+      description: A clear and concise description of what the problem is. If it isn't related to a problem, leave this part blank.
+      placeholder: (e.g. The theme doesn't emit enough photons. I was lied to; this isn't a photon theme as advertised.)
+
+  - type: textarea
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+      placeholder: (e.g. The theme should emit more photons by deleting the dark mode. Also, please delete ZTheme.)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the feature request.
+      placeholder: |
+        (e.g. Screenshot of the theme emitting more photons)
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Add any other context about the feature request here.
+      placeholder: (e.g. Photons are good for your mouth and ears)
+    
+  - type: checkboxes
+    attributes:
+      label: Others
+      options:
+        - label: I am able to help with the feature request.
