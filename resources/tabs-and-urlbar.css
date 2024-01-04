@@ -780,7 +780,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 
 /* Revert the all tabs button behavior */
-@media (-moz-bool-pref: "uc.revert-all-tabs-behavior") {
+@supports -moz-bool-pref("uc.revert-all-tabs-behavior") {
 	#tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
 		display: none !important;
 	}
