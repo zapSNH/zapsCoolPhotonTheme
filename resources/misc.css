@@ -673,6 +673,10 @@
 		.titlebar-color {
 			background-color: var(--toolbar-bgcolor);
 		}
+		#titlebar {
+			z-index: 0;
+		}
+		
 		@media (-moz-platform: windows) {
 			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
 			    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
@@ -681,7 +685,7 @@
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
 			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 			}
-			.titlebar-spacer {
+			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
 			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 			}
 		}
@@ -703,7 +707,7 @@
 			#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: calc(100% - 34px) !important;
 			}
-			.titlebar-spacer {
+			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
 			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 			}
 			&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
@@ -725,8 +729,10 @@
 				height: calc(100% - 46px) !important;
 			}
 			.titlebar-spacer {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 				height: 47px !important;
+			}
+			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
+			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 			}
 			&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 				bottom: 0px;
