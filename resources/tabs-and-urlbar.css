@@ -779,6 +779,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin-inline-start: 11px !important;
 }
 
+/* Revert the all tabs button behavior */
+@media (-moz-bool-pref: "uc.revert-all-tabs-behavior") {
+	#tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+		display: none !important;
+	}
+}
+
 /* Bottom tabs */
 @supports -moz-bool-pref("uc.bottom-tabs") {
 	#titlebar, #PersonalToolbar {
