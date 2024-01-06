@@ -32,6 +32,7 @@ input.findbar-textbox:focus {
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) {
 	--lwt-accent-color: #d7d7db !important;
+	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #f9f9fa !important;
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 	--arrowpanel-border-color: #cccccc !important;
@@ -88,6 +89,7 @@ input.findbar-textbox:focus {
 	@media (prefers-color-scheme: light) {
 		:is(:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]) {
 			--lwt-accent-color: #202340 !important;
+			--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 			--toolbar-bgcolor: #f9f9fa !important;
 			--button-hover-bgcolor: hsla(0,0%,80%,.5) !important;
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
@@ -168,6 +170,7 @@ input.findbar-textbox:focus {
 /* Dark theme */
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] {
 	--lwt-accent-color: #0c0c0d !important;
+	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #323234 !important;
 	--toolbar-field-background-color: #474749 !important;
 	--toolbar-field-border-color: #5a5a5c !important;
@@ -242,6 +245,7 @@ input.findbar-textbox:focus {
 		}
 		:root[style^="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"] {
 			--lwt-accent-color: #0c0c0d !important;
+			--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 			--toolbar-bgcolor: #323234 !important;
 			--toolbar-field-background-color: #474749 !important;
 			--toolbar-field-border-color: #5a5a5c !important;
