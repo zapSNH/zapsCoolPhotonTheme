@@ -12,7 +12,7 @@
 menu:where([_moz-menuactive="true"]):not([disabled="true"]),
 menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
 #context-navigation menuitem),
-#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
+#context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) .menu-iconic-icon {
 	background: var(--button-hover-bgcolor) !important;
 }
 @media not (prefers-contrast) {
