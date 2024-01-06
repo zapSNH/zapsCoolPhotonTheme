@@ -46,6 +46,9 @@
 		--photon-secondary-border-radius: 2px;
 		--content-css: 1px;
 		--photon-speed-1: 0.1s;
+		--blue-70: #003eaa;
+		--blue-80: #002275;
+		--grey-20: #ededf0;
 	}
 	@media (prefers-reduced-motion) {
 	  :root {
@@ -169,7 +172,7 @@
 			background-color: var(--in-content-button-background-active) !important;
 		}
 		&[checked], &:checked {
-			background-color: #0a84ff !important;
+			background-color: var(--blue-60) !important;
 			&:not(input[type="radio"], .radio-check) {
 				background-image: url(./icons/check.svg) !important;
 			}
@@ -184,7 +187,7 @@
 				background-color: var(--color-accent-primary-active) !important;
 			}
 			&[disabled] {
-				background-color: #0a84ff !important;
+				background-color: var(--blue-60) !important;
 				opacity: 0.5
 			}
 		}
@@ -196,7 +199,7 @@
 		height: 16px !important;
 		
 		&[selected], &:checked {
-			background-color: #0a84ff !important;
+			background-color: var(--blue-60) !important;
 			background-image: url("./icons/radio.svg") !important;
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
@@ -447,6 +450,8 @@
 	* {
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
+		--in-content-warning-container: var(--grey-20) !important;
+		--in-content-dialog-header-background: #f1f1f1;
 	}
 	listheader, richlistbox, search-textbox, .info-box-container {
 		border-radius: var(--photon-secondary-border-radius) !important;
@@ -478,11 +483,11 @@
 	}
 	checkbox:not([disabled="true"]):hover > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:hover > .radio-check, .reload-tabs-button:hover {
-		background-color: var(--blue-40) !important;
+		background-color: var(--blue-70) !important;
 	}
 	checkbox:not([disabled="true"]):active > .checkbox-check[checked],
 	radio:not([disabled="true"])[selected]:active > .radio-check, .reload-tabs-button:active {
-		background-color: var(--blue-60) !important;
+		background-color: var(--blue-80) !important;
 	}
 	.text-link:not(.sidebar-footer-link), addon-details a {
 		color: -moz-nativehyperlinktext !important;
@@ -497,7 +502,7 @@
 		list-style-image: url("./icons/find-in-page.svg") !important;
 	}
 	#category-privacy > .category-icon {
-		list-style-image: url("./icons/security-state-secure.svg") !important;
+		list-style-image: url("./icons/privacy-security.svg") !important;
 	}
 	#category-sync > .category-icon {
 		list-style-image: url("./icons/sync.svg") !important;
@@ -617,6 +622,15 @@
 	.addon-badge-private-browsing-allowed {
 		background-image: url(./icons/private-browsing.svg) !important;
 	}
+	
+	.updateSettingCrossUserWarningContainer {
+		background: var(--in-content-warning-container) !important;
+	}
+	
+	.dialogTitleBar {
+		background-color: var(--in-content-dialog-header-background) !important;
+	}
+	
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;
@@ -628,6 +642,8 @@
 			--in-content-box-border-color: #4b4b4e !important;
 			--in-content-button-background-hover: rgba(249, 249, 250, 0.15) !important;
 			--in-content-button-background-active: rgba(249,249,250,0.2) !important;
+			--in-content-warning-container: var(--grey-90-a30) !important;
+			--in-content-dialog-header-background: rgba(249,249,250,0.05);
 		}
 	}
 }
@@ -678,6 +694,10 @@
 			--in-content-accent-color: #74c0ff !important;
 		}
 	}
+	.search-container {
+		border-radius: var(--photon-secondary-border-radius) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
 	.search-container input[type="search"] {
 		background-color: var(--in-content-box-background) !important;
 	}
@@ -713,11 +733,12 @@
 			height: 16px;
 			margin-inline-start: 12px;
 			margin-top: 10px;
+			transition: var(--photon-speed-1);
 		}
 		@media (prefers-color-scheme: dark) {
 			--in-content-accent-color: #74c0ff !important;
 		}
-		&[aria-selected="true"]::before {
+		&[aria-selected="true"]:not(:hover)::before {
 			fill: var(--in-content-accent-color);
 		}
 	}
@@ -750,13 +771,13 @@
 	#fxview-tab-row-secondary-button {
         background-image: url(./icons/close-icon2.svg) !important;
 		&[aria-haspopup] {
-        background-image: url(./icons/more.svg) !important;
+			background-image: url(./icons/more.svg) !important;
 		}
 	}
 	
 	@media (-moz-platform: windows) {
 		slot {
-			font-family: system-ui, serif !important;
+			font-family: system-ui, sans-serif !important;
 		}
 	}
 }

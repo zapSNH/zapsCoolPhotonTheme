@@ -4,8 +4,8 @@
 /* If you're using a dark theme or some colors are not applying, change the stuff thats in the @media query :) */
 @-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
-	--photon-back: transparent;
-	--photon-back-hover: transparent;
+	--photon-back: rgba(255, 255, 255, 0.15);
+	--photon-back-hover: rgba(255, 255, 255, 0.2);
 	--photon-back-active: #0002;
 	--photon-back-outline: #2227;
 	--photon-back-shadow: #7771;
