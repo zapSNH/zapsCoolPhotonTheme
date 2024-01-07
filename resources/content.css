@@ -837,7 +837,7 @@
 
 /* pdf */
 /* screw regex */
-@-moz-document regexp(".+\.pdf$") {
+@-moz-document regexp(".+\.pdf(?=$|[?#]).*") {
 	:root {
 		--loading-icon: url(./icons/pdfjs/loading.svg) !important;
 		--treeitem-expanded-icon: url(./icons/pdfjs/treeitem-expanded.svg) !important;
