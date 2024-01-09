@@ -7,7 +7,7 @@ ____
 #### Compatibility
 | | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | Semi-broken | ? | |
+| **115esr** | ✔️ | ✔️ | ? | |
 | **121** | ✔️ | ✔️ | ? | |
 | **123** | ✔️ | ✔️ | ? | |
 ## Installation
