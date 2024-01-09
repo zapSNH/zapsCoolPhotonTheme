@@ -29,6 +29,9 @@ menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
 input.findbar-textbox:focus {
 	outline: 2px var(--photon-accent-dark) solid !important;
 }
+.container.infobar {
+	background-color: var(--toolbar-field-background-color) !important;
+}
 /* Light theme */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"]) {
 	--lwt-accent-color: #d7d7db !important;
@@ -213,8 +216,7 @@ input.findbar-textbox:focus {
 		--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
 	}
 	#identity-icon-box {
-		--urlbar-box-focus-bgcolor: #474749 !important
-	
+		--urlbar-box-focus-bgcolor: #474749 !important;
 	}
 	:is(.urlbar-icon,
 	#identity-box) {

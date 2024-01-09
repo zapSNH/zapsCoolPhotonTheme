@@ -1221,6 +1221,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 /* notifications */
 .container.infobar .close {
 	background-image: url(./icons/close-icon2.svg) !important;
+	-moz-context-properties: stroke !important;
+	stroke: currentColor !important;
 }
 .container.infobar .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
