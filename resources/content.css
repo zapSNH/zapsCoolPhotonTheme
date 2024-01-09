@@ -40,7 +40,7 @@
 	}
 }
 /* about and chrome stylynh */
-@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
+@-moz-document regexp("chrome:\/\/(?!devtools|browser\/content\/browser\.xhtml).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;

@@ -79,7 +79,7 @@ findbar *, .bookmark-item:not(.menuitem-with-favicon), .toolbarbutton-1, .permis
 .dialogBox, #sidebar-switcher-target, .close-icon,
 #firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span,
 :root[uidensity="compact"] #back-button .toolbarbutton-icon, #translations-panel-lang-selection menulist,
-tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
+tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:not([native]) {
 	border-radius: var(--photon-border-radius) !important;
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 }
