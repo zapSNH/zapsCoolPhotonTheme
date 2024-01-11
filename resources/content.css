@@ -46,6 +46,7 @@
 		--photon-secondary-border-radius: 2px;
 		--content-css: 1px;
 		--photon-speed-1: 0.1s;
+		--blue-60: #0060df;
 		--blue-70: #003eaa;
 		--blue-80: #002275;
 		--grey-20: #ededf0;
@@ -78,12 +79,12 @@
 			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
 			--in-content-button-background-hover: rgba(249,249,250,0.15) !important;
 			--in-content-button-background-active: rgba(249,249,250,0.25) !important;
-			--in-content-primary-button-background: #0060df !important;
-			--in-content-primary-button-background-hover: #003eaa !important;
-			--in-content-primary-button-background-active: #002275 !important;
+			--in-content-primary-button-background: var(--blue-60) !important;
+			--in-content-primary-button-background-hover: var(--blue-70) !important;
+			--in-content-primary-button-background-active: var(--blue-80) !important;
 			--in-content-table-background: #202023 !important;
-			--color-accent-primary-hover: var(--in-content-primary-button-background) !important;
-			--color-accent-primary-active: var(--in-content-primary-button-background-hover) !important;
+			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
+			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
 		}
 	}
 	.dialogBox {
