@@ -85,6 +85,7 @@
 			--in-content-table-background: #202023 !important;
 			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
+			--codec-bg-header: #4b4b4e !important;
 		}
 	}
 	.dialogBox {
@@ -143,6 +144,9 @@
 	}
 	#about-config-search {
 		background-image: url(./icons/find-in-page.svg) !important;
+	}
+	.title:has(#warningTitle) {
+		background-image: url(./icons/warning-16.svg) !important;
 	}
 	button-group button, button[role="menuitem"] {
 		border-radius: 0 !important;
@@ -517,10 +521,6 @@
 	img[src="chrome://global/skin/icons/plugin.svg"] {
 		content: url(./icons/plugin.svg) !important;
 	}
-	
-	.category[name="recent-updates"] {
-		background-image: url("./icons/category-recent.svg") !important;
-	}
 	:root .help-icon {
 		list-style-image: url("./icons/help.svg") !important;
 	}
@@ -646,6 +646,9 @@
 			--in-content-warning-container: var(--grey-90-a30) !important;
 			--in-content-dialog-header-background: rgba(249,249,250,0.05);
 		}
+		.qr-code-box:not([hidden="true"]) {
+			background-color: var(--grey-90-a30) !important;
+		}
 	}
 }
 @-moz-document url("about:addons") {
@@ -659,7 +662,7 @@
 		background-image: url(./icons/more.svg) !important
 	}
 	#help-button img {
-		content: url(./icons/help1.svg) !important;
+		content: url(./icons/help.svg) !important;
 	}
 	.category[name="discover"] {
 		background-image: url("./icons/glyph-highlights-16.svg") !important
@@ -672,6 +675,29 @@
 	}
 	.category[name="plugin"] {
 		background-image: url("./icons/plugin.svg") !important;
+	}
+	.category[name="available-updates"] {
+		background-image: url("./icons/category-available.svg") !important;
+	}
+	.category[name="recent-updates"] {
+		background-image: url("./icons/category-recent.svg") !important;
+	}
+	.disco-cta-button[action="install-addon"] {
+		background-color: var(--in-content-primary-button-background) !important;
+		background-image: url("./icons/add.svg") !important;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-position-x: 8px;
+		padding-inline-start: 32px !important;
+		color: rgb(251, 251, 254) !important;
+		fill: currentColor;
+		-moz-context-properties: fill;
+		&:hover {
+			background-color: var(--in-content-primary-button-background-hover) !important;
+		}
+		&:hover:active {
+			background-color: var(--in-content-primary-button-background-active) !important;
+		}
 	}
 }
 
