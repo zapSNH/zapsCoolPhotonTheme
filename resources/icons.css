@@ -1197,8 +1197,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	background-image: url(./icons/3rdpartycookies-disabled.svg);
 }
 #protections-popup-report-broken-site-button .toolbarbutton-icon {
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	margin-inline-start: 6px !important;
+	margin-inline-end: 8px !important;
+	margin-inline-start: 5px !important;
 	list-style-image: url(./icons/warning-16.svg) !important;
 }
 #protections-popup-report-broken-site-button,
@@ -1273,4 +1273,14 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(ltr),
 .unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
   list-style-image: url(./icons/forward.svg) !important;
+}
+/* Bookmark */
+.folder-icon {
+	list-style-image: url("./icons/folder2.svg") !important;
+}
+#editBMPanel_folderMenuList[selectedGuid="toolbar_____"], #editBMPanel_toolbarFolderItem {
+	list-style-image: url("./icons/bookmarksToolbar.svg") !important;
+}
+#editBMPanel_folderMenuList[selectedGuid="menu________"], #editBMPanel_bmRootItem {
+	list-style-image: url("./icons/bookmarksMenu.svg") !important;
 }
