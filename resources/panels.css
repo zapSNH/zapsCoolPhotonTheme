@@ -342,7 +342,13 @@ menuitem, menu {
 }
 #protections-popup-show-report-stack {
 	margin-top: -1px !important;
-	margin-bottom: -2px !important;
+	margin-bottom: -5px !important;
+}
+#protections-popup-footer .protections-popup-footer-button, #protections-popup-cookie-banner-switch {
+	padding-block: 0px !important;
+}
+#protections-popup-show-report-button {
+	margin-block: 4px !important;
 }
 #BMB_bookmarksPopup menu, menu.bookmark-item {
 	margin-inline: 0 !important;
@@ -402,7 +408,10 @@ menuitem, menu {
 	--toggle-height: 16px !important;
 }
 #moz-toggle-button::before {
+	height: 10px !important;
+	width: 10px !important;
 	background: white !important;
+	margin-inline: 2px !important;
 }
 .toggle-button[aria-pressed="true"] {
 	background: var(--photon-accent-dark) !important;
