@@ -722,7 +722,7 @@
 .all-tabs-item:has(.toolbarbutton-icon[src="chrome://branding/content/icon32.png"]) > .all-tabs-button::before {
 	content: url(chrome://branding/content/icon16.png) !important;
 }
-.all-tabs-item:has(.all-tabs-button image:not([src])) > .all-tabs-button::before {
+.all-tabs-item:has(.all-tabs-button image:not([src])) > .all-tabs-button::before, .tab-icon-image:not([src]), .tab-icon-image:-moz-broken {
 	content: url(./icons/globe1.svg) !important;
 }
 .all-tabs-item:has(.all-tabs-container-indicator image:not([src])) > .all-tabs-button::before {
@@ -731,7 +731,7 @@
 	padding-inline-start: 6px;
 	margin-top: 1px;
 }
-.tabbrowser-tab:not([image]) .tab-icon-stack:not([busy]) .tab-icon-image {
+.tabbrowser-tab:not([image], [pinned]) .tab-icon-stack:not([busy]) .tab-icon-image {
 	visibility: collapse !important;
 }
 .urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {

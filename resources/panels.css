@@ -263,15 +263,15 @@ menuitem, menu {
 	min-height: 38px !important;
 }
 /* I was stubbbbbboooooorrrrrnnnnnn */
-.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]) {
+.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 	background-color: #0074df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 }
-.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]):hover {
+.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]):hover {
 	background-color: #0a84ff !important;
 }
-.panel-footer > button:is(.primary, [slot="primary"]):not([type="menu"]):active {
+.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]):active {
 	background-color: #0064cf !important;
 }
 #editBookmarkPanelRemoveButton {
