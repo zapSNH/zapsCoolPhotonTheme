@@ -64,7 +64,7 @@
 		--in-content-page-background: #f9f9fa !important;
 		--in-content-primary-button-text-color: white !important;
 		--newtab-primary-action-background: #0a84ff !important;
-		--toggle-background-color-pressed: #0a84ff !important;
+		--toggle-background-color-pressed: var(--blue-60) !important;
 		--in-content-button-background: color-mix(in srgb, var(--grey-90) 10%, transparent) !important;
 		--in-content-button-background-hover: color-mix(in srgb, var(--grey-90) 20%, transparent) !important;
 		--in-content-button-background-active: color-mix(in srgb, var(--grey-90) 30%, transparent) !important;
@@ -379,6 +379,14 @@
 		&:hover {background-color: light-dark(color-mix(in srgb, #f9f9fa 90%, black), color-mix(in srgb, #2a2a2e 90%, white));}
 		&:active {background-color: light-dark(color-mix(in srgb, #f9f9fa 70%, black), color-mix(in srgb, #2a2a2e 70%, white));}
 	}
+	#searchSubmit {
+		background-image: url("./icons/forward.svg") !important;
+		border-start-end-radius: var(--photon-primary-border-radius) !important;
+		border-end-end-radius: var(--photon-primary-border-radius) !important;
+	}
+	.historyIcon {
+		background-image: url("./icons/history.svg") !important;
+	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--newtab-background-color-secondary: #fff !important;
@@ -664,23 +672,40 @@
 	#help-button img {
 		content: url(./icons/help.svg) !important;
 	}
-	.category[name="discover"] {
-		background-image: url("./icons/glyph-highlights-16.svg") !important
+	.category {
+		&[name="discover"] {
+			background-image: url("./icons/glyph-highlights-16.svg") !important
+		}
+		&[name="extension"] {
+			background-image: url("./icons/extensions.svg") !important;
+		}
+		&[name="theme"] {
+			background-image: url("./icons/personalize.svg") !important;
+		}
+		&[name="plugin"] {
+			background-image: url("./icons/plugin.svg") !important;
+		}
+		&[name="available-updates"] {
+			background-image: url("./icons/category-available.svg") !important;
+		}
+		&[name="recent-updates"] {
+			background-image: url("./icons/category-recent.svg") !important;
+		}
 	}
-	.category[name="extension"] {
-		background-image: url("./icons/extensions.svg") !important;
-	}
-	.category[name="theme"] {
-		background-image: url("./icons/personalize.svg") !important;
-	}
-	.category[name="plugin"] {
-		background-image: url("./icons/plugin.svg") !important;
-	}
-	.category[name="available-updates"] {
-		background-image: url("./icons/category-available.svg") !important;
-	}
-	.category[name="recent-updates"] {
-		background-image: url("./icons/category-recent.svg") !important;
+	
+	.card-heading-image {
+		addon-card[addon-id="default-theme@mozilla.org"] & {
+			content: url("./icons/theme-previews/default-theme.svg") !important;
+		}
+		addon-card[addon-id="firefox-compact-dark@mozilla.org"] & {
+			content: url("./icons/theme-previews/firefox-compact-dark.svg") !important;
+		}
+		addon-card[addon-id="firefox-compact-light@mozilla.org"] & {
+			content: url("./icons/theme-previews/firefox-compact-light.svg") !important;
+		}
+		addon-card[addon-id="firefox-alpenglow@mozilla.org"] & {
+			content: url("./icons/theme-previews/firefox-alpenglow.svg") !important;
+		}
 	}
 	.disco-cta-button[action="install-addon"] {
 		background-color: var(--in-content-primary-button-background) !important;
