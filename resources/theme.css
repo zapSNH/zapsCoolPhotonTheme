@@ -7,7 +7,7 @@
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 	--urlbar-border-color: var(--arrowpanel-border-color);
 }
-.menupopup-arrowscrollbox, richlistbox {
+.menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 	background-color: var(--arrowpanel-background) !important;
 	box-shadow: 2px 2px 2px #0006 !important;
 }
