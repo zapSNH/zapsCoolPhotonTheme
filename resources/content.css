@@ -145,7 +145,7 @@
 	#about-config-search {
 		background-image: url(./icons/find-in-page.svg) !important;
 	}
-	.title:has(#warningTitle) {
+	.title:has(#warningTitle), body.certerror .title {
 		background-image: url(./icons/warning-16.svg) !important;
 	}
 	button-group button, button[role="menuitem"] {
