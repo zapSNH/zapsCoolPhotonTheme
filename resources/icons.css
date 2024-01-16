@@ -36,17 +36,14 @@
 		fill: #12bc00 !important;
 	}
 }
-#identity-box.notSecure #identity-icon {
+#identity-box:is(.notSecure, .httpsOnlyErrorPage, .mixedActiveContent, .mixedActiveBlocked)[pageproxystate] #identity-icon {
 	list-style-image: url(./icons/large-connection-mixed-active-loaded.svg) !important;
 }
-#identity-box.certErrorPage #identity-icon {
+#identity-box:is(.certErrorPage, .certUserOverridden, .mixedDisplayContent, .weakCipher, .mixedDisplayContentLoadedActiveBlocked)[pageproxystate] #identity-icon {
 	list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
 }
 #identity-box.unknownIdentity #identity-icon {
 	list-style-image: url(./icons/info.svg) !important;
-}
-#identity-box.mixedDisplayContent #identity-icon {
-	list-style-image: url(./icons/large-connection-mixed-passive-loaded.svg) !important;
 }
 /* Changes the search icon to Photon's */
 #identity-box.localResource > #identity-icon-box > #identity-icon,
