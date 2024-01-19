@@ -82,6 +82,7 @@
 			--in-content-primary-button-background: var(--blue-60) !important;
 			--in-content-primary-button-background-hover: var(--blue-70) !important;
 			--in-content-primary-button-background-active: var(--blue-80) !important;
+			--in-content-box-info-background: var(--grey-90-a30) !important;
 			--in-content-table-background: #202023 !important;
 			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
@@ -466,7 +467,7 @@
 		--in-content-warning-container: var(--grey-20) !important;
 		--in-content-dialog-header-background: #f1f1f1;
 	}
-	listheader, richlistbox, search-textbox, .info-box-container {
+	listheader, richlistbox, search-textbox, .info-box-container, #migrationWizardDialog {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -505,6 +506,27 @@
 	.text-link:not(.sidebar-footer-link), addon-details a {
 		color: -moz-nativehyperlinktext !important;
 	}
+	
+	#migrationWizardDialog {
+		background: var(--in-content-page-background) !important;
+	}
+	.expand-collapse-icon {
+		content: url("./icons/zoom-in.svg") !important;
+		
+		details[open] & {
+			content: url("./icons/zoom-out.svg") !important;
+		}
+	}
+	.dropdown-icon {
+		content: url("./icons/arrow-dropdown-16.svg") !important;
+	}
+	#pane-experimental-search-results-header, #pane-experimental-subtitle {
+		background-image: url("./icons/warning-16.svg") !important;
+	}
+	.content-blocking-warning-image {
+		list-style-image: url("./icons/warning-16.svg") !important;
+	}
+	
 	#category-general > .category-icon {
 		list-style-image: url("./icons/settings.svg") !important;
 	}
@@ -558,10 +580,13 @@
 	.extra-information-label.fingerprinters-option {
 		list-style-image: url(./icons/fingerprinters-disabled.svg) !important;
 	}
+	
+	.content-blocking-checkbox .checkbox-icon {
+		display: block !important;
+	}
     #contentBlockingTrackingProtectionCheckbox > .checkbox-label-box {
         list-style-image: url("./icons/tracker-image.svg") !important;
     }
-  
 	#contentBlockingTrackingProtectionCheckbox[checked] > .checkbox-label-box {
         list-style-image: url("./icons/tracker-image-disabled.svg") !important;
 	}
@@ -582,11 +607,11 @@
         list-style-image: url("./icons/cryptominers-disabled.svg") !important;
 	}
 
-	#contentBlockingFingerprintersCheckbox > .checkbox-label-box {
+	:is(#contentBlockingFingerprintersCheckbox, #contentBlockingFingerprintingProtectionCheckbox) > .checkbox-label-box {
         list-style-image: url("./icons/fingerprinters.svg") !important;
 	}
-
-	#contentBlockingFingerprintersCheckbox[checked] > .checkbox-label-box {
+	
+	:is(#contentBlockingFingerprintersCheckbox, #contentBlockingFingerprintingProtectionCheckbox)[checked] > .checkbox-label-box {
         list-style-image: url("./icons/fingerprinters-disabled.svg") !important;
 	}
 	
@@ -772,6 +797,9 @@
 		width: 16px;
 		height: 16px;
 		translate: -28px 10px
+	}
+	.icon[src="chrome://global/skin/icons/plus.svg"] {
+		content: url("./icons/add.svg") !important;
 	}
 	fxview-category-button {
 		&::before {
