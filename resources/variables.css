@@ -85,7 +85,7 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 	border-end-start-radius: var(--photon-border-radius) !important;
 	border-start-start-radius: var(--photon-border-radius) !important;
 }
-.toggle-group-label:last-of-type{
+.toggle-group-label:last-of-type {
 	border-end-end-radius: var(--photon-border-radius) !important;
 	border-start-end-radius: var(--photon-border-radius) !important;
 }
@@ -94,7 +94,7 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 		border-end-start-radius: var(--photon-border-radius) !important;
 		border-start-start-radius: var(--photon-border-radius) !important;
 	}
-	#page-action-buttons :last-child {
+	#page-action-buttons > :last-child {
 		border-end-end-radius: var(--photon-border-radius) !important;
 		border-start-end-radius: var(--photon-border-radius) !important;
 	}
