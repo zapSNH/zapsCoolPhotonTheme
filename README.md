@@ -1,5 +1,5 @@
 # Zap's Cool Photon Theme
-A userChrome designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
+A userChrome theme for Firefox designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
 ____
@@ -10,6 +10,7 @@ ____
 | **115esr** | ✔️ | ✔️ | ? | |
 | **121** | ✔️ | ✔️ | ? | |
 | **123** | ✔️ | ✔️ | ? | |
+
 ## Installation
 There are 2 ways of installing this theme.
 * [Manually](#manually)
@@ -18,14 +19,16 @@ There are 2 ways of installing this theme.
 ### Manually
 Can be installed on all editions of Firefox. There is no auto-updating.
 
-Open `about:config` and set/create:
-* `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
-* `svg.context-properties.content.enabled` to `true`
-* `layout.css.has-selector.enabled` to `true`
-* `layout.css.nesting.enabled` to `true`
-* `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` to `false`
+Open `about:config` and set:
+| Pref | Value | Description |
+|:-:|:-:|:-:|
+| `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization |
+| `svg.context-properties.content.enabled` | `true` | Required in order to make the icons colored correctly |
+| `layout.css.has-selector.enabled` | `true` | `true` by default in FF 121+. Required for some functionality to work. |
+| `layout.css.nesting.enabled` | `true` | `true` by default in FF 117+. Required for theming and some other stuff to work. |
+| `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon |
 ____
-If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and generate a `user.js` file that you can put in your profile folder.
+If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and click `Export Options` to generate a `user.js` file that you can put in your profile folder.
 
 Make sure to delete it after you start Firefox so that it doesn't override any changes you make in `about:config`.
 
@@ -35,7 +38,7 @@ ____
 Download the release for your version:
 
 __Static Release (stability):__
-* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v121)
+* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v121) **(recommended)**
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/tags/v121-v2.zip)
 
 __Rolling Release (features and bugfixes):__
@@ -51,10 +54,9 @@ __Rolling Release (features and bugfixes):__
 * [Other Versions (FF 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
 </details>
 
-_Note: Firefox versions other than the latest versions (nightly, beta/dev, stable, and esr) will not get feature updates._
 ____
 
-Extract the zip and move `zapsCoolPhotonTheme-*` to your profile which you can find by going to `about:support` and opening your profile folder/directory.
+Extract the zip and move `zapsCoolPhotonTheme-*` to your profile folder which you can find by going to `about:support` and opening your profile folder/directory.
 
 Rename `zapsCoolPhotonTheme-*` to `chrome`
 
@@ -64,7 +66,9 @@ Make sure the directory is like this:
 and not like this:
 * `Profiles` > `XXXXXXXX.profile` > `chrome` > `zapsCoolPhotonTheme-*` > `userChrome.css` and others
 
-Restart Firefox
+Restart Firefox.
+
+____
 
 ### As an Extension
 Can only be installed on Firefox Developer Edition, Firefox Nightly, and Firefox ESR. Has auto-updating and a built-in configurator.
