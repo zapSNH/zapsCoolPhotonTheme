@@ -57,13 +57,13 @@
 }
 .tab-drop-indicator {
 	z-index: 3 !important;
-}
+}/*
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
 	opacity: 1 !important;
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .tabbrowser-tab:not([selected]) {
 	opacity: 0.69;
-}
+}*/
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
 so that the sound icon doesn't look out of place
 credits to phroton for some of this stuff */
