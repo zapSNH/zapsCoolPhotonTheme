@@ -243,6 +243,9 @@
 	.back-button {
 		background-image: url("./icons/back-12.svg") !important;
 	}
+	.menu-button {
+		background-image: url("./icons/more.svg") !important;
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -466,6 +469,10 @@
 		--in-content-primary-button-text-color: white !important;
 		--in-content-warning-container: var(--grey-20) !important;
 		--in-content-dialog-header-background: #f1f1f1;
+		--link-color: #45a1ff !important;
+	}
+	a {
+		text-decoration: none !important;
 	}
 	listheader, richlistbox, search-textbox, .info-box-container, #migrationWizardDialog {
 		border-radius: var(--photon-secondary-border-radius) !important;
