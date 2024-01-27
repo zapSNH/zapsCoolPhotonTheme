@@ -927,8 +927,8 @@
 @-moz-document regexp(".+\.pdf(?=$|[?#]).*") {
 	:root {
 		--loading-icon: url(./icons/pdfjs/loading.svg) !important;
-		--treeitem-expanded-icon: url(./icons/pdfjs/treeitem-expanded.svg) !important;
-		--treeitem-collapsed-icon: url(./icons/pdfjs/treeitem-collapsed.svg) !important;
+		/*--treeitem-expanded-icon: url(./icons/pdfjs/treeitem-expanded.svg) !important;
+		--treeitem-collapsed-icon: url(./icons/pdfjs/treeitem-collapsed.svg) !important;*/
 		--toolbarButton-editorFreeText-icon: url(./icons/pdfjs/toolbarButton-editorFreeText-1.svg) !important;
 		--toolbarButton-editorInk-icon: url(./icons/pdfjs/toolbarButton-editorInk-1.svg) !important;
 		--toolbarButton-editorStamp-icon: url(./icons/pdfjs/toolbarButton-editorStamp-1.svg) !important;
