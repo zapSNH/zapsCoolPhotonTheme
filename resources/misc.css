@@ -5,11 +5,28 @@
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 	tree {
-	  background: var(--input-bgcolor) !important;
-	  border: 1px solid var(--input-border-color) !important;
+		background: var(--input-bgcolor) !important;
+		border: 1px solid var(--input-border-color) !important;
 	}
 	treechildren::-moz-tree-row(selected) {
-	  background: var(--photon-accent) !important;
+		background: var(--photon-accent) !important;
+	}
+	#customization-lwtheme-link {
+		border-radius: var(--photon-border-radius);
+		color: light-dark(rgb(21, 20, 26), rgb(251, 251, 254)) !important;
+		text-decoration: none !important;
+		font-weight: 400 !important;
+		background-color: var(--button-bgcolor);
+		padding: .55em 1em .45em 1em;
+		min-height: var(--size-item-large);
+		font-weight: 600;
+		min-width: 0;
+		&:hover {
+			background-color: var(--button-hover-bgcolor) !important;
+		}
+		&:hover:active {
+			background-color: var(--button-active-bgcolor) !important;
+		}
 	}
 }
 
@@ -139,6 +156,9 @@
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		background: var(--button-bgcolor) !important;
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+	}
+	.icon[src="chrome://global/skin/icons/reload.svg"] {
+		content: url(./icons/reload.svg) !important;
 	}
 }
 
