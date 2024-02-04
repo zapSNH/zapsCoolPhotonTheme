@@ -761,7 +761,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #urlbar-zoom-button .toolbarbutton-text {
 	padding-inline: 4px !important;
 }
-#urlbar-zoom-button:hover{
+#urlbar-zoom-button:hover {
 	background-color: color-mix(in srgb, currentColor 25%, transparent) !important;
 }
 #urlbar-zoom-button:hover:active {

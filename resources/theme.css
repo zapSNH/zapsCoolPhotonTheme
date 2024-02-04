@@ -27,8 +27,12 @@ menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
 input.findbar-textbox:focus {
 	outline: 2px var(--photon-accent-dark) solid !important;
 }
-.container.infobar {
+.infobar {
 	background-color: var(--toolbar-field-background-color) !important;
+	border: none !important;
+}
+::before {
+	background-image: unset !important;
 }
 .identity-box-button:not(:hover, :active, [open]) {
 	background-color: transparent !important;
