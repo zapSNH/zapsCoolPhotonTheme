@@ -31,9 +31,6 @@ input.findbar-textbox:focus {
 	background-color: var(--toolbar-field-background-color) !important;
 	border: none !important;
 }
-::before {
-	background-image: unset !important;
-}
 .identity-box-button:not(:hover, :active, [open]) {
 	background-color: transparent !important;
 }
