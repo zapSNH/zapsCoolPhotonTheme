@@ -1216,14 +1216,18 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	list-style-image: url(./icons/cryptominers.svg) !important;
 }
 /* notifications */
-.container.infobar .close {
+.container .close {
 	background-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: stroke !important;
 	stroke: currentColor !important;
 }
-.container.infobar .icon::after {
+.container .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
 }
+.icon[src="chrome://global/skin/icons/info-filled.svg"] {
+	content: url(./icons/info-color.svg) !important;
+}
+
 /* Library/Sidebar icons */
 /* https://gist.github.com/MrOtherGuy/8816d7b388200119279da6f735539acb */
 /* Folder Icon */
