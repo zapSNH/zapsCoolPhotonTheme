@@ -397,6 +397,9 @@
 	.historyIcon {
 		background-image: url("./icons/history.svg") !important;
 	}
+	.top-site-outer .top-site-inner > a {
+		padding: 0 !important;
+	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--newtab-background-color-secondary: #fff !important;
