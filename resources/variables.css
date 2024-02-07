@@ -99,7 +99,7 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 		border-start-end-radius: var(--photon-border-radius) !important;
 	}
 }
-#urlbar .urlbarView-row {
+#urlbar .urlbarView-row, screenshots-buttons, .tab-preview-container {
 	border-radius: var(--photon-border-radius-1) !important;
 }
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,

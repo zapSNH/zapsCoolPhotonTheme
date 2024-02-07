@@ -15,12 +15,12 @@
 		border-radius: var(--photon-border-radius);
 		color: light-dark(rgb(21, 20, 26), rgb(251, 251, 254)) !important;
 		text-decoration: none !important;
-		font-weight: 400 !important;
 		background-color: var(--button-bgcolor);
 		padding: .55em 1em .45em 1em;
 		min-height: var(--size-item-large);
 		font-weight: 600;
 		min-width: 0;
+		cursor: default !important;
 		&:hover {
 			background-color: var(--button-hover-bgcolor) !important;
 		}
@@ -90,7 +90,7 @@
 			--panel-separator-color: rgba(249, 249, 250, .1) !important;
 		}
 	}
-	button:not(.control-button) {
+	button:not(.control-button, .preview-button) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;

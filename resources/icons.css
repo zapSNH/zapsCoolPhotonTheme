@@ -1281,4 +1281,13 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 #editBMPanel_folderMenuList[selectedGuid="menu________"], #editBMPanel_bmRootItem {
 	list-style-image: url("./icons/bookmarksMenu.svg") !important;
 }
+/* Screenshots */
+img {
+	#cancel > & {
+		content: url("./icons/close-icon2.svg") !important;
+	}
+	#retry > & {
+		content: url("./icons/reload.svg") !important;
+	}
+}
 }
