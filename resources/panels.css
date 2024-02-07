@@ -564,4 +564,9 @@ tooltip {
 		background: color-mix(in srgb, currentColor 100%, transparent) !important;
 	}
 }
+
+/* Tab previews */
+.tab-preview-container {
+	background-color: var(--arrowpanel-background) !important;
+}
 }
