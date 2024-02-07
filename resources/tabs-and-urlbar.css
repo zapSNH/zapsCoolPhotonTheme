@@ -870,6 +870,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	}
 }
 
+/* Full width tabs */
 @media (-moz-bool-pref: "uc.full-width-tabs") {
 	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
 		max-width: 100vw !important;
