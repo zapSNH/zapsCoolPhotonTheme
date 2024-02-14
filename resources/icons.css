@@ -729,9 +729,6 @@
 .tabbrowser-tab:not([image], [pinned]) .tab-icon-stack:not([busy]) .tab-icon-image {
 	visibility: collapse !important;
 }
-.urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {
-	content: url(./icons/edit-paste.svg) !important;
-}
 /* URLBar icons */
 .searchbar-search-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important;
@@ -754,12 +751,22 @@
 	list-style-image: url(./icons/login.svg) !important;
 }
 .urlbarView-favicon[src="chrome://browser/skin/history.svg"] {
-	content: url(./icons/history.svg) !important;/*
-	background-image: url(./icons/history.svg) !important;*/;
+	content: url(./icons/history.svg) !important;
 }
 .urlbarView-favicon[src="chrome://global/skin/icons/search-glass.svg"] {
-	content: url(./icons/find-in-page.svg) !important;/*
-	background-image: url(./icons/find-in-page.svg) !important;*/
+	content: url(./icons/find-in-page.svg) !important;
+}
+.urlbarView-favicon[src="chrome://browser/skin/quickactions.svg"] {
+	content: url(./icons/quick-actions.svg) !important;
+}
+.urlbarView-favicon[src="chrome://browser/skin/tab.svg"] {
+	content: url(./icons/tab.svg) !important;
+}
+.urlbarView-favicon[src="chrome://browser/skin/bookmark.svg"] {
+	content: url(./icons/bookmark.svg) !important;
+}
+.urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {
+	content: url(./icons/edit-paste.svg) !important;
 }
 #translations-button-locale {
 	margin: 0px !important;
@@ -778,19 +785,19 @@
 	-moz-context-properties: stroke !important;
 	stroke: var(--urlbar-box-text-color) !important;
 }
-[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
+.urlbarView-favicon-img[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
 	content: url(./icons/extensions.svg) !important;
 }
-[src="chrome://global/skin/icons/settings.svg"] {
+.urlbarView-favicon-img[src="chrome://global/skin/icons/settings.svg"] {
 	content: url(./icons/settings.svg) !important;
 }
-[src="chrome://global/skin/icons/print.svg"] {
+.urlbarView-favicon-img[src="chrome://global/skin/icons/print.svg"] {
 	content: url(./icons/print1.svg) !important;
 }
-[src="chrome://browser/skin/downloads/downloads.svg"] {
+.urlbarView-favicon-img[src="chrome://browser/skin/downloads/downloads.svg"] {
 	content: url(./icons/download-icons.svg#arrow-with-bar) !important;
 }
-[src="chrome://devtools/skin/images/open-inspector.svg"] {
+.urlbarView-favicon-img[src="chrome://devtools/skin/images/open-inspector.svg"] {
 	content: url(./icons/developer.svg) !important;
 }
 .urlbarView-row[pinned] .urlbarView-type-icon {
@@ -802,6 +809,9 @@
 }
 .urlbarView-row[type="bookmark"] .urlbarView-type-icon {
 	background: url(./icons/bookmark-12.svg) !important;
+}
+.urlbarView-button-menu {
+	background-image: url("./icons/more.svg") !important;
 }
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
