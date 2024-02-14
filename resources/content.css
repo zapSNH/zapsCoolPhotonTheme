@@ -177,10 +177,10 @@
 		appearance: none !important;
 		background-color: var(--in-content-button-background) !important;
 		border: 1px solid color-mix(in srgb, currentColor 9%, transparent) !important;
-		&:hover {
+		&:hover, checkbox:hover & {
 			background-color: var(--in-content-button-background-hover) !important;
 		}
-		&:hover:active {
+		&:hover:active, checkbox:hover:active & {
 			background-color: var(--in-content-button-background-active) !important;
 		}
 		&[checked], &:checked {
@@ -479,6 +479,7 @@
 		--in-content-warning-container: var(--grey-20) !important;
 		--in-content-dialog-header-background: #f1f1f1;
 		--link-color: #45a1ff !important;
+		--space-xsmall: 0.2rem !important;
 	}
 	a {
 		text-decoration: none !important;
@@ -1216,7 +1217,7 @@
     --uc-error-llustration: url(./icons/error-server-not-found.svg);
   }
 }
-@-moz-document url-prefix("about:neterror?e=blockedByPolicy"), url-prefix("about:neterror?e=deniedPortAccess"), url-prefix("about:neterror?e=malformedURI") {
+@-moz-document url-prefix("about:neterror?e=blockedByPolicy"), url-prefix("about:neterror?e=deniedPortAccess"), url-prefix("about:neterror?e=malformedURI"), url-prefix("about:neterror?e=unknownProtocolFound") {
   :root {
     --uc-error-llustration: url(./icons/error-malformed-url.svg);
   }
