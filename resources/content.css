@@ -296,6 +296,7 @@
 	.top-site-outer {
 		padding: 0 !important;
 		padding-bottom: 20px !important;
+		margin-block-end: 0 !important;
 	}
 	.top-site-outer:hover, .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
 		background-color: transparent !important;
@@ -371,7 +372,7 @@
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: -4px 2px;
+		translate: 6px 2px;
 	}
 	.top-site-outer:not(:hover, .active) .context-menu-button {
 		width: 8px !important;
@@ -467,7 +468,6 @@
 			margin-inline: -8px
 		}
 		.top-site-outer .context-menu-button {
-			transition-delay: 333ms !important;
 			translate: 0px 8px;
 		}
 	}
@@ -713,6 +713,9 @@
 	}
 	#help-button img {
 		content: url(./icons/help.svg) !important;
+	}
+	.addon-permissions-list > li.permission-checked {
+		background-image: url("./icons/check.svg") !important;;
 	}
 	.category {
 		&[name="discover"] {
