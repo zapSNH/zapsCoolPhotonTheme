@@ -673,7 +673,29 @@
 	.addon-badge-private-browsing-allowed {
 		background-image: url(./icons/private-browsing.svg) !important;
 	}
-	
+	#homeContentsGroup .checkbox-icon {
+		opacity: 0;
+	}
+	#homeContentsGroup checkbox .checkbox-label-box::before {
+		-moz-context-properties: fill, stroke;
+		fill: currentColor;
+		stroke: currentColor;
+		margin-top: 4px;
+		position: absolute;
+	}
+	#homeContentsGroup checkbox[src="chrome://global/skin/icons/search-glass.svg"] .checkbox-label-box::before {
+		content: url("./icons/find-in-page.svg") !important;
+	}
+	#homeContentsGroup checkbox[src="chrome://browser/skin/topsites.svg"] .checkbox-label-box::before {
+		content: url("./icons/glyph-topsites.svg") !important;
+	}
+	#homeContentsGroup checkbox[src="chrome://global/skin/icons/pocket.svg"] .checkbox-label-box::before {
+		content: url("./icons/pocket.svg") !important;
+	}
+	#homeContentsGroup checkbox[src="chrome://global/skin/icons/highlights.svg"] .checkbox-label-box::before {
+		content: url("./icons/glyph-highlights-16.svg") !important;
+		width: 16px;
+	}
 	.updateSettingCrossUserWarningContainer {
 		background: var(--in-content-warning-container) !important;
 	}
@@ -681,7 +703,22 @@
 	.dialogTitleBar {
 		background-color: var(--in-content-dialog-header-background) !important;
 	}
-	
+	.dialogTitleBar.fxaPairDeviceIcon {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+		height: 40px !important;
+		padding-inline: 1px !important;
+		background-image: none !important;
+	}
+	.dialogTitleBar.fxaPairDeviceIcon .dialogTitle {
+		background: url("chrome://browser/content/logos/fxa-logo.svg") !important;
+		height: 80px !important;
+		width: 80px !important;
+		min-width: 80px !important;
+		max-width: 80px !important;
+		margin: auto !important;
+		translate: 14px -40px !important;
+	}
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;
