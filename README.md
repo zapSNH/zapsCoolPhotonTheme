@@ -8,8 +8,8 @@ ____
 | | Windows 10/11 | Linux (GNOME 45) | MacOS | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ? | |
-| **122** | ✔️ | ✔️ | ? | |
-| **124** | ✔️ | ✔️ | ? | |
+| **123** | ✔️ | ✔️ | ? | |
+| **125** | ✔️ | ✔️ | ? | |
 
 ## Installation
 There are 2 ways of installing this theme.
@@ -39,7 +39,6 @@ Download the release for your version:
 
 __Static Release (stability):__
 * [Firefox 122](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v122) **(recommended)**
-* [Firefox 121](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v121)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v122) (download the ESR version)
 
 __Rolling Release (features and bugfixes):__
