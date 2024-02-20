@@ -217,7 +217,9 @@
 	.download-state .downloadButton:hover::before {
 		background: color-mix(in srgb, currentColor 10%, transparent);
 	}
-	
+	richlistbox:not(#PopupSearchAutoComplete richlistbox) {
+		background-color: var(--organizer-content-background) !important;
+	}
 	#placesToolbox menu {
 		padding-block: 6px !important;
 	}
