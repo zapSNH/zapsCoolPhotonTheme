@@ -821,6 +821,7 @@
 			--fxview-background-color: #2a2a2e !important;
 			--newtab-background-color-secondary: rgba(249, 249, 250, 0.1) !important;
 			--fxview-border: #5f5f63 !important;
+			--color-accent-primary: #74c0ff !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -843,17 +844,6 @@
 	}
 	.category-nav-header {
 		padding-inline-start: 32px !important;
-	}
-	.category-nav-header::before {
-		content: "";
-		position: absolute;
-		background-image: url(./icons/firefox-view.svg);
-		background-repeat: no-repeat;
-		-moz-context-properties: fill;
-		fill: currentColor;
-		width: 16px;
-		height: 16px;
-		translate: -28px 10px
 	}
 	.icon[src="chrome://global/skin/icons/plus.svg"] {
 		content: url("./icons/add.svg") !important;
@@ -894,6 +884,27 @@
 	fxview-category-button[name="history"]::before {
 		background-image: url(./icons/history.svg);
 	}
+	/* Firefox 125 and above */
+	.page-nav-icon {
+		width: 16px !important;
+		height: 16px !important;
+	}
+	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentbrowsing.svg"] {
+		content: url(./icons/glyph-highlights-16.svg);
+	}
+	.page-nav-icon[src="chrome://browser/content/firefoxview/view-opentabs.svg"] {
+		content: url(./icons/tab.svg);
+	}
+	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentlyclosed.svg"] {
+		content: url(./icons/tab-close.svg);
+	}
+	.page-nav-icon[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"] {
+		content: url(./icons/sync.svg);
+	}
+	.page-nav-icon[src="chrome://browser/content/firefoxview/view-history.svg"] {
+		content: url(./icons/history.svg);
+	}
+	
 	.search-icon {
         background-image: url(./icons/find-in-page.svg) !important;
 		fill: #939393 !important;
