@@ -39,7 +39,7 @@ Download the release for your version:
 
 __Static Release (stability):__
 * [Firefox v123](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v123) **(recommended)**
-* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v122) (download the ESR version)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v123) (download the ESR version)
 
 __Rolling Release (features and bugfixes):__
 * [Firefox v123](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
