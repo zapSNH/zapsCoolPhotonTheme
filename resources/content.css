@@ -57,8 +57,9 @@
 	  }
 	}
 	* {
+		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
-		--brand-color-accent: light-dark(#0a84ff, #0a84ff) !important;
+		--brand-color-accent: #0a84ff !important;
 		--brand-color-accent-hover: color-mix(in srgb, var(--brand-color-accent) 80%, currentColor) !important;
 		--brand-color-accent-active: color-mix(in srgb, var(--brand-color-accent) 60%, currentColor) !important;
 		--in-content-page-background: #f9f9fa !important;
