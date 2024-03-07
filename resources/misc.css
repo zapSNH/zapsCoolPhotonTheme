@@ -717,6 +717,9 @@
 			#sidebar-splitter {
 				visibility: collapse 
 			}
+			.titlebar-buttonbox-container {
+				margin-block: 5px;
+			}
 		} 
 		&[uidensity="compact"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
