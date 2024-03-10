@@ -874,6 +874,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 			}
 		} 
 	}
+	.titlebar-button {
+		color: var(--toolbar-color) !important;
+	}
 }
 
 /* Full width tabs */
