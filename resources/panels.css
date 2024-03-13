@@ -551,6 +551,7 @@ tooltip {
 	height: 18px !important;
 	padding: 3px;
 	border-radius: 9px !important;
+	/*margin-inline-start: !important;*/
 	-moz-context-properties: fill, stroke !important;
 }
 .permission-popup-permission-remove-button {
