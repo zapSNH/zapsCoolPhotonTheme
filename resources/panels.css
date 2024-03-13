@@ -568,5 +568,9 @@ tooltip {
 /* Tab previews */
 .tab-preview-container {
 	background-color: var(--arrowpanel-background) !important;
+	border: 1px solid var(--arrowpanel-border-color) !important;
+}
+.tab-preview-thumbnail-container {
+	border-top: 1px solid var(--arrowpanel-border-color) !important;
 }
 }
