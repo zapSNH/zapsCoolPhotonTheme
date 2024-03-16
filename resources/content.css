@@ -790,6 +790,16 @@
 			content: url("./icons/theme-previews/firefox-alpenglow.svg") !important;
 		}
 	}
+	
+	.icon {
+		&[src="chrome://global/skin/icons/info-filled.svg"] {
+			content: url("./icons/info-color.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/warning.svg"] {
+			content: url("./icons/warning-16.svg") !important;
+		}
+	}
+	
 	.disco-cta-button[action="install-addon"] {
 		background-color: var(--in-content-primary-button-background) !important;
 		background-image: url("./icons/add.svg") !important;
