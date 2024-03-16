@@ -845,7 +845,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		}
 	}
 	@media (-moz-bool-pref: "widget.gtk.rounded-bottom-corners.enabled") {
-		.titlebar-buttonbox-container {
+		:root[sizemode="normal"] .titlebar-buttonbox-container {
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 		}
