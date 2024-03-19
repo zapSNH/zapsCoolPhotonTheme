@@ -8,8 +8,8 @@ ____
 | | Windows 10/11 | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ? | Includes forks of Firefox (Waterfox, Floorp, etc.) |
-| **123** | ✔️ | ✔️ | ? | |
-| **125** | ✔️ | ✔️ | ? | |
+| **124** | ✔️ | ✔️ | ? | |
+| **126** | ✔️ | ✔️ | ? | |
 
 ## Installation
 There are 2 ways of installing this theme.
@@ -38,11 +38,11 @@ ____
 Download the release for your version:
 
 __Static Release (stability):__
-* [Firefox 123](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v123-v2) **(recommended)**
-* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v123-v2) (download the ESR version)
+* [Firefox 124](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v124) **(recommended)**
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v124) (download the ESR version)
 
 __Rolling Release (features and bugfixes):__
-* [Firefox 123](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
+* [Firefox 124](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
 * [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 
