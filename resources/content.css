@@ -510,6 +510,13 @@
 		height: 20px !important;
 		width: 20px !important;
 	}
+	.web-appearance-choice-footer {
+		line-height: 23px !important;
+	}
+	.web-appearance-choice-footer input[type="radio"] {
+		margin-top: 4px !important;
+	}
+	
 	.category:is([current], [selected]), .tab-group *[selected] {
 		color: #45a1ff !important;
 	}
