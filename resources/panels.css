@@ -162,6 +162,9 @@ menuitem, menu {
 	padding: 0 8px !important;
 	margin: 0 !important;
 }
+#appMenu-fxa-separator {
+	margin-top: 4px !important;
+}
 /* Random button that is big */
 #overflowMenu-customize-button {
 	padding-top: 0 !important;
