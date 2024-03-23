@@ -373,7 +373,7 @@
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: 6px 2px;
+		translate: -4px 2px;
 	}
 	.top-site-outer:not(:hover, .active) .context-menu-button {
 		width: 8px !important;
