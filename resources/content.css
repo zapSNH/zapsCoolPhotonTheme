@@ -181,7 +181,7 @@
 		&:hover, checkbox:hover & {
 			background-color: var(--in-content-button-background-hover) !important;
 		}
-		&:hover:active, checkbox:hover:active & {
+		&:hover:active, checkbox:hover:active:not([checked="true"]) & {
 			background-color: var(--in-content-button-background-active) !important;
 		}
 		&[checked], &:checked {
