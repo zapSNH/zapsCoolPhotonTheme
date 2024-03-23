@@ -75,6 +75,7 @@
 		--primary-button-color: rgb(249, 249, 250);
 		--box-background: var(--in-content-box-background);
 		--box-border-color: var(--in-content-box-border-color);
+		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -95,6 +96,9 @@
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
 			--codec-bg-header: #4b4b4e !important;
 		}
+	}
+	.close {
+		background-image: var(--message-bar-icon-close-url) !important;
 	}
 	.dialogBox {
 		border-radius: var(--photon-primary-border-radius) !important;
@@ -781,6 +785,9 @@
 		&[name="recent-updates"] {
 			background-image: url("./icons/category-recent.svg") !important;
 		}
+		&[name="sitepermission"] {
+			background-image: url("./icons/globe1.svg") !important;
+		}
 	}
 	
 	.card-heading-image {
@@ -805,6 +812,14 @@
 		&[src="chrome://global/skin/icons/warning.svg"] {
 			content: url("./icons/warning-16.svg") !important;
 		}
+	}
+	
+	.addon-icon[src="chrome://mozapps/skin/extensions/extensionGeneric.svg"] {
+		content: url("./icons/extensions.svg") !important;
+	}
+	
+	.addon-badge-verified {
+		background-image: url("./icons/check.svg") !important;
 	}
 	
 	.disco-cta-button[action="install-addon"] {
