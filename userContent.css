@@ -3,5 +3,5 @@
 @import url(./resources/content.css);
 
 /* Your custom CSS files */
-/* You'll need to create customContent.css in this folder since it doesn't exist by default */
-@import url(./customContent.css);
+/* Not available for the WebExtension version */
+/* @import url(./customContent.css); */
