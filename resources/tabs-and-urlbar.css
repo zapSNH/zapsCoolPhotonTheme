@@ -472,7 +472,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* URL bar */ 
 #urlbar {
-	--urlbar-height: 30px !important;
+	--urlbar-height: 30px !important;/*
+	--urlbar-container-height: 32px !important;
+	min-height: var(--urlbar-container-height) !important;*/
 }
 :root[uidensity="touch"] #urlbar {
 	--urlbar-height: 36px !important;
@@ -490,10 +492,10 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	--urlbar-min-height: 26px !important;
 }
 #urlbar:not([breakout-extend="true"]) #urlbar-background {
-  height: var(--urlbar-height);
+	height: var(--urlbar-height) !important;
 }
 :root:not([uidensity="touch"]) #urlbar[breakout-extend="true"] {
-	translate: 0 1px 
+	translate: 0 1px !important;
 }
 #urlbar-input-container {
 	margin-top: -1px !important;
@@ -543,6 +545,13 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 .urlbarView-type-icon {
 	margin-inline-start: calc(var(--urlbarView-favicon-width) - 6px) !important;
+}
+:root:not([uidensity]) .urlbarView-action {
+	margin-block-end: -3px !important;
+	margin-inline-end: -3px !important;
+}
+:root[uidensity="compact"] .urlbarView-action {
+	translate: -1px -1px
 }
 /* Search icon */
 #identity-icon-box {
