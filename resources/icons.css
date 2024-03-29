@@ -1299,5 +1299,11 @@ img {
 	#retry > & {
 		content: url("./icons/reload.svg") !important;
 	}
+	#copy > & {
+		content: url("./icons/edit-copy.svg") !important;
+	}
+	#download > & {
+		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
+	}
 }
 }
