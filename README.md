@@ -7,8 +7,8 @@ ____
 #### Compatibility
 | | Windows 10/11 | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ? | Includes forks of Firefox (Waterfox, Floorp, etc.) |
-| **124** | ✔️ | ✔️ | ? | |
+| **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
+| **124** | ✔️ | ✔️ | ✔️ | |
 | **126** | ✔️ | ✔️ | ? | |
 
 ## Installation

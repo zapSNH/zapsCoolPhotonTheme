@@ -3,6 +3,9 @@
 :root {
 	--icons-css: 1px;
 }
+* {
+	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
+}
 .urlbar-page-action * {
 	transform: translateY(-1px)
 }
@@ -1229,7 +1232,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 /* notifications */
 .container .close {
-	background-image: url(./icons/close-icon2.svg) !important;
+	background: url(./icons/close-icon2.svg) no-repeat !important;
+	background-position: center !important;
 	-moz-context-properties: stroke !important;
 	stroke: currentColor !important;
 }
