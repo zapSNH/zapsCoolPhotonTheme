@@ -937,7 +937,7 @@
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-history.svg"] {
 		content: url(./icons/history.svg);
 	}
-	
+	/*
 	.search-icon {
         background-image: url(./icons/find-in-page.svg) !important;
 		fill: #939393 !important;
@@ -954,7 +954,7 @@
 		&[aria-haspopup] {
 			background-image: url(./icons/more.svg) !important;
 		}
-	}
+	}*/
 	
 	@media (-moz-platform: windows) {
 		slot {
