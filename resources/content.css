@@ -857,11 +857,6 @@
 			--color-accent-primary: #74c0ff !important;
 		}
 	}
-	@media (prefers-color-scheme: dark) {
-		button[selected]:not(:hover) {
-			--in-content-accent-color: #74c0ff !important;
-		}
-	}
 	.search-container {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		border-color: var(--in-content-box-border-color) !important;
