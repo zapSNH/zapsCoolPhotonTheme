@@ -870,9 +870,6 @@
 	span[part="icon"] {
 		visibility: hidden;
 	}
-	.category-nav-header {
-		padding-inline-start: 32px !important;
-	}
 	.icon[src="chrome://global/skin/icons/plus.svg"] {
 		content: url("./icons/add.svg") !important;
 	}
@@ -891,7 +888,9 @@
 			transition: var(--photon-speed-1);
 		}
 		@media (prefers-color-scheme: dark) {
-			--in-content-accent-color: #74c0ff !important;
+			&[aria-selected="true"] {
+		  	filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
+			}
 		}
 		&[aria-selected="true"]:not(:hover)::before {
 			fill: var(--in-content-accent-color);
