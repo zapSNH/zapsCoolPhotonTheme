@@ -525,7 +525,7 @@
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	checkbox[checked] .checkbox-check {
-		@media (-moz-bool-pref: "uc.floorp") {
+		@media not (-moz-bool-pref: "uc.floorp") {
 			background-image: url(./icons/check.svg) !important;
 		}
 		-moz-context-properties: fill, fill-opacity !important;
