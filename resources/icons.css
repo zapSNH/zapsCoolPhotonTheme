@@ -3,16 +3,16 @@
 :root {
 	--icons-css: 1px;
 	--grayscale-logo: url(./icons/aboutdebugging-firefox-logo.svg) !important;
-	@media (-moz-bool-pref: "uc.floorp") {
+	@supports -moz-bool-pref("uc.floorp") {
 		--grayscale-logo: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
 	}
-	@media (-moz-bool-pref: "uc.waterfox") {
+	@supports -moz-bool-pref("uc.waterfox") {
 		--grayscale-logo: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 	}
 	/* TODO: LibreWolf and Tor Browser icons */
-	@media (-moz-bool-pref: "uc.librewolf") {
+	@supports -moz-bool-pref("uc.librewolf") {
 	}
-	@media (-moz-bool-pref: "uc.tor") {
+	@supports -moz-bool-pref("uc.tor") {
 	}
 }
 * {
@@ -43,7 +43,7 @@
 	list-style-image: url(./icons/connection-secure.svg) !important
 }
 /* Pretend it still exists */
-@media not (-moz-bool-pref: "security.secure_connection_icon_color_gray") {
+@supports not -moz-bool-pref("security.secure_connection_icon_color_gray") {
 	#identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
 		-moz-context-properties: fill !important;
 		fill: #12bc00 !important;
