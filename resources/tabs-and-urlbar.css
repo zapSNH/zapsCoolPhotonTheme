@@ -394,7 +394,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 #identity-box.chromeUI[pageproxystate="invalid"] #identity-icon-box {
 	margin-right: 5px !important;
 }
-#identity-box.chromeUI #identity-icon-box:not(:hover) {
+#identity-box.chromeUI #identity-icon-box:not(:hover, [open]) {
 	background: transparent !important;
 }
 #identity-box.chromeUI #identity-icon-box::after {

@@ -264,6 +264,19 @@
 	.menu-button {
 		background-image: url("./icons/more.svg") !important;
 	}
+	img[src="chrome://global/skin/icons/help.svg"] {
+		content: url("./icons/help.svg") !important;
+	}
+	@media (-moz-bool-pref: "uc.floorp") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
+		}
+	}
+	@media (-moz-bool-pref: "uc.waterfox") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
+		}
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -582,6 +595,27 @@
 	}
 	#category-experimental > .category-icon {
 		list-style-image: url("./icons/glyph-experiments.svg") !important;
+	}
+	#category-theme > .category-icon, #category-design > .category-icon {
+		list-style-image: url("./icons/customize.svg") !important;
+	}
+	#category-BSB > .category-icon {
+		list-style-image: url("./icons/sidebars.svg") !important;
+	}
+	#category-workspaces > .category-icon {
+		list-style-image: url("./icons/window.svg") !important;
+	}
+	#category-Downloads > .category-icon {
+		list-style-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
+	}
+	#category-CSK > .category-icon {
+		list-style-image: url("./icons/kb-shortcuts.svg") !important;
+	}
+	#category-ssb > .category-icon {
+		list-style-image: url("./icons/pwa-manage.svg") !important;
+	}
+	.profiles-icon {
+		list-style-image: url("./icons/findFile.svg") !important;
 	}
 	.addons-icon {
 		list-style-image: url("./icons/extensions.svg") !important;
