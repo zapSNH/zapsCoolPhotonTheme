@@ -394,6 +394,9 @@
 #translations-button-icon {
 	list-style-image: url(./icons/translations.svg) !important;
 }
+#copy-button {
+	list-style-image: url(./icons/edit-copy.svg) !important;
+}
 #PlacesChevron,
 #nav-bar-overflow-button {
 	list-style-image: url(./icons/command-chevron.svg) !important;
