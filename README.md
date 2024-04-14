@@ -5,7 +5,7 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 ____
 
 #### Compatibility
-| | Windows 10/11 | Linux (GNOME) | macOS | Notes |
+| | Windows 10/11 | Linux (GNOME) | macOS 14 | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
 | **124** | ✔️ | ✔️ | ✔️ | |
@@ -22,17 +22,20 @@ Can be installed on all editions of Firefox. Configuration is handled in `about:
 Open `about:config` and set:
 | Pref | Value | Description |
 |:-:|:-:|:-:|
-| `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization |
-| `svg.context-properties.content.enabled` | `true` | Required in order to make the icons colored correctly |
+| `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
+| `svg.context-properties.content.enabled` | `true` | Required in order to make the icons colored correctly. |
 | `layout.css.has-selector.enabled` | `true` | `true` by default in FF 121+. Required for some functionality to work. |
 | `layout.css.nesting.enabled` | `true` | `true` by default in FF 117+. Required for theming and some other stuff to work. |
-| `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon |
+| `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
+
+Optionally, you can set:
+| Pref | Value | Description |
+|:-:|:-:|:-:|
+| `security.secure_connection_icon_color_gray` | `true` | Makes the connection icon gray instead of green.<br>Default behavior in later versions of Photon. |
 ____
-If you're too lazy to copy and paste these `about:config` preferences, you can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and click `Export Options` to generate a `user.js` file that you can put in your profile folder.
+Too lazy to set all these prefs? You can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and click `Export Options` to generate a `user.js` file that you can put in your profile folder.
 
-Make sure to delete it after you start Firefox so that it doesn't override any changes you make in `about:config`.
-
-Create `security.secure_connection_icon_color_gray` as a boolean and set it to `true` if you don't want the green connection icon.
+**Make sure to delete the `user.js` file after you start Firefox so that it doesn't override any changes you make in `about:config`.**
 ____
 
 Download the release for your version:
@@ -77,8 +80,12 @@ This version is based on [Paxmod](https://github.com/numirias/paxmod).
 Open `about:config` and set:
 * `extensions.experiments.enabled` to `true`
 * `xpinstall.signatures.required` to `false` [(Why?)](https://github.com/numirias/paxmod#why-cant-i-install-paxmod-as-a-verified-extension-through-mozilla)
+  
+All other preferences required to run the theme (see [the table above](#manually)) will be set automatically.
 
 Download the latest version at: https://github.com/zapSNH/zcpt-webextension/releases
+
+More info at: https://github.com/zapSNH/zcpt-webextension/blob/main/README.md
 
 You're done!
 
