@@ -6,6 +6,7 @@
 	--panel-separator-zap-gradient: none !important;
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 	--urlbar-border-color: var(--arrowpanel-border-color);
+	--tabs-navbar-shadow-size: 1px !important;
 }
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 	background-color: var(--arrowpanel-background) !important;
@@ -360,10 +361,15 @@ input.findbar-textbox:focus {
 
 /* GNOME */
 @media (-moz-gtk-csd-available) {
-	:root:not(:-moz-lwtheme), :root:not([lwtheme="true"]) {
+	:is(:root:not(:-moz-lwtheme), :root:not([lwtheme="true"])) {
 		:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon,
 		.tabbrowser-tab[selected]) {
 			box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--lwt-tabs-border-color, rgba(0,0,0,.3)), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--lwt-tabs-border-color, rgba(0,0,0,.3)) !important;
+		}
+		
+		#nav-bar {
+			box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--lwt-tabs-border-color, rgba(0,0,0,.3)), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--lwt-tabs-border-color, rgba(0,0,0,.3)) !important;
+			border-top: none !important;
 		}
 	}
 }

@@ -64,7 +64,7 @@
 	opacity: 1 !important;
 }
 :root[tabsintitlebar] #titlebar:-moz-window-inactive .tabbrowser-tab:not([selected]) {
-	opacity: 0.69;
+	opacity: 0.8;
 }*/
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
 so that the sound icon doesn't look out of place
