@@ -89,6 +89,13 @@ More info at: https://github.com/zapSNH/zcpt-webextension/blob/main/README.md
 
 You're done!
 
+# Forks
+If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
+| Pref | Value | Browser |
+|:-:|:-:|:-:|
+| `uc.waterfox` | `true` | Waterfox |
+| `uc.floorp` | `true` | Floorp |
+
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
 
