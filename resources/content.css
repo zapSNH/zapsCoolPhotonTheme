@@ -174,7 +174,6 @@
 		--border-color: hsla(210,4%,10%,.14);
 		border-color: var(--border-color) !important;
 	}
-	
 	.checkbox-check, input[type="radio"], .radio-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		width: 20px !important;
@@ -191,7 +190,9 @@
 		&[checked], &:checked {
 			background-color: var(--blue-60) !important;
 			&:not(input[type="radio"], .radio-check) {
-				background-image: url(./icons/check.svg) !important;
+				@media not (-moz-bool-pref: "uc.floorp") {
+				    background-image: url("./icons/check.svg") !important;
+				}
 			}
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
@@ -207,6 +208,12 @@
 				background-color: var(--blue-60) !important;
 				opacity: 0.5
 			}
+		}
+	}
+	@media (-moz-bool-pref: "uc.floorp") {
+		.checkbox-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
+			border-radius: 999px !important;
+			padding-inline-end: 38px !important;
 		}
 	}
 	input[type="radio"], .radio-check {
@@ -377,7 +384,7 @@
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: 6px 2px;
+		translate: -4px 2px;
 	}
 	.top-site-outer:not(:hover, .active) .context-menu-button {
 		width: 8px !important;
@@ -505,7 +512,9 @@
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	checkbox[checked] .checkbox-check {
-		background-image: url(./icons/check.svg) !important;
+		@media (-moz-bool-pref: "uc.floorp") {
+			background-image: url(./icons/check.svg) !important;
+		}
 		-moz-context-properties: fill, fill-opacity !important;
 		fill: white !important;
 		fill-opacity: 1 !important;
@@ -889,7 +898,7 @@
 		}
 		@media (prefers-color-scheme: dark) {
 			&[aria-selected="true"] {
-		  	filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
+				filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
 			}
 		}
 		&[aria-selected="true"]:not(:hover)::before {
