@@ -2,6 +2,18 @@
 /* >:D */
 :root {
 	--icons-css: 1px;
+	--grayscale-logo: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+	@media (-moz-bool-pref: "uc.floorp") {
+		--grayscale-logo: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
+	}
+	@media (-moz-bool-pref: "uc.waterfox") {
+		--grayscale-logo: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
+	}
+	/* TODO: LibreWolf and Tor Browser icons */
+	@media (-moz-bool-pref: "uc.librewolf") {
+	}
+	@media (-moz-bool-pref: "uc.tor") {
+	}
 }
 * {
 	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
@@ -23,7 +35,7 @@
 }
 /* Changes the Firefox logo to that of the Photon grayscale one */
 #identity-box.chromeUI > #identity-icon-box > #identity-icon {
-	list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+	list-style-image: var(--grayscale-logo) !important;
 }
 /* Changes the connection icons to Photon's */
 /* Go to about:config and change security.secure_connection_icon_color_gray to false for the green icon */
@@ -185,7 +197,7 @@
   list-style-image: url(./icons/connection-secure.svg) !important;
 }
 #identity-popup:is([connection="chrome"]) .identity-popup-security-connection {
-  list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+  list-style-image: var(--grayscale-logo) !important;
 }
 #identity-popup[ciphers="weak"] .identity-popup-security-connection,
 #identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {

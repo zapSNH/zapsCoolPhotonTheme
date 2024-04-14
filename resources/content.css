@@ -264,6 +264,19 @@
 	.menu-button {
 		background-image: url("./icons/more.svg") !important;
 	}
+	img[src="chrome://global/skin/icons/help.svg"] {
+		content: url("./icons/help.svg") !important;
+	}
+	@media (-moz-bool-pref: "uc.floorp") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
+		}
+	}
+	@media (-moz-bool-pref: "uc.waterfox") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
+		}
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
