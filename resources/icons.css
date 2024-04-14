@@ -588,10 +588,10 @@
     margin-bottom: unset !important;
   }
 }
-/* Zoom controls */
+/* Zoom controls *//*
 #appMenu-zoom-controls toolbarbutton {
-	/*display: block !important;*/
-}
+	display: block !important;
+}*/
 #appMenu-zoom-controls toolbarbutton:not(:last-child) .toolbarbutton-icon {
 	border-radius: 50% !important;
 }
@@ -689,6 +689,10 @@
 #appMenu-quit-button2 .toolbarbutton-icon {
 	list-style-image: url(./icons/quit.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+/* Restart icon (Waterfox) */
+#appMenu-restart-button .toolbarbutton-icon {
+	list-style-image: url(./icons/reload.svg) !important;
 }
 /* Margin fixes */
 #appMenu-help-button2 + toolbarseparator {
@@ -943,8 +947,6 @@
 /* fxa menu */
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
 	margin-top: -3px !important;
-}
-#fxa-manage-account-button {
 }
 :root #PanelUI-fxa #fxa-manage-account-button::before {	
 	content: "";

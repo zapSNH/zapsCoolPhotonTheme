@@ -596,6 +596,9 @@
 	#category-experimental > .category-icon {
 		list-style-image: url("./icons/glyph-experiments.svg") !important;
 	}
+	#category-theme > .category-icon {
+		list-style-image: url("./icons/customize.svg");
+	}
 	.addons-icon {
 		list-style-image: url("./icons/extensions.svg") !important;
 	}
