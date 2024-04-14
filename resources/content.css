@@ -596,8 +596,26 @@
 	#category-experimental > .category-icon {
 		list-style-image: url("./icons/glyph-experiments.svg") !important;
 	}
-	#category-theme > .category-icon {
-		list-style-image: url("./icons/customize.svg");
+	#category-theme > .category-icon, #category-design > .category-icon {
+		list-style-image: url("./icons/customize.svg") !important;
+	}
+	#category-BSB > .category-icon {
+		list-style-image: url("./icons/sidebars.svg") !important;
+	}
+	#category-workspaces > .category-icon {
+		list-style-image: url("./icons/window.svg") !important;
+	}
+	#category-Downloads > .category-icon {
+		list-style-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
+	}
+	#category-CSK > .category-icon {
+		list-style-image: url("./icons/kb-shortcuts.svg") !important;
+	}
+	#category-ssb > .category-icon {
+		list-style-image: url("./icons/pwa-manage.svg") !important;
+	}
+	.profiles-icon {
+		list-style-image: url("./icons/findFile.svg") !important;
 	}
 	.addons-icon {
 		list-style-image: url("./icons/extensions.svg") !important;
