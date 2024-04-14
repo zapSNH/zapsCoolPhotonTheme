@@ -190,7 +190,7 @@
 		&[checked], &:checked {
 			background-color: var(--blue-60) !important;
 			&:not(input[type="radio"], .radio-check) {
-				@media not (-moz-bool-pref: "uc.floorp") {
+				@supports not -moz-bool-pref("uc.floorp") {
 				    background-image: url("./icons/check.svg") !important;
 				}
 			}
@@ -210,7 +210,7 @@
 			}
 		}
 	}
-	@media (-moz-bool-pref: "uc.floorp") {
+	@supports -moz-bool-pref("uc.floorp") {
 		.checkbox-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
 			border-radius: 999px !important;
 			padding-inline-end: 38px !important;
@@ -267,12 +267,12 @@
 	img[src="chrome://global/skin/icons/help.svg"] {
 		content: url("./icons/help.svg") !important;
 	}
-	@media (-moz-bool-pref: "uc.floorp") {
+	@supports -moz-bool-pref("uc.floorp") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.waterfox") {
+	@supports -moz-bool-pref("uc.waterfox") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 		}
@@ -525,7 +525,7 @@
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	checkbox[checked] .checkbox-check {
-		@media (-moz-bool-pref: "uc.floorp") {
+		@supports -moz-bool-pref("uc.floorp") {
 			background-image: url(./icons/check.svg) !important;
 		}
 		-moz-context-properties: fill, fill-opacity !important;
