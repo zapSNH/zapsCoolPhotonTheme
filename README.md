@@ -5,6 +5,7 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 ____
 
 #### Compatibility
+See [Forks](#forks) for information about Firefox forks.
 | | Windows 10/11 | Linux (GNOME) | macOS 14 | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
