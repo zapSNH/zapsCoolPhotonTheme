@@ -4,6 +4,18 @@
 @-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--icons-css: 1px;
+	--grayscale-logo: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+	@media (-moz-bool-pref: "uc.floorp") {
+		--grayscale-logo: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
+	}
+	@media (-moz-bool-pref: "uc.waterfox") {
+		--grayscale-logo: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
+	}
+	/* TODO: LibreWolf and Tor Browser icons */
+	@media (-moz-bool-pref: "uc.librewolf") {
+	}
+	@media (-moz-bool-pref: "uc.tor") {
+	}
 }
 * {
 	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
@@ -25,7 +37,7 @@
 }
 /* Changes the Firefox logo to that of the Photon grayscale one */
 #identity-box.chromeUI > #identity-icon-box > #identity-icon {
-	list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+	list-style-image: var(--grayscale-logo) !important;
 }
 /* Changes the connection icons to Photon's */
 /* Go to about:config and change security.secure_connection_icon_color_gray to false for the green icon */
@@ -188,7 +200,7 @@
   list-style-image: url(./icons/connection-secure.svg) !important;
 }
 #identity-popup:is([connection="chrome"]) .identity-popup-security-connection {
-  list-style-image: url(./icons/aboutdebugging-firefox-logo.svg) !important;
+  list-style-image: var(--grayscale-logo) !important;
 }
 #identity-popup[ciphers="weak"] .identity-popup-security-connection,
 #identity-popup[mixedcontent~="passive-loaded"][isbroken] .identity-popup-security-connection {
@@ -577,10 +589,10 @@
     margin-bottom: unset !important;
   }
 }
-/* Zoom controls */
+/* Zoom controls *//*
 #appMenu-zoom-controls toolbarbutton {
-	/*display: block !important;*/
-}
+	display: block !important;
+}*/
 #appMenu-zoom-controls toolbarbutton:not(:last-child) .toolbarbutton-icon {
 	border-radius: 50% !important;
 }
@@ -676,6 +688,10 @@
 #appMenu-quit-button2 .toolbarbutton-icon {
 	list-style-image: url(./icons/quit.svg) !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+/* Restart icon (Waterfox) */
+#appMenu-restart-button .toolbarbutton-icon {
+	list-style-image: url(./icons/reload.svg) !important;
 }
 /* Margin fixes */
 #appMenu-help-button2 + toolbarseparator {
@@ -929,8 +945,6 @@
 /* fxa menu */
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
 	margin-top: -3px !important;
-}
-#fxa-manage-account-button {
 }
 :root #PanelUI-fxa #fxa-manage-account-button::before {	
 	content: "";
