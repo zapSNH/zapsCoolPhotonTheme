@@ -5,6 +5,7 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 ____
 
 #### Compatibility
+See [Forks](#forks) for information about Firefox forks.
 | | Windows 10/11 | Linux (GNOME) | macOS 14 | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
@@ -88,6 +89,13 @@ Download the latest version at: https://github.com/zapSNH/zcpt-webextension/rele
 More info at: https://github.com/zapSNH/zcpt-webextension/blob/main/README.md
 
 You're done!
+
+# Forks
+If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
+| Pref | Value | Browser |
+|:-:|:-:|:-:|
+| `uc.waterfox` | `true` | Waterfox |
+| `uc.floorp` | `true` | Floorp |
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
