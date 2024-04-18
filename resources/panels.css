@@ -139,18 +139,6 @@ menuitem, menu {
 	margin: 0 !important;
 	padding: 0px 11px !important;
 }
-/* OLD CSS please ignore */
-/* Photon like tab tooltips */
-/* browser.proton.places-tooltip.enabled should be true */
-/* Remove if unwanted */
-#tabbrowser-tab-tooltip vbox {
-	border-radius: var(--photon-border-radius) !important;
-	background-color: var(--arrowpanel-background) !important;
-	box-shadow: 0px 0px 4px #0003 !important;
-}
-#tabbrowser-tab-tooltip {
-	font-weight: 400 !important;
-}
 /* end */
 
 /* Makes the size of the Firefox account button in the app menu smaller */
@@ -162,8 +150,10 @@ menuitem, menu {
 	padding: 0 8px !important;
 	margin: 0 !important;
 }
-#appMenu-fxa-separator {
-	margin-top: 4px !important;
+@media not (-moz-bool-pref: "browser.profiles.enabled") {
+	#appMenu-fxa-separator {
+		margin-top: 4px !important;
+	}
 }
 /* Random button that is big */
 #overflowMenu-customize-button {
