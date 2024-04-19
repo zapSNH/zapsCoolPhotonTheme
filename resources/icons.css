@@ -688,7 +688,31 @@
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	width: 16px !important;
 }
-
+/* Profiles Button (FF 127+) */ 
+@media (-moz-bool-pref: "browser.profiles.enabled") {
+	#appMenu-profiles-button:after {
+		margin-inline-end: -3px !important;
+	}
+	:is(#appMenu-profiles-button, #profiles-manage-profiles-button) .toolbarbutton-icon {
+		list-style-image: url(./icons/profiles.svg) !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	}
+	#profiles-edit-this-delete-button .toolbarbutton-icon {
+		list-style-image: url(./icons/edit.svg) !important;
+	}
+	#profiles-delete-this-profile-button .toolbarbutton-icon {
+		list-style-image: url(./icons/delete.svg) !important;
+	}
+	#profiles-close-profile-button .toolbarbutton-icon {
+		list-style-image: url(./icons/close-icon2.svg) !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
+		padding: 2px;
+	}
+	#profiles-create-profile-button .toolbarbutton-icon {
+		list-style-image: url(./icons/add.svg) !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	}
+}
 /* Exit icon */
 #appMenu-quit-button2 .toolbarbutton-icon {
 	list-style-image: url(./icons/quit.svg) !important;
