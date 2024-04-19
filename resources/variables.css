@@ -64,10 +64,11 @@
 button {
 	--in-content-primary-button-background: var(--photon-accent) !important;
 }
+
 /* Makes a bunch of things have Photon's border rounding */
 /* Change the two border radius vars up top to change these */
 #urlbar-background, #searchbar, input:not([type="radio"]),
-toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item) image,
+toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item, .unified-extensions-item-menu-button) image,
 #tabs-newtab-button image,
 menupopup, panel, #PlacesChevron *:not(.menuitem-with-favicon, .bookmark-item), #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 

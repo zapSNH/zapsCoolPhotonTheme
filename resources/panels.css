@@ -359,6 +359,12 @@ menuitem, menu {
 .panel-info-button {
 	margin: 0 !important;
 }
+#allTabsMenu-allTabsView-tabs {
+	margin-block: -4px !important;
+}
+.unified-extensions-item-menu-button .toolbarbutton-icon {
+	padding: 10px !important;
+}
 @media (-moz-platform: windows) {
   #context-navigation {
   	margin-inline: 4px !important;

@@ -690,6 +690,9 @@
 }
 /* Profiles Button (FF 127+) */ 
 @media (-moz-bool-pref: "browser.profiles.enabled") {
+	#appMenu-profiles-button:after {
+		margin-inline-end: -3px !important;
+	}
 	:is(#appMenu-profiles-button, #profiles-manage-profiles-button) .toolbarbutton-icon {
 		list-style-image: url(./icons/profiles.svg) !important;
 		margin-inline-end: var(--appmenu-icon-inline-end) !important;
