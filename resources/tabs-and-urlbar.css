@@ -89,7 +89,7 @@ credits to phroton for some of this stuff */
 	position: absolute !important;
 	width: calc(100% - 6px - 48px) !important;
 }
-@media not (-moz-bool-pref: "uc.always-show-close-button") {
+@supports not -moz-bool-pref("uc.always-show-close-button") {
 	tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		width: calc(100% - 32px) !important;
 	}
@@ -897,7 +897,7 @@ credits to phroton for some of this stuff */
 	}
 }
 /* Always show close button */
-@media (-moz-bool-pref: "uc.always-show-close-button") {
+@supports -moz-bool-pref("uc.always-show-close-button") {
 	#tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
 		display: block !important;
 	}
