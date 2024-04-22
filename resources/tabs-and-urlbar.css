@@ -89,8 +89,10 @@ credits to phroton for some of this stuff */
 	position: absolute !important;
 	width: calc(100% - 6px - 48px) !important;
 }
-tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
-	width: calc(100% - 32px) !important;
+@media not (-moz-bool-pref: "uc.always-show-close-button") {
+	tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
+		width: calc(100% - 32px) !important;
+	}
 }
 .tabbrowser-tab:not([pinned])[image] .tab-label-container, .tabbrowser-tab[busy] .tab-label-container {
 	margin-inline-start: 21px !important;
@@ -892,5 +894,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 @media (-moz-bool-pref: "uc.full-width-tabs") {
 	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
 		max-width: 100vw !important;
+	}
+}
+/* Always show close button */
+@media (-moz-bool-pref: "uc.always-show-close-button") {
+	#tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
+		display: block !important;
 	}
 }
