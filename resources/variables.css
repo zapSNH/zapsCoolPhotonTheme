@@ -34,14 +34,14 @@
 	--photon-speed-3: 0.3s;
 }
 @media (prefers-color-scheme: dark) {
-	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]), :root:not(:-moz-lwtheme) {
+	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]), :root:not([lwtheme="true"]) {
 		--photon-back: #fff3;
 		--photon-back-hover: #fff5;
 		--photon-back-active: #fff7;
 		--photon-back-outline: #222a;
 		--photon-back-shadow: #2225;
 		--photon-back-shadow-hover: #222a;
-        --photon-accent: #74c0ff;
+		--photon-accent: #74c0ff;
 		--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
 	}
 }
