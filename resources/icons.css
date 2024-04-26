@@ -773,6 +773,10 @@
 .all-tabs-item:has(.toolbarbutton-icon[src="chrome://browser/skin/customize.svg"]) > .all-tabs-button::before {
 	content: url(./icons/personalize.svg) !important;
 }
+.all-tabs-item:has(.toolbarbutton-icon[src="chrome://browser/skin/customize.svg"]) > .all-tabs-button::before {
+	scale: 0.5;
+	transform-origin: top left;
+}
 .tab-icon-image[src="chrome://global/skin/icons/info.svg"],
 .all-tabs-item:has(.toolbarbutton-icon[src="chrome://global/skin/icons/info.svg"]) > .all-tabs-button::before {
 	content: url(./icons/info.svg) !important;
