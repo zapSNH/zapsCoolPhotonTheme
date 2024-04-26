@@ -78,7 +78,9 @@ toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info
 	padding: 4px 0 !important;
 }
 .subviewbutton-back {
-	margin: -4px !important;
+	:root:not([uidensity="compact"]) & {
+		margin: -4px !important;
+	}
 	width: 32px !important;
 	height: 32px !important;
 	padding: 7px !important;
