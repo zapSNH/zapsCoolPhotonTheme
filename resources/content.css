@@ -736,7 +736,7 @@
 		fill: currentColor;
 		stroke: currentColor;
 		margin-top: 4px;
-		position: absolute;
+		margin-inline-end: -16px !important;
 	}
 	#homeContentsGroup checkbox[src="chrome://global/skin/icons/search-glass.svg"] .checkbox-label-box::before {
 		content: url("./icons/find-in-page.svg") !important;
