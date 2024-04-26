@@ -1,9 +1,6 @@
-A version of [zapsCoolPhotonTheme](https://github.com/zapsnh/zapsCoolPhotonTheme) that's been modified for the ZCPT webextension.
+# Zap's Cool Photon Theme
+A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 
-<<<<<<< HEAD
-These are only the userChrome files for the webextension.
-Get the webextension [here](https://github.com/zapsnh/zcpt-webextension).
-=======
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
 ____
 
@@ -116,4 +113,3 @@ Special thanks to:
 - [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton/)
 - The folks over on r/FirefoxCSS
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and they made Photon)
->>>>>>> nightly
