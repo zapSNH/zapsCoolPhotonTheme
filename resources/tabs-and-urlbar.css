@@ -91,10 +91,8 @@ credits to phroton for some of this stuff */
 	position: absolute !important;
 	width: calc(100% - 6px - 48px) !important;
 }
-@media not (-moz-bool-pref: "uc.always-show-close-button") {
-	tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
-		width: calc(100% - 32px) !important;
-	}
+tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
+	width: calc(100% - 32px) !important;
 }
 .tabbrowser-tab:not([pinned])[image] .tab-label-container, .tabbrowser-tab[busy] .tab-label-container {
 	margin-inline-start: 21px !important;
@@ -922,5 +920,9 @@ credits to phroton for some of this stuff */
 	#tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
 		display: block !important;
 	}
+	.tabbrowser-tab:not([visuallyselected]) .tab-icon-stack {
+		max-width: calc(100% - 54px) !important;
+	}
+}
 }
 }
