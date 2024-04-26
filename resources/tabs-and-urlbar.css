@@ -469,19 +469,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	border-color: var(--toolbarbutton-active-background) !important;
 	border-radius: 0 !important;
 }
-/* URL bar */
-/* should prolly just rewrite this */
-#urlbar-background {
-	translate: 0 1px !important;
-	:root[uidensity] & {
-		translate: 0 0 !important;
-	}
-}
+/* URL bar */ 
 #urlbar {
 	--urlbar-height: 30px !important;/*
 	--urlbar-container-height: 32px !important;
 	min-height: var(--urlbar-container-height) !important;*/
-	align-content: center !important;
 }
 :root[uidensity="touch"] #urlbar {
 	--urlbar-height: 36px !important;
@@ -647,7 +639,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 /* Megabar */
 @media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) {
-		z-index: 3;
+		z-index: 3
 	}
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		margin-inline: -8px !important;
@@ -689,17 +681,11 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	#nav-bar:has(#urlbar[focused="true"]:not([breakout][breakout-extend])) {
 		overflow: visible !important;
 	}
-	#urlbar[breakout-extend="true"] #urlbar-background {
-		translate: 0 0px !important;
-	}
 }
 @media (-moz-bool-pref: "uc.reduced-megabar") {
 	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
-	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] #urlbar-input-container {
-		margin-top: -3px !important;
 	}
 }
 @media (-moz-bool-pref: "uc.no-megabar") {
@@ -709,18 +695,9 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	}
 	#urlbar[breakout][breakout-extend="true"] #urlbar-background {
 		height: var(--urlbar-height) !important;
-		margin-top: 3px !important;
+		margin-top: 4px !important;
 		margin-inline: 5px !important;
 		animation: none !important;
-		:root[uidensity="compact"] & {
-			margin-top: 2px !important;
-		}
-		:root[uidensity="touch"] & {
-			margin-top: 4px !important;
-		}
-	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] #urlbar-input-container {
-		margin-top: -3px !important;
 	}
 	#urlbar .urlbarView {
 		background: var(--toolbar-field-background-color) !important;
