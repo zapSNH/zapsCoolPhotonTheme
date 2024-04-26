@@ -137,6 +137,11 @@
 	#moz-toggle-button::before {
 		background-color: white !important;
 	}
+	
+	moz-button.close {
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+	}
 	.close-icon {
 		list-style-image: url(./icons/close-tab.svg) !important;
 	}
@@ -197,7 +202,8 @@
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
 			border: 1px solid #0000 !important;
-			background-position: 1px 1px;
+			background-position: center;
+			background-repeat: no-repeat;
 			&:hover {
 				background-color: var(--color-accent-primary-hover) !important;
 			}
@@ -774,6 +780,7 @@
 		margin: auto !important;
 		translate: 14px -40px !important;
 	}
+	
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;
