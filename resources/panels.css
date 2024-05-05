@@ -471,23 +471,29 @@ menuitem, menu {
 /* Big button thing */
 /* yes i know there's an easier way to do this but separating them gives me more control */
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
-#identity-popup-clear-sitedata-button, #identity-popup-more-info) {
+#identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button) {
 	height: 46px !important;
-	margin-top: -4px !important;
 	font-size: 14px !important;
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
+	&:not(#overflowMenu-customize-button) {
+		margin-top: -4px !important;
+	}
 }
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
-#identity-popup-clear-sitedata-button, #identity-popup-more-info) .toolbarbutton-text {
+#identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button) .toolbarbutton-text {
 	text-align: center !important;
 }
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
-#identity-popup-clear-sitedata-button, #identity-popup-more-info):hover {
+#identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button):hover {
 	background: color-mix(in srgb, currentColor 25%, transparent) !important;
 }
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
-#identity-popup-clear-sitedata-button, #identity-popup-more-info):hover:active {
+#identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button):hover:active {
 	background: color-mix(in srgb, currentColor 30%, transparent) !important;
+}
+#overflowMenu-customize-button {
+	margin-top: -3px !important;
+	margin-bottom: 0px !important;
 }
 /* Notification box */
 #commonDialogWindow, #commonDialogWindow .titleIcon {
@@ -635,4 +641,12 @@ tooltip {
 }
 #PopupSearchAutoComplete .autocomplete-richlistbox {
 	margin: 0 !important;
+}
+/* Overflow menu fxa button */
+#widget-overflow-list #fxa-toolbar-menu-button {
+	height: 24px !important;
+	padding-inline-start: 4px !important;
+	.toolbarbutton-text {
+		padding: 0 !important;
+	}
 }
