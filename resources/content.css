@@ -420,6 +420,11 @@
 		margin-inline-end: 8px;
 		margin-top: 10px;
 	}
+	.top-site-outer.placeholder.add-button .tile .icon-wrapper {
+		background-image: url("./icons/add.svg") !important;
+		width: 48px !important;
+		height: 48px !important;
+	}
 	button.context-menu-button {
 		-moz-appearance: none;
 		border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
