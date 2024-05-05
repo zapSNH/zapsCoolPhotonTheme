@@ -221,7 +221,7 @@
 		background-color: var(--organizer-content-background) !important;
 	}
 	#placesToolbox menu {
-		padding-block: 6px !important;
+		padding-block: 2px !important;
 	}
 	
 	richlistitem[selected="true"] {
