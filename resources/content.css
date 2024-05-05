@@ -50,6 +50,8 @@
 		--blue-70: #003eaa;
 		--blue-80: #002275;
 		--grey-20: #ededf0;
+		--checkbox-size: 20px !important;
+		--space-xsmall: 0.2rem !important;
 	}
 	@media (prefers-reduced-motion) {
 	  :root {
@@ -186,11 +188,17 @@
 		appearance: none !important;
 		background-color: var(--in-content-button-background) !important;
 		border: 1px solid color-mix(in srgb, currentColor 9%, transparent) !important;
-		&:hover, checkbox:hover & {
+		&:hover, checkbox:hover:not([checked="true"]) & {
 			background-color: var(--in-content-button-background-hover) !important;
 		}
 		&:hover:active, checkbox:hover:active:not([checked="true"]) & {
 			background-color: var(--in-content-button-background-active) !important;
+		}
+		checkbox:hover[checked="true"] & {
+			background-color: var(--color-accent-primary-hover) !important;
+		}
+		checkbox:hover:active[checked="true"] & {
+			background-color: var(--color-accent-primary-active) !important;
 		}
 		&[checked], &:checked {
 			background-color: var(--blue-60) !important;
@@ -412,6 +420,11 @@
 		margin-inline-end: 8px;
 		margin-top: 10px;
 	}
+	.top-site-outer.placeholder.add-button .tile .icon-wrapper {
+		background-image: url("./icons/add.svg") !important;
+		width: 48px !important;
+		height: 48px !important;
+	}
 	button.context-menu-button {
 		-moz-appearance: none;
 		border: 1px solid light-dark(color-mix(in srgb, currentColor 20%, transparent), color-mix(in srgb, currentColor 10%, transparent));
@@ -510,7 +523,6 @@
 		--in-content-warning-container: var(--grey-20) !important;
 		--in-content-dialog-header-background: #f1f1f1;
 		--link-color: #45a1ff !important;
-		--space-xsmall: 0.2rem !important;
 	}
 	a {
 		text-decoration: none !important;

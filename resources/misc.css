@@ -221,7 +221,7 @@
 		background-color: var(--organizer-content-background) !important;
 	}
 	#placesToolbox menu {
-		padding-block: 6px !important;
+		padding-block: 2px !important;
 	}
 	
 	richlistitem[selected="true"] {
@@ -687,6 +687,7 @@
 			margin-top: -42px;
 			margin-inline-end: 167px;
 			margin-inline-start: 35px;
+			box-shadow: none !important;
 		}
 		.tabbrowser-tab, #new-tab-button, #tabs-newtab-button {
 			display: none !important;
@@ -700,7 +701,9 @@
 		#titlebar {
 			z-index: 0;
 		}
-		
+		.titlebar-buttonbox-container {
+			margin: 0 !important;
+		}
 		@media (-moz-platform: windows) {
 			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
 			    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
