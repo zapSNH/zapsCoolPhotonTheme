@@ -220,8 +220,8 @@
 	richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 		background-color: var(--organizer-content-background) !important;
 	}
-	#placesToolbox menu {
-		padding-block: 2px !important;
+	#placesToolbox > menu, #placesMenu > menu {
+		padding-block: 6px !important;
 	}
 	
 	richlistitem[selected="true"] {
@@ -710,7 +710,7 @@
 			}
 			
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 			}
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
 			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
