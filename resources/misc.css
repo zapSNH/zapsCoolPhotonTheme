@@ -710,7 +710,7 @@
 			}
 			
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 			}
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
 			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
