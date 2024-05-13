@@ -105,7 +105,7 @@
 			background-color: var(--button-active-bgcolor) !important;
 		}
 	}
-	window {
+	window:not(.sidebar-panel) {
 		background: var(--toolbar-bgcolor) !important;
 	}
 	.wizard-header {
@@ -154,7 +154,6 @@
 		padding: 4px !important;
 		padding-inline: 6px !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
-		background: var(--button-bgcolor) !important;
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
 	}
 	.icon[src="chrome://global/skin/icons/reload.svg"] {
@@ -220,8 +219,8 @@
 	richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 		background-color: var(--organizer-content-background) !important;
 	}
-	#placesToolbox menu {
-		padding-block: 2px !important;
+	#placesToolbox > menu, #placesMenu > menu {
+		padding-block: 6px !important;
 	}
 	
 	richlistitem[selected="true"] {
@@ -708,7 +707,7 @@
 			}
 			
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
+			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
 			}
 			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
 			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
