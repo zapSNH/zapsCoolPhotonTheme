@@ -105,7 +105,7 @@
 			background-color: var(--button-active-bgcolor) !important;
 		}
 	}
-	window {
+	window:not(.sidebar-panel) {
 		background: var(--toolbar-bgcolor) !important;
 	}
 	.wizard-header {
@@ -154,7 +154,6 @@
 		padding: 4px !important;
 		padding-inline: 6px !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
-		background: var(--button-bgcolor) !important;
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
 	}
 	.icon[src="chrome://global/skin/icons/reload.svg"] {
