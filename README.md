@@ -48,7 +48,7 @@ __Static Release (stability):__
 __Rolling Release (features and bugfixes):__
 * [Firefox 126](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)
 * [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip)
-* [Firefox 116esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
+* [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)
 
 <details>
 	<summary>Older Versions</summary>
