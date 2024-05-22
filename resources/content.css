@@ -107,7 +107,8 @@
 	}
 	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
-	.web-appearance-choice, .toolbar, input:not([type="radio"]), .downloadButton > .button-box {
+	.web-appearance-choice, .toolbar, input:not([type="radio"]), .downloadButton > .button-box,
+	.dropdown-selector > select {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -1087,51 +1088,50 @@
 		--popup-button-background-active: #646468 !important;
 		--toolbar-button-background-hover: #626263 !important;
 		--toolbar-button-background-active: #7f7f80 !important;
+		--popup-button-background: var(--in-content-button-background) !important;
+		--popup-button-background-hover: var(--in-content-button-background-hover) !important;
+		--popup-button-background-active: var(--in-content-button-background-active) !important;
 	}
 	
 	/* Most of these icons don't need to be changed but when/if Firefox changes them, then I wouldn't have to do anything */
 	.close-button {
 		background-image: url("./icons/close-icon2.svg") !important;
 	}
-	
 	.style-button {
 		background-image: url("./icons/RM-Type-Controls-24x24.svg") !important;
 	}
-	
 	.minus-button {
 		background-image: url("./icons/zoom-out.svg") !important;
 	}
-	
 	.plus-button {
 		background-image: url("./icons/zoom-in.svg") !important;
 	}
-	
 	.content-width-minus-button {
 		background-image: url("./icons/RM-Content-Width-Minus-42x16.svg") !important;
 	}
-	
 	.content-width-plus-button {
 		background-image: url("./icons/RM-Content-Width-Plus-44x16.svg") !important;
 	}
-	
 	.line-height-minus-button {
 		background-image: url("./icons/RM-Line-Height-Minus-38x14.svg") !important;
 	}
-	
 	.line-height-plus-button {
 		background-image: url("./icons/RM-Line-Height-Plus-38x24.svg") !important;
 	}
-	
 	.narrate-toggle {
 		background-image: url("./icons/headphone.svg") !important;
 	}
-	
 	.speaking .narrate-toggle {
 		background-image: url("./icons/headphone-active.svg") !important;
 	}
-	
 	.pocket-button {
 		background-image: url("./icons/pocket.svg") !important;
+	}
+	.text-size-plus-button {
+		background-image: url("./icons/zoom-in.svg") !important;
+	}
+	.text-size-minus-button {
+		background-image: url("./icons/zoom-out.svg") !important;
 	}
 }
 
