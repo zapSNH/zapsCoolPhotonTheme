@@ -367,6 +367,9 @@ menuitem, menu {
 .unified-extensions-item-menu-button .toolbarbutton-icon {
 	padding: 10px !important;
 }
+#appMenu-addon-banners:has(::after) {
+	margin-bottom: 4px;
+}
 @media (-moz-platform: windows) {
   #context-navigation {
   	margin-inline: 4px !important;
