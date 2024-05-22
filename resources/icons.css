@@ -434,6 +434,12 @@
 	border-radius: 50% !important;
 	outline: 2px var(--toolbar-bgcolor) solid;
 }
+.addon-banner-item {
+	&::after {
+		background: url(./icons/warning-16.svg) !important;
+		margin-block: auto;
+	}
+}
 .unified-extensions-item-menu-button.subviewbutton {
 	list-style-image: url(./icons/settings.svg) !important;
 }
