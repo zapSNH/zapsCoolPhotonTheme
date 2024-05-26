@@ -157,6 +157,19 @@ menuitem, menu {
 		margin-top: 4px !important;
 	}
 }
+#current-profile {
+	padding-block: var(--space-small) !important;
+}
+#this-profile-buttons {
+	width: 100% !important;
+}
+#profile-icon-image {
+	width: 64px !important;
+	height: 64px !important;
+}
+#profile-name {
+	padding: 0 !important;
+}
 /* Random button that is big */
 #overflowMenu-customize-button {
 	padding-top: 0 !important;
@@ -418,7 +431,12 @@ menuitem, menu {
 }
 .toggle-button[aria-pressed="true"] {
 	background: var(--photon-accent-dark) !important;
-	outline: color-mix(in srgb, black 20%, var(--photon-accent-dark)) 1px solid !important;
+	#moz-toggle-label:hover & {
+		background: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
+	}
+	#moz-toggle-label:hover:active & {
+		background: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
+	}
 }
 #protections-popup-tp-switch:has(image):not([enabled]) {
 	padding-left: 1px !important;

@@ -195,10 +195,10 @@
 		&:hover:active, checkbox:hover:active:not([checked="true"]) & {
 			background-color: var(--in-content-button-background-active) !important;
 		}
-		checkbox:hover[checked="true"] & {
+		checkbox:hover[checked="true"]:not([disabled="true"]) & {
 			background-color: var(--color-accent-primary-hover) !important;
 		}
-		checkbox:hover:active[checked="true"] & {
+		checkbox:hover:active[checked="true"]:not([disabled="true"]) & {
 			background-color: var(--color-accent-primary-active) !important;
 		}
 		&[checked], &:checked {
@@ -883,6 +883,10 @@
 	
 	.addon-badge-verified {
 		background-image: url("./icons/check.svg") !important;
+	}
+	
+	.shortcut-remove-button {
+		background-image: url("./icons/delete.svg") !important;
 	}
 	
 	.disco-cta-button[action="install-addon"] {
