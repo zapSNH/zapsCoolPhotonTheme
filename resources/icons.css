@@ -304,7 +304,7 @@
 	> :is(#stop-button, #reload-button)
 	> .toolbarbutton-animatable-box 
 	> .toolbarbutton-animatable-image  {
-	translate: 1px -1px !important;
+	translate: 1px !important;
 }
 @keyframes userChrome-reload-to-stop {
   from { transform: translateX(0); }
