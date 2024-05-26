@@ -619,7 +619,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* Fixes for compact mode */
 :root[uidensity="compact"] #urlbar[breakout-extend="true"] {
-  padding-top: 4px !important;
+	padding-top: 4px !important;
 }
 :root[uidensity="compact"] #urlbar[breakout-extend="true"] #tracking-protection-icon-container:not(:hover, :active, [open])::after {
 	top: 2px;
