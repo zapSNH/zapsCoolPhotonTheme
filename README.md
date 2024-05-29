@@ -111,7 +111,14 @@ Open your profile folder which you can find by going to `about:support` and open
 
 If you're in a file manager with a GUI (Explorer, Finder, etc.), open a terminal in the profile folder, usually by right clicking and clicking Open in Terminal (or similar). [(example)](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/c35ffc7d-0343-479a-9366-72d56833c4c3)
 
-In the terminal copy and paste (or type) this command `git clone https://github.com/zapSNH/zapsCoolPhotonTheme.git chrome` and run it. **Make sure the terminal is in the profile folder and not in any of its subfolders.**
+Copy (or type) this command into the terminal `git clone https://github.com/zapSNH/zapsCoolPhotonTheme.git chrome` and run it. **Make sure the terminal is in the profile folder and not in any of its subfolders.**
+
+If you're using a version of Firefox that isn't the latest stable version then copy (or type) these commands into the terminal.
+```
+cd chrome
+git checkout BRANCH_NAME
+```
+where `BRANCH_NAME` is [the branch of your Firefox version (i.e. `115esr` or `nightly`)](https://github.com/zapSNH/zapsCoolPhotonTheme/branches). (don't use the ones prefixed by `webextension`)
 
 You're done! 🎉
 
