@@ -8,9 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
+    - name: check current esr version
+      id: getesr
+      run: |
+        echo "version=$(cat ./.github/workflows/ESR_VERSION)" >> $GITHUB_OUTPUT
+
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        ref: 115esr
+        ref: ${{ steps.getesr.outputs.version }}esr
 
     - name: add gh bot creds
       run: |
@@ -33,7 +40,7 @@ jobs:
       run: |
         python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }}
   
-    - name: zip files - ESR
+    - name: zip files
       run: |
         rm -rf ./.github
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip *
