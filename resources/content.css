@@ -753,23 +753,26 @@
 	#homeContentsGroup .checkbox-icon {
 		opacity: 0;
 	}
-	#homeContentsGroup checkbox .checkbox-label-box::before {
+	#homeContentsGroup vbox .checkbox-label-box::before {
 		-moz-context-properties: fill, stroke;
 		fill: currentColor;
 		stroke: currentColor;
 		margin-top: 4px;
 		margin-inline-end: -16px !important;
 	}
-	#homeContentsGroup checkbox[src="chrome://global/skin/icons/search-glass.svg"] .checkbox-label-box::before {
+	#homeContentsGroup vbox[data-subcategory="search"] .checkbox-label-box::before {
 		content: url("./icons/find-in-page.svg") !important;
 	}
-	#homeContentsGroup checkbox[src="chrome://browser/skin/topsites.svg"] .checkbox-label-box::before {
+	#homeContentsGroup vbox[data-subcategory="topsites"] > checkbox .checkbox-label-box::before {
 		content: url("./icons/glyph-topsites.svg") !important;
 	}
-	#homeContentsGroup checkbox[src="chrome://global/skin/icons/pocket.svg"] .checkbox-label-box::before {
+	#homeContentsGroup vbox[data-subcategory="weather"] .checkbox-label-box::before {
+		content: url("./icons/weather.svg") !important;
+	}
+	#homeContentsGroup vbox[data-subcategory="topstories"] .checkbox-label-box::before {
 		content: url("./icons/pocket.svg") !important;
 	}
-	#homeContentsGroup checkbox[src="chrome://global/skin/icons/highlights.svg"] .checkbox-label-box::before {
+	#homeContentsGroup vbox[data-subcategory="highlights"] > checkbox .checkbox-label-box::before {
 		content: url("./icons/glyph-highlights-16.svg") !important;
 		width: 16px;
 	}
