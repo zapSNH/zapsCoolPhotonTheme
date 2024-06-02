@@ -1,0 +1,57 @@
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: check current esr version
+      id: getesr
+      run: |
+        echo "version=$(cat ./.github/workflows/ESR_VERSION)" >> $GITHUB_OUTPUT
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ steps.getesr.outputs.version }}esr
+
+    - name: add gh bot creds
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: zip files & stash
+      run: |
+        rm -rf ./.github
+        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip *
+        git add zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
+        git stash push zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: main
+
+    - name: release notes
+      run: |
+        python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }}
+  
+    - name: zip files
+      run: |
+        rm -rf ./.github
+        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip *
+        git stash pop
+        
+    - name: release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        body_path: relnotes.md
+        files: |
+          zapsCoolPhotonTheme-${{ github.ref_name }}.zip
+          zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip

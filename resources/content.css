@@ -440,6 +440,9 @@
 		border-start-end-radius: var(--photon-primary-border-radius) !important;
 		border-end-end-radius: var(--photon-primary-border-radius) !important;
 	}
+	.ds-card .card-stp-button-hover-background {
+		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
+	}
 	.historyIcon {
 		background-image: url("./icons/history.svg") !important;
 	}
@@ -988,6 +991,8 @@
 	.page-nav-icon {
 		width: 16px !important;
 		height: 16px !important;
+		margin-inline-start: 4px;
+		margin-inline-end: -4px;
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentbrowsing.svg"] {
 		content: url(./icons/glyph-highlights-16.svg);
