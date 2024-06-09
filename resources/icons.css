@@ -845,6 +845,9 @@
 .urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {
 	content: url(./icons/edit-paste.svg) !important;
 }
+.urlbarView-favicon[src="chrome://global/skin/icons/trending.svg"] {
+	content: url(./icons/trending.svg) !important;
+}
 #translations-button-locale {
 	margin: 0px !important;
 }
