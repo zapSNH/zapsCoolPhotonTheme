@@ -128,6 +128,8 @@ If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these 
 |:-:|:-:|:-:|
 | `uc.waterfox` | `true` | Waterfox |
 | `uc.floorp` | `true` | Floorp |
+| `uc.librewolf` | `true` | LibreWolf |
+| `uc.tor` | `true` | Tor Browser |
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
