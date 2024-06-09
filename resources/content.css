@@ -292,6 +292,16 @@
 			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 		}
 	}
+	@supports -moz-bool-pref("uc.librewolf") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/librewolf/librewolf-grayscale.svg) !important;
+		}
+	}
+	@supports -moz-bool-pref("uc.tor") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/forks/tor/tor-grayscale.svg) !important;
+		}
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {

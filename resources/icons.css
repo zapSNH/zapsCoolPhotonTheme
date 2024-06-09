@@ -11,10 +11,11 @@
 	@supports -moz-bool-pref("uc.waterfox") {
 		--grayscale-logo: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 	}
-	/* TODO: LibreWolf and Tor Browser icons */
 	@supports -moz-bool-pref("uc.librewolf") {
+		--grayscale-logo: url(./icons/forks/librewolf/librewolf-grayscale.svg) !important;
 	}
 	@supports -moz-bool-pref("uc.tor") {
+		--grayscale-logo: url(./icons/forks/tor/tor-grayscale.svg) !important;
 	}
 }
 * {
