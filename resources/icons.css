@@ -1195,6 +1195,10 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/find-in-page.svg) !important;
 }
+#allTabsMenu-closeDuplicateTabs .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/close.svg) !important;
+}
 #allTabsMenu-containerTabsButton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/add.svg) !important;
