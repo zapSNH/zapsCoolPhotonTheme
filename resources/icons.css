@@ -61,7 +61,7 @@
 }
 /* Changes the search icon to Photon's */
 #identity-box.localResource > #identity-icon-box > #identity-icon,
-#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important
 }
 #identity-box.localResource[pageproxystate="valid"] > #identity-icon-box > #identity-icon:has(+ #identity-icon-label:not([value="Nightly"])), 
