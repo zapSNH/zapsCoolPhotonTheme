@@ -541,7 +541,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin: 0 !important;
 	height: 100% !important;
 }
-#urlbar-go-button {
+#urlbar-go-button, .urlbar-go-button {
 	margin: 0 !important;
 	width: calc(var(--urlbar-height) - 2px) !important;
 	margin-inline-end: 1px !important;
