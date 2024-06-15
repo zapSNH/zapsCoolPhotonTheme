@@ -812,7 +812,7 @@
 	-moz-context-properties: fill !important;
 	fill: var(--urlbar-box-text-color) !important;
 }
-#urlbar-go-button, :root .search-go-button {
+#urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url(./icons/forward.svg) !important;
 }
 #urlbar-anon-search-settings image, #searchbar-anon-search-settings image {
