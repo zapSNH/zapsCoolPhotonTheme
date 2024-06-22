@@ -78,6 +78,8 @@
 		--box-background: var(--in-content-box-background);
 		--box-border-color: var(--in-content-box-border-color);
 		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
+		--border-radius-medium: var(--photon-primary-border-radius) !important;
+		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -458,6 +460,85 @@
 	}
 	.top-site-outer .top-site-inner > a {
 		padding: 0 !important;
+	}
+	.weatherButtonContextMenu {
+		background-image: url("./icons/more.svg") !important;
+	}
+	.weatherIcon {
+		-moz-context-properties: fill !important;
+		fill: currentColor !important;
+	}
+	.weatherIcon.iconId1 {
+		content: url("./icons/weather/sunny.svg") !important;
+	}
+	.weatherIcon.iconId2 {
+		content: url("./icons/weather/mostly-sunny.svg") !important;
+	}
+	.weatherIcon:is(.iconId3, .iconId4, .iconId6) {
+		content: url("./icons/weather/partly-sunny.svg") !important;
+	}
+	.weatherIcon.iconId5 {
+		content: url("./icons/weather/hazy-sunshine.svg") !important;
+	}
+	.weatherIcon:is(.iconId7, .iconId8) {
+		content: url("./icons/weather/cloudy.svg") !important;
+	}
+	.weatherIcon.iconId11 {
+		content: url("./icons/weather/fog.svg") !important;
+	}
+	.weatherIcon.iconId12 {
+		content: url("./icons/weather/showers.svg") !important;
+	}
+	.weatherIcon:is(.iconId13, .iconId14) {
+		content: url("./icons/weather/mostly-cloudy-with-showers.svg") !important;
+	}
+	.weatherIcon.iconId15 {
+		content: url("./icons/weather/thunderstorms.svg") !important;
+	}
+	.weatherIcon:is(.iconId16, .iconId17) {
+		content: url("./icons/weather/mostly-cloudy-with-thunderstorms.svg") !important;
+	}
+	.weatherIcon.iconId18 {
+		content: url("./icons/weather/rain.svg") !important;
+	}
+	.weatherIcon:is(.iconId19, .iconId20, .iconId25) {
+		content: url("./icons/weather/flurries.svg") !important;
+	}
+	.weatherIcon.iconId21 {
+		content: url("./icons/weather/partly-sunny-with-flurries.svg") !important;
+	}
+	.weatherIcon:is(.iconId22, .iconId23) {
+		content: url("./icons/weather/snow.svg") !important;
+	}
+	.weatherIcon:is(.iconId24, .iconId31) {
+		content: url("./icons/weather/ice.svg") !important;
+	}
+	.weatherIcon:is(.iconId26, .iconId29) {
+		content: url("./icons/weather/freezing-rain.svg") !important;
+	}
+	.weatherIcon.iconId30 {
+		content: url("./icons/weather/hot.svg") !important;
+	}
+	.weatherIcon.iconId32 {
+		content: url("./icons/weather/windy.svg") !important;
+	}
+	.weatherIcon.iconId33 {
+		content: url("./icons/weather/night-clear.svg") !important;
+	}
+	.weatherIcon:is(.iconId34, .iconId35, .iconId36, .iconId38) {
+		content: url("./icons/weather/night-mostly-clear.svg") !important;
+	}
+	.weatherIcon.iconId37 {
+		content: url("./icons/weather/night-hazy-moonlight.svg") !important;
+	}
+	.weatherIcon:is(.iconId39, .iconId40) {
+		content: url("./icons/weather/night-partly-cloudy-with-showers.svg") !important;
+	}
+	.weatherIcon:is(.iconId41, .iconId42) {
+		content: url("./icons/weather/night-partly-cloudy-with-thunderstorms.svg") !important;
+	}
+	.weatherIcon:is(.iconId43, .iconId44) {
+		content: url("./icons/weather/night-mostly-cloudy-with-flurries.svg") !important;
 	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {

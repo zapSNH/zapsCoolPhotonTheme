@@ -814,6 +814,7 @@
 }
 #urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url(./icons/forward.svg) !important;
+	min-width: 28px !important;
 }
 #urlbar-anon-search-settings image, #searchbar-anon-search-settings image {
 	list-style-image: url(./icons/settings.svg) !important;
