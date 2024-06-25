@@ -1121,6 +1121,9 @@
 #sidebar-switcher-tabs:is(menuitem) .menu-text {
 	background-image: url(./icons/tab.svg);
 }
+#sidebar-switcher-genai-chat:is(menuitem) .menu-text {
+	background-image: url(./icons/glyph-highlights-16.svg);
+}
 #sidebar-reverse-position:is(menuitem) .menu-text {
 	background-image: url(./icons/import-export-rotate90.svg);
 }
@@ -1140,6 +1143,13 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 #sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
 	list-style-image: url(./icons/tab.svg) !important;
+}
+#sidebar-box[sidebarcommand="viewGenaiChatSidebar"] > #sidebar-header 
+  > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url(./icons/glyph-highlights-16.svg) !important;
+	width: 16px !important;
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
 }
 .close-icon image {
 	list-style-image: url(./icons/add.svg) !important;
