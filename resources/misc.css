@@ -166,6 +166,9 @@
 		padding: 4px !important;
 		padding-inline: 6px !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		:root:not([lwtheme]) & {
+			background: var(--toolbar-field-background-color) !important;
+		}
 		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
 	}
 	.icon[src="chrome://global/skin/icons/reload.svg"], img[src="chrome://global/skin/icons/reload.svg"] {
