@@ -107,6 +107,9 @@
 			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
 			--codec-bg-header: #4b4b4e !important;
+			--color-gray-60: #4a4a4f !important;
+			--color-gray-80: color-mix(in srgb, var(--color-gray-60) 66.67%, var(--color-gray-90)) !important;
+			--color-gray-90: #0c0c0d !important;
 		}
 	}
 	.close {
