@@ -1124,6 +1124,8 @@
 }
 #sidebar-switcher-genai-chat:is(menuitem) .menu-text {
 	background-image: url(./icons/glyph-highlights-16.svg);
+	background-size: 16px;
+	background-position-y: center;
 }
 #sidebar-reverse-position:is(menuitem) .menu-text {
 	background-image: url(./icons/import-export-rotate90.svg);
