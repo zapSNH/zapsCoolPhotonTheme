@@ -1123,8 +1123,6 @@
 }
 #sidebar-switcher-genai-chat:is(menuitem) .menu-text {
 	background-image: url(./icons/glyph-highlights-16.svg);
-	background-size: 16px;
-	background-position-y: center;
 }
 #sidebar-reverse-position:is(menuitem) .menu-text {
 	background-image: url(./icons/import-export-rotate90.svg);
@@ -1324,8 +1322,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 .container .close {
 	background: url(./icons/close-icon2.svg) no-repeat !important;
 	background-position: center !important;
-	-moz-context-properties: stroke !important;
-	stroke: currentColor !important;
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
 }
 .container .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
