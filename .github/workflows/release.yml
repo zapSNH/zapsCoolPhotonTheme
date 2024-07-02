@@ -35,16 +35,16 @@ jobs:
       with:
         fetch-depth: 0
         ref: main
-
-    - name: release notes
-      run: |
-        python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }}
   
     - name: zip files
       run: |
         rm -rf ./.github
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip *
         git stash pop
+        
+    - name: release notes
+      run: |
+        python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }}
         
     - name: release
       uses: softprops/action-gh-release@v2

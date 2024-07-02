@@ -815,6 +815,7 @@
 }
 #urlbar-go-button, :root .search-go-button {
 	list-style-image: url(./icons/forward.svg) !important;
+	min-width: 28px !important;
 }
 #urlbar-anon-search-settings image, #searchbar-anon-search-settings image {
 	list-style-image: url(./icons/settings.svg) !important;
@@ -860,8 +861,8 @@
 }
 #urlbar-search-mode-indicator-close {
 	background-image: url(./icons/close-icon2.svg) !important;
-	-moz-context-properties: stroke !important;
-	stroke: var(--urlbar-box-text-color) !important;
+	-moz-context-properties: fill !important;
+	fill: var(--urlbar-box-text-color) !important;
 }
 .urlbarView-favicon-img[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
 	content: url(./icons/extensions.svg) !important;
@@ -1192,6 +1193,10 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/find-in-page.svg) !important;
 }
+#allTabsMenu-closeDuplicateTabs .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/close.svg) !important;
+}
 #allTabsMenu-containerTabsButton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/add.svg) !important;
@@ -1305,8 +1310,8 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 .container .close {
 	background: url(./icons/close-icon2.svg) no-repeat !important;
 	background-position: center !important;
-	-moz-context-properties: stroke !important;
-	stroke: currentColor !important;
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
 }
 .container .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
