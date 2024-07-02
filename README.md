@@ -8,8 +8,8 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 | | Windows 10/11 | Linux (GNOME) | macOS 14 | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
-| **126** | ✔️ | ✔️ | ✔️ | |
-| **128** | ✔️ | ✔️ | ? | |
+| **127** | ✔️ | ✔️ | ✔️ | |
+| **129** | ✔️ | ✔️ | ? | |
 
 See [Forks](#forks) for information about Firefox forks.
 
@@ -46,8 +46,8 @@ Download the release for your version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 126](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v126) **(recommended)**             | [Firefox 126](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v126) (download the ESR version) | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)        |
+| [Firefox 127](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v127) **(recommended)**             | [Firefox 127](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v127) (download the ESR version) | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)        |
 |                                                                                                              | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
@@ -128,6 +128,8 @@ If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these 
 |:-:|:-:|:-:|
 | `uc.waterfox` | `true` | Waterfox |
 | `uc.floorp` | `true` | Floorp |
+| `uc.librewolf` | `true` | LibreWolf |
+| `uc.tor` | `true` | Tor Browser |
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
