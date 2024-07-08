@@ -371,7 +371,7 @@ menuitem, menu {
 #PanelUI-developer-tools-view toolbarbutton {
 	margin-inline-start: var(--appmenu-noicon-inline-end) !important;
 }
-.panel-info-button {
+.panel-info-button, .all-tabs-item {
 	margin: 0 !important;
 }
 #allTabsMenu-allTabsView-tabs {
@@ -382,6 +382,10 @@ menuitem, menu {
 }
 #appMenu-addon-banners:has(::after) {
 	margin-bottom: 4px;
+}
+/* fxa menu monitor and relay ad- i mean "promotions" */
+.ctaMenuLogo, #cta-menu-header-description {
+	margin-inline-start: 0 !important;
 }
 @media (-moz-platform: windows) {
   #context-navigation {
