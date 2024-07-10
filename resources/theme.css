@@ -16,8 +16,7 @@
 	box-shadow: 2px 2px 2px #0006 !important;
 }
 menu:where([_moz-menuactive="true"]):not([disabled="true"]),
-menuitem:where([_moz-menuactive="true"]):not([disabled="true"],
-#context-navigation menuitem),
+menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigation menuitem, #ContentSelectDropdownPopup menuitem),
 #context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
 	background: var(--button-hover-bgcolor) !important;
 }
