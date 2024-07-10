@@ -732,7 +732,7 @@
 	#category-Downloads > .category-icon {
 		list-style-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
 	}
-	#category-CSK > .category-icon {
+	#category-csk > .category-icon {
 		list-style-image: url("./icons/kb-shortcuts.svg") !important;
 	}
 	#category-ssb > .category-icon {
