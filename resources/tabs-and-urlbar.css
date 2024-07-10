@@ -504,22 +504,22 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 :root:not([uidensity="touch"]) #urlbar[breakout-extend="true"] {
 	translate: 0 1px !important;
 }
-#urlbar-input-container {
+.urlbar-input-container {
 	margin-top: -1px !important;
 }
-:root[uidensity="touch"] #urlbar-input-container {
+:root[uidensity="touch"] .urlbar-input-container {
 	margin-top: 0px !important;
 }
-#urlbar:not([breakout-extend="true"]) #urlbar-input-container {
+#urlbar:not([breakout-extend="true"]) .urlbar-input-container {
 	padding-inline: 0 !important;
 }
-#urlbar[breakout-extend="true"] #urlbar-input-container {
+#urlbar[breakout-extend="true"] .urlbar-input-container {
 	padding-right: 5px !important;
 }
-#urlbar-input-container {
+.urlbar-input-container {
 	padding-left: 5px !important;
 }
-:root:is([sizemode="maximized"], [sizemode="fullscreen"]) #urlbar-input-container {
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]) .urlbar-input-container {
 	padding-right: 5px !important;
 }
 .urlbarView-favicon {
@@ -541,7 +541,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	margin: 0 !important;
 	height: 100% !important;
 }
-#urlbar-go-button {
+#urlbar-go-button, .urlbar-go-button {
 	margin: 0 !important;
 	width: calc(var(--urlbar-height) - 2px) !important;
 	margin-inline-end: 1px !important;
@@ -591,7 +591,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 :root[uidensity="compact"] .urlbar-page-action image {
 	translate: 2px !important;
 }
-:root[uidensity="compact"] #urlbar-input-container {
+:root[uidensity="compact"] .urlbar-input-container {
 	height: calc(var(--urlbar-height) + 2px) !important;
 }
 /* touch */
@@ -646,22 +646,23 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 /* Megabar */
 @media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
-	#urlbar[focused="true"]:not([breakout][breakout-extend]) {
+	#urlbar[focused]:not([breakout][breakout-extend]) {
 		z-index: 3;
 	}
-	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+	#urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		margin-inline: -8px !important;
 		margin-block: -7px !important;
 		height: calc(var(--urlbar-height) + 14px) !important;
 		outline-width: 0px !important;
 		border: 1px solid var(--urlbar-border-color) !important;
 	}
+
 	#urlbar[breakout][breakout-extend="true"] {
 		--urlbar-margin-inline: 8px !important;
 		padding: 3px !important;
 		margin-top: -3px !important;
 	}
-	:root[uidensity="compact"] #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+	:root[uidensity="compact"] #urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		margin-inline: -7px !important;
 		margin-block: -4px !important;
 		height: calc(var(--urlbar-height) + 8px) !important;
@@ -674,7 +675,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		padding-block-start: 4px !important;
 		margin-top: -2px !important;
 	}
-	:root[uidensity="touch"] #urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+	:root[uidensity="touch"] #urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		margin-inline: -7px !important;
 		margin-block: -6px !important;
 		height: calc(var(--urlbar-height) + 12px) !important;
@@ -686,7 +687,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 		padding: 2px !important;
 		margin-top: -2px !important;
 	}
-	#nav-bar:has(#urlbar[focused="true"]:not([breakout][breakout-extend])) {
+	#nav-bar:has(#urlbar[focused]:not([breakout][breakout-extend])) {
 		overflow: visible !important;
 	}
 	#urlbar[breakout-extend="true"] #urlbar-background {
@@ -694,16 +695,16 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 	}
 }
 @media (-moz-bool-pref: "uc.reduced-megabar") {
-	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+	#urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
 	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] #urlbar-input-container {
+	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] .urlbar-input-container {
 		margin-top: -3px !important;
 	}
 }
 @media (-moz-bool-pref: "uc.no-megabar") {
-	#urlbar[focused="true"]:not([breakout][breakout-extend]) #urlbar-background {
+	#urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
 	}
@@ -719,7 +720,7 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 			margin-top: 4px !important;
 		}
 	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] #urlbar-input-container {
+	:root[uidensity="compact"] #urlbar[breakout][breakout-extend="true"] .urlbar-input-container {
 		margin-top: -3px !important;
 	}
 	#urlbar .urlbarView {

@@ -61,7 +61,7 @@
 }
 /* Changes the search icon to Photon's */
 #identity-box.localResource > #identity-icon-box > #identity-icon,
-#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
 	list-style-image: url(./icons/find-in-page.svg) !important
 }
 #identity-box.localResource[pageproxystate="valid"] > #identity-icon-box > #identity-icon:has(+ #identity-icon-label:not([value="Nightly"])), 
@@ -813,7 +813,7 @@
 	-moz-context-properties: fill !important;
 	fill: var(--urlbar-box-text-color) !important;
 }
-#urlbar-go-button, :root .search-go-button {
+#urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url(./icons/forward.svg) !important;
 	min-width: 28px !important;
 }
@@ -846,6 +846,9 @@
 }
 .urlbarView-favicon[src="chrome://global/skin/icons/clipboard.svg"] {
 	content: url(./icons/edit-paste.svg) !important;
+}
+.urlbarView-favicon[src="chrome://global/skin/icons/trending.svg"] {
+	content: url(./icons/trending.svg) !important;
 }
 #translations-button-locale {
 	margin: 0px !important;
@@ -1119,6 +1122,9 @@
 #sidebar-switcher-tabs:is(menuitem) .menu-text {
 	background-image: url(./icons/tab.svg);
 }
+#sidebar-switcher-genai-chat:is(menuitem) .menu-text {
+	background-image: url(./icons/glyph-highlights-16.svg);
+}
 #sidebar-reverse-position:is(menuitem) .menu-text {
 	background-image: url(./icons/import-export-rotate90.svg);
 }
@@ -1138,6 +1144,13 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 #sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header 
   > #sidebar-switcher-target > #sidebar-icon {
 	list-style-image: url(./icons/tab.svg) !important;
+}
+#sidebar-box[sidebarcommand="viewGenaiChatSidebar"] > #sidebar-header 
+  > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url(./icons/glyph-highlights-16.svg) !important;
+	width: 16px !important;
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
 }
 .close-icon image {
 	list-style-image: url(./icons/add.svg) !important;
