@@ -286,7 +286,7 @@
 		list-style-image: url("./icons/check.svg") !important;
 		fill: #2292d0 !important;
 	}
-	.back-button {
+	.back-button, .arrow-button {
 		background-image: url("./icons/back-12.svg") !important;
 	}
 	.menu-button {
@@ -372,6 +372,7 @@
 	}
 	.top-site-outer .title {
 		padding-top: 4px !important;
+		color: var(--newtab-contextual-text-primary-color) !important;
 	}
 	.top-site-outer:hover .tile {
 		outline: 5px solid var(--newtab-border-color) !important;
@@ -396,25 +397,25 @@
 	.section-title-container {
 		visibility: visible !important;
 	}
-	.section-title {
+	.section-title span {
 		background-image: url(./icons/glyph-topsites.svg) !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
 		background-position-x: 12px;
 		-moz-context-properties: fill !important;
-		fill: var(--newtab-text-primary-color) !important;
+		fill: var(--newtab-contextual-text-primary-color) !important;
 		margin-left: -10px;
 		padding-left: 32px;
 		translate: 24px 0px;
-		color: var(--newtab-text-primary-color);
+		color: var(--newtab-contextual-text-primary-color) !important;
 		font-size: 17px;
 		font-weight: 600;
 		line-height: 20px;
 	}
-	section[data-section-id="topstories"] .section-title {
+	section[data-section-id="topstories"] .section-title span {
 		background-image: url(./icons/pocket.svg) !important;
 	}
-	section[data-section-id="highlights"] .section-title {
+	section[data-section-id="highlights"] .section-title span {
 		background-image: url(./icons/glyph-highlights-16.svg) !important;
 		background-size: 16px !important;
 	}
@@ -432,6 +433,8 @@
 		border: 1px solid var(--newtab-border-color) !important;
 		transition: var(--photon-speed-1) !important;
 		background-image: url("./icons/more.svg") !important;
+		-moz-context-properties: fill !important;
+		fill: var(--newtab-text-primary-color) !important;
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
@@ -578,6 +581,8 @@
 			--newtab-background-color: #2a2a2e !important;
 		 	--newtab-text-primary-color: #cfcfd1 !important;
 			--newtab-overlay-color: #2a2a2ad8 !important;
+			--newtab-button-static-hover-background: var(--in-content-button-background-hover) !important;
+			--newtab-button-static-active-background: var(--in-content-button-background-active) !important;
 		}
 		body {
 			background-color: #2a2a2e !important;
@@ -598,6 +603,8 @@
 	}
 	@media (-moz-bool-pref: "uc.newtab.background") {
 		body {
+			--newtab-contextual-text-primary-color: currentColor !important;
+			--newtab-button-text: currentColor !important;
 			background: fixed;
 			background-image: url(./background.png);	
 			background-position: center;
