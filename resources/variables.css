@@ -1,5 +1,4 @@
 /* Variables */
-/* fun fact: the mega-ultra-giga-tera-peta-zeta-exa-giganto-big-chungus-bar is smaller in proton than in photon */
 /* Change these to change some stuff */
 /* If you're using a dark theme or some colors are not applying, change the stuff thats in the @media query :) */
 :root {
@@ -74,7 +73,7 @@ toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .
 menupopup, panel, #PlacesChevron *:not(.menuitem-with-favicon, .bookmark-item), #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
 button, button hbox, hbox menulist,
-#urlbar :is(button, .urlbarView-action), #urlbar-go-button,
+#urlbar :is(button, .urlbarView-action),
 findbar *, .bookmark-item:not(.menuitem-with-favicon), .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
 #firefox-view-button .toolbarbutton-icon, .urlbarView-dynamic-quickactions-buttons > span,

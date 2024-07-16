@@ -865,7 +865,7 @@
 #urlbar-search-mode-indicator-close {
 	background-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: fill !important;
-	fill: var(--urlbar-box-text-color) !important;
+	fill: currentColor !important;
 }
 .urlbarView-favicon-img[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
 	content: url(./icons/extensions.svg) !important;
