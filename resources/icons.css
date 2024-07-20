@@ -30,9 +30,32 @@
   	fill-opacity: 1 !important;
 	stroke-linecap: round !important;
 }
-/* info icon */
+/* Info icon */
 .panel-info-button image {
 	list-style-image: url(./icons/info.svg) !important;
+}
+/* Photon sound icons */
+.tab-icon-overlay[soundplaying] {
+	list-style-image: url(./icons/tab-audio-playing.svg) !important;
+}
+.tab-icon-overlay[muted] {
+	list-style-image: url(./icons/tab-audio-muted.svg) !important;
+}
+.tab-icon-overlay[activemedia-blocked] {
+	list-style-image: url(./icons/tab-audio-blocked.svg) !important;
+}
+.tab-icon-overlay[pictureinpicture] {
+	list-style-image: url(./icons/pictureinpicture.svg) !important;
+}
+/* New tab icon */
+#tabs-newtab-button, #new-tab-button {
+	> image {
+		list-style-image: url(./icons/add.svg) !important;
+	}
+}
+/* All tabs dropdown */
+#alltabs-button {
+	list-style-image: url(./icons/arrow-dropdown-16.svg) !important;
 }
 /* Changes the Firefox logo to that of the Photon grayscale one */
 #identity-box.chromeUI > #identity-icon-box > #identity-icon {
@@ -865,7 +888,7 @@
 #urlbar-search-mode-indicator-close {
 	background-image: url(./icons/close-icon2.svg) !important;
 	-moz-context-properties: fill !important;
-	fill: var(--urlbar-box-text-color) !important;
+	fill: currentColor !important;
 }
 .urlbarView-favicon-img[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
 	content: url(./icons/extensions.svg) !important;
