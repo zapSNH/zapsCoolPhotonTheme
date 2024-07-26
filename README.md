@@ -5,10 +5,10 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 <p align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">(showcase)</a></p>
 
 #### Compatibility
-| | Windows 10/11 | Linux (GNOME) | macOS | Notes |
+| | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ✔️ | Includes forks of Firefox (Waterfox, Floorp, etc.) |
-| **128** | ✔️ | ✔️ | ✔️ | |
+| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. Includes forks of Firefox (Waterfox, Floorp, etc.) |
+| **128(esr)** | ✔️ | ✔️ | ✔️ | |
 | **130** | ✔️ | ✔️ | ? | |
 
 See [Forks](#forks) for information about Firefox forks.
