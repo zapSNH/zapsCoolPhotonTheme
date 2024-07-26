@@ -35,15 +35,12 @@ jobs:
       with:
         fetch-depth: 0
         ref: main
-
-    - name: release notes
+  
+    - name: zip files & release notes
       run: |
         python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }}
-  
-    - name: zip files
-      run: |
         rm -rf ./.github
-        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip *
+        zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip * -x "relnotes.md"
         git stash pop
         
     - name: release
