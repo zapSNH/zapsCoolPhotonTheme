@@ -450,6 +450,15 @@ credits to phroton for some of this stuff */
 	:root:not([uidensity="touch"]) &[breakout-extend="true"] {
 		translate: 0 1px !important;
 	}
+	&#searchbar {
+		--urlbar-min-height: 30px !important;
+		:root[uidensity="touch"] & {
+			--urlbar-min-height: 36px !important;
+		}
+		:root[uidensity="compact"] & {
+			--urlbar-min-height: 26px !important;
+		}
+	}
 }
 #searchbar:focus-within {
 	border: 1px solid var(--photon-accent-dark) !important;
