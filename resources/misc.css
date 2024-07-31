@@ -707,6 +707,7 @@
 			margin-inline-start: 35px;
 		}
 		#nav-bar {
+			z-index: 1;
 			margin-top: -42px;
 			margin-inline-end: 167px;
 			margin-inline-start: 35px;

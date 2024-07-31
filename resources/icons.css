@@ -1425,3 +1425,7 @@ img {
 		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
 	}
 }
+/* Report broken site */
+.report-broken-site-view > .panel-subview-body > label.invalid-message {
+	background-image: url("./icons/warning-16.svg") !important;
+}
