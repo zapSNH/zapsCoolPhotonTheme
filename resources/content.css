@@ -167,6 +167,9 @@
 	.button-add {
 		background-image: url(./icons/add.svg) !important;
 	}
+	.icon.icon-info-warning {
+		background-image: url(./icons/warning-16.svg) !important;;
+	}
 	input[type="checkbox"] {
 		width: 20px !important;
 		height: 20px !important;
