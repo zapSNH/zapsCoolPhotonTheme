@@ -9,7 +9,7 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. Includes forks of Firefox (Waterfox, Floorp, etc.) |
 | **128(esr)** | ✔️ | ✔️ | ✔️ | |
-| **130** | ✔️ | ✔️ | ? | |
+| **130 nightly** | ✔️ | ✔️ | ? | |
 
 See [Forks](#forks) for information about Firefox forks.
 
@@ -27,10 +27,10 @@ Open `about:config` and set:
 | Pref | Value | Description |
 |:-:|:-:|:-:|
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
-| `svg.context-properties.content.enabled` | `true` | Required in order to make the icons colored correctly. |
+| `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
-| `layout.css.has-selector.enabled` | `true` | `true` by default in FF 121+. Required for some functionality to work. |
-| `layout.css.nesting.enabled` | `true` | `true` by default in FF 117+. Required for theming and some other stuff to work. |
+| `layout.css.has-selector.enabled` | `true` | **Only for Firefox 121 and below.**<br>Required for some functionality to work. |
+| `layout.css.nesting.enabled` | `true` | **Only for Firefox 117 and below.**<br>Required for theming and some other stuff to work. |
 
 Optionally, you can set:
 | Pref | Value | Description |
@@ -55,7 +55,7 @@ Download the release for your version:
 
 * [Firefox 99](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/archive-v99.zip)
 * [Firefox 116 - 119](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/119.zip)
-* [Other Versions (FF 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
+* [Other Versions (Firefox 120+)](https://github.com/zapSNH/zapsCoolPhotonTheme/releases)
 </details>
 
 ____
@@ -65,10 +65,10 @@ Extract the zip and move `zapsCoolPhotonTheme-*` to your profile folder which yo
 Rename the `zapsCoolPhotonTheme-*` folder to `chrome`
 
 Make sure the directory is like this:
-* `Profiles` > `XXXXXXXX.profile` > `chrome` > `userChrome.css` and others
+* `Profiles` > `XXXXXXXX.profile_name_here` > `chrome` > `userChrome.css` and others
 
 and **not** like this:
-* `Profiles` > `XXXXXXXX.profile` > `chrome` > `zapsCoolPhotonTheme-*` > `userChrome.css` and others
+* `Profiles` > `XXXXXXXX.profile_name_here` > `chrome` > `zapsCoolPhotonTheme-*` > `userChrome.css` and others
 
 Restart Firefox.
 
@@ -85,7 +85,7 @@ This version is based on [Paxmod](https://github.com/numirias/paxmod).
 Open `about:config` and set:
 | Pref | Value | Description |
 |:-:|:-:|:-:|
-| `extensions.experiments.enabled`  | `true` | Enables extensions experiments which allows CSS theming in extensions |
+| `extensions.experiments.enabled`  | `true` | Enables extensions experiments which allows CSS theming in extensions. |
 | `xpinstall.signatures.required` | `false` | Disables extension signing which may be insecure. See [this](https://github.com/numirias/paxmod#why-cant-i-install-paxmod-as-a-verified-extension-through-mozilla) for the reason.  |
   
 All other preferences required to run the theme (see [the table above](#manually-)) will be set automatically.
@@ -111,14 +111,14 @@ Open your profile folder which you can find by going to `about:support` and open
 
 If you're in a file manager with a GUI (Explorer, Finder, etc.), open a terminal in the profile folder, usually by right clicking and clicking Open in Terminal (or similar). [(example)](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/c35ffc7d-0343-479a-9366-72d56833c4c3)
 
-Copy (or type) this command into the terminal `git clone https://github.com/zapSNH/zapsCoolPhotonTheme.git chrome` and run it. **Make sure the terminal is in the profile folder and not in any of its subfolders.**
+Copy (or type) this command into the terminal `git clone https://github.com/zapSNH/zapsCoolPhotonTheme.git chrome` and press enter. **Make sure the terminal is in the profile folder (like `Profiles` > `XXXXXXXX.profile_name_here`) and not in any of its subfolders.**
 
 If you're using a version of Firefox that isn't the latest stable version then copy (or type) these commands into the terminal.
 ```
 cd chrome
 git checkout BRANCH_NAME
 ```
-where `BRANCH_NAME` is [the branch of your Firefox version (i.e. `115esr` or `nightly`)](https://github.com/zapSNH/zapsCoolPhotonTheme/branches). (don't use the ones prefixed by `webextension`)
+where `BRANCH_NAME` is [your Firefox version (i.e. `115esr` or `nightly`)](https://github.com/zapSNH/zapsCoolPhotonTheme/branches). (don't use the ones prefixed by `webextension`)
 
 You're done! 🎉
 
@@ -139,11 +139,11 @@ An interactive configurator is available at https://zapsnh.github.io/zcpt-config
 For the WebExtension version, the configurator is can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings apply after you click `Apply`.
 
 ## Miscellaneous
-Photon Firefox icons are taken from the `omni.ja` file from Firefox 87.
-Some other icons are modified/made by me.
+Firefox Photon icons were taken from the `omni.ja` file from Firefox 87.
+Other icons that were not in Firefox 87 were made by me.
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
 - [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton/)
-- The folks over on r/FirefoxCSS
-- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and they made Photon)
+- The folks over at r/FirefoxCSS
+- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and made Photon)
