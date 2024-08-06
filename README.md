@@ -5,11 +5,13 @@ A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifi
 <p align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">(showcase)</a></p>
 
 #### Compatibility
+Includes forks of Firefox (Waterfox, Floorp, etc.).
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. Includes forks of Firefox (Waterfox, Floorp, etc.) |
-| **128(esr)** | ✔️ | ✔️ | ✔️ | |
-| **130 nightly** | ✔️ | ✔️ | ? | |
+| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. |
+| **128esr** | ✔️ | ✔️ | ✔️ | |
+| **129** | ✔️ | ✔️ | ✔️ | |
+| **131 nightly** | ✔️ | ✔️ | ? | |
 
 See [Forks](#forks) for information about Firefox forks.
 
@@ -29,8 +31,14 @@ Open `about:config` and set:
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
 | `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
+<details>
+	<summary>For Firefox 121 and below</summary>
+	
+| Pref | Value | Description |
+|:-:|:-:|:-:|
 | `layout.css.has-selector.enabled` | `true` | **Only for Firefox 121 and below.**<br>Required for some functionality to work. |
 | `layout.css.nesting.enabled` | `true` | **Only for Firefox 117 and below.**<br>Required for theming and some other stuff to work. |
+</details>
 
 Optionally, you can set:
 | Pref | Value | Description |
@@ -46,9 +54,9 @@ Download the release for your version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 128](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) **(recommended)**             | [Firefox 128](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) (download the ESR version) | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/115esr.zip)        |
-|                                                                                                              | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
+| [Firefox 129](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v129) **(recommended)**             | [Firefox 129](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v129) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
+| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) (download the ESR version) | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
 	<summary>Older Versions</summary>
