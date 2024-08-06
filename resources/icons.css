@@ -1429,3 +1429,7 @@ img {
 .report-broken-site-view > .panel-subview-body > label.invalid-message {
 	background-image: url("./icons/warning-16.svg") !important;
 }
+/* Arifishal Intelighense thing */
+.content-shortcuts {
+	background-image: url("./icons/glyph-highlights-16.svg") !important;
+}
