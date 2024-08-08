@@ -16,6 +16,8 @@
 	--photon-border-radius: 2px;
 	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
+	--border-radius-small: var(--photon-border-radius) !important;
+	--border-radius-medium: var(--photon-border-radius-1) !important;
 	--appmenu-icon-inline-end: 8px;
 	--appmenu-noicon-inline-end: 24px;
 	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
@@ -108,6 +110,9 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 #TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item, #urlbar-go-button,
 #appMenu-popup .subviewbutton .toolbarbutton-icon, button-group button, #protections-popup-not-blocking-section-why {
 	border-radius: 0 !important;
+}
+input#radio-button {
+	border-radius: 9999px !important;
 }
 :root menupopup, :root panel {
 	--panel-border-radius: var(--photon-panel-border-radius) !important;

@@ -184,7 +184,20 @@
 		content: url(./icons/close-icon2.svg) !important;
 	}
 }
-
+/* About Dialog */
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
+	#updateIcon {
+		&.noUpdatesFound {
+			content: url("./icons/check.svg") !important;
+		}
+		&.apply {
+			content: url("./icons/reload.svg") !important;
+		}
+		&:is(.checkingForUpdates, .downloading, .applying, .restarting) {
+			content: url("./icons/loading.svg") !important;
+		}
+	}
+}
 /* Libraries */
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
 	#forward-button, #searchFilter, #placesMenu > menu {

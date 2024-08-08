@@ -179,7 +179,7 @@ input.findbar-textbox:focus {
 	}
 }
 /* Dark theme */
-:root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"] {
+:root:is([style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"], [style*="--lwt-sidebar-background-color: rgb(28, 27, 34)"]) {
 	--lwt-accent-color: #0c0c0d !important;
 	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #323234 !important;
@@ -214,6 +214,8 @@ input.findbar-textbox:focus {
 	--in-content-primary-button-background: var(--photon-accent) !important;
 	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+	--lwt-sidebar-background-color: var(--toolbar-bgcolor) !important;
+	--sidebar-background-color: var(--lwt-sidebar-background-color) !important;
 	
 	&:not(:-moz-window-inactive) {
 		--lwt-toolbar-field-highlight: var(--photon-accent-dark);
