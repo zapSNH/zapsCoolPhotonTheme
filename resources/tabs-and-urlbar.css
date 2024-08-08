@@ -1,4 +1,5 @@
-/* Tabs and Urlbar */
+/* Tabs and URLbar */
+/* And sidebar */
 /* Adjustments for each UI density */
 :root:not([uidensity="compact"], [uidensity="touch"]) {
 	--tab-min-height: 33px !important;
@@ -214,6 +215,8 @@ credits to phroton for some of this stuff */
 	padding-inline: 0 !important;
 	.toolbarbutton-icon {
 		box-shadow: none !important;
+		transition: all var(--photon-speed-2) var(--photon-easing-function) !important;
+		--toolbarbutton-hover-background: var(--tab-hover-background-color) !important;
 	}
 	&::before {
 		display: block;
@@ -875,5 +878,27 @@ credits to phroton for some of this stuff */
 	}
 	.tabbrowser-tab:not([visuallyselected]) .tab-icon-stack {
 		max-width: calc(100% - 54px) !important;
+	}
+}
+/* New sidebar */
+@media (-moz-bool-pref: "sidebar.revamp") {
+	:root {
+		--new-sidebar-width: 43px;
+	}
+	.wrapper:has(slot[name="tabstrip"]) {
+		padding-inline: 2px !important;
+		min-width: var(--new-sidebar-width) !important;
+		width: var(--new-sidebar-width) !important;
+	}
+	#sidebar-main {
+		width: var(--new-sidebar-width) !important;
+	}
+	.sidebar-splitter {
+		&:hover {
+			background-color: var(--in-content-primary-button-background) !important;
+		}
+	}
+	moz-radio, moz-checkbox, .extension-item {
+		padding-inline: var(--space-xsmall);
 	}
 }

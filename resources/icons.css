@@ -1361,44 +1361,44 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 
 /* Folder Icon */
 treechildren::-moz-tree-image(title, container){
-  list-style-image: url(./icons/folder2.svg) !important;
+	list-style-image: url(./icons/folder2.svg) !important;
 }
 /* Bookmarks toolbar folder */
 treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
-  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.svg") !important;
+	list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.svg") !important;
 }
 /* Bookmarks menu folder */
 treechildren::-moz-tree-image(container, queryFolder_menu________) {
-  list-style-image: url("chrome://browser/skin/places/bookmarksMenu.svg") !important;
+	list-style-image: url("chrome://browser/skin/places/bookmarksMenu.svg") !important;
 }
 /* Tag items */
 treechildren::-moz-tree-image(title, query, tagContainer),
 treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
-  list-style-image: url("chrome://browser/skin/places/tag.svg") !important;
+	list-style-image: url("chrome://browser/skin/places/tag.svg") !important;
 }
 /* History folders */
 treechildren::-moz-tree-image(title, query, dayContainer),
 treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
-  list-style-image: url(./icons/history-sidebar.svg) !important;
+	list-style-image: url(./icons/history-sidebar.svg) !important;
 }
 /* Downloads folder */
 treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
-  list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
+	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
 }
 /* And finally all bookmarks folder */
 treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
-  list-style-image: url(./icons/bookmark.svg) !important;
+	list-style-image: url(./icons/bookmark.svg) !important;
 }
 
 /* Back-Forward Menu */
 .unified-nav-back[_moz-menuactive]:-moz-locale-dir(ltr),
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
-  list-style-image: url(./icons/back.svg) !important;
+	list-style-image: url(./icons/back.svg) !important;
 }
 
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(ltr),
 .unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
-  list-style-image: url(./icons/forward.svg) !important;
+	list-style-image: url(./icons/forward.svg) !important;
 }
 /* Bookmark */
 .folder-icon {
@@ -1432,4 +1432,43 @@ img {
 /* Arifishal Intelighense thing */
 .content-shortcuts {
 	background-image: url("./icons/glyph-highlights-16.svg") !important;
+}
+/* New sidebar */
+button > img, span > img {
+	&[src="chrome://mozapps/skin/extensions/category-discover.svg"] {
+		content: url("./icons/glyph-highlights-16.svg") !important;
+	}
+	&[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"] {
+		content: url("./icons/sync.svg") !important;
+	}
+	&[src="chrome://browser/content/firefoxview/view-history.svg"] {
+		content: url("./icons/history.svg") !important;
+	}
+	&[src="chrome://browser/skin/preferences/category-general.svg"] {
+		content: url("./icons/settings.svg") !important;
+	}
+	&[src="chrome://browser/skin/bookmark-hollow.svg"] {
+		content: url("./icons/bookmark-hollow.svg") !important;
+	}
+	&[src="chrome://browser/skin/sidebar-expanded.svg"] {
+		content: url("./icons/sidebar-expanded.svg") !important;
+	}
+	&[src="chrome://browser/skin/sidebar-collapsed.svg"] {
+		content: url("./icons/sidebar-collapsed.svg") !important;
+	}
+	&[src="chrome://browser/skin/sidebar-right.svg"] {
+		content: url("./icons/sidebar-right.svg") !important;
+	}
+	&[src="chrome://browser/skin/sidebar-hidden.svg"] {
+		content: url("./icons/sidebar-hidden.svg") !important;
+	}
+	&[src="chrome://browser/skin/sidebar-horizontal-tabs.svg"] {
+		content: url("./icons/sidebar-horizontal-tabs.svg") !important;
+	}
+}
+img[src="chrome://browser/skin/preferences/category-general.svg"] {
+	content: url("./icons/settings.svg") !important;
+}
+#heading-wrapper .chevron-icon {
+	background-image: url("./icons/arrow-dropdown-16.svg") !important;
 }
