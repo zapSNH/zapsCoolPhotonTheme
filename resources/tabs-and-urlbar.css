@@ -66,6 +66,7 @@ credits to phroton for some of this stuff */
 	position: relative !important;
 	left: 100% !important;
 	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
+	top: 0px !important
 }
 .tab-icon-image:not([sharing]) {
 	&:not([sharing]) {
