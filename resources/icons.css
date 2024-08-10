@@ -53,6 +53,9 @@
 		list-style-image: url(./icons/add.svg) !important;
 	}
 }
+#vertical-tabs-newtab-button {
+	list-style-image: url(./icons/add.svg) !important;
+}
 /* All tabs dropdown */
 #alltabs-button {
 	list-style-image: url(./icons/arrow-dropdown-16.svg) !important;
@@ -827,7 +830,7 @@
 	padding-inline-start: 6px;
 	margin-top: 1px;
 }
-.tabbrowser-tab:not([image], [pinned]) .tab-icon-stack:not([busy]) .tab-icon-image {
+#TabsToolbar .tabbrowser-tab:not([image], [pinned]) .tab-icon-stack:not([busy]) .tab-icon-image {
 	visibility: collapse !important;
 }
 /* URLBar icons */

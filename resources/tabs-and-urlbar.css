@@ -57,7 +57,7 @@
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
 so that the sound icon doesn't look out of place
 credits to phroton for some of this stuff */
-.tabbrowser-tab:not([pinned]) .tab-icon-overlay {
+#TabsToolbar .tabbrowser-tab:not([pinned]) .tab-icon-overlay {
 	border-radius: var(--photon-border-radius) !important;
 	padding: 0px !important;
 	opacity: 1 !important;
@@ -73,7 +73,7 @@ credits to phroton for some of this stuff */
 		display: block !important;
 	}
 }
-.tabbrowser-tab:not([pinned]) .tab-icon-stack {
+#TabsToolbar .tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	position: absolute !important;
 	width: calc(100% - 6px - 48px) !important;
 }
@@ -259,8 +259,7 @@ credits to phroton for some of this stuff */
 /* Adds back the Photon tab-separators */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
 :root[style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"])
-.tabbrowser-tab:not([selected="true"], :hover),
-.tabbrowser-tab:not([selected="true"]) {
+#TabsToolbar .tabbrowser-tab:not([selected="true"], :hover), #TabsToolbar .tabbrowser-tab:not([selected="true"]) {
 	.tab-stack::before {
 		content: "";
 		position: absolute;
@@ -278,7 +277,7 @@ credits to phroton for some of this stuff */
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
 [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
 [style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
-.tab-stack::after, :root #firefox-view-button + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
+#TabsToolbar .tab-stack::after, :root #firefox-view-button + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -886,7 +885,7 @@ credits to phroton for some of this stuff */
 		--new-sidebar-width: 43px;
 	}
 	.wrapper:has(slot[name="tabstrip"]) {
-		padding-inline: 2px !important;
+		padding-inline: 5px !important;
 		min-width: var(--new-sidebar-width) !important;
 		width: var(--new-sidebar-width) !important;
 	}
@@ -900,5 +899,57 @@ credits to phroton for some of this stuff */
 	}
 	moz-radio, moz-checkbox, .extension-item {
 		padding-inline: var(--space-xsmall);
+	}
+	/* Vertical tabs */
+	:root #vertical-tabs {
+		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
+		margin-inline-start: -5px !important;
+		margin-inline-end: 0px !important;
+		.tabbrowser-tab {
+			&[selected] .tab-background {
+				background-color: var(--button-active-bgcolor) !important;
+			}
+			&:not([selected], :has(+ .tabbrowser-tab[selected])) .tab-background {
+				border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+			}
+			&:not([selected]):first-child .tab-background {
+				border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+			}
+			.tab-background::before {
+				translate: 0 0;
+			}
+			.tab-close-button {
+				position: absolute !important;
+				translate: -1px;
+			}
+			.tab-icon-stack {
+				min-width: 16px !important;
+				width: 16px !important;
+			}
+			&[selected] .tab-icon-stack {
+				position: absolute !important;
+			}
+			&[selected]:hover .tab-icon-image {
+				opacity: 0 !important;
+			}
+			&[selected]:hover .tab-close-button {
+				display: block !important;
+			}
+			.tab-icon-overlay {
+				border-radius: 999px !important;
+				transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
+				padding: 1px !important;
+				background: var(--toolbar-bgcolor) !important;
+			}
+		}
+		#newtab-button-container {
+			margin-inline: auto !important;
+		}
+		#vertical-tabs-newtab-button {
+			appearance: none !important;
+			&:active {
+				background-color: var(--button-active-bgcolor) !important;
+			}
+		}
 	}
 }
