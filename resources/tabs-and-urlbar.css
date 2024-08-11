@@ -883,11 +883,20 @@ credits to phroton for some of this stuff */
 @media (-moz-bool-pref: "sidebar.revamp") {
 	:root {
 		--new-sidebar-width: 43px;
+		&:has(sidebar-main[expanded]) {
+			--new-sidebar-width: 225px;
+		}
 	}
 	.wrapper:has(slot[name="tabstrip"]) {
 		padding-inline: 5px !important;
 		min-width: var(--new-sidebar-width) !important;
 		width: var(--new-sidebar-width) !important;
+		> :is(button-group, div):has(.expanded-button) {
+			margin-inline-end: calc(var(--space-small) * -1 - 2px) !important;
+		}
+	}
+	.expanded-button {
+		translate: -1px;
 	}
 	#sidebar-main {
 		width: var(--new-sidebar-width) !important;
@@ -903,6 +912,7 @@ credits to phroton for some of this stuff */
 	/* Vertical tabs */
 	:root #vertical-tabs {
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
+		width: calc(var(--new-sidebar-width) - 1px) !important;
 		margin-inline-start: -5px !important;
 		margin-inline-end: 0px !important;
 		.tabbrowser-tab {
@@ -926,9 +936,6 @@ credits to phroton for some of this stuff */
 				min-width: 16px !important;
 				width: 16px !important;
 			}
-			&[selected] .tab-icon-stack {
-				position: absolute !important;
-			}
 			&[selected]:hover .tab-icon-image {
 				opacity: 0 !important;
 			}
@@ -942,13 +949,59 @@ credits to phroton for some of this stuff */
 				background: var(--toolbar-bgcolor) !important;
 			}
 		}
+		#tabbrowser-tabs[expanded] {
+			.tabbrowser-tab {
+				&[selected]:hover .tab-icon-image {
+					opacity: 1 !important;
+				}
+				.tab-label-container {
+					margin-inline-start: 8px !important;
+				}
+				&[pinned][selected]:hover .tab-icon-image {
+					opacity: 0 !important;
+				}
+				&[pinned][selected]:hover .tab-icon-stack {
+					position: absolute !important;
+				}
+				&:not([pinned]) .tab-icon-overlay {
+					border-radius: var(--photon-border-radius) !important;
+					padding: 0px !important;
+					opacity: 1 !important;
+					position: relative !important;
+					left: 100% !important;
+					transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
+					top: 0px !important;
+				}
+				&:not([pinned]) .tab-icon-stack {
+					left: 8px !important;
+					width: calc(100% - 56px) !important;
+					position: absolute;
+				}
+				&:not([pinned]) .tab-label {
+					margin-inline-start: 12px !important;
+				}
+			}
+		}
+		
+		#tabbrowser-tabs:not([expanded]) { 
+			.tabbrowser-tab {
+				&[selected]:hover .tab-icon-stack {
+					position: absolute !important;
+				}
+				&:not([pinned]) .tab-icon-overlay:is([muted], [soundplaying], [activemedia-blocked], [crashed="true"]) {
+					display: block !important;
+				}
+			}
+		}
+		#tabbrowser-arrowscrollbox {
+			height: 100% !important;
+		}
 		#newtab-button-container {
 			margin-inline: auto !important;
-			translate: -1px;
 		}
 		#vertical-tabs-newtab-button {
 			appearance: none !important;
-			aspect-ratio: 1;
+			#tabbrowser-tabs:not([expanded]) & {aspect-ratio: 1;}
 			&:active {
 				background-color: var(--button-active-bgcolor) !important;
 			}
