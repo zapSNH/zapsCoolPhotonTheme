@@ -318,6 +318,11 @@
 			content: url(./icons/forks/tor/tor-grayscale.svg) !important;
 		}
 	}
+	@media (-moz-bool-pref: "uc.logo.quantum") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url(./icons/quantum/aboutdebugging-firefox-logo.svg) !important;
+		}
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -609,7 +614,7 @@
 			--newtab-contextual-text-primary-color: currentColor !important;
 			--newtab-button-text: currentColor !important;
 			background: fixed;
-			background-image: url(./background.png);	
+			background-image: url(./background.png);
 			background-position: center;
 		}
 		.top-site-inner, .section-top-bar {
@@ -629,6 +634,27 @@
 		}
 		.top-site-outer .context-menu-button {
 			translate: 0px 8px;
+		}
+	}
+	/* Legacy Logos */
+	.search-wrapper .logo-and-wordmark .logo {
+		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
+		@media (-moz-bool-pref: "uc.logo.quantum-beta") {
+			--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg) !important;
+		}
+		@media (-moz-bool-pref: "uc.logo.quantum-dev") {
+			--quantum-logo: url(./icons/quantum/firefox-logo-developer-edition.svg) !important;
+		}
+		@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
+			--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg) !important;
+		}
+		@media (-moz-bool-pref: "uc.logo.quantum") {
+			background-image: var(--quantum-logo) !important;
+		}
+	}
+	.search-wrapper .logo-and-wordmark .wordmark {
+		@media (-moz-bool-pref: "uc.logo.quantum") {
+			background-image: url(./icons/quantum/firefox-wordmark.svg) !important;
 		}
 	}
 }
