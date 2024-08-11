@@ -15,6 +15,29 @@
 	@media (-moz-bool-pref: "uc.tor") {
 		--grayscale-logo: url(./icons/forks/tor/tor-grayscale.svg) !important;
 	}
+	/* Legacy Logos */
+	--quantum-logo: url(./icons/quantum/firefox-logo.svg);
+	@media (-moz-bool-pref: "uc.logo.quantum") {
+		--grayscale-logo: url(./icons/quantum/aboutdebugging-firefox-logo.svg) !important;
+	}
+	@media (-moz-bool-pref: "uc.logo.quantum-beta") {
+		--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg);
+	}
+	@media (-moz-bool-pref: "uc.logo.quantum-dev") {
+		--quantum-logo: url(./icons/quantum/firefox-logo-dev.svg);
+	}
+	@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
+		--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg);
+	}
+}
+/* Legacy Logos */
+:is(img, image)[src="chrome://branding/content/icon32.png"] {
+	@media (-moz-bool-pref: "uc.logo.quantum-beta") {
+		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
+	}
+	@media (-moz-bool-pref: "uc.logo.quantum") {
+		content: var(--quantum-logo) !important;
+	}
 }
 * {
 	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
