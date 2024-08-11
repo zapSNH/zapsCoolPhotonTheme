@@ -128,10 +128,24 @@
 		-moz-appearance: none !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		&:not([type="radio"]) {
+			&:checked[type="checkbox"] {
+				background-image: url(./icons/check.svg);
+				background-position: center;
+				background-size: 12px;
+				background-repeat: no-repeat;
+				fill: white !important;
+				-moz-context-properties: fill;
+			}
 			border-radius: var(--photon-border-radius) !important;
 		}
-		&:not([type="radio"]:checked) {
-			background-color: var(--input-bgcolor) !important;
+		&:checked {
+			background-color: var(--photon-accent-dark) !important;
+			&:hover:not([disabled]) {
+				background-color: color-mix(in srgb, transparent 20%, var(--photon-accent-dark)) !important;
+			}
+			&:active:not([disabled]) {
+				background-color: color-mix(in srgb, transparent 40%, var(--photon-accent-dark)) !important;
+			}
 		}
 		@media (prefers-color-scheme: light) {
 			border-color: color-mix(in srgb, transparent 80%, currentColor) !important;
