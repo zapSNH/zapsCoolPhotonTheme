@@ -1283,6 +1283,19 @@
 	.text-size-minus-button {
 		background-image: url("./icons/zoom-out.svg") !important;
 	}
+	.colors-button {
+		background-image: url("./icons/customize.svg") !important;
+	}
+	img[src="chrome://global/skin/icons/edit-outline.svg"] {
+		content: url("./icons/edit.svg") !important;
+	}
+	.chevron-icon {
+		background-image: url("./icons/arrow-dropdown-16.svg") !important;
+		#about-reader-advanced-layout[open] & {
+			scale: 1 -1;
+		}
+	}
+	
 }
 
 /* pdf */
