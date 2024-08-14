@@ -231,15 +231,18 @@
 			content: url("./icons/loading.svg") !important;
 		}
 	}
-	#rightBox {
-		background-image: var(--quantum-wordmark) !important;
-		background-size: var(--wordmark-size) !important;
-		background-position: var(--wordmark-position) !important;
-		-moz-context-properties: fill;
-		fill: white !important;
-	}
-	#leftBox {
-		background-image: var(--quantum-logo) !important;
+	
+	@media (-moz-bool-pref: "uc.logo.quantum") {
+		#rightBox {
+			background-image: var(--quantum-wordmark) !important;
+			background-size: var(--wordmark-size) !important;
+			background-position: var(--wordmark-position) !important;
+			-moz-context-properties: fill;
+			fill: white !important;
+		}
+		#leftBox {
+			background-image: var(--quantum-logo) !important;
+		}
 	}
 }
 /* Libraries */
