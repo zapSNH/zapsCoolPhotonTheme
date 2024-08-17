@@ -38,6 +38,10 @@ input.findbar-textbox:focus {
 .identity-box-button:not(:hover, :active, [open]) {
 	background-color: transparent !important;
 }
+#nav-bar {
+	border-top: none !important;
+	box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--tabs-navbar-separator-color, transparent) !important;
+}
 /* Light theme */
 :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"] {
 	--lwt-accent-color: #d7d7db !important;
