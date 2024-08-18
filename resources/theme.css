@@ -7,11 +7,13 @@
 	--tabs-navbar-shadow-size: 1px !important;
 	--urlbar-box-bgcolor: transparent !important;
 }
+menupopup:not(#ContentSelectDropdownPopup) {
+	--panel-background: var(--arrowpanel-background) !important;
+}
 #tab-preview-panel {
 	--panel-background: var(--arrowpanel-background) !important;
 }
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
-	background-color: var(--arrowpanel-background) !important;
 	box-shadow: 2px 2px 2px #0006 !important;
 }
 menu:where([_moz-menuactive="true"]):not([disabled="true"]),

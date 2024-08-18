@@ -388,22 +388,25 @@ menuitem, menu {
 	margin-inline-start: 0 !important;
 }
 @media (-moz-platform: windows) {
-  #context-navigation {
-  	margin-inline: 4px !important;
-  	margin-bottom: 1px !important;
-  }
-  :is( #BMB_bookmarksPopup, #main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
-  	padding-left: 24px !important;
-  }
-  #context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
+	#context-navigation {
+		margin-inline: 4px !important;
+		margin-bottom: 1px !important;
+	}
+	:is( #BMB_bookmarksPopup, #main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
+		padding-left: 24px !important;
+	}
+	#context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
 	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
-  menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
+	menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
 	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic),
 	#allTabsMenu-hiddenTabsButton { 
-  	padding-left: 34px !important;
-  }
+		padding-left: 34px !important;
+	}
 	menuitem[checked="true"] > .menu-iconic-left {
-	 list-style-image: url("./icons/check.svg") !important;
+		list-style-image: url("./icons/check.svg") !important;
+	}
+	#ContentSelectDropdownPopup menuitem label {
+		padding-block: 0px !important;
 	}
 }
 @media (-moz-platform: linux) {

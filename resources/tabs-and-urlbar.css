@@ -335,14 +335,18 @@ credits to phroton for some of this stuff */
 /* Adds a separator between the tracking-protection icon and the rest of the urlbar */
 #tracking-protection-icon-container {
 	margin-right: 1px !important;
-	&:not(:hover, :active, [open])::after {
+	&:not(:hover, [open])::after {
 		content: "";
 		position: absolute;
 		display: block;
 		height: calc(var(--urlbar-height) - 8px);
 		right: -1px;
 		top: 3px;
-		border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+		border-right: 1px solid color-mix(in srgb, var(--toolbar-field-color) 20%, transparent);
+	}
+	&:is(:hover, [open]) {
+		padding-inline-end: calc(var(--urlbar-icon-padding) + 1px) !important;
+		margin-right: 0px !important;
 	}
 }
 #urlbar[breakout][breakout-extend="true"] #tracking-protection-icon-container:not(:hover, :active, [open])::after {
@@ -359,9 +363,9 @@ credits to phroton for some of this stuff */
 	#identity-icon-box::after {
 		content: "";
 		display: block;
-		translate: 8px 0px;
+		translate: 6px 0px;
 		height: calc(var(--urlbar-height) - 8px);
-		border-left: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+		border-left: 1px solid color-mix(in srgb, var(--toolbar-field-color) 20%, transparent);
 		opacity: 0
 	}
 	#identity-icon-box:not(:hover, :active, [open])::after {
