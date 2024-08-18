@@ -4,7 +4,7 @@
 @media (-moz-bool-pref: "uc.style-forms") {
 	select {
 		background-color: light-dark(#f9f9fa, #2a2a2e);
-		background-image: url(./icons/arrow-dropdown-16.svg);
+		background-image: url(./icons/arrow-dropdown-12.svg);
 		background-repeat: no-repeat;
 		background-position: right 2px center;
 		border-radius: 2px;
@@ -297,6 +297,12 @@
 	}
 	img[src="chrome://global/skin/icons/help.svg"] {
 		content: url("./icons/help.svg") !important;
+	}
+	.arrowhead.up {
+		list-style-image: url(./icons/arrow-dropdown-12.svg) !important;
+	}
+	.arrowhead.up {
+		list-style-image: url(./icons/arrow-up-12.svg) !important;
 	}
 	@media (-moz-bool-pref: "uc.floorp") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
@@ -1048,6 +1054,14 @@
 		}
 		&:hover:active {
 			background-color: var(--in-content-primary-button-background-active) !important;
+		}
+	}
+	/* context menus */
+	panel-list {
+		border-radius: 0 !important;
+		background-color: var(--in-content-box-background) !important;
+		hr {
+			--border-color-interactive: color-mix(in srgb, var(--in-content-page-color) 20%, transparent) !important;
 		}
 	}
 }
