@@ -342,7 +342,7 @@ credits to phroton for some of this stuff */
 		height: calc(var(--urlbar-height) - 8px);
 		right: -1px;
 		top: 3px;
-		border-right: 1px solid color-mix(in srgb, var(--toolbar-field-color) 20%, transparent);
+		border-right: 1px solid color-mix(in srgb, var(--toolbar-field-color, currentColor) 20%, transparent);
 	}
 	&:is(:hover, [open]) {
 		padding-inline-end: calc(var(--urlbar-icon-padding) + 1px) !important;
@@ -365,7 +365,7 @@ credits to phroton for some of this stuff */
 		display: block;
 		translate: 6px 0px;
 		height: calc(var(--urlbar-height) - 8px);
-		border-left: 1px solid color-mix(in srgb, var(--toolbar-field-color) 20%, transparent);
+		border-left: 1px solid color-mix(in srgb, var(--toolbar-field-color, currentColor) 20%, transparent);
 		opacity: 0
 	}
 	#identity-icon-box:not(:hover, :active, [open])::after {
@@ -912,7 +912,8 @@ credits to phroton for some of this stuff */
 		}
 	}
 	moz-radio, moz-checkbox, .extension-item {
-		padding-inline: var(--space-xsmall);
+		padding-inline: 0;
+		padding-block: var(--space-small) !important;
 	}
 	/* Vertical tabs */
 	:root #vertical-tabs {
@@ -921,6 +922,7 @@ credits to phroton for some of this stuff */
 		margin-inline-start: -5px !important;
 		margin-inline-end: 0px !important;
 		.tabbrowser-tab {
+			max-height: var(--tab-min-height) !important;
 			&[selected] .tab-background {
 				background-color: var(--button-active-bgcolor) !important;
 			}
@@ -941,7 +943,7 @@ credits to phroton for some of this stuff */
 				min-width: 16px !important;
 				width: 16px !important;
 			}
-			&[selected]:hover .tab-icon-image {
+			&[selected]:hover :is(.tab-icon-image, .tab-throbber) {
 				opacity: 0 !important;
 			}
 			&[selected]:hover .tab-close-button {
@@ -967,6 +969,9 @@ credits to phroton for some of this stuff */
 				}
 				&[pinned][selected]:hover .tab-icon-stack {
 					position: absolute !important;
+				}
+				.tab-close-button {
+					display: block !important;
 				}
 				&:not([pinned]) .tab-icon-overlay {
 					border-radius: var(--photon-border-radius) !important;
@@ -1000,6 +1005,9 @@ credits to phroton for some of this stuff */
 		}
 		#tabbrowser-arrowscrollbox {
 			height: 100% !important;
+			&:not([overflowing]) tab {
+				overflow: hidden !important;
+			}
 		}
 		#newtab-button-container {
 			margin-inline: auto !important;

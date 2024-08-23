@@ -42,14 +42,8 @@
 /* about and chrome stylynh */
 @-moz-document regexp("chrome:\/\/(?!devtools|browser\/content\/browser\.xhtml).*"), regexp("about:(?!blank)(?!devtools-toolbox).*")  {
 	:root {
-		--photon-primary-border-radius: 4px;
-		--photon-secondary-border-radius: 2px;
 		--content-css: 1px;
 		--photon-speed-1: 0.1s;
-		--blue-60: #0060df;
-		--blue-70: #003eaa;
-		--blue-80: #002275;
-		--grey-20: #ededf0;
 		/* new color prefixed versions */
 		--color-blue-60: var(--blue-60) !important;
 		--color-blue-70: var(--blue-70) !important;
@@ -61,12 +55,23 @@
 		--checkbox-size: 20px !important;
 		--space-xsmall: 0.2rem !important;
 	}
+	* {	
+		--blue-60: #0060df;
+		--blue-70: #003eaa;
+		--blue-80: #002275;
+		--grey-20: #ededf0;
+		--in-content-primary-button-text-color: white !important;
+		--in-content-primary-button-text-color-hover: white !important;
+		--in-content-primary-button-text-color-active: white !important;
+	}
 	@media (prefers-reduced-motion) {
-	  :root {
-	  	--photon-speed-1: 0s;
-	  }
+		:root {
+			--photon-speed-1: 0s;
+		}
 	}
 	* {
+		--photon-primary-border-radius: 4px;
+		--photon-secondary-border-radius: 2px;
 		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
@@ -303,6 +308,38 @@
 	}
 	.arrowhead.up {
 		list-style-image: url(./icons/arrow-up-12.svg) !important;
+	}
+	/* screenshots-buttons */
+	.screenshots-button {
+		border-radius: var(--photon-secondary-border-radius) !important;
+	}
+	#download > img {
+		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
+	}
+	#copy > img {
+		content: url("./icons/edit-copy.svg") !important;
+	}
+	#cancel > img {
+		content: url("./icons/close.svg") !important;
+	}
+	#cancel {
+		aspect-ratio: 1;
+		max-width: 34px !important;
+	}
+	.chevron-icon {
+		background-image: url("./icons/arrow-dropdown-16.svg") !important;
+		scale: 1 -1;
+		.card-container:not([open]) & {
+			scale: 1;
+		}
+	}
+	/* context menus */
+	panel-list {
+		border-radius: 0 !important;
+		background-color: var(--in-content-box-background) !important;
+		hr {
+			--border-color-interactive: color-mix(in srgb, var(--in-content-page-color) 20%, transparent) !important;
+		}
 	}
 	@media (-moz-bool-pref: "uc.floorp") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
@@ -1039,6 +1076,19 @@
 		background-image: url("./icons/delete.svg") !important;
 	}
 	
+	/* shadow dom workaround */
+	button[part="button"] {
+		background-image: var(--button-icon, inherit) !important;
+	}
+	panel-item[action="remove"] {
+		--button-icon: url("./icons/delete.svg") !important;
+	}
+	panel-item[action="report"] {
+		--button-icon: url("./icons/warning-16.svg") !important;
+	}
+	panel-item[checked] {
+		--button-icon: url("./icons/check.svg") !important;
+	}
 	.disco-cta-button[action="install-addon"] {
 		background-color: var(--in-content-primary-button-background) !important;
 		background-image: url("./icons/add.svg") !important;
@@ -1054,14 +1104,6 @@
 		}
 		&:hover:active {
 			background-color: var(--in-content-primary-button-background-active) !important;
-		}
-	}
-	/* context menus */
-	panel-list {
-		border-radius: 0 !important;
-		background-color: var(--in-content-box-background) !important;
-		hr {
-			--border-color-interactive: color-mix(in srgb, var(--in-content-page-color) 20%, transparent) !important;
 		}
 	}
 }
@@ -1158,24 +1200,18 @@
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-history.svg"] {
 		content: url(./icons/history.svg);
 	}
-	/*
-	.search-icon {
-        background-image: url(./icons/find-in-page.svg) !important;
-		fill: #939393 !important;
-		scale: -1 1;
-	}
-	.chevron-icon {
-        background-image: url(./icons/arrow-dropdown-16.svg) !important;
-	}
-	.card-container[open] .chevron-icon {
-		scale: 1 -1;
-	}
 	#fxview-tab-row-secondary-button {
-        background-image: url(./icons/close-icon2.svg) !important;
+    	--button-icon: url(./icons/close.svg) !important;
 		&[aria-haspopup] {
-			background-image: url(./icons/more.svg) !important;
+			--button-icon: url(./icons/more.svg) !important;
 		}
-	}*/
+	}
+	#fxview-tab-row-tertiary-button {
+		--button-icon: url(./icons/close.svg) !important;
+	}
+	button[part="button"] {
+		background-image: var(--button-icon) !important;
+	}
 	
 	@media (-moz-platform: windows) {
 		slot {
