@@ -1496,4 +1496,11 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 #heading-wrapper .chevron-icon {
 	background-image: url("./icons/arrow-dropdown-16.svg") !important;
 }
+/* shadow root */
+.header-close-button {
+	--button-icon: url(./icons/close.svg) !important;
+}
+button[part="button"] {
+	background-image: var(--button-icon, inherit) !important;
+}
 }
