@@ -294,6 +294,7 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 			--sidebar-border-color: rgba(255, 255, 255, 0.1) !important;
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
+			--tabs-navbar-separator-color: transparent !important;
 			
 			&:not(:-moz-window-inactive) {
 				::selection {
