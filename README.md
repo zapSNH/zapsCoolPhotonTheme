@@ -50,7 +50,7 @@ Too lazy to set all these prefs? You can visit https://zapsnh.github.io/zcpt-con
 **Make sure to delete the `user.js` file after you start Firefox so that it doesn't override any changes you make in `about:config`.**
 ____
 
-Download the release for your version:
+Download the release for your browser version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
@@ -98,7 +98,11 @@ Open `about:config` and set:
   
 All other preferences required to run the theme (see [the table above](#manually-)) will be set automatically.
 
-Download the latest version at: https://github.com/zapSNH/zcpt-webextension/releases
+Download the release for your browser version:
+| Browser Version | Extension Version |
+|:-:|:-:|
+| 128+ | [Latest Version](https://github.com/zapSNH/zcpt-webextension/releases/latest) |
+| 115 - 127 | [v0.24.5](https://github.com/zapSNH/zcpt-webextension/releases/tag/v0.24.5) |
 
 More info at: https://github.com/zapSNH/zcpt-webextension/blob/main/README.md
 
