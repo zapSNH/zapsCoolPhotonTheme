@@ -590,7 +590,6 @@ tooltip {
 	height: 18px !important;
 	padding: 3px;
 	border-radius: 9px !important;
-	/*margin-inline-start: !important;*/
 	-moz-context-properties: fill, stroke !important;
 }
 .permission-popup-permission-remove-button {
@@ -598,7 +597,7 @@ tooltip {
 	stroke: currentColor !important;
 	&:hover .button-icon {
 		background: color-mix(in srgb, currentColor 80%, transparent) !important;
-		stroke: var(--arrowpanel-background) !important;
+		fill: var(--arrowpanel-background) !important;
 	}
 	&:hover:active .button-icon {
 		background: color-mix(in srgb, currentColor 100%, transparent) !important;
