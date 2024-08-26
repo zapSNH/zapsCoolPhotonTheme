@@ -225,9 +225,7 @@
 		&[checked], &:checked {
 			background-color: var(--blue-60) !important;
 			&:not(input[type="radio"], .radio-check) {
-				@media not (-moz-bool-pref: "uc.floorp") {
-				    background-image: url("./icons/check.svg") !important;
-				}
+			    background-image: url("./icons/check.svg") !important;
 			}
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
@@ -246,12 +244,6 @@
 				background-color: var(--blue-60) !important;
 				opacity: 0.5
 			}
-		}
-	}
-	@media (-moz-bool-pref: "uc.floorp") {
-		.checkbox-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
-			border-radius: 999px !important;
-			padding-inline-end: 38px !important;
 		}
 	}
 	input[type="radio"]:not(.wallpaper-input), .radio-check {
@@ -731,9 +723,6 @@
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	checkbox[checked] .checkbox-check {
-		@media not (-moz-bool-pref: "uc.floorp") {
-			background-image: url(./icons/check.svg) !important;
-		}
 		-moz-context-properties: fill, fill-opacity !important;
 		fill: white !important;
 		fill-opacity: 1 !important;
