@@ -181,6 +181,9 @@
 .persistent-storage-icon.blocked-permission-icon {
 	list-style-image: url(./icons/persistent-storage-blocked.svg) !important;
 }
+#webauthn-notification-icon, .popup-notification-icon[popupid^="webauthn-prompt-"] {
+	list-style-image: url(./icons/fingerprinters.svg) !important;
+}
 #notification-popup-box .persistent-storage-icon {
 	width: 30px !important;
 }
