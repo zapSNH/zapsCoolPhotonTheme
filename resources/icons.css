@@ -1370,13 +1370,16 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 }
 /* notifications */
 .container .close {
-	background: url(./icons/close-icon2.svg) no-repeat !important;
+	background: url(./icons/close.svg) no-repeat !important;
 	background-position: center !important;
 	-moz-context-properties: fill !important;
 	fill: currentColor !important;
 }
 .container .icon::after {
 	background-image: url(./icons/info-color.svg) !important;
+}
+.icon[src="chrome://global/skin/icons/warning.svg"] {
+	content: url(./icons/warning-16.svg) !important;
 }
 .icon[src="chrome://global/skin/icons/info-filled.svg"] {
 	content: url(./icons/info-color.svg) !important;

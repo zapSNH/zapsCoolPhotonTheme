@@ -271,8 +271,8 @@ credits to phroton for some of this stuff */
 		z-index: 0;
 	}
 }
-.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) 
-.tab-stack::before, :root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
+.tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) .tab-stack::before,
+:root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
 	border-right-color: transparent !important;
 }
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
@@ -421,6 +421,13 @@ credits to phroton for some of this stuff */
 }
 .container.infobar :is(.icon, .close) {
 	translate: 0 1px !important;
+}
+.notificationbox-stack notification-message::before {
+	display: none !important;
+}
+.container {
+	padding-inline-start: var(--space-medium) !important;
+	padding-inline-end: calc(var(--space-small) - var(--space-xxsmall)) !important;
 }
 /* Full-size scrollbox buttons */
 #scrollbutton-down[part="scrollbutton-down"]:hover:not([disabled], .menupopup-scrollbutton),
@@ -877,7 +884,7 @@ credits to phroton for some of this stuff */
 }
 /* Always show close button */
 @media (-moz-bool-pref: "uc.always-show-close-button") {
-	#tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
+	#TabsToolbar #tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
 		display: block !important;
 	}
 	.tabbrowser-tab:not([visuallyselected]) .tab-icon-stack {
@@ -897,7 +904,7 @@ credits to phroton for some of this stuff */
 		min-width: var(--new-sidebar-width) !important;
 		width: var(--new-sidebar-width) !important;
 		> :is(button-group, div):has(.expanded-button) {
-			margin-inline-end: calc(var(--space-small) * -1 - 2px) !important;
+			margin-inline-end: calc(var(--space-sidebar) * -1 - 2px) !important;
 		}
 	}
 	.expanded-button {
@@ -905,6 +912,12 @@ credits to phroton for some of this stuff */
 	}
 	#sidebar-main {
 		width: var(--new-sidebar-width) !important;
+	}
+	#sidebar-main > sidebar-main:nth-child(1) {
+		--space-sidebar: var(--space-small);
+		&:has(#vertical-tabs[visible]) {
+			--space-sidebar: var(--space-xxsmall);
+		}
 	}
 	.sidebar-splitter {
 		&:hover {
@@ -917,6 +930,7 @@ credits to phroton for some of this stuff */
 	}
 	/* Vertical tabs */
 	:root #vertical-tabs {
+		z-index: 0 !important;
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
 		width: calc(var(--new-sidebar-width) - 1px) !important;
 		margin-inline-start: -5px !important;
@@ -946,7 +960,7 @@ credits to phroton for some of this stuff */
 			&[selected]:hover :is(.tab-icon-image, .tab-throbber) {
 				opacity: 0 !important;
 			}
-			&[selected]:hover .tab-close-button {
+			&[selected]:not([pinned]):hover .tab-close-button {
 				display: block !important;
 			}
 			.tab-icon-overlay {
@@ -964,16 +978,13 @@ credits to phroton for some of this stuff */
 				.tab-label-container {
 					margin-inline-start: 8px !important;
 				}
-				&[pinned][selected]:hover .tab-icon-image {
-					opacity: 0 !important;
+				&[pinned] .tab-label-container {
+					display: flex !important;
 				}
-				&[pinned][selected]:hover .tab-icon-stack {
-					position: absolute !important;
-				}
-				.tab-close-button {
+				&:not([pinned]) .tab-close-button {
 					display: block !important;
 				}
-				&:not([pinned]) .tab-icon-overlay {
+				.tab-icon-overlay {
 					border-radius: var(--photon-border-radius) !important;
 					padding: 0px !important;
 					opacity: 1 !important;
@@ -982,12 +993,15 @@ credits to phroton for some of this stuff */
 					transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 					top: 0px !important;
 				}
-				&:not([pinned]) .tab-icon-stack {
+				.tab-icon-stack {
 					left: 8px !important;
 					width: calc(100% - 56px) !important;
 					position: absolute;
 				}
-				&:not([pinned]) .tab-label {
+				&[pinned] .tab-icon-stack {
+					width: calc(100% - 32px) !important;
+				}
+				.tab-label {
 					margin-inline-start: 12px !important;
 				}
 			}

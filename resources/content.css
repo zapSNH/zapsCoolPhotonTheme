@@ -234,11 +234,13 @@
 			border: 1px solid #0000 !important;
 			background-position: center;
 			background-repeat: no-repeat;
-			&:hover {
-				background-color: var(--color-accent-primary-hover) !important;
-			}
-			&:hover:active {
-				background-color: var(--color-accent-primary-active) !important;
+			&:not([disabled]) {
+				&:hover {
+					background-color: var(--color-accent-primary-hover) !important;
+				}
+				&:hover:active {
+					background-color: var(--color-accent-primary-active) !important;
+				}
 			}
 			&[disabled] {
 				background-color: var(--blue-60) !important;
