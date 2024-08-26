@@ -55,15 +55,6 @@
 		--checkbox-size: 20px !important;
 		--space-xsmall: 0.2rem !important;
 	}
-	* {	
-		--blue-60: #0060df;
-		--blue-70: #003eaa;
-		--blue-80: #002275;
-		--grey-20: #ededf0;
-		--in-content-primary-button-text-color: white !important;
-		--in-content-primary-button-text-color-hover: white !important;
-		--in-content-primary-button-text-color-active: white !important;
-	}
 	@media (prefers-reduced-motion) {
 		:root {
 			--photon-speed-1: 0s;
@@ -72,6 +63,7 @@
 	* {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
+		--border-radius-small: var(--photon-secondary-border-radius);
 		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
@@ -93,6 +85,13 @@
 		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
 		--border-radius-medium: var(--photon-primary-border-radius) !important;
 		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
+		--blue-60: #0060df;
+		--blue-70: #003eaa;
+		--blue-80: #002275;
+		--grey-20: #ededf0;
+		--in-content-primary-button-text-color: white !important;
+		--in-content-primary-button-text-color-hover: white !important;
+		--in-content-primary-button-text-color-active: white !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -394,6 +393,9 @@
 	}
 	.icon.icon-bookmark-added {
 		background-image: url("./icons/bookmark.svg") !important;
+	}
+	.icon.icon-download {
+		background-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
 	}
 	.ds-card .img-wrapper img {
 		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
