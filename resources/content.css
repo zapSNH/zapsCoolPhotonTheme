@@ -234,11 +234,13 @@
 			border: 1px solid #0000 !important;
 			background-position: center;
 			background-repeat: no-repeat;
-			&:hover {
-				background-color: var(--color-accent-primary-hover) !important;
-			}
-			&:hover:active {
-				background-color: var(--color-accent-primary-active) !important;
+			&:not([disabled]) {
+				&:hover {
+					background-color: var(--color-accent-primary-hover) !important;
+				}
+				&:hover:active {
+					background-color: var(--color-accent-primary-active) !important;
+				}
 			}
 			&[disabled] {
 				background-color: var(--blue-60) !important;
@@ -448,20 +450,21 @@
 	.section-title-container {
 		visibility: visible !important;
 	}
+	.section-title {
+		display: flex !important;
+		min-height: 16px;
+	}
 	.section-title span {
 		background-image: url(./icons/glyph-topsites.svg) !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
-		background-position-x: 12px;
+		padding-inline-start: 20px;
 		-moz-context-properties: fill !important;
 		fill: var(--newtab-contextual-text-primary-color) !important;
-		margin-left: -10px;
-		padding-left: 32px;
-		translate: 24px 0px;
 		color: var(--newtab-contextual-text-primary-color) !important;
-		font-size: 17px;
+		font-size: 13px !important;
 		font-weight: 600;
-		line-height: 20px;
+		line-height: 16px !important;
 	}
 	section[data-section-id="topstories"] .section-title span {
 		background-image: url(./icons/pocket.svg) !important;
