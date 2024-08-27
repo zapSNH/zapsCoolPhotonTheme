@@ -974,6 +974,12 @@
 		margin: auto !important;
 		translate: 14px -40px !important;
 	}
+	img[src="chrome://mozapps/skin/extensions/extensionGeneric.svg"] {
+		content: url("./icons/extensions.svg") !important;
+	}
+	img[src="chrome://browser/skin/menu.svg"] {
+		content: url("./icons/menu.svg") !important;
+	}
 	
 	@media (prefers-color-scheme: dark) {	
 		* {

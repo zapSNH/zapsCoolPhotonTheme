@@ -459,6 +459,9 @@
 #translations-button-icon {
 	list-style-image: url(./icons/translations.svg) !important;
 }
+#translations-button-circle-arrows {
+	list-style-image: url(./icons/sync.svg) !important;
+}
 #copy-button {
 	list-style-image: url(./icons/edit-copy.svg) !important;
 }
