@@ -533,13 +533,16 @@ credits to phroton for some of this stuff */
 #page-action-buttons {
 	margin: -1px !important;
 }
+#translations-button-locale {
+	translate: 4px -2px;
+}
 .urlbar-page-action {
 	padding-block: calc(var(--urlbar-icon-padding) + 1px) !important;
 	height: calc(var(--urlbar-height) - 2px) !important;
-	width: 30px !important;
+	width: var(--urlbar-height) !important;
 	&[translationsactive="true"] {
-		width: 48px !important;
-	} 
+		width: calc(var(--urlbar-height) + 20px) !important;
+	}
 	image {
 		translate: 1px !important;
 	}
@@ -548,7 +551,9 @@ credits to phroton for some of this stuff */
 :root[uidensity="compact"] {
 	.urlbar-page-action {
 		padding-block: calc(var(--urlbar-icon-padding) + 2px) !important;
-		width: var(--urlbar-height) !important;
+		&[translationsactive="true"] {
+			width: calc(var(--urlbar-height) + 18px) !important;
+		}
 	}
 	.urlbar-page-action image {
 		translate: 2px !important;
@@ -575,7 +580,6 @@ credits to phroton for some of this stuff */
 	.urlbar-page-action {
 		padding-block: calc(var(--urlbar-icon-padding) + 3px) !important;
 		height: calc(var(--urlbar-height) - 1px) !important;
-		width: var(--urlbar-height) !important;
 	}
 	.urlbar-page-action image {
 		translate: 3px !important;
