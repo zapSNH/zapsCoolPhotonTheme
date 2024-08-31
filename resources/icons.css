@@ -306,7 +306,7 @@
 	list-style-image: url(./icons/home.svg) !important;
 }
 /* Reload button animation */
-/* from github.com/1280px/rainfox, check out the theme! */
+/* from github.com/1280px/rainfox, check out the theme! (maybe not since it's dead now lol) */
 /* fixed version by me */
 :root:not([customizing]) #stop-reload-button[animate] 
 	> #reload-button 
@@ -369,6 +369,13 @@
 }
 #reader-mode-button-icon {
 	list-style-image: url(./icons/readerMode.svg) !important;
+}
+/* review checker */
+#shopping-sidebar-button > .urlbar-icon {
+	list-style-image: url(./icons/shopping.svg) !important;
+	#shopping-sidebar-button[shoppingsidebaropen="true"] & {
+		list-style-image: url(./icons/shopping-open.svg) !important;
+	}
 }
 #downloads-indicator-anchor {
 	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
