@@ -733,6 +733,11 @@ credits to phroton for some of this stuff */
 #urlbar .search-one-offs *:not(toolbarseparator) {
 	color: var(--toolbarbutton-icon-fill) !important;
 }
+/* special case for review checker */
+
+#shopping-sidebar-button[shoppingsidebaropen="true"] {
+	background-color: var(--urlbar-box-active-bgcolor);
+}
 /* Multiselected tabs */
 .tab-background[multiselected="true"] {
 	outline: none !important;
@@ -922,6 +927,9 @@ credits to phroton for some of this stuff */
 		&:has(#vertical-tabs[visible]) {
 			--space-sidebar: var(--space-xxsmall);
 		}
+	}
+	#appcontent {
+		box-shadow: none !important;
 	}
 	.sidebar-splitter {
 		&:hover {

@@ -322,7 +322,7 @@
 	.chevron-icon {
 		background-image: url("./icons/arrow-dropdown-16.svg") !important;
 		scale: 1 -1;
-		.card-container:not([open]) & {
+		:is(.card-container, #shopping-details):not([open]) & {
 			scale: 1;
 		}
 	}
@@ -1511,7 +1511,6 @@
 }
 
 /* debugging */ 
-
 @-moz-document url-prefix("about:debugging") { 
 	:root {
 		--in-content-background-color: light-dark(#f9f9fa, #2a2a2e) !important;
@@ -1524,6 +1523,42 @@
 			--button-active-background-color: rgba(249,249,250,0.2) !important;
 			--sidebar-background-hover: rgba(249, 249, 250, 0.15) !important;
 			--sidebar-selected-color: rgb(69, 161, 255) !important;
+		}
+	}
+}
+@-moz-document url-prefix("about:shoppingsidebar") { 
+	:root {
+		--shopping-header-background: var(--in-content-page-background) !important;
+	}
+	* {
+		--shopping-card-border-radius: var(--photon-primary-border-radius) !important;
+	}
+	#close-button {
+		background-image: url(./icons/close.svg) !important;
+	}
+	.price {
+		content: url("./icons/price.svg") !important;
+	}
+ 	.quality {
+ 		content: url("./icons/quality.svg") !important;
+	}
+ 	.shipping {
+ 		content: url("./icons/shipping.svg") !important;
+	}
+ 	.competitiveness {
+ 		content: url("./icons/competitiveness.svg") !important;
+	}
+ 	.packaging\/appearance {
+ 		content: url("./icons/packaging.svg") !important;
+	}
+	@media (prefers-color-scheme: dark) {
+		.shopping-card {
+			background: var(--grey-60) !important;
+			--shopping-card-border-color: var(--in-content-box-border-color) !important;
+		}
+		.show-more footer {
+			background-color: var(--grey-60) !important;;
+			box-shadow: 2px -10px 11px var(--grey-60) !important;;
 		}
 	}
 }

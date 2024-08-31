@@ -29,7 +29,6 @@
 		}
 	}
 }
-
 @-moz-document url-prefix("chrome://global/content/commonDialog.xhtml") {
 	:root {
 		--in-content-primary-button-background: var(--photon-accent) !important;
