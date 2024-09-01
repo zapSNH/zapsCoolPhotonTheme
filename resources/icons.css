@@ -380,6 +380,12 @@
 		list-style-image: url(./icons/shopping-open.svg) !important;
 	}
 }
+img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
+	content: url(./icons/shopping.svg) !important;
+}
+.dismiss-button {
+	background-image: url(./icons/close.svg) !important;
+}
 #downloads-indicator-anchor {
 	list-style-image: url(./icons/download-icons.svg#arrow-with-bar) !important;
 }
@@ -400,7 +406,7 @@
 	list-style-image: url(./icons/notification-finish-animation-r2.svg) !important;
 }
 #downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon {
-  fill: var(--photon-accent) !important;
+	fill: var(--photon-accent) !important;
 }
 #library-button {
 	list-style-image: url(./icons/library.svg) !important;
@@ -1515,6 +1521,12 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 /* shadow root */
 .header-close-button {
 	--button-icon: url(./icons/close.svg) !important;
+}
+.menu-button {
+	--button-icon: url(./icons/more.svg) !important;
+}
+.delete-button {
+	--button-icon: url(./icons/delete.svg) !important;
 }
 button[part="button"] {
 	background-image: var(--button-icon, inherit) !important;

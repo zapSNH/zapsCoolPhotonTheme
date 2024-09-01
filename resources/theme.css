@@ -73,6 +73,8 @@ input.findbar-textbox:focus {
 	--in-content-primary-button-background: var(--photon-accent) !important;
 	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+	--chrome-content-separator-color: var(--lwt-accent-color) !important;
+	
 	#urlbar {
 		--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 		--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
@@ -131,6 +133,7 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
+		--chrome-content-separator-color: var(--lwt-accent-color) !important;
 			
 			#urlbar {
 				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
@@ -220,6 +223,7 @@ input.findbar-textbox:focus {
 	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 	--lwt-sidebar-background-color: var(--toolbar-bgcolor) !important;
 	--sidebar-background-color: var(--lwt-sidebar-background-color) !important;
+	--chrome-content-separator-color: var(--lwt-accent-color) !important;
 	
 	&:not(:-moz-window-inactive) {
 		--lwt-toolbar-field-highlight: var(--photon-accent-dark);
@@ -297,6 +301,7 @@ input.findbar-textbox:focus {
 			--sidebar-border-color: rgba(255, 255, 255, 0.1) !important;
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
 			--tabs-navbar-separator-color: transparent !important;
+			--chrome-content-separator-color: var(--lwt-accent-color) !important;
 			
 			&:not(:-moz-window-inactive) {
 				::selection {
