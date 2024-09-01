@@ -326,6 +326,15 @@
 			scale: 1;
 		}
 	}
+	
+	.icon {
+		&[src="chrome://global/skin/icons/info-filled.svg"] {
+			content: url("./icons/info-color.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/warning.svg"] {
+			content: url("./icons/warning-16.svg") !important;
+		}
+	}
 	/* context menus */
 	panel-list {
 		border-radius: 0 !important;
@@ -1055,15 +1064,6 @@
 		}
 	}
 	
-	.icon {
-		&[src="chrome://global/skin/icons/info-filled.svg"] {
-			content: url("./icons/info-color.svg") !important;
-		}
-		&[src="chrome://global/skin/icons/warning.svg"] {
-			content: url("./icons/warning-16.svg") !important;
-		}
-	}
-	
 	.addon-icon[src="chrome://mozapps/skin/extensions/extensionGeneric.svg"] {
 		content: url("./icons/extensions.svg") !important;
 	}
@@ -1533,6 +1533,9 @@
 	* {
 		--shopping-card-border-radius: var(--photon-primary-border-radius) !important;
 	}
+	.onboardingContainer.shopping .screen[pos="split"] {
+		border-radius: var(--photon-primary-border-radius) !important;
+	}
 	#close-button {
 		background-image: url(./icons/close.svg) !important;
 	}
@@ -1551,14 +1554,31 @@
  	.packaging\/appearance {
  		content: url("./icons/packaging.svg") !important;
 	}
+	.highlight-item-wrapper {
+		column-gap: 0.67em !important;
+	}
+	shopping-message-bar {
+		--info-icon: url(./icons/info.svg);
+	}
+	.shopping-message-bar:not(.analysis-in-progress, #reanalysis-in-progress-message) .icon {
+		background-image: var(--info-icon) !important;
+	}
 	@media (prefers-color-scheme: dark) {
 		.shopping-card {
 			background: var(--grey-60) !important;
 			--shopping-card-border-color: var(--in-content-box-border-color) !important;
 		}
 		.show-more footer {
-			background-color: var(--grey-60) !important;;
-			box-shadow: 2px -10px 11px var(--grey-60) !important;;
+			background-color: var(--grey-60) !important;
+			box-shadow: 2px -10px 11px var(--grey-60) !important;
+		}
+		@media (prefers-contrast: no-preference) {
+			.onboardingContainer.shopping .screen[pos="split"] {
+				box-shadow: none !important;
+				.section-main .main-content {
+					background-color: var(--grey-60) !important;
+				}
+			}
 		}
 	}
 }
