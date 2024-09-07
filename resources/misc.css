@@ -762,7 +762,7 @@
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
 			--sidebar-width: 235px;
 		}
-		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ #appcontent {
+		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ :is(#appcontent, #tabbrowser-tabbox) {
 			margin-inline-start: 35px;
 		}
 		#nav-bar {
@@ -776,7 +776,7 @@
 			display: none !important;
 		}
 		.titlebar-button {
-			height: 42px !important;
+			height: 46px !important;
 		}
 		.titlebar-color {
 			background-color: var(--toolbar-bgcolor);
@@ -789,14 +789,7 @@
 		}
 		@media (-moz-platform: windows) {
 			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
-			    box-shadow: 0 1px var(--chrome-content-separator-color) !important;
-			}
-			
-			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-button {
-			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
-			}
-			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
-			    box-shadow: 0 -2px var(--chrome-content-separator-color) inset !important;
+				padding-bottom: 2px !important;
 			}
 		}
 		@media (-moz-platform: linux) {
@@ -809,19 +802,16 @@
 		} 
 		&[uidensity="compact"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
-				height: 35px !important;
+				height: 33px !important;
 			}
 			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
 				height: 35px !important;
 			}
 			#titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
-				margin-top: -33px;
+				margin-top: -32px;
 			}
 			#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: calc(100% - 34px) !important;
-			}
-			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 			}
 			&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 				bottom: -2px;
@@ -830,23 +820,18 @@
 		
 		&[uidensity="touch"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
-				height: 57px !important;
+				height: 48px !important;
 			}
 			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button,
-			.titlebar-buttonbox-container {
-				height: 47px !important;
+			.titlebar-buttonbox-container, .titlebar-spacer {
+				height: 50px !important;
 			}
-			#titlebar:has(#toolbar-menubar[inactive="true"]) ~ #nav-bar {
-				margin-top: -55px;
+			#titlebar ~ #nav-bar {
+				margin-top: -47px;
+				height: 47px !important;
 			}
 			#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: calc(100% - 46px) !important;
-			}
-			.titlebar-spacer {
-				height: 47px !important;
-			}
-			#titlebar:has(~ #PersonalToolbar[collapsed="true"]) .titlebar-spacer {
-			    box-shadow: 0 -1px var(--chrome-content-separator-color) inset !important;
 			}
 			&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 				bottom: 0px;
@@ -928,7 +913,7 @@
 			#navigator-toolbox[style*="margin-top:"] + #browser #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: 100% !important;
 				
-				&:not([hidden]) ~ #appcontent {
+				&:not([hidden]) ~ :is(#appcontent, #tabbrowser-tabbox) {
 					margin-inline-start: 0px;
 				}
 				&:not(:hover) {
