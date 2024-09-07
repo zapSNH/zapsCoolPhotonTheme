@@ -502,9 +502,7 @@ menuitem, menu {
 	height: 46px !important;
 	font-size: 14px !important;
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
-	&:not(#overflowMenu-customize-button) {
-		margin-top: -4px !important;
-	}
+	margin-top: -4px !important;
 }
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
 #identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button) .toolbarbutton-text {
@@ -519,7 +517,6 @@ menuitem, menu {
 	background: color-mix(in srgb, currentColor 30%, transparent) !important;
 }
 #overflowMenu-customize-button {
-	margin-top: -3px !important;
 	margin-bottom: 0px !important;
 }
 /* Notification box */
