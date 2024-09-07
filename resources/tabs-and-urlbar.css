@@ -930,6 +930,9 @@ credits to phroton for some of this stuff */
 	#appcontent {
 		box-shadow: none !important;
 	}
+	#tabbrowser-tabbox {
+		box-shadow: 0 0 0 var(--hairline-border-width) var(--chrome-content-separator-color) !important;
+	}
 	.sidebar-splitter {
 		&:hover {
 			background-color: var(--in-content-primary-button-background, var(--photon-accent)) !important;
