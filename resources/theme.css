@@ -6,6 +6,7 @@
 	--urlbar-border-color: var(--arrowpanel-border-color);
 	--tabs-navbar-shadow-size: 1px !important;
 	--urlbar-box-bgcolor: transparent !important;
+	--sidebar-background-color: var(--sidebar-background) !important;
 }
 menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel {
 	--panel-background: var(--arrowpanel-background) !important;
