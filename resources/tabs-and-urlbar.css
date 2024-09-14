@@ -64,9 +64,16 @@ credits to phroton for some of this stuff */
 	padding: 0px !important;
 	opacity: 1 !important;
 	position: relative !important;
-	left: 100% !important;
+	left: calc(100% - 6px) !important;
 	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 	top: 0px !important
+}
+.tab-icon-overlay { 
+	&:not(:hover, :active) {
+		background: none !important;
+	}
+	background-image: none !important;
+	border: none !important;
 }
 .tab-icon-image:not([sharing]) {
 	&:not([sharing]) {
@@ -908,7 +915,7 @@ credits to phroton for some of this stuff */
 		}
 	}
 	.wrapper:has(slot[name="tabstrip"]) {
-		padding-inline: 5px !important;
+		padding-inline: 0 !important;
 		min-width: var(--new-sidebar-width) !important;
 		width: var(--new-sidebar-width) !important;
 		> :is(button-group, div):has(.expanded-button) {
@@ -927,7 +934,7 @@ credits to phroton for some of this stuff */
 			--space-sidebar: var(--space-xxsmall);
 		}
 	}
-	#appcontent {
+	#appcontent, .browserSidebarContainer {
 		box-shadow: none !important;
 	}
 	#tabbrowser-tabbox {
@@ -938,6 +945,9 @@ credits to phroton for some of this stuff */
 			background-color: var(--in-content-primary-button-background, var(--photon-accent)) !important;
 		}
 	}
+	.wrapper > .actions-list {
+		width: var(--new-sidebar-width) !important;
+	}
 	moz-radio, moz-checkbox, .extension-item {
 		padding-inline: 0;
 		padding-block: var(--space-small) !important;
@@ -947,12 +957,14 @@ credits to phroton for some of this stuff */
 		z-index: 0 !important;
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
 		width: calc(var(--new-sidebar-width) - 1px) !important;
-		margin-inline-start: -5px !important;
-		margin-inline-end: 0px !important;
+		padding: 0 !important;
+		#vertical-tabs-newtab-button {
+			margin-inline: 4px !important;
+		}
 		.tabbrowser-tab {
 			max-height: var(--tab-min-height) !important;
 			&[selected] .tab-background {
-				background-color: var(--button-active-bgcolor) !important;
+				background-color: var(--button-active-bgcolor, var(--button-background-color-ghost-active)) !important;
 			}
 			&:not([selected], :has(+ .tabbrowser-tab[selected])) .tab-background {
 				border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
