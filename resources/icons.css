@@ -1530,6 +1530,6 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 .delete-button {
 	--button-icon: url(./icons/delete.svg) !important;
 }
-button[part="button"] {
+button[part="button"], span[part="button"] {
 	background-image: var(--button-icon, inherit) !important;
 }
