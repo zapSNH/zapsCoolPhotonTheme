@@ -14,12 +14,12 @@ menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComp
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 	background: var(--panel-background) !important;
 	box-shadow: 2px 2px 2px #0006 !important;
-}
+}/*
 menu:where([_moz-menuactive="true"]):not([disabled="true"]),
 menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigation menuitem, #ContentSelectDropdownPopup menuitem),
 #context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
 	background: var(--button-hover-bgcolor) !important;
-}
+}*/
 @media not (prefers-contrast) {
 	:root:-moz-lwtheme {
 		--focus-outline-color: var(--photon-accent) !important;

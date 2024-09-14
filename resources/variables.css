@@ -33,6 +33,7 @@
 	--photon-speed-1: 0.2s;
 	--photon-speed-2: 0.25s;
 	--photon-speed-3: 0.3s;
+	--space-xsmall: 0.2em !important;
 }
 @media (prefers-color-scheme: dark) {
 	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]), :root:not([lwtheme="true"]) {
