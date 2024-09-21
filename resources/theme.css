@@ -20,6 +20,12 @@ menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigat
 #context-navigation menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
 	background: var(--button-hover-bgcolor) !important;
 }*/
+menu,
+menuitem {
+	&:where([_moz-menuactive]:not([disabled="true"])) {
+		background-color: var(--button-hover-bgcolor, -moz-menuhover) !important;
+	}
+}
 @media not (prefers-contrast) {
 	:root:-moz-lwtheme {
 		--focus-outline-color: var(--photon-accent) !important;
