@@ -195,13 +195,13 @@ credits to phroton for some of this stuff */
 	filter: brightness(125%) saturate(150%)
 }
 /* Makes the new tab button more Photon-like */
-#tabs-newtab-button, #TabsToolbar #new-tab-button {
+#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button {
 	margin-top: 1px !important;
 	margin-bottom: -1px !important;
 	width: 32px !important;
 	height: 32px !important;
 }
-#tabs-newtab-button, #new-tab-button {
+#TabsToolbar #tabs-newtab-button,#TabsToolbar #new-tab-button {
 	> image {
 		padding: 6px !important;
 		width: 28px !important;
@@ -909,7 +909,7 @@ credits to phroton for some of this stuff */
 /* New sidebar */
 @media (-moz-bool-pref: "sidebar.revamp") {
 	:root {
-		--new-sidebar-width: 43px;
+		--new-sidebar-width: 42px;
 		&:has(sidebar-main[expanded]) {
 			--new-sidebar-width: 225px;
 		}
@@ -923,7 +923,7 @@ credits to phroton for some of this stuff */
 		}
 	}
 	.expanded-button {
-		translate: -1px;
+		width: calc(100% + var(--button-outer-padding-inline)) !important;
 	}
 	#sidebar-main {
 		width: var(--new-sidebar-width) !important;
@@ -958,9 +958,6 @@ credits to phroton for some of this stuff */
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
 		width: calc(var(--new-sidebar-width) - 1px) !important;
 		padding: 0 !important;
-		#vertical-tabs-newtab-button {
-			margin-inline: 4px !important;
-		}
 		.tabbrowser-tab {
 			max-height: var(--tab-min-height) !important;
 			&[selected] .tab-background {
@@ -1052,11 +1049,16 @@ credits to phroton for some of this stuff */
 		#newtab-button-container {
 			margin-inline: auto !important;
 		}
-		#vertical-tabs-newtab-button {
+		#tabs-newtab-button {
 			appearance: none !important;
-			#tabbrowser-tabs:not([expanded]) & {aspect-ratio: 1;}
+			margin-inline: 0px !important;
+			border-radius: 0 !important;
 			&:active {
 				background-color: var(--button-active-bgcolor) !important;
+			}
+			.toolbarbutton-icon {
+				margin-inline-start: -1px;
+				margin-inline-end: -2.5px !important;
 			}
 		}
 	}
