@@ -657,37 +657,36 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 }
 /* This pushes down the find/translate button and aligns the zoom seperator */
 #appMenu-find-button2 {
-  margin-bottom: 8px !important;
+	margin-bottom: 8px !important;
 }
 @media (-moz-bool-pref: "browser.translations.enable") {
-  #appMenu-translate-button {
-  	margin-bottom: 8px !important;
-  }
+	#appMenu-translate-button {
+		margin-bottom: 8px !important;
+	}
 	#appMenu-find-button2 {
-    margin-bottom: unset !important;
-  }
+		margin-bottom: unset !important;
+	}
 }
-/* Zoom controls *//*
-#appMenu-zoom-controls toolbarbutton {
-	display: block !important;
-}*/
-#appMenu-zoom-controls toolbarbutton:not(:last-child) .toolbarbutton-icon {
-	border-radius: 50% !important;
+/* Zoom controls */
+#appMenu-zoom-controls .subviewbutton .toolbarbutton-icon {
+	border-radius: var(--photon-border-radius) !important;
+	width: 20px !important;
+	height: 20px !important;
 }
 #appMenu-zoomReset-button2 .toolbarbutton-text {
 	border-radius: 1000px !important;
 	border: 1px solid var(--panel-separator-color) !important;
-	padding-inline: 6px !important;
-	background-color: color-mix(in srgb, currentColor 9%, transparent) !important;
+	padding-inline: 10px !important;
+	background-color: var(--button-background-color) !important;
 }
 #appMenu-zoomReset-button2:hover .toolbarbutton-text {
-	background-color: color-mix(in srgb, currentColor 25%, transparent) !important;
+	background-color: var(--button-background-color-hover) !important;
 }
 #appMenu-zoomReset-button2:hover:active .toolbarbutton-text {
-	background-color: color-mix(in srgb, currentColor 30%, transparent) !important;
+	background-color: var(--button-background-color-active) !important;
 }
-#appMenu-zoom-controls toolbarbutton:not(:hover, :active, :last-child) .toolbarbutton-icon {
-	background-color: color-mix(in srgb, transparent 25%, var(--button-bgcolor)) !important;
+#appMenu-zoom-controls toolbarbutton:not(:hover, :active) .toolbarbutton-icon {
+	background-color: transparent !important;
 }
 /* Separators */
 #appMenu-zoom-controls::after {
@@ -708,7 +707,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	width: 16px;
 	height: 16px;
 }
-#appMenu-zoom-controls toolbarbutton::before {
+#appMenu-zoom-controls #appMenu-fullscreen-button2::before {
 	content: "";
 	display: block;
 	width: 10px;

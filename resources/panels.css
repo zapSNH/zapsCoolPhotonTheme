@@ -130,18 +130,11 @@ menuitem, menu {
 	align-items: center !important;
 	outline: 1px solid var(--panel-separator-color);
 }
-/* Dims the shortcut items */
-/* No longer needed in FF 120+ *//*
-.panel-subview-body > toolbarbutton:not([disabled])[shortcut*="+"]::after {
-	opacity: .5 !important;
-}
-*/
 /* Makes the zoom controls align with the menu buttons */
 #appMenu-zoom-controls2 {
 	margin: 0 !important;
 	padding: 0px 11px !important;
 }
-/* end */
 
 /* Makes the size of the Firefox account button in the app menu smaller */
 #appMenu-fxa-status2 {
