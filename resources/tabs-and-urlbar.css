@@ -85,10 +85,10 @@ credits to phroton for some of this stuff */
 }
 #TabsToolbar .tabbrowser-tab:not([pinned]) .tab-icon-stack {
 	position: absolute !important;
-	width: calc(100% - 6px - 48px) !important;
+	width: calc(100% - 6px - 42px) !important;
 }
 #tabbrowser-tabs[closebuttons^="activetab"] .tabbrowser-tab:not([visuallyselected]) .tab-icon-stack {
-	width: calc(100% - 32px) !important;
+	width: calc(100% - 24px) !important;
 }
 .tabbrowser-tab:not([pinned])[image] .tab-label-container, .tabbrowser-tab[busy] .tab-label-container {
 	margin-inline-start: 21px !important;
@@ -909,7 +909,6 @@ credits to phroton for some of this stuff */
 /* New sidebar */
 @media (-moz-bool-pref: "sidebar.revamp") {
 	:root {
-		--new-sidebar-width: 42px;
 		&:has(sidebar-main[expanded]) {
 			--new-sidebar-width: 225px;
 		}
@@ -950,7 +949,6 @@ credits to phroton for some of this stuff */
 	}
 	moz-radio, moz-checkbox, .extension-item {
 		padding-inline: 0;
-		padding-block: var(--space-small) !important;
 	}
 	/* Vertical tabs */
 	:root #vertical-tabs {
@@ -969,12 +967,14 @@ credits to phroton for some of this stuff */
 			&:not([selected]):first-child .tab-background {
 				border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
 			}
+			.tab-background {
+				width: var(--new-sidebar-width) !important;
+			}
 			.tab-background::before {
 				translate: 0 0;
 			}
 			.tab-close-button {
-				position: absolute !important;
-				translate: -1px;
+				margin-inline-start: -2px !important;
 			}
 			.tab-icon-stack {
 				min-width: 16px !important;
@@ -984,7 +984,7 @@ credits to phroton for some of this stuff */
 				opacity: 0 !important;
 			}
 			&[selected]:not([pinned]):hover .tab-close-button {
-				display: block !important;
+				display: flex !important;
 			}
 			.tab-icon-overlay {
 				border-radius: 999px !important;
@@ -994,15 +994,19 @@ credits to phroton for some of this stuff */
 			}
 		}
 		#tabbrowser-tabs[expanded] {
+			#vertical-pinned-tabs-container {
+				padding-inline: 0 !important;
+			}
 			.tabbrowser-tab {
 				&[selected]:hover .tab-icon-image {
 					opacity: 1 !important;
 				}
 				.tab-label-container {
-					margin-inline-start: 8px !important;
+					margin-inline-start: 12px !important;
 				}
 				&[pinned] .tab-label-container {
 					display: flex !important;
+					margin-inline-start: 18px !important;
 				}
 				&:not([pinned]) .tab-close-button {
 					display: block !important;
@@ -1017,12 +1021,12 @@ credits to phroton for some of this stuff */
 					top: 0px !important;
 				}
 				.tab-icon-stack {
-					left: 8px !important;
-					width: calc(100% - 56px) !important;
+					width: calc(100% - 72px) !important;
 					position: absolute;
 				}
 				&[pinned] .tab-icon-stack {
-					width: calc(100% - 32px) !important;
+					width: calc(100% - 48px) !important;
+					left: 16px !important;
 				}
 				.tab-label {
 					margin-inline-start: 12px !important;
@@ -1051,14 +1055,14 @@ credits to phroton for some of this stuff */
 		}
 		#tabs-newtab-button {
 			appearance: none !important;
-			margin-inline: 0px !important;
+			width: 100% !important;
 			border-radius: 0 !important;
 			&:active {
 				background-color: var(--button-active-bgcolor) !important;
 			}
-			.toolbarbutton-icon {
-				margin-inline-start: -1px;
-				margin-inline-end: -2.5px !important;
+			margin-inline: 0px !important;
+			#tabbrowser-tabs[expanded] & {
+				padding-inline: 17px !important;
 			}
 		}
 	}

@@ -92,7 +92,7 @@
 	button:not(.control-button, .preview-button) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
-		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
 		background-color: var(--button-bgcolor) !important;
 		
 		&[type="primary"] {
@@ -195,6 +195,9 @@
 	}
 	img[src="chrome://global/skin/icons/close.svg"] {
 		content: url(./icons/close-icon2.svg) !important;
+	}
+	img[src="chrome://global/skin/icons/more.svg"] {
+		content: url(./icons/more.svg) !important;
 	}
 }
 /* About Dialog */

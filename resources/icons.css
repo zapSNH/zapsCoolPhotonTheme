@@ -383,7 +383,7 @@
 img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	content: url(./icons/shopping.svg) !important;
 }
-.dismiss-button {
+.dismiss-button:not(#fxview-tab-row-secondary-button) {
 	background-image: url(./icons/close.svg) !important;
 }
 #downloads-indicator-anchor {
@@ -1518,7 +1518,7 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 	background-image: url("./icons/arrow-dropdown-16.svg") !important;
 }
 /* shadow root */
-.header-close-button {
+.header-close-button, .dismiss-button {
 	--button-icon: url(./icons/close.svg) !important;
 }
 .menu-button {
