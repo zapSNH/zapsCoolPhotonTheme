@@ -138,7 +138,7 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
-		--chrome-content-separator-color: var(--lwt-accent-color) !important;
+			--chrome-content-separator-color: var(--lwt-accent-color) !important;
 			
 			#urlbar {
 				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
@@ -201,6 +201,7 @@ input.findbar-textbox:focus {
 	--toolbarbutton-icon-fill: #bebebe !important;
 	--toolbar-field-focus-background-color: #474749 !important;
 	--button-bgcolor: rgb(55, 55, 55) !important;
+	--toolbarbutton-background: hsla(0,0%,70%,.2) !important;
 	--toolbarbutton-hover-background: hsla(0,0%,70%,.4) !important;
 	--toolbarbutton-active-background: hsla(0,0%,70%,.6) !important;
 	--arrowpanel-background: #4a4a4f !important;
@@ -229,6 +230,9 @@ input.findbar-textbox:focus {
 	--lwt-sidebar-background-color: var(--toolbar-bgcolor) !important;
 	--sidebar-background-color: var(--lwt-sidebar-background-color) !important;
 	--chrome-content-separator-color: var(--lwt-accent-color) !important;
+	--button-background-color: var(--toolbarbutton-background) !important;
+	--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
+	--button-background-color-active: var(--toolbarbutton-active-background) !important;
 	
 	&:not(:-moz-window-inactive) {
 		--lwt-toolbar-field-highlight: var(--photon-accent-dark);
@@ -278,6 +282,7 @@ input.findbar-textbox:focus {
 			--toolbarbutton-icon-fill: #bebebe !important;
 			--toolbar-field-focus-background-color: #474749 !important;
 			--button-bgcolor: rgb(55, 55, 55) !important;
+			--toolbarbutton-background: hsla(0,0%,70%,.2) !important;
 			--toolbarbutton-hover-background: hsla(0,0%,70%,.4) !important;
 			--toolbarbutton-active-background: hsla(0,0%,70%,.6) !important;
 			--arrowpanel-background: #4a4a4f !important;
@@ -307,6 +312,9 @@ input.findbar-textbox:focus {
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
 			--tabs-navbar-separator-color: transparent !important;
 			--chrome-content-separator-color: var(--lwt-accent-color) !important;
+			--button-background-color: var(--toolbarbutton-background) !important;
+			--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
+			--button-background-color-active: var(--toolbarbutton-active-background) !important;
 			
 			&:not(:-moz-window-inactive) {
 				::selection {
