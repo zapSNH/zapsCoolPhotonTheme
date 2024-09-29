@@ -1394,115 +1394,115 @@
 		--editorParams-stampAddImage-icon: url(./icons/pdfjs/toolbarButton-zoomIn.svg) !important;
 		--toolbarButton-editorHighlight-icon: url(./icons/pdfjs/toolbarButton-editorHighlight.svg) !important;
 	}
-	#sidebarToggle::before {
+	:is(#sidebarToggle, #sidebarToggleButton)::before {
 		mask-image:var(--toolbarButton-sidebarToggle-icon) !important;
 	}
-	#secondaryToolbarToggle::before {
+	:is(#secondaryToolbarToggle, #secondaryToolbarToggleButton)::before {
 		mask-image:var(--toolbarButton-secondaryToolbarToggle-icon) !important;
 	}
-	#findPrevious::before {
+	:is(#findPrevious, #findPreviousButton)::before {
 		mask-image:var(--findbarButton-previous-icon) !important;
 	}
-	#findNext::before {
+	:is(#findNext, #findNextButton)::before {
 		mask-image:var(--findbarButton-next-icon) !important;
 	}
-	#previous::before {
+	:is(#previous, #previousButton)::before {
 		mask-image:var(--toolbarButton-pageUp-icon) !important;
 	}
-	#next::before {
+	:is(#next, #nextButton)::before {
 		mask-image:var(--toolbarButton-pageDown-icon) !important;
 	}
-	#zoomOut::before {
+	:is(#zoomOut, #zoomOutButton)::before {
 		mask-image:var(--toolbarButton-zoomOut-icon) !important;
 	}
-	#zoomIn::before {
+	:is(#zoomIn, #zoomInButton)::before {
 		mask-image:var(--toolbarButton-zoomIn-icon) !important;
 	}
-	#presentationMode::before {
+	:is(#presentationMode, #presentationModeButton)::before {
 		mask-image:var(--toolbarButton-presentationMode-icon) !important;
 	}
-	#editorFreeText::before {
+	:is(#editorFreeText, #editorFreeTextButton)::before {
 		mask-image:var(--toolbarButton-editorFreeText-icon) !important;
 	}
-	#editorInk::before {
+	:is(#editorInk, #editorInkButton)::before {
 		mask-image:var(--toolbarButton-editorInk-icon) !important;
 	}
-	#editorStamp::before {
+	:is(#editorStamp, #editorStampButton)::before {
 		mask-image:var(--toolbarButton-editorStamp-icon) !important;
 	}
-	:is(#print, #secondaryPrint)::before {
+	:is(#print, #secondaryPrint, #printButton, #secondaryPrintButton)::before {
 		mask-image:var(--toolbarButton-print-icon) !important;
 	}
-	:is(#download, #secondaryDownload)::before {
-		mask-image:var(--toolbarButton-download-icon) !important;
+	:is(#download, #secondaryDownload, #downloadButton, #secondaryDownloadButton)::before {
+		mask-image: var(--toolbarButton-download-icon) !important;
 	}
-	#viewBookmark::before {
+	:is(#viewBookmark, #viewBookmarkButton)::before {
 		mask-image:var(--toolbarButton-bookmark-icon) !important;
 	}
-	#viewThumbnail::before {
+	:is(#viewThumbnail, #viewThumbnailButton)::before {
 		mask-image:var(--toolbarButton-viewThumbnail-icon) !important;
 	}
-	#viewOutline::before {
+	:is(#viewOutline, #viewOutlineButton)::before {
 		mask-image:var(--toolbarButton-viewOutline-icon) !important;
 	}
-	#viewAttachments::before {
+	:is(#viewAttachments, #viewAttachmentsButton)::before {
 		mask-image:var(--toolbarButton-viewAttachments-icon) !important;
 	}
-	#viewLayers::before {
+	:is(#viewLayers, #viewLayersButton)::before {
 		mask-image:var(--toolbarButton-viewLayers-icon) !important;
 	}
-	#currentOutlineItem::before {
+	:is(#currentOutlineItem, #currentOutlineItemButton)::before {
 		mask-image:var(--toolbarButton-currentOutlineItem-icon) !important;
 	}
-	#viewFind::before {
+	:is(#viewFind, #viewFindButton)::before {
 		mask-image:var(--toolbarButton-search-icon) !important;
 	}
-	#firstPage::before {
+	:is(#firstPage, #firstPageButton)::before {
 		mask-image:var(--secondaryToolbarButton-firstPage-icon) !important;
 	}
-	#lastPage::before {
+	:is(#lastPage, #lastPageButton)::before {
 		mask-image:var(--secondaryToolbarButton-lastPage-icon) !important;
 	}
-	#pageRotateCcw::before {
+	:is(#pageRotateCcw, #pageRotateCcwButton)::before {
 		mask-image:var(--secondaryToolbarButton-rotateCcw-icon) !important;
 	}
-	#pageRotateCw::before {
+	:is(#pageRotateCw, #pageRotateCwButton)::before {
 		mask-image:var(--secondaryToolbarButton-rotateCw-icon) !important;
 	}
-	#cursorSelectTool::before {
+	:is(#cursorSelectTool, #cursorSelectToolButton)::before {
 		mask-image:var(--secondaryToolbarButton-selectTool-icon) !important;
 	}
-	#cursorHandTool::before {
+	:is(#cursorHandTool, #cursorHandToolButton)::before {
 		mask-image:var(--secondaryToolbarButton-handTool-icon) !important;
 	}
-	#scrollPage::before {
+	:is(#scrollPage, #scrollPageButton)::before {
 		mask-image:var(--secondaryToolbarButton-scrollPage-icon) !important;
 	}
-	#scrollVertical::before {
+	:is(#scrollVertical, #scrollVerticalButton)::before {
 		mask-image:var(--secondaryToolbarButton-scrollVertical-icon) !important;
 	}
-	#scrollHorizontal::before {
+	:is(#scrollHorizontal, #scrollHorizontalButton)::before {
 		mask-image:var(--secondaryToolbarButton-scrollHorizontal-icon) !important;
 	}
-	#scrollWrapped::before {
+	:is(#scrollWrapped, #scrollWrappedButton)::before {
 		mask-image:var(--secondaryToolbarButton-scrollWrapped-icon) !important;
 	}
-	#spreadNone::before {
+	:is(#spreadNone, #spreadNoneButton)::before {
 		mask-image:var(--secondaryToolbarButton-spreadNone-icon) !important;
-	 }
-	#spreadOdd::before {
+	}
+	:is(#spreadOdd, #spreadOddButton)::before {
 		mask-image:var(--secondaryToolbarButton-spreadOdd-icon) !important;
 	}
-	#spreadEven::before {
+	:is(#spreadEven, #spreadEvenButton)::before {
 		mask-image:var(--secondaryToolbarButton-spreadEven-icon) !important;
 	}
-	#documentProperties::before {
+	:is(#documentProperties, #documentPropertiesButton)::before {
 		mask-image:var(--secondaryToolbarButton-documentProperties-icon) !important;
 	}
-	#editorStampAddImage::before {
+	:is(#editorStampAddImage, #editorStampAddImageButton)::before {
 		mask-image:var(--editorParams-stampAddImage-icon) !important;
 	}
-	#editorHighlight::before {
+	:is(#editorHighlight, #editorHighlightButton, .highlightButton)::before {
 		mask-image: var(--toolbarButton-editorHighlight-icon) !important;
 	}
 	.dropdownToolbarButton::after {
