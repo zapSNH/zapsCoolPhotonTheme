@@ -10,8 +10,8 @@ Includes forks of Firefox (Waterfox, Floorp, etc.).
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. |
 | **128esr** | ✔️ | ✔️ | ✔️ | |
-| **130** | ✔️ | ✔️ | ✔️ | |
-| **132 nightly** | ✔️ | ✔️ | ? | |
+| **131** | ✔️ | ✔️ | ✔️ | |
+| **133 nightly** | ✔️ | ✔️ | ? | |
 
 See [Forks](#forks) for information about Firefox forks.
 
@@ -54,8 +54,8 @@ Download the release for your browser version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 130](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v130) **(recommended)**             | [Firefox 130](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v130) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
+| [Firefox 131](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v131) **(recommended)**             | [Firefox 131](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v131) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) (download the ESR version) | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
