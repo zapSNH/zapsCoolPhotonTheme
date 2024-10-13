@@ -50,10 +50,10 @@
 	z-index: 3 !important;
 }
 
-:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+:root[tabsintitlebar] :is(#titlebar, .browser-titlebar):-moz-window-inactive {
 	opacity: 1 !important;
-	.tab-content {
-		opacity: 0.8;
+	.tab-content, &#nav-bar > * {
+		opacity: 0.8 !important;
 	}
 }
 /* Pushes the sound icon off to the side and makes the website favicon always show to make it
@@ -1065,6 +1065,9 @@ credits to phroton for some of this stuff */
 				padding-inline: 17px !important;
 			}
 		}
+	}
+	#nav-bar.browser-titlebar {
+		background-color: var(--toolbar-bgcolor) !important;
 	}
 }
 }
