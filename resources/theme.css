@@ -346,7 +346,7 @@ input.findbar-textbox:focus {
 		}
 		@media not (-moz-windows-accent-color-in-titlebar) {
 			:root:not([lwtheme="true"]) #navigator-toolbox {
-				background: #0c0c0d !important
+				background: #0c0c0d !important;
 			}
 		}
 	}
