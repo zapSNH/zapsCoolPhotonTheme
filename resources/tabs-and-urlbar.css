@@ -41,13 +41,12 @@
 .tabbrowser-tab, #TabsToolbar #firefox-view-button, #titlebar {
 	z-index: 1 !important;
 }
-.tabbrowser-tab[selected] {
-	z-index: 2 !important;
-}
 .tab-drop-indicator {
 	z-index: 3 !important;
 }
-
+#TabsToolbar {
+	z-index: 1 !important;
+}
 :root[tabsintitlebar] :is(#titlebar, .browser-titlebar):-moz-window-inactive {
 	opacity: 1 !important;
 	.tab-content, &#nav-bar > * {
@@ -804,8 +803,11 @@ credits to phroton for some of this stuff */
 	#titlebar, #PersonalToolbar {
 		order: 2 !important;
 	}
-	#nav-bar, #TabsToolbar {
+	#nav-bar {
 		order: 1 !important;
+	}
+	#TabsToolbar {
+		order: 2 !important;
 	}
 	.titlebar-buttonbox-container {
 		position: absolute !important;
