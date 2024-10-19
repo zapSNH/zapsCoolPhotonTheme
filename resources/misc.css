@@ -124,7 +124,7 @@
 		border-bottom: 1px solid var(--toolbar-field-border-color) !important;
 	}
 	:not(#places) input:not(#scrubber, #audio-scrubber) {
-		-moz-appearance: none !important;
+		appearance: none !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		&:not([type="radio"]) {
 			&:checked[type="checkbox"] {
@@ -136,6 +136,9 @@
 				-moz-context-properties: fill;
 			}
 			border-radius: var(--photon-border-radius) !important;
+		}
+		&[type="radio"] {
+			border-radius: 9999px !important;
 		}
 		&:checked {
 			background-color: var(--photon-accent-dark) !important;
