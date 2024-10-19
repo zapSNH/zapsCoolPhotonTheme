@@ -50,7 +50,7 @@
 		--color-blue-80: var(--blue-80) !important;
 		--color-gray-20: var(--blue-20) !important;
 		--color-gray-60: #4a4a4f !important;
-		--color-gray-80: color-mix(in srgb, var(--color-gray-60) 66.67%, var(--color-gray-90)) !important;
+		--color-gray-80: color-mix(in srgb, var(--color-gray-90) 67%, var(--color-gray-60)) !important;
 		--color-gray-90: #0c0c0d !important;
 		--checkbox-size: 20px !important;
 		--space-xsmall: 0.2rem !important;
@@ -184,9 +184,6 @@
 	}
 	#about-config-search {
 		background-image: url(./icons/find-in-page.svg) !important;
-	}
-	#prefs {
-		background-color: transparent !important;
 	}
 	.title:has(#warningTitle), body.certerror .title {
 		background-image: url(./icons/warning-16.svg) !important;
