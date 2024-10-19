@@ -185,6 +185,9 @@
 	#about-config-search {
 		background-image: url(./icons/find-in-page.svg) !important;
 	}
+	#prefs {
+		background-color: transparent !important;
+	}
 	.title:has(#warningTitle), body.certerror .title {
 		background-image: url(./icons/warning-16.svg) !important;
 	}
