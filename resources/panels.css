@@ -604,27 +604,27 @@ tooltip {
 }
 /* Searchbar (not URL bar) */
 #PopupSearchAutoComplete .search-panel-header {
-	background: color-mix(in srgb, currentColor 10%, transparent) !important;
+	background: color-mix(in srgb, currentColor 5%, transparent) !important;
 	padding-block: 2px;
 }
 #PopupSearchAutoComplete .search-panel-current-engine {
 	margin-top: -8px !important;
 }
 #PopupSearchAutoComplete .search-panel-one-offs-header {
-	border-bottom: 1px solid var(--arrowpanel-border-color) !important;
+	border-bottom: 1px solid var(--panel-separator-color) !important;
 }
 #PopupSearchAutoComplete menuseparator {
 	border: none !important;
 	margin: 0 !important;
 	&::before {
-		border-color: var(--arrowpanel-border-color) !important;
+		border-color: var(--panel-separator-color) !important;
 	}
 }
 #PopupSearchAutoComplete .searchbar-engine-one-off-item:not(#searchbar-anon-search-settings) {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	padding-inline: 12px !important;
-	border-inline-end: 1px solid var(--arrowpanel-border-color) !important;
+	border-inline-end: 1px solid var(--panel-separator-color) !important;
 }
 #PopupSearchAutoComplete .search-panel-one-offs-container {
 	display: flex !important;
@@ -635,7 +635,7 @@ tooltip {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	margin-bottom: -8px !important;
-	border-top: 1px solid var(--arrowpanel-border-color) !important;
+	border-top: 1px solid var(--panel-separator-color) !important;
 	background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 	&:hover:not(:active) {
 		background-color: color-mix(in srgb, currentColor 15%, transparent) !important;
@@ -645,7 +645,7 @@ tooltip {
 	}
 	&::before {
 		content: attr(tooltiptext);
-		border-color: var(--arrowpanel-border-color) !important;
+		border-color: var(--panel-separator-color) !important;
 		opacity: 0.6;
 		margin: auto;
 		width: 100%;

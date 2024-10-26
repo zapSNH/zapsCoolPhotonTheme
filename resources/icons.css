@@ -1154,6 +1154,10 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	list-style-image: url(./icons/sign-out.svg) !important;
 	width: 16px !important;
 }
+:root #PanelUI-fxa toolbarbutton[itemtype="showinactivebutton"] .toolbarbutton-icon {
+	margin-inline-end: calc(var(--appmenu-icon-inline-end) * 2) !important;
+	list-style-image: url(./icons/tab.svg) !important;
+}
 :root #PanelUI-sendTabToDevice .sendToDevice-device {
 	padding-top: 4px !important;
 }
@@ -1272,6 +1276,10 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 #allTabsMenu-searchTabs .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/find-in-page.svg) !important;
+}
+#allTabsMenu-syncedTabs .toolbarbutton-icon {
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	list-style-image: url(./icons/sync.svg) !important;
 }
 #allTabsMenu-closeDuplicateTabs .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1482,16 +1490,16 @@ img {
 }
 /* New sidebar */
 button > img, span > img {
-	&[src="chrome://mozapps/skin/extensions/category-discover.svg"] {
+	&[src="chrome://mozapps/skin/extensions/category-discover.svg"], &[src="chrome://global/skin/icons/highlights.svg"] {
 		content: url("./icons/glyph-highlights-16.svg") !important;
 	}
-	&[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"] {
+	&[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"], &[src="chrome://browser/skin/synced-tabs.svg"] {
 		content: url("./icons/sync.svg") !important;
 	}
-	&[src="chrome://browser/content/firefoxview/view-history.svg"] {
+	&[src="chrome://browser/content/firefoxview/view-history.svg"], &[src="chrome://browser/skin/history.svg"] {
 		content: url("./icons/history.svg") !important;
 	}
-	&[src="chrome://browser/skin/preferences/category-general.svg"] {
+	&[src="chrome://browser/skin/preferences/category-general.svg"], &[src="chrome://global/skin/icons/settings.svg"] {
 		content: url("./icons/settings.svg") !important;
 	}
 	&[src="chrome://browser/skin/bookmark-hollow.svg"] {

@@ -125,7 +125,7 @@
 	button, listheader, richlistbox, search-textbox, .info-box-container, .synced-tab-a,
 	.page-section-header > .twisty, [class^="closed-tab-li"], .web-appearance-choice img,
 	.web-appearance-choice, .toolbar, input:not([type="radio"]), .downloadButton > .button-box,
-	.dropdown-selector > select {
+	.dropdown-selector > select, .blackbox {
 		border-radius: var(--photon-secondary-border-radius) !important;
 	}
 	listheader {	
@@ -1182,8 +1182,7 @@
 	.page-nav-icon {
 		width: 16px !important;
 		height: 16px !important;
-		margin-inline-start: 4px;
-		margin-inline-end: -4px;
+		translate: 2px;
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentbrowsing.svg"] {
 		content: url(./icons/glyph-highlights-16.svg);
@@ -1209,8 +1208,10 @@
 	#fxview-tab-row-tertiary-button {
 		--button-icon: url(./icons/close.svg) !important;
 	}
-	button[part="button"] {
-		background-image: var(--button-icon) !important;
+	button, span {
+		&[part="button"] {
+			background-image: var(--button-icon) !important;
+		}
 	}
 	
 	@media (-moz-platform: windows) {

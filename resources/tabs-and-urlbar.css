@@ -924,9 +924,6 @@ credits to phroton for some of this stuff */
 			margin-inline-end: calc(var(--space-sidebar) * -1 - 2px) !important;
 		}
 	}
-	.expanded-button {
-		width: calc(100% + var(--button-outer-padding-inline)) !important;
-	}
 	#sidebar-main {
 		width: var(--new-sidebar-width) !important;
 	}
