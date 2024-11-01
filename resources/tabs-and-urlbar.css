@@ -543,6 +543,9 @@ credits to phroton for some of this stuff */
 #translations-button-locale {
 	translate: 4px -2px;
 }
+toolbarbutton#urlbar-searchmode-switcher {
+	padding-inline: var(--urlbar-searchmodeswitcher-spacing) !important;
+}
 .urlbar-page-action {
 	padding-block: calc(var(--urlbar-icon-padding) + 1px) !important;
 	height: calc(var(--urlbar-height) - 2px) !important;
@@ -739,6 +742,23 @@ credits to phroton for some of this stuff */
 }
 #urlbar .search-one-offs *:not(toolbarseparator) {
 	color: var(--toolbarbutton-icon-fill) !important;
+}
+/* ***tch Bo*n*t */
+/* Scone :) */
+.urlbarView-row[has-action]:is([type=switchtab], [type=remotetab], [type=clipboard]) .urlbarView-action {
+	background-image: none !important;
+	color: var(--urlbar-box-text-color) !important;
+	background-color: var(--urlbar-box-focus-bgcolor);
+	border: none !important;
+	padding-inline: 8px !important;
+
+	&.urlbarView-userContext {
+		padding-top: 0;
+	}
+	.urlbarView-row:is([selected], :hover) > .urlbarView-row-inner > .urlbarView-no-wrap > & {
+		color: var(--urlbarView-result-button-selected-color) !important;
+		background-color: var(--urlbarView-result-button-selected-background-color);
+	}
 }
 /* special case for review checker */
 
