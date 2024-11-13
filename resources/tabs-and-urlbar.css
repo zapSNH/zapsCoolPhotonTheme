@@ -71,7 +71,13 @@ credits to phroton for some of this stuff */
 	position: relative !important;
 	left: calc(100% - 6px) !important;
 	transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
-	top: 0px !important
+	top: 0px !important;
+	&:hover {
+		background-color: color-mix(in srgb, currentColor 10%, transparent) !important;
+		&:active {
+			background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+		}
+	}
 }
 .tab-icon-overlay { 
 	&:not(:hover, :active) {
@@ -551,6 +557,12 @@ credits to phroton for some of this stuff */
 }
 toolbarbutton#urlbar-searchmode-switcher {
 	padding-inline: var(--urlbar-searchmodeswitcher-spacing) !important;
+	&:hover {
+		background-color: var(--urlbar-box-hover-bgcolor) !important;
+	}
+	&:hover:active, &[open] {
+		background-color: var(--urlbar-box-active-bgcolor) !important;
+	}
 }
 .urlbar-page-action {
 	padding-block: calc(var(--urlbar-icon-padding) + 1px) !important;
