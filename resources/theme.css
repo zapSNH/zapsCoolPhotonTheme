@@ -10,7 +10,7 @@
 	--urlbar-box-bgcolor: transparent !important;
 	--sidebar-background-color: var(--sidebar-background) !important;
 }
-menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel {
+menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
 	--panel-background: var(--arrowpanel-background) !important;
 }
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {

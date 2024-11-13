@@ -34,6 +34,11 @@
 	--photon-speed-3: 0.3s;
 	--space-xsmall: 0.2em !important;
 	--inactive-titlebar-opacity: 1 !important;
+	
+	--tab-separator-height: var(--tab-min-height);
+	@media (-moz-platform: linux) {
+		--tab-separator-height: calc(var(--tab-min-height) + 1px);
+	}
 }
 @media (prefers-color-scheme: dark) {
 	:root:not([style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]), :root:not([lwtheme="true"]) {
