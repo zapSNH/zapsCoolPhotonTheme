@@ -15,6 +15,12 @@
 		height: calc(var(--tab-min-height) + 1px) !important;
 	}
 }
+#TabsToolbar-customization-target {
+	height: var(--tab-min-height) !important;
+	@media (-moz-platform: linux) {
+		height: calc(var(--tab-min-height) + 1px) !important;
+	}
+}
 /* Makes the tab photon-like + adds a transition */
 .tab-close-button {
 	border-radius: var(--photon-border-radius) !important;
@@ -271,7 +277,7 @@ credits to phroton for some of this stuff */
 		content: "";
 		position: absolute;
 		display: block;
-		height: 64px;
+		height: var(--tab-separator-height);
 		right: 0;
 		border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 		z-index: 0;
@@ -288,7 +294,7 @@ credits to phroton for some of this stuff */
 	content: "";
 	position: absolute;
 	display: block;
-	height: 64px;
+	height: var(--tab-separator-height);
 	left: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
 	z-index: 0;

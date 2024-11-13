@@ -76,6 +76,12 @@
 		list-style-image: url(./icons/add.svg) !important;
 	}
 }
+/* Tab throbber (hourglass' version) */
+.tab-throbber {
+	@media (prefers-reduced-motion: reduce) {
+		background-image: url(./icons/hourglass.svg) !important;
+	}
+}
 #vertical-tabs-newtab-button {
 	list-style-image: url(./icons/add.svg) !important;
 }
@@ -784,7 +790,6 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	}
 	#profiles-create-profile-button .toolbarbutton-icon {
 		list-style-image: url(./icons/add.svg) !important;
-		margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	}
 }
 /* Exit icon */
