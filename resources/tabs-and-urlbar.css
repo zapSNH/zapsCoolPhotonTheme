@@ -10,6 +10,9 @@
 :root[uidensity="compact"] {
 	--tab-min-height: 31px !important;
 }
+:root {
+	--tab-block-margin: 0 !important;
+}
 @media (-moz-platform: linux) {
 	.tabbrowser-tab {
 		height: calc(var(--tab-min-height) + 1px) !important;
@@ -203,14 +206,27 @@ credits to phroton for some of this stuff */
 .tabbrowser-tab:hover > .tab-stack > .tab-background[selected]::before {
 	filter: brightness(125%) saturate(150%)
 }
-/* Makes the new tab button more Photon-like */
-#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button {
-	margin-top: 1px !important;
-	margin-bottom: -1px !important;
-	width: 32px !important;
-	height: 32px !important;
+#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button, #alltabs-button {
+	:root:not([uidensity]) & {
+		width: 32px !important;
+		height: 32px !important;
+		margin-top: 1px !important;
+		margin-bottom: -1px !important;
+	}
+	:root[uidensity="touch"] & {
+		width: 32px !important;
+		padding: 0 !important;
+		align-content: center !important;
+		display: flex !important;
+		> .toolbarbutton-badge-stack {
+			width: 28px !important;
+			height: 28px !important;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
-#TabsToolbar #tabs-newtab-button,#TabsToolbar #new-tab-button {
+#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button {
 	> image {
 		padding: 6px !important;
 		width: 28px !important;
@@ -267,13 +283,6 @@ credits to phroton for some of this stuff */
 	:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
 		translate: 0 calc(-1 * var(--tab-min-height)/2 + 2px);
 	}
-}
-/* All tabs button */
-#alltabs-button {
-	margin-top: 1px !important;
-	margin-bottom: -1px !important;
-	width: 32px !important;
-	height: 32px !important;
 }
 /* Adds back the Photon tab-separators */
 :is(:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"],
@@ -492,6 +501,15 @@ credits to phroton for some of this stuff */
 		}
 	}
 }
+#urlbar-container {
+	--urlbar-container-height: 40px !important;
+	:root[uidensity="touch"] & {
+		--urlbar-container-height: 42px !important;
+	}
+	:root[uidensity="compact"] & {
+		--urlbar-container-height: 32px !important;
+	}
+}
 #searchbar:focus-within {
 	border: 1px solid var(--photon-accent-dark) !important;
 	outline: none !important;
@@ -613,16 +631,6 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 	#tracking-protection-icon-container:not(:hover, :active, [open])::after {
 		top: 2px;
-	}
-	#tabs-newtab-button, #new-tab-button {
-		image {
-			height: var(--tab-min-height) !important;
-			margin-top: 8px !important;
-		}
-	} 
-	#alltabs-button {
-		height: var(--tab-min-height) !important;
-		margin-left: 4px !important;
 	}
 }
 /* Resize toolbar buttons */

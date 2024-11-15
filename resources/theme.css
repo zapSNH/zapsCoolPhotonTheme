@@ -8,6 +8,7 @@
 	--urlbar-box-bgcolor: transparent !important;
 	--sidebar-background-color: var(--sidebar-background) !important;
 	--tab-icon-overlay-fill: currentColor !important;
+	--color-accent-primary: var(--photon-accent) !important;
 }
 menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
 	--panel-background: var(--arrowpanel-background) !important;
