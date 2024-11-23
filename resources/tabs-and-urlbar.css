@@ -960,6 +960,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		&:has(sidebar-main[expanded]) {
 			--new-sidebar-width: 225px;
 		}
+		--sidebar-box-border: none !important;
 	}
 	.wrapper:has(slot[name="tabstrip"]) {
 		padding-inline: 0 !important;
