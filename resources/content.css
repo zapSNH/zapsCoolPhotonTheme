@@ -209,16 +209,16 @@
 		appearance: none !important;
 		background-color: var(--in-content-button-background) !important;
 		border: 1px solid color-mix(in srgb, currentColor 9%, transparent) !important;
-		&:hover, checkbox:hover:not([checked="true"]) & {
+		&:hover, :is(checkbox, radio):hover:not([checked="true"], [selected="true"]) & {
 			background-color: var(--in-content-button-background-hover) !important;
 		}
-		&:hover:active, checkbox:hover:active:not([checked="true"]) & {
+		&:hover:active, :is(checkbox, radio):hover:active:not([checked="true"], [selected="true"]) & {
 			background-color: var(--in-content-button-background-active) !important;
 		}
-		checkbox:hover[checked="true"]:not([disabled="true"]) & {
+		:is(checkbox, radio):hover[checked="true"]:not([disabled="true"]) & {
 			background-color: var(--color-accent-primary-hover) !important;
 		}
-		checkbox:hover:active[checked="true"]:not([disabled="true"]) & {
+		:is(checkbox, radio):hover:active[checked="true"]:not([disabled="true"]) & {
 			background-color: var(--color-accent-primary-active) !important;
 		}
 		&[checked], &:checked {
@@ -296,7 +296,7 @@
 	img[src="chrome://global/skin/icons/help.svg"] {
 		content: url("./icons/help.svg") !important;
 	}
-	.arrowhead.up {
+	.arrowhead {
 		list-style-image: url(./icons/arrow-dropdown-12.svg) !important;
 	}
 	.arrowhead.up {
