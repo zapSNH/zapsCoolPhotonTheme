@@ -989,7 +989,9 @@
 	img[src="chrome://browser/skin/menu.svg"] {
 		content: url("./icons/menu.svg") !important;
 	}
-	
+	.fxaLoginRejectedWarning {
+		list-style-image: url(./icons/warning-16.svg) !important;
+	}
 	@media (prefers-color-scheme: dark) {	
 		* {
 		 	--in-content-page-background: #2a2a2e !important;

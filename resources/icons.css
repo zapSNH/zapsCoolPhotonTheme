@@ -31,6 +31,9 @@
 	@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
 		--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg);
 	}
+	&[fxastatus="login-failed"] {
+		--avatar-image-url: url(./icons/avatar.svg) !important;
+	}
 }
 /* Legacy Logos */
 :is(img, image)[src="chrome://branding/content/icon32.png"] {
@@ -43,6 +46,10 @@
 }
 * {
 	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
+}
+#fxa-avatar-image,
+#PanelUI-fxa-menu-account-settings-button {
+	list-style-image: var(--avatar-image-url) !important;
 }
 .urlbar-page-action * {
 	transform: translateY(-1px)
@@ -593,6 +600,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	background-image: url(./icons/avatar-empty.svg);
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	margin-inline-start: 2px !important;
+	-moz-context-properties: fill !important;
 }
 #appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])
 	#appMenu-fxa-label2 {
