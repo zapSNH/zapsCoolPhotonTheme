@@ -142,9 +142,10 @@ input.findbar-textbox:focus {
 			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 			--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
-			--chrome-content-separator-color: var(--lwt-accent-color) !important;
+			--chrome-content-separator-color:  #d7d7db !important;
 			--toolbarbutton-icon-fill: currentColor !important;
 			--toolbox-non-lwt-textcolor: rgb(251, 251, 254) !important;
+			--toolbox-textcolor: rgb(251, 251, 254) !important;
 			
 			#urlbar {
 				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
