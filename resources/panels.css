@@ -658,14 +658,14 @@ tooltip {
 }
 #searchmode-switcher-popup-search-settings-button {
 	margin-inline: 0 !important;
-	margin-block: -4px !important;
+	margin-block: -8px !important;
 	justify-content: center !important;
 	> image {
 		display: none !important;
 	}
 }
-#searchmode-switcher-popup {
-	--panel-backkground: #4a4a4f !important;
+#searchmode-switcher-popup-description {
+	margin-top: 0px !important;
 }
 /* Overflow menu fxa button */
 #widget-overflow-list #fxa-toolbar-menu-button {
