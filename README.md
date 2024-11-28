@@ -1,10 +1,21 @@
-# Zap's Cool Photon Theme
-A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
+<h1 align="center">
+	<img src="https://github.com/user-attachments/assets/5d13f4ec-b3b5-4ea7-b05a-b564037fad3b" alt="wowee">
+	Z(ap's) Cool Photon Theme
+</h1>
+<p align="center">
+	A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
+</p>
 
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
-<p align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">(showcase)</a></p>
+<h6 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h6>
 
-#### Compatibility
+	
+<h4 align="center">
+	 Compatibility
+</h4>
+
+<div align="center">
+	
 Includes forks of Firefox (Waterfox, Floorp, etc.).
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
@@ -13,10 +24,16 @@ Includes forks of Firefox (Waterfox, Floorp, etc.).
 | **133** | ✔️ | ✔️ | ✔️ | |
 | **135 nightly** | ✔️ | ✔️ | ? | |
 
-See [Forks](#forks) for information about Firefox forks.
+See the [Forks](#forks) section for more information about Firefox forks.
+
+</div>
+
+&nbsp;
+<hr>
+&nbsp;
 
 ## Installation
-There are 3 ways of installing this theme.
+There are three (3) ways of installing this theme.
 * [Manually 🛠](#manually-)
 * [As an Extension 🧩](#as-an-extension-)
 * [Using Git :octocat:](#using-git-octocat)
@@ -32,7 +49,7 @@ Open `about:config` and set:
 | `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
 <details>
-	<summary>For Firefox 121 and below</summary>
+	<summary>For Firefox 121 and below...</summary>
 	
 | Pref | Value | Description |
 |:-:|:-:|:-:|
@@ -43,9 +60,9 @@ Open `about:config` and set:
 Optionally, you can set:
 | Pref | Value | Description |
 |:-:|:-:|:-:|
-| `security.secure_connection_icon_color_gray` | `true` | Makes the connection icon gray instead of green.<br>Default behavior in later versions of Photon. |
+| `security.secure_connection_icon_color_gray` | `true` | Makes the connection icon gray instead of green.<br>Defaults to `true` in later versions of Photon. |
 ____
-Too lazy to set all these prefs? You can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation`, and click `Export Options` to generate a `user.js` file that you can put in your profile folder.
+Too lazy to set all these prefs? You can visit https://zapsnh.github.io/zcpt-configurator/, enable `Include preferences for theme installation` (and maybe customize the theme a bit), and click `Export Options` to generate a `user.js` file that you can put in your profile folder.
 
 **Make sure to delete the `user.js` file after you start Firefox so that it doesn't override any changes you make in `about:config`.**
 ____
@@ -85,7 +102,7 @@ You're done! 🎉
 ____
 
 ### As an Extension 🧩
-Can only be installed on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on ESR) since you need to disable extension signing (which may be insecure).
+Can only be installed on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on these versions) since **you need to disable extension signing** (which may be insecure).
 
 Has auto-updating and a built-in configurator.
 This version is based on [Paxmod](https://github.com/numirias/paxmod).
@@ -110,7 +127,8 @@ You're done! 🎉
 
 ____
 
-### Using Git :octocat:
+### Using Git :octocat: 
+<!-- yes i know that the github != git just shut up -->
 Recommended for tech-savvy people.
 
 Can be installed on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating (unless you make a script for that) but you can quickly update using `git pull` in your terminal.
@@ -148,7 +166,7 @@ Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPho
 
 An interactive configurator is available at https://zapsnh.github.io/zcpt-configurator/. To apply the settings, place the exported `user.js` file in your profile folder/directory (`Profiles` > `XXXXXXXX.profile`), launch Firefox, and then delete the `user.js` file afterwards.
 
-For the WebExtension version, the configurator is can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings apply after you click `Apply`.
+For the WebExtension version, the configurator can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings apply after you click `Apply` (unless you're 𝓯𝓻𝓮𝓪𝓴𝔂).
 
 ## Miscellaneous
 Firefox Photon icons were taken from the `omni.ja` file from Firefox 87.
@@ -156,6 +174,6 @@ Other icons that were not in Firefox 87 were made by me.
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
-- [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton/)
+- [YukisCoffee's Phroton](https://web.archive.org/web/20231124205435/https://github.com/YukisCoffee/phroton/) (r.i.p.)
 - The folks over at r/FirefoxCSS
-- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable (and made Photon)
+- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (but they also made Proton >:()]
