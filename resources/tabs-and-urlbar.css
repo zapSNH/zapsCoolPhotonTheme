@@ -58,7 +58,7 @@
 #TabsToolbar {
 	z-index: 1 !important;
 }
-:root[tabsintitlebar] :is(#titlebar, .browser-titlebar):-moz-window-inactive {
+:root:is([tabsintitlebar], [customtitlebar]) :is(#titlebar, .browser-titlebar):-moz-window-inactive {
 	opacity: 1 !important;
 	.tab-content, &#nav-bar > * {
 		opacity: 0.8 !important;
@@ -208,7 +208,7 @@ credits to phroton for some of this stuff */
 .tabbrowser-tab:hover > .tab-stack > .tab-background[selected]::before {
 	filter: brightness(125%) saturate(150%)
 }
-#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button, #alltabs-button {
+#TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button, #TabsToolbar #alltabs-button {
 	:root:not([uidensity]) & {
 		width: 32px !important;
 		height: 32px !important;
@@ -227,6 +227,9 @@ credits to phroton for some of this stuff */
 			justify-content: center;
 		}
 	}
+}
+#alltabs-button[overflowedItem="true"] .toolbarbutton-badge-stack {
+	padding-inline: 0 !important;
 }
 #TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button {
 	> image {
@@ -869,7 +872,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 	#nav-bar {
 		margin-inline-end: 138px;
-		padding-inline-end: 40px;
+		padding-inline-end: 40px !important;
 	}
 	@media (-moz-platform: linux) {
 		#nav-bar {
@@ -910,7 +913,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 			border-top-right-radius: 10px;
 		}
 	}
-	:root:not([tabsintitlebar]) {
+	:root:not([tabsintitlebar], [customtitlebar]) {
 		#nav-bar {
 			margin-inline-end: 0;
 		}
