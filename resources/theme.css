@@ -181,7 +181,7 @@ input.findbar-textbox:focus {
 				border-color: solid 1px var(--photon-tab-outline) !important;
 			}
 		}
-		@media not (-moz-windows-accent-color-in-titlebar) {
+		@media not ((-moz-windows-accent-color-in-titlebar) or (-moz-bool-pref: "uc.toolbar.transparency")) {
 			:root:not([lwtheme="true"]) {
 				#navigator-toolbox {
 					background: #202340 !important;
@@ -351,7 +351,7 @@ input.findbar-textbox:focus {
 				background: #323234 !important;
 			}
 		}
-		@media not (-moz-windows-accent-color-in-titlebar) {
+		@media not ((-moz-windows-accent-color-in-titlebar) or (-moz-bool-pref: "uc.toolbar.transparency")) {
 			:root:not([lwtheme="true"]) #navigator-toolbox {
 				background: #0c0c0d !important;
 			}
