@@ -576,7 +576,7 @@ credits to phroton for some of this stuff */
 	translate: 4px -2px;
 }
 toolbarbutton#urlbar-searchmode-switcher {
-	padding-inline: var(--urlbar-searchmodeswitcher-spacing) !important;
+	padding: var(--urlbar-searchmodeswitcher-inline-padding) !important;
 	&:hover {
 		background-color: var(--urlbar-box-hover-bgcolor) !important;
 	}
@@ -646,6 +646,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 	height: 28px !important;
 	padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
 	margin-inline: 1px !important;
+}
+#urlbar:is([focused], [open]) {
+	--urlbar-icon-border-radius: var(--photon-border-radius) !important;
 }
 /* Megabar */
 @media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
