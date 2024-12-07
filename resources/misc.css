@@ -620,11 +620,11 @@
 @media (-moz-bool-pref: "uc.toolbar.transparency") {
 	#navigator-toolbox-background, #navigator-toolbox, html {
 		background: transparent !important;
-	}
+	}/*
 	.titlebar-button:not(.titlebar-close) {
 		list-style-image: none !important;
 	}
-	/* janky */
+	/* janky *-/
 	.titlebar-close {
 		:root:not([sizemode="maximized"]) & .toolbarbutton-icon {
 			translate: 0 -2px;
@@ -635,7 +635,7 @@
 		&:not(:hover) {
 			list-style-image: none !important;
 		}
-	}
+	}*/
 }
 /* Old style context menus */
 @media (-moz-bool-pref: "uc.contextmenu.win-10") {
