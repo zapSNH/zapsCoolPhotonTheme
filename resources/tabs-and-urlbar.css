@@ -647,9 +647,6 @@ toolbarbutton#urlbar-searchmode-switcher {
 	padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
 	margin-inline: 1px !important;
 }
-#urlbar:is([focused], [open]) {
-	--urlbar-icon-border-radius: var(--photon-border-radius) !important;
-}
 /* Megabar */
 @media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
 	#urlbar[focused]:not([breakout][breakout-extend]) {
@@ -766,6 +763,11 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 	#urlbar-results[wrap] .urlbarView-url {
 		margin-left: 46px !important;
+	}
+}
+@media not (-moz-bool-pref: "uc.no-megabar") {
+	#urlbar:is([focused], [open]) {
+		--urlbar-icon-border-radius: var(--photon-border-radius) !important;
 	}
 }
 #urlbar[breakout][breakout-extend][open] > #urlbar-background {
