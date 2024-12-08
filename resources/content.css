@@ -89,9 +89,12 @@
 		--blue-70: #003eaa;
 		--blue-80: #002275;
 		--grey-20: #ededf0;
+		--border-color-interactive: var(--in-content-box-border-color);
 		--in-content-primary-button-text-color: white !important;
 		--in-content-primary-button-text-color-hover: white !important;
 		--in-content-primary-button-text-color-active: white !important;
+		--theme-card-border-radius: var(--photon-primary-border-radius) !important;
+		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
