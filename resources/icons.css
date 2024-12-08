@@ -776,7 +776,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	width: 16px !important;
 }
-/* Profiles Button (FF 127+) */ 
+/* Profiles Button */ 
 @media (-moz-bool-pref: "browser.profiles.enabled") {
 	#appMenu-profiles-button:after {
 		margin-inline-end: -3px !important;
@@ -798,6 +798,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	}
 	#profiles-create-profile-button .toolbarbutton-icon {
 		list-style-image: url(./icons/add.svg) !important;
+	}
+	#profiles-edit-this-profile-button .toolbarbutton-icon {
+		list-style-image: url(./icons/edit.svg) !important;
 	}
 }
 /* Exit icon */

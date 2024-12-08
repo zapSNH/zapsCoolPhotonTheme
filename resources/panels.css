@@ -150,8 +150,18 @@ menuitem, menu {
 		margin-top: 4px !important;
 	}
 }
+#appMenu-profiles-button .toolbarbutton-icon {
+	margin-inline-end: 0px !important;
+}
+#profiles-edit-this-profile-button {
+	height: 32px !important;
+	width: 32px !important;
+	justify-content: center !important;
+	margin-inline-end: -4px !important;
+}
 #current-profile {
 	padding-block: var(--space-small) !important;
+	margin-block-start: -4px !important;
 }
 #this-profile-buttons {
 	width: 100% !important;
