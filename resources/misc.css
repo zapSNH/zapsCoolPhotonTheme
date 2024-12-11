@@ -95,7 +95,8 @@
 		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
 		background-color: var(--button-bgcolor) !important;
 		
-		&[type="primary"] {
+		&[type="primary"],
+		&[dlgtype="accept"] {
 			background-color: var(--photon-accent-dark) !important;
 			color: white !important;
 			
