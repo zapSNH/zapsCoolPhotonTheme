@@ -67,6 +67,10 @@
 	list-style-image: url(./icons/info.svg) !important;
 }
 /* Photon sound icons */
+.tab-icon-overlay {
+	-moz-context-properties: fill !important;
+	fill: currentColor !important;
+}
 .tab-icon-overlay[soundplaying] {
 	list-style-image: url(./icons/tab-audio-playing.svg) !important;
 }
@@ -78,6 +82,10 @@
 }
 .tab-icon-overlay[pictureinpicture] {
 	list-style-image: url(./icons/pictureinpicture.svg) !important;
+}
+/* deal with this later */
+.tab-audio-button {
+	display: none !important;
 }
 /* New tab icon */
 #tabs-newtab-button, #new-tab-button {
@@ -940,9 +948,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 }
 #searchmode-switcher-icon {
 	&[style*="chrome://browser/skin/history.svg"] {
-	list-style-image: url(./icons/history.svg) !important;
+		list-style-image: url(./icons/history.svg) !important;
 	}
-	&[style*="chrome://global/skin/icons/search-glass.svg"] {
+	&[style*="chrome://global/skin/icons/search-glass.svg"], &:not([style]) {
 		list-style-image: url(./icons/find-in-page.svg) !important;
 	}
 	&[style*="chrome://browser/skin/quickactions.svg"] {
