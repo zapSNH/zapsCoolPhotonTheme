@@ -95,6 +95,8 @@
 		--in-content-primary-button-text-color-active: white !important;
 		--theme-card-border-radius: var(--photon-primary-border-radius) !important;
 		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
+		--table-row-background-color: var(--in-content-box-background) !important;
+		--table-row-background-color-alternate: var(--in-content-button-background) !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
