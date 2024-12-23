@@ -198,19 +198,16 @@
 	button-group button, button[role="menuitem"] {
 		border-radius: 0 !important;
 	}
-	.toggle-button::before {
-		margin-inline: 2px !important;
-		@media (prefers-color-scheme: light) {
-			margin-inline: 3px !important; /* i have no idea either */
-		}
-		width: 10px !important;
-		height: 10px !important;
-		outline: solid 1px var(--border-color);
-	}
 	.toggle-button {
+		--toggle-dot-background-color-on-pressed: white !important;
+		--toggle-dot-background-color: white !important;
 		--toggle-width: 26px !important;
-		--border-color: hsla(210,4%,10%,.14);
-		border-color: var(--border-color) !important;
+		--toggle-dot-margin: 2px !important;
+		--toggle-dot-height: calc(var(--toggle-height) - 2 * var(--toggle-dot-margin) - 2 * var(--toggle-border-width));
+		--toggle-dot-width: var(--toggle-dot-height) !important;
+		--toggle-dot-transform-x: calc(var(--toggle-width) - 3 * var(--toggle-dot-margin) - var(--toggle-dot-width)) !important;
+		--toggle-border-color: transparent !important;
+		min-width: var(--toggle-width) !important;
 	}
 	.checkbox-check, input[type="radio"]:not(.wallpaper-input), .radio-check, .checkbox-row input, input[type="checkbox"]:not(.reveal-password-checkbox) {
 		border-radius: var(--photon-secondary-border-radius) !important;

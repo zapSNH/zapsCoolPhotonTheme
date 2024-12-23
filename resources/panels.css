@@ -446,12 +446,24 @@ menuitem, menu {
 	background: white !important;
 	margin-inline: 2px !important;
 }
+.toggle-button {
+	--toggle-dot-background-color-on-pressed: white !important;
+	--toggle-dot-background-color: white !important;
+	--toggle-width: 26px !important;
+	--toggle-dot-margin: 2px !important;
+	--toggle-dot-height: calc(var(--toggle-height) - 2 * var(--toggle-dot-margin) - 2 * var(--toggle-border-width));
+	--toggle-dot-width: var(--toggle-dot-height) !important;
+	--toggle-dot-transform-x: calc(var(--toggle-width) - 3 * var(--toggle-dot-margin) - var(--toggle-dot-width)) !important;
+	--toggle-border-color: transparent !important;
+	min-width: var(--toggle-width) !important;
+}
 .toggle-button[aria-pressed="true"] {
+	border-color: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
 	background: var(--photon-accent-dark) !important;
-	#moz-toggle-label:hover & {
+	#moz-toggle-label:hover &, &:hover {
 		background: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
 	}
-	#moz-toggle-label:hover:active & {
+	#moz-toggle-label:hover:active &, &:hover:active {
 		background: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
 	}
 }
