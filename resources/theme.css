@@ -12,9 +12,6 @@
 	--tab-icon-overlay-fill: currentColor !important;
 	--color-accent-primary: var(--photon-accent) !important;
 }
-menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
-	--panel-background: var(--arrowpanel-background) !important;
-}
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 	background: var(--panel-background) !important;
 	box-shadow: 2px 2px 2px #0006 !important;
@@ -110,6 +107,9 @@ input.findbar-textbox:focus {
 	.tabbrowser-tab[selected]) {
 		box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 	}
+	menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
+		--panel-background: var(--arrowpanel-background) !important;
+	}
 }
 @media not (-moz-gtk-csd-available) {
 	@media (prefers-color-scheme: light) {
@@ -179,6 +179,9 @@ input.findbar-textbox:focus {
 			}
 			#urlbar[breakout-extend] #urlbar-background {
 				border-color: solid 1px var(--photon-tab-outline) !important;
+			}
+			menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
+				--panel-background: var(--arrowpanel-background) !important;
 			}
 		}
 		@media not ((-moz-windows-accent-color-in-titlebar) or (-moz-bool-pref: "uc.toolbar.transparency")) {
@@ -263,6 +266,9 @@ input.findbar-textbox:focus {
 	:is(.tab-background[selected],
 	#firefox-view-button[open] .toolbarbutton-icon) {
 		background: #323234 !important;
+	}
+	menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
+		--panel-background: var(--arrowpanel-background) !important;
 	}
 	/*
 	#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme {
@@ -350,6 +356,9 @@ input.findbar-textbox:focus {
 			#firefox-view-button[open] .toolbarbutton-icon) {
 				background: #323234 !important;
 			}
+			menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
+				--panel-background: var(--arrowpanel-background) !important;
+			}
 		}
 		@media not ((-moz-windows-accent-color-in-titlebar) or (-moz-bool-pref: "uc.toolbar.transparency")) {
 			:root:not([lwtheme="true"]) #navigator-toolbox {
@@ -424,6 +433,10 @@ input.findbar-textbox:focus {
 	:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon,
 	.tabbrowser-tab[selected]) {
 		box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-border-color) !important;
+	}
+	
+	menupopup:not(#ContentSelectDropdownPopup), richlistbox:not(#PopupSearchAutoComplete richlistbox), #tab-preview-panel, panel[type="autocomplete-richlistbox"] {
+		--panel-background: var(--arrowpanel-background) !important;
 	}
 }
 @media (prefers-color-scheme: dark) {
