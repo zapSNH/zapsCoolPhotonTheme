@@ -80,7 +80,7 @@ toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .
 #tabs-newtab-button image,
 menupopup, panel, #PlacesChevron *:not(.menuitem-with-favicon, .bookmark-item), #editBookmarkPanelInfoArea *,
 #scrollbutton-up, #scrollbutton-down, 
-button, button hbox, hbox menulist,
+button:not([class="toggle-button"]), button hbox, hbox menulist,
 #urlbar :is(button, .urlbarView-action),
 findbar *, .bookmark-item:not(.menuitem-with-favicon), .toolbarbutton-1, .permission-popup-section *,
 .dialogBox, #sidebar-switcher-target, .close-icon,
