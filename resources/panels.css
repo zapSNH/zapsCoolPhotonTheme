@@ -26,6 +26,12 @@ panel toolbarseparator {
 	padding-inline: 0 !important;
 	padding-block: 4px !important;
 }
+menupopup {
+	-moz-appearance: none !important;
+	background: transparent !important;
+	-moz-window-shadow: none !important;
+	border: none !important;
+}
 menuitem[disabled="true"] {
 	pointer-events: none !important;
 	opacity: 1 !important;
