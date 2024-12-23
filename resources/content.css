@@ -97,6 +97,8 @@
 		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
 		--table-row-background-color: var(--in-content-box-background) !important;
 		--table-row-background-color-alternate: var(--in-content-button-background) !important;
+		--toggle-dot-background-color-on-pressed: #fff !important;
+		--toggle-dot-background-color: color-mix(in srgb, #fff 80%, transparent) !important;
 	}
 	@media (prefers-color-scheme: dark) {	
 		* {
@@ -198,6 +200,9 @@
 	}
 	.toggle-button::before {
 		margin-inline: 2px !important;
+		@media (prefers-color-scheme: light) {
+			margin-inline: 3px !important; /* i have no idea either */
+		}
 		width: 10px !important;
 		height: 10px !important;
 		outline: solid 1px var(--border-color);
@@ -615,6 +620,14 @@
 	}
 	.weatherIcon:is(.iconId43, .iconId44) {
 		content: url("./icons/weather/night-mostly-cloudy-with-flurries.svg") !important;
+	}
+	
+	.wallpaper-list.category {
+		width: 100% !important;
+		height: 100% !important;
+		margin: 0 !important;
+		inset-inline-start: 0 !important;
+		padding: 16px 25px !important;
 	}
 	:root:is(:not([lwt-newtab], [lwt-newtab-brighttext]), [style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
