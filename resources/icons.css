@@ -1165,6 +1165,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	background-image: var(--avatar-image-url);
 	margin-inline-start: 11px !important;
 	outline: solid #ffffff33 1px;
+	z-index: 1;
 }/*
 :root #PanelUI-fxa #fxa-manage-account-button::after {
 	content: "";
@@ -1185,11 +1186,12 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	padding-inline: var(--arrowpanel-menuitem-padding) !important;
 	padding-inline-start: 51px !important;
 	translate: -41px;
+	padding-block: 6px !important;
 	&:hover {
-		background-color: var(--panel-item-hover-bgcolor);
+		background-color: var(--panel-item-hover-bgcolor, var(--button-background-color-ghost-hover));
 	}
 	&:hover:active {
-		background-color: var(--panel-item-active-bgcolor);
+		background-color: var(--panel-item-active-bgcolor, var(--button-background-color-ghost-active));
 	}
 	min-width: calc(100% + 30px) !important;
 }
