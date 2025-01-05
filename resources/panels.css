@@ -392,6 +392,9 @@ menuitem, menu {
 #appMenu-addon-banners:has(::after) {
 	margin-bottom: 4px;
 }
+.unified-extensions-item > .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button {
+	padding: 0 !important;
+}
 /* fxa menu monitor and relay ad- i mean "promotions" */
 .ctaMenuLogo, #cta-menu-header-description {
 	margin-inline-start: 0 !important;
