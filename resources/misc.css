@@ -198,7 +198,7 @@
 		content: url(./icons/edit-copy.svg) !important;
 	}
 	img[src="chrome://global/skin/icons/close.svg"] {
-		content: url(./icons/close-icon2.svg) !important;
+		content: url(./icons/close.svg) !important;
 	}
 	img[src="chrome://global/skin/icons/more.svg"] {
 		content: url(./icons/more.svg) !important;
@@ -619,6 +619,10 @@
 }
 /* Transparent Toolbar */
 @media (-moz-bool-pref: "uc.toolbar.transparency") {
+	#browser {
+		--toolbox-bgcolor: transparent !important;
+		--toolbox-bgcolor-inactive: transparent !important;
+	}
 	#navigator-toolbox-background, #navigator-toolbox, html {
 		background: transparent !important;
 	}/*

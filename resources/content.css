@@ -385,6 +385,20 @@
 	#protection-settings {
 		background-image: url("./icons/settings.svg") !important;
 	}
+	img {
+		&[src="chrome://browser/skin/thumb-down.svg"] {
+			content: url(./icons/socialblock.svg) !important;
+		}
+		&[src="chrome://browser/skin/controlcenter/3rdpartycookies.svg"] {
+			content: url(./icons/3rdpartycookies.svg) !important;
+		}
+		&[src="chrome://browser/skin/controlcenter/cryptominers.svg"] {
+			content: url(./icons/cryptominers.svg) !important;
+		}
+		&[src="chrome://browser/skin/fingerprint.svg"] {
+			content: url(./icons/fingerprinters.svg) !important;
+		}
+	}
 }
 @-moz-document url("about:newtab"), url("about:home") {
 	.search-wrapper .search-handoff-button {
