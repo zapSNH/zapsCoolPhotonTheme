@@ -1570,7 +1570,7 @@ img {
 .content-shortcuts {
 	background-image: url("./icons/glyph-highlights-16.svg") !important;
 }
-button > img, span > img {
+button > img, span > img, label > img {
 	&[src="chrome://mozapps/skin/extensions/category-discover.svg"], &[src="chrome://global/skin/icons/highlights.svg"] {
 		content: url("./icons/glyph-highlights-16.svg") !important;
 	}
