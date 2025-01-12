@@ -53,6 +53,8 @@ input.findbar-textbox:focus {
 	--lwt-accent-color: #d7d7db !important;
 	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #f9f9fa !important;
+	--toolbox-bgcolor: var(--toolbar-bgcolor) !important;
+	--toolbox-bgcolor-inactive: var(--toolbar-bgcolor) !important;
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 	--arrowpanel-border-color: #cccccc !important;
 	--urlbar-box-text-color: #747576 !important;
@@ -115,6 +117,8 @@ input.findbar-textbox:focus {
 			--lwt-accent-color: #202340 !important;
 			--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 			--toolbar-bgcolor: #f9f9fa !important;
+			--toolbox-bgcolor: var(--toolbar-bgcolor) !important;
+			--toolbox-bgcolor-inactive: var(--toolbar-bgcolor) !important;
 			--button-hover-bgcolor: hsla(0,0%,80%,.5) !important;
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
 			--arrowpanel-border-color: #cccccc !important;
@@ -203,6 +207,8 @@ input.findbar-textbox:focus {
 	--lwt-accent-color: #0c0c0d !important;
 	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #323234 !important;
+	--toolbox-bgcolor: var(--toolbar-bgcolor) !important;
+	--toolbox-bgcolor-inactive: var(--toolbar-bgcolor) !important;
 	--toolbar-field-background-color: #474749 !important;
 	--toolbar-field-border-color: #5a5a5c !important;
 	--button-hover-bgcolor: rgba(249,249,250,.1) !important;
@@ -287,6 +293,8 @@ input.findbar-textbox:focus {
 			--lwt-accent-color: #0c0c0d !important;
 			--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 			--toolbar-bgcolor: #323234 !important;
+			--toolbox-bgcolor: var(--toolbar-bgcolor) !important;
+			--toolbox-bgcolor-inactive: var(--toolbar-bgcolor) !important;
 			--toolbar-field-background-color: #474749 !important;
 			--toolbar-field-border-color: #5a5a5c !important;
 			--button-hover-bgcolor: rgba(249,249,250,.1) !important;
