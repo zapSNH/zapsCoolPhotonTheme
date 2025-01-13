@@ -1030,6 +1030,8 @@ toolbarbutton#urlbar-searchmode-switcher {
 			}
 			.tab-close-button {
 				margin-inline-start: -2px !important;
+				position: static !important;
+				display: none !important;
 			}
 			.tab-icon-stack {
 				min-width: 16px !important;
