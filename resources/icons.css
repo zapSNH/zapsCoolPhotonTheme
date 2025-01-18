@@ -61,6 +61,7 @@
 	fill: currentColor !important;
   	fill-opacity: 1 !important;
 	stroke-linecap: round !important;
+	order: 2;
 }
 /* Info icon */
 .panel-info-button image {
@@ -83,9 +84,30 @@
 .tab-icon-overlay[pictureinpicture] {
 	list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
-/* deal with this later */
+/* deal with this now */
 .tab-audio-button {
-	display: none !important;
+	--icon-size-default: 16px !important;
+	--button-size-icon-small: 16px !important;
+	--button-min-height-small: 16px !important;
+	--button-border-radius: var(--photon-border-radius) !important;
+	--tab-icon-end-margin: 4px !important;
+	translate: 0 -5px !important;
+	margin-inline-start: -16px !important;
+	order: 1;
+	height: 16px !important;
+	z-index: 1;
+}
+.tab-audio-button[soundplaying] {
+	--button-icon: url(./icons/tab-audio-playing.svg) !important;
+}
+.tab-audio-button[muted] {
+	--button-icon: url(./icons/tab-audio-muted.svg) !important;
+}
+.tab-audio-button[activemedia-blocked] {
+	--button-icon: url(./icons/tab-audio-blocked.svg) !important;
+}
+.tab-audio-button[pictureinpicture] {
+	--button-icon: url(./icons/pictureinpicture.svg) !important;
 }
 /* New tab icon */
 #tabs-newtab-button, #new-tab-button {
@@ -522,10 +544,24 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #PanelUI-menu-button {
 	list-style-image: url(./icons/menu.svg) !important;
 }
+#PanelUI-menu-button[badge-status="update-available"], #PanelUI-menu-button[badge-status="update-downloading"],
+#PanelUI-menu-button[badge-status="update-manual"], #PanelUI-menu-button[badge-status="update-restart"],
+#PanelUI-menu-button[badge-status="update-unsupported"], #PanelUI-menu-button[badge-status="addon-alert"],
+#PanelUI-menu-button[badge-status="fxa-needs-authentication"] {
+	list-style-image: url(./icons/menu-badged.svg) !important;
+}
 #PanelUI-menu-button .toolbarbutton-badge {
 	background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
 	border-radius: 50% !important;
-	outline: 2px var(--toolbar-bgcolor) solid;
+	margin: -7px -3px 0 !important;
+}
+#appMenu-popup .panel-banner-item {
+	&[notificationid="update-available"], &[notificationid="update-downloading"], &[notificationid="update-manual"], &[notificationid="update-restart"] {
+		& > .toolbarbutton-icon {
+			background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
+			border-radius: 50% !important;
+		}
+	}
 }
 .addon-banner-item {
 	&::after {
@@ -578,7 +614,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	background: #74BF43 url(./icons/update-badge.svg) no-repeat center !important;
 	border-radius: 50% !important;
 }
-#appMenu-proton-update-banner::before {
+:is(#appMenu-proton-update-banner, #appMenu-update-banner)::before {
 	background: no-repeat url(chrome://branding/content/icon16.png);
 	width: 16px;
 	height: 16px;
