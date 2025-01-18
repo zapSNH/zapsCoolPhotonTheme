@@ -96,6 +96,7 @@
 	order: 1;
 	height: 16px !important;
 	z-index: 1;
+	--icon-fill: var(--toolbox-textcolor) !important;
 }
 .tab-audio-button[soundplaying] {
 	--button-icon: url(./icons/tab-audio-playing.svg) !important;
@@ -1668,5 +1669,6 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 }
 button[part="button"], span[part="button"] {
 	background-image: var(--button-icon, inherit) !important;
+	fill: var(--icon-fill, currentColor) !important;
 }
 }
