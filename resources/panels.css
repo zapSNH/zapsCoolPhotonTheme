@@ -128,13 +128,25 @@ menuitem, menu {
 	margin-bottom: 4px !important;
 	margin-top: 1px !important;
 }
-#appMenu-proton-update-banner, #appMenu-proton-addon-banners .addon-banner-item {
+#appMenu-update-banner, #appMenu-proton-update-banner, #appMenu-proton-addon-banners .addon-banner-item {
 	padding-block: 8px !important;
 	margin-top: -4px !important;
 	margin-bottom: 5px !important;
 	padding-inline-start: var(--appmenu-icon-inline-end) !important;
 	align-items: center !important;
 	outline: 1px solid var(--panel-separator-color);
+}
+#appMenu-update-banner, #appMenu-proton-update-banner {
+	background-color: rgba(48,230,11,.1) !important;
+	margin-bottom: 4px !important;
+	outline: none;
+	box-shadow: 0 -1px var(--panel-separator-color) inset !important;
+	&:hover:not([disabled]), &:focus:not([disabled]) {
+		background-color: rgba(48,230,11,.15) !important;
+	}
+	&:active:not([disabled]) {
+		background-color: rgba(48,230,11,.2) !important;
+	}
 }
 /* Makes the zoom controls align with the menu buttons */
 #appMenu-zoom-controls2 {
