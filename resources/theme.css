@@ -50,6 +50,11 @@ input.findbar-textbox:focus {
 	border-top: none !important;
 	box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 var(--tabs-navbar-separator-color, transparent) !important;
 }
+
+:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon,
+.tabbrowser-tab[selected]) {
+	box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-navbar-separator-color, transparent), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-navbar-separator-color, transparent) !important;
+}
 /* Light theme */
 :root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"] {
 	--lwt-accent-color: #d7d7db !important;
@@ -80,6 +85,9 @@ input.findbar-textbox:focus {
 	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 	--chrome-content-separator-color: var(--lwt-accent-color) !important;
+	--button-background-color: var(--toolbarbutton-background) !important;
+	--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
+	--button-background-color-active: var(--toolbarbutton-active-background) !important;
 	
 	#urlbar {
 		--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
@@ -146,6 +154,9 @@ input.findbar-textbox:focus {
 			--toolbarbutton-icon-fill: currentColor !important;
 			--toolbox-non-lwt-textcolor: rgb(251, 251, 254) !important;
 			--toolbox-textcolor: rgb(251, 251, 254) !important;
+			--button-background-color: var(--toolbarbutton-background) !important;
+			--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
+			--button-background-color-active: var(--toolbarbutton-active-background) !important;
 			
 			#urlbar {
 				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
