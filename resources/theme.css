@@ -22,7 +22,7 @@ menuitem:where([_moz-menuactive="true"]):not([disabled="true"], #context-navigat
 }*/
 menu,
 menuitem {
-	&:where([_moz-menuactive]:not([disabled="true"])) {
+	&:where([_moz-menuactive]:not([disabled="true"])):not(#ContentSelectDropdownPopup > &) {
 		background-color: var(--button-hover-bgcolor, -moz-menuhover) !important;
 	}
 }
