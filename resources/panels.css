@@ -284,37 +284,48 @@ menuitem, menu {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
-.panel-footer > button {
+.panel-footer > button, button > span.labelled.button-background[part="button"] {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	margin-inline: 0px !important;
 	flex-grow: 1 !important;
 	min-height: 38px !important;
 }
+.tab-group-create-actions {
+	> * {
+		width: 100% !important;
+	}
+	margin-bottom: -21px;
+}
+moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
+	margin-inline-start: 0 !important;
+}
 /* I was stubbbbbboooooorrrrrnnnnnn */
-.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
-	background-color: #0060df !important;
-	color: white !important;
-	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
-}
-.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]):hover {
-	background-color: #003eaa !important;
-}
-.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]):hover:active {
-	background-color: #002275 !important;
-}
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
-.panel-footer > button:not(.primary), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton {
+.panel-footer > button:not(.primary, [slot="primary"], [default="true"]), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
+button > span.labelled.button-background[type="default"][part="button"] {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
+	&:hover {
+		background-color: #aaa4 !important;
+		&:active {
+			background-color: #1113 !important;
+		}
+	}
 }
-.panel-footer > button:not(.primary):hover, .popup-notification-secondary-button:hover, #editBookmarkPanelRemoveButton:hover {
-	background-color: #aaa4 !important;
-}
-.panel-footer > button:not(.primary):active, .popup-notification-secondary-button:active, #editBookmarkPanelRemoveButton:active {
-	background-color: #1113 !important;
+.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]),
+button > span.labelled.button-background[type="primary"][part="button"] {
+	background-color: #0060df !important;
+	color: white !important;
+	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
+	&:hover {
+		background-color: #003eaa !important;
+		&:active {
+			background-color: #002275 !important;
+		}
+	}
 }
 .panel-footer > button[type="menu"] {
 	border-inline-start: solid 1px color-mix(in srgb, transparent 90%, currentColor) !important;
@@ -712,6 +723,30 @@ tooltip {
 	padding-inline-start: 4px !important;
 	.toolbarbutton-text {
 		padding: 0 !important;
+	}
+}
+/* Tab Group context menu */
+#tab-group-editor {
+	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
+		margin-inline: -12px !important;
+	}
+	panel > :last-child {
+		margin-block-end: -9px !important;
+	}
+	.panel-header {
+		padding: 0 !important;
+		margin-block-start: -10px !important;
+		margin-block-end: -2px !important;
+	}
+	#tab-group-name:focus {
+		outline: none !important;
+		border-color: var(--photon-accent-dark) !important;
+	}
+	.subviewbutton {
+		height: 16px !important;
+		&:not(:last-child) {
+			margin-block-end: 2px !important;
+		}
 	}
 }
 }
