@@ -266,11 +266,19 @@ menuitem, menu {
 	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
 }
 /* Panel button styling */
-.panel-footer {
+.panel-footer, #select-translations-panel-footer moz-button-group {
 	justify-content: center !important;
 	margin: 0 !important;
 	margin-top: 16px !important;
 	gap: 0px !important;
+}
+#select-translations-panel-footer {
+	display: grid !important;
+	grid-auto-columns: 100% !important;
+	margin-bottom: -6px !important;
+}
+#select-translations-panel-footer-button-group {
+	width: 100% !important;
 }
 #editBookmarkPanel .panel-footer {
 	margin-bottom: -4px !important;
@@ -284,7 +292,7 @@ menuitem, menu {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
-.panel-footer > button, button > span.labelled.button-background[part="button"] {
+:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)), button > span.labelled.button-background[part="button"] {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	margin-inline: 0px !important;
@@ -304,7 +312,7 @@ moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
-.panel-footer > button:not(.primary, [slot="primary"], [default="true"]), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
+:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(.primary, [slot="primary"], [default="true"], :has(+ moz-button-group)), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
 button > span.labelled.button-background[type="default"][part="button"] {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
@@ -315,7 +323,7 @@ button > span.labelled.button-background[type="default"][part="button"] {
 		}
 	}
 }
-.panel-footer > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]),
+:is(.panel-footer, #select-translations-panel-footer-button-group) > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]),
 button > span.labelled.button-background[type="primary"][part="button"] {
 	background-color: #0060df !important;
 	color: white !important;
@@ -326,6 +334,12 @@ button > span.labelled.button-background[type="primary"][part="button"] {
 			background-color: #002275 !important;
 		}
 	}
+}
+#select-translations-panel-copy-button {
+	width: fit-content !important;
+	margin-bottom: -10px !important;
+	margin-top: -16px !important;
+	margin-inline-start: 16px !important;
 }
 .panel-footer > button[type="menu"] {
 	border-inline-start: solid 1px color-mix(in srgb, transparent 90%, currentColor) !important;

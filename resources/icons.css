@@ -520,9 +520,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	list-style-image: url(./icons/translations.svg) !important;
 }
 #translations-button-circle-arrows {
-	list-style-image: url(./icons/sync.svg) !important;
+	list-style-image: url(./icons/loading.svg) !important;
 }
-#copy-button {
+#copy-button, #select-translations-panel-copy-button {
 	list-style-image: url(./icons/edit-copy.svg) !important;
 }
 #PlacesChevron,
@@ -1653,6 +1653,9 @@ button > img, span > img, label > img {
 }
 img[src="chrome://browser/skin/preferences/category-general.svg"] {
 	content: url("./icons/settings.svg") !important;
+}
+#select-translations-panel-text-area.translating {
+	background-image: url("./icons/loading.svg") !important;
 }
 #heading-wrapper .chevron-icon {
 	background-image: url("./icons/arrow-dropdown-16.svg") !important;
