@@ -9,6 +9,7 @@
 	--sidebar-background-color: var(--sidebar-background) !important;
 	--tab-icon-overlay-fill: currentColor !important;
 	--color-accent-primary: var(--photon-accent) !important;
+	--focus-outline-color: var(--photon-accent) !important; 
 }
 .menupopup-arrowscrollbox, richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 	background: var(--panel-background) !important;
@@ -35,7 +36,8 @@ menuitem {
 	background: var(--sidebar-background, var(--toolbar-bgcolor)) !important;
 }
 input.findbar-textbox:focus {
-	outline: 2px var(--photon-accent-dark) solid !important;
+	outline: none !important;
+	border: 1px var(--photon-accent-dark) solid !important;
 }
 .infobar {
 	background-color: var(--toolbar-field-background-color) !important;
