@@ -314,7 +314,7 @@ credits to phroton for some of this stuff */
 #TabsToolbar .tab-stack::after,
 :root[sizemode="normal"] #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) > .tab-stack::after,
 :root #firefox-view-button + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) > .tab-stack::after,
-:root[sizemode="normal"] #firefox-view-button::before {
+:root[sizemode="normal"] #firefox-view-button:has(+ #tabbrowser-tabs)::before {
 	content: "";
 	position: absolute;
 	display: block;
