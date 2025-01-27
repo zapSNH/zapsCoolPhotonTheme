@@ -131,7 +131,7 @@ credits to phroton for some of this stuff */
 	margin: 0 !important;
 }
 /* from lepton */
-.tabbrowser-tab:not([pinned]) .tab-icon-overlay[pictureinpicture] {
+.tabbrowser-tab:not([pinned]) .tab-icon-stack:not(:has(+ .tab-audio-button)) .tab-icon-overlay[pictureinpicture] {
 	/* Shape */
 	display: flex !important;
 	order: 2 !important;
@@ -209,9 +209,9 @@ credits to phroton for some of this stuff */
 #TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button, #TabsToolbar #alltabs-button {
 	:root:not([uidensity]) & {
 		width: 32px !important;
-		height: 32px !important;
-		margin-top: 1px !important;
-		margin-bottom: -1px !important;
+		height: 100px !important;
+		margin-bottom: 1px !important;
+		align-self: center
 	}
 	:root[uidensity="touch"] & {
 		width: 32px !important;
@@ -256,7 +256,7 @@ credits to phroton for some of this stuff */
 		transition: all var(--photon-speed-2) var(--photon-easing-function) !important;
 		--toolbarbutton-hover-background: var(--tab-hover-background-color) !important;
 	}
-	&::before {
+	&::after {
 		display: block;
 		content: "";
 		height: 2px;
@@ -267,14 +267,14 @@ credits to phroton for some of this stuff */
 		translate: 0 calc(-1 * var(--tab-min-height)/2);
 		filter: grayscale(100%);
 	}
-	&[aria-pressed="true"]::before {
+	&[aria-pressed="true"]::after {
 		filter: grayscale(0%);
 	}
-	&:not([aria-pressed="true"], :hover)::before {
+	&:not([aria-pressed="true"], :hover)::after {
 		opacity: 0;
 		width: 0;
 	}
-	&:not([aria-pressed="true"]):hover::before {
+	&:not([aria-pressed="true"]):hover::after {
 		filter: grayscale(100%);
 		opacity: .5;
 	}
@@ -283,7 +283,7 @@ credits to phroton for some of this stuff */
 	margin-inline-start: -1px !important;
 }
 @media (-moz-platform: windows) {
-	:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
+	:root[sizemode="normal"] #TabsToolbar #firefox-view-button::after {
 		translate: 0 calc(-1 * var(--tab-min-height)/2 + 2px);
 	}
 }
@@ -302,13 +302,17 @@ credits to phroton for some of this stuff */
 	}
 }
 .tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) .tab-stack::before,
-:root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after {
+:root #firefox-view-button[open] + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) .tab-stack::after,
+:root #firefox-view-button[open]::before {
 	border-right-color: transparent !important;
 }
 :root:not([sizemode="maximized"], [sizemode="fullscreen"]) .tabbrowser-tab:not([selected="true"], 
 [style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], 
 [style*="--lwt-accent-color: white; --lwt-text-color: rgba(0, 0, 0);"]):first-child
-#TabsToolbar .tab-stack::after, :root #firefox-view-button + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) > .tab-stack::after {
+#TabsToolbar .tab-stack::after,
+:root[sizemode="normal"] #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) > .tab-stack::after,
+:root #firefox-view-button + #tabbrowser-tabs arrowscrollbox > :first-child:not([selected="true"]) > .tab-stack::after,
+:root[sizemode="normal"] #firefox-view-button::before {
 	content: "";
 	position: absolute;
 	display: block;
@@ -318,7 +322,9 @@ credits to phroton for some of this stuff */
 	z-index: 0;
     bottom: 0px !important;
 }
-
+#firefox-view-button::before {
+	position: relative !important;
+}
 .tabbrowser-tab[pinned]
 .tab-stack::before {
 	bottom: 0px !important;

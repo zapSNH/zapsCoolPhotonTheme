@@ -101,12 +101,12 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 }
 #urlbar:not([focused], [open]) {
 	#tracking-protection-icon-container, #identity-box.chromeUI #identity-icon-box {
-		border-end-start-radius: var(--photon-border-radius) !important;
-		border-start-start-radius: var(--photon-border-radius) !important;
+		border-end-start-radius: calc(var(--photon-border-radius) - 1px) !important;
+		border-start-start-radius: calc(var(--photon-border-radius) - 1px) !important;
 	}
 	#page-action-buttons > :last-child {
-		border-end-end-radius: var(--photon-border-radius) !important;
-		border-start-end-radius: var(--photon-border-radius) !important;
+		border-end-end-radius: calc(var(--photon-border-radius) - 1px) !important;
+		border-start-end-radius: calc(var(--photon-border-radius) - 1px) !important;
 	}
 }
 #urlbar .urlbarView-row, screenshots-buttons, .tab-preview-container {

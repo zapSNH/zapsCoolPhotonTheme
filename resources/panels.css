@@ -743,6 +743,13 @@ tooltip {
 		padding: 0 !important;
 	}
 }
+.onboardingContainer .main-content {
+	padding: 0 !important;
+	width: 300px !important;
+	.main-content-inner {
+		padding: 0 var(--callout-padding) var(--callout-padding) var(--callout-padding);
+	}
+}
 /* Tab Group context menu */
 #tab-group-editor {
 	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
