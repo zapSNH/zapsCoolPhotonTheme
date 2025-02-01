@@ -312,6 +312,9 @@ moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
+#tab-group-editor-button-cancel {
+	margin-inline-start: 0 !important;
+}
 :is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(.primary, [slot="primary"], [default="true"], :has(+ moz-button-group)), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
 button > span.labelled.button-background[type="default"][part="button"] {
 	background-color: #aaa2 !important;
@@ -744,6 +747,9 @@ tooltip {
 	width: 300px !important;
 	.main-content-inner {
 		padding: 0 var(--callout-padding) var(--callout-padding) var(--callout-padding);
+		#multi-stage-message-root & {
+			padding: var(--callout-padding);
+		}
 	}
 }
 /* Tab Group context menu */
