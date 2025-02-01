@@ -89,7 +89,10 @@
 	--button-min-height-small: 16px !important;
 	--button-border-radius: var(--photon-border-radius) !important;
 	--tab-icon-end-margin: 4px !important;
-	translate: 0 -7px !important;
+	translate: 0 -5px !important;
+	@media not (-moz-platform: windows) {
+		translate: 0 -7px !important;
+	}
 	margin-inline-start: -16px !important;
 	order: 1;
 	height: 16px !important;
