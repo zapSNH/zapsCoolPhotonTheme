@@ -1,7 +1,7 @@
 /* Content Pages */
 
 /* firefox control(?) styling */
-@media (-moz-bool-pref: "uc.style-forms") {
+@media -moz-pref("uc.style-forms") {
 	select {
 		background-color: light-dark(#f9f9fa, #2a2a2e);
 		background-image: url(./icons/arrow-dropdown-12.svg);
@@ -401,27 +401,27 @@
 			--border-color-interactive: color-mix(in srgb, var(--in-content-page-color) 20%, transparent) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.floorp") {
+	@media -moz-pref("uc.floorp") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.waterfox") {
+	@media -moz-pref("uc.waterfox") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.librewolf") {
+	@media -moz-pref("uc.librewolf") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/librewolf/librewolf-grayscale.svg) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.tor") {
+	@media -moz-pref("uc.tor") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/forks/tor/tor-grayscale.svg) !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.logo.quantum") {
+	@media -moz-pref("uc.logo.quantum") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url(./icons/quantum/aboutdebugging-firefox-logo.svg) !important;
 		}
@@ -797,7 +797,7 @@
 			background-color: #38383d !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.newtab.background") {
+	@media -moz-pref("uc.newtab.background") {
 		body {
 			--newtab-contextual-text-primary-color: currentColor !important;
 			--newtab-button-text: currentColor !important;
@@ -830,21 +830,21 @@
 	/* Legacy Logos */
 	.search-wrapper .logo-and-wordmark .logo {
 		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
-		@media (-moz-bool-pref: "uc.logo.quantum-beta") {
+		@media -moz-pref("uc.logo.quantum-beta") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg) !important;
 		}
-		@media (-moz-bool-pref: "uc.logo.quantum-dev") {
+		@media -moz-pref("uc.logo.quantum-dev") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-developer-edition.svg) !important;
 		}
-		@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
+		@media -moz-pref("uc.logo.quantum-nightly") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg) !important;
 		}
-		@media (-moz-bool-pref: "uc.logo.quantum") {
+		@media -moz-pref("uc.logo.quantum") {
 			background-image: var(--quantum-logo) !important;
 		}
 	}
 	.search-wrapper .logo-and-wordmark .wordmark {
-		@media (-moz-bool-pref: "uc.logo.quantum") {
+		@media -moz-pref("uc.logo.quantum") {
 			background-image: url(./icons/quantum/firefox-wordmark.svg) !important;
 		}
 	}
