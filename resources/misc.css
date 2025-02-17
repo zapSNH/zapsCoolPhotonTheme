@@ -211,16 +211,16 @@
 		--quantum-wordmark: url(./icons/quantum/about-wordmark.svg);
 		--wordmark-size: 300px 38px;
 		--wordmark-position: 0px 16px;
-		@media (-moz-bool-pref: "uc.logo.quantum-beta") {
+		@media -moz-pref("uc.logo.quantum-beta") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg);
 		}
-		@media (-moz-bool-pref: "uc.logo.quantum-dev") {
+		@media -moz-pref("uc.logo.quantum-dev") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-developer-edition.svg);
 			--quantum-wordmark: url(./icons/quantum/about-wordmark-de.svg);
 			--wordmark-size: 153.29px 72px;
 			--wordmark-position: 0px 0px;
 		}
-		@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
+		@media -moz-pref("uc.logo.quantum-nightly") {
 			--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg);
 			--quantum-wordmark: url(./icons/quantum/about-wordmark-nightly.svg);
 			--wordmark-size: 270px 48px;
@@ -238,7 +238,7 @@
 		}
 	}
 	
-	@media (-moz-bool-pref: "uc.logo.quantum") {
+	@media -moz-pref("uc.logo.quantum") {
 		#rightBox {
 			background-image: var(--quantum-wordmark) !important;
 			background-size: var(--wordmark-size) !important;
@@ -616,7 +616,7 @@
 	box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 /* Transparent Toolbar */
-@media (-moz-bool-pref: "uc.toolbar.transparency") {
+@media -moz-pref("uc.toolbar.transparency") {
 	#browser {
 		--toolbox-bgcolor: transparent !important;
 		--toolbox-bgcolor-inactive: transparent !important;
@@ -641,8 +641,8 @@
 	}*/
 }
 /* Old style context menus */
-@media (-moz-bool-pref: "uc.contextmenu.win-10") {
-	@media (-moz-bool-pref: "uc.contextmenu.dark") {
+@media -moz-pref("uc.contextmenu.win-10") {
+	@media -moz-pref("uc.contextmenu.dark") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
@@ -656,7 +656,7 @@
 			color: #fff !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.contextmenu.light") {
+	@media -moz-pref("uc.contextmenu.light") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
@@ -695,8 +695,8 @@
 }
 
 /* kinda looks like the gnome context menu too */
-@media (-moz-bool-pref: "uc.contextmenu.win-11") {
-	@media (-moz-bool-pref: "uc.contextmenu.dark") {
+@media -moz-pref("uc.contextmenu.win-11") {
+	@media -moz-pref("uc.contextmenu.dark") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			--button-hover-bgcolor: #5f5f5f !important;
@@ -710,7 +710,7 @@
 			color: #fff !important;
 		}
 	}
-	@media (-moz-bool-pref: "uc.contextmenu.light") {
+	@media -moz-pref("uc.contextmenu.light") {
 		menupopup:not([customoptionstyling="true"]), tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
@@ -755,7 +755,7 @@
 }
 
 /* Sidebery */
-@media (-moz-bool-pref: "uc.sidebery") {
+@media -moz-pref("uc.sidebery") {
 	:root[titlepreface="[VT] "] {
 		
 		--sidebar-width: 35px;
@@ -968,7 +968,7 @@
 		&[customizing="true"] #customization-container {
 			margin-inline-start: 35px;
 		}
-		@media (-moz-bool-pref: "uc.bottom-tabs") {
+		@media -moz-pref("uc.bottom-tabs") {
 			#nav-bar {
 				margin-top: 1px;
 				margin-inline-start: 0;
