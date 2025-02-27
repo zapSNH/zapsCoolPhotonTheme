@@ -211,7 +211,7 @@ credits to phroton for some of this stuff */
 #TabsToolbar #tabs-newtab-button, #TabsToolbar #new-tab-button, #TabsToolbar #alltabs-button {
 	:root:not([uidensity]) & {
 		width: 32px !important;
-		height: 100px !important;
+		height: 33px !important;
 		margin-bottom: 1px !important;
 		align-self: center
 	}
