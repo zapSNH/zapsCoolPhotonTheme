@@ -829,9 +829,15 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	#appMenu-profiles-button:after {
 		margin-inline-end: -3px !important;
 	}
-	:is(#appMenu-profiles-button, #profiles-manage-profiles-button) .toolbarbutton-icon {
+	:is(#appMenu-profiles-button, #profiles-manage-profiles-button, #appMenu-empty-profiles-button) .toolbarbutton-icon {
 		list-style-image: url(./icons/profiles.svg) !important;
 		margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	}
+	#PanelUI-fxa-menu-empty-profiles-button .toolbarbutton-text {
+		margin-inline-start: calc((var(--appmenu-noicon-inline-end) * -1) + var(--appmenu-icon-inline-end)) !important;
+	}
+	#PanelUI-fxa-menu-empty-profiles-button .toolbarbutton-icon {
+		list-style-image: url(./icons/profiles.svg) !important;
 	}
 	#profiles-edit-this-delete-button .toolbarbutton-icon {
 		list-style-image: url(./icons/edit.svg) !important;
@@ -950,7 +956,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #urlbar-anon-search-settings image {
 	list-style-image: url(./icons/settings.svg) !important;
 }
-#urlbar-engine-one-off-item-tabs image, #search-button-tabs .menu-iconic-icon {
+#urlbar-engine-one-off-item-tabs image, #search-button-tabs .menu-iconic-icon, #searchmode-switcher-icon[style*="tabs.svg"] {
 	list-style-image: url(./icons/tab.svg) !important;
 }
 #urlbar-engine-one-off-item-history image, .search-panel-tree > .autocomplete-richlistitem[originaltype="fromhistory"] > .ac-type-icon {
@@ -1691,8 +1697,11 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/delete.svg) !important;
 }
+img[src="chrome://browser/skin/tabbrowser/tab-groups.svg"] {
+	content: url(./icons/window.svg) !important; /* TEMP ICON */
+}
 /* shadow root */
-.header-close-button, .dismiss-button {
+.header-close-button, .dismiss-button, .close {
 	--button-icon: url(./icons/close.svg) !important;
 }
 .menu-button {
@@ -1704,5 +1713,8 @@ img[src="chrome://browser/skin/preferences/category-general.svg"] {
 button[part="button"], span[part="button"] {
 	background-image: var(--button-icon, inherit) !important;
 	fill: var(--icon-fill, currentColor) !important;
+}
+.action-buttons .split-button-container .submenu-button {
+	background-image: url(./icons/arrow-dropdown-16.svg) !important;
 }
 }

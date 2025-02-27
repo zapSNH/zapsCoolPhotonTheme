@@ -266,11 +266,16 @@ menuitem, menu {
 	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
 }
 /* Panel button styling */
-.panel-footer, #select-translations-panel-footer moz-button-group {
+/* key: panel buttons */
+.panel-footer, #select-translations-panel-footer moz-button-group, .action-buttons {
 	justify-content: center !important;
 	margin: 0 !important;
 	margin-top: 16px !important;
 	gap: 0px !important;
+}
+.action-buttons {
+	margin-bottom: calc(var(--callout-padding) * -1) !important;
+	margin-inline: calc(var(--callout-padding) * -1) !important;
 }
 #select-translations-panel-footer {
 	display: grid !important;
@@ -292,7 +297,8 @@ menuitem, menu {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
-:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)), button > span.labelled.button-background[part="button"] {
+:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
+button > span.labelled.button-background[part="button"], .action-buttons > div, .action-buttons button {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	margin-inline: 0px !important;
@@ -303,7 +309,7 @@ menuitem, menu {
 	> * {
 		width: 100% !important;
 	}
-	margin-bottom: -21px;
+	margin-bottom: -17px;
 }
 moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 	margin-inline-start: 0 !important;
@@ -315,8 +321,11 @@ moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 #tab-group-editor-button-cancel {
 	margin-inline-start: 0 !important;
 }
-:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(.primary, [slot="primary"], [default="true"], :has(+ moz-button-group)), .popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
-button > span.labelled.button-background[type="default"][part="button"] {
+:is(.panel-footer, #select-translations-panel-footer-button-group)
+> button:not(.primary, [slot="primary"], [default="true"], :has(+ moz-button-group)),
+.popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
+button > span.labelled.button-background[type="default"][part="button"],
+.action-buttons button.secondary {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 	&:hover {
@@ -327,7 +336,7 @@ button > span.labelled.button-background[type="default"][part="button"] {
 	}
 }
 :is(.panel-footer, #select-translations-panel-footer-button-group) > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]),
-button > span.labelled.button-background[type="primary"][part="button"] {
+button > span.labelled.button-background[type="primary"][part="button"], .action-buttons button.primary {
 	background-color: #0060df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
@@ -344,7 +353,7 @@ button > span.labelled.button-background[type="primary"][part="button"] {
 	margin-top: -16px !important;
 	margin-inline-start: 16px !important;
 }
-.panel-footer > button[type="menu"] {
+.panel-footer > button[type="menu"], .action-buttons button.submenu-button {
 	border-inline-start: solid 1px color-mix(in srgb, transparent 90%, currentColor) !important;
 }
 #protections-popup-cookieBannerView-cancel {
@@ -755,8 +764,11 @@ tooltip {
 	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
 		margin-inline: -12px !important;
 	}
-	panel > :last-child {
-		margin-block-end: -9px !important;
+	.tab-group-editor-name, .tab-group-editor-swatches {
+		margin-inline: 12px !important;
+	}
+	.tab-group-delete {
+		margin-bottom: -9px !important;
 	}
 	.panel-header {
 		padding: 0 !important;
