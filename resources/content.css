@@ -294,6 +294,8 @@
 				background-color: var(--blue-60) !important;
 				opacity: 0.5
 			
+			
+			
 			}
 		}
 	}
@@ -310,6 +312,9 @@
 			fill: #fff !important;
 			background-position: -1px -1px !important;
 		}
+	}
+	.header-name {
+		font-weight: 300 !important;
 	}
 	input[type="radio"] {
 		margin-top: 5px !important;
@@ -818,9 +823,13 @@
 		.top-site-outer {
 			padding-inline: 4px !important
 		
+		
+		
 		}
 		.section-top-bar {
 			margin-inline: -8px
+		
+		
 		
 		}
 		.top-site-outer .context-menu-button {
@@ -1162,9 +1171,13 @@
 	.more-options-button {
 		background-image: url(./icons/settings.svg) !important
 	
+	
+	
 	}
 	addon-card .more-options-button {
 		background-image: url(./icons/more.svg) !important
+	
+	
 	
 	}
 	#help-button img {
@@ -1177,6 +1190,8 @@
 	.category {
 		&[name="discover"] {
 			background-image: url("./icons/glyph-highlights-16.svg") !important
+		
+		
 		
 		}
 		&[name="extension"] {
@@ -1221,7 +1236,22 @@
 	.shortcut-remove-button {
 		background-image: url("./icons/delete.svg") !important;
 	}
-	
+	.addon-badge-line {
+		background-color: #fff;
+		background-image: url("./icons/line.svg") !important;
+		border-radius: 10px !important;
+		border: 1px solid #CFCFD8 !important;
+	}
+	.addon-badge-recommended {
+		background-color: var(--orange-50);
+		background-image: url("./icons/recommended.svg") !important;
+		fill: #fff !important;
+		border: 1px solid var(--orange-50) !important;
+		background-size: 12px !important;
+	}
+	.addon-badge-verified {
+		fill: #fff;
+	}
 	/* shadow dom workaround */
 	button[part="button"] {
 		background-image: var(--button-icon, inherit) !important;
@@ -1306,6 +1336,8 @@
 		@media (prefers-color-scheme: dark) {
 			&[aria-selected="true"] {
 				filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
+			
+			
 			
 			}
 		}
