@@ -1,14 +1,14 @@
 <h1 align="center">
-	<img src="https://github.com/user-attachments/assets/5d13f4ec-b3b5-4ea7-b05a-b564037fad3b" alt="wowee">
-	Z(ap's) Cool Photon Theme
+	<img src="https://github.com/user-attachments/assets/56fb2e36-35cc-43e8-9ea1-ca804a75dc5e" alt="oversized logowordmark" title="oversized logowordmark">
 </h1>
 <p align="center">
 	A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 </p>
 
 ![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
-<h6 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h6>
+<h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h4>
 
+<hr>
 	
 <h4 align="center">
 	 Compatibility
@@ -19,7 +19,7 @@
 Includes forks of Firefox (Waterfox, Floorp, etc.).
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated. |
+| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **128esr** | ✔️ | ✔️ | ✔️ | |
 | **135** | ✔️ | ✔️ | ✔️ | |
 | **137 nightly** | ✔️ | ✔️ | ? | |
@@ -28,19 +28,16 @@ See the [Forks](#forks) section for more information about Firefox forks.
 
 </div>
 
-&nbsp;
-<hr>
-&nbsp;
 
 ## Installation
 There are three (3) ways of installing this theme.
-* [Manually 🛠](#manually-)
-* [As an Extension 🧩](#as-an-extension-)
-* [Using Git :octocat:](#using-git-octocat)
+* [Manual Installation 🛠](#manual-installation-)
+* [Extension 🧩](#extension-)
+* [Git :octocat:](#git-octocat)
   
 ____
-### Manually 🛠
-Can be installed on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating.
+### Manual Installation 🛠
+Installable on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating.
 
 Open `about:config` and set:
 | Pref | Value | Description |
@@ -85,7 +82,7 @@ Download the release for your browser version:
 
 ____
 
-Extract the zip and move `zapsCoolPhotonTheme-*` to your profile folder which you can find by going to `about:support` and opening your profile folder/directory.
+Extract the zip and move `zapsCoolPhotonTheme-*` (where `*` is `main`, `128esr`, etc.) to your profile folder which you can find by going to `about:support` and opening your profile folder/directory.
 
 Rename the `zapsCoolPhotonTheme-*` folder to `chrome`
 
@@ -101,8 +98,8 @@ You're done! 🎉
 
 ____
 
-### As an Extension 🧩
-Can only be installed on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on these versions) since **you need to disable extension signing** (which may be insecure).
+### Extension 🧩
+Only installable on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on these versions) since **you need to disable extension signing** (which may be insecure).
 
 Has auto-updating and a built-in configurator.
 This version is based on [Paxmod](https://github.com/numirias/paxmod).
@@ -113,7 +110,7 @@ Open `about:config` and set:
 | `extensions.experiments.enabled`  | `true` | Enables extensions experiments which allows CSS theming in extensions. |
 | `xpinstall.signatures.required` | `false` | Disables extension signing which may be insecure. See [this](https://github.com/numirias/paxmod#why-cant-i-install-paxmod-as-a-verified-extension-through-mozilla) for the reason.  |
   
-All other preferences required to run the theme (see [the table above](#manually-)) will be set automatically.
+All other preferences required to run the theme (see [the table above](#manual-installation-)) will be set automatically.
 
 Download the release for your browser version:
 | Browser Version | Extension Version |
@@ -127,11 +124,11 @@ You're done! 🎉
 
 ____
 
-### Using Git :octocat: 
+### Git :octocat: 
 <!-- yes i know that the github != git just shut up -->
-Recommended for tech-savvy people.
+Recommended for people who know what they're doing.
 
-Can be installed on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating (unless you make a script for that) but you can quickly update using `git pull` in your terminal.
+Installable on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating (unless you make a script for that) but you can quickly update using `git pull` in your terminal.
 
 Open `about:config` and set the same prefs in the [Manual](#manually-) installation.
 
@@ -152,7 +149,7 @@ where `BRANCH_NAME` is [your Firefox version (i.e. `115esr` or `nightly`)](https
 
 You're done! 🎉
 
-# Forks
+# Forks 🍴
 If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
 | Pref | Value | Browser |
 |:-:|:-:|:-:|
@@ -166,11 +163,11 @@ Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPho
 
 An interactive configurator is available at https://zapsnh.github.io/zcpt-configurator/. To apply the settings, place the exported `user.js` file in your profile folder/directory (`Profiles` > `XXXXXXXX.profile`), launch Firefox, and then delete the `user.js` file afterwards.
 
-For the WebExtension version, the configurator can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings apply after you click `Apply` (unless you're 𝓯𝓻𝓮𝓪𝓴𝔂).
+For the WebExtension version, the configurator can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings will apply after you click `Apply` (unless you're 𝓯𝓻𝓮𝓪𝓴𝔂).
 
 ## Miscellaneous
-Firefox Photon icons were taken from the `omni.ja` file from Firefox 87.
-Other icons that were not in Firefox 87 were made by me.
+Firefox Photon icons are primarily taken from Firefox 87 or Firefox 78esr.
+Other/newer icons not present in Firefox 87/78esr are primarily based on their Proton/Acorn counterparts.
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
