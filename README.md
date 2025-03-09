@@ -5,7 +5,7 @@
 	A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
 </p>
 
-![it's cool](https://github.com/zapSNH/zapsCoolPhotonTheme/assets/134786889/5b0dbcc3-78f2-497e-a949-39f0fdfa63cf)
+![okay](https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2)
 <h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h4>
 
 <hr>
