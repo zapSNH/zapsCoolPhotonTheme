@@ -210,7 +210,6 @@
 	}
 	.icon.icon-info-warning {
 		background-image: url(./icons/warning-16.svg) !important;
-		;
 	}
 	input[type="checkbox"] {
 		width: 20px !important;
@@ -253,7 +252,8 @@
 		/*! height: 20px !important; */
 		appearance: none !important;
 		background-color: var(--in-content-button-background) !important;
-		border: 1px solid color-mix(in srgb, currentColor 9%, transparent) !important;
+		background-repeat: no-repeat !important;
+		border: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
 		&:hover, :is(checkbox, radio):hover:not([checked="true"], [selected="true"]) & {
 			background-color: var(--in-content-button-background-hover) !important;
 		}
@@ -293,9 +293,6 @@
 			&[disabled] {
 				background-color: var(--blue-60) !important;
 				opacity: 0.5
-			
-			
-			
 			}
 		}
 	}
@@ -303,17 +300,19 @@
 	.radio-check {
 		border-radius: 50% !important;
 		margin-top: 4px !important;
-		width: 16px !important;
-		height: 16px !important;
+		width: 20px !important;
+		height: 20px !important;
 		&[selected], &:checked {
+		border: 1px solid color-mix(in srgb, currentColor 0%, transparent) !important;
 			background-color: var(--blue-60) !important;
 			background-image: url("./icons/radio.svg") !important;
 			-moz-context-properties: fill !important;
 			fill: #fff !important;
-			background-position: -1px -1px !important;
+			background-position: center !important;
+			background-size: 20px !important;
 		}
 	}
-	.header-name {
+	.header-name, h1, .heading-xlarge {
 		font-weight: 300 !important;
 	}
 	input[type="radio"] {
@@ -901,7 +900,7 @@
 		width: 20px !important;
 	}
 	.web-appearance-choice-footer {
-		line-height: 23px !important;
+		line-height: 28px !important;
 	}
 	.web-appearance-choice-footer input[type="radio"] {
 		margin-top: 4px !important;
@@ -927,6 +926,9 @@
 	}
 	#migrationWizardDialog {
 		background: var(--in-content-page-background) !important;
+	}
+	#browserContainersExtensionContent {
+		padding:  !important;
 	}
 	.expand-collapse-icon {
 		content: url("./icons/zoom-in.svg") !important;
