@@ -84,6 +84,23 @@
 .tab-icon-overlay[pictureinpicture] {
 	list-style-image: url(./icons/pictureinpicture.svg) !important;
 }
+/* titlechanged */
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]),
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tabbrowser-tab > .tab-stack > .tab-content[titlechanged]:not([selected]) {
+	background-image: none !important;
+	&::after {
+		--indicator-size: 12px;
+		content: "";
+		background-image: url(./icons/indicator-tab-attention.svg) !important;
+		background-size: var(--indicator-size) !important;
+		width: var(--indicator-size);
+		height: var(--indicator-size);
+		margin-inline-start: 2px;
+		position: absolute;
+		bottom: -4px;
+	}
+}
 /* deal with this now */
 .tab-audio-button {
 	--icon-size-default: 16px !important;
