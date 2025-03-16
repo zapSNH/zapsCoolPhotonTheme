@@ -18,6 +18,13 @@
 		height: calc(var(--tab-min-height) + 1px) !important;
 	}
 }
+#tabbrowser-tabs {
+  &[orient="horizontal"] {
+    :root[uidensity="touch"] & .tabbrowser-tab {
+      min-width: 0 !important;
+    }
+  }
+}
 #TabsToolbar-customization-target {
 	height: var(--tab-min-height) !important;
 	@media (-moz-platform: linux) {
