@@ -307,7 +307,7 @@ credits to phroton for some of this stuff */
 		height: var(--tab-separator-height);
 		right: 0;
 		border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
-		z-index: 0;
+		z-index: 1;
 	}
 }
 .tabbrowser-tab:has(+ .tabbrowser-tab[selected="true"]:not([hidden])) .tab-stack::before,
@@ -328,8 +328,16 @@ credits to phroton for some of this stuff */
 	height: var(--tab-separator-height);
 	left: 0;
 	border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent);
-	z-index: 0;
+	z-index: 1;
     bottom: 0px !important;
+}
+:root #firefox-view-button:not([open]) + #tabbrowser-tabs[overflow]:not([positionpinnedtabs]) #tabbrowser-arrowscrollbox {
+	box-shadow: -1px 0 color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem) ~ #tabbrowser-tabs,
+:root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button),
+toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
+	border-inline-start: none !important;
 }
 #firefox-view-button::before {
 	position: relative !important;
