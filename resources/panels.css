@@ -28,7 +28,7 @@ panel toolbarseparator {
 }
 menupopup {
 	-moz-appearance: none !important;
-	background: transparent !important;
+	background: #d7d7d9;
 	-moz-window-shadow: none !important;
 	border: none !important;
 }
@@ -81,7 +81,7 @@ toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info
 	margin: 8px !important;
 	border-radius: inherit !important;
 }
-.panel-subview-body:not(#report-broken-site-panel-container) {
+:not(#selection-shortcut-action-panel) > .panel-subview-body:not(#report-broken-site-panel-container, #selection-shortcut-action-panel) {
 	padding: 4px 0 !important;
 }
 .subviewbutton-back {
@@ -309,7 +309,7 @@ button > span.labelled.button-background[part="button"], .action-buttons > div, 
 	> * {
 		width: 100% !important;
 	}
-	margin-bottom: -17px;
+	margin-bottom: -9px;
 }
 moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 	margin-inline-start: 0 !important;
@@ -764,7 +764,7 @@ tooltip {
 	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
 		margin-inline: -12px !important;
 	}
-	.tab-group-editor-name, .tab-group-editor-swatches {
+	.tab-group-editor-swatches {
 		margin-inline: 12px !important;
 	}
 	.tab-group-delete {
@@ -786,5 +786,18 @@ tooltip {
 			margin-block-end: 3px !important;
 		}
 	}
+}
+/* Aye-eye thing? */
+#selection-shortcut-action-panel {
+	.panel-subview-body {
+		width: 32px !important;
+		height: 32px !important;
+	}
+}
+.button-background:has(> img[src="chrome://global/skin/icons/highlights.svg"]) {
+	border-radius: 0 !important;
+	width: 30px !important;
+	min-height: 30px !important;
+	height: 30px !important;
 }
 }
