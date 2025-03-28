@@ -758,10 +758,10 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	padding-inline: 10px !important;
 	background-color: var(--button-background-color) !important;
 }
-#appMenu-zoomReset-button2:hover .toolbarbutton-text {
+#appMenu-zoomReset-button2:hover .toolbarbutton-text, #appMenu-zoom-controls toolbarbutton:hover .toolbarbutton-icon {
 	background-color: var(--button-background-color-hover) !important;
 }
-#appMenu-zoomReset-button2:hover:active .toolbarbutton-text {
+#appMenu-zoomReset-button2:hover:active .toolbarbutton-text, #appMenu-zoom-controls toolbarbutton:hover:active .toolbarbutton-icon {
 	background-color: var(--button-background-color-active) !important;
 }
 #appMenu-zoom-controls toolbarbutton:not(:hover, :active) .toolbarbutton-icon {

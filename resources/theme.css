@@ -186,7 +186,6 @@ input.findbar-textbox:focus {
 			}
 			#navigator-toolbox {
 				background: #d7d7db !important
-	    
 			}
 			#urlbar[breakout-extend] #urlbar-background {
 				border-color: solid 1px var(--photon-tab-outline) !important;

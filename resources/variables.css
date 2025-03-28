@@ -115,7 +115,8 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 }
 #PlacesToolbar menupopup, #downloadsPanel-multiView *,
 #TabsToolbar #firefox-view-button .toolbarbutton-icon, :root menu.bookmark-item, #urlbar-go-button,
-#appMenu-popup .subviewbutton .toolbarbutton-icon, button-group button, #protections-popup-not-blocking-section-why {
+#appMenu-popup .subviewbutton .toolbarbutton-icon, button-group button, #protections-popup-not-blocking-section-why,
+menuitem {
 	border-radius: 0 !important;
 }
 input#radio-button {
