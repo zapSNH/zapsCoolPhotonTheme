@@ -110,6 +110,12 @@
 		--link-color: var(--blue-60) !important;
 		--link-color-hover: var(--blue-70) !important;
 		--link-color-active: var(--blue-80) !important;
+		--shadow-10: 0 1px 4px var(--grey-90-a10) !important;
+		--shadow-30: 0 4px 16px var(--grey-90-a10) !important;
+		--card-shadow: var(--shadow-10) !important;
+		--box-shadow-card: var(--shadow-10) !important;
+		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
+		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
 	}
 	@media (prefers-color-scheme: dark) {
 		* {
@@ -293,6 +299,7 @@
 			&[disabled] {
 				background-color: var(--blue-60) !important;
 				opacity: 0.5
+			
 			}
 		}
 	}
@@ -303,7 +310,7 @@
 		width: 20px !important;
 		height: 20px !important;
 		&[selected], &:checked {
-		border: 1px solid color-mix(in srgb, currentColor 0%, transparent) !important;
+			border: 1px solid color-mix(in srgb, currentColor 0%, transparent) !important;
 			background-color: var(--blue-60) !important;
 			background-image: url("./icons/radio.svg") !important;
 			-moz-context-properties: fill !important;
@@ -312,7 +319,9 @@
 			background-size: 20px !important;
 		}
 	}
-	.header-name, h1, .heading-xlarge {
+	.header-name,
+	h1,
+	.heading-xlarge {
 		font-weight: 300 !important;
 	}
 	input[type="radio"] {
@@ -396,6 +405,9 @@
 		&[src="chrome://global/skin/icons/warning.svg"] {
 			content: url("./icons/warning-16.svg") !important;
 		}
+	}
+	.card {
+		border: none !important;
 	}
 	/* context menus */
 	panel-list {
@@ -1086,13 +1098,15 @@
 	}
 	#homeContentsGroup .checkbox-icon {
 		opacity: 0;
+		display: none !important;
 	}
 	#homeContentsGroup vbox .checkbox-label-box::before {
 		-moz-context-properties: fill, stroke;
 		fill: currentColor;
 		stroke: currentColor;
 		margin-top: 4px;
-		margin-inline-end: -16px !important;
+		margin-inline-start: 2px !important;
+		margin-inline-end: 8px !important;
 	}
 	#homeContentsGroup vbox[data-subcategory="search"] .checkbox-label-box::before {
 		content: url("./icons/find-in-page.svg") !important;
@@ -1169,9 +1183,11 @@
 	
 	
 	
+	
 	}
 	addon-card .more-options-button {
 		background-image: url(./icons/more.svg) !important
+	
 	
 	
 	
@@ -1186,6 +1202,7 @@
 	.category {
 		&[name="discover"] {
 			background-image: url("./icons/glyph-highlights-16.svg") !important
+		
 		
 		
 		
@@ -1332,6 +1349,7 @@
 		@media (prefers-color-scheme: dark) {
 			&[aria-selected="true"] {
 				filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
+			
 			
 			
 			
