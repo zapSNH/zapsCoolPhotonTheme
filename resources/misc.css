@@ -2,7 +2,6 @@
 :root {
 	--misc-css: 1px;
 }
-
 @-moz-document url("chrome://browser/content/browser.xhtml") {
 	tree {
 		background: var(--input-bgcolor) !important;
@@ -46,8 +45,12 @@
 			padding-inline: 6px !important;
 			border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 			background: var(--input-bgcolor) !important;
-			@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
-			&:focus {outline: var(--photon-accent-dark) solid 2px !important;}
+			@media (prefers-color-scheme: light) {
+				border-color: color-mix(in srgb, transparent 80%, currentColor) !important;
+			}
+			&:focus {
+				outline: var(--photon-accent-dark) solid 2px !important;
+			}
 		}
 	}
 	button {
@@ -69,7 +72,7 @@
 			--button-hover-bgcolor: #bdbec0 !important;
 			--button-active-bgcolor: #b3b4b6 !important;
 			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -89,17 +92,16 @@
 			--panel-separator-color: rgba(249, 249, 250, .1) !important;
 		}
 	}
-	button:not(.control-button, .preview-button) {
+	button:not(.control-button,
+	.preview-button) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
 		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
 		background-color: var(--button-bgcolor) !important;
-		
 		&[type="primary"],
 		&[dlgtype="accept"] {
 			background-color: var(--photon-accent-dark) !important;
 			color: white !important;
-			
 			&:hover:not([disabled]) {
 				background-color: color-mix(in srgb, transparent 20%, var(--photon-accent-dark)) !important;
 			}
@@ -107,9 +109,11 @@
 				background-color: color-mix(in srgb, transparent 40%, var(--photon-accent-dark)) !important;
 			}
 		}
-		
-		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
-		
+		@media (prefers-color-scheme: light) {
+			border-color: color-mix(in srgb,
+			transparent 80%,
+			currentColor) !important;
+		}
 		&:hover:not([disabled]) {
 			background-color: var(--button-hover-bgcolor) !important;
 		}
@@ -124,7 +128,8 @@
 		background: var(--toolbar-field-background-color) !important;
 		border-bottom: 1px solid var(--toolbar-field-border-color) !important;
 	}
-	:not(#places) input:not(#scrubber, #audio-scrubber) {
+	:not(#places) input:not(#scrubber,
+	#audio-scrubber) {
 		appearance: none !important;
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		&:not([type="radio"]) {
@@ -151,11 +156,17 @@
 			}
 		}
 		@media (prefers-color-scheme: light) {
-			border-color: color-mix(in srgb, transparent 80%, currentColor) !important;
-			background-color: color-mix(in srgb, var(--input-bgcolor) 50%, transparent) !important;
+			border-color: color-mix(in srgb,
+			transparent 80%,
+			currentColor) !important;
+			background-color: color-mix(in srgb,
+			var(--input-bgcolor) 50%,
+			transparent) !important;
 		}
 	}
-	:root:not(#places, #webrtcIndicator) :is(input, button) {
+	:root:not(#places,
+	#webrtcIndicator) :is(input,
+	button) {
 		padding: 4px !important;
 		padding-inline: 6px !important;
 	}
@@ -186,9 +197,14 @@
 		:root:not([lwtheme]) & {
 			background: var(--toolbar-field-background-color) !important;
 		}
-		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+		@media (prefers-color-scheme: light) {
+			border-color: color-mix(in srgb,
+			transparent 80%,
+			currentColor) !important;
+		}
 	}
-	.icon[src="chrome://global/skin/icons/reload.svg"], img[src="chrome://global/skin/icons/reload.svg"] {
+	.icon[src="chrome://global/skin/icons/reload.svg"],
+	img[src="chrome://global/skin/icons/reload.svg"] {
 		content: url(./icons/reload.svg) !important;
 	}
 	img[src="chrome://browser/skin/downloads/downloads.svg"] {
@@ -233,11 +249,13 @@
 		&.apply {
 			content: url("./icons/reload.svg") !important;
 		}
-		&:is(.checkingForUpdates, .downloading, .applying, .restarting) {
+		&:is(.checkingForUpdates,
+		.downloading,
+		.applying,
+		.restarting) {
 			content: url("./icons/loading.svg") !important;
 		}
 	}
-	
 	@media -moz-pref("uc.logo.quantum") {
 		#rightBox {
 			background-image: var(--quantum-wordmark) !important;
@@ -253,13 +271,16 @@
 }
 /* Libraries */
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
-	#forward-button, #searchFilter, #placesMenu > menu {
+	#forward-button,
+	#searchFilter,
+	#placesMenu > menu {
 		border-radius: var(--photon-border-radius) !important;
 	}
 	#back-button:hover {
 		background-color: transparent !important;
 	}
-	:is(#back-button, #forward-button) > image {
+	:is(#back-button,
+	#forward-button) > image {
 		padding: 5px !important;
 	}
 	#organizeButton {
@@ -271,8 +292,9 @@
 	#maintenanceButton {
 		list-style-image: url("./icons/import-export.svg") !important;
 	}
-	#placesMenu > menu, #placesToolbar > toolbarbutton {
-	 	border-radius: var(--photon-border-radius) !important;	
+	#placesMenu > menu,
+	#placesToolbar > toolbarbutton {
+		border-radius: var(--photon-border-radius) !important;
 		fill: currentColor;
 		-moz-context-properties: fill;
 	}
@@ -282,7 +304,8 @@
 	/* all my homies hate spehceiphyesciyeteiy */
 	/* cascading style sheets more like cascading style sheets */
 	/* how do i select a comment */
-	:root .download-state .downloadButton:is(:hover, :not(:hover)) {
+	:root .download-state .downloadButton:is(:hover,
+	:not(:hover)) {
 		background: none !important;
 	}
 	.downloadButton {
@@ -309,25 +332,22 @@
 	richlistbox:not(#PopupSearchAutoComplete richlistbox) {
 		background-color: var(--organizer-content-background) !important;
 	}
-	#placesToolbox > menu, #placesMenu > menu {
+	#placesToolbox > menu,
+	#placesMenu > menu {
 		padding-block: 6px !important;
 	}
-	
 	richlistitem[selected="true"] {
 		background: var(--photon-accent) !important;
 		color: #111 !important;
 		border-radius: 0 !important;
 	}
-	
 	treechildren::-moz-tree-row(selected) {
 		background: light-dark(var(--photon-accent-light), var(--photon-accent-dark)) !important;
 	}
-	
 	#downloadsListBox {
 		overflow-x: hidden;
 		border: 0px !important;
 	}
-	
 	@media (prefers-color-scheme: dark) {
 		* {
 			--organizer-pane-background: #323234 !important;
@@ -360,18 +380,20 @@
 @-moz-document url(chrome://browser/content/pageinfo/pageInfo.xhtml) {
 	/* ephichiencee :D */
 	@media (prefers-color-scheme: light) {
-	  :root {
-	  	--toolbar-bgcolor: #f9f9fa !important;
-		--input-bgcolor: #ccc !important;
-		--input-border-color: #aaa 
-	  }
+		:root {
+			--toolbar-bgcolor: #f9f9fa !important;
+			--input-bgcolor: #ccc !important;
+			--input-border-color: #aaa 
+	  
+		
+		}
 	}
 	@media (prefers-color-scheme: dark) {
-	  :root {
-	  	--toolbar-bgcolor: #323234 !important;
-	  	--toolbar-field-background-color: #474749 !important;
-	  	--toolbar-field-border-color: #5a5a5c !important;
-	  }
+		:root {
+			--toolbar-bgcolor: #323234 !important;
+			--toolbar-field-background-color: #474749 !important;
+			--toolbar-field-border-color: #5a5a5c !important;
+		}
 	}
 	:root {
 		background: var(--toolbar-bgcolor) !important;
@@ -380,19 +402,21 @@
 		background: var(--toolbar-field-background-color) !important;
 		border-color: var(--toolbar-field-border-color) !important;
 	}
-    tree, #permList {
+	tree,
+	#permList {
 		-moz-appearance: none !important;
 		border: 1px solid var(--input-border-color) !important;
 		border-radius: var(--photon-border-radius) !important;
 		background: var(--input-bgcolor) !important;
 	}
-	treechildren::-moz-tree-row(odd), .permission {
+	treechildren::-moz-tree-row(odd),
+	.permission {
 		background: color-mix(in srgb, var(--input-bgcolor) 20%, var(--toolbar-bgcolor)) !important;
 	}
 	treechildren::-moz-tree-row(selected) {
 		background: var(--photon-accent) !important;
 	}
-    treecol {
+	treecol {
 		background: var(--toolbar-field-background-color) !important;
 	}
 	#viewGroup radio {
@@ -408,25 +432,24 @@
 		background: color-mix(in srgb, var(--photon-accent-dark) 20%, transparent) !important;
 		color: unset !important;
 	}
-	
-    #viewGroup .radio-icon {
+	#viewGroup .radio-icon {
 		background-size: 32px;
 		-moz-context-properties: fill, stroke;
 		fill: currentColor;
 		stroke: currentColor !important;
 	}
-    #generalTab .radio-icon {
-     	background-image: url(./icons/document.svg) !important;
-    }
-    #mediaTab .radio-icon {
-    	background-image: url(./icons/tracker-image.svg) !important;
-    }
-    #permTab .radio-icon {
-    	background-image: url(./icons/permissions.svg) !important;
-    }
-    #securityTab .radio-icon {
-    	background-image: url(./icons/security-state-secure.svg) !important;
-    }
+	#generalTab .radio-icon {
+		background-image: url(./icons/document.svg) !important;
+	}
+	#mediaTab .radio-icon {
+		background-image: url(./icons/tracker-image.svg) !important;
+	}
+	#permTab .radio-icon {
+		background-image: url(./icons/permissions.svg) !important;
+	}
+	#securityTab .radio-icon {
+		background-image: url(./icons/security-state-secure.svg) !important;
+	}
 	input {
 		max-width: calc(100% - 23px) !important;
 	}
@@ -450,7 +473,7 @@
 			--button-hover-bgcolor: #bdbec0 !important;
 			--button-active-bgcolor: #b3b4b6 !important;
 			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -473,7 +496,8 @@
 	body {
 		background: var(--toolbar-bgcolor) !important;
 	}
-	#print-button, #cancel-button {
+	#print-button,
+	#cancel-button {
 		width: 100%;
 	}
 	input[type="checkbox"] {
@@ -486,9 +510,12 @@
 		background-position: 1px 1px !important;
 		-moz-context-properties: fill !important;
 		fill: white !important;
-		
-		&:hover {background-color: color-mix(in srgb, var(--photon-accent-dark) 80%, white) !important;}
-		&:active {background-color: color-mix(in srgb, var(--photon-accent-dark) 60%, white) !important;}
+		&:hover {
+			background-color: color-mix(in srgb, var(--photon-accent-dark) 80%, white) !important;
+		}
+		&:active {
+			background-color: color-mix(in srgb, var(--photon-accent-dark) 60%, white) !important;
+		}
 	}
 	#printer-picker {
 		background-image: url("./icons/arrow-dropdown-16.svg"),
@@ -501,11 +528,13 @@
 		content: url("./icons/document.svg") !important;
 		rotate: 90deg;
 		scale: -1 1
+	
+	
 	}
-	select:not([size], [multiple]) {
+	select:not([size],
+	[multiple]) {
 		background-image: url("./icons/arrow-dropdown-16.svg") !important;
 	}
-	
 }
 
 /* WebRTC Indicator */
@@ -516,7 +545,9 @@
 	}
 	#minimize {
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
-		@media (prefers-color-scheme: light) {border-color: color-mix(in srgb, transparent 80%, currentColor) !important;}
+		@media (prefers-color-scheme: light) {
+			border-color: color-mix(in srgb, transparent 80%, currentColor) !important;
+		}
 		padding: 9px !important;
 	}
 	#device-share .control-icon {
@@ -559,7 +590,8 @@
 	button.control-item:enabled {
 		background-color: #111a !important;
 	}
-	#unpip, #close {
+	#unpip,
+	#close {
 		fill: #fff !important;
 	}
 	#unpip {
@@ -621,9 +653,12 @@
 		--toolbox-bgcolor: transparent !important;
 		--toolbox-bgcolor-inactive: transparent !important;
 	}
-	#navigator-toolbox-background, #navigator-toolbox, html {
+	#navigator-toolbox-background,
+	#navigator-toolbox,
+	html {
 		background: transparent !important;
-	}/*
+	}
+	/*
 	.titlebar-button:not(.titlebar-close) {
 		list-style-image: none !important;
 	}
@@ -643,7 +678,8 @@
 /* Old style context menus */
 @media -moz-pref("uc.contextmenu.win-10") {
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -652,12 +688,15 @@
 		menupopup menuseparator::before {
 			border-color: #808080 !important;
 		}
-		tooltip, menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+		tooltip,
+		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #fff !important;
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--panel-color: #000 !important;
@@ -666,7 +705,9 @@
 		menupopup menuseparator::before {
 			border-color: #d7d7d7 !important;
 		}
-		tooltip, menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+		tooltip,
+		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #000 !important;
 		}
 	}
@@ -681,7 +722,7 @@
 		scale: 1 1 !important;
 	}
 	menuitem[checked="true"] > .menu-iconic-left {
-    list-style-image: none !important;
+		list-style-image: none !important;
 		background: currentColor;
 		border-radius: 50% !important;
 		width: 6px !important;
@@ -696,8 +737,13 @@
 
 /* kinda looks like the gnome context menu too */
 @media -moz-pref("uc.contextmenu.win-11") {
+	menupopup:not([customoptionstyling="true"]),
+	tooltip {
+		--arrowpanel-background: transparent !important;
+	}
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -706,12 +752,15 @@
 		menupopup menuseparator::before {
 			border-color: #3e3e3e !important;
 		}
-		tooltip, menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+		tooltip,
+		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #fff !important;
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--button-hover-color: #000 !important;
@@ -721,13 +770,18 @@
 		menupopup menuseparator::before {
 			border-color: #e7e7e7 !important;
 		}
-		tooltip, menupopup:not([customoptionstyling="true"]) :is(menu, menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
+		tooltip,
+		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #000 !important;
 		}
 	}
+	menupopup {
+		appearance: menupopup !important;
+		padding: 0 !important;
+	}
 	.menupopup-arrowscrollbox {
 		border-radius: 6px !important;
-		box-shadow: 0 2px 4px #1118 !important;
 	}
 	menupopup menuseparator::before {
 		margin-inline: 8px !important;
@@ -737,7 +791,7 @@
 		scale: 1 1 !important;
 	}
 	menuitem[checked="true"] > .menu-iconic-left {
-    list-style-image: none !important;
+		list-style-image: none !important;
 		background: currentColor;
 		border-radius: 50% !important;
 		width: 6px !important;
@@ -745,21 +799,29 @@
 		margin-inline-start: 5px !important;
 		margin-inline-end: 12px !important;
 	}
-	menupopup :is(menu, menuitem) {
+	menupopup :is(menu,
+	menuitem) {
 		--panel-border-radius: 4px !important;
+		border-radius: 4px !important;
 		margin-inline: 4px !important;
 	}
 	#context-navigation menuitem * {
 		border-radius: 2px !important;
+	}
+	[placespopup] :is(menuitem:not(.menuitem-with-favicon)) {
+		margin-inline: 4px !important;
+		border-radius: 4px !important;
+		padding-block: 2px !important;
+	}
+	:root .menuitem-with-favicon {
+		margin-inline: 4px !important;
 	}
 }
 
 /* Sidebery */
 @media -moz-pref("uc.sidebery") {
 	:root[titlepreface="[VT] "] {
-		
 		--sidebar-width: 35px;
-		
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
 			display: none !important;
 		}
@@ -782,7 +844,8 @@
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
 			--sidebar-width: 235px;
 		}
-		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ :is(#appcontent, #tabbrowser-tabbox) {
+		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) ~ :is(#appcontent,
+		#tabbrowser-tabbox) {
 			margin-inline-start: 35px !important;
 		}
 		#nav-bar {
@@ -792,13 +855,16 @@
 			margin-inline-start: 35px;
 			box-shadow: none !important;
 		}
-		.tabbrowser-tab, #new-tab-button, #tabs-newtab-button {
+		.tabbrowser-tab,
+		#new-tab-button,
+		#tabs-newtab-button {
 			display: none !important;
 		}
 		.titlebar-button {
 			height: 46px !important;
 		}
-		.titlebar-color, #navigator-toolbox {
+		.titlebar-color,
+		#navigator-toolbox {
 			background-color: var(--toolbar-bgcolor) !important;
 		}
 		#titlebar {
@@ -815,17 +881,20 @@
 		@media (-moz-platform: linux) {
 			#sidebar-splitter {
 				visibility: collapse 
+			
+			
 			}
 			.titlebar-buttonbox-container {
 				margin-block: 5px;
 			}
-		} 
+		}
 		&[uidensity="compact"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
 				height: 33px !important;
 			}
 			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button,
-			.titlebar-buttonbox-container, .titlebar-spacer {
+			.titlebar-buttonbox-container,
+			.titlebar-spacer {
 				height: 42px !important;
 			}
 			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button {
@@ -846,13 +915,13 @@
 				}
 			}
 		}
-		
 		&[uidensity="touch"] {
 			#titlebar:has(#toolbar-menubar[inactive="true"]) {
 				height: 48px !important;
 			}
 			#toolbar-menubar[inactive="true"] + #TabsToolbar .titlebar-button,
-			.titlebar-buttonbox-container, .titlebar-spacer {
+			.titlebar-buttonbox-container,
+			.titlebar-spacer {
 				height: 46px !important;
 			}
 			#titlebar ~ #nav-bar {
@@ -866,19 +935,15 @@
 				bottom: 0px;
 			}
 		}
-		
 		#TabsToolbar-customization-target toolbarbutton {
 			display: none !important;
 		}
-		
 		#private-browsing-indicator-with-label {
 			display: none !important;
 		}
-		
 		&[privatebrowsingmode="temporary"] #nav-bar {
 			overflow: visible !important;
 		}
-		
 		&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 			display: block;
 			position: absolute;
@@ -888,10 +953,9 @@
 			background: url(./icons/private-browsing.svg) no-repeat;
 			bottom: 2px;
 			inset-inline-end: -32px;
-			
 		}
-		
-		&:not([tabsintitlebar], [customtitlebar]) {
+		&:not([tabsintitlebar],
+		[customtitlebar]) {
 			#nav-bar {
 				margin-top: 0px;
 				margin-inline-end: 35px;
@@ -903,12 +967,10 @@
 			#navigator-toolbox:has(#PersonalToolbar[collapsed="true"]) {
 				border-bottom: 1px var(--chrome-content-separator-color) solid !important;
 			}
-		
 			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]) {
-			    box-shadow: none !important;
+				box-shadow: none !important;
 			}
 		}
-		
 		&:has(#toolbar-menubar[autohide="false"]) {
 			#nav-bar {
 				margin-top: 0px;
@@ -921,12 +983,11 @@
 			#navigator-toolbox:has(#PersonalToolbar[collapsed="true"]) {
 				border-bottom: 1px var(--chrome-content-separator-color) solid !important;
 			}
-		
-			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]), #titlebar:has(~ #PersonalToolbar)  .titlebar-button {
-			    box-shadow: none !important;
+			#nav-bar:has(+ #PersonalToolbar[collapsed="true"]),
+			#titlebar:has(~ #PersonalToolbar)  .titlebar-button {
+				box-shadow: none !important;
 			}
 		}
-		
 		&[sizemode="fullscreen"] {
 			&[BookmarksToolbarOverlapsBrowser=""] {
 				#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
@@ -941,7 +1002,6 @@
 			}
 			#navigator-toolbox[style*="margin-top:"] + #browser #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 				height: 100% !important;
-				
 				&:not([hidden]) ~ :is(#appcontent, #tabbrowser-tabbox) {
 					margin-inline-start: 0px;
 				}
@@ -950,18 +1010,15 @@
 				}
 			}
 		}
-		
 		&[inDOMFullscreen] {
 			#appcontent {
 				margin-inline-start: 0 !important;
 			}
 		}
-		
 		&[customizing="true"] #browser {
 			display: block !important;
 			max-height: 0 !important;
 		}
-		
 		&[customizing="true"] #browser #appcontent {
 			display: none !important;
 		}
@@ -977,7 +1034,6 @@
 			#navigator-toolbox {
 				background: var(--toolbar-bgcolor) !important;
 			}
-		
 			&[privatebrowsingmode="temporary"] #nav-bar-customization-target::before {
 				display: block;
 				position: absolute;
@@ -988,7 +1044,6 @@
 				bottom: 2px;
 				inset-inline-end: 4px;
 			}
-			
 			&[uidensity="touch"] {
 				#titlebar:has(#toolbar-menubar[inactive="true"]) {
 					height: 0px !important;
@@ -1000,7 +1055,6 @@
 					bottom: 0px;
 				}
 			}
-			
 			&[uidensity="compact"] {
 				#titlebar:has(#toolbar-menubar[inactive="true"]) {
 					height: 0px !important;
