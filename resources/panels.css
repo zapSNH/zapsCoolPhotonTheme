@@ -24,12 +24,12 @@ panel toolbarseparator {
 .menupopup-arrowscrollbox {
 	padding-inline: 0 !important;
 	padding-block: 4px !important;
+	box-shadow: 2px 2px 2px #0006 !important;
 }
 menupopup {
-	-moz-appearance: none !important;
-	background: #d7d7d9;
-	-moz-window-shadow: none !important;
+	appearance: none !important;
 	border: none !important;
+	padding: 0 6px 6px 0 !important;
 }
 menuitem[disabled="true"] {
 	pointer-events: none !important;
