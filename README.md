@@ -171,6 +171,6 @@ Other/newer icons not present in Firefox 87/78esr are primarily based on their P
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
-- [YukisCoffee's Phroton](https://web.archive.org/web/20231124205435/https://github.com/YukisCoffee/phroton/) (r.i.p.)
+- [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton-legacy/)
 - The folks over at r/FirefoxCSS
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (but they also made Proton >:()]
