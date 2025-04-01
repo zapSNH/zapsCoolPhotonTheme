@@ -3,30 +3,30 @@
 :root {
 	--icons-css: 1px;
 	--grayscale-logo: url(./icons/aboutdebugging-firefox-logo.svg) !important;
-	@media -moz-pref("uc.floorp") {
+	@media (-moz-bool-pref: "uc.floorp") {
 		--grayscale-logo: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
 	}
-	@media -moz-pref("uc.waterfox") {
+	@media (-moz-bool-pref: "uc.waterfox") {
 		--grayscale-logo: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
 	}
-	@media -moz-pref("uc.librewolf") {
+	@media (-moz-bool-pref: "uc.librewolf") {
 		--grayscale-logo: url(./icons/forks/librewolf/librewolf-grayscale.svg) !important;
 	}
-	@media -moz-pref("uc.tor") {
+	@media (-moz-bool-pref: "uc.tor") {
 		--grayscale-logo: url(./icons/forks/tor/tor-grayscale.svg) !important;
 	}
 	/* Legacy Logos */
 	--quantum-logo: url(./icons/quantum/firefox-logo.svg);
-	@media -moz-pref("uc.logo.quantum") {
+	@media (-moz-bool-pref: "uc.logo.quantum") {
 		--grayscale-logo: url(./icons/quantum/aboutdebugging-firefox-logo.svg) !important;
 	}
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media (-moz-bool-pref: "uc.logo.quantum-beta") {
 		--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg);
 	}
-	@media -moz-pref("uc.logo.quantum-dev") {
+	@media (-moz-bool-pref: "uc.logo.quantum-dev") {
 		--quantum-logo: url(./icons/quantum/firefox-logo-dev.svg);
 	}
-	@media -moz-pref("uc.logo.quantum-nightly") {
+	@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
 		--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg);
 	}
 	&[fxastatus="login-failed"] {
@@ -35,10 +35,10 @@
 }
 /* Legacy Logos */
 :is(img, image)[src="chrome://branding/content/icon32.png"] {
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media (-moz-bool-pref: "uc.logo.quantum-beta") {
 		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
 	}
-	@media -moz-pref("uc.logo.quantum") {
+	@media (-moz-bool-pref: "uc.logo.quantum") {
 		content: var(--quantum-logo) !important;
 	}
 }
@@ -157,7 +157,7 @@
 	list-style-image: url(./icons/connection-secure.svg) !important
 }
 /* Pretend it still exists */
-@media not -moz-pref("security.secure_connection_icon_color_gray") {
+@media not (-moz-bool-pref: "security.secure_connection_icon_color_gray") {
 	#identity-box.verifiedDomain[pageproxystate="valid"] #identity-icon {
 		-moz-context-properties: fill !important;
 		fill: #12bc00 !important;
@@ -738,7 +738,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #appMenu-find-button2 {
 	margin-bottom: 8px !important;
 }
-@media -moz-pref("browser.translations.enable") {
+@media (-moz-bool-pref: "browser.translations.enable") {
 	#appMenu-translate-button {
 		margin-bottom: 8px !important;
 	}
@@ -842,7 +842,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	width: 16px !important;
 }
 /* Profiles Button */ 
-@media -moz-pref("browser.profiles.enabled") {
+@media (-moz-bool-pref: "browser.profiles.enabled") {
 	#appMenu-profiles-button:after {
 		margin-inline-end: -3px !important;
 	}

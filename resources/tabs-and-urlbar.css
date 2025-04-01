@@ -669,7 +669,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	margin-inline: 1px !important;
 }
 /* Megabar */
-@media not (-moz-pref("uc.reduced-megabar") or -moz-pref("uc.no-megabar")) {
+@media not ((-moz-bool-pref: "uc.reduced-megabar") or (-moz-bool-pref: "uc.no-megabar")) {
 	#urlbar[focused]:not([breakout][breakout-extend]) {
 		z-index: 3;
 	}
@@ -717,7 +717,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		translate: 0 0px !important;
 	}
 }
-@media -moz-pref("uc.reduced-megabar") {
+@media (-moz-bool-pref: "uc.reduced-megabar") {
 	#urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
@@ -726,7 +726,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		margin-top: -3px !important;
 	}
 }
-@media -moz-pref("uc.no-megabar") {
+@media (-moz-bool-pref: "uc.no-megabar") {
 	#urlbar[focused]:not([breakout][breakout-extend]) #urlbar-background {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
@@ -786,7 +786,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		margin-left: 46px !important;
 	}
 }
-@media not -moz-pref("uc.no-megabar") {
+@media not (-moz-bool-pref: "uc.no-megabar") {
 	#urlbar:is([focused], [open]) {
 		--urlbar-icon-border-radius: var(--photon-border-radius) !important;
 	}
@@ -867,14 +867,14 @@ toolbarbutton#urlbar-searchmode-switcher {
 }
 
 /* Revert the all tabs button behavior */
-@media -moz-pref("uc.revert-all-tabs-behavior") {
+@media (-moz-bool-pref: "uc.revert-all-tabs-behavior") {
 	#tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
 		display: none !important;
 	}
 }
 
 /* Bottom tabs */
-@media -moz-pref("uc.bottom-tabs") {
+@media (-moz-bool-pref: "uc.bottom-tabs") {
 	#titlebar, #PersonalToolbar {
 		order: 2 !important;
 	}
@@ -926,7 +926,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	.titlebar-spacer {
 		width: 0 !important;
 	}
-	@media -moz-pref("uc.bottom-tabs.bookmark-on-top") {
+	@media (-moz-bool-pref: "uc.bottom-tabs.bookmark-on-top") {
 		#PersonalToolbar {
 			order: 1 !important;
 		}
@@ -934,7 +934,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 			order: 2 !important;
 		}
 	}
-	@media -moz-pref("widget.gtk.rounded-bottom-corners.enabled") {
+	@media (-moz-bool-pref: "widget.gtk.rounded-bottom-corners.enabled") {
 		:root[sizemode="normal"] .titlebar-buttonbox-container {
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
@@ -970,13 +970,13 @@ toolbarbutton#urlbar-searchmode-switcher {
 }
 
 /* Full width tabs */
-@media -moz-pref("uc.full-width-tabs") {
+@media (-moz-bool-pref: "uc.full-width-tabs") {
 	.tabbrowser-tab[fadein]:not([style^="max-width"]) {
 		max-width: 100vw !important;
 	}
 }
 /* Always show close button */
-@media -moz-pref("uc.always-show-close-button") {
+@media (-moz-bool-pref: "uc.always-show-close-button") {
 	#TabsToolbar #tabbrowser-tabs[closebuttons="activetab"] > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-content > .tab-close-button:not([selected]) {
 		display: block !important;
 	}
@@ -985,7 +985,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 }
 /* New sidebar */
-@media -moz-pref("sidebar.revamp") {
+@media (-moz-bool-pref: "sidebar.revamp") {
 	:root {
 		&:has(sidebar-main[expanded]) {
 			--new-sidebar-width: 225px;
