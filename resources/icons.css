@@ -1114,10 +1114,10 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 }
 /* Other more minor icons (appmenu) */
 #PanelUI-helpItems .toolbarbutton-icon,
-#appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon),
-#PanelUI-history .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appMenu_historyMenu .toolbarbutton-icon),
-#PanelUI-bookmarks .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #panelMenu_bookmarksMenu .toolbarbutton-icon),
-#PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon, #PanelUI-fxa-menu-profiles-button .toolbarbutton-icon),
+#appmenu-moreTools .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appmenu-moreTools-button .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
+#PanelUI-history .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #appMenu_historyMenu .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
+#PanelUI-bookmarks .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #panelMenu_bookmarksMenu .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
+#PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon, #PanelUI-fxa-menu-profiles-button .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
 #appMenu-library-recentlyClosedWindows .panel-subview-footer-button .toolbarbutton-icon, #appMenu-library-recentlyClosedTabs .panel-subview-footer-button .toolbarbutton-icon,
 #PanelUI-sendTabToDevice .panel-subview-body toolbarseparator.sync-menuitem ~ .subviewbutton .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-noicon-inline-end) !important;
@@ -1194,10 +1194,6 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/forget.svg) !important;
 }
-:root #PanelUI-history #PanelUI-historyMore .toolbarbutton-icon {
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/library.svg) !important;
-}
 :root :is(#appMenu-library-recentlyClosedTabs, #appMenu-library-recentlyClosedWindows) .restoreallitem .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/restore-session.svg) !important;
@@ -1214,10 +1210,6 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 :root #PanelUI-bookmarks #panelMenu_viewBookmarksToolbar .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	list-style-image: url(./icons/bookmark-star-on-tray.svg) !important;
-}
-:root #PanelUI-bookmarks #panelMenu_showAllBookmarks .toolbarbutton-icon {
-	margin-inline-end: var(--appmenu-icon-inline-end) !important;
-	list-style-image: url(./icons/library.svg) !important;
 }
 /* fxa menu */
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
