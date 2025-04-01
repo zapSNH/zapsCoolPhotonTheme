@@ -57,7 +57,7 @@ menuseparator {
 }
 /* Makes the menu items Photon sized and removes the rounding of the items */
 .panel-subview-body toolbarbutton,
-.cui-widget-panel toolbarbutton:not(.subviewbutton-back),
+.cui-widget-panel toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button),
 .cui-widget-panel toolbaritem, #OtherBookmarksPopup menuitem,
 [placespopup] :is(menuitem:not(.menuitem-with-favicon)) {
 	border-radius: 0px !important;
@@ -67,14 +67,14 @@ menuseparator {
 :root .menuitem-with-favicon {
 	margin-inline: 0px !important;
 }
-panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button, .subviewbutton-back) {
+panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button, .subviewbutton-back, toolbarbutton.panel-subview-footer-button) {
 	border-radius: 0px !important;
 	margin: 0px !important;
 }
 /* Fixes for some menu button stuff */
 /* i hate specifity */
 :is(panelview, .panel-subview-body)
-toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button, .panel-info-button) {
+toolbarbutton:not(.subviewbutton-back, toolbarbutton.panel-subview-footer-button, .panel-info-button) {
 	margin: 1px 0px !important;
 }
 .panel-info-button {
@@ -125,7 +125,7 @@ menuitem, menu {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 }
-.panel-subview-footer-button, .cui-widget-panel toolbarbutton:is(.panel-subview-footer-button) {
+.panel-subview-footer-button:not(toolbarbutton) {
 	margin-bottom: 4px !important;
 	margin-top: 1px !important;
 }
@@ -509,12 +509,14 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	min-width: var(--toggle-width) !important;
 }
 .toggle-button[aria-pressed="true"] {
-	border-color: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
+	border-color: color-mix(in srgb, black 10%, var(--photon-accent-dark)) !important;
 	background: var(--photon-accent-dark) !important;
 	#moz-toggle-label:hover &, &:hover {
+		border-color: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
 		background: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
 	}
 	#moz-toggle-label:hover:active &, &:hover:active {
+		border-color: color-mix(in srgb, black 40%, var(--photon-accent-dark)) !important;
 		background: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
 	}
 }
@@ -555,6 +557,15 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 #protections-popup-cookie-banner-section-separator {
 	margin-top: 4px !important;
 }
+#protections-popup-toast-panel-tp-on-desc, #protections-popup-toast-panel-tp-off-desc {
+	appearance: none !important;
+}
+/* cool bg */
+#protections-popup[hasException] #protections-popup-tp-switch-section {
+	background: repeating-linear-gradient( -56deg, rgba(249,249,250,.05), rgba(249,249,250,.05) 10px, transparent 10px, transparent 20px );
+	margin-block: -4px -3px;
+	padding-block: 4px 3px;
+}
 /* Extensions Menu That I Totally Do Not Dislike */
 :is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem, unified-extensions-item {
 	margin: 0 !important;
@@ -564,6 +575,14 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 }
 :is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem .subviewbutton-iconic image {
 	border-radius: 0 !important;
+}
+.unified-extensions-item-menu-button {
+	width: 30px !important;
+	height: 24px !important;
+	.toolbarbutton-icon {
+		padding: 6px !important;
+	}
+	align-self: center !important;
 }
 .panel-subview-body {
 	--uei-icon-size: 16px !important;
@@ -579,6 +598,19 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	.toolbarbutton-text {
 		text-align: center !important;
 	}
+	&:hover {
+		background: color-mix(in srgb, currentColor 25%, transparent) !important;
+	}
+	&:hover:active {
+		background: color-mix(in srgb, currentColor 30%, transparent) !important;
+	}
+}
+toolbarbutton.panel-subview-footer-button {
+	background: color-mix(in srgb, currentColor 9%, transparent) !important;
+	height: 40px !important;
+	margin-inline: 0 !important;
+	margin-block: -4px 0 !important;
+	padding-inline: 12px !important;
 	&:hover {
 		background: color-mix(in srgb, currentColor 25%, transparent) !important;
 	}
