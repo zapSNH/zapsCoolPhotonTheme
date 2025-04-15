@@ -1039,24 +1039,42 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 		fill: var(--urlbar-box-text-color) !important;
 		background-repeat: no-repeat;
 		background-position-y: center;
-		background-position-x: 11px;
+		background-position-x: 10px;
 		&[image="chrome://browser/skin/history.svg"] {
 			background-image: url(./icons/history.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
 		&[image="chrome://global/skin/icons/search-glass.svg"] {
 			background-image: url(./icons/find-in-page.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
 		&[image="chrome://browser/skin/quickactions.svg"] {
 			background-image: url(./icons/quick-actions.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
 		&[image="chrome://browser/skin/tab.svg"], &[image="chrome://browser/skin/tabs.svg"] {
 			background-image: url(./icons/tab.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
 		&[image="chrome://browser/skin/bookmark.svg"] {
 			background-image: url(./icons/bookmark.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
-		&[image="chrome://global/skin/icons/settings.svg"] .menu-iconic-left {
-			content: url(./icons/settings.svg) !important;
+		&[image="chrome://global/skin/icons/settings.svg"] {
+			background-image: url(./icons/settings.svg) !important;
+			& image {
+				opacity: 0;
+			}
 		}
 	}
 	.local-options toolbarbutton > .toolbarbutton-icon, menuitem[data-l10n-args] .menu-iconic-icon {
