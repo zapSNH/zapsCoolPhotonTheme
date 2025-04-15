@@ -8,7 +8,8 @@ menupopup menuseparator {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 }
-panelview vbox toolbarseparator, panelview toolbarseparator,
+panelview vbox toolbarseparator,
+panelview toolbarseparator,
 .cui-widget-panel toolbarseparator {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
@@ -48,17 +49,21 @@ menuseparator {
 		border-color: #27272B !important;
 	}
 }
-#appMenu_historyMenu, #panelMenu_bookmarksMenu {
+#appMenu_historyMenu,
+#panelMenu_bookmarksMenu {
 	padding: 0 !important;
 }
-:is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) toolbarbutton {
+:is(#appMenu_historyMenu,
+#panelMenu_bookmarksMenu) toolbarbutton {
 	margin: 0 !important;
 	padding-inline: 22px !important;
 }
 /* Makes the menu items Photon sized and removes the rounding of the items */
 .panel-subview-body toolbarbutton,
-.cui-widget-panel toolbarbutton:not(.subviewbutton-back, .panel-subview-footer-button),
-.cui-widget-panel toolbaritem, #OtherBookmarksPopup menuitem,
+.cui-widget-panel toolbarbutton:not(.subviewbutton-back,
+.panel-subview-footer-button),
+.cui-widget-panel toolbaritem,
+#OtherBookmarksPopup menuitem,
 [placespopup] :is(menuitem:not(.menuitem-with-favicon)) {
 	border-radius: 0px !important;
 	margin: 0px !important;
@@ -67,21 +72,28 @@ menuseparator {
 :root .menuitem-with-favicon {
 	margin-inline: 0px !important;
 }
-panelview toolbarbutton:not(.protections-popup-tp-switch, .panel-info-button, .subviewbutton-back, toolbarbutton.panel-subview-footer-button) {
+panelview toolbarbutton:not(.protections-popup-tp-switch,
+.panel-info-button,
+.subviewbutton-back,
+toolbarbutton.panel-subview-footer-button) {
 	border-radius: 0px !important;
 	margin: 0px !important;
 }
 /* Fixes for some menu button stuff */
 /* i hate specifity */
-:is(panelview, .panel-subview-body)
-toolbarbutton:not(.subviewbutton-back, toolbarbutton.panel-subview-footer-button, .panel-info-button) {
+:is(panelview,
+.panel-subview-body)
+toolbarbutton:not(.subviewbutton-back,
+toolbarbutton.panel-subview-footer-button,
+.panel-info-button) {
 	margin: 1px 0px !important;
 }
 .panel-info-button {
 	margin: 8px !important;
 	border-radius: inherit !important;
 }
-:not(#selection-shortcut-action-panel) > .panel-subview-body:not(#report-broken-site-panel-container, #selection-shortcut-action-panel) {
+:not(#selection-shortcut-action-panel) > .panel-subview-body:not(#report-broken-site-panel-container,
+#selection-shortcut-action-panel) {
 	padding: 4px 0 !important;
 }
 .subviewbutton-back {
@@ -103,7 +115,8 @@ toolbarbutton:not(.subviewbutton-back, toolbarbutton.panel-subview-footer-button
 .subview-subheader {
 	margin-left: 2px !important;
 }
-menuitem, menu {
+menuitem,
+menu {
 	padding: 2px 10px !important;
 }
 #main-menubar > menu {
@@ -114,7 +127,8 @@ menuitem, menu {
 		padding-inline: 4px !important;
 	}
 }
-#sidebarMenu-popup :is(menuitem, menu) {
+#sidebarMenu-popup :is(menuitem,
+menu) {
 	padding: 5px 10px !important;
 }
 #context-navigation menuitem {
@@ -129,7 +143,9 @@ menuitem, menu {
 	margin-bottom: 4px !important;
 	margin-top: 1px !important;
 }
-#appMenu-update-banner, #appMenu-proton-update-banner, #appMenu-proton-addon-banners .addon-banner-item {
+#appMenu-update-banner,
+#appMenu-proton-update-banner,
+#appMenu-proton-addon-banners .addon-banner-item {
 	padding-block: 8px !important;
 	margin-top: -4px !important;
 	margin-bottom: 5px !important;
@@ -137,7 +153,8 @@ menuitem, menu {
 	align-items: center !important;
 	outline: 1px solid var(--panel-separator-color);
 }
-#appMenu-update-banner, #appMenu-proton-update-banner {
+#appMenu-update-banner,
+#appMenu-proton-update-banner {
 	background-color: rgba(48,230,11,.1) !important;
 	margin-bottom: 4px !important;
 	outline: none;
@@ -226,10 +243,12 @@ menuitem, menu {
 	margin-inline-end: -4px !important;
 	border-color: transparent !important;
 }
-.download-state:not(:last-child) .downloadButton:not(:hover, :active) {
-	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
+.download-state:not(:last-child) .downloadButton:not(:hover,
+:active) {
+	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
 }
-.download-state:not(.downloadHoveringButton) .downloadButton:not(:hover, :active) {
+.download-state:not(.downloadHoveringButton) .downloadButton:not(:hover,
+:active) {
 	background: var(--arrowpanel-background) !important;
 }
 .download-state.downloadHoveringButton  {
@@ -251,6 +270,7 @@ menuitem, menu {
 	margin-top: calc(((5.5em - 46px)/2) - 1px);
 	position: relative;
 	translate: -1px
+
 }
 .download-state .downloadButton:hover::before {
 	background: color-mix(in srgb, var(--panel-color) 0%, transparent);
@@ -267,7 +287,9 @@ menuitem, menu {
 }
 /* Panel button styling */
 /* key: panel buttons */
-.panel-footer, #select-translations-panel-footer moz-button-group, .action-buttons {
+.panel-footer,
+#select-translations-panel-footer moz-button-group,
+.action-buttons {
 	justify-content: center !important;
 	margin: 0 !important;
 	margin-top: 16px !important;
@@ -297,8 +319,11 @@ menuitem, menu {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
-:is(.panel-footer, #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
-button > span.labelled.button-background[part="button"], .action-buttons > div, .action-buttons button {
+:is(.panel-footer,
+#select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
+button > span.labelled.button-background[part="button"],
+.action-buttons > div,
+.action-buttons button {
 	border-radius: 0 !important;
 	margin: 0 !important;
 	margin-inline: 0px !important;
@@ -311,7 +336,9 @@ button > span.labelled.button-background[part="button"], .action-buttons > div, 
 	}
 	margin-bottom: -9px;
 }
-moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
+moz-button:is(.primary,
+[slot="primary"],
+[default="true"]):not([type="menu"]) {
 	margin-inline-start: 0 !important;
 }
 /* I was stubbbbbboooooorrrrrnnnnnn */
@@ -321,9 +348,14 @@ moz-button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]) {
 #tab-group-editor-button-cancel {
 	margin-inline-start: 0 !important;
 }
-:is(.panel-footer, #select-translations-panel-footer-button-group)
-> button:not(.primary, [slot="primary"], [default="true"], :has(+ moz-button-group)),
-.popup-notification-secondary-button, #editBookmarkPanelRemoveButton,
+:is(.panel-footer,
+#select-translations-panel-footer-button-group)
+> button:not(.primary,
+[slot="primary"],
+[default="true"],
+:has(+ moz-button-group)),
+.popup-notification-secondary-button,
+#editBookmarkPanelRemoveButton,
 button > span.labelled.button-background[type="default"][part="button"],
 .action-buttons button.secondary {
 	background-color: #aaa2 !important;
@@ -335,8 +367,12 @@ button > span.labelled.button-background[type="default"][part="button"],
 		}
 	}
 }
-:is(.panel-footer, #select-translations-panel-footer-button-group) > button:is(.primary, [slot="primary"], [default="true"]):not([type="menu"]),
-button > span.labelled.button-background[type="primary"][part="button"], .action-buttons button.primary {
+:is(.panel-footer,
+#select-translations-panel-footer-button-group) > button:is(.primary,
+[slot="primary"],
+[default="true"]):not([type="menu"]),
+button > span.labelled.button-background[type="primary"][part="button"],
+.action-buttons button.primary {
 	background-color: #0060df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
@@ -353,7 +389,8 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	margin-top: -16px !important;
 	margin-inline-start: 16px !important;
 }
-.panel-footer > button[type="menu"], .action-buttons button.submenu-button {
+.panel-footer > button[type="menu"],
+.action-buttons button.submenu-button {
 	border-inline-start: solid 1px color-mix(in srgb, transparent 90%, currentColor) !important;
 }
 #protections-popup-cookieBannerView-cancel {
@@ -389,7 +426,9 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 }
 #appMenu-fxa-status2:not([fxastatus]) {
 	padding-inline: 8px 8px !important
-}/*
+
+}
+/*
 #unified-extensions-panel panelview, */#permission-popup panelview {
 	margin-bottom: 3px !important;
 }
@@ -410,13 +449,15 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	margin-top: -1px !important;
 	margin-bottom: -5px !important;
 }
-#protections-popup-footer .protections-popup-footer-button, #protections-popup-cookie-banner-switch {
+#protections-popup-footer .protections-popup-footer-button,
+#protections-popup-cookie-banner-switch {
 	padding-block: 0px !important;
 }
 #protections-popup-show-report-button {
 	margin-block: 4px !important;
 }
-#BMB_bookmarksPopup menu, menu.bookmark-item {
+#BMB_bookmarksPopup menu,
+menu.bookmark-item {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
 }
@@ -429,7 +470,8 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 #PanelUI-developer-tools-view toolbarbutton {
 	margin-inline-start: var(--appmenu-noicon-inline-end) !important;
 }
-.panel-info-button, .all-tabs-item {
+.panel-info-button,
+.all-tabs-item {
 	margin: 0 !important;
 }
 #allTabsMenu-allTabsView-tabs {
@@ -445,7 +487,8 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	padding: 0 !important;
 }
 /* fxa menu monitor and relay ad- i mean "promotions" */
-.ctaMenuLogo, #cta-menu-header-description {
+.ctaMenuLogo,
+#cta-menu-header-description {
 	margin-inline-start: 0 !important;
 }
 @media (-moz-platform: windows) {
@@ -453,14 +496,24 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 		margin-inline: 4px !important;
 		margin-bottom: 1px !important;
 	}
-	:is( #BMB_bookmarksPopup, #main-menubar > menu, #contentAreaContextMenu, #toolbar-context-menu, #placesContext, #mainPopupSet, .textbox-contextmenu) menuitem .menu-text {
+	:is( #BMB_bookmarksPopup,
+	#main-menubar > menu,
+	#contentAreaContextMenu,
+	#toolbar-context-menu,
+	#placesContext,
+	#mainPopupSet,
+	.textbox-contextmenu) menuitem .menu-text {
 		padding-left: 24px !important;
 	}
-	#context-sendpagetodevice, #contentAreaContextMenu menu:not([image*="moz-extension://"]), 
-	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), *//*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
-	menupopup > menuitem:is([type="radio"], [type="checkbox"]):not([checked="true"]),
-	menupopup > menu:not(.menu-iconic), #placesMenu menuitem:not(.menu-iconic),
-	#allTabsMenu-hiddenTabsButton { 
+	#context-sendpagetodevice,
+	#contentAreaContextMenu menu:not([image*="moz-extension://"]), 
+	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), */
+	/*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
+	menupopup > menuitem:is([type="radio"],
+	[type="checkbox"]):not([checked="true"]),
+	menupopup > menu:not(.menu-iconic),
+	#placesMenu menuitem:not(.menu-iconic),
+	#allTabsMenu-hiddenTabsButton {
 		padding-left: 34px !important;
 	}
 	menuitem[checked="true"] > .menu-iconic-left {
@@ -515,7 +568,8 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 		border-color: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
 		background: color-mix(in srgb, black 20%, var(--photon-accent-dark)) !important;
 	}
-	#moz-toggle-label:hover:active &, &:hover:active {
+	#moz-toggle-label:hover:active &,
+	&:hover:active {
 		border-color: color-mix(in srgb, black 40%, var(--photon-accent-dark)) !important;
 		background: color-mix(in srgb, black 30%, var(--photon-accent-dark)) !important;
 	}
@@ -531,7 +585,8 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	outline: color-mix(in srgb, black 20%, var(--photon-accent-dark)) 1px solid !important;
 	border: 0px !important;
 }
-#protections-popup-tp-switch-section-header, #protections-popup-siteNotWorkingView-header {
+#protections-popup-tp-switch-section-header,
+#protections-popup-siteNotWorkingView-header {
 	margin-inline: 8px !important;
 }
 #protections-popup-settings-button {
@@ -543,21 +598,25 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 .protections-popup-list {
 	margin-inline: 16px !important;
 }
-#protections-popup-content toolbarbutton, #protections-popup-tp-switch-breakage-fixed-link, #protections-popup-tp-switch-breakage-link {
+#protections-popup-content toolbarbutton,
+#protections-popup-tp-switch-breakage-fixed-link,
+#protections-popup-tp-switch-breakage-link {
 	padding-inline: 16px !important;
 }
 #protections-popup-mainView-panel-header-section {
-  overflow: hidden;
-  color: white;
-  background: radial-gradient(circle farthest-side at top right, #9059FF, #0250BB);
+	overflow: hidden;
+	color: white;
+	background: radial-gradient(circle farthest-side at top right, #9059FF, #0250BB);
 }
-#protections-popup-mainView-panel-header-section toolbarseparator, #protections-popup-mainView-panel-header-section + toolbarseparator {
+#protections-popup-mainView-panel-header-section toolbarseparator,
+#protections-popup-mainView-panel-header-section + toolbarseparator {
 	margin-block: 0px !important;
 }
 #protections-popup-cookie-banner-section-separator {
 	margin-top: 4px !important;
 }
-#protections-popup-toast-panel-tp-on-desc, #protections-popup-toast-panel-tp-off-desc {
+#protections-popup-toast-panel-tp-on-desc,
+#protections-popup-toast-panel-tp-off-desc {
 	appearance: none !important;
 }
 /* cool bg */
@@ -567,13 +626,18 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 	padding-block: 4px 3px;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
-:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem, unified-extensions-item {
+:is(#unified-extensions-area,
+#overflowed-extensions-list) > toolbaritem,
+unified-extensions-item {
 	margin: 0 !important;
 }
-:is(:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem, unified-extensions-item) > :last-child {
+:is(:is(#unified-extensions-area,
+#overflowed-extensions-list) > toolbaritem,
+unified-extensions-item) > :last-child {
 	padding: 0 !important;
 }
-:is(#unified-extensions-area, #overflowed-extensions-list) > toolbaritem .subviewbutton-iconic image {
+:is(#unified-extensions-area,
+#overflowed-extensions-list) > toolbaritem .subviewbutton-iconic image {
 	border-radius: 0 !important;
 }
 .unified-extensions-item-menu-button {
@@ -589,8 +653,11 @@ button > span.labelled.button-background[type="primary"][part="button"], .action
 }
 /* Big button thing */
 /* yes i know there's an easier way to do this but separating them gives me more control */ /* <- stupid idiot */
-:is(#protections-popup :not(:first-child) .panel-subview-footer-button, #unified-extensions-manage-extensions,
-#identity-popup-clear-sitedata-button, #identity-popup-more-info, #overflowMenu-customize-button) {
+:is(#protections-popup :not(:first-child) .panel-subview-footer-button,
+#unified-extensions-manage-extensions,
+#identity-popup-clear-sitedata-button,
+#identity-popup-more-info,
+#overflowMenu-customize-button) {
 	height: 46px !important;
 	font-size: 14px !important;
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
@@ -622,7 +689,8 @@ toolbarbutton.panel-subview-footer-button {
 	margin-bottom: 0px !important;
 }
 /* Notification box */
-#commonDialogWindow, #commonDialogWindow .titleIcon {
+#commonDialogWindow,
+#commonDialogWindow .titleIcon {
 	background-color: light-dark(#f9f9fa, #323234) !important;
 }
 /* Tooltips */
@@ -646,7 +714,7 @@ tooltip {
 	padding-inline-start: 8px !important;
 }
 .autocomplete-richlistitem:not(:first-child) .two-line-wrapper {
-	box-shadow: 0px 1px color-mix(in srgb, currentColor 10%, transparent) inset !important; 
+	box-shadow: 0px 1px color-mix(in srgb, currentColor 10%, transparent) inset !important;
 }
 #PopupAutoComplete > richlistbox > richlistitem[originaltype="loginWithOrigin"] + richlistitem[originaltype="generatedPassword"] {
 	border-top: 0px !important;
@@ -662,6 +730,7 @@ tooltip {
 }
 .two-line-wrapper {
 	width: 100%
+
 }
 .ac-site-icon[src="chrome://browser/skin/login.svg"] {
 	display: none !important;
@@ -678,6 +747,7 @@ tooltip {
 }
 .autocomplete-richlistitem[originaltype="insecureWarning"] {
 	background: transparent !important
+
 }
 /* permission popup */
 #permission-popup .button-icon {
@@ -771,7 +841,7 @@ tooltip {
 }
 #searchmode-switcher-popup-description {
 	margin-top: 0px !important;
-	padding-block: 2px !important; 
+	padding-block: 2px !important;
 }
 /* Overflow menu fxa button */
 #widget-overflow-list #fxa-toolbar-menu-button {
@@ -800,6 +870,9 @@ tooltip {
 		margin-inline: 12px !important;
 	}
 	.tab-group-delete {
+		margin-bottom: 0 !important;
+	}
+	#tab-group-suggestion-button {
 		margin-bottom: -9px !important;
 	}
 	.panel-header {
@@ -815,9 +888,45 @@ tooltip {
 		height: 16px !important;
 		margin-block-end: 2px !important;
 		&:last-child {
-			margin-block-end: 3px !important;
+			margin-block-end: 0 !important;
 		}
 	}
+}
+/* mm yes ai in places where they're not supposed to be in */
+#tab-group-suggestion-button {
+	margin-inline: 3px;
+}
+.labelled.button-background:has(> img[src="chrome://global/skin/icons/highlights.svg"]) {
+	border-radius: 0 !important;
+	width: calc(100% - 7px);
+}
+.optin-wrapper {
+	border-radius: 0 !important;
+	margin-inline-start: 3px !important;
+	margin-inline-end: 4px !important;
+	margin-bottom: -8px !important;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 0 !important;
+	padding-inline: 0 !important;
+}
+.optin-footer-message {
+	order: 1;
+}
+.optin-actions {
+	order: 2;
+	width: 100% !important;
+	& moz-button-group {
+		width: 100% !important;
+		display: flex;
+		justify-content: stretch !important;
+	}
+	& moz-button {
+		width: 100% !important;
+	}
+}
+#tab-group-suggestions-message {
+	width: 100% !important;
 }
 /* Aye-eye thing? */
 #selection-shortcut-action-panel {
@@ -826,7 +935,7 @@ tooltip {
 		height: 32px !important;
 	}
 }
-.button-background:has(> img[src="chrome://global/skin/icons/highlights.svg"]) {
+.button-background:not(.labelled):has(> img[src="chrome://global/skin/icons/highlights.svg"]) {
 	border-radius: 0 !important;
 	width: 30px !important;
 	min-height: 30px !important;

@@ -13,8 +13,10 @@
 	--color-accent-primary: var(--photon-accent) !important;
 	--focus-outline-color: var(--photon-accent) !important;
 }
-menupopup {
-	--panel-background: #fff !important;
+@media (-moz-platform: windows) {
+	menupopup {
+		--panel-background: #fff !important;
+	}
 }
 menupopup:not(#ContentSelectDropdownPopup),
 richlistbox:not(#PopupSearchAutoComplete richlistbox),
