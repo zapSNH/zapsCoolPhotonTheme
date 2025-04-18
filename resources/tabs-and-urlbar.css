@@ -1092,6 +1092,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
 		width: calc(var(--new-sidebar-width) - 1px) !important;
 		padding: 0 !important;
+		.tab-group-label-container::after {
+			inset: 0 !important;
+		}
 		.tabbrowser-tab {
 			max-height: var(--tab-min-height) !important;
 			&[selected] .tab-background {
@@ -1109,6 +1112,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 			}
 			.tab-background::before {
 				translate: 0 0;
+				position: absolute
 			}
 			.tab-close-button {
 				margin-inline-start: -2px !important;
