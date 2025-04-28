@@ -339,7 +339,7 @@
 #identity-popup-mainView .subviewbutton-nav::after,
 .widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
-.menu-right {
+.menu-right, menupopup > menu::after {
 	content: url(./icons/back-12.svg) !important;
 	scale: -1 1 !important;
 }
@@ -549,6 +549,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #PlacesChevron[open],
 #nav-bar-overflow-button[open] {
 	list-style-image: url(./icons/command-chevron-rotate-90.svg) !important;
+}
+menupopup > menu::after {
+	background-image: none !important;
 }
 #import-button {
 	list-style-image: url(./icons/import.svg) !important;
