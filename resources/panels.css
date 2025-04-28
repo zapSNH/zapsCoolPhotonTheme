@@ -119,7 +119,7 @@ menu {
 	padding: 2px 10px !important;
 }
 #main-menubar > menu {
-	padding: 0 !important;
+	padding: 2px 4px !important;
 }
 @media (-moz-platform: linux) {
 	#main-menubar > menu {
@@ -496,12 +496,12 @@ menu.bookmark-item {
 		margin-inline: 4px !important;
 		margin-bottom: 1px !important;
 	}
-	:is( #BMB_bookmarksPopup,
+	:is(#BMB_bookmarksPopup,
 	#main-menubar > menu,
 	#contentAreaContextMenu,
 	#toolbar-context-menu,
 	#placesContext,
-	#mainPopupSet,
+	#mainPopupSet :not(#searchmode-switcher-popup),
 	.textbox-contextmenu) menuitem .menu-text {
 		padding-left: 24px !important;
 	}
@@ -509,12 +509,26 @@ menu.bookmark-item {
 	#contentAreaContextMenu menu:not([image*="moz-extension://"]), 
 	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), */
 	/*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
-	menupopup > menuitem:is([type="radio"],
-	[type="checkbox"]):not([checked="true"]),
 	menupopup > menu:not(.menu-iconic),
 	#placesMenu menuitem:not(.menu-iconic),
 	#allTabsMenu-hiddenTabsButton {
 		padding-left: 34px !important;
+	}
+	menupopup > menuitem:is([type="radio"],
+	[type="checkbox"]):is([checked="false"]) {
+		& .menu-iconic-text {
+			margin-left: 24px !important;
+		}
+	}
+	menupopup > menuitem:is([type="radio"],
+	[type="checkbox"]):is([checked="true"]) {
+		& .menu-icon {
+			margin: 0 !important;
+			list-style-image: url("./icons/check.svg") !important;
+		}
+		& .menu-text {
+			margin-left: -16px !important;
+		}
 	}
 	menuitem[checked="true"] > .menu-iconic-left {
 		list-style-image: url("./icons/check.svg") !important;

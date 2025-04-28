@@ -543,7 +543,7 @@
 		height: 100% !important;
 	}
 	.top-site-outer .tile .icon-wrapper::before {
-		translate: 0px 10px;
+		translate: 0px 12px;
 		font-size: 100px !important;
 		opacity: 0.75 !important;
 	}
@@ -595,7 +595,8 @@
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: 6px 2px;
+		translate: 2px -12px;
+		top: 0 !important;
 	}
 	.top-site-outer:not(:hover,
 	.active) .context-menu-button {
