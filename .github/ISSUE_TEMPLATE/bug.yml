@@ -37,7 +37,7 @@ body:
       description: Steps to reproduce the behavior.
       placeholder: |
         Example:
-        1. Go to https://www.youtube.com/watch?v=P9702KioidU
+        1. Go to https://www.youtube.com/watch?v=p_khWy7GAcQ
         2. Mute the video
         3. I can't hear the video
 
@@ -60,7 +60,7 @@ body:
     attributes:
       label: OS
       description: Your operating system including its version number.
-      placeholder: (e.g. Windows 12, Fedora Kinoite 42)
+      placeholder: (e.g. Windows 12, Fedora Kinoite 43)
     validations:
       required: true
 
@@ -68,7 +68,7 @@ body:
     attributes:
       label: Browser Version
       description: Your browser version. Can be found via Application Menu > Help > About Firefox
-      placeholder: (e.g. Firefox 123, Waterfox G6.9.0)
+      placeholder: (e.g. Firefox 143, Waterfox G6.9.0)
     validations:
       required: true
 
@@ -76,7 +76,7 @@ body:
     attributes:
       label: Theme Version
       description: The version of the theme you are using.
-      placeholder: (e.g. Rolling Release v123, Extension v1.0.0)
+      placeholder: (e.g. Latest Rolling Release, Static Release v137, Extension v1.0.0)
 
   - type: textarea
     attributes:
