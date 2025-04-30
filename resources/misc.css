@@ -256,7 +256,6 @@
 			content: url("./icons/loading.svg") !important;
 		}
 	}
-	
 	@media -moz-pref("uc.logo.quantum") {
 		#rightBox {
 			background-image: var(--quantum-wordmark) !important;
@@ -679,7 +678,8 @@
 /* Old style context menus */
 @media -moz-pref("uc.contextmenu.win-10") {
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -695,7 +695,8 @@
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--panel-color: #000 !important;
@@ -736,8 +737,13 @@
 
 /* kinda looks like the gnome context menu too */
 @media -moz-pref("uc.contextmenu.win-11") {
+	menupopup:not([customoptionstyling="true"]),
+	tooltip {
+		--arrowpanel-background: transparent !important;
+	}
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -753,7 +759,8 @@
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--button-hover-color: #000 !important;
