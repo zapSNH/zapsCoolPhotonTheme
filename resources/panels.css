@@ -502,7 +502,7 @@ menu.bookmark-item {
 	#toolbar-context-menu,
 	#placesContext,
 	#mainPopupSet :not(#searchmode-switcher-popup),
-	.textbox-contextmenu) menuitem .menu-text {
+	.textbox-contextmenu) menuitem:not(.menuitem-with-favicon) .menu-text {
 		padding-left: 24px !important;
 	}
 	#context-sendpagetodevice,
