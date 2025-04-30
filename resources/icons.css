@@ -339,8 +339,10 @@
 #identity-popup-mainView .subviewbutton-nav::after,
 .widget-overflow-list .subviewbutton-nav::after,
 .PanelUI-subView .subviewbutton-nav::after,
-.menu-right, menupopup > menu::after {
+.menu-right, menupopup > menu:not(:has(.menu-right))::after {
 	content: url(./icons/back-12.svg) !important;
+	-moz-context-properties: fill, stroke;
+	fill: currentColor !important;
 	scale: -1 1 !important;
 }
 @media (-moz-platform: linux) {
