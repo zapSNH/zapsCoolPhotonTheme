@@ -763,7 +763,6 @@
 		width: 100% !important;
 		gap: 18px;
 		justify-items: center !important;
-  		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
 	}
 	.ds-layout-topsites .ds-column {
 		width: 100% !important;
