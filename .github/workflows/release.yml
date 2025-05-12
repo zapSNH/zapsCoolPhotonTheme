@@ -36,15 +36,19 @@ jobs:
         fetch-depth: 0
         ref: main
         
-    - name: 'Get Previous tag'
+    - name: get previous tag (this repo) # https://github.com/WyriHaximus/github-action-get-previous-tag/issues/23#issuecomment-830632004
       id: previoustag
-      uses: "WyriHaximus/github-action-get-previous-tag@v1"
-      with:
-        fallback: v69
+      run: |
+        echo "tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))" >> "$GITHUB_OUTPUT"
         
+    - name: get latest tag (webext repo)
+      id: webexttag
+      run: |
+        echo "e_tag=$(curl -s https://api.github.com/repos/zapSNH/zcpt-webextension/tags | jq -r '.[0].name')" >> "$GITHUB_OUTPUT"
+
     - name: zip files & release notes
       run: |
-        python3 .github/workflows/create_relnotes.py create_relnotes ${{ github.ref_name }} ${{ steps.previoustag.outputs.tag }}
+        python3 .github/workflows/create_relnotes.py ${{ github.ref_name }} ${{ steps.previoustag.outputs.tag }} ${{ steps.webexttag.outputs.e_tag }}
         rm -rf ./.github
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip * -x "relnotes.md"
         git stash pop
