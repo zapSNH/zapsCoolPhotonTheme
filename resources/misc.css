@@ -385,8 +385,6 @@
 			--toolbar-bgcolor: #f9f9fa !important;
 			--input-bgcolor: #ccc !important;
 			--input-border-color: #aaa 
-	  
-		
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -501,22 +499,43 @@
 	#cancel-button {
 		width: 100%;
 	}
-	input[type="checkbox"] {
+	input[type="radio"] {
+		border-radius: 999px;
+	}
+	input:is([type="checkbox"], [type="radio"]) {
+		appearance: none;
 		width: 20px !important;
 		height: 20px !important;
-	}
-	input[type="checkbox"]:checked {
-		background: var(--photon-accent-dark) url(./icons/check.svg) no-repeat !important;
-		background-size: 16px !important;
-		background-position: 1px 1px !important;
-		-moz-context-properties: fill !important;
-		fill: white !important;
+		background: var(--button-bgcolor) !important;
+		border: 1px solid var(--toolbar-field-border-color);
 		&:hover {
-			background-color: color-mix(in srgb, var(--photon-accent-dark) 80%, white) !important;
+			background-color: var(--button-hover-bgcolor) !important;
 		}
 		&:active {
-			background-color: color-mix(in srgb, var(--photon-accent-dark) 60%, white) !important;
+			background-color: var(--button-active-bgcolor) !important;
 		}
+		&:checked {
+			border-color: transparent !important;
+			background-color: var(--photon-accent-dark) !important;
+			background-repeat: no-repeat;
+			background-position: center !important;
+			-moz-context-properties: fill !important;
+			fill: white !important;
+			&:hover {
+				background-color: color-mix(in srgb, var(--photon-accent-dark) 80%, black) !important;
+			}
+			&:active {
+				background-color: color-mix(in srgb, var(--photon-accent-dark) 60%, black) !important;
+			}
+		}
+	}
+	input[type="checkbox"]:checked {
+		background-image: url(./icons/check.svg) !important;
+		background-size: 16px !important;
+	}
+	input[type="radio"]:checked {
+		background-image: url(./icons/radio.svg) !important;
+		background-size: 20px !important;
 	}
 	#printer-picker {
 		background-image: url("./icons/arrow-dropdown-16.svg"),
