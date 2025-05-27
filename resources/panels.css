@@ -4,34 +4,45 @@
 :root {
 	--panels-css: 1px;
 }
-menupopup menuseparator {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+@media not -moz-pref("uc.popups.transparent") {
+	menupopup menuseparator {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	panelview vbox toolbarseparator,
+	panelview toolbarseparator,
+	.cui-widget-panel toolbarseparator {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	toolbarseparator {
+		margin: 3px !important;
+	}
+	#editBookmarkSeparator {
+		margin-top: 10px !important;
+	}
+	panel toolbarseparator {
+		margin-inline: 0 !important;
+	}
+	.menupopup-arrowscrollbox {
+		padding: 4px !important;
+		box-shadow: 2px 2px 2px #0006 !important;
+	}
+	menupopup {
+		appearance: none !important;
+		border: none !important;
+		padding: 0 6px 6px 0 !important;
+	}
 }
-panelview vbox toolbarseparator,
-panelview toolbarseparator,
-.cui-widget-panel toolbarseparator {
-	margin-left: 0px !important;
-	margin-right: 0px !important;
-}
-toolbarseparator {
-	margin: 3px !important;
-}
-#editBookmarkSeparator {
-	margin-top: 10px !important;
-}
-panel toolbarseparator {
-	margin-inline: 0 !important;
-}
-.menupopup-arrowscrollbox {
-	padding-inline: 0 !important;
-	padding-block: 4px !important;
-	box-shadow: 2px 2px 2px #0006 !important;
-}
-menupopup {
-	appearance: none !important;
-	border: none !important;
-	padding: 0 6px 6px 0 !important;
+@media -moz-pref("uc.popups.transparent") {
+	.menupopup-arrowscrollbox {
+		border: none !important;
+		padding: 6px !important;
+		padding-inline-end: 5px !important;
+	}
+	menu, menuitem {
+		border-radius: var(--photon-border-radius) !important;
+	}
 }
 menuitem[disabled="true"] {
 	pointer-events: none !important;
@@ -271,6 +282,7 @@ menu) {
 	position: relative;
 	translate: -1px
 
+
 }
 .download-state .downloadButton:hover::before {
 	background: color-mix(in srgb, var(--panel-color) 0%, transparent);
@@ -427,9 +439,11 @@ button > span.labelled.button-background[type="primary"][part="button"],
 #appMenu-fxa-status2:not([fxastatus]) {
 	padding-inline: 8px 8px !important
 
+
 }
 /*
-#unified-extensions-panel panelview, */#permission-popup panelview {
+#unified-extensions-panel panelview, */
+#permission-popup panelview {
 	margin-bottom: 3px !important;
 }
 #identity-popup[mainviewshowing] panelview {
@@ -492,49 +506,11 @@ menu.bookmark-item {
 	margin-inline-start: 0 !important;
 }
 @media (-moz-platform: windows) {
-	#context-navigation {
-		margin-inline: 4px !important;
-		margin-bottom: 1px !important;
-	}
-	:is(#BMB_bookmarksPopup,
-	#main-menubar > menu,
-	#contentAreaContextMenu,
-	#toolbar-context-menu,
-	#placesContext,
-	#mainPopupSet :not(#searchmode-switcher-popup),
-	.textbox-contextmenu) menuitem:not(.menuitem-with-favicon) .menu-text {
-		padding-left: 24px !important;
-	}
-	#context-sendpagetodevice,
-	#contentAreaContextMenu menu:not([image*="moz-extension://"]), 
-	/*#context-reveal-password,* #spell-check-enabled:not([checked="true"]), #context-media-loop:not([checked="true"]), #context-video-pictureinpicture:not([checked="true"]), #toggle_toolbar-menubar:not([checked="true"]), */
-	/*#context_moveTabOptions, #context_sendTabToDevice, #context_reopenInContainer, #context_closeTabOption0s,*/	/*#toggle_PersonalToolbar,*/
-	menupopup > menu:not(.menu-iconic),
-	#placesMenu menuitem:not(.menu-iconic),
-	#allTabsMenu-hiddenTabsButton {
-		padding-left: 34px !important;
-	}
-	menupopup > menuitem:is([type="radio"],
-	[type="checkbox"]):is([checked="false"]) {
-		& .menu-iconic-text {
-			margin-left: 24px !important;
-		}
-	}
-	menupopup > menuitem:is([type="radio"],
-	[type="checkbox"]):is([checked="true"]) {
-		& .menu-icon {
-			margin: 0 !important;
-			list-style-image: url("./icons/check.svg") !important;
-		}
-		& .menu-text {
-			margin-left: -16px !important;
-		}
-	}
-	menuitem[checked="true"] > .menu-iconic-left {
+	menuitem[checked="true"] > :is(.menu-icon, .menu-iconic-left) {
 		list-style-image: url("./icons/check.svg") !important;
 	}
-	#ContentSelectDropdownPopup menuitem label {
-		padding-block: 0px !important;
+	menupopup:not([needsgutter]) :is(menuitem, menu):not([checked="true"], .menuitem-iconic, .menu-iconic) {
+		padding-left: 34px !important;
 	}
 }
 @media (-moz-platform: linux) {
@@ -745,6 +721,7 @@ tooltip {
 .two-line-wrapper {
 	width: 100%
 
+
 }
 .ac-site-icon[src="chrome://browser/skin/login.svg"] {
 	display: none !important;
@@ -761,6 +738,7 @@ tooltip {
 }
 .autocomplete-richlistitem[originaltype="insecureWarning"] {
 	background: transparent !important
+
 
 }
 /* permission popup */
