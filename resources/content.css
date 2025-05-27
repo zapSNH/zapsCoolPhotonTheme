@@ -116,6 +116,7 @@
 		--box-shadow-card: var(--shadow-10) !important;
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
+		--fxview-border-interactive: var(--in-content-box-border-color) !important;
 	}
 	@media (prefers-color-scheme: dark) {
 		* {

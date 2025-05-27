@@ -10,17 +10,20 @@
 	--tab-icon-overlay-fill: currentColor !important;
 	--color-accent-primary: var(--photon-accent) !important;
 	--focus-outline-color: var(--photon-accent) !important;
-}
+}/*
 @media (-moz-platform: windows) {
-	menupopup {
-		--panel-background: #fff !important;
+	.menupopup-arrowscrollbox {
+		background: var(--content-select-background-image, var(--arrowpanel-background)) !important;
 	}
-}
-menupopup:not(#ContentSelectDropdownPopup),
-richlistbox:not(#PopupSearchAutoComplete richlistbox),
-#tab-preview-panel,
-panel[type="autocomplete-richlistbox"] {
-	--panel-background: var(--arrowpanel-background) !important;
+}*/
+
+@media not -moz-pref("uc.popups.transparent") {
+	menupopup:not(#ContentSelectDropdownPopup),
+	richlistbox:not(#PopupSearchAutoComplete richlistbox),
+	#tab-preview-panel,
+	panel[type="autocomplete-richlistbox"] {
+		--panel-background: var(--arrowpanel-background) !important;
+	}
 }
 /*
 menu:where([_moz-menuactive="true"]):not([disabled="true"]),
@@ -65,7 +68,7 @@ input.findbar-textbox:focus {
 	box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-navbar-separator-color, transparent), calc(1 * var(--tabs-navbar-shadow-size)) 0 0 var(--tabs-navbar-separator-color, transparent) !important;
 }
 /* Light theme */
-:root[style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"] {
+:root:is([style*="--lwt-accent-color: rgb(240, 240, 244); --lwt-text-color: rgba(21, 20, 26);"], [style*="--toolbar-bgcolor: rgb(249, 249, 251); --toolbar-color: rgb(21, 20, 26); --toolbar-field-color: rgb(21, 20, 26);"]) {
 	--lwt-accent-color: #d7d7db !important;
 	--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 	--toolbar-bgcolor: #f9f9fa !important;
