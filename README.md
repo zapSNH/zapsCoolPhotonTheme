@@ -45,6 +45,7 @@ Open `about:config` and set:
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
 | `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
+| `widget.windows.mica.popups` | `0` | (Windows only) Disables transparency effects on menus.<br>Do not change this or set this to 2 if you're using [`uc.popups.transparent`](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options#menu-transparency)  |
 <details>
 	<summary>For Firefox 121 and below...</summary>
 	
