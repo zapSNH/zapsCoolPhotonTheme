@@ -155,6 +155,14 @@
 				background-color: color-mix(in srgb, transparent 40%, var(--photon-accent-dark)) !important;
 			}
 		}
+		&:not(:checked) {
+			&:hover:not([disabled]) {
+				background-color: var(--button-hover-bgcolor) !important;
+			}
+			&:active:not([disabled]) {
+				background-color: var(--button-active-bgcolor) !important;
+			}
+		}
 		@media (prefers-color-scheme: light) {
 			border-color: color-mix(in srgb,
 			transparent 80%,
