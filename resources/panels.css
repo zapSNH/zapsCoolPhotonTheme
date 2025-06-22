@@ -25,13 +25,20 @@
 		margin-inline: 0 !important;
 	}
 	.menupopup-arrowscrollbox {
-		padding: 4px !important;
+		padding-inline: 0 !importasnt;
 		box-shadow: 2px 2px 2px #0006 !important;
 	}
 	menupopup {
 		appearance: none !important;
 		border: none !important;
 		padding: 0 6px 6px 0 !important;
+	}
+	menu, menuitem, menucaption {
+		max-width: none !important;
+		overflow: visible !important;
+	}
+	* {
+		--panel-padding: 4px 0 !important;
 	}
 }
 @media -moz-pref("uc.popups.transparent") {
@@ -53,6 +60,9 @@ menuitem[disabled="true"] {
 }
 menuseparator {
 	padding-inline: 0 !important;
+}
+#editBookmarkPanel .panel-button {
+	border-color: transparent !important;
 }
 /* Fixes the border for the "Photon Dark theme" */
 @media (prefers-color-scheme: dark) {
@@ -144,7 +154,7 @@ menu) {
 }
 #context-navigation menuitem {
 	padding: 0 !important;
-	margin: 0 !important;
+	margin: 0px 4px !important;
 }
 #appMenu-quit-button2 {
 	margin-top: 0px !important;
