@@ -87,8 +87,12 @@
 		--primary-button-hover-background-color: var(--blue-70);
 		--primary-button-active-background-color: var(--blue-80);
 		--primary-button-color: rgb(249, 249, 250);
-		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent) ;
+		--button-text-color-primary: rgb(249, 249, 250);
+		--button-text-color-primary-hover: rgb(249, 249, 250);
+		--button-text-color-primary-active: rgb(249, 249, 250);
+		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent);
 		--box-background: var(--in-content-box-background);
+		--input-text-background-color: var(--in-content-box-background);
 		--box-border-color: var(--in-content-box-border-color);
 		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
 		--border-radius-medium: var(--photon-primary-border-radius) !important;
@@ -250,7 +254,7 @@
 		min-width: var(--toggle-width) !important;
 	}
 	.checkbox-check,
-	input[type="radio"]:not(.wallpaper-input),
+	input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]),
 	.radio-check,
 	.checkbox-row input,
 	input[type="checkbox"]:not(.reveal-password-checkbox) {
@@ -304,7 +308,7 @@
 			}
 		}
 	}
-	input[type="radio"]:not(.wallpaper-input),
+	input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]),
 	.radio-check {
 		border-radius: 50% !important;
 		margin-top: 4px !important;
@@ -399,7 +403,13 @@
 			scale: 1;
 		}
 	}
-	.icon {
+	.icon, .message-icon {
+		&[src="chrome://global/skin/icons/check-filled.svg"] {
+			content: url("./icons/check.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/info.svg"] {
+			content: url("./icons/info.svg") !important;
+		}
 		&[src="chrome://global/skin/icons/info-filled.svg"] {
 			content: url("./icons/info-color.svg") !important;
 		}
@@ -741,13 +751,16 @@
 		inset-inline-start: 0 !important;
 		padding: 16px 25px !important;
 	}
+	.ds-card-grid {
+		justify-items: center;
+	}
 	.ds-card-grid .sections-card-ui:not(.placeholder).active,
 	.ds-card-grid .sections-card-ui:not(.placeholder):focus-within,
 	.ds-card-grid .sections-card-ui:not(.placeholder):hover {
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 	}
 	.layout-variant-b,
-	.layout-variant-a {
+	.layout-variant-a, .newtab-main[style] {
 		.top-site-outer {
 			width: fit-content !important;
 		}
@@ -767,6 +780,27 @@
 	}
 	.ds-layout-topsites .ds-column {
 		width: 100% !important;
+	}
+	.wallpaper-input.theme-custom-wallpaper::after {
+		background: url("./icons/add.svg") center no-repeat !important;
+	}
+	.personalize-button:not(.icon) {
+		--button-collapsed-width: 24px !important;
+		--button-full-width: var(--button-collapsed-width) !important;
+		padding: 0 !important;
+		transition: var(--photon-speed-1) !important;
+		aspect-ratio: 1 !important;
+		justify-content: center !important;
+		&:not(:hover, :active) {
+			 background-color: transparent !important;
+		}
+		img {
+			content: url("./icons/settings.svg") !important;
+			width: 16px !important;
+		}
+		label {
+			display: none;
+		}
 	}
 	:root:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),

@@ -443,6 +443,7 @@
 		list-style-image: url(./icons/shopping-open.svg) !important;
 	}
 }
+
 img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	content: url(./icons/shopping.svg) !important;
 }
