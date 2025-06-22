@@ -751,13 +751,16 @@
 		inset-inline-start: 0 !important;
 		padding: 16px 25px !important;
 	}
+	.ds-card-grid {
+		justify-items: center;
+	}
 	.ds-card-grid .sections-card-ui:not(.placeholder).active,
 	.ds-card-grid .sections-card-ui:not(.placeholder):focus-within,
 	.ds-card-grid .sections-card-ui:not(.placeholder):hover {
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 	}
 	.layout-variant-b,
-	.layout-variant-a {
+	.layout-variant-a, .newtab-main[style] {
 		.top-site-outer {
 			width: fit-content !important;
 		}
@@ -780,6 +783,24 @@
 	}
 	.wallpaper-input.theme-custom-wallpaper::after {
 		background: url("./icons/add.svg") center no-repeat !important;
+	}
+	.personalize-button:not(.icon) {
+		--button-collapsed-width: 24px !important;
+		--button-full-width: var(--button-collapsed-width) !important;
+		padding: 0 !important;
+		transition: var(--photon-speed-1) !important;
+		aspect-ratio: 1 !important;
+		justify-content: center !important;
+		&:not(:hover, :active) {
+			 background-color: transparent !important;
+		}
+		img {
+			content: url("./icons/settings.svg") !important;
+			width: 16px !important;
+		}
+		label {
+			display: none;
+		}
 	}
 	:root:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),

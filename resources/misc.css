@@ -128,6 +128,10 @@
 		background: var(--toolbar-field-background-color) !important;
 		border-bottom: 1px solid var(--toolbar-field-border-color) !important;
 	}
+	#input[type="search"] {
+		background-color: var(--input-bgcolor) !important;
+		border-color: var(--input-border-color) !important;
+	}
 	:not(#places) input:not(#scrubber,
 	#audio-scrubber) {
 		appearance: none !important;
