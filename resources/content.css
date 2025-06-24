@@ -978,7 +978,7 @@
 		background: var(--in-content-page-background) !important;
 	}
 	#browserContainersExtensionContent {
-		padding:  !important;
+		/*padding:  !important;*/
 	}
 	.expand-collapse-icon {
 		content: url("./icons/zoom-in.svg") !important;
