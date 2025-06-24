@@ -17,7 +17,7 @@
 	}
 }*/
 
-@media not -moz-pref("uc.popups.transparent") {
+@media not (-moz-bool-pref: "uc.popups.transparent") {
 	menupopup:not(#ContentSelectDropdownPopup),
 	richlistbox:not(#PopupSearchAutoComplete richlistbox),
 	#tab-preview-panel,
