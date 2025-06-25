@@ -1,7 +1,7 @@
 /* zap's photon theme userContent */
 /* will be much less documented */
-@import url(./resources/content.css);
+@import url("./resources/content.css");
 
 /* Your custom CSS files */
 /* You'll need to create customContent.css in this folder since it doesn't exist by default */
-@import url(./customContent.css);
+@import url("./customContent.css");
