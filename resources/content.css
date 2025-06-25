@@ -759,19 +759,16 @@
 	.ds-card-grid .sections-card-ui:not(.placeholder):hover {
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 	}
-	.layout-variant-b,
-	.layout-variant-a, .newtab-main[style] {
-		.top-site-outer {
-			width: fit-content !important;
-		}
-		.body-wrapper {
-			min-width: min-content !important;
-			max-width: max-content !important;
-			width: fit-content !important;
-		}
-		.ds-outer-wrapper-breakpoint-override main .ds-card-grid:not(.ds-section-grid) {
-			justify-items: center !important;
-		}
+	.top-site-outer {
+		width: fit-content !important;
+	}
+	.body-wrapper {
+		min-width: min-content !important;
+		max-width: max-content !important;
+		width: fit-content !important;
+	}
+	.ds-outer-wrapper-breakpoint-override main .ds-card-grid:not(.ds-section-grid) {
+		justify-items: center !important;
 	}
 	.top-sites-list {
 		width: 100% !important;
