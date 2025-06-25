@@ -862,7 +862,7 @@
 			--newtab-contextual-text-primary-color: currentColor !important;
 			--newtab-button-text: currentColor !important;
 			background: fixed;
-			background-image: url("./background.png);
+			background-image: url("./background.png");
 			background-position: center;
 		}
 		.top-site-inner,
@@ -1223,33 +1223,20 @@
 		content: url("./icons/settings.svg") !important;
 	}
 	.more-options-button {
-		background-image: url("./icons/settings.svg") !important
-	
-	
-	
-	
+		background-image: url("./icons/settings.svg") !important;
 	}
 	addon-card .more-options-button {
-		background-image: url("./icons/more.svg") !important
-	
-	
-	
-	
+		background-image: url("./icons/more.svg") !important;
 	}
 	#help-button img {
 		content: url("./icons/help.svg") !important;
 	}
 	.addon-permissions-list > li.permission-checked {
 		background-image: url("./icons/check.svg") !important;
-		;
 	}
 	.category {
 		&[name="discover"] {
 			background-image: url("./icons/glyph-highlights-16.svg") !important
-		
-		
-		
-		
 		}
 		&[name="extension"] {
 			background-image: url("./icons/extensions.svg") !important;

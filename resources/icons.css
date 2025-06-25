@@ -521,6 +521,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #fullscreen-button {
 	list-style-image: url("./icons/fullscreen.svg") !important;
 }
+#screenshot-button {
+	list-style-image: url("./icons/screenshot.svg") !important;
+}
 #zoom-in-button image {
 	list-style-image: url("./icons/zoom-in.svg") !important;
 }
