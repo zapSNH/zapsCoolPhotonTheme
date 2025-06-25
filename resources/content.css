@@ -1,10 +1,13 @@
 /* Content Pages */
-
+/* 
+	hello sine, this is a yummy file that you'll want to eat: 
+	url("./icons/download-icons.svg");
+*/
 /* firefox control(?) styling */
 @media (-moz-bool-pref: "uc.style-forms") {
 	select {
 		background-color: light-dark(#f9f9fa, #2a2a2e);
-		background-image: url(./icons/arrow-dropdown-12.svg);
+		background-image: url("./icons/arrow-dropdown-12.svg");
 		background-repeat: no-repeat;
 		background-position: right 2px center;
 		border-radius: 2px;
@@ -211,16 +214,16 @@
 		background-position: center !important;
 	}
 	.close-icon {
-		list-style-image: url(./icons/close-tab.svg) !important;
+		list-style-image: url("./icons/close-tab.svg") !important;
 	}
 	.button-delete {
-		background-image: url(./icons/delete.svg) !important;
+		background-image: url("./icons/delete.svg") !important;
 	}
 	.button-add {
-		background-image: url(./icons/add.svg) !important;
+		background-image: url("./icons/add.svg") !important;
 	}
 	.icon.icon-info-warning {
-		background-image: url(./icons/warning-16.svg) !important;
+		background-image: url("./icons/warning-16.svg") !important;
 	}
 	input[type="checkbox"] {
 		width: 20px !important;
@@ -228,15 +231,15 @@
 	}
 	input[type="checkbox"]:checked,
 	.button-save {
-		background-image: url(./icons/check.svg) !important;
+		background-image: url("./icons/check.svg") !important;
 		fill: #eee !important;
 	}
 	#about-config-search {
-		background-image: url(./icons/find-in-page.svg) !important;
+		background-image: url("./icons/find-in-page.svg") !important;
 	}
 	.title:has(#warningTitle),
 	body.certerror .title {
-		background-image: url(./icons/warning-16.svg) !important;
+		background-image: url("./icons/warning-16.svg") !important;
 	}
 	button-group button,
 	button[role="menuitem"] {
@@ -374,10 +377,10 @@
 		content: url("./icons/help.svg") !important;
 	}
 	.arrowhead {
-		list-style-image: url(./icons/arrow-dropdown-12.svg) !important;
+		list-style-image: url("./icons/arrow-dropdown-12.svg") !important;
 	}
 	.arrowhead.up {
-		list-style-image: url(./icons/arrow-up-12.svg) !important;
+		list-style-image: url("./icons/arrow-up-12.svg") !important;
 	}
 	/* screenshots-buttons */
 	.screenshots-button {
@@ -430,27 +433,27 @@
 	}
 	@media (-moz-bool-pref: "uc.floorp") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
-			content: url(./icons/forks/floorp/floorp-grayscale.svg) !important;
+			content: url("./icons/forks/floorp/floorp-grayscale.svg") !important;
 		}
 	}
 	@media (-moz-bool-pref: "uc.waterfox") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
-			content: url(./icons/forks/waterfox/waterfox-grayscale.svg) !important;
+			content: url("./icons/forks/waterfox/waterfox-grayscale.svg") !important;
 		}
 	}
 	@media (-moz-bool-pref: "uc.librewolf") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
-			content: url(./icons/forks/librewolf/librewolf-grayscale.svg) !important;
+			content: url("./icons/forks/librewolf/librewolf-grayscale.svg") !important;
 		}
 	}
 	@media (-moz-bool-pref: "uc.tor") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
-			content: url(./icons/forks/tor/tor-grayscale.svg) !important;
+			content: url("./icons/forks/tor/tor-grayscale.svg") !important;
 		}
 	}
 	@media (-moz-bool-pref: "uc.logo.quantum") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
-			content: url(./icons/quantum/aboutdebugging-firefox-logo.svg) !important;
+			content: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
 		}
 	}
 }
@@ -465,16 +468,16 @@
 	}
 	img {
 		&[src="chrome://browser/skin/thumb-down.svg"] {
-			content: url(./icons/socialblock.svg) !important;
+			content: url("./icons/socialblock.svg") !important;
 		}
 		&[src="chrome://browser/skin/controlcenter/3rdpartycookies.svg"] {
-			content: url(./icons/3rdpartycookies.svg) !important;
+			content: url("./icons/3rdpartycookies.svg") !important;
 		}
 		&[src="chrome://browser/skin/controlcenter/cryptominers.svg"] {
-			content: url(./icons/cryptominers.svg) !important;
+			content: url("./icons/cryptominers.svg") !important;
 		}
 		&[src="chrome://browser/skin/fingerprint.svg"] {
-			content: url(./icons/fingerprinters.svg) !important;
+			content: url("./icons/fingerprinters.svg") !important;
 		}
 	}
 }
@@ -503,7 +506,7 @@
 	}
 	.icon-settings,
 	.home-section .external-link {
-		background-image: url(./icons/settings.svg) !important;
+		background-image: url("./icons/settings.svg") !important;
 	}
 	.icon.icon-history-item {
 		background-image: url("./icons/history.svg") !important;
@@ -569,7 +572,7 @@
 		min-height: 16px;
 	}
 	.section-title span {
-		background-image: url(./icons/glyph-topsites.svg) !important;
+		background-image: url("./icons/glyph-topsites.svg") !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
 		padding-inline-start: 20px;
@@ -581,14 +584,14 @@
 		line-height: 16px !important;
 	}
 	section[data-section-id="topstories"] .section-title span {
-		background-image: url(./icons/pocket.svg) !important;
+		background-image: url("./icons/pocket.svg") !important;
 	}
 	section[data-section-id="highlights"] .section-title span {
-		background-image: url(./icons/glyph-highlights-16.svg) !important;
+		background-image: url("./icons/glyph-highlights-16.svg") !important;
 		background-size: 16px !important;
 	}
 	.top-site-outer .search-topsite {
-		background-image: url(./icons/find-in-page.svg) !important;
+		background-image: url("./icons/find-in-page.svg") !important;
 		-moz-context-properties: fill !important;
 		fill: white !important;
 	}
@@ -859,7 +862,7 @@
 			--newtab-contextual-text-primary-color: currentColor !important;
 			--newtab-button-text: currentColor !important;
 			background: fixed;
-			background-image: url(./background.png);
+			background-image: url("./background.png");
 			background-position: center;
 		}
 		.top-site-inner,
@@ -886,13 +889,13 @@
 	.search-wrapper .logo-and-wordmark .logo {
 		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
 		@media (-moz-bool-pref: "uc.logo.quantum-beta") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg) !important;
+			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 		}
 		@media (-moz-bool-pref: "uc.logo.quantum-dev") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-developer-edition.svg) !important;
+			--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg") !important;
 		}
 		@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg) !important;
+			--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
 		}
 		@media (-moz-bool-pref: "uc.logo.quantum") {
 			background-image: var(--quantum-logo) !important;
@@ -900,7 +903,7 @@
 	}
 	.search-wrapper .logo-and-wordmark .wordmark {
 		@media (-moz-bool-pref: "uc.logo.quantum") {
-			background-image: url(./icons/quantum/firefox-wordmark.svg) !important;
+			background-image: url("./icons/quantum/firefox-wordmark.svg") !important;
 		}
 	}
 }
@@ -1037,13 +1040,13 @@
 		list-style-image: url("./icons/extensions.svg") !important;
 	}
 	img[src="chrome://global/skin/icons/plugin.svg"] {
-		content: url(./icons/plugin.svg) !important;
+		content: url("./icons/plugin.svg") !important;
 	}
 	:root .help-icon {
 		list-style-image: url("./icons/help.svg") !important;
 	}
 	#trackingProtectionShield {
-		list-style-image: url(./icons/tracking-protection-big.svg) !important;
+		list-style-image: url("./icons/tracking-protection-big.svg") !important;
 	}
 	.indent {
 		-moz-context-properties: fill, fill-opacity !important;
@@ -1054,19 +1057,19 @@
 		display: none !important;
 	}
 	.extra-information-label.social-media-option {
-		list-style-image: url(./icons/socialblock-disabled.svg) !important;
+		list-style-image: url("./icons/socialblock-disabled.svg") !important;
 	}
 	.extra-information-label.cross-site-cookies-option {
-		list-style-image: url(./icons/3rdpartycookies-disabled.svg) !important;
+		list-style-image: url("./icons/3rdpartycookies-disabled.svg") !important;
 	}
 	.extra-information-label[class*="trackers-option"] {
-		list-style-image: url(./icons/tracker-image-disabled.svg) !important;
+		list-style-image: url("./icons/tracker-image-disabled.svg") !important;
 	}
 	.extra-information-label.cryptominers-option {
-		list-style-image: url(./icons/cryptominers-disabled.svg) !important;
+		list-style-image: url("./icons/cryptominers-disabled.svg") !important;
 	}
 	.extra-information-label.fingerprinters-option {
-		list-style-image: url(./icons/fingerprinters-disabled.svg) !important;
+		list-style-image: url("./icons/fingerprinters-disabled.svg") !important;
 	}
 	.content-blocking-checkbox .checkbox-icon {
 		display: block !important;
@@ -1104,38 +1107,38 @@
 		list-style-image: url("./icons/reload.svg") !important;
 	}
 	.web-appearance-choice img {
-		content: url(./icons/web-appearance-light.svg) !important;
+		content: url("./icons/web-appearance-light.svg") !important;
 	}
 	.web-appearance-choice.dark img {
-		content: url(./icons/web-appearance-dark.svg) !important;
+		content: url("./icons/web-appearance-dark.svg") !important;
 	}
 	.face-smile::before,
 	.face-sad::before {
 		font-weight: 100 !important;
 	}
 	.geo-icon {
-		list-style-image: url(./icons/geo.svg) !important;
+		list-style-image: url("./icons/geo.svg") !important;
 	}
 	.xr-icon {
-		list-style-image: url(./icons/vr.svg) !important;
+		list-style-image: url("./icons/vr.svg") !important;
 	}
 	.camera-icon {
-		list-style-image: url(./icons/camera.svg) !important;
+		list-style-image: url("./icons/camera.svg") !important;
 	}
 	.microphone-icon {
-		list-style-image: url(./icons/microphone.svg) !important;
+		list-style-image: url("./icons/microphone.svg") !important;
 	}
 	.speaker-icon {
-		list-style-image: url(./icons/tab-audio-playing.svg) !important;
+		list-style-image: url("./icons/tab-audio-playing.svg") !important;
 	}
 	.desktop-notification-icon {
-		list-style-image: url(./icons/desktop-notification.svg) !important;
+		list-style-image: url("./icons/desktop-notification.svg") !important;
 	}
 	.autoplay-icon {
-		list-style-image: url(./icons/autoplay-media.svg) !important;
+		list-style-image: url("./icons/autoplay-media.svg") !important;
 	}
 	.addon-badge-private-browsing-allowed {
-		background-image: url(./icons/private-browsing.svg) !important;
+		background-image: url("./icons/private-browsing.svg") !important;
 	}
 	#homeContentsGroup .checkbox-icon {
 		opacity: 0;
@@ -1194,7 +1197,7 @@
 		content: url("./icons/menu.svg") !important;
 	}
 	.fxaLoginRejectedWarning {
-		list-style-image: url(./icons/warning-16.svg) !important;
+		list-style-image: url("./icons/warning-16.svg") !important;
 	}
 	@media (prefers-color-scheme: dark) {
 		* {
@@ -1217,36 +1220,23 @@
 }
 @-moz-document url("about:addons") {
 	img[src="chrome://global/skin/icons/settings.svg"] {
-		content: url(./icons/settings.svg) !important;
+		content: url("./icons/settings.svg") !important;
 	}
 	.more-options-button {
-		background-image: url(./icons/settings.svg) !important
-	
-	
-	
-	
+		background-image: url("./icons/settings.svg") !important;
 	}
 	addon-card .more-options-button {
-		background-image: url(./icons/more.svg) !important
-	
-	
-	
-	
+		background-image: url("./icons/more.svg") !important;
 	}
 	#help-button img {
-		content: url(./icons/help.svg) !important;
+		content: url("./icons/help.svg") !important;
 	}
 	.addon-permissions-list > li.permission-checked {
 		background-image: url("./icons/check.svg") !important;
-		;
 	}
 	.category {
 		&[name="discover"] {
 			background-image: url("./icons/glyph-highlights-16.svg") !important
-		
-		
-		
-		
 		}
 		&[name="extension"] {
 			background-image: url("./icons/extensions.svg") !important;
@@ -1377,7 +1367,7 @@
 		&::before {
 			content: "";
 			position: absolute;
-			background-image: url(./icons/glyph-topsites.svg);
+			background-image: url("./icons/glyph-topsites.svg");
 			background-repeat: no-repeat;
 			-moz-context-properties: fill;
 			fill: currentColor;
@@ -1401,19 +1391,19 @@
 		}
 	}
 	fxview-category-button[name="recentbrowsing"]::before {
-		background-image: url(./icons/glyph-highlights-16.svg);
+		background-image: url("./icons/glyph-highlights-16.svg");
 	}
 	fxview-category-button[name="opentabs"]::before {
-		background-image: url(./icons/tab.svg);
+		background-image: url("./icons/tab.svg");
 	}
 	fxview-category-button[name="recentlyclosed"]::before {
-		background-image: url(./icons/tab-close.svg);
+		background-image: url("./icons/tab-close.svg");
 	}
 	fxview-category-button[name="syncedtabs"]::before {
-		background-image: url(./icons/sync.svg);
+		background-image: url("./icons/sync.svg");
 	}
 	fxview-category-button[name="history"]::before {
-		background-image: url(./icons/history.svg);
+		background-image: url("./icons/history.svg");
 	}
 	/* Firefox 125 and above */
 	.page-nav-icon {
@@ -1422,28 +1412,28 @@
 		translate: 2px;
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentbrowsing.svg"] {
-		content: url(./icons/glyph-highlights-16.svg);
+		content: url("./icons/glyph-highlights-16.svg");
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-opentabs.svg"] {
-		content: url(./icons/tab.svg);
+		content: url("./icons/tab.svg");
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-recentlyclosed.svg"] {
-		content: url(./icons/tab-close.svg);
+		content: url("./icons/tab-close.svg");
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-syncedtabs.svg"] {
-		content: url(./icons/sync.svg);
+		content: url("./icons/sync.svg");
 	}
 	.page-nav-icon[src="chrome://browser/content/firefoxview/view-history.svg"] {
-		content: url(./icons/history.svg);
+		content: url("./icons/history.svg");
 	}
 	#fxview-tab-row-secondary-button {
-		--button-icon: url(./icons/close.svg) !important;
+		--button-icon: url("./icons/close.svg") !important;
 		&[aria-haspopup] {
-			--button-icon: url(./icons/more.svg) !important;
+			--button-icon: url("./icons/more.svg") !important;
 		}
 	}
 	#fxview-tab-row-tertiary-button {
-		--button-icon: url(./icons/close.svg) !important;
+		--button-icon: url("./icons/close.svg") !important;
 	}
 	button,
 	span {
@@ -1461,19 +1451,19 @@
 /* lockwise */
 @-moz-document url-prefix("about:logins") {
 	img[src="chrome://global/skin/icons/delete.svg"] {
-		content: url(./icons/delete.svg);
+		content: url("./icons/delete.svg");
 	}
 	img[src="chrome://global/skin/icons/plus.svg"] {
-		content: url(./icons/add.svg);
+		content: url("./icons/add.svg");
 	}
 	input.reveal-password-checkbox {
-		background: url(./icons/show-password.svg) 1px 1px no-repeat !important;
+		background: url("./icons/show-password.svg") 1px 1px no-repeat !important;
 	}
 	input.reveal-password-checkbox:checked {
-		background: url(./icons/hide-password.svg) 1px 1px no-repeat !important;
+		background: url("./icons/hide-password.svg") 1px 1px no-repeat !important;
 	}
 	.menuitem-import-browser {
-		background-image: url(./icons/import.svg) !important;
+		background-image: url("./icons/import.svg") !important;
 	}
 	.menuitem-import-file {
 		background-image: url("./icons/save.svg") !important;
@@ -1589,49 +1579,49 @@
 /* screw regex */
 @-moz-document regexp(".+\.pdf(?=$|[?#]).*") {
 	:root {
-		--loading-icon: url(./icons/pdfjs/loading.svg) !important;
-		/*--treeitem-expanded-icon: url(./icons/pdfjs/treeitem-expanded.svg) !important;
-		--treeitem-collapsed-icon: url(./icons/pdfjs/treeitem-collapsed.svg) !important;*/
-		--toolbarButton-editorFreeText-icon: url(./icons/pdfjs/toolbarButton-editorFreeText-1.svg) !important;
-		--toolbarButton-editorInk-icon: url(./icons/pdfjs/toolbarButton-editorInk-1.svg) !important;
-		--toolbarButton-editorStamp-icon: url(./icons/pdfjs/toolbarButton-editorStamp-1.svg) !important;
-		--toolbarButton-editorSignature-icon: url(./icons/pdfjs/toolbarButton-editorSignature.svg) !important;
-		--toolbarButton-menuArrow-icon: url(./icons/pdfjs/toolbarButton-menuArrow.svg) !important;
-		--toolbarButton-sidebarToggle-icon: url(./icons/pdfjs/toolbarButton-sidebarToggle.svg) !important;
-		--toolbarButton-secondaryToolbarToggle-icon: url(./icons/pdfjs/toolbarButton-secondaryToolbarToggle.svg) !important;
-		--toolbarButton-pageUp-icon: url(./icons/pdfjs/toolbarButton-pageUp.svg) !important;
-		--toolbarButton-pageDown-icon: url(./icons/pdfjs/toolbarButton-pageDown.svg) !important;
-		--toolbarButton-zoomOut-icon: url(./icons/pdfjs/toolbarButton-zoomOut.svg) !important;
-		--toolbarButton-zoomIn-icon: url(./icons/pdfjs/toolbarButton-zoomIn.svg) !important;
-		--toolbarButton-presentationMode-icon: url(./icons/pdfjs/toolbarButton-presentationMode.svg) !important;
-		--toolbarButton-print-icon: url(./icons/pdfjs/toolbarButton-print.svg) !important;
-		--toolbarButton-download-icon: url(./icons/pdfjs/toolbarButton-download.svg) !important;
-		--toolbarButton-bookmark-icon: url(./icons/pdfjs/toolbarButton-bookmark.svg) !important;
-		--toolbarButton-viewThumbnail-icon: url(./icons/pdfjs/toolbarButton-viewThumbnail.svg) !important;
-		--toolbarButton-viewOutline-icon: url(./icons/pdfjs/toolbarButton-viewOutline.svg) !important;
-		--toolbarButton-viewAttachments-icon: url(./icons/pdfjs/toolbarButton-viewAttachments.svg) !important;
-		--toolbarButton-viewLayers-icon: url(./icons/pdfjs/toolbarButton-viewLayers.svg) !important;
-		--toolbarButton-currentOutlineItem-icon: url(./icons/pdfjs/toolbarButton-currentOutlineItem.svg) !important;
-		--toolbarButton-search-icon: url(./icons/pdfjs/toolbarButton-search.svg) !important;
-		--findbarButton-previous-icon: url(./icons/pdfjs/findbarButton-previous.svg) !important;
-		--findbarButton-next-icon: url(./icons/pdfjs/findbarButton-next.svg) !important;
-		--secondaryToolbarButton-firstPage-icon: url(./icons/pdfjs/secondaryToolbarButton-firstPage.svg) !important;
-		--secondaryToolbarButton-lastPage-icon: url(./icons/pdfjs/secondaryToolbarButton-lastPage.svg) !important;
-		--secondaryToolbarButton-rotateCcw-icon: url(./icons/pdfjs/secondaryToolbarButton-rotateCcw.svg) !important;
-		--secondaryToolbarButton-rotateCw-icon: url(./icons/pdfjs/secondaryToolbarButton-rotateCw.svg) !important;
-		--secondaryToolbarButton-selectTool-icon: url(./icons/pdfjs/secondaryToolbarButton-selectTool.svg) !important;
-		--secondaryToolbarButton-handTool-icon: url(./icons/pdfjs/secondaryToolbarButton-handTool.svg) !important;
-		--secondaryToolbarButton-scrollPage-icon: url(./icons/pdfjs/secondaryToolbarButton-scrollPage-1.svg) !important;
-		--secondaryToolbarButton-scrollVertical-icon: url(./icons/pdfjs/secondaryToolbarButton-scrollVertical.svg) !important;
-		--secondaryToolbarButton-scrollHorizontal-icon: url(./icons/pdfjs/secondaryToolbarButton-scrollHorizontal.svg) !important;
-		--secondaryToolbarButton-scrollWrapped-icon: url(./icons/pdfjs/secondaryToolbarButton-scrollWrapped.svg) !important;
-		--secondaryToolbarButton-spreadNone-icon: url(./icons/pdfjs/secondaryToolbarButton-spreadNone.svg) !important;
-		--secondaryToolbarButton-spreadOdd-icon: url(./icons/pdfjs/secondaryToolbarButton-spreadOdd.svg) !important;
-		--secondaryToolbarButton-spreadEven-icon: url(./icons/pdfjs/secondaryToolbarButton-spreadEven.svg) !important;
-		--secondaryToolbarButton-documentProperties-icon: url(./icons/pdfjs/secondaryToolbarButton-documentProperties.svg) !important;
-		--editorParams-stampAddImage-icon: url(./icons/pdfjs/toolbarButton-zoomIn.svg) !important;
-		--toolbarButton-editorHighlight-icon: url(./icons/pdfjs/toolbarButton-editorHighlight.svg) !important;
-		--clear-signature-button-icon: url(./icons/delete.svg) !important;
+		--loading-icon: url("./icons/pdfjs/loading.svg") !important;
+		/*--treeitem-expanded-icon: url("./icons/pdfjs/treeitem-expanded.svg") !important;
+		--treeitem-collapsed-icon: url("./icons/pdfjs/treeitem-collapsed.svg") !important;*/
+		--toolbarButton-editorFreeText-icon: url("./icons/pdfjs/toolbarButton-editorFreeText-1.svg") !important;
+		--toolbarButton-editorInk-icon: url("./icons/pdfjs/toolbarButton-editorInk-1.svg") !important;
+		--toolbarButton-editorStamp-icon: url("./icons/pdfjs/toolbarButton-editorStamp-1.svg") !important;
+		--toolbarButton-editorSignature-icon: url("./icons/pdfjs/toolbarButton-editorSignature.svg") !important;
+		--toolbarButton-menuArrow-icon: url("./icons/pdfjs/toolbarButton-menuArrow.svg") !important;
+		--toolbarButton-sidebarToggle-icon: url("./icons/pdfjs/toolbarButton-sidebarToggle.svg") !important;
+		--toolbarButton-secondaryToolbarToggle-icon: url("./icons/pdfjs/toolbarButton-secondaryToolbarToggle.svg") !important;
+		--toolbarButton-pageUp-icon: url("./icons/pdfjs/toolbarButton-pageUp.svg") !important;
+		--toolbarButton-pageDown-icon: url("./icons/pdfjs/toolbarButton-pageDown.svg") !important;
+		--toolbarButton-zoomOut-icon: url("./icons/pdfjs/toolbarButton-zoomOut.svg") !important;
+		--toolbarButton-zoomIn-icon: url("./icons/pdfjs/toolbarButton-zoomIn.svg") !important;
+		--toolbarButton-presentationMode-icon: url("./icons/pdfjs/toolbarButton-presentationMode.svg") !important;
+		--toolbarButton-print-icon: url("./icons/pdfjs/toolbarButton-print.svg") !important;
+		--toolbarButton-download-icon: url("./icons/pdfjs/toolbarButton-download.svg") !important;
+		--toolbarButton-bookmark-icon: url("./icons/pdfjs/toolbarButton-bookmark.svg") !important;
+		--toolbarButton-viewThumbnail-icon: url("./icons/pdfjs/toolbarButton-viewThumbnail.svg") !important;
+		--toolbarButton-viewOutline-icon: url("./icons/pdfjs/toolbarButton-viewOutline.svg") !important;
+		--toolbarButton-viewAttachments-icon: url("./icons/pdfjs/toolbarButton-viewAttachments.svg") !important;
+		--toolbarButton-viewLayers-icon: url("./icons/pdfjs/toolbarButton-viewLayers.svg") !important;
+		--toolbarButton-currentOutlineItem-icon: url("./icons/pdfjs/toolbarButton-currentOutlineItem.svg") !important;
+		--toolbarButton-search-icon: url("./icons/pdfjs/toolbarButton-search.svg") !important;
+		--findbarButton-previous-icon: url("./icons/pdfjs/findbarButton-previous.svg") !important;
+		--findbarButton-next-icon: url("./icons/pdfjs/findbarButton-next.svg") !important;
+		--secondaryToolbarButton-firstPage-icon: url("./icons/pdfjs/secondaryToolbarButton-firstPage.svg") !important;
+		--secondaryToolbarButton-lastPage-icon: url("./icons/pdfjs/secondaryToolbarButton-lastPage.svg") !important;
+		--secondaryToolbarButton-rotateCcw-icon: url("./icons/pdfjs/secondaryToolbarButton-rotateCcw.svg") !important;
+		--secondaryToolbarButton-rotateCw-icon: url("./icons/pdfjs/secondaryToolbarButton-rotateCw.svg") !important;
+		--secondaryToolbarButton-selectTool-icon: url("./icons/pdfjs/secondaryToolbarButton-selectTool.svg") !important;
+		--secondaryToolbarButton-handTool-icon: url("./icons/pdfjs/secondaryToolbarButton-handTool.svg") !important;
+		--secondaryToolbarButton-scrollPage-icon: url("./icons/pdfjs/secondaryToolbarButton-scrollPage-1.svg") !important;
+		--secondaryToolbarButton-scrollVertical-icon: url("./icons/pdfjs/secondaryToolbarButton-scrollVertical.svg") !important;
+		--secondaryToolbarButton-scrollHorizontal-icon: url("./icons/pdfjs/secondaryToolbarButton-scrollHorizontal.svg") !important;
+		--secondaryToolbarButton-scrollWrapped-icon: url("./icons/pdfjs/secondaryToolbarButton-scrollWrapped.svg") !important;
+		--secondaryToolbarButton-spreadNone-icon: url("./icons/pdfjs/secondaryToolbarButton-spreadNone.svg") !important;
+		--secondaryToolbarButton-spreadOdd-icon: url("./icons/pdfjs/secondaryToolbarButton-spreadOdd.svg") !important;
+		--secondaryToolbarButton-spreadEven-icon: url("./icons/pdfjs/secondaryToolbarButton-spreadEven.svg") !important;
+		--secondaryToolbarButton-documentProperties-icon: url("./icons/pdfjs/secondaryToolbarButton-documentProperties.svg") !important;
+		--editorParams-stampAddImage-icon: url("./icons/pdfjs/toolbarButton-zoomIn.svg") !important;
+		--toolbarButton-editorHighlight-icon: url("./icons/pdfjs/toolbarButton-editorHighlight.svg") !important;
+		--clear-signature-button-icon: url("./icons/delete.svg") !important;
 	}
 	:is(#sidebarToggle,
 	#sidebarToggleButton)::before {
@@ -1830,7 +1820,7 @@
 		border-radius: var(--photon-primary-border-radius) !important;
 	}
 	#close-button {
-		background-image: url(./icons/close.svg) !important;
+		background-image: url("./icons/close.svg") !important;
 	}
 	.price {
 		content: url("./icons/price.svg") !important;
@@ -1851,7 +1841,7 @@
 		column-gap: 0.67em !important;
 	}
 	shopping-message-bar {
-		--info-icon: url(./icons/info.svg);
+		--info-icon: url("./icons/info.svg");
 	}
 	.shopping-message-bar:not(.analysis-in-progress,
 	#reanalysis-in-progress-message) .icon {
@@ -1911,22 +1901,22 @@
 @-moz-document url-prefix("about:neterror?e=connectionFailure"), url-prefix("about:neterror?e=netInterrupt"), url-prefix("about:neterror?e=netReset"), url-prefix("about:neterror?e=netTimeout"), url-prefix("about:neterror?e=netOffline"), url-prefix("about:restartrequired"), url("chrome://browser/content/aboutRestartRequired.xhtml")
 {
 	:root {
-		--uc-error-llustration: url(./icons/error-connection-failure.svg);
+		--uc-error-llustration: url("./icons/error-connection-failure.svg");
 	}
 }
 @-moz-document url-prefix("about:neterror?e=dnsNotFound") {
 	:root {
-		--uc-error-llustration: url(./icons/error-server-not-found.svg);
+		--uc-error-llustration: url("./icons/error-server-not-found.svg");
 	}
 }
 @-moz-document url-prefix("about:neterror?e=blockedByPolicy"), url-prefix("about:neterror?e=deniedPortAccess"), url-prefix("about:neterror?e=malformedURI"), url-prefix("about:neterror?e=unknownProtocolFound") {
 	:root {
-		--uc-error-llustration: url(./icons/error-malformed-url.svg);
+		--uc-error-llustration: url("./icons/error-malformed-url.svg");
 	}
 }
 @-moz-document url-prefix("about:neterror?e=clockSkewError"), url-prefix("about:neterror?e=nssFailure") {
 	:root {
-		--uc-error-llustration: url(./icons/blue-berror.svg);
+		--uc-error-llustration: url("./icons/blue-berror.svg");
 	}
 	#errorPageContainer,
 	.neterror > .container {
@@ -1936,7 +1926,7 @@
 @-moz-document url("about:sessionrestore"), url("chrome://browser/content/aboutSessionRestore.xhtml")
 {
 	:root {
-		--uc-error-llustration: url(./icons/error-session-restore.svg);
+		--uc-error-llustration: url("./icons/error-session-restore.svg");
 	}
 }
 @-moz-document url-prefix("about:neterror?e=fileNotFound") {
@@ -1968,13 +1958,13 @@
 {
 	@media (min-width: 970px) {
 		.title {
-			background-image: url(./icons/welcome-back.svg) !important;
+			background-image: url("./icons/welcome-back.svg") !important;
 		}
 	}
 }
 @-moz-document url-prefix("about:preferences") {
 	#no-results-message::after {
-		content: url(./icons/no-search-results.svg);
+		content: url("./icons/no-search-results.svg");
 		width: 380px;
 		height: 293px;
 		margin-top: 64px;

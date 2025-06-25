@@ -741,7 +741,7 @@ tooltip {
 	content: "";
 	width: 16px;
 	height: 16px;
-	background: no-repeat url(./icons/login.svg);
+	background: no-repeat url("./icons/login.svg");
 	margin-inline-start: 12px;
 	margin-inline-end: 4px;
 	-moz-context-properties: fill;
