@@ -1,7 +1,7 @@
 /* zap's photon theme userContent */
 /* will be much less documented */
-@import url(./resources/content.css);
+@import url("./resources/content.css");
 
 /* Your custom CSS files */
 /* Not available for the WebExtension version */
-/* @import url(./customContent.css); */
+/* @import url("./customContent.css"); */

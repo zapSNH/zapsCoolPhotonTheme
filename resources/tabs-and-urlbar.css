@@ -161,10 +161,10 @@ credits to phroton for some of this stuff */
 	-moz-context-properties: fill;
 }
 .tab-icon-overlay[pictureinpicture][soundplaying] {
-	list-style-image: url(./icons/pictureinpicture-sound.svg) !important;
+	list-style-image: url("./icons/pictureinpicture-sound.svg") !important;
 }
 .tab-icon-overlay[pictureinpicture][muted] {
-	list-style-image: url(./icons/pictureinpicture-muted2.svg) !important;
+	list-style-image: url("./icons/pictureinpicture-muted2.svg") !important;
 }
 /* Removes Proton's own border around the tab */
 .tab-background:is([selected],
