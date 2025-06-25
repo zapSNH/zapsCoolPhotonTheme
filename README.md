@@ -1,8 +1,9 @@
 <h1 align="center">
-	<img src="https://github.com/user-attachments/assets/56fb2e36-35cc-43e8-9ea1-ca804a75dc5e" alt="oversized logowordmark" title="oversized logowordmark">
+	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="oversized logowordmark" title="oversized logowordmark">
 </h1>
+
 <p align="center">
-	A Firefox userChrome theme designed to be as faithful to Firefox Photon (specifically Firefox 87) as possible.
+	A userChrome theme for Firefox-based browsers designed to be as <b>faithful</b> to Firefox Photon (specifically Firefox 87) as possible.
 </p>
 
 ![okay](https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2)
@@ -21,10 +22,10 @@ Includes forks of Firefox (Waterfox, Floorp, etc.).
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **128esr** | ✔️ | ✔️ | ✔️ | |
-| **138** | ✔️ | ✔️ | ✔️ | |
-| **140 nightly** | ✔️ | ✔️ | ? | |
+| **139** | ✔️ | ✔️ | ✔️ | |
+| **141 nightly** | ✔️ | ✔️ | ? | |
 
-See the [Forks](#forks) section for more information about Firefox forks.
+See the [Forks](#forks-) section for more information about Firefox forks.
 
 </div>
 
@@ -69,7 +70,7 @@ Download the release for your browser version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 138](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v138-hotfix) **(recommended)**             | [Firefox 138](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 139](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v138-hotfix) **(recommended)**             | [Firefox 139](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v138-hotfix) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) (download the ESR version) | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
@@ -152,6 +153,8 @@ You're done! 🎉
 
 # Forks 🍴
 If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
+
+It is recommended to disable any UI styles set by the browser to prevent conflicts.
 | Pref | Value | Browser |
 |:-:|:-:|:-:|
 | `uc.waterfox` | `true` | Waterfox |
