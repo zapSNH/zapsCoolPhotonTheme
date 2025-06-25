@@ -138,7 +138,7 @@
 		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		&:not([type="radio"]) {
 			&:checked[type="checkbox"] {
-				background-image: url(./icons/check.svg);
+				background-image: url("./icons/check.svg");
 				background-position: center;
 				background-size: 12px;
 				background-repeat: no-repeat;
@@ -188,7 +188,7 @@
 	input[type="radio"] {
 		&:checked {
 			background-color: var(--photon-accent-dark);
-			background-image: url(./icons/radio.svg);
+			background-image: url("./icons/radio.svg");
 			fill: white !important;
 			-moz-context-properties: fill;
 			background-position: -1px -1px;
@@ -217,40 +217,40 @@
 	}
 	.icon[src="chrome://global/skin/icons/reload.svg"],
 	img[src="chrome://global/skin/icons/reload.svg"] {
-		content: url(./icons/reload.svg) !important;
+		content: url("./icons/reload.svg") !important;
 	}
 	img[src="chrome://browser/skin/downloads/downloads.svg"] {
-		content: url(./icons/download-icons.svg#arrow-with-bar) !important;
+		content: url("./icons/download-icons.svg#arrow-with-bar") !important;
 	}
 	img[src="chrome://global/skin/icons/edit-copy.svg"] {
-		content: url(./icons/edit-copy.svg) !important;
+		content: url("./icons/edit-copy.svg") !important;
 	}
 	img[src="chrome://global/skin/icons/close.svg"] {
-		content: url(./icons/close.svg) !important;
+		content: url("./icons/close.svg") !important;
 	}
 	img[src="chrome://global/skin/icons/more.svg"] {
-		content: url(./icons/more.svg) !important;
+		content: url("./icons/more.svg") !important;
 	}
 }
 /* About Dialog */
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
 	:root {
-		--quantum-logo: url(./icons/quantum/firefox-logo.svg);
-		--quantum-wordmark: url(./icons/quantum/about-wordmark.svg);
+		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
+		--quantum-wordmark: url("./icons/quantum/about-wordmark.svg");
 		--wordmark-size: 300px 38px;
 		--wordmark-position: 0px 16px;
 		@media (-moz-bool-pref: "uc.logo.quantum-beta") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-beta.svg);
+			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg");
 		}
 		@media (-moz-bool-pref: "uc.logo.quantum-dev") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-developer-edition.svg);
-			--quantum-wordmark: url(./icons/quantum/about-wordmark-de.svg);
+			--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg");
+			--quantum-wordmark: url("./icons/quantum/about-wordmark-de.svg");
 			--wordmark-size: 153.29px 72px;
 			--wordmark-position: 0px 0px;
 		}
 		@media (-moz-bool-pref: "uc.logo.quantum-nightly") {
-			--quantum-logo: url(./icons/quantum/firefox-logo-nightly.svg);
-			--quantum-wordmark: url(./icons/quantum/about-wordmark-nightly.svg);
+			--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg");
+			--quantum-wordmark: url("./icons/quantum/about-wordmark-nightly.svg");
 			--wordmark-size: 270px 48px;
 		}
 	}
@@ -450,16 +450,16 @@
 		stroke: currentColor !important;
 	}
 	#generalTab .radio-icon {
-		background-image: url(./icons/document.svg) !important;
+		background-image: url("./icons/document.svg") !important;
 	}
 	#mediaTab .radio-icon {
-		background-image: url(./icons/tracker-image.svg) !important;
+		background-image: url("./icons/tracker-image.svg") !important;
 	}
 	#permTab .radio-icon {
-		background-image: url(./icons/permissions.svg) !important;
+		background-image: url("./icons/permissions.svg") !important;
 	}
 	#securityTab .radio-icon {
-		background-image: url(./icons/security-state-secure.svg) !important;
+		background-image: url("./icons/security-state-secure.svg") !important;
 	}
 	input {
 		max-width: calc(100% - 23px) !important;
@@ -542,11 +542,11 @@
 		}
 	}
 	input[type="checkbox"]:checked {
-		background-image: url(./icons/check.svg) !important;
+		background-image: url("./icons/check.svg") !important;
 		background-size: 16px !important;
 	}
 	input[type="radio"]:checked {
-		background-image: url(./icons/radio.svg) !important;
+		background-image: url("./icons/radio.svg") !important;
 		background-size: 20px !important;
 	}
 	#printer-picker {
@@ -974,7 +974,7 @@
 			content: "";
 			min-width: 30px;
 			min-height: 30px;
-			background: url(./icons/private-browsing.svg) no-repeat;
+			background: url("./icons/private-browsing.svg") no-repeat;
 			bottom: 2px;
 			inset-inline-end: -32px;
 		}
@@ -1064,7 +1064,7 @@
 				content: "";
 				min-width: 30px;
 				min-height: 30px;
-				background: url(./icons/private-browsing.svg) no-repeat;
+				background: url("./icons/private-browsing.svg") no-repeat;
 				bottom: 2px;
 				inset-inline-end: 4px;
 			}
