@@ -24,9 +24,9 @@ jobs:
         git config user.name 'github-actions[bot]'
         git config user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: zip files & stash
+    - name: zip esr files & stash
       run: |
-        rm -rf ./.github
+        rm -rf ./.github theme.json preferences.json
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip *
         git add zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
         git stash push zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
@@ -49,7 +49,7 @@ jobs:
     - name: zip files & release notes
       run: |
         python3 .github/workflows/create_relnotes.py ${{ github.ref_name }} ${{ steps.previoustag.outputs.tag }} ${{ steps.webexttag.outputs.e_tag }}
-        rm -rf ./.github
+        rm -rf ./.github theme.json preferences.json
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}.zip * -x "relnotes.md"
         git stash pop
         
