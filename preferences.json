@@ -4,6 +4,10 @@
     "label": "Fork"
   },
   {
+    "type": "text",
+    "label": "For browsers based on Firefox 137 or below, you'll need to set the fork manually in about:config like this: https://github.com/zapSNH/zapsCoolPhotonTheme?tab=readme-ov-file#forks-"
+  },
+  {
     "type": "dropdown",
     "property": "uc.forks",
     "value": "string",
