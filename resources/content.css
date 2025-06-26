@@ -1033,6 +1033,9 @@
 	#category-ssb > .category-icon {
 		list-style-image: url("./icons/pwa-manage.svg") !important;
 	}
+	#category-sine-mods > .category-icon {
+		list-style-image: url("./icons/sine.svg") !important;
+	}
 	.profiles-icon {
 		list-style-image: url("./icons/findFile.svg") !important;
 	}

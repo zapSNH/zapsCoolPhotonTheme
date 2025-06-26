@@ -1,0 +1,156 @@
+[
+  {
+    "type": "separator",
+    "label": "Fork"
+  },
+  {
+    "type": "dropdown",
+    "property": "uc.forks",
+    "value": "string",
+    "label": "Select a fork",
+    "default": "firefox",
+    "placeholder": false,
+    "options": [
+      { "label": "Firefox", "value": "firefox" },
+      { "label": "Waterfox", "value": "waterfox" },
+      { "label": "Floorp", "value": "floorp" },
+      { "label": "LibreWolf", "value": "librewolf" },
+      { "label": "Tor Browser", "value": "tor" }
+    ]
+  },
+
+  {
+    "type": "separator",
+    "label": "Tabs"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.bottom-tabs",
+    "label": "Bottom tabs"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.bottom-tabs.bookmark-on-top",
+    "label": "Bottom tabs with bookmarks bar on top"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.sidebery",
+    "label": "Vertical tabs with Sidebery"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.theme.tab-color-same-as-navbar",
+    "label": "Tab color takes the navbar color"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.theme.navbar-color-same-as-tab",
+    "label": "Navbar color takes the tab color"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.full-width-tabs",
+    "label": "Full width tabs"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.revert-all-tabs-behavior",
+    "label": "Only show the all tabs button when the tab bar is overflowing just like pre-Photon/early-Proton"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.always-show-close-button",
+    "label": "Always show the tab close button even when the tabs are small"
+  },
+
+  {
+    "type": "separator",
+    "label": "URLBar"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.reduced-megabar",
+    "label": "Slightly smaller Proton-sized megabar"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.no-megabar",
+    "label": "No megabar"
+  },
+
+  {
+    "type": "separator",
+    "label": "Menus"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.contextmenu.win-10",
+    "label": "Windows 10 styled menu"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.contextmenu.win-11",
+    "label": "Windows 11 styled menu"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.contextmenu.dark",
+    "label": "Dark context menu w/ Windows 10/11 styled context menu"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.contextmenu.light",
+    "label": "Light context menu w/ Windows 10/11 styled context menu"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.popups.transparent",
+    "label": "Transparent menus for Windows 11 and macOS (requires widget.windows.mica.popups set to 2 for Windows 11)"
+  },
+
+  {
+    "type": "separator",
+    "label": "Logos"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.logo.quantum",
+    "label": "Use the pre-Firefox 70 quantum logo everywhere instead of the current one"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.logo.quantum.beta",
+    "label": "Use the Firefox quantum beta logo everywhere"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.logo.quantum.dev",
+    "label": "Use the Firefox quantum developer edition logo everywhere"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.logo.quantum.nightly",
+    "label": "Use the Firefox quantum nightly logo everywhere"
+  },
+
+  {
+    "type": "separator",
+    "label": "Other"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.newtab.background",
+    "label": "New tab background"
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.style-forms",
+    "label": "Themes HTML Forms. May break some stuff."
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.toolbar.transparency",
+    "label": "Makes the toolbar transparent to allow transparency effects such as Mica or Acrylic (effects can be configured by using programs such as MicaForEveryone)"
+  }
+]
