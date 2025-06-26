@@ -5,16 +5,16 @@
 :root {
 	--icons-css: 1px;
 	--grayscale-logo: url("./icons/aboutdebugging-firefox-logo.svg") !important;
-	@media -moz-pref("uc.floorp") {
+	@media -moz-pref("uc.floorp") or -moz-pref("uc.forks", "floorp") {
 		--grayscale-logo: url("./icons/forks/floorp/floorp-grayscale.svg") !important;
 	}
-	@media -moz-pref("uc.waterfox") {
+	@media -moz-pref("uc.waterfox") or -moz-pref("uc.forks", "waterfox") {
 		--grayscale-logo: url("./icons/forks/waterfox/waterfox-grayscale.svg") !important;
 	}
-	@media -moz-pref("uc.librewolf") {
+	@media -moz-pref("uc.librewolf") or -moz-pref("uc.forks", "librewolf") {
 		--grayscale-logo: url("./icons/forks/librewolf/librewolf-grayscale.svg") !important;
 	}
-	@media -moz-pref("uc.tor") {
+	@media -moz-pref("uc.tor") or -moz-pref("uc.forks", "tor") {
 		--grayscale-logo: url("./icons/forks/tor/tor-grayscale.svg") !important;
 	}
 	/* Legacy Logos */
@@ -23,13 +23,13 @@
 		--grayscale-logo: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
 	}
 	@media -moz-pref("uc.logo.quantum-beta") {
-		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg");
+		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 	}
 	@media -moz-pref("uc.logo.quantum-dev") {
-		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg");
+		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg") !important;
 	}
 	@media -moz-pref("uc.logo.quantum-nightly") {
-		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg");
+		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
 	}
 	&[fxastatus="login-failed"] {
 		--avatar-image-url: url("./icons/avatar.svg") !important;
