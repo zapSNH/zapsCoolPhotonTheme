@@ -161,6 +161,7 @@ It is recommended to disable any UI styles set by the browser to prevent conflic
 | `uc.floorp` | `true` | Floorp |
 | `uc.librewolf` | `true` | LibreWolf |
 | `uc.tor` | `true` | Tor Browser |
+| `uc.mullvad` | `true` | Mullvad Browser |
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
