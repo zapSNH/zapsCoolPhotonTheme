@@ -31,14 +31,15 @@ See the [Forks](#forks-) section for more information about Firefox forks.
 
 
 ## Installation
-There are three (3) ways of installing this theme.
+There are four (4) ways of installing this theme.
 * [Manual Installation 🛠](#manual-installation-)
+* [Sine 🪐](#sine-)
 * [Extension 🧩](#extension-)
 * [Git :octocat:](#git-octocat)
   
 ____
 ### Manual Installation 🛠
-Installable on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating.
+Installable on all editions of Firefox (and forks). Configuration is handled in `about:config`. There is no auto-updating.
 
 Open `about:config` and set:
 | Pref | Value | Description |
@@ -99,7 +100,20 @@ Restart Firefox.
 You're done! 🎉
 
 ____
+### Sine 🪐
+> [!NOTE]
+> Currently experimental and subject to change
 
+Installable on all editions of Firefox (and forks). Requires sine. Has auto-updating and a basic configurator.
+
+Install the Sine theme manager for your browser. ([follow this guide](https://github.com/CosmoCreeper/Sine?tab=readme-ov-file#%EF%B8%8F-installation))
+
+You can install this theme by searching for it (zap's cool photon theme) in Sine's marketplace and installing it.
+
+You can also install it by typing in this repo (zapSNH/zapsCoolPhotonTheme), and optionally the branch (append tree/[the branch, e.g. nightly]), into the local installation text box and installing it there.
+
+You're done! 🎉
+____
 ### Extension 🧩
 Only installable on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on these versions) since **you need to disable extension signing** (which may be insecure).
 
@@ -161,6 +175,7 @@ It is recommended to disable any UI styles set by the browser to prevent conflic
 | `uc.floorp` | `true` | Floorp |
 | `uc.librewolf` | `true` | LibreWolf |
 | `uc.tor` | `true` | Tor Browser |
+| `uc.mullvad` | `true` | Mullvad Browser |
 
 # Configuration
 Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).

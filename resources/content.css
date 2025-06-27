@@ -451,6 +451,7 @@
 			content: url("./icons/forks/tor/tor-grayscale.svg") !important;
 		}
 	}
+	/* mullvad (and prolly the others) already has a grayscale logo */
 	@media (-moz-bool-pref: "uc.logo.quantum") {
 		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
 			content: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;

@@ -15,6 +15,9 @@
 	@media (-moz-bool-pref: "uc.tor") {
 		--grayscale-logo: url("./icons/forks/tor/tor-grayscale.svg") !important;
 	}
+	@media -moz-pref("uc.mullvad") or -moz-pref("uc.forks", "mullvad") {
+		--grayscale-logo: url("./icons/forks/mullvad/mullvad-grayscale.svg") !important;
+	}
 	/* Legacy Logos */
 	--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 	@media (-moz-bool-pref: "uc.logo.quantum") {
@@ -603,6 +606,10 @@ menupopup > menu::after {
 #sidebar-reverse-position-toolbar {
 	list-style-image: url("./icons/sort.svg") !important;
 }
+/* Mullvad icons */
+#new-identity-button {
+	list-style-image: url("./icons/flame.svg") !important;
+}
 /* Downloads panel */
 .download-state .downloadButton.downloadIconShow image {
 	list-style-image: url("./icons/findFile.svg") !important;
@@ -904,6 +911,12 @@ menupopup > menu::after {
 }
 #openprofiledir .toolbarbutton-icon {
 	list-style-image: url("./icons/findFile.svg") !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	width: 16px;
+}
+/* Mullvad App Menu Icons */
+#appMenu-new-identity .toolbarbutton-icon {
+	list-style-image: url("./icons/avatar.svg") !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	width: 16px;
 }
