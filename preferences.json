@@ -19,7 +19,8 @@
       { "label": "Waterfox", "value": "waterfox" },
       { "label": "Floorp", "value": "floorp" },
       { "label": "LibreWolf", "value": "librewolf" },
-      { "label": "Tor Browser", "value": "tor" }
+      { "label": "Tor Browser", "value": "tor" },
+      { "label": "Mullvad", "value": "mullvad" }
     ]
   },
 
