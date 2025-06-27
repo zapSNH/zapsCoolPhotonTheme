@@ -15,7 +15,7 @@
 	@media (-moz-bool-pref: "uc.tor") {
 		--grayscale-logo: url("./icons/forks/tor/tor-grayscale.svg") !important;
 	}
-	@media -moz-pref("uc.mullvad") or -moz-pref("uc.forks", "mullvad") {
+	@media (-moz-bool-pref: "uc.mullvad") {
 		--grayscale-logo: url("./icons/forks/mullvad/mullvad-grayscale.svg") !important;
 	}
 	/* Legacy Logos */
