@@ -1260,6 +1260,9 @@
 		&[name="sitepermission"] {
 			background-image: url("./icons/globe1.svg") !important;
 		}
+		&[name="mlmodel"] {
+			background-image: url("./icons/import.svg") !important; /* idc */
+		}
 	}
 	.card-heading-image {
 		addon-card[addon-id="default-theme@mozilla.org"] & {
@@ -1383,11 +1386,7 @@
 		}
 		@media (prefers-color-scheme: dark) {
 			&[aria-selected="true"] {
-				filter: brightness(2.5) saturate(0.75) hue-rotate(50deg)
-			
-			
-			
-			
+				filter: brightness(2.5) saturate(0.75) hue-rotate(50deg);
 			}
 		}
 		&[aria-selected="true"]:not(:hover)::before {
