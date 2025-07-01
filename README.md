@@ -146,7 +146,7 @@ Recommended for people who know what they're doing.
 
 Installable on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating (unless you make a script for that) but you can quickly update using `git pull` in your terminal.
 
-Open `about:config` and set the same prefs in the [Manual](#manually-) installation.
+Open `about:config` and set the same prefs in the [Manual](#manual-installation-) installation.
 
 Download and install [Git](https://git-scm.com/) if you haven't already.
 
