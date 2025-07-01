@@ -356,7 +356,7 @@ button > span.labelled.button-background[part="button"],
 	> * {
 		width: 100% !important;
 	}
-	margin-bottom: -9px;
+	margin-bottom: -4px;
 }
 moz-button:is(.primary,
 [slot="primary"],
@@ -866,17 +866,18 @@ tooltip {
 }
 /* Tab Group context menu */
 #tab-group-editor {
+	--panel-padding: 0px !important;
 	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
-		margin-inline: -12px !important;
+		/*margin-inline: -12px !important;*/
 	}
-	.tab-group-editor-swatches {
+	.tab-group-editor-swatches, .tab-group-editor-name {
 		margin-inline: 12px !important;
 	}
 	.tab-group-delete {
 		margin-bottom: 0 !important;
 	}
 	#tab-group-suggestion-button {
-		margin-bottom: -9px !important;
+		margin-bottom: -1px !important;
 	}
 	.panel-header {
 		padding: 0 !important;

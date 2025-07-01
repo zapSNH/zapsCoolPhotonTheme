@@ -1160,7 +1160,7 @@ menupopup > menu::after {
 #PanelUI-bookmarks .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #panelMenu_bookmarksMenu .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
 #PanelUI-fxa .toolbarbutton-icon:not(.subviewbutton-back .toolbarbutton-icon, #PanelUI-fxa-remotetabs-deck .toolbarbutton-icon, #PanelUI-fxa-menu-profiles-button .toolbarbutton-icon, .panel-subview-footer-button .toolbarbutton-icon),
 #appMenu-library-recentlyClosedWindows .panel-subview-footer-button .toolbarbutton-icon, #appMenu-library-recentlyClosedTabs .panel-subview-footer-button .toolbarbutton-icon,
-#PanelUI-sendTabToDevice .panel-subview-body toolbarseparator.sync-menuitem ~ .subviewbutton .toolbarbutton-icon {
+#PanelUI-sendTabToDevice .panel-subview-body toolbarseparator.sync-menuitem ~ .subviewbutton .toolbarbutton-icon, #allTabsMenu-groupsViewShowMore .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-noicon-inline-end) !important;
 }
 :is(#appMenu_historyMenu, #panelMenu_bookmarksMenu) .toolbarbutton-icon {
@@ -1715,6 +1715,9 @@ button > img, span > img, label > img {
 	}
 	&[src="chrome://global/skin/icons/indicator-private-browsing.svg"] {
 		content: url("./icons/private-browsing.svg") !important;
+	}
+	&[src="chrome://browser/skin/login.svg"] {
+		content: url("./icons/login.svg") !important;
 	}
 }
 img[src="chrome://browser/skin/preferences/category-general.svg"] {
