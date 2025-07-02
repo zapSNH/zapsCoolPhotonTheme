@@ -368,7 +368,7 @@ input.findbar-textbox:focus {
 				fill: #45a1ff !important;
 			}
 			:is(.tab-background[selected],
-			#firefox-view-button[open] .toolbarbutton-icon) {
+			#TabsToolbar #firefox-view-button[open] .toolbarbutton-icon) {
 				background: #323234 !important;
 			}
 		}
