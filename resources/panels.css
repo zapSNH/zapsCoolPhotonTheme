@@ -36,9 +36,6 @@
 		max-width: none !important;
 		overflow: visible !important;
 	}
-	* {
-		--panel-padding: 4px 0 !important;
-	}
 }
 @media -moz-pref("uc.popups.transparent") {
 	.menupopup-arrowscrollbox {
@@ -730,9 +727,7 @@ tooltip {
 	margin-inline: 8px !important;
 }
 .two-line-wrapper {
-	width: 100%
-
-
+	width: 100%;
 }
 .ac-site-icon[src="chrome://browser/skin/login.svg"] {
 	display: none !important;
@@ -748,9 +743,7 @@ tooltip {
 	fill: currentColor;
 }
 .autocomplete-richlistitem[originaltype="insecureWarning"] {
-	background: transparent !important
-
-
+	background: transparent !important;
 }
 /* permission popup */
 #permission-popup .button-icon {
@@ -866,9 +859,8 @@ tooltip {
 }
 /* Tab Group context menu */
 #tab-group-editor {
-	--panel-padding: 0px !important;
-	panel > :not(.tab-group-editor-swatches, .tab-group-editor-name) {
-		/*margin-inline: -12px !important;*/
+	panel {
+		--panel-padding: 4px 0px !important;
 	}
 	.tab-group-editor-swatches, .tab-group-editor-name {
 		margin-inline: 12px !important;
@@ -877,12 +869,24 @@ tooltip {
 		margin-bottom: 0 !important;
 	}
 	#tab-group-suggestion-button {
-		margin-bottom: -1px !important;
+		--button-background-color-ghost: transparent !important;
+		--button-background-color-ghost-hover: var(--button-background-color-hover) !important;
+		--button-background-color-ghost-active: var(--button-background-color-active) !important;
+		--button-text-color-ghost: rgb(249, 249, 250); !important;
+		--button-text-color-ghost-hover: rgb(249, 249, 250); !important;
+		--button-text-color-ghost-active: rgb(249, 249, 250); !important;
+		--button-border: none !important;
+		clip-path: inset(0 7px 0 0 round var(--photon-border-radius-1)) !important;
+		margin-inline-start: 4px;
+		overflow: hidden !important;
+	}
+	#tab-group-default-actions {
+		padding-top: 4px !important;
 	}
 	.panel-header {
 		padding: 0 !important;
-		margin-block-start: -10px !important;
-		margin-block-end: -2px !important;
+		margin-block-start: -3px !important;
+		margin-block-end: -4px !important;
 	}
 	#tab-group-name:focus {
 		outline: none !important;
