@@ -37,6 +37,9 @@
 	&[fxastatus="login-failed"] {
 		--avatar-image-url: url("./icons/avatar.svg") !important;
 	}
+	&[fxastatus="not_configured"] {
+		--avatar-image-url: url("./icons/avatar-empty.svg") !important;
+	}
 }
 /* Legacy Logos */
 :is(img, image)[src="chrome://branding/content/icon32.png"] {
@@ -1255,18 +1258,28 @@ menupopup > menu::after {
 :root #appMenu-popup #PanelUI-fxa #fxa-manage-account-button {
 	margin-top: -3px !important;
 }
-:root #PanelUI-fxa #fxa-manage-account-button::before {	
+:root #PanelUI-fxa #fxa-manage-account-button::before {
 	content: "";
-	min-width: 30px !important;
-	width: 30px !important;
-	height: 30px !important;
+	min-width: 30px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
 	background-size: 30px;
 	background-image: var(--avatar-image-url);
-	margin-inline-start: 11px !important;
+	margin-inline-start: 9px;
 	outline: solid #ffffff33 1px;
 	z-index: 1;
-}/*
+	-moz-context-properties: fill;
+	fill: currentColor;
+}
+:root[fxastatus="not_configured"] #PanelUI-fxa #fxa-manage-account-button::before {
+	outline: solid #ffffff33 0px;
+	background-size: 32px;
+	min-width: 32px;
+	width: 32px;
+	height: 32px;
+}
+/*
 :root #PanelUI-fxa #fxa-manage-account-button::after {
 	content: "";
 	min-width: 200%;
@@ -1716,6 +1729,15 @@ button > img, span > img, label > img {
 	}
 	&[src="chrome://browser/skin/login.svg"] {
 		content: url("./icons/login.svg") !important;
+	}
+	&[src="chrome://global/skin/icons/help.svg"] {
+		content: url("./icons/help.svg") !important;
+	}
+	&[src="chrome://browser/skin/firefox-view.svg"] {
+		content: url("./icons/firefox-view.svg") !important;
+	}
+	&[src="chrome://browser/skin/screenshot.svg"] {
+		content: url("./icons/screenshot.svg") !important;
 	}
 }
 img[src="chrome://browser/skin/preferences/category-general.svg"] {
