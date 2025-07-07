@@ -382,6 +382,9 @@
 	.arrowhead.up {
 		list-style-image: url("./icons/arrow-up-12.svg") !important;
 	}
+	#refresh-qr {
+		background-image: url("./icons/reload.svg") !important;
+	}
 	/* screenshots-buttons */
 	.screenshots-button {
 		border-radius: var(--photon-secondary-border-radius) !important;
@@ -610,7 +613,7 @@
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: 2px -12px;
+		translate: 12px -12px;
 		top: 0 !important;
 	}
 	.top-site-outer:not(:hover,
@@ -1116,9 +1119,22 @@
 	.web-appearance-choice.dark img {
 		content: url("./icons/web-appearance-dark.svg") !important;
 	}
+	.face-smile,
+	.face-sad {
+		display: flex;
+	}
 	.face-smile::before,
 	.face-sad::before {
 		font-weight: 100 !important;
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+	.face-smile::before {
+		content: url("./icons/face-smile.svg") !important;
+	}
+	.face-sad::before {
+		content: url("./icons/face-sad.svg") !important;
 	}
 	.geo-icon {
 		list-style-image: url("./icons/geo.svg") !important;
@@ -1237,6 +1253,9 @@
 	}
 	.addon-permissions-list > li.permission-checked {
 		background-image: url("./icons/check.svg") !important;
+	}
+	.mlmodel-remove-addon-button {
+		background-image: url("./icons/delete.svg") !important;
 	}
 	.category {
 		&[name="discover"] {

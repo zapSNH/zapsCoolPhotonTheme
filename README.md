@@ -47,7 +47,7 @@ Open `about:config` and set:
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
 | `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
-| `widget.windows.mica.popups` | `0` | (Windows only) Disables transparency effects on menus.<br>Do not change this or set this to 2 if you're using [`uc.popups.transparent`](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options#menu-transparency)  |
+| `widget.windows.mica.popups` | `0` | (Windows only) Disables transparency effects on menus.<br>If you're/you will be using [`uc.popups.transparent`](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options#menu-transparency), then don't change this option. |
 <details>
 	<summary>For Firefox 121 and below...</summary>
 	
@@ -104,13 +104,13 @@ ____
 > [!NOTE]
 > Currently experimental and subject to change
 
-Installable on all editions of Firefox (and forks). Requires sine. Has auto-updating and a basic configurator.
+Installable on all editions of Firefox (and forks), though is partially broken on Firefox 128esr. Requires Sine. Has auto-updating and a basic configurator.
 
 Install the Sine theme manager for your browser. ([follow this guide](https://github.com/CosmoCreeper/Sine?tab=readme-ov-file#%EF%B8%8F-installation))
 
 You can install this theme by searching for it (zap's cool photon theme) in Sine's marketplace and installing it.
 
-You can also install it by typing in this repo (zapSNH/zapsCoolPhotonTheme), and optionally the branch (append tree/[the branch, e.g. nightly]), into the local installation text box and installing it there.
+~You can also install it by typing in this repo (zapSNH/zapsCoolPhotonTheme), and optionally the branch (append tree/[the branch, e.g. nightly]), into the local installation text box and installing it there.~ (broken right now)
 
 You're done! 🎉
 ____
@@ -186,7 +186,7 @@ For the WebExtension version, the configurator can be found in the extension's o
 
 ## Miscellaneous
 Firefox Photon icons are primarily taken from Firefox 87 or Firefox 78esr.
-Other/newer icons not present in Firefox 87/78esr are primarily based on their Proton/Acorn counterparts.
+Other icons not present in Firefox Photon are recreated based on their Proton/Acorn counterparts.
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
