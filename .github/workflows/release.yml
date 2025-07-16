@@ -36,5 +36,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
         body_path: relnotes.md
+        make_latest: false
         files: |
           zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
