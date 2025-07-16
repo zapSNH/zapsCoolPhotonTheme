@@ -191,7 +191,7 @@ credits to phroton for some of this stuff */
 		height: 2px;
 		transition: all var(--photon-speed-2) var(--photon-easing-function);
 		background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
-		width: 100%;
+		width: 99.99999%; /* really weird fix for the tab line being 1px too long, this (most likely) won't shorten the tab line at all in normal situations */
 		margin: auto;
 	}
 	&:not([selected],
@@ -218,17 +218,15 @@ credits to phroton for some of this stuff */
 
 /* Windows stuff */
 @media (-moz-platform: windows) {
-	:root[sizemode="normal"] .tab-background::before {
-		translate: 0 1px
-	
+	:root[sizemode="normal"] #toolbar-menubar[inactive="true"] ~ #TabsToolbar .tab-background::before {
+		translate: 0 1px;
 	}
 }
 
 /* Adds an effect to the highlight that wasn't there in Photon */
 /* Remove if unwanted */
 .tabbrowser-tab:hover > .tab-stack > .tab-background[selected]::before {
-	filter: brightness(125%) saturate(150%)
-
+	filter: brightness(125%) saturate(150%);
 }
 #TabsToolbar #tabs-newtab-button,
 #TabsToolbar #new-tab-button,
