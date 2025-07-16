@@ -36,10 +36,10 @@ jobs:
         fetch-depth: 0
         ref: main
         
-    - name: get previous tag (this repo) # https://github.com/WyriHaximus/github-action-get-previous-tag/issues/23#issuecomment-830632004
+    - name: get previous tag (this repo)
       id: previoustag
       run: |
-        echo "tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))" >> "$GITHUB_OUTPUT"
+        echo "tag=$(git tag --sort=-v:refname | sed -n '2p')" >> "$GITHUB_OUTPUT"
         
     - name: get latest tag (webext repo)
       id: webexttag
