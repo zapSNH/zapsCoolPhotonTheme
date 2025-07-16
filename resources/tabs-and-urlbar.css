@@ -17,6 +17,13 @@
 		height: calc(var(--tab-min-height) + 1px) !important;
 	}
 }
+@media (-moz-platform: windows-win7) {
+	@media (-moz-windows-default-theme) {
+		#TabsToolbar:not(:-moz-lwtheme) {
+			background-image: none !important;
+		}
+	}
+}
 /* Makes the tab photon-like + adds a transition */
 /* Delete the transition things if unwanted */
 .tab-close-button {
@@ -195,12 +202,6 @@ tabs[closebuttons^="activetab"] tab:not([visuallyselected]) .tab-icon-stack {
 }
 .tabbrowser-tab:hover > .tab-stack > .tab-background[multiselected="true"]::before {
 	filter: grayscale(0%)
-}
-/**/
-@media (-moz-platform: windows) {
-	:root[sizemode="normal"] .tab-background::before {
-		translate: 0 1px
-	}
 }
 /* Adds an effect to the highlight that wasn't there in Photon */
 /* Remove if unwanted */
