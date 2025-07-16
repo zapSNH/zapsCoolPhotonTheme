@@ -72,7 +72,10 @@
 			--button-hover-bgcolor: #bdbec0 !important;
 			--button-active-bgcolor: #b3b4b6 !important;
 			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
+			--color-gray-60: #4a4a4f !important;
+			--color-gray-80: color-mix(in srgb, var(--color-gray-90) 67%, var(--color-gray-60)) !important;
+			--color-gray-90: #0c0c0d !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -89,11 +92,20 @@
 			--input-bgcolor: rgb(60, 60, 64) !important;
 			--input-border-color: rgb(90, 90, 94) !important;
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
-			--panel-separator-color: rgba(249, 249, 250, .1) !important;
+			--panel-separator-color: rgba(249, 249, 250, .1) !important;	
+			--color-gray-60: #4a4a4f !important;
+			--color-gray-80: color-mix(in srgb, var(--color-gray-60) 75%, var(--color-gray-90)) !important;
+			--color-gray-90: #0c0c0d !important;
+			--background-color-box: var(--color-gray-80) !important;
+			--box-shadow-color-darker-layer-1: rgba(0, 0, 0, 0.15) !important;
+			--box-shadow-color-darker-layer-2: rgba(0, 0, 0, 0.2) !important;
+			--box-shadow-color-lighter-layer-1: rgba(0, 0, 0, 0.05) !important;
+			--box-shadow-color-lighter-layer-2:  rgba(0, 0, 0, 0.1) !important;
 		}
 	}
+	
 	button:not(.control-button,
-	.preview-button) {
+	.preview-button, :has(> span)) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
 		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
@@ -134,8 +146,12 @@
 	}
 	:not(#places) input:not(#scrubber,
 	#audio-scrubber) {
-		appearance: none !important;
-		border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		&:not(#login-line-input) {
+			appearance: none !important;
+		}
+		&:is([type="radio"], [type="checkbox"]) {
+			border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
+		}
 		&:not([type="radio"]) {
 			&:checked[type="checkbox"] {
 				background-image: url("./icons/check.svg");
@@ -150,6 +166,7 @@
 		&[type="radio"] {
 			border-radius: 9999px !important;
 		}
+		
 		&:checked {
 			background-color: var(--photon-accent-dark) !important;
 			&:hover:not([disabled]) {
@@ -176,6 +193,21 @@
 			transparent) !important;
 		}
 	}
+	.search-container {
+		background-color: var(--toolbar-field-background-color) !important;
+		border: 1px solid  var(--toolbar-field-border-color) !important;
+		border-radius: var(--photon-border-radius) !important;
+		padding-inline-start: 0 !important;
+		.search-icon {
+			position: absolute;
+			height: 32px;
+			padding-inline-start: 16px;
+		}
+		input {
+			margin-inline-start: 0 !important;
+			padding-inline-start: 32px;
+		}
+	}
 	:root:not(#places,
 	#webrtcIndicator) :is(input,
 	button) {
@@ -199,6 +231,17 @@
 		&:before {
 			background-color: white !important;
 		}
+	}
+	div:has(> #allLogins) {
+		display: flex;
+		gap: 4px;
+	}
+	#allLogins, #alerts {
+		width: 16px;
+		aspect-ratio: 1;
+	}
+	password-card {
+		border-radius: var(--photon-border-radius-1) !important;
 	}
 	#sidebar-search-container search-textbox {
 		-moz-appearance: none !important;
