@@ -1,16 +1,23 @@
 <h1 align="center">
-	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="oversized logowordmark" title="oversized logowordmark">
+	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="zap's cool photon theme" title="oversized logowordmark">
 </h1>
 
 <p align="center">
 	A userChrome theme for modern Firefox-based browsers designed to be as <b>faithful</b> to Firefox Photon (specifically Firefox 87) as possible.
+	<br>
+	<br>
+	<img alt="cool" src="https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2">
+	<br>
+	<a href="https://github.com/CosmoCreeper/Sine"><img src="https://github.com/user-attachments/assets/92a0aaf7-cc40-4f54-b061-27376b117c9b" alt="Available on Sine" title="click to go to sineee"></a>
+	<br>
+	<img alt="GitHub Release" src="https://img.shields.io/github/v/release/zapSNH/zapsCoolPhotonTheme?sort=semver&style=for-the-badge&color=%230A84FF">
+	<img alt="GitHub License" src="https://img.shields.io/github/license/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
+	<img alt="GitHub Issues" src="https://img.shields.io/github/issues/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
 </p>
 
-![okay](https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2)
 <h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h4>
 
 <hr>
-	
 <h4 align="center">
 	 Compatibility
 </h4>
