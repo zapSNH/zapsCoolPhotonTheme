@@ -73,7 +73,7 @@ Download the release for your browser version:
 |-|-|
 | [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) **(recommended)**             | [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
-| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128) (download the ESR version) | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
+| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                           | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
 	<summary>Older Versions</summary>
