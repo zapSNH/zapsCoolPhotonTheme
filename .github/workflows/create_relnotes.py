@@ -20,5 +20,5 @@ ____
 	f.close()
 
 if __name__ == '__main__':
-    a, b, c = sys.argv[1], sys.argv[2], sys.argv[3]
-    create_relnotes(a, b, c)
+    a = sys.argv[1]
+    create_relnotes(a)
