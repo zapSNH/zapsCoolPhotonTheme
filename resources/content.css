@@ -1219,6 +1219,98 @@
 	.fxaLoginRejectedWarning {
 		list-style-image: url("./icons/warning-16.svg") !important;
 	}
+	/* sine !! */
+	#sineInstallationGroup, #sineInstalledGroup {
+		border-radius: 0 !important;
+	}
+	#sineMarketplaceRefreshButton, .sineMarketplaceOpenButton, .sineItemConfigureButton, .sineItemHomepageButton {
+		-moz-context-properties: fill;
+		fill: currentColor;
+		background-size: 16px !important;
+		background-position: center !important;
+	}
+	#sineMarketplaceRefreshButton {
+		background-image: url("./icons/reload.svg") !important;
+	}
+	.sineItemConfigureButton {
+		background-image: url("./icons/settings.svg") !important;
+	}
+	#sineInstallationCustom .sineMarketplaceOpenButton:not(.sineItemConfigureButton) /* WHAT */ {
+		background-image: url("./icons/fullscreen.svg") !important; /* something like extensions.svg would be better but whatever icon parity or smth */
+	}
+	.sineItemHomepageButton {
+		background-image: url("./icons/home.svg") !important;
+	}
+	.sineItemPreferenceDialog, groupbox {
+		background-color: var(--in-content-page-background) !important;
+	}
+	.sineItemPreferenceDialog::backdrop, groupbox::backdrop {
+		backdrop-filter: none !important;
+	}
+	.sineMarketplaceItemButton {
+		color: white !important;
+	}
+	.updates-container .auto-update-toggle {
+		&[enabled] {
+			color: white !important;
+		}
+		&[enabled]::before {
+			filter: none !important; /* me when WHAT THE H*CK MAN (no swearing on the family-friendly theme sorry) */
+		}
+		&::before {
+			background: url("./icons/sync.svg") center no-repeat !important;
+		}
+	}
+	.sineItemActions .auto-update-toggle {
+		&[enabled] {
+			color: white !important;
+		}
+		&[enabled]::before {
+			filter: none !important;
+		}
+		&::before {
+			background: url("./icons/forget.svg") center no-repeat !important; /* this is the one that ublock uses i think */
+			-moz-context-properties: fill;
+			fill: currentColor;
+			background-size: 16px !important;
+			background-position: center !important;
+		}
+	}
+	.sineItemPreferenceDialog {
+		width: fit-content !important;
+	}
+	.sineItemPreferenceDialogContent {
+		margin-top: 32px !important;
+	}
+	.sineItemPreferenceDialogTopBar {
+		margin: -20px !important;
+		padding-bottom: 2px !important;
+		height: 41px;
+		background-color: var(--in-content-dialog-header-background);
+		border-color: var(--in-content-border-color) !important;;
+		h3 {
+			margin: 0 !important;
+			margin-inline: auto !important;
+			font-size: var(--font-size-root) !important;
+		}
+		button {
+			--btn-size: 20px;
+			min-height: var(--btn-size) !important;
+			height: var(--btn-size) !important;
+			min-width: var(--btn-size) !important;
+			width: var(--btn-size) !important;
+			color: transparent !important;
+			padding: 0 !important;
+			background-image: url("./icons/close-tab.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			-moz-context-properties: fill;
+			fill: var(--in-content-primary-button-text-color);
+			background-size: 20px !important;
+			margin-left: 0 !important;
+			margin-right: 10px !important;
+		}
+	}
 	@media (prefers-color-scheme: dark) {
 		* {
 			--in-content-page-background: #2a2a2e !important;
