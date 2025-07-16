@@ -26,10 +26,10 @@ jobs:
 
     - name: zip esr files
       run: |
+        python3 .github/workflows/create_relnotes.py ${{ github.ref_name }}
         rm -rf ./.github theme.json preferences.json
         zip -r -FS zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip *
-        python3 .github/workflows/create_relnotes.py ${{ github.ref_name }}
-        
+
     - name: release
       uses: softprops/action-gh-release@v2
       env:
