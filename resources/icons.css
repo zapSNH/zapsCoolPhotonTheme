@@ -1739,6 +1739,18 @@ button > img, span > img, label > img {
 	&[src="chrome://browser/skin/screenshot.svg"] {
 		content: url("./icons/screenshot.svg") !important;
 	}
+	&[src="chrome://global/skin/icons/eye.svg"] {
+		content: url("./icons/show-password.svg") !important;
+	}
+	&[src="chrome://global/skin/icons/eye-slash.svg"] {
+		content: url("./icons/hide-password.svg") !important;
+	}
+	&[src="chrome://browser/skin/forward.svg"] {
+		content: url("./icons/forward.svg") !important;
+	}
+	&[src="chrome://browser/skin/back.svg"] {
+		content: url("./icons/back.svg") !important;
+	}
 }
 img[src="chrome://browser/skin/preferences/category-general.svg"] {
 	content: url("./icons/settings.svg") !important;
