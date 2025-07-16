@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	A userChrome theme for Firefox-based browsers designed to be as <b>faithful</b> to Firefox Photon (specifically Firefox 87) as possible.
+	A userChrome theme for modern Firefox-based browsers designed to be as <b>faithful</b> to Firefox Photon (specifically Firefox 87) as possible.
 </p>
 
 ![okay](https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2)
