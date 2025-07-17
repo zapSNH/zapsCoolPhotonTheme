@@ -1,6 +1,7 @@
-/* Tabs and URL Bar */
-/* And sidebar */
-/* Adjustments for each UI density */
+/* tabs and urlbar */
+/* and sidebar */
+
+/* ui density */
 :root:not([uidensity="compact"],
 [uidensity="touch"]) {
 	--tab-min-height: 33px !important;
@@ -189,7 +190,7 @@ credits to phroton for some of this stuff */
 		height: 2px;
 		transition: all var(--photon-speed-2) var(--photon-easing-function);
 		background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
-		width: 99.99999%; /* really weird fix for the tab line being 1px too long, this (most likely) won't shorten the tab line at all in normal situations */
+		width: 100%;
 		margin: auto;
 	}
 	&:not([selected],
@@ -506,6 +507,10 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 .close) {
 	translate: 0 1px !important;
 }
+.infobar {
+	background-color: var(--toolbar-field-background-color) !important;
+	border: none !important;
+}
 .notificationbox-stack notification-message::before {
 	display: none !important;
 }
@@ -657,6 +662,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 	image {
 		translate: 1px !important;
 	}
+}
+.identity-box-button:not(:hover, :active, [open]) {
+	background-color: transparent !important;
 }
 /* Compact mode fixes */
 :root[uidensity="compact"] {

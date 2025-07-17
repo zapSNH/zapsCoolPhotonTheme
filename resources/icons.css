@@ -433,11 +433,11 @@
   to { transform: translateX(-450px) } 
 }
 /* end credits */
-#star-button, #context-bookmarkpage {
+#star-button, #context-bookmarkpage, #pageAction-panel-bookmark {
 	list-style-image: url("./icons/bookmark-hollow.svg") !important;
-}
-#star-button[starred], #context-bookmarkpage[starred] {
-	list-style-image: url("./icons/bookmark.svg") !important;
+	&[starred] {
+		list-style-image: url("./icons/bookmark.svg") !important;
+	}
 }
 #reader-mode-button-icon {
 	list-style-image: url("./icons/readerMode.svg") !important;
@@ -449,7 +449,6 @@
 		list-style-image: url("./icons/shopping-open.svg") !important;
 	}
 }
-
 img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	content: url("./icons/shopping.svg") !important;
 }
@@ -991,6 +990,9 @@ menupopup > menu::after {
 	list-style-image: url("./icons/find-in-page.svg") !important;
 	-moz-context-properties: fill !important;
 	fill: var(--urlbar-box-text-color) !important;
+}
+#pageActionButton {
+	list-style-image: url("./icons/more.svg") !important;
 }
 #urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url("./icons/forward.svg") !important;
