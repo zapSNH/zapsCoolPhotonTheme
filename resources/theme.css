@@ -142,6 +142,7 @@ input.findbar-textbox:focus {
 		border: solid 1px var(--photon-tab-outline) !important;
 	}
 }
+/* system theme for light mode */
 @media not (-moz-gtk-csd-available) {
 	@media (prefers-color-scheme: light) {
 		:root:not([lwtheme="true"]) {
@@ -150,7 +151,7 @@ input.findbar-textbox:focus {
 				--lwt-accent-color: #202340 !important;
 				--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 				
-				--chrome-content-separator-color: var(--lwt-accent-color) !important;
+				--chrome-content-separator-color: #d7d7db !important;
 				
 				--toolbox-bgcolor: var(--lwt-accent-color) !important;
 				--toolbox-bgcolor-inactive: var(--lwt-accent-color-inactive) !important;
@@ -192,7 +193,10 @@ input.findbar-textbox:focus {
 				--in-content-primary-button-background: var(--photon-accent) !important;
 				--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 				--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
-				
+			
+				--toolbarbutton-icon-fill: currentColor !important;
+				--toolbox-non-lwt-textcolor: rgb(251, 251, 254) !important;
+				--toolbox-textcolor: rgb(251, 251, 254) !important;
 				#urlbar {
 					--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 					--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
@@ -297,6 +301,7 @@ input.findbar-textbox:focus {
 	
 	--toolbar-field-focus-background-color: #474749 !important;
 	
+	--tabs-navbar-separator-color: transparent !important;
 	&:not(:-moz-window-inactive) {
 		--lwt-toolbar-field-highlight: var(--photon-accent-dark);
 		::selection {
@@ -323,6 +328,7 @@ input.findbar-textbox:focus {
 		background: #323234 !important;
 	}
 }
+/* system theme for dark mode */
 @media not (-moz-gtk-csd-available) {
 	@media (prefers-color-scheme: dark) {
 		/* i have no idea what this is */
@@ -391,6 +397,7 @@ input.findbar-textbox:focus {
 			
 			--toolbar-field-focus-background-color: #474749 !important;
 			
+			--tabs-navbar-separator-color: transparent !important;
 			&:not(:-moz-window-inactive) {
 				--lwt-toolbar-field-highlight: var(--photon-accent-dark);
 				::selection {
@@ -507,6 +514,7 @@ input.findbar-textbox:focus {
 		}
 	}
 }
+
 /* Use navbar color in tab */
 @media -moz-pref("uc.theme.tab-color-same-as-navbar") and (not -moz-pref("uc.theme.navbar-color-same-as-tab")) {
 	:root {

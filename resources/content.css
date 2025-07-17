@@ -73,7 +73,7 @@
 	* {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
-		--border-radius-small: var(--photon-secondary-border-radius);
+		--border-radius-small: var(--photon-secondary-border-radius) !important;
 		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
@@ -124,6 +124,12 @@
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
 		--fxview-border-interactive: var(--in-content-box-border-color) !important;
+		
+		--green-50: #30e60b !important;
+		--green-60: #12bc00 !important;
+		--green-70: #058b00 !important;
+		--green-80: #006504 !important;
+		--green-90: #003706 !important;
 	}
 	@media (prefers-color-scheme: dark) {
 		* {
@@ -1344,7 +1350,11 @@
 		content: url("./icons/help.svg") !important;
 	}
 	.addon-permissions-list > li.permission-checked {
-		background-image: url("./icons/check.svg") !important;
+		list-style-position: inside !important;
+		list-style-image: url("./icons/check.svg") !important;
+		list-style-type: arabic-indic !important;
+		-moz-context-properties: fill;
+		fill: var(--green-60);
 	}
 	.mlmodel-remove-addon-button {
 		background-image: url("./icons/delete.svg") !important;
@@ -1465,6 +1475,9 @@
 			--color-accent-primary: #74c0ff !important;
 		}
 	}
+	* {
+		--color-accent-primary: var(--photon-accent) !important;
+	}
 	.search-container {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		border-color: var(--in-content-box-border-color) !important;
@@ -1542,7 +1555,7 @@
 	}
 	#fxview-tab-row-secondary-button {
 		--button-icon: url("./icons/close.svg") !important;
-		&[aria-haspopup] {
+		&[aria-haspopup], &.options-button {
 			--button-icon: url("./icons/more.svg") !important;
 		}
 	}

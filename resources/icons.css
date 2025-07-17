@@ -1,4 +1,4 @@
-/* Icons */
+/* icons */
 /* >:D */
 :root {
 	--icons-css: 1px;
@@ -635,7 +635,7 @@ menupopup > menu::after {
 #appMenu-multiView .subviewbutton::before,
 #appMenu-proton-update-banner::before,
 #downloadsHistory .button-icon,
-.subviewbutton:not([class*="identity-color"]) > image {
+.subviewbutton:not([class*="identity-color"], #appMenu-profiles-button , #PanelUI-fxa-menu-profiles-buttom, .profile-item) > image {
 	fill: currentColor !important;
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill !important;

@@ -923,6 +923,34 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 }
 
+/* Tab Groups */
+.tab-group-label {
+	border-radius: var(--photon-border-radius-1) !important;
+}
+tab-group::before {
+	inset-inline-start: 0 !important;
+}
+tab-group {
+	& .tab-group-label-container::after {
+		bottom: 0 !important;
+	}
+	.tabbrowser-tab[visuallyselected] {
+		.tab-background::before {
+			background-color: light-dark(var(--tab-group-color), var(--tab-group-color-invert));
+		}
+		.tab-background {
+			box-shadow: 1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)), -1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
+		}
+		.tab-group-line {
+			opacity: 0;
+		}
+	}
+}
+.tab-group-line {
+	bottom: 0 !important;
+	inset-inline: 0 !important;
+}
+
 /* Revert the all tabs button behavior */
 @media -moz-pref("uc.revert-all-tabs-behavior") {
 	#tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
@@ -1229,31 +1257,4 @@ toolbarbutton#urlbar-searchmode-switcher {
 	#nav-bar.browser-titlebar {
 		background-color: var(--toolbar-bgcolor) !important;
 	}
-}
-/* Tab Groups */
-.tab-group-label {
-	border-radius: var(--photon-border-radius-1) !important;
-}
-tab-group::before {
-	inset-inline-start: 0 !important;
-}
-tab-group {
-	& .tab-group-label-container::after {
-		bottom: 0 !important;
-	}
-	.tabbrowser-tab[visuallyselected] {
-		.tab-background::before {
-			background-color: light-dark(var(--tab-group-color), var(--tab-group-color-invert));
-		}
-		.tab-background {
-			box-shadow: 1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)), -1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
-		}
-		.tab-group-line {
-			opacity: 0;
-		}
-	}
-}
-.tab-group-line {
-	bottom: 0 !important;
-	inset-inline: 0 !important;
 }
