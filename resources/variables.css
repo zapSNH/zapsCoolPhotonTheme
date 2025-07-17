@@ -4,6 +4,8 @@
 @-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 /* Absolute Garbage */
 :root {
+	--variables-css: 1px;
+	
 	--photon-back: rgba(255, 255, 255, 0.15);
 	--photon-back-hover: rgba(255, 255, 255, 0.2);
 	--photon-back-active: #0002;
@@ -13,26 +15,31 @@
 	--photon-accent: #0a84ff;
 	--photon-accent-dark: #0a84ff;
 	--photon-accent-light: #74c0ff;
-	/* Border-radius things */
+	
 	--photon-border-radius: 2px;
 	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
+	
 	--border-radius-small: var(--photon-border-radius) !important;
 	--border-radius-medium: var(--photon-border-radius-1) !important;
+	
 	--appmenu-icon-inline-end: 8px;
 	--appmenu-noicon-inline-end: 24px;
+	
 	--arrowpanel-border-radius: var(--photon-panel-border-radius) !important;
 	--arrowpanel-menuitem-border-radius: 0px !important;
 	--tooltip-border-radius: 0px !important;
 	--urlbar-icon-border-radius: 0 !important;
-	--variables-css: 1px;
+	
 	--tab-attention-icon-color: var(--photon-accent) !important;
 	--urlbar-popup-url-color: var(--photon-accent) !important;
+	
 	--autocomplete-popup-highlight-background: var(--photon-accent-light) !important;
 	--photon-easing-function: cubic-bezier(.07,.95,0,1);
 	--photon-speed-1: 0.2s;
 	--photon-speed-2: 0.25s;
 	--photon-speed-3: 0.3s;
+	
 	--space-xsmall: 0.2em !important;
 	--inactive-titlebar-opacity: 1 !important;
 	
@@ -50,6 +57,7 @@
 		--photon-back-shadow: #2225;
 		--photon-back-shadow-hover: #222a;
 		--photon-accent: #74c0ff;
+		
 		--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
 	}
 }
@@ -61,21 +69,24 @@
 		--photon-speed-3: 0s;
 	}
 }
+button {
+	--in-content-primary-button-background: var(--photon-accent-dark) !important;
+	--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent-dark) 80%, white) !important;
+	--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent-dark) 60%, white) !important;
+	--in-content-primary-button-text-color: rgb(251, 251, 254) !important;
+}
 :root[lwt-toolbar-field-brighttext] :is(#urlbar, #searchbar) {
 	--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
 } 
-/* Linux is rounder in Photon */
-@media (-moz-platform: linux) {
+
+/* linux+mac are rounder in photon */
+@media not (-moz-platform: windows) {
 	:root {
 		--photon-border-radius: 4px;
 	}
 }
-button {
-	--in-content-primary-button-background: var(--photon-accent) !important;
-}
 
-/* Makes a bunch of things have Photon's border rounding */
-/* Change the two border radius vars up top to change these */
+/* border radiiiiii */
 #urlbar-background, #searchbar, input:not([type="radio"]),
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item,
 .unified-extensions-item-menu-button, .unified-extensions-item-action-button) image,
@@ -122,11 +133,11 @@ tree, select, .tabbrowser-tab:not([pinned]) .tab-icon-overlay, .checkbox-check:n
 input#radio-button {
 	border-radius: 9999px !important;
 }
+
 :root menupopup, :root panel {
 	--panel-border-radius: var(--photon-panel-border-radius) !important;
 	border-radius: var(--photon-panel-border-radius) !important;
-	/* Makes the colors of the context menus the same as the app menu */
-	--menu-background-color: var(--arrowpanel-background) !important; /* Change the #0aa5ff to whatever hex color you want */
+	--menu-background-color: var(--arrowpanel-background) !important;
 	--menuitem-hover-background-color: color-mix(in srgb, transparent 60%, highlight) !important;
 	--menu-color: var(--arrowpanel-color) !important;
 	--panel-border-color: var(--arrowpanel-border-color) !important;
@@ -134,15 +145,14 @@ input#radio-button {
 menuseparator {
 	border-color: var(--panel-separator-color) !important;
 }
-/* ^^^^^ but for dark mode */
 @media (prefers-color-scheme: dark) {
 	menupopup {
 		--menuitem-hover-background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
 		--panel-border-color: transparent !important;
 	}
 }
-/* Isn't actually in either Photon or Proton, but it makes Side View usable lol */
-#sidebar-box {
+/* isn't actually in either Photon or Proton, but it makes side view usable lol */
+/*#sidebar-box {
 	max-width: 100vw !important;
-}
+}*/
 }

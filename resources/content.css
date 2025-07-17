@@ -73,7 +73,7 @@
 	* {
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
-		--border-radius-small: var(--photon-secondary-border-radius);
+		--border-radius-small: var(--photon-secondary-border-radius) !important;
 		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
@@ -124,6 +124,12 @@
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
 		--fxview-border-interactive: var(--in-content-box-border-color) !important;
+		
+		--green-50: #30e60b !important;
+		--green-60: #12bc00 !important;
+		--green-70: #058b00 !important;
+		--green-80: #006504 !important;
+		--green-90: #003706 !important;
 	}
 	@media (prefers-color-scheme: dark) {
 		* {
@@ -1219,6 +1225,98 @@
 	.fxaLoginRejectedWarning {
 		list-style-image: url("./icons/warning-16.svg") !important;
 	}
+	/* sine !! */
+	#sineInstallationGroup, #sineInstalledGroup {
+		border-radius: 0 !important;
+	}
+	#sineMarketplaceRefreshButton, .sineMarketplaceOpenButton, .sineItemConfigureButton, .sineItemHomepageButton {
+		-moz-context-properties: fill;
+		fill: currentColor;
+		background-size: 16px !important;
+		background-position: center !important;
+	}
+	#sineMarketplaceRefreshButton {
+		background-image: url("./icons/reload.svg") !important;
+	}
+	.sineItemConfigureButton {
+		background-image: url("./icons/settings.svg") !important;
+	}
+	#sineInstallationCustom .sineMarketplaceOpenButton:not(.sineItemConfigureButton) /* WHAT */ {
+		background-image: url("./icons/fullscreen.svg") !important; /* something like extensions.svg would be better but whatever icon parity or smth */
+	}
+	.sineItemHomepageButton {
+		background-image: url("./icons/home.svg") !important;
+	}
+	.sineItemPreferenceDialog, groupbox {
+		background-color: var(--in-content-page-background) !important;
+	}
+	.sineItemPreferenceDialog::backdrop, groupbox::backdrop {
+		backdrop-filter: none !important;
+	}
+	.sineMarketplaceItemButton {
+		color: white !important;
+	}
+	.updates-container .auto-update-toggle {
+		&[enabled] {
+			color: white !important;
+		}
+		&[enabled]::before {
+			filter: none !important; /* me when WHAT THE H*CK MAN (no swearing on the family-friendly theme sorry) */
+		}
+		&::before {
+			background: url("./icons/sync.svg") center no-repeat !important;
+		}
+	}
+	.sineItemActions .auto-update-toggle {
+		&[enabled] {
+			color: white !important;
+		}
+		&[enabled]::before {
+			filter: none !important;
+		}
+		&::before {
+			background: url("./icons/forget.svg") center no-repeat !important; /* this is the one that ublock uses i think */
+			-moz-context-properties: fill;
+			fill: currentColor;
+			background-size: 16px !important;
+			background-position: center !important;
+		}
+	}
+	.sineItemPreferenceDialog {
+		width: fit-content !important;
+	}
+	.sineItemPreferenceDialogContent {
+		margin-top: 32px !important;
+	}
+	.sineItemPreferenceDialogTopBar {
+		margin: -20px !important;
+		padding-bottom: 2px !important;
+		height: 41px;
+		background-color: var(--in-content-dialog-header-background);
+		border-color: var(--in-content-border-color) !important;;
+		h3 {
+			margin: 0 !important;
+			margin-inline: auto !important;
+			font-size: var(--font-size-root) !important;
+		}
+		button {
+			--btn-size: 20px;
+			min-height: var(--btn-size) !important;
+			height: var(--btn-size) !important;
+			min-width: var(--btn-size) !important;
+			width: var(--btn-size) !important;
+			color: transparent !important;
+			padding: 0 !important;
+			background-image: url("./icons/close-tab.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			-moz-context-properties: fill;
+			fill: var(--in-content-primary-button-text-color);
+			background-size: 20px !important;
+			margin-left: 0 !important;
+			margin-right: 10px !important;
+		}
+	}
 	@media (prefers-color-scheme: dark) {
 		* {
 			--in-content-page-background: #2a2a2e !important;
@@ -1252,7 +1350,11 @@
 		content: url("./icons/help.svg") !important;
 	}
 	.addon-permissions-list > li.permission-checked {
-		background-image: url("./icons/check.svg") !important;
+		list-style-position: inside !important;
+		list-style-image: url("./icons/check.svg") !important;
+		list-style-type: arabic-indic !important;
+		-moz-context-properties: fill;
+		fill: var(--green-60);
 	}
 	.mlmodel-remove-addon-button {
 		background-image: url("./icons/delete.svg") !important;
@@ -1373,6 +1475,9 @@
 			--color-accent-primary: #74c0ff !important;
 		}
 	}
+	* {
+		--color-accent-primary: var(--photon-accent) !important;
+	}
 	.search-container {
 		border-radius: var(--photon-secondary-border-radius) !important;
 		border-color: var(--in-content-box-border-color) !important;
@@ -1450,7 +1555,7 @@
 	}
 	#fxview-tab-row-secondary-button {
 		--button-icon: url("./icons/close.svg") !important;
-		&[aria-haspopup] {
+		&[aria-haspopup], &.options-button {
 			--button-icon: url("./icons/more.svg") !important;
 		}
 	}

@@ -191,7 +191,7 @@ credits to phroton for some of this stuff */
 		height: 2px;
 		transition: all var(--photon-speed-2) var(--photon-easing-function);
 		background: var(--photon-tab-outline, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, #0a84ff)));
-		width: 99.99999%; /* really weird fix for the tab line being 1px too long, this (most likely) won't shorten the tab line at all in normal situations */
+		width: 100%;
 		margin: auto;
 	}
 	&:not([selected],
@@ -507,6 +507,10 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 .close) {
 	translate: 0 1px !important;
 }
+.infobar {
+	background-color: var(--toolbar-field-background-color) !important;
+	border: none !important;
+}
 .notificationbox-stack notification-message::before {
 	display: none !important;
 }
@@ -658,6 +662,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 	image {
 		translate: 1px !important;
 	}
+}
+.identity-box-button:not(:hover, :active, [open]) {
+	background-color: transparent !important;
 }
 /* Compact mode fixes */
 :root[uidensity="compact"] {
@@ -912,6 +919,34 @@ toolbarbutton#urlbar-searchmode-switcher {
 	.icon {
 		margin-inline-start: 11px !important;
 	}
+}
+
+/* Tab Groups */
+.tab-group-label {
+	border-radius: var(--photon-border-radius-1) !important;
+}
+tab-group::before {
+	inset-inline-start: 0 !important;
+}
+tab-group {
+	& .tab-group-label-container::after {
+		bottom: 0 !important;
+	}
+	.tabbrowser-tab[visuallyselected] {
+		.tab-background::before {
+			background-color: light-dark(var(--tab-group-color), var(--tab-group-color-invert));
+		}
+		.tab-background {
+			box-shadow: 1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)), -1px 0 light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
+		}
+		.tab-group-line {
+			opacity: 0;
+		}
+	}
+}
+.tab-group-line {
+	bottom: 0 !important;
+	inset-inline: 0 !important;
 }
 
 /* Revert the all tabs button behavior */

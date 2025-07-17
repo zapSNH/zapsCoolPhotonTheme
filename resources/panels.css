@@ -98,7 +98,7 @@ toolbarbutton.panel-subview-footer-button) {
 	margin: 0px !important;
 }
 /* Fixes for some menu button stuff */
-/* i hate specifity */
+/* i hate specifitzcityiy */
 :is(panelview,
 .panel-subview-body)
 toolbarbutton:not(.subviewbutton-back,
@@ -444,9 +444,7 @@ button > span.labelled.button-background[type="primary"][part="button"],
 	margin-bottom: 3px !important;
 }
 #appMenu-fxa-status2:not([fxastatus]) {
-	padding-inline: 8px 8px !important
-
-
+	padding-inline: 8px 8px !important;
 }
 /*
 #unified-extensions-panel panelview, */
@@ -507,7 +505,7 @@ menu.bookmark-item {
 .unified-extensions-item > .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button {
 	padding: 0 !important;
 }
-/* fxa menu monitor and relay ad- i mean "promotions" */
+/* fxa menu monitor and relay ad- i mean promotions */
 .ctaMenuLogo,
 #cta-menu-header-description {
 	margin-inline-start: 0 !important;
@@ -649,7 +647,7 @@ unified-extensions-item) > :last-child {
 	--uei-icon-size: 16px !important;
 }
 /* Big button thing */
-/* yes i know there's an easier way to do this but separating them gives me more control */ /* <- stupid idiot */
+/* yes i know there's an easier way to do this but separating them gives me more control */ /* <- |stupid idiot| */
 :is(#protections-popup :not(:first-child) .panel-subview-footer-button,
 #unified-extensions-manage-extensions,
 #identity-popup-clear-sitedata-button,
