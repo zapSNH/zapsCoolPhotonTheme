@@ -7,7 +7,7 @@ def create_relnotes(ver):
 
 	notes = \
 f'''# zapsCoolPhotonTheme for Firefox {ver_num_only_esr}esr
-Based on zapsCoolPhotonTheme v{ver_num_only_esr} for Firefox {current_esr}esr.
+Based on zapsCoolPhotonTheme v128 for Firefox {current_esr}esr.
 
 ### Changes
 * Removed the aero fog in the titlebar for Windows 7 (#31)
