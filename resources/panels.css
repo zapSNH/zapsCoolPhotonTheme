@@ -510,12 +510,12 @@ menu.bookmark-item {
 #cta-menu-header-description {
 	margin-inline-start: 0 !important;
 }
+menupopup:not([needsgutter]) :is(menuitem, menu):not([checked="true"], .menuitem-iconic, .menu-iconic) {
+	padding-left: 34px !important;
+}
 @media (-moz-platform: windows) {
 	menuitem[checked="true"] > :is(.menu-icon, .menu-iconic-left) {
 		list-style-image: url("./icons/check.svg") !important;
-	}
-	menupopup:not([needsgutter]) :is(menuitem, menu):not([checked="true"], .menuitem-iconic, .menu-iconic) {
-		padding-left: 34px !important;
 	}
 }
 @media (-moz-platform: linux) {
