@@ -112,15 +112,16 @@
 	--button-min-height-small: 16px !important;
 	--button-border-radius: var(--photon-border-radius) !important;
 	--tab-icon-end-margin: 4px !important;
-	translate: 0 -5px !important;
-	@media not (-moz-platform: windows) {
-		translate: 0 -7px !important;
-	}
 	margin-inline-start: -16px !important;
 	order: 1;
 	height: 16px !important;
 	z-index: 1;
 	--icon-fill: var(--toolbox-textcolor) !important;
+	@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
+	    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([pinned]):not([crashed]) &:is([soundplaying], [muted], [activemedia-blocked]) {
+			display: flex !important;
+		}
+	}
 }
 .tab-audio-button[soundplaying] {
 	--button-icon: url("./icons/tab-audio-playing.svg") !important;
@@ -1064,7 +1065,7 @@ menupopup > menu::after {
 #searchmode-switcher-popup {
 	.local-options toolbarbutton, menuitem {
 		-moz-context-properties: fill !important;
-		fill: var(--urlbar-box-text-color) !important;
+		fill: var(--urlbar-box-text-color, currentColor) !important;
 		background-repeat: no-repeat;
 		background-position-y: center;
 		background-position-x: 10px;
@@ -1427,6 +1428,10 @@ menuitem[data-l10n-id="sidebar-menu-close"] .menu-text {
 	list-style-image: url("./icons/add.svg") !important;
 	rotate: 45deg; /* guh */
 }
+/* sync tabs */
+.syncNowBtn {
+	list-style-image: url("./icons/sync.svg") !important;
+}
 /* Libraries */
 #appMenu-library-bookmarks-button .toolbarbutton-icon {
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
@@ -1754,6 +1759,9 @@ button > img, span > img, label > img {
 	}
 	&[src="chrome://browser/skin/back.svg"] {
 		content: url("./icons/back.svg") !important;
+	}
+	&[src="chrome://global/skin/icons/chevron.svg"] {
+		content: url("./icons/command-chevron.svg") !important;
 	}
 }
 img[src="chrome://browser/skin/preferences/category-general.svg"] {
