@@ -59,6 +59,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
         body_path: relnotes.md
+        discussion_category_name: Announcements
         files: |
           zapsCoolPhotonTheme-${{ github.ref_name }}.zip
           zapsCoolPhotonTheme-${{ github.ref_name }}-esr.zip
