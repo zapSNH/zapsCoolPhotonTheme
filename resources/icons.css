@@ -1064,7 +1064,7 @@ menupopup > menu::after {
 #searchmode-switcher-popup {
 	.local-options toolbarbutton, menuitem {
 		-moz-context-properties: fill !important;
-		fill: var(--urlbar-box-text-color) !important;
+		fill: var(--urlbar-box-text-color, currentColor) !important;
 		background-repeat: no-repeat;
 		background-position-y: center;
 		background-position-x: 10px;
