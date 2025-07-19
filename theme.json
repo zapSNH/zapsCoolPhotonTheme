@@ -3,11 +3,11 @@
   "name": "zap's cool photon theme",
   "description": "a cool photon theme for firefox (and other browsers too)",
   "homepage": "https://github.com/zapSNH/zapsCoolPhotonTheme",
-  "preferences": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/preferences.json",
-  "readme": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/README.md",
+  "preferences": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/preferences.json",
+  "readme": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/README.md",
   "style": {
-    "content": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/userContent.css",
-    "chrome": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/userChrome.css"
+    "content": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/userContent.css",
+    "chrome": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/userChrome.css"
   },
   "image": "https://i.imgur.com/FyzTFKg.png",
   "author": "ZapSNH",
