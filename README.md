@@ -51,13 +51,13 @@ See the [Forks](#forks-) section for more information about Firefox forks.
 ## Installation
 There are four (4) ways of installing this theme.
 * [Manual Installation 🛠](#manual-installation-)
-* [Sine Mod Manager🪐](#sine-mod-manager-)
+* [Sine Mod Manager🪐](#sine-mod-manager-) (recommended)
 * [Extension 🧩](#extension-)
 * [Git :octocat:](#git-octocat)
   
 ____
 ### Manual Installation 🛠
-Installable on all editions of Firefox (and forks). Configuration is handled in `about:config`. There is no auto-updating.
+Classic userChrome installation. Installable on all editions of Firefox (and forks). Configuration is handled in `about:config`. There is no auto-updating.
 
 Open `about:config` and set:
 | Pref | Value | Description |
@@ -120,7 +120,7 @@ You're done! 🎉
 
 ____
 ### Sine Mod Manager 🪐
-Installable on all editions of Firefox (and forks), though is broken on Firefox 128esr. Requires Sine.
+Uses the Sine Mod Manager to install the theme. Installable on all editions of Firefox (and forks).
 
 Has auto-updating and a basic configurator.
 
@@ -128,7 +128,7 @@ Install the Sine theme manager for your browser. ([follow this guide](https://gi
 
 You can get this theme by searching for it (zap's cool photon theme) in Sine's marketplace and installing it.
 
-~You can also install it by typing in this repo (zapSNH/zapsCoolPhotonTheme), and optionally the branch (append tree/[the branch, e.g. nightly]), into the local installation text box and installing it there.~ (broken right now)
+If you want to specify a version of this theme to install, in the local installation text box, type in this repo, and optionally [the branch](https://github.com/zapSNH/zapsCoolPhotonTheme/branches) (e.g. `zapSNH/zapsCoolPhotonTheme/tree/128esr` for the version for FF 128), and install it there.
 
 You're done! 🎉
 ____
