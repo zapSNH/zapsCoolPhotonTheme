@@ -502,7 +502,7 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 #reset-pbm-toolbar-button {
 	list-style-image: url("./icons/flame.svg") !important;
 }
-/* I don't have pocket so please tell me if there's an issue */
+/* rip bozo */
 #save-to-pocket-button {
 	list-style-image: url("./icons/pocket-outline.svg") !important;
 }
@@ -886,7 +886,7 @@ menupopup > menu::after {
 		margin-inline-end: var(--appmenu-icon-inline-end) !important;
 		padding: 2px;
 	}
-	#profiles-create-profile-button .toolbarbutton-icon {
+	#profiles-create-profile-button .toolbarbutton-icon, #menu_newProfile {
 		list-style-image: url("./icons/add.svg") !important;
 	}
 	#profiles-edit-this-profile-button .toolbarbutton-icon {
