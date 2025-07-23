@@ -38,7 +38,7 @@ ____
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **128esr** | ✔️ | ✔️ | ✔️ | |
-| **140** | ✔️ | ✔️ | ✔️ | |
+| **141** | ✔️ | ✔️ | ✔️ | |
 | **142 nightly** | ✔️ | ✔️ | ? | |
 
 Most Firefox-based forks that don't modify the interface that much are supported.
@@ -90,8 +90,8 @@ Download the release for your browser version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) **(recommended)**             | [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
+| [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) **(recommended)**             | [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                           | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
