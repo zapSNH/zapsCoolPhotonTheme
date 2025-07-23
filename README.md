@@ -36,10 +36,10 @@ ____
 	
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
-| **128esr** | ✔️ | ✔️ | ✔️ | |
+| **115/128esr** | ✔️ | ✔️ | ✔️ | No longer updated |
+| **140esr** | ✔️ | ✔️ | ✔️ | |
 | **141** | ✔️ | ✔️ | ✔️ | |
-| **142 nightly** | ✔️ | ✔️ | ? | |
+| **143 nightly** | ✔️ | ✔️ | ? | |
 
 Most Firefox-based forks that don't modify the interface that much are supported.
 
