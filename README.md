@@ -209,6 +209,6 @@ Other icons not present originally in Firefox Photon have been recreated based o
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
 - [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton-legacy/)
-- The folks over at r/FirefoxCSS
+- The folks over at [FirefoxCSS@fedia.io](https://lemmy.blahaj.zone/c/FirefoxCSS@fedia.io)
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (though they also made Proton >:()]
 - You!!!
