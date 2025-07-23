@@ -509,7 +509,7 @@ menu.bookmark-item {
 #cta-menu-header-description {
 	margin-inline-start: 0 !important;
 }
-menupopup:not([needsgutter]) :is(menuitem, menu):not([checked="true"], .menuitem-iconic, .menu-iconic) {
+:is(menupopup, menu):not([needsgutter]) > :is(menuitem, menu):not([checked="true"], .menuitem-iconic, .menu-iconic) {
 	padding-left: 34px !important;
 }
 @media (-moz-platform: windows) {
@@ -859,8 +859,15 @@ tooltip {
 	panel {
 		--panel-padding: 4px 0px !important;
 	}
-	.tab-group-editor-swatches, .tab-group-editor-name {
+	.tab-group-editor-swatches, .tab-group-editor-name, #tab-group-suggestions-container {
 		margin-inline: 12px !important;
+	}
+	#tab-group-suggestions-container moz-button-group {
+		margin-inline: -12px !important;
+		margin-bottom: -11px !important;
+		moz-button:not(:first-child) {
+			margin: 0 !important;
+		}
 	}
 	.tab-group-delete {
 		margin-bottom: 0 !important;

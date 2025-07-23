@@ -1,36 +1,47 @@
+<!-- this is just an html file with extra steps -->
 <h1 align="center">
-	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="zap's cool photon theme" title="oversized logowordmark">
+	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="zap's cool photon theme" title="who the hell is zap anyway">
 </h1>
 
 <p align="center">
-	A userChrome theme for modern Firefox-based browsers designed to be as <b>faithful</b> to Firefox Photon (specifically Firefox 87) as possible.
-	<br>
-	<br>
 	<img alt="cool" src="https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2">
-	<br>
-	<a href="https://github.com/CosmoCreeper/Sine"><img src="https://github.com/user-attachments/assets/92a0aaf7-cc40-4f54-b061-27376b117c9b" alt="Available on Sine" title="click to go to sineee"></a>
+</p>
+<p align="center">
+	<a href="https://github.com/CosmoCreeper/Sine"><img src="https://github.com/user-attachments/assets/92a0aaf7-cc40-4f54-b061-27376b117c9b" alt="Available on Sine" title="Available for Fabr- I mean (the) Sine Mod Manager"></a>
 	<br>
 	<img alt="GitHub Release" src="https://img.shields.io/github/v/release/zapSNH/zapsCoolPhotonTheme?sort=semver&style=for-the-badge&color=%230A84FF">
 	<img alt="GitHub License" src="https://img.shields.io/github/license/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
 	<img alt="GitHub Issues" src="https://img.shields.io/github/issues/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
+	<br>
+	A theme for modern Firefox-based browsers made to be as <b>faithful</b> to Firefox Photon as possible.
+	<br>
+	Designed based on later versions of Photon, specifically Firefox 87.
 </p>
 
-<h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (showcase) &lt;</a></h4>
+<p align="center">
+	Have an issue or want to share feedback? Feel free to <a href="https://github.com/zapSNH/zapsCoolPhotonTheme/issues/new/choose">open an issue</a> or <a href="https://github.com/zapSNH/zapsCoolPhotonTheme/discussions/new/choose">start a discussion</a>!
+	<br>
+	Contributions are greatly appreciated!
+</p>
 
-<hr>
+<h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (theme showcase) &lt;</a></h4>
+
+
+____
 <h4 align="center">
 	 Compatibility
 </h4>
 
 <div align="center">
 	
-Includes forks of Firefox (Waterfox, Floorp, etc.).
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
 | **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **128esr** | ✔️ | ✔️ | ✔️ | |
 | **140** | ✔️ | ✔️ | ✔️ | |
 | **142 nightly** | ✔️ | ✔️ | ? | |
+
+Most Firefox-based forks that don't modify the interface that much are supported.
 
 See the [Forks](#forks-) section for more information about Firefox forks.
 
@@ -40,13 +51,13 @@ See the [Forks](#forks-) section for more information about Firefox forks.
 ## Installation
 There are four (4) ways of installing this theme.
 * [Manual Installation 🛠](#manual-installation-)
-* [Sine 🪐](#sine-)
+* [Sine Mod Manager🪐](#sine-mod-manager-) (recommended)
 * [Extension 🧩](#extension-)
 * [Git :octocat:](#git-octocat)
   
 ____
 ### Manual Installation 🛠
-Installable on all editions of Firefox (and forks). Configuration is handled in `about:config`. There is no auto-updating.
+Classic userChrome installation. Installable on all editions of Firefox (and forks). Configuration is handled in `about:config`. There is no auto-updating.
 
 Open `about:config` and set:
 | Pref | Value | Description |
@@ -54,6 +65,7 @@ Open `about:config` and set:
 | `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enables [userChrome](https://www.userchrome.org/) customization. |
 | `svg.context-properties.content.enabled` | `true` | Required for proper icon coloring. |
 | `browser.newtabpage.activity-stream.logowordmark.alwaysVisible` | `false` | Reverts the new tab Firefox logo behavior to what it was in Photon. |
+| `browser.urlbar.scotchBonnet.enableOverride` | `false` | Disables the new dropdown-style searchmode picker. |
 | `widget.windows.mica.popups` | `0` | (Windows only) Disables transparency effects on menus.<br>If you're/you will be using [`uc.popups.transparent`](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options#menu-transparency), then don't change this option. |
 <details>
 	<summary>For Firefox 121 and below...</summary>
@@ -92,11 +104,11 @@ Download the release for your browser version:
 
 ____
 
-Extract the zip and move `zapsCoolPhotonTheme-*` (where `*` is `main`, `128esr`, etc.) to your profile folder which you can find by going to `about:support` and opening your profile folder/directory.
+Extract the zip and move `zapsCoolPhotonTheme-*` (where `*` is `main`, `128esr`, etc.) to your profile folder. You can find this by going to `about:support` and opening your profile folder/directory.
 
 Rename the `zapsCoolPhotonTheme-*` folder to `chrome`
 
-Make sure the directory is like this:
+Your directory structure should look like this:
 * `Profiles` > `XXXXXXXX.profile_name_here` > `chrome` > `userChrome.css` and others
 
 and **not** like this:
@@ -107,17 +119,16 @@ Restart Firefox.
 You're done! 🎉
 
 ____
-### Sine 🪐
-> [!NOTE]
-> Currently experimental and subject to change
+### Sine Mod Manager 🪐
+Uses the Sine Mod Manager to install the theme. Installable on all editions of Firefox (and forks).
 
-Installable on all editions of Firefox (and forks), though is partially broken on Firefox 128esr. Requires Sine. Has auto-updating and a basic configurator.
+Has auto-updating and a basic configurator.
 
 Install the Sine theme manager for your browser. ([follow this guide](https://github.com/CosmoCreeper/Sine?tab=readme-ov-file#%EF%B8%8F-installation))
 
-You can install this theme by searching for it (zap's cool photon theme) in Sine's marketplace and installing it.
+You can get this theme by searching for it (zap's cool photon theme) in Sine's marketplace and installing it.
 
-~You can also install it by typing in this repo (zapSNH/zapsCoolPhotonTheme), and optionally the branch (append tree/[the branch, e.g. nightly]), into the local installation text box and installing it there.~ (broken right now)
+If you want to specify a version of this theme to install, in the local installation text box, type in this repo, and optionally [the branch](https://github.com/zapSNH/zapsCoolPhotonTheme/branches) (e.g. `zapSNH/zapsCoolPhotonTheme/tree/128esr` for the version for FF 128), and install it there.
 
 You're done! 🎉
 ____
@@ -148,7 +159,7 @@ You're done! 🎉
 ____
 
 ### Git :octocat: 
-<!-- yes i know that the github != git just shut up -->
+<!-- yes i know that the github != git shut up -->
 Recommended for people who know what they're doing.
 
 Installable on all editions of Firefox. Configuration is handled in `about:config`. There is no auto-updating (unless you make a script for that) but you can quickly update using `git pull` in your terminal.
@@ -175,7 +186,7 @@ You're done! 🎉
 # Forks 🍴
 If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
 
-It is recommended to disable any UI styles set by the browser to prevent conflicts.
+It is recommended to disable any custom UI styles set by the browser to prevent conflicts.
 | Pref | Value | Browser |
 |:-:|:-:|:-:|
 | `uc.waterfox` | `true` | Waterfox |
@@ -185,18 +196,19 @@ It is recommended to disable any UI styles set by the browser to prevent conflic
 | `uc.mullvad` | `true` | Mullvad Browser |
 
 # Configuration
-Config options are available at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
+You can view all of the config options at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
 
-An interactive configurator is available at https://zapsnh.github.io/zcpt-configurator/. To apply the settings, place the exported `user.js` file in your profile folder/directory (`Profiles` > `XXXXXXXX.profile`), launch Firefox, and then delete the `user.js` file afterwards.
+An interactive configurator is available at https://zapsnh.github.io/zcpt-configurator/. To apply the settings, place the exported `user.js` file in your profile folder/directory (`Profiles` > `XXXXXXXX.profile`, not in the `chrome` folder), launch Firefox, and then **delete the `user.js` file afterwards.**
 
-For the WebExtension version, the configurator can be found in the extension's option page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings will apply after you click `Apply` (unless you're 𝓯𝓻𝓮𝓪𝓴𝔂).
+For the WebExtension version, the configurator can be found in the extension's options page (`about:addons` > zap's cool photon theme > Preferences/Options). The settings will apply after you click `Apply` (unless you're 𝓯𝓻𝓮𝓪𝓴𝔂).
 
 ## Miscellaneous
 Firefox Photon icons are primarily taken from Firefox 87 or Firefox 78esr.
-Other icons not present in Firefox Photon are recreated based on their Proton/Acorn counterparts.
+Other icons not present originally in Firefox Photon have been recreated based on their Proton/Acorn counterparts.
 
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
 - [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton-legacy/)
 - The folks over at r/FirefoxCSS
-- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (but they also made Proton >:()]
+- [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (though they also made Proton >:()]
+- You!!!
