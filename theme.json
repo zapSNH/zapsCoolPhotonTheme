@@ -1,7 +1,7 @@
 {
   "id": "zaps-cool-photon-theme",
   "name": "zap's cool photon theme",
-  "description": "a cool photon theme for firefox (and other browsers too)",
+  "description": "a cool photon theme for firefox-based browsers [but NOT zen >:(]",
   "homepage": "https://github.com/zapSNH/zapsCoolPhotonTheme",
   "preferences": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/preferences.json",
   "readme": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/nightly/README.md",
