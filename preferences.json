@@ -31,42 +31,59 @@
   {
     "type": "checkbox",
     "property": "uc.bottom-tabs",
-    "label": "Bottom tabs"
+    "label": "Bottom tabs",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.bottom-tabs.bookmark-on-top",
-    "label": "Bottom tabs with bookmarks bar on top"
+    "label": "Bottom tabs with bookmarks bar on top",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.bottom-tabs", "value": true}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.sidebery",
-    "label": "Vertical tabs with Sidebery"
+    "label": "Vertical tabs with Sidebery",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.theme.tab-color-same-as-navbar",
-    "label": "Tab color takes the navbar color"
+    "label": "Tab color takes the navbar color",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.theme.navbar-color-same-as-tab", "value": false}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.theme.navbar-color-same-as-tab",
-    "label": "Navbar color takes the tab color"
+    "label": "Navbar color takes the tab color",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.theme.tab-color-same-as-navbar", "value": false}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.full-width-tabs",
-    "label": "Full width tabs"
+    "label": "Full width tabs",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.revert-all-tabs-behavior",
-    "label": "Only show the all tabs button when the tab bar is overflowing just like pre-Photon/early-Proton"
+    "label": "Only show the all tabs button when the tab bar is overflowing just like pre-Photon/early-Proton",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.always-show-close-button",
-    "label": "Always show the tab close button even when the tabs are small"
+    "label": "Always show the tab close button even when the tabs are small",
+    "default": false
   },
 
   {
@@ -76,12 +93,20 @@
   {
     "type": "checkbox",
     "property": "uc.reduced-megabar",
-    "label": "Slightly smaller Proton-sized megabar"
+    "label": "Slightly smaller Proton-sized megabar",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.no-megabar", "value": false}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.no-megabar",
-    "label": "No megabar"
+    "label": "No megabar",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.reduced-megabar", "value": false}}
+    ]
   },
 
   {
@@ -91,52 +116,99 @@
   {
     "type": "checkbox",
     "property": "uc.contextmenu.win-10",
-    "label": "Windows 10 styled menu"
+    "label": "Windows 10 styled menu",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.contextmenu.win-11", "value": false}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.contextmenu.win-11",
-    "label": "Windows 11 styled menu"
+    "label": "Windows 11 styled menu",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.contextmenu.win-10", "value": false}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.contextmenu.dark",
-    "label": "Dark context menu w/ Windows 10/11 styled context menu"
+    "label": "Dark context menu w/ Windows 10/11 styled context menu",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.contextmenu.light", "value": false}},
+      {
+        "conditions": [
+          {"if": {"property": "uc.contextmenu.win-10", "value": true}},
+          {"if": {"property": "uc.contextmenu.win-11", "value": true}}
+        ],
+        "operator": "OR"
+      }
+    ],
+    "operator": "AND"
   },
   {
     "type": "checkbox",
     "property": "uc.contextmenu.light",
-    "label": "Light context menu w/ Windows 10/11 styled context menu"
+    "label": "Light context menu w/ Windows 10/11 styled context menu",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.contextmenu.dark", "value": false}},
+      {
+        "conditions": [
+          {"if": {"property": "uc.contextmenu.win-10", "value": true}},
+          {"if": {"property": "uc.contextmenu.win-11", "value": true}}
+        ],
+        "operator": "OR"
+      }
+    ],
+    "operator": "AND"
   },
   {
     "type": "checkbox",
     "property": "uc.popups.transparent",
-    "label": "Transparent menus for Windows 11 and macOS (requires widget.windows.mica.popups set to 2 for Windows 11)"
+    "label": "Transparent menus for Windows 11 and macOS (requires widget.windows.mica.popups set to 2 for Windows 11)",
+    "default": false
   },
 
   {
     "type": "separator",
-    "label": "Logos"
+    "label": "Logos",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.logo.quantum",
-    "label": "Use the pre-Firefox 70 quantum logo everywhere instead of the current one"
+    "label": "Use the pre-Firefox 70 quantum logo everywhere instead of the current one",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.logo.quantum.beta",
-    "label": "Use the Firefox quantum beta logo everywhere"
+    "label": "Use the Firefox quantum beta logo everywhere",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.logo.quantum", "value": true}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.logo.quantum.dev",
-    "label": "Use the Firefox quantum developer edition logo everywhere"
+    "label": "Use the Firefox quantum developer edition logo everywhere",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.logo.quantum", "value": true}}
+    ]
   },
   {
     "type": "checkbox",
     "property": "uc.logo.quantum.nightly",
-    "label": "Use the Firefox quantum nightly logo everywhere"
+    "label": "Use the Firefox quantum nightly logo everywhere",
+    "default": false,
+    "conditions": [
+      {"if": {"property": "uc.logo.quantum", "value": true}}
+    ]
   },
 
   {
@@ -146,16 +218,61 @@
   {
     "type": "checkbox",
     "property": "uc.newtab.background",
-    "label": "New tab background"
+    "label": "Enable contrast enhancements if you have a custom new tab background set.",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.style-forms",
-    "label": "Themes HTML Forms. May break some stuff."
+    "label": "Themes HTML Forms. May break some stuff.",
+    "default": false
   },
   {
     "type": "checkbox",
     "property": "uc.toolbar.transparency",
-    "label": "Makes the toolbar transparent to allow transparency effects such as Mica or Acrylic (effects can be configured by using programs such as MicaForEveryone)"
+    "label": "Makes the toolbar transparent to allow transparency effects such as Mica or Acrylic (effects can be configured by using programs such as MicaForEveryone)",
+    "default": false
+  },
+
+  {
+    "type": "separator",
+    "label": "do not touch >:("
+  },
+  {
+    "type": "checkbox",
+    "property": "svg.context-properties.content.enabled",
+    "label": "proper icon coloring, disable this to break the theme (>:[)",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "property": "security.secure_connection_icon_color_gray",
+    "label": "gray secure site icon",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "property": "browser.newtabpage.activity-stream.logowordmark.alwaysVisible",
+    "label": "new firefox logo behavior",
+    "default": false
+  },
+  {
+    "type": "checkbox",
+    "property": "browser.urlbar.scotchBonnet.enableOverride",
+    "label": "new dropdown-style urlbar search shortcuts (this one's actually themed so you can disable it if you want)",
+    "default": false
+  },
+  {
+    "type": "dropdown",
+    "property": "widget.windows.mica.popups",
+    "value": "number",
+    "label": "popup transparency mode for windows 11 (widget.windows.mica.popups)",
+    "default": 0,
+    "placeholder": false,
+    "options": [
+      { "label": "none (default)", "value": 0 },
+      { "label": "transparent (required for transparent menus)", "value": 1 },
+      { "label": "respect os settings", "value": 2 }
+    ]
   }
 ]

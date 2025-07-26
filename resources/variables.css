@@ -45,6 +45,8 @@
 	--inactive-titlebar-opacity: 1 !important;
 	
 	--tab-separator-height: var(--tab-min-height);
+	--tab-group-line-toolbar-border-distance: 0 !important;
+	--panel-separator-padding: 0px !important;
 	@media (-moz-platform: linux) {
 		--tab-separator-height: calc(var(--tab-min-height) + 1px);
 	}

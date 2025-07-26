@@ -16,6 +16,7 @@
 	}
 	toolbarseparator {
 		margin: 3px !important;
+		--panel-separator-padding: 0px !important;
 	}
 	#editBookmarkSeparator {
 		margin-top: 10px !important;
@@ -45,6 +46,10 @@
 	}
 	menu, menuitem {
 		border-radius: var(--photon-border-radius) !important;
+	}
+	toolbarseparator {
+		margin-block: 3px !important;
+		--panel-separator-padding: 0px !important;
 	}
 }
 menuitem[disabled="true"] {
@@ -902,6 +907,18 @@ tooltip {
 			margin-block-end: 0 !important;
 		}
 	}
+}
+/* tab group preview panel */
+#tabgroup-preview-panel {
+	margin-block: -2px !important;
+	.menuitem-iconic {
+		margin-block: 1px !important;
+	}
+	.menuitem-iconic image {
+		-moz-context-properties: fill;
+		fill: currentColor;
+	}
+	--panel-padding: 4px !important;
 }
 /* mm yes ai in places where they're not supposed to be in */
 #tab-group-suggestion-button {
