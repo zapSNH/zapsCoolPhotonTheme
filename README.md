@@ -36,10 +36,10 @@ ____
 	
 | | Windows | Linux (GNOME) | macOS | Notes |
 |-|:-:|:-:|:-:|:-:|
-| **115esr** | ✔️ | ✔️ | ✔️ | No longer updated |
-| **128esr** | ✔️ | ✔️ | ✔️ | |
-| **140** | ✔️ | ✔️ | ✔️ | |
-| **142 nightly** | ✔️ | ✔️ | ? | |
+| **115/128esr** | ✔️ | ✔️ | ✔️ | No longer updated |
+| **140esr** | ✔️ | ✔️ | ✔️ | |
+| **141** | ✔️ | ✔️ | ✔️ | |
+| **143 nightly** | ✔️ | ✔️ | ? | |
 
 Most Firefox-based forks that don't modify the interface that much are supported.
 
@@ -90,8 +90,8 @@ Download the release for your browser version:
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) **(recommended)**             | [Firefox 140](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v140) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
+| [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) **(recommended)**             | [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                           | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
@@ -209,6 +209,6 @@ Other icons not present originally in Firefox Photon have been recreated based o
 Special thanks to:
 - [black7375's Lepton](https://github.com/black7375/Firefox-UI-Fix)
 - [YukisCoffee's Phroton](https://github.com/YukisCoffee/phroton-legacy/)
-- The folks over at r/FirefoxCSS
+- The folks over at [FirefoxCSS@fedia.io](https://lemmy.blahaj.zone/c/FirefoxCSS@fedia.io)
 - [Mozilla](https://www.mozilla.org/) since they made Firefox so customizable [and made Photon (though they also made Proton >:()]
 - You!!!
