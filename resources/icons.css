@@ -118,7 +118,7 @@
 	order: 1;
 	height: 16px !important;
 	z-index: 1;
-	--icon-fill: var(--toolbox-textcolor) !important;
+	--icon-fill: currentColor !important;
 	@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
 	    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([pinned]):not([crashed]) &:is([soundplaying], [muted], [activemedia-blocked]) {
 			display: flex !important;
@@ -639,7 +639,7 @@ menupopup > menu::after {
 #appMenu-multiView .subviewbutton::before,
 #appMenu-proton-update-banner::before,
 #downloadsHistory .button-icon,
-.subviewbutton:not([class*="identity-color"], #appMenu-profiles-button , #PanelUI-fxa-menu-profiles-buttom, .profile-item) > image {
+.subviewbutton:not([class*="identity-color"], #appMenu-profiles-button , #PanelUI-fxa-menu-profiles-button, .profile-item) > image {
 	fill: currentColor !important;
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill !important;
