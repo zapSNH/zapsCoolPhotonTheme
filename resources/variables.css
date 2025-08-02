@@ -90,7 +90,7 @@ button {
 }
 
 /* border radiiiiii */
-#urlbar-background, #searchbar, input:not([type="radio"]),
+#urlbar-background, .urlbar-background, #searchbar, input:not([type="radio"]),
 toolbarbutton stack, toolbarbutton:not(#fxa-toolbar-menu-button, #back-button, .bookmark-item,
 .unified-extensions-item-menu-button, .unified-extensions-item-action-button) image,
 #tabs-newtab-button image,

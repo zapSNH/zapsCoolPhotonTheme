@@ -74,6 +74,7 @@
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
 		--border-radius-small: var(--photon-secondary-border-radius) !important;
+		--visual-picker-item-border-radius: var(--photon-primary-border-radius) !important;
 		--color-accent-primary: #0a84ff !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
