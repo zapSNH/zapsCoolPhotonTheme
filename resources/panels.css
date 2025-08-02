@@ -915,7 +915,7 @@ tooltip {
 	.menuitem-iconic {
 		margin-block: 1px !important;
 	}
-	.menuitem-iconic image {
+	.menuitem-iconic .menu-icon {
 		-moz-context-properties: fill;
 		fill: currentColor;
 	}
