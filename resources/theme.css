@@ -118,14 +118,14 @@ input.findbar-textbox:focus {
 		--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 		--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
 	}
-	#urlbar-background, #searchbar {
+	#urlbar-background, .urlbar-background, #searchbar {
 		background-color: white !important;
 		border: solid 1px #cccccc !important;
 	}
-	#urlbar:not([breakout-extend], :hover) #urlbar-background {
+	#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
 		box-shadow: 0px 0px 4px #0001 !important;
 	}
-	#urlbar:not([breakout-extend]):hover #urlbar-background {
+	#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
 		box-shadow: 0px 0px 5px #0002 !important;
 	}
 	.tab-background[selected] {
@@ -138,7 +138,7 @@ input.findbar-textbox:focus {
 	.tabbrowser-tab[selected]) {
 		box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 	}
-	#urlbar[breakout-extend] #urlbar-background {
+	#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
 		border: solid 1px var(--photon-tab-outline) !important;
 	}
 }
@@ -201,14 +201,14 @@ input.findbar-textbox:focus {
 					--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 					--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
 				}
-				#urlbar-background, #searchbar {
+				#urlbar-background, .urlbar-background, #searchbar {
 					background-color: white !important;
 					border: solid 1px #cccccc !important;
 				}
-				#urlbar:not([breakout-extend], :hover) #urlbar-background {
+				#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
 					box-shadow: 0px 0px 4px #0001 !important;
 				}
-				#urlbar:not([breakout-extend]):hover #urlbar-background {
+				#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
 					box-shadow: 0px 0px 5px #0002 !important;
 				}
 				.tab-background[selected] {
@@ -221,7 +221,7 @@ input.findbar-textbox:focus {
 				.tabbrowser-tab[selected]) {
 					box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 				}
-				#urlbar[breakout-extend] #urlbar-background {
+				#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
 					border: solid 1px var(--photon-tab-outline) !important;
 				}
 		}
@@ -435,7 +435,7 @@ input.findbar-textbox:focus {
 :is(:root[lwt-default-theme-in-dark-mode],
 :root:not([lwtheme="true"]),
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) {
-	#urlbar[breakout-extend] #urlbar-background {
+	#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
 		border: solid 1px var(--photon-tab-outline) !important;
 	}
 	.urlbarView-row[selected] span {
@@ -501,7 +501,7 @@ input.findbar-textbox:focus {
 @media (prefers-color-scheme: dark) {
 	:root[style*="background-noodles"] {
 		--tabs-border-color: rgba(232, 224, 255, 0.32) !important;
-		:is(#urlbar-background, #searchbar) {
+		:is(#urlbar-background, .urlbar-background, #searchbar) {
 			border: solid 1px var(--tabs-border-color) !important;
 		}
 	}
@@ -509,7 +509,7 @@ input.findbar-textbox:focus {
 @media (prefers-color-scheme: light) {
 	:root[style*="background-noodles"] {
 		--tabs-border-color: rgb(32, 18, 59) !important;
-		:is(#urlbar-background, #searchbar) {
+		:is(#urlbar-background, .urlbar-background, #searchbar) {
 			border: solid 1px rgba(32, 18, 59, 0.32) !important;
 		}
 	}

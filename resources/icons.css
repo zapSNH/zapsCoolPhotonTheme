@@ -112,11 +112,17 @@
 	--button-min-height-small: 16px !important;
 	--button-border-radius: var(--photon-border-radius) !important;
 	--tab-icon-end-margin: 4px !important;
+	--icon-size: 16px !important;
+	--icon-fill: currentColor !important;
+	--button-background-color-ghost-hover: transparent !important;
+	--button-background-color-ghost-active: transparent !important;
 	margin-inline-start: -16px !important;
 	order: 1;
 	height: 16px !important;
 	z-index: 1;
-	--icon-fill: currentColor !important;
+	&:not(:hover) {
+		opacity: 0.8;
+	}
 	@media not -moz-pref("sidebar.visibility", "expand-on-hover") {
 	    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([pinned]):not([crashed]) &:is([soundplaying], [muted], [activemedia-blocked]) {
 			display: flex !important;
