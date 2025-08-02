@@ -11,9 +11,9 @@
   },
   "image": "https://i.imgur.com/FyzTFKg.png",
   "author": "ZapSNH",
-  "version": "141.3",
-  "tags": ["firefox", "photon"],
+  "version": "141.4",
+  "tags": ["firefox", "photon", "legacy", "square"],
   "createdAt": "2023-08-09",
-  "updatedAt": "2025-07-28",
+  "updatedAt": "2025-08-02",
   "fork": ["firefox", "waterfox", "floorp", "mullvad"]
 }
