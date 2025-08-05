@@ -48,7 +48,6 @@
 			--button-bgcolor: rgb(55, 55, 55) !important;
 			--button-hover-bgcolor: #aaa6 !important;
 			--button-active-bgcolor: rgb(92, 92, 94) !important;
-
 			--background-color-box: rgb(12, 12, 13, 0.15) !important;
 			--in-content-box-border-color: rgb(90, 90, 94) !important;
 		}
@@ -108,13 +107,10 @@
 			--toolbar-bgcolor: #f9f9fa !important;
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
 			--panel-separator-color: hsla(210,4%,10%,.14) !important;
-			
 			--button-hover-bgcolor: #bdbec0 !important;
 			--button-active-bgcolor: #b3b4b6 !important;
-			
 			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;	
-			
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
 			--color-gray-60: #4a4a4f !important;
 			--color-gray-80: color-mix(in srgb, var(--color-gray-90) 67%, var(--color-gray-60)) !important;
 			--color-gray-90: #0c0c0d !important;
@@ -126,36 +122,28 @@
 			--toolbar-field-background-color: #474749 !important;
 			--toolbar-field-border-color: #5a5a5c !important;
 			--toolbar-field-focus-background-color: #474749 !important;
-			
 			--button-bgcolor: rgb(55, 55, 55) !important;
 			--button-hover-bgcolor: #aaa6 !important;
 			--button-active-bgcolor: rgb(92, 92, 94) !important;
-			
 			--toolbarbutton-icon-fill: #bebebe !important;
 			--toolbarbutton-active-background: #7f7f80 !important;
-			
 			--input-bgcolor: rgb(60, 60, 64) !important;
 			--input-border-color: rgb(90, 90, 94) !important;
-			
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
-			
 			--panel-separator-color: rgba(249, 249, 250, .1) !important;
-			
 			--color-gray-60: #4a4a4f !important;
 			--color-gray-80: color-mix(in srgb, var(--color-gray-60) 75%, var(--color-gray-90)) !important;
 			--color-gray-90: #0c0c0d !important;
-			
 			--background-color-box: var(--color-gray-80) !important;
-			
 			--box-shadow-color-darker-layer-1: rgba(0, 0, 0, 0.15) !important;
 			--box-shadow-color-darker-layer-2: rgba(0, 0, 0, 0.2) !important;
 			--box-shadow-color-lighter-layer-1: rgba(0, 0, 0, 0.05) !important;
 			--box-shadow-color-lighter-layer-2:  rgba(0, 0, 0, 0.1) !important;
 		}
 	}
-	
 	button:not(.control-button,
-	.preview-button, :has(> span)) {
+	.preview-button,
+	:has(> span)) {
 		-moz-appearance: none !important;
 		border-radius: var(--photon-border-radius) !important;
 		border-color: color-mix(in srgb, transparent 90%, currentColor) !important;
@@ -199,7 +187,8 @@
 		&:not(#login-line-input) {
 			appearance: none !important;
 		}
-		&:is([type="radio"], [type="checkbox"]) {
+		&:is([type="radio"],
+		[type="checkbox"]) {
 			border: 1px solid color-mix(in srgb, transparent 90%, currentColor) !important;
 		}
 		&:not([type="radio"]) {
@@ -216,7 +205,6 @@
 		&[type="radio"] {
 			border-radius: 9999px !important;
 		}
-		
 		&:checked {
 			background-color: var(--photon-accent-dark) !important;
 			&:hover:not([disabled]) {
@@ -286,7 +274,8 @@
 		display: flex;
 		gap: 4px;
 	}
-	#allLogins, #alerts {
+	#allLogins,
+	#alerts {
 		width: 16px;
 		aspect-ratio: 1;
 	}
@@ -361,7 +350,6 @@
 			content: url("./icons/loading.svg") !important;
 		}
 	}
-	
 	@media -moz-pref("uc.logo.quantum") {
 		#rightBox {
 			background-image: var(--quantum-wordmark) !important;
@@ -391,12 +379,25 @@
 	}
 	#organizeButton {
 		list-style-image: url("./icons/settings.svg") !important;
+		--menuitem-icon: url("./icons/settings.svg") !important;
 	}
 	#viewMenu {
 		list-style-image: url("./icons/sort.svg") !important;
+		--menuitem-icon: url("./icons/sort.svg") !important;
 	}
 	#maintenanceButton {
 		list-style-image: url("./icons/import-export.svg") !important;
+		--menuitem-icon: url("./icons/import-export.svg") !important;
+	}
+	#organizeButton,
+	#viewMenu,
+	#maintenanceButton {
+		img {
+			content: var(--menuitem-icon) !important;
+		}
+	}
+	#placesMenu > menu::after {
+		content: url("./icons/arrow-dropdown-12.svg") !important;
 	}
 	#placesMenu > menu,
 	#placesToolbar > toolbarbutton {
@@ -489,7 +490,7 @@
 		:root {
 			--toolbar-bgcolor: #f9f9fa !important;
 			--input-bgcolor: #ccc !important;
-			--input-border-color: #aaa 
+			--input-border-color: #aaa
 		}
 	}
 	@media (prefers-color-scheme: dark) {
@@ -608,7 +609,8 @@
 	input[type="radio"] {
 		border-radius: 999px;
 	}
-	input:is([type="checkbox"], [type="radio"]) {
+	input:is([type="checkbox"],
+	[type="radio"]) {
 		appearance: none;
 		width: 20px !important;
 		height: 20px !important;
@@ -645,7 +647,7 @@
 	}
 	#printer-picker {
 		background-image: url("./icons/arrow-dropdown-16.svg"),
-			url("./icons/print1.svg") !important;
+		url("./icons/print1.svg") !important;
 	}
 	.toggle-group #portrait + .toggle-group-label::before {
 		content: url("./icons/document.svg") !important;
@@ -654,8 +656,6 @@
 		content: url("./icons/document.svg") !important;
 		rotate: 90deg;
 		scale: -1 1
-	
-	
 	}
 	select:not([size],
 	[multiple]) {
@@ -804,7 +804,8 @@
 /* Old style context menus */
 @media -moz-pref("uc.contextmenu.win-10") {
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -820,7 +821,8 @@
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--panel-color: #000 !important;
@@ -862,7 +864,8 @@
 /* kinda looks like the gnome context menu too */
 @media -moz-pref("uc.contextmenu.win-11") {
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #2c2c2c !important;
 			--button-hover-bgcolor: #5f5f5f !important;
 			--panel-color: #fff !important;
@@ -878,7 +881,8 @@
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]), tooltip {
+		menupopup:not([customoptionstyling="true"]),
+		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
 			--button-hover-color: #000 !important;
@@ -998,9 +1002,7 @@
 		}
 		@media (-moz-platform: linux) {
 			#sidebar-splitter {
-				visibility: collapse 
-			
-			
+				visibility: collapse
 			}
 			.titlebar-buttonbox-container {
 				margin-block: 5px;

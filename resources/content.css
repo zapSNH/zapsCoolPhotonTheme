@@ -631,7 +631,7 @@
 		margin-inline-end: 8px;
 		margin-top: 10px;
 	}
-	.top-site-outer.placeholder.add-button .tile .icon-wrapper {
+	.top-site-outer.add-button .tile .icon-wrapper {
 		background-image: url("./icons/add.svg") !important;
 		width: 48px !important;
 		height: 48px !important;
@@ -1237,6 +1237,7 @@
 		background-position: center !important;
 	}
 	#sineMarketplaceRefreshButton {
+		background-repeat: no-repeat !important;
 		background-image: url("./icons/reload.svg") !important;
 	}
 	.sineItemConfigureButton {
