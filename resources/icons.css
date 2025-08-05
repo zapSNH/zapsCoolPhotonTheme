@@ -374,18 +374,28 @@
 /* This should be self-explanatory (it is not) */
 #back-button, #context-back {
 	list-style-image: url("./icons/back.svg") !important;
+	--menuitem-icon: url("./icons/back.svg") !important;
 }
 #forward-button, #context-forward {
 	list-style-image: url("./icons/forward.svg") !important;
+	--menuitem-icon: url("./icons/forward.svg") !important;
 }
 #reload-button, #context-reload {
 	list-style-image: url("./icons/reload.svg") !important;
+	--menuitem-icon: url("./icons/reload.svg") !important;
 }
 #stop-button, #context-stop {
 	list-style-image: url("./icons/stop.svg") !important;
+	--menuitem-icon: url("./icons/stop.svg") !important;
 }
 #home-button {
 	list-style-image: url("./icons/home.svg") !important;
+}
+/* really annoying */
+#context-back, #context-forward, #context-reload, #context-stop, #context-bookmarkpage {
+	img {
+		content: var(--menuitem-icon) !important;
+	}
 }
 /* Reload button animation */
 /* from github.com/1280px/rainfox, check out the theme! (maybe not since it's dead now lol) */
@@ -445,8 +455,10 @@
 /* end credits */
 #star-button, #context-bookmarkpage, #pageAction-panel-bookmark {
 	list-style-image: url("./icons/bookmark-hollow.svg") !important;
+	--menuitem-icon: url("./icons/bookmark-hollow.svg") !important;
 	&[starred] {
 		list-style-image: url("./icons/bookmark.svg") !important;
+		--menuitem-icon: url("./icons/bookmark.svg") !important;
 	}
 }
 #reader-mode-button-icon {
