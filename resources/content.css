@@ -125,6 +125,7 @@
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
 		--fxview-border-interactive: var(--in-content-box-border-color) !important;
+		--background-color-canvas: var(--in-content-page-background) !important;
 		
 		--green-50: #30e60b !important;
 		--green-60: #12bc00 !important;

@@ -452,6 +452,14 @@
   from { transform: translateX(0); }
   to { transform: translateX(-450px) } 
 }
+#taskbar-tabs-button > .urlbar-icon {
+	list-style-image: url("./icons/taskbar-tabs-add-tab.svg") !important;
+	--menuitem-icon: url("./icons/taskbar-tabs-add-tab.svg") !important;
+	:root[taskbartab] & {
+		list-style-image: url("./icons/taskbar-tabs-move-tab.svg") !important;
+		--menuitem-icon: url("./icons/taskbar-tabs-move-tab.svg") !important;
+	}
+}
 /* end credits */
 #star-button, #context-bookmarkpage, #pageAction-panel-bookmark {
 	list-style-image: url("./icons/bookmark-hollow.svg") !important;
