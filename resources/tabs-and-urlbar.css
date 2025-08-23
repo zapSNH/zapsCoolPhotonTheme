@@ -153,6 +153,22 @@ credits to phroton for some of this stuff */
 .tabbrowser-tab:is([pinned][first-visible-tab]) {
 	margin: 0 !important;
 }
+/* pinned tab labeb ff >143 */
+#pinned-drop-indicator {
+	border-radius: 0 !important;
+	outline: none !important;
+	box-shadow: -2px -2px var(--toolbarbutton-icon-fill-attention) inset, 2px 2px var(--toolbarbutton-icon-fill-attention) inset;
+	filter: saturate(0.5);
+	opacity: 0.5;
+	transition: var(--photon-speed-3) var(--photon-easing-function) !important;;
+	#pinned-drop-indicator-icon {
+		margin-inline-start: 2px !important;
+	}
+	&[interactive] {
+		filter: none;
+		opacity: 1;
+	}
+}
 /* from lepton */
 .tabbrowser-tab:not([pinned]) .tab-icon-stack:not(:has(+ .tab-audio-button)) .tab-icon-overlay[pictureinpicture] {
 	/* Shape */
