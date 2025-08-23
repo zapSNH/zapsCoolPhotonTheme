@@ -1012,6 +1012,10 @@ menupopup > menu::after {
 #TabsToolbar .tabbrowser-tab:not([image], [pinned]) .tab-icon-stack:not([busy]) .tab-icon-image {
 	visibility: collapse !important;
 }
+/* drop indicator */
+#pinned-drop-indicator-icon {
+	content: url("./icons/pin-tab.svg") !important;
+}
 /* URLBar icons */
 .searchbar-search-icon {
 	list-style-image: url("./icons/find-in-page.svg") !important;
