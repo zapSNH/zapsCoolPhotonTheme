@@ -38,8 +38,8 @@ ____
 |-|:-:|:-:|:-:|:-:|
 | **115/128esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **140esr** | ✔️ | ✔️ | ✔️ | |
-| **141** | ✔️ | ✔️ | ✔️ | |
-| **143 nightly** | ✔️ | ✔️ | ? | |
+| **142** | ✔️ | ✔️ | ✔️ | |
+| **144 nightly** | ✔️ | ✔️ | ? | |
 
 Most Firefox-based forks that don't modify the interface that much are supported.
 
@@ -86,13 +86,13 @@ Too lazy to set all these prefs? You can visit https://zapsnh.github.io/zcpt-con
 **Make sure to delete the `user.js` file after you start Firefox so that it doesn't override any changes you make in `about:config`.**
 ____
 
-Download the release for your browser version:
+Download the release for your browser version (for esr releases, download the files suffixed with `-esr`):
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) **(recommended)**             | [Firefox 141](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
-| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141) (download the ESR version) | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/128esr.zip)        |
-| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                           | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
+| [Firefox 142/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v142) **(recommended)**             | [Firefox 142](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
+| [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
 <details>
 	<summary>Older Versions</summary>
