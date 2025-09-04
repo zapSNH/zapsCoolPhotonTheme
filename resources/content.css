@@ -224,6 +224,9 @@
 	.close-icon {
 		list-style-image: url("./icons/close-tab.svg") !important;
 	}
+	img[src="chrome://global/skin/icons/close.svg"] {
+		content: url("./icons/close.svg") !important;
+	}
 	.button-delete {
 		background-image: url("./icons/delete.svg") !important;
 	}
@@ -528,6 +531,10 @@
 	}
 	.icon.icon-download {
 		background-image: url("./icons/download-icons.svg#arrow-with-bar") !important;
+	}
+	.theme-custom-color-picker::after {
+		background-image: url("./icons/command-eyedropper.svg") !important;
+		background-size: 20px !important;
 	}
 	.ds-card .img-wrapper img {
 		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
@@ -1194,6 +1201,10 @@
 	}
 	#homeContentsGroup vbox[data-subcategory="highlights"] > checkbox .checkbox-label-box::before {
 		content: url("./icons/glyph-highlights-16.svg") !important;
+		width: 16px;
+	}
+	#homeContentsGroup vbox[data-subcategory="support-firefox"] > checkbox .checkbox-label-box::before {
+		content: url("./icons/whatsnew.svg") !important;
 		width: 16px;
 	}
 	.updateSettingCrossUserWarningContainer {
