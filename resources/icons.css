@@ -611,6 +611,9 @@ menupopup > menu::after {
 }
 #PanelUI-menu-button .toolbarbutton-badge {
 	background: #74BF43 url("./icons/update-badge.svg") no-repeat center !important;
+	min-width: 12px !important;
+	max-width: 12px !important;
+	height: 12px !important;
 	border-radius: 50% !important;
 	margin: -7px -3px 0 !important;
 }
@@ -1693,6 +1696,12 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 /* Bookmark */
 .folder-icon {
 	list-style-image: url("./icons/folder2.svg") !important;
+}
+.folder-icon:not([id]), #editBMPanel_unfiledRootItem, #editBMPanel_chooseFolderMenuItem {
+	--menuitem-icon: url("./icons/folder2.svg") !important;
+	img {
+		content: var(--menuitem-icon) !important;
+	}
 }
 #editBMPanel_folderMenuList[selectedGuid="toolbar_____"], #editBMPanel_toolbarFolderItem {
 	list-style-image: url("./icons/bookmarksToolbar.svg") !important;

@@ -51,6 +51,11 @@
 		--panel-separator-padding: 0px !important;
 	}
 }
+@media -moz-pref("uc.popups.disable-transition") {
+	menupopup, panel {
+		transition: unset !important;
+	}
+}
 menuitem[disabled="true"] {
 	pointer-events: none !important;
 	opacity: 1 !important;
