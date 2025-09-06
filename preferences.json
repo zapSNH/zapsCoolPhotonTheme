@@ -218,7 +218,7 @@
   {
     "type": "checkbox",
     "property": "uc.newtab.background",
-    "label": "Enable contrast enhancements if you have a custom new tab background set.",
+    "label": "Enable contrast enhancements if you have a custom new tab background set",
     "default": false
   },
   {
@@ -231,6 +231,12 @@
     "type": "checkbox",
     "property": "uc.toolbar.transparency",
     "label": "Makes the toolbar transparent to allow transparency effects such as Mica or Acrylic (effects can be configured by using programs such as MicaForEveryone)",
+    "default": false
+  },
+  {
+    "type": "checkbox",
+    "property": "uc.popups.disable-transition",
+    "label": "Disables the fading transition effect on menus and popups",
     "default": false
   },
 

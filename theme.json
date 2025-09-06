@@ -3,17 +3,17 @@
   "name": "zap's cool photon theme",
   "description": "a cool photon theme for firefox-based browsers [but NOT zen >:(]",
   "homepage": "https://github.com/zapSNH/zapsCoolPhotonTheme",
-  "preferences": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/preferences.json",
-  "readme": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/README.md",
+  "preferences": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/140esr/preferences.json",
+  "readme": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/140esr/README.md",
   "style": {
-    "content": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/userContent.css",
-    "chrome": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/main/userChrome.css"
+    "content": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/140esr/userContent.css",
+    "chrome": "https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/140esr/userChrome.css"
   },
   "image": "https://i.imgur.com/FyzTFKg.png",
   "author": "ZapSNH",
-  "version": "142.0",
+  "version": "142.2",
   "tags": ["firefox", "photon", "legacy", "square"],
   "createdAt": "2023-08-09",
-  "updatedAt": "2025-08-23",
+  "updatedAt": "2025-09-05",
   "fork": ["firefox", "waterfox", "floorp", "mullvad"]
 }
