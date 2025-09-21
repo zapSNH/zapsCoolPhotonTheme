@@ -433,6 +433,9 @@
 		&[src="chrome://global/skin/icons/warning.svg"] {
 			content: url("./icons/warning-16.svg") !important;
 		}
+		&[src="chrome://global/skin/icons/open-in-new.svg"] {
+			content: url("./icons/open-in-new.svg") !important;
+		}
 	}
 	.card {
 		border: none !important;
@@ -522,6 +525,7 @@
 	.icon-settings,
 	.home-section .external-link {
 		background-image: url("./icons/settings.svg") !important;
+		fill: currentColor !important;
 	}
 	.icon.icon-history-item {
 		background-image: url("./icons/history.svg") !important;
@@ -1763,6 +1767,7 @@
 		--editorParams-stampAddImage-icon: url("./icons/pdfjs/toolbarButton-zoomIn.svg") !important;
 		--toolbarButton-editorHighlight-icon: url("./icons/pdfjs/toolbarButton-editorHighlight.svg") !important;
 		--clear-signature-button-icon: url("./icons/delete.svg") !important;
+		--toolbarButton-editorComment-icon: url("./icons/pdfjs/comment-editButton.svg") !important;
 	}
 	:is(#sidebarToggle,
 	#sidebarToggleButton)::before {
@@ -1931,6 +1936,9 @@
 	}
 	.dropdownToolbarButton::after {
 		mask-image: var(--toolbarButton-menuArrow-icon) !important;
+	}
+	#editorCommentButton::before {
+		mask-image: var(--toolbarButton-editorComment-icon) !important;
 	}
 }
 
