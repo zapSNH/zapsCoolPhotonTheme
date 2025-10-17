@@ -436,6 +436,13 @@
 		&[src="chrome://global/skin/icons/open-in-new.svg"] {
 			content: url("./icons/open-in-new.svg") !important;
 		}
+		&[src="chrome://browser/skin/flame.svg"] {
+			content: url("./icons/flame.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/arrow-right.svg"] {
+			content: url("./icons/back-12.svg") !important;
+			scale: -1 1;
+		}
 	}
 	.card {
 		border: none !important;
