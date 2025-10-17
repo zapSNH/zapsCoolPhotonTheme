@@ -1155,6 +1155,9 @@ tab-group {
 		--collapsed-tab-width: calc(var(--new-sidebar-width) - 1px) !important;
 		width: calc(var(--new-sidebar-width) - 1px) !important;
 		padding: 0 !important;
+		#tabbrowser-tabs {
+			gap: 0 !important;
+		}
 		.tab-group-label-container::after {
 			inset: 0 !important;
 		}
@@ -1163,19 +1166,36 @@ tab-group {
 			&[selected] .tab-background {
 				background-color: var(--button-active-bgcolor, var(--button-background-color-ghost-active)) !important;
 			}
-			&:not([selected],
-			:has(+ .tabbrowser-tab[selected])) .tab-background {
-				border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+			&:not([pinned]) {
+				&:not([selected],
+				:has(+ .tabbrowser-tab[selected])) .tab-background {
+					border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+				}
+				&:not([selected]):first-child .tab-background {
+					border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+				}
+				.tab-background {
+					width: var(--new-sidebar-width) !important;
+				}
 			}
-			&:not([selected]):first-child .tab-background {
-				border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
-			}
-			.tab-background {
-				width: var(--new-sidebar-width) !important;
+			&[pinned] {
+				width: 100% !important;
+				.tab-icon-stack {
+					justify-content: center;
+				}
+				&:not([selected], :has(+ .tabbrowser-tab[selected])) .tab-background {
+					border-right: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+				}
+				&:not([selected]) .tab-background {
+					border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+				}
+				.tab-background {
+					--tab-collapsed-background-width: 100% !important;
+				}
 			}
 			.tab-background::before {
 				translate: 0 0;
-				position: absolute
+				position: absolute;
 			}
 			.tab-close-button {
 				margin-inline-start: -2px !important;
@@ -1186,12 +1206,13 @@ tab-group {
 				min-width: 16px !important;
 				width: 16px !important;
 			}
-			&[selected]:hover :is(.tab-icon-image,
+			&[selected]:not([pinned]):hover :is(.tab-icon-image,
 			.tab-throbber) {
 				opacity: 0 !important;
 			}
 			&[selected]:not([pinned]):hover .tab-close-button {
 				display: flex !important;
+				box-shadow: none !important;
 			}
 			.tab-icon-overlay {
 				border-radius: 999px !important;
@@ -1208,17 +1229,13 @@ tab-group {
 				&[selected]:hover .tab-icon-image {
 					opacity: 1 !important;
 				}
-				.tab-label-container {
+				&:not([pinned]) .tab-label-container {
 					margin-inline-start: 12px !important;
-				}
-				&[pinned] .tab-label-container {
-					display: flex !important;
-					margin-inline-start: 18px !important;
 				}
 				&:not([pinned]) .tab-close-button {
 					display: block !important;
 				}
-				.tab-icon-overlay {
+				&:not([pinned]) .tab-icon-overlay {
 					border-radius: var(--photon-border-radius) !important;
 					padding: 0px !important;
 					opacity: 1 !important;
@@ -1227,17 +1244,20 @@ tab-group {
 					transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 					top: 0px !important;
 				}
-				.tab-icon-stack {
+				&:not([pinned]) .tab-icon-stack {
 					width: calc(100% - 72px) !important;
 					position: absolute;
 				}
 				&[pinned] .tab-icon-stack {
 					width: calc(100% - 48px) !important;
-					left: 16px !important;
 				}
-				.tab-label {
+				&:not([pinned]) .tab-label {
 					margin-inline-start: 12px !important;
 				}
+			}
+			#vertical-tabs-newtab-button {
+				margin-inline: 0 !important;
+				padding-inline: 16px !important;
 			}
 		}
 		#tabbrowser-tabs:not([expanded]) {
@@ -1252,9 +1272,17 @@ tab-group {
 					display: block !important;
 				}
 			}
+			#vertical-tabs-newtab-button {
+				margin-inline: 0 !important;
+				width: 100% !important;
+			}
+			#vertical-tabs-newtab-button, #tabs-newtab-button {
+				justify-content: start;
+				padding-inline: 16px !important;
+			}
 		}
 		#tabbrowser-arrowscrollbox {
-			height: 100% !important;
+			height: 0 !important; /* ... huh */
 			&:not([overflowing]) tab {
 				overflow: hidden !important;
 			}
@@ -1271,7 +1299,7 @@ tab-group {
 			}
 			margin-inline: 0px !important;
 			#tabbrowser-tabs[expanded] & {
-				padding-inline: 17px !important;
+				padding-inline: 16px !important;
 			}
 		}
 	}
