@@ -525,6 +525,7 @@ menu.bookmark-item {
 @media (-moz-platform: windows) {
 	menuitem[checked="true"] > :is(.menu-icon, .menu-iconic-left) {
 		list-style-image: url("./icons/check.svg") !important;
+		content: url("./icons/check.svg") !important;
 	}
 }
 @media (-moz-platform: linux) {

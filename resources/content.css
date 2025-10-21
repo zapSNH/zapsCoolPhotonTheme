@@ -1171,6 +1171,12 @@
 	.camera-icon {
 		list-style-image: url("./icons/camera.svg") !important;
 	}
+	.localhost-icon {
+		list-style-image: url("./icons/device-desktop.svg") !important;
+	}
+	.local-network-icon {
+		list-style-image: url("./icons/local-network.svg") !important;
+	}
 	.microphone-icon {
 		list-style-image: url("./icons/microphone.svg") !important;
 	}
