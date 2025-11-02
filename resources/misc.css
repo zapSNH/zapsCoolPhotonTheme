@@ -806,7 +806,7 @@
 /* Old style context menus */
 @media -moz-pref("uc.contextmenu.win-10") {
 	@media -moz-pref("uc.contextmenu.dark") {
-		menupopup:not([customoptionstyling="true"]),
+		menupopup:not([customoptionstyling="true"], #ContentSelectDropdownPopup),
 		tooltip {
 			--arrowpanel-background: #2b2b2b !important;
 			--button-hover-bgcolor: #5f5f5f !important;
@@ -817,13 +817,13 @@
 			border-color: #808080 !important;
 		}
 		tooltip,
-		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menupopup:not([customoptionstyling="true"], #ContentSelectDropdownPopup) :is(menu,
 		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #fff !important;
 		}
 	}
 	@media -moz-pref("uc.contextmenu.light") {
-		menupopup:not([customoptionstyling="true"]),
+		menupopup:not([customoptionstyling="true"], #ContentSelectDropdownPopup),
 		tooltip {
 			--arrowpanel-background: #fff !important;
 			--button-hover-bgcolor: #e3e2e3 !important;
@@ -834,7 +834,7 @@
 			border-color: #d7d7d7 !important;
 		}
 		tooltip,
-		menupopup:not([customoptionstyling="true"]) :is(menu,
+		menupopup:not([customoptionstyling="true"], #ContentSelectDropdownPopup) :is(menu,
 		menuitem):where([_moz-menuactive="true"]):not([disabled="true"]) {
 			color: #000 !important;
 		}
