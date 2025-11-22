@@ -1229,3 +1229,10 @@
 		}
 	}
 }
+
+/* Libadwaita circular titlebar buttons */
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+    .titlebar-button > .toolbarbutton-icon {
+        clip-path: circle(50%);
+    }
+}

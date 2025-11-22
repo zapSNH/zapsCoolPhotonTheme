@@ -38,8 +38,8 @@ ____
 |-|:-:|:-:|:-:|:-:|
 | **115/128esr** | ✔️ | ✔️ | ✔️ | No longer updated |
 | **140esr** | ✔️ | ✔️ | ✔️ | |
-| **143** | ✔️ | ✔️ | ✔️ | |
-| **145 nightly** | ✔️ | ✔️ | ? | |
+| **145** | ✔️ | ✔️ | ✔️ | |
+| **147 nightly** | ✔️ | ✔️ | ? | |
 
 Most Firefox-based forks that don't drastically modify the interface are supported.
 
@@ -51,7 +51,7 @@ See the [Forks](#forks-) section for more information about Firefox forks.
 ## Installation
 There are four (4) ways of installing this theme.
 * [Manual Installation 🛠](#manual-installation-)
-* [Sine Mod Manager🪐](#sine-mod-manager-) (recommended)
+* [Sine Mod Manager🪐](#sine-mod-manager-)
 * [Extension 🧩](#extension-)
 * [Git :octocat:](#git-octocat)
   
@@ -93,7 +93,7 @@ Download the release for your browser version (for esr releases, download the fi
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 143/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v143) **(recommended)**             | [Firefox 143](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 145/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v145) **(recommended)**             | [Firefox 145](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 

@@ -70,95 +70,136 @@
 			--photon-speed-1: 0s;
 		}
 	}
+	
+	/* organized (and verified that everything's the same) using ai (a eye? but i already have 2 of them). am i one of those 'vibe coders' now? */
 	* {
+		/* Border radius / sizing */
 		--photon-primary-border-radius: 4px;
 		--photon-secondary-border-radius: 2px;
 		--border-radius-small: var(--photon-secondary-border-radius) !important;
+		--border-radius-large: var(--photon-primary-border-radius) !important;
+		--border-radius-medium: var(--photon-primary-border-radius) !important;
 		--visual-picker-item-border-radius: var(--photon-primary-border-radius) !important;
+		--theme-card-border-radius: var(--photon-primary-border-radius) !important;
+		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
+		--select-border-radius: var(--photon-secondary-border-radius);
+	
+		/* Brand / accent colors */
 		--color-accent-primary: #0a84ff !important;
-		--grey-90: rgba(12, 12, 13) !important;
 		--brand-color-accent: #0a84ff !important;
 		--brand-color-accent-hover: color-mix(in srgb, var(--brand-color-accent) 80%, currentColor) !important;
 		--brand-color-accent-active: color-mix(in srgb, var(--brand-color-accent) 60%, currentColor) !important;
+	
+		/* Colors */
+		--blue-60: #0060df;
+		--blue-70: #003eaa;
+		--blue-80: #002275;
+		--green-50: #30e60b !important;
+		--green-60: #12bc00 !important;
+		--green-70: #058b00 !important;
+		--green-80: #006504 !important;
+		--green-90: #003706 !important;
+		--grey-90: rgba(12, 12, 13) !important;
+		--grey-20: #ededf0;
+	
+		/* In-content / box variables */
+		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent);
+		--box-border-color: var(--in-content-box-border-color);
+		--border-color-interactive: var(--in-content-box-border-color);
+		--box-background: var(--in-content-box-background);
+		--input-text-background-color: var(--in-content-box-background);
 		--in-content-page-background: #f9f9fa !important;
-		--in-content-primary-button-text-color: white !important;
-		--newtab-primary-action-background: #0a84ff !important;
-		--toggle-background-color-pressed: var(--blue-60) !important;
 		--in-content-button-background: color-mix(in srgb, var(--grey-90) 10%, transparent) !important;
 		--in-content-button-background-hover: color-mix(in srgb, var(--grey-90) 20%, transparent) !important;
 		--in-content-button-background-active: color-mix(in srgb, var(--grey-90) 30%, transparent) !important;
+		--in-content-box-info-background: var(--grey-90-a30);
+		--background-color-canvas: var(--in-content-page-background) !important;
+	
+		/* Primary / action buttons */
 		--primary-button-background-color: var(--blue-60);
 		--primary-button-hover-background-color: var(--blue-70);
 		--primary-button-active-background-color: var(--blue-80);
 		--primary-button-color: rgb(249, 249, 250);
-		--button-text-color-primary: rgb(249, 249, 250);
-		--button-text-color-primary-hover: rgb(249, 249, 250);
-		--button-text-color-primary-active: rgb(249, 249, 250);
-		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent);
-		--box-background: var(--in-content-box-background);
-		--input-text-background-color: var(--in-content-box-background);
-		--box-border-color: var(--in-content-box-border-color);
-		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
-		--border-radius-medium: var(--photon-primary-border-radius) !important;
-		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
-		--blue-60: #0060df;
-		--blue-70: #003eaa;
-		--blue-80: #002275;
-		--grey-20: #ededf0;
-		--border-color-interactive: var(--in-content-box-border-color);
+	
 		--in-content-primary-button-text-color: white !important;
 		--in-content-primary-button-text-color-hover: white !important;
 		--in-content-primary-button-text-color-active: white !important;
-		--theme-card-border-radius: var(--photon-primary-border-radius) !important;
-		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
-		--table-row-background-color: var(--in-content-box-background) !important;
-		--table-row-background-color-alternate: var(--in-content-button-background) !important;
-		--toggle-dot-background-color-on-pressed: #fff !important;
-		--toggle-dot-background-color: color-mix(in srgb, #fff 80%, transparent) !important;
+	
+		--button-text-color-primary: rgb(249, 249, 250);
+		--button-text-color-primary-hover: rgb(249, 249, 250);
+		--button-text-color-primary-active: rgb(249, 249, 250);
+	
+		/* New tab / specific UI */
+		--newtab-primary-action-background: #0a84ff !important;
+		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
+		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
+	
+		/* Links */
 		--link-color: var(--blue-60) !important;
 		--link-color-hover: var(--blue-70) !important;
 		--link-color-active: var(--blue-80) !important;
+	
+		/* Toggle / switches */
+		--toggle-background-color-pressed: var(--blue-60) !important;
+		--toggle-dot-background-color-on-pressed: #fff !important;
+		--toggle-dot-background-color: color-mix(in srgb, #fff 80%, transparent) !important;
+	
+		/* Table / list */
+		--table-row-background-color: var(--in-content-box-background) !important;
+		--table-row-background-color-alternate: var(--in-content-button-background) !important;
+	
+		/* Shadows / card visuals */
 		--shadow-10: 0 1px 4px var(--grey-90-a10) !important;
 		--shadow-30: 0 4px 16px var(--grey-90-a10) !important;
 		--card-shadow: var(--shadow-10) !important;
 		--box-shadow-card: var(--shadow-10) !important;
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
+	
+		/* Misc / integrations */
 		--fxview-border-interactive: var(--in-content-box-border-color) !important;
-		--background-color-canvas: var(--in-content-page-background) !important;
-		
-		--green-50: #30e60b !important;
-		--green-60: #12bc00 !important;
-		--green-70: #058b00 !important;
-		--green-80: #006504 !important;
-		--green-90: #003706 !important;
 	}
+	
 	@media (prefers-color-scheme: dark) {
 		* {
+			/* Backgrounds and surfaces */
 			--in-content-page-background: #2a2a2e !important;
+			--in-content-box-background: #202023 !important;
+			--in-content-table-background: #202023 !important;
+			--in-content-box-border-color: #4b4b4e !important;
+			--codec-bg-header: #4b4b4e !important;
+			--in-content-box-info-background: var(--grey-90-a30) !important;
+	
+			/* Accents / interactive */
 			--in-content-accent-color: #0060df !important;
 			--checkbox-checked-bgcolor: #0060df !important;
-			--in-content-box-background: #202023 !important;
-			--in-content-box-border-color: #4b4b4e !important;
+	
+			/* In-content button states */
 			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
 			--in-content-button-background-hover: rgba(249,249,250,0.15) !important;
 			--in-content-button-background-active: rgba(249,249,250,0.25) !important;
+	
+			/* Primary button overrides in dark */
 			--in-content-primary-button-background: var(--blue-60) !important;
 			--in-content-primary-button-background-hover: var(--blue-70) !important;
 			--in-content-primary-button-background-active: var(--blue-80) !important;
-			--in-content-box-info-background: var(--grey-90-a30) !important;
-			--in-content-table-background: #202023 !important;
+	
+			/* Accent color hover/active */
 			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
-			--codec-bg-header: #4b4b4e !important;
+	
+			/* Grays */
 			--color-gray-60: #4a4a4f !important;
 			--color-gray-80: color-mix(in srgb, var(--color-gray-60) 66.67%, var(--color-gray-90)) !important;
 			--color-gray-90: #0c0c0d !important;
+	
+			/* Links (dark mode variants) */
 			--link-color: var(--blue-40) !important;
 			--link-color-hover: var(--blue-50) !important;
 			--link-color-active: var(--blue-60) !important;
 		}
 	}
+
 	.close {
 		background-image: var(--message-bar-icon-close-url) !important;
 	}
@@ -224,8 +265,16 @@
 	.close-icon {
 		list-style-image: url("./icons/close-tab.svg") !important;
 	}
-	img[src="chrome://global/skin/icons/close.svg"] {
-		content: url("./icons/close.svg") !important;
+	img {
+		&[src="chrome://global/skin/icons/close.svg"] {
+			content: url("./icons/close.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/more.svg"] {
+			content: url("./icons/more.svg") !important;
+		}
+		&[src="chrome://newtab/content/data/content/assets/arrow-clockwise-16.svg"] {
+			content: url("./icons/reload.svg") !important;
+		}
 	}
 	.button-delete {
 		background-image: url("./icons/delete.svg") !important;
@@ -831,6 +880,21 @@
 		label {
 			display: none;
 		}
+	}
+	.card-context {
+		display: grid !important;
+		justify-content: center !important;
+		align-content: center !important;
+	}
+	/* widgets */
+	.widgets-section-container {
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+	}
+	.widgets-container > article {
+		border: 1px solid var(--box-border-color);
+	}
+	.icon.icon-add {
+		background-image: url("./icons/add.svg") !important;
 	}
 	:root:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),
