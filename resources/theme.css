@@ -533,4 +533,11 @@ input.findbar-textbox:focus {
 		--toolbar-color: var(--lwt-tab-text, var(--tab-selected-textcolor)) !important;
 	}
 }
+
+/* Libadwaita circular titlebar buttons */
+@media (-moz-gtk-theme-family: adwaita) or (-moz-gtk-theme-family: yaru) {
+    .titlebar-button > .toolbarbutton-icon {
+        clip-path: circle(50%);
+    }
+}
 }
