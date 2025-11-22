@@ -921,6 +921,9 @@ menupopup > menu::after {
 	#profiles-edit-this-profile-button .toolbarbutton-icon {
 		list-style-image: url("./icons/edit.svg") !important;
 	}
+	#profiles-copy-profile-button {
+		list-style-image: url("./icons/edit-copy.svg") !important;
+	}
 }
 /* Exit icon */
 #appMenu-quit-button2 .toolbarbutton-icon {

@@ -235,6 +235,9 @@ menu) {
 #profile-name {
 	padding: 0 !important;
 }
+#profiles-copy-profile-button {
+	margin-block-end: 8px !important;
+}
 /* Random button that is big */
 #overflowMenu-customize-button {
 	padding-top: 0 !important;
