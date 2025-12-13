@@ -198,26 +198,38 @@
 	list-style-image: url("./icons/extensions.svg") !important
 }
 /* Changes the tracking protection icons to Photon's */
-#tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
+#tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon,
+#trust-icon-container.secure {
 	list-style-image: url("./icons/tracking-protection-no-trackers.svg") !important;
-	fill: var(--toolbarbutton-icon-fill) 
+	fill: var(--toolbarbutton-icon-fill) !important;
 }
-#tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon {
+#tracking-protection-icon-container > #tracking-protection-icon-box[hasException] > #tracking-protection-icon,
+#trust-icon-container.inactive {
 	list-style-image: url("./icons/tracking-protection-disabled.svg") !important;
-	fill: var(--toolbarbutton-icon-fill) 
+	fill: var(--toolbarbutton-icon-fill) !important;
 }
 #tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
-	list-style-image: url("./icons/tracking-protection-animation.svg") !important
+	list-style-image: light-dark(url("./icons/tracking-protection-animation.svg"), url("./icons/tracking-protection-animation-brighttext.svg")) !important
+}
+#trust-icon-container {
+	&.file {
+		list-style-image: url("./icons/document.svg") !important;
+		fill: var(--toolbarbutton-icon-fill) !important;
+	}
+	&.warning, &.insecure {
+		list-style-image: url("./icons/tracking-protection-disabled.svg") !important;
+		fill: var(--toolbarbutton-icon-fill) !important;
+	}
+}
+#trustpanel-connection-icon {
+	list-style-image: url("./icons/large-connection-mixed-active-loaded.svg") !important;
+	#trustpanel-popup[connection^="secure"] & {
+		list-style-image: url("./icons/connection-secure.svg") !important;
+	}
 }
 /* Changes the extension icon to Photon's */
 #identity-box.extensionPage #identity-icon {
 	list-style-image: url("./icons/extensions.svg") !important
-}
-/* Ensures that you can see the tracking protection icon in dark-mode */
-@media (prefers-color-scheme: dark) {
-	#tracking-protection-icon-container > #tracking-protection-icon-box[active] > #tracking-protection-icon {
-		list-style-image: url("./icons/tracking-protection-animation-brighttext.svg") !important;
-	}
 }
 
 /* Panel icons */

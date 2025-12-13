@@ -567,6 +567,10 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 }
 #urlbar,
 #searchbar {
+	--urlbar-inner-border-radius: 0px !important;
+	&[breakout-extend="true"] {
+		--urlbar-inner-border-radius: var(--photon-border-radius) !important;
+	}
 	--urlbar-height: 30px !important;
 	align-content: center !important;
 	:root[uidensity="touch"] & {
@@ -686,6 +690,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 }
 .identity-box-button:not(:hover, :active, [open]) {
 	background-color: transparent !important;
+}
+#trust-icon-container {
+	align-self: center !important;
 }
 /* Compact mode fixes */
 :root[uidensity="compact"] {
