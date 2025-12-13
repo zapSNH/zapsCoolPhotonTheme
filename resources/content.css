@@ -1253,6 +1253,36 @@
 	.autoplay-icon {
 		list-style-image: url("./icons/autoplay-media.svg") !important;
 	}
+	.icon {
+		&[src="chrome://browser/skin/notification-icons/geo.svg"] {
+			content: url("./icons/geo.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/xr.svg"] {
+			content: url("./icons/vr.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/camera.svg"] {
+			content: url("./icons/camera.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/local-host.svg"] {
+			content: url("./icons/device-desktop.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/local-network.svg"] {
+			content: url("./icons/local-network.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/microphone.svg"] {
+			content: url("./icons/microphone.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/speaker.svg"] {
+			content: url("./icons/tab-audio-playing.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/desktop-notification.svg"] {
+			content: url("./icons/desktop-notification.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/autoplay-media.svg"] {
+			content: url("./icons/autoplay-media.svg") !important;
+		}
+	}
+
 	.addon-badge-private-browsing-allowed {
 		background-image: url("./icons/private-browsing.svg") !important;
 	}
