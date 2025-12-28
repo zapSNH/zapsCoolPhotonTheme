@@ -1045,7 +1045,9 @@ menupopup > menu::after {
 }
 #urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url("./icons/forward.svg") !important;
-	min-width: 28px !important;
+}
+.urlbar-revert-button {
+	list-style-image: url("./icons/globe1.svg") !important;
 }
 #urlbar-anon-search-settings image {
 	list-style-image: url("./icons/settings.svg") !important;
