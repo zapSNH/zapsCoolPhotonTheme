@@ -148,87 +148,92 @@ input.findbar-textbox:focus {
 @media not (-moz-gtk-csd-available) {
 	@media (prefers-color-scheme: light) {
 		:root:not([lwtheme=""]) {
-				--photon-tab-outline: var(--photon-accent-dark);
+			--photon-tab-outline: var(--photon-accent-dark);
 	
+			--lwt-accent-color: #d7d7db !important;
+			&:not([builtintheme]) {
 				--lwt-accent-color: #202340 !important;
-				--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
-				
-				--chrome-content-separator-color: #d7d7db !important;
-				
-				--toolbox-bgcolor: var(--lwt-accent-color) !important;
-				--toolbox-bgcolor-inactive: var(--lwt-accent-color-inactive) !important;
-				
-				--toolbar-bgcolor: #f9f9fa !important;
-				--in-content-page-background: var(--toolbar-bgcolor) !important;
-				--link-color: var(--photon-accent-dark) !important;
-				
-				--arrowpanel-border-color: #cccccc !important;
-				--panel-separator-color: hsla(210,4%,10%,.14) !important;
-				
-				--urlbar-border-color: var(--photon-accent-dark);
-				--urlbar-box-text-color: #747576 !important;
-				--urlbarView-hover-background: hsla(0,0%,80%,.35) !important;
-				--urlbarView-highlight-background: var(--photon-accent-dark) !important;
-				--urlbarView-highlight-color: #fff !important;
-				
-				--button-hover-bgcolor: hsla(0,0%,80%,.5) !important;
-				--button-active-bgcolor: hsla(0,0%,80%,.8) !important;
-				
-				--sidebar-background: #fff !important;
-				
-				--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
-				--autocomplete-popup-highlight-color: #fff !important;
-				
-				--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
-				--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
-				--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
-				
-				--button-primary-bgcolor: var(--photon-accent-dark) !important;
-				--button-primary-color: #fff !important;
-				--button-primary-active-bgcolor: var(--photon-accent-light) !important;
-				--button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
-				
-				--button-background-color: var(--toolbarbutton-background) !important;
-				--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
-				--button-background-color-active: var(--toolbarbutton-active-background) !important;
-				
-				--in-content-primary-button-background: var(--photon-accent) !important;
-				--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
-				--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+			}
+			--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 			
+			--chrome-content-separator-color: #d7d7db !important;
+			
+			--toolbox-bgcolor: var(--lwt-accent-color) !important;
+			--toolbox-bgcolor-inactive: var(--lwt-accent-color-inactive) !important;
+			
+			--toolbar-bgcolor: #f9f9fa !important;
+			--in-content-page-background: var(--toolbar-bgcolor) !important;
+			--link-color: var(--photon-accent-dark) !important;
+			
+			--arrowpanel-border-color: #cccccc !important;
+			--panel-separator-color: hsla(210,4%,10%,.14) !important;
+			
+			--urlbar-border-color: var(--photon-accent-dark);
+			--urlbar-box-text-color: #747576 !important;
+			--urlbarView-hover-background: hsla(0,0%,80%,.35) !important;
+			--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+			--urlbarView-highlight-color: #fff !important;
+			
+			--button-hover-bgcolor: hsla(0,0%,80%,.5) !important;
+			--button-active-bgcolor: hsla(0,0%,80%,.8) !important;
+			
+			--sidebar-background: #fff !important;
+			
+			--autocomplete-popup-highlight-background: var(--photon-accent-dark) !important;
+			--autocomplete-popup-highlight-color: #fff !important;
+			
+			--toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0,0%,70%,.4)) !important;
+			--toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0,0%,70%,.6)) !important;
+			--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
+			
+			--button-primary-bgcolor: var(--photon-accent-dark) !important;
+			--button-primary-color: #fff !important;
+			--button-primary-active-bgcolor: var(--photon-accent-light) !important;
+			--button-primary-hover-bgcolor: color-mix(in hsl, var(--photon-accent-light) 50%, var(--photon-accent-dark)) !important;
+			
+			--button-background-color: var(--toolbarbutton-background) !important;
+			--button-background-color-hover: var(--toolbarbutton-hover-background) !important;
+			--button-background-color-active: var(--toolbarbutton-active-background) !important;
+			
+			--in-content-primary-button-background: var(--photon-accent) !important;
+			--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
+			--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
+			
+			&:not([builtintheme]) {
 				--toolbarbutton-icon-fill: currentColor !important;
 				--toolbox-non-lwt-textcolor: rgb(251, 251, 254) !important;
 				--toolbox-textcolor: rgb(251, 251, 254) !important;
-				#urlbar {
-					--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
-					--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
-				}
-				#urlbar-background, .urlbar-background, #searchbar {
-					background-color: white !important;
-					border: solid 1px #cccccc !important;
-				}
-				#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
-					box-shadow: 0px 0px 4px #0001 !important;
-				}
-				#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
-					box-shadow: 0px 0px 5px #0002 !important;
-				}
-				.tab-background[selected] {
-					background: #f9f9fa !important;
-				}
-				#nav-bar {
-					box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
-				}
-				:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon,
-				.tabbrowser-tab[selected]) {
-					box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
-				}
-				#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
-					border: solid 1px var(--photon-tab-outline) !important;
-				}
+			}
+			#urlbar {
+				--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
+				--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
+			}
+			#urlbar-background, .urlbar-background, #searchbar {
+				background-color: white !important;
+				border: solid 1px #cccccc !important;
+			}
+			#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
+				box-shadow: 0px 0px 4px #0001 !important;
+			}
+			#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
+				box-shadow: 0px 0px 5px #0002 !important;
+			}
+			.tab-background[selected] {
+				background: #f9f9fa !important;
+			}
+			#nav-bar {
+				box-shadow: 0 calc(-1 * var(--tabs-navbar-shadow-size)) 0 #9e9fa1 !important;
+			}
+			:is(#TabsToolbar #firefox-view-button[aria-pressed="true"] .toolbarbutton-icon,
+			.tabbrowser-tab[selected]) {
+				box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
+			}
+			#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
+				border: solid 1px var(--photon-tab-outline) !important;
+			}
 		}
 		@media not ((-moz-windows-accent-color-in-titlebar) or -moz-pref("uc.toolbar.transparency")) {
-			:root:not([lwtheme=""]) {
+			:root:not([lwtheme=""], [builtintheme]) {
 				#navigator-toolbox {
 					background: #202340 !important;
 				}
@@ -427,7 +432,7 @@ input.findbar-textbox:focus {
 			}
 		}
 		@media not ((-moz-windows-accent-color-in-titlebar) or -moz-pref("uc.toolbar.transparency")) {
-			:root:not([lwtheme=""]) #navigator-toolbox {
+			:root:not([lwtheme=""], [builtintheme]) #navigator-toolbox {
 				background: #0c0c0d !important;
 			}
 		}

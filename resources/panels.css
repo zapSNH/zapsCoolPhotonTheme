@@ -809,7 +809,34 @@ tooltip {
 	border: 1px solid var(--arrowpanel-border-color) !important;
 }
 .tab-preview-thumbnail-container {
-	border-top: 1px solid var(--arrowpanel-border-color) !important;
+	outline: 1px solid var(--arrowpanel-border-color) !important;
+	margin: 0 !important;
+	width: 100% !important;
+	canvas {
+		border-radius: 0 !important;
+		border: none !important;
+	}
+}
+.tab-preview-add-note, .tab-preview-note-container {
+	margin: var(--space-medium) !important;
+}
+#tab-note-default-actions {
+	width: 100% !important;
+	moz-button {
+		flex: 1 !important;
+		margin: 0 !important;
+	}
+}
+.tab-note-editor-name {
+	margin-inline: var(--space-medium) !important;
+}
+#tab-note-menu {
+	toolbarseparator {
+		padding: 0 !important;
+	}
+	.panel-action-row {
+		margin-top: var(--space-small) !important;
+	}
 }
 /* Searchbar (not URL bar) */
 #PopupSearchAutoComplete .search-panel-header {
@@ -868,12 +895,17 @@ tooltip {
 #PopupSearchAutoComplete .autocomplete-richlistbox {
 	margin: 0 !important;
 }
-#searchmode-switcher-popup {
+#searchmode-switcher-popup, .searchmode-switcher-popup {
+	--panel-padding: 2px 0px 1px 0px !important;
+	> menuseparator {
+		margin-block: 1px !important;
+	}
 	> menuitem {
 		margin-inline: 0 !important;
+		margin-block: 1px !important;
 	}
 }
-#searchmode-switcher-popup-description {
+#searchmode-switcher-popup-description, .searchmode-switcher-popup-description {
 	margin-top: 0px !important;
 	padding-block: 2px !important;
 }
