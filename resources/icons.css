@@ -1055,8 +1055,20 @@ menupopup > menu::after {
 #urlbar-engine-one-off-item-tabs image, #search-button-tabs .menu-iconic-icon, #searchmode-switcher-icon[style*="tabs.svg"] {
 	list-style-image: url("./icons/tab.svg") !important;
 }
+#search-button-tabs .menu-icon {
+	content: url("./icons/tab.svg") !important;
+}
 #urlbar-engine-one-off-item-history image, .search-panel-tree > .autocomplete-richlistitem[originaltype="fromhistory"] > .ac-type-icon {
 	list-style-image: url("./icons/history.svg") !important;
+}
+#search-button-history .menu-icon {
+	content: url("./icons/history.svg") !important;
+}
+#search-button-actions .menu-icon {
+	content: url("./icons/quick-actions.svg") !important;
+}
+.searchmode-switcher-popup-search-settings-button .menu-icon {
+	content: url("./icons/settings.svg") !important;
 }
 #password-notification-icon {
 	list-style-image: url("./icons/login.svg") !important;
@@ -1705,10 +1717,21 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
 	list-style-image: url("./icons/back.svg") !important;
 }
-
+.unified-nav-back[_moz-menuactive]:-moz-locale-dir(ltr),
+.unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
+	.menu-icon {
+		content: url("./icons/back.svg") !important;
+	}
+}
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(ltr),
 .unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
 	list-style-image: url("./icons/forward.svg") !important;
+}
+.unified-nav-forward[_moz-menuactive]:-moz-locale-dir(ltr),
+.unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
+	.menu-icon {
+		content: url("./icons/forward.svg") !important;
+	}
 }
 /* Bookmark */
 .folder-icon {
@@ -1870,4 +1893,15 @@ button[part="button"], span[part="button"] {
 }
 .action-buttons .split-button-container .submenu-button {
 	background-image: url("./icons/arrow-dropdown-16.svg") !important;
+}
+/* tab notes */
+.tab-note-icon {
+	content: url("./icons/tab-notes-12.svg") !important;
+}
+img[src="chrome://global/skin/icons/tab-notes.svg"] {
+	content: url("./icons/tab-notes.svg") !important;
+}
+.nav-icon[src="chrome://global/skin/icons/arrow-right.svg"] {
+	content: url("./icons/back-12.svg") !important;
+	scale: -1 1;
 }
