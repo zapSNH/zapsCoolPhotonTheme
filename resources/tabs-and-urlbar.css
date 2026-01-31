@@ -409,7 +409,7 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 /* Makes the container tab label more-photon like */
 .tabbrowser-tab[usercontextid] {
 	> .tab-stack > .tab-background > .tab-context-line {
-		translate: 0 calc(var(--tab-min-height) - 3px) !important;
+		translate: 0 calc(var(--tab-min-height) - 5px) !important;
 		border-radius: 0px !important;
 		transition: all var(--photon-speed-1) var(--photon-easing-function) !important;
 		justify-self: center !important;
@@ -583,6 +583,9 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 			--urlbar-min-height: 26px !important;
 		}
 	}
+}
+.urlbar-input-container {
+	border-radius: 0 !important;
 }
 #urlbar:not([breakout-extend="true"]) {
 	height: var(--urlbar-height) !important;

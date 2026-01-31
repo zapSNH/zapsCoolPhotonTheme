@@ -866,13 +866,10 @@
 	.personalize-button:not(.icon) {
 		--button-collapsed-width: 24px !important;
 		--button-full-width: var(--button-collapsed-width) !important;
-		padding: 0 !important;
+		padding: 4px !important;
 		transition: var(--photon-speed-1) !important;
 		aspect-ratio: 1 !important;
 		justify-content: center !important;
-		&:not(:hover, :active) {
-			 background-color: transparent !important;
-		}
 		img {
 			content: url("./icons/settings.svg") !important;
 			width: 16px !important;
@@ -895,6 +892,14 @@
 	}
 	.icon.icon-add {
 		background-image: url("./icons/add.svg") !important;
+	}
+	/* searchbar */
+	.fake-textbox {
+		margin-inline-start: 16px !important;
+	}
+	.search-handoff-button {
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+		outline: 1px solid var(--box-border-color);
 	}
 	:root:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),
