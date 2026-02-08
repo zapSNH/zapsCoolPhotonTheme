@@ -18,6 +18,9 @@
 	@media -moz-pref("uc.mullvad") or -moz-pref("uc.forks", "mullvad") {
 		--grayscale-logo: url("./icons/forks/mullvad/mullvad-grayscale.svg") !important;
 	}
+	@media -moz-pref("uc.icecat") or -moz-pref("uc.forks", "icecat") {
+		--grayscale-logo: url("./icons/forks/icecat/icecat-grayscale.svg") !important;
+	}
 	/* Legacy Logos */
 	--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 	@media -moz-pref("uc.logo.quantum") {
