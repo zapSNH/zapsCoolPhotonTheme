@@ -202,6 +202,9 @@ It is recommended to disable any custom UI styles set by the browser to prevent 
 | `uc.librewolf` | `true` | LibreWolf |
 | `uc.tor` | `true` | Tor Browser |
 | `uc.mullvad` | `true` | Mullvad Browser |
+| `uc.icecat` | `true` | GNU IceCat |
+
+You can also set the pref `uc.forks` to the name of the browser.
 
 # Configuration
 You can view all of the config options at the [Wiki](https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Config-Options).
