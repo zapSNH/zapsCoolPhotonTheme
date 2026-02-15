@@ -235,6 +235,12 @@
   },
   {
     "type": "checkbox",
+    "property": "uc.toolbar.force-disable-accent-color",
+    "label": "Force disables toolbar accent coloring on system themes.",
+    "defaultValue": false
+  },
+  {
+    "type": "checkbox",
     "property": "uc.popups.disable-transition",
     "label": "Disables the fading transition effect on menus and popups",
     "defaultValue": false

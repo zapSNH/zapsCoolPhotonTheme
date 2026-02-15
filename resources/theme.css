@@ -440,7 +440,7 @@ input.findbar-textbox:focus {
 }
 /* System themes */
 :is(:root[lwt-default-theme-in-dark-mode],
-:root:not([lwtheme=""]),
+:root:not([lwtheme], [builtintheme=""]),
 :root[style*="--lwt-accent-color: rgb(28, 27, 34); --lwt-text-color: rgba(251, 251, 254);"]) {
 	#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
 		border: solid 1px var(--photon-tab-outline) !important;
