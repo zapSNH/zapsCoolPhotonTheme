@@ -131,6 +131,7 @@
 	
 		/* New tab / specific UI */
 		--newtab-primary-action-background: #0a84ff !important;
+		--newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 75%, light-dark(black, white));
 		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
 		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
 	
@@ -685,19 +686,20 @@
 		background-image: url("./icons/more.svg") !important;
 		-moz-context-properties: fill !important;
 		fill: var(--newtab-text-primary-color) !important;
+		padding: 0 !important;
+		/*! transform-origin: center !important; */
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: 333ms !important;
-		translate: 12px -12px;
-		top: 0 !important;
+		top: -12px !important;
+		inset-inline-end: -12px !important;
 	}
 	.top-site-outer:not(:hover,
 	.active) .context-menu-button {
-		width: 8px !important;
-		height: 8px !important;
-		background-size: 0px !important;
-		margin-inline-end: 8px;
-		margin-top: 10px;
+		scale: 0;
+	}
+	.top-site-outer .context-menu {
+		inset-block-start: var(--space-large) !important;
 	}
 	.top-site-outer.add-button .tile .icon-wrapper {
 		background-image: url("./icons/add.svg") !important;
