@@ -1175,7 +1175,14 @@ menupopup > menu::after {
 		opacity: 0;
 	}
 }
-
+#split-view-button {
+	&[data-active-index="0"] > #split-view-button-icon {
+		list-style-image: url("./icons/splitview-left.svg") !important;
+	}
+	&[data-active-index="1"] > #split-view-button-icon {
+		list-style-image: url("./icons/splitview-right.svg") !important;
+	}
+}
 .toolbarbutton-combined-buttons-dropmarker {
 	list-style-image: url("./icons/arrow-dropdown-12.svg") !important;
 }
