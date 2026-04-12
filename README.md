@@ -93,7 +93,7 @@ Download the release for your browser version (for esr releases, download the fi
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 149/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v149) **(recommended)**             | [Firefox 149](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 149/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v147) **(recommended)**             | [Firefox 149](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
