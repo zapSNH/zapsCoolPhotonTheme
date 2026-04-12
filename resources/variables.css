@@ -24,6 +24,8 @@
 	--border-radius-small: var(--photon-border-radius) !important;
 	--border-radius-medium: var(--photon-border-radius-1) !important;
 	
+	--panel-menuitem-border-radius: 0 !important;
+	
 	--appmenu-icon-inline-end: 8px;
 	--appmenu-noicon-inline-end: 24px;
 	

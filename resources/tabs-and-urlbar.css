@@ -666,8 +666,6 @@ box) {
 .urlbar-go-button,
 .urlbar-revert-button {
 	margin: 0 !important;
-	height: calc(var(--urlbar-height) - 2px) !important;
-	width: calc(var(--urlbar-height) - 2px) !important;
 	margin-inline-end: 1px !important;
 	align-self: center !important;
 }
@@ -974,6 +972,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		background-color: var(--urlbarView-result-button-selected-background-color);
 	}
 }
+
 /* special case for review checker */
 #shopping-sidebar-button[shoppingsidebaropen="true"] {
 	background-color: var(--urlbar-box-active-bgcolor);
