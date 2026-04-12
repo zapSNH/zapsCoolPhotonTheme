@@ -85,8 +85,9 @@ input.findbar-textbox:focus {
 	
 	--urlbar-border-color: var(--photon-accent-dark);
 	--urlbar-box-text-color: #747576 !important;
-	--urlbarView-hover-background: hsla(0,0%,80%,.35) !important;
+	--urlbarView-hover-background: red !important;
 	--urlbarView-highlight-background: var(--photon-accent-dark) !important;
+	--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
 	--urlbarView-highlight-color: #fff !important;
 	
 	--button-hover-bgcolor: hsla(0,0%,80%,.5) !important;
@@ -168,7 +169,9 @@ input.findbar-textbox:focus {
 			
 			--urlbar-border-color: var(--photon-accent-dark);
 			--urlbar-box-text-color: #747576 !important;
-			--urlbarView-hover-background: hsla(0,0%,80%,.35) !important;
+			--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
+			--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
+			--urlbarview-text-color-selected: #fff !important;
 			--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 			--urlbarView-highlight-color: #fff !important;
 			
@@ -265,14 +268,18 @@ input.findbar-textbox:focus {
 	--in-content-page-background: var(--toolbar-bgcolor) !important;
 
 	--arrowpanel-background: #4a4a4f !important;
+	--panel-background: #4a4a4f !important;
 	--arrowpanel-border: #2a2a2e !important;
 	--arrowpanel-border-color: #27272b !important;
 	--panel-separator-color: rgba(249, 249, 250, .1) !important;
 
 	--urlbar-border-color: var(--photon-accent-dark);
 	--urlbar-box-text-color: #bababc !important;
+	--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
+	--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
 	--urlbarView-highlight-background: #0078d4 !important;
 	--urlbarView-highlight-color: #fff !important;
+	--urlbar-box-background-color: rgba(249,249,250,.1) !important;
 
 	--button-bgcolor: rgb(55, 55, 55) !important;
 	--button-hover-bgcolor: rgba(249,249,250,.1) !important;
@@ -361,14 +368,18 @@ input.findbar-textbox:focus {
 			--in-content-page-background: var(--toolbar-bgcolor) !important;
 		
 			--arrowpanel-background: #4a4a4f !important;
+			--panel-background: #4a4a4f !important;
 			--arrowpanel-border: #2a2a2e !important;
 			--arrowpanel-border-color: #27272b !important;
 			--panel-separator-color: rgba(249, 249, 250, .1) !important;
 		
 			--urlbar-border-color: var(--photon-accent-dark);
 			--urlbar-box-text-color: #bababc !important;
+			--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
+			--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
 			--urlbarView-highlight-background: #0078d4 !important;
 			--urlbarView-highlight-color: #fff !important;
+			--urlbar-box-background-color: rgba(249,249,250,.1) !important;
 		
 			--button-bgcolor: rgb(55, 55, 55) !important;
 			--button-hover-bgcolor: rgba(249,249,250,.1) !important;
@@ -413,6 +424,9 @@ input.findbar-textbox:focus {
 				border-color: var(--toolbar-field-border-color) !important;
 				--lwt-text-color: rgba(251, 251, 254) !important;
 				--toolbarbutton-icon-fill-attention: var(--photon-accent-dark) !important;
+			}
+			.urlbar-background {
+				--panel-border-color: var(--photon-accent-dark) !important;
 			}
 			#identity-icon-box {
 				--urlbar-box-focus-bgcolor: #474749 !important;

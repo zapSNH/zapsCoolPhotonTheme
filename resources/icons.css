@@ -1049,6 +1049,9 @@ menupopup > menu::after {
 #urlbar-go-button, :root .search-go-button, .urlbar-go-button {
 	list-style-image: url("./icons/forward.svg") !important;
 }
+.urlbar-go-button {
+	content: url("./icons/forward.svg") !important;
+}
 .urlbar-revert-button {
 	list-style-image: url("./icons/globe1.svg") !important;
 }
