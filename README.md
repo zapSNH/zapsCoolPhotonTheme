@@ -29,20 +29,21 @@
 
 ____
 <h4 align="center">
-	 Compatibility
+ Support
 </h4>
 
 <div align="center">
 	
-| | Windows | Linux (GNOME) | macOS | Notes |
-|-|:-:|:-:|:-:|:-:|
-| **115/128esr** | ✔️ | ✔️ | ✔️ | No longer updated |
-| **140esr** | ✔️ | ✔️ | ✔️ | |
-| **149** | ✔️ | ✔️ | ✔️ | |
-| **151 nightly** | ✔️ | ✔️ | ? | |
+|                 | Windows | Linux (GNOME) | Notes |
+|-----------------|:-------:|:-------------:|:-:|
+| **115/128esr**  | ✔️     | ✔️             | No longer updated |
+| **140esr**      | ✔️     | ✔️             | |
+| **150**         | ✔️     | ✔️             | |
+| **152 nightly** | ✔️     | ✔️             | |
+
+macOS should be compatible, though issues may arise due to a lack of testing.
 
 Most Firefox-based forks that don't drastically modify the interface are supported.
-
 See the [Forks](#forks-) section for more information about Firefox forks.
 
 </div>
@@ -93,7 +94,7 @@ Download the release for your browser version (for esr releases, download the fi
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 149/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v149) **(recommended)**             | [Firefox 149](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 150/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v150) **(recommended)**             | [Firefox 150](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128b)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
@@ -120,6 +121,8 @@ and **not** like this:
 Restart Firefox.
 
 You're done! 🎉
+
+(note: Due to the lack of auto-updates, it is recommended to manually update the theme every 1-2 Firefox releases to prevent breakage)
 
 ____
 ### Sine Mod Manager 🪐
