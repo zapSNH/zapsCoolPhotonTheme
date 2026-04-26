@@ -84,6 +84,7 @@
 		--preview-image-border-radius: calc(var(--theme-card-border-radius) - 1px) !important;
 		--select-border-radius: var(--photon-secondary-border-radius);
 		--page-nav-button-border-radius: var(--photon-secondary-border-radius);
+		--button-border-radius: var(--photon-secondary-border-radius);
 		--page-nav-button-padding: 0.45em 1em !important;
 		--page-nav-margin-inline-start: 34px !important;
 		--page-nav-button-gap: 0 !important;
@@ -119,6 +120,8 @@
 		--in-content-box-info-background: var(--grey-90-a30);
 		--background-color-canvas: var(--in-content-page-background) !important;
 		--page-nav-button-indicator-color: var(--photon-accent) !important;
+		--button-background-color-hover: var(--in-content-button-background-hover) !important;
+		--button-background-color-active: var(--in-content-button-background-active) !important;
 	
 		/* Primary / action buttons */
 		--primary-button-background-color: var(--blue-60);
@@ -655,7 +658,7 @@
 		display: flex !important;
 		min-height: 16px;
 	}
-	.section-title span {
+	.section-title span, .ds-layout h2 {
 		background-image: url("./icons/glyph-topsites.svg") !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
@@ -667,10 +670,12 @@
 		font-weight: 600;
 		line-height: 16px !important;
 	}
-	section[data-section-id="topstories"] .section-title span {
+	section[data-section-id="topstories"] .section-title span,
+	.ds-layout[data-section-id="topstories"] .ds-header {
 		background-image: url("./icons/pocket.svg") !important;
 	}
-	section[data-section-id="highlights"] .section-title span {
+	section[data-section-id="highlights"] .section-title span,
+	.ds-layout .ds-highlights-title {
 		background-image: url("./icons/glyph-highlights-16.svg") !important;
 		background-size: 16px !important;
 	}
@@ -694,7 +699,7 @@
 		/*! transform-origin: center !important; */
 	}
 	.top-site-outer .context-menu-button {
-		transition-delay: 333ms !important;
+		transition-delay: calc(var(--photon-speed-1) * 10 / 3) !important;
 		top: -12px !important;
 		inset-inline-end: -12px !important;
 	}
@@ -961,6 +966,87 @@
 		& .top-site-icon:not(.search-topsite) {
 			background-color: #38383d !important;
 		}
+	}
+	/* oh no */
+	@media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
+		.content {
+			gap: var(--space-xlarge) !important;
+		}
+		.top-sites > * {
+			max-width: 0 !important;
+			justify-self: center !important;
+			gap: 18px !important;
+		}
+		.top-site-outer .context-menu-button {
+			top: -32px !important;
+		}
+		.top-sites-list {
+			width: auto !important;
+			gap: 18px !important;
+		}
+		.ds-card-grid:not(.ds-section-grid) .ds-card:not(.ds-spoc, .ds-spoc-rectangle) .ds-card-link {
+			padding: 0 !important;
+			.meta {
+				padding: 0 var(--space-large) var(--space-medium) !important;;
+			}
+		}
+		span:has(img[src="chrome://global/skin/icons/edit-outline.svg"]) {
+			border: none !important;
+			border-radius: var(--photon-secondary-border-radius) !important;
+			--button-collapsed-width: 24px !important;
+			--button-full-width: var(--button-collapsed-width) !important;
+			padding: 4px !important;
+			transition: var(--photon-speed-1) !important;
+			aspect-ratio: 1 !important;
+			justify-content: center !important;
+			img {
+				content: url("./icons/settings.svg") !important;
+				width: 16px !important;
+			}
+			label {
+				display: none;
+			}
+		}
+		.external-link {
+			background: url("./icons/settings.svg") left center no-repeat !important;
+			-moz-context-properties: fill;
+			fill: currentColor !important;
+			text-decoration: none !important;
+		}
+		.customize-menu {
+			--customize-menu-bg: var(--newtab-background-color-secondary) !important;
+			padding-inline: var(--space-large) !important;
+  			width: 432px !important;
+  			min-height: 100% !important;
+  			inset-block: 0 !important;
+  			inset-inline: auto 0 !important;
+			border-radius: 0 !important;
+		}
+		.select-wrapper {
+			border: none !important;
+			--select-background-color: var(--in-content-button-background) !important;
+		}
+		.select-chevron-icon {
+			content: url("./icons/arrow-dropdown-16.svg") !important;
+		}
+		.top-site-outer {
+			.tile {
+				border: none !important;
+			}
+			.title-label {
+				width: 100% !important;
+			}
+		}
+	@media not -moz-pref("browser.newtabpage.activity-stream.logowordmark.alwaysVisible") {
+		.sidebar-inline-start .logo-and-wordmark, .content:has(> .top-sites) .logo-and-wordmark {
+			display: none !important;
+		}
+		.content {
+			.wordmark {
+				display: flex !important;
+			}
+		}
+	}
 	}
 	@media -moz-pref("uc.newtab.background") {
 		body {
