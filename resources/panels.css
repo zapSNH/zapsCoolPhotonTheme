@@ -731,10 +731,13 @@ toolbarbutton.panel-subview-footer-button {
 	background-color: light-dark(#f9f9fa, #323234) !important;
 }
 /* Tooltips */
-tooltip {
-	background: var(--arrowpanel-background) !important;
-	border-radius: var(--tooltip-border-radius) !important;
-	border-color: var(--arrowpanel-border-color) !important;
+@media not (-moz-platform: linux) {
+	tooltip {
+		background: var(--arrowpanel-background) !important;
+		border-radius: var(--tooltip-border-radius) !important;
+		border-color: var(--arrowpanel-border-color) !important;
+		color: var(--arrowpanel-color) !important;
+	}
 }
 /* passwords */
 #PopupAutoComplete > richlistbox > richlistitem[originaltype="loginsFooter"] {
