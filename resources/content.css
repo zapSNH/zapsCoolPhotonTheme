@@ -322,8 +322,11 @@
 		--toggle-dot-height: calc(var(--toggle-height) - 2 * var(--toggle-dot-margin) - 2 * var(--toggle-border-width));
 		--toggle-dot-width: var(--toggle-dot-height) !important;
 		--toggle-dot-transform-x: calc(var(--toggle-width) - 3 * var(--toggle-dot-margin) - var(--toggle-dot-width)) !important;
-		--toggle-border-color: transparent !important;
+		--toggle-border-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 		min-width: var(--toggle-width) !important;
+	}
+	#aiControlDefaultToggle {
+		--toggle-height: 16px !important;
 	}
 	.checkbox-check,
 	input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]),
@@ -1194,6 +1197,7 @@
 		height: 100% !important;
 		justify-content: space-between;
 		--page-nav-hr-color: transparent;
+		--page-nav-hr-background-color: transparent;
 	}
 	button .page-nav-icon {
 		width: 24px !important;
@@ -1232,6 +1236,10 @@
 	legend .icon {
 		display: none;
 	}
+	img[src="chrome://global/skin/icons/arrow-counterclockwise-16.svg"] {
+		content: url("./icons/reload.svg") !important;
+		scale: -1 1;
+	}
 	
 	#category-general > .category-icon {
 		list-style-image: url("./icons/settings.svg") !important;
@@ -1266,7 +1274,8 @@
 	#category-experimental > .category-icon {
 		list-style-image: url("./icons/glyph-experiments.svg") !important;
 	}
-	.page-nav-icon[src="chrome://global/skin/icons/experiments.svg"] {
+	.page-nav-icon[src="chrome://global/skin/icons/experiments.svg"],
+	.page-nav-icon[src="chrome://browser/skin/labs-16.svg"] {
 		content: url("./icons/glyph-experiments.svg") !important;
 	}
 	.page-nav-icon[src="chrome://global/skin/icons/highlights.svg"] {
