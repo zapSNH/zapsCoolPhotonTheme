@@ -34,7 +34,7 @@ ____
 
 <div align="center">
 	
-|                 | Windows | Linux (GNOME) | Notes |
+|                 | Windows | Linux (KDE) | Notes |
 |-----------------|:-------:|:-------------:|:-:|
 | **115/128esr**  | ✔️     | ✔️             | No longer updated |
 | **140esr**      | ✔️     | ✔️             | |
