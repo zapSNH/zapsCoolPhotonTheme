@@ -30,12 +30,12 @@
 /** hard-coded color stuff **/
 /* popups n menus */
 @media not -moz-pref("uc.popups.transparent") {
-	menupopup:not(#ContentSelectDropdownPopup),
+	/*menupopup:not(#ContentSelectDropdownPopup),
 	richlistbox:not(#PopupSearchAutoComplete richlistbox),
 	#tab-preview-panel,
 	panel[type="autocomplete-richlistbox"] {
-		--panel-background: var(--arrowpanel-background) !important;
-	}
+		--panel-background: var(--arrowpanel-background, initial) !important;
+	}*/
 	:root:not([lwtheme=""]) {
 		menupopup:not(#ContentSelectDropdownPopup),
 		richlistbox:not(#PopupSearchAutoComplete richlistbox),
