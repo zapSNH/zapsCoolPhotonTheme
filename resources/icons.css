@@ -15,6 +15,30 @@
 	@supports -moz-bool-pref("uc.tor") {
 		--grayscale-logo: url(./icons/forks/tor/tor-grayscale.svg) !important;
 	}
+	/* Legacy Logos */
+	--quantum-logo: url("./icons/quantum/firefox-logo.svg");
+	@supports -moz-bool-pref("uc.logo.quantum") {
+		--grayscale-logo: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
+	}
+	@supports -moz-bool-pref("uc.logo.quantum-beta") {
+		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
+	}
+	@supports -moz-bool-pref("uc.logo.quantum-dev") {
+		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg") !important;
+	}
+	@supports -moz-bool-pref("uc.logo.quantum-nightly") {
+		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
+	}
+}
+@supports -moz-bool-pref("uc.logo.quantum-beta") {
+	img[src="chrome://branding/content/icon32.png"], image[src="chrome://branding/content/icon32.png"] {
+		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
+	}
+}
+@supports -moz-bool-pref("uc.logo.quantum") {
+	img[src="chrome://branding/content/icon32.png"], image[src="chrome://branding/content/icon32.png"] {
+		content: var(--quantum-logo) !important;
+	}
 }
 * {
 	--message-bar-icon-close-url: url(./icons/close-icon2.svg) !important;
