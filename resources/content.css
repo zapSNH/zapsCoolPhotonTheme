@@ -1,8 +1,8 @@
 /* Content Pages */
-/* 
-	hello sine, this is a yummy file that you'll want to eat: 
-	url("./icons/download-icons.svg");
-*/
+/*
+ *	hello sine, this is a yummy file that you'll want to eat:
+ *	url("./icons/download-icons.svg");
+ */
 /* firefox control(?) styling */
 @media -moz-pref("uc.style-forms") {
 	select {
@@ -70,7 +70,7 @@
 			--photon-speed-1: 0s;
 		}
 	}
-	
+
 	/* organized using ai (a eye? but i already have 2 of them). am i one of those 'vibe coders' now? */
 	* {
 		/* Border radius / sizing */
@@ -88,13 +88,13 @@
 		--page-nav-button-padding: 0.45em 1em !important;
 		--page-nav-margin-inline-start: 34px !important;
 		--page-nav-button-gap: 0 !important;
-	
+
 		/* Brand / accent colors */
 		--color-accent-primary: #0a84ff !important;
 		--brand-color-accent: #0a84ff !important;
 		--brand-color-accent-hover: color-mix(in srgb, var(--brand-color-accent) 80%, currentColor) !important;
 		--brand-color-accent-active: color-mix(in srgb, var(--brand-color-accent) 60%, currentColor) !important;
-	
+
 		/* Colors */
 		--blue-60: #0060df;
 		--blue-70: #003eaa;
@@ -106,7 +106,7 @@
 		--green-90: #003706 !important;
 		--grey-90: rgba(12, 12, 13) !important;
 		--grey-20: #ededf0;
-	
+
 		/* In-content / box variables */
 		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent);
 		--box-border-color: var(--in-content-box-border-color);
@@ -122,41 +122,39 @@
 		--page-nav-button-indicator-color: var(--photon-accent) !important;
 		--button-background-color-hover: var(--in-content-button-background-hover) !important;
 		--button-background-color-active: var(--in-content-button-background-active) !important;
-	
+
 		/* Primary / action buttons */
 		--primary-button-background-color: var(--blue-60);
 		--primary-button-hover-background-color: var(--blue-70);
 		--primary-button-active-background-color: var(--blue-80);
 		--primary-button-color: rgb(249, 249, 250);
-	
 		--in-content-primary-button-text-color: white !important;
 		--in-content-primary-button-text-color-hover: white !important;
 		--in-content-primary-button-text-color-active: white !important;
-	
 		--button-text-color-primary: rgb(249, 249, 250);
 		--button-text-color-primary-hover: rgb(249, 249, 250);
 		--button-text-color-primary-active: rgb(249, 249, 250);
-	
+
 		/* New tab / specific UI */
 		--newtab-primary-action-background: #0a84ff !important;
 		--newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 75%, light-dark(black, white));
 		--newtab-weather-background-color: color-mix(in srgb, var(--in-content-page-background) 50%, transparent) !important;
 		--message-bar-icon-close-url: url("./icons/close-icon2.svg");
-	
+
 		/* Links */
 		--link-color: var(--blue-60) !important;
 		--link-color-hover: var(--blue-70) !important;
 		--link-color-active: var(--blue-80) !important;
-	
+
 		/* Toggle / switches */
 		--toggle-background-color-pressed: var(--blue-60) !important;
 		--toggle-dot-background-color-on-pressed: #fff !important;
 		--toggle-dot-background-color: color-mix(in srgb, #fff 80%, transparent) !important;
-	
+
 		/* Table / list */
 		--table-row-background-color: var(--in-content-box-background) !important;
 		--table-row-background-color-alternate: var(--in-content-button-background) !important;
-	
+
 		/* Shadows / card visuals */
 		--shadow-10: 0 1px 4px var(--grey-90-a10) !important;
 		--shadow-30: 0 4px 16px var(--grey-90-a10) !important;
@@ -164,11 +162,10 @@
 		--box-shadow-card: var(--shadow-10) !important;
 		--card-outline-color: light-dark(var(--grey-30), var(--grey-60)) !important;
 		--box-shadow-card-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color) !important;
-	
+
 		/* Misc / integrations */
 		--fxview-border-interactive: var(--in-content-box-border-color) !important;
 	}
-	
 	@media (prefers-color-scheme: dark) {
 		* {
 			/* Backgrounds and surfaces */
@@ -178,37 +175,36 @@
 			--in-content-box-border-color: #4b4b4e !important;
 			--codec-bg-header: #4b4b4e !important;
 			--in-content-box-info-background: var(--grey-90-a30) !important;
-	
+
 			/* Accents / interactive */
 			--in-content-accent-color: #0060df !important;
 			--checkbox-checked-bgcolor: #0060df !important;
-	
+
 			/* In-content button states */
 			--in-content-button-background: rgba(249, 249, 250, 0.1) !important;
 			--in-content-button-background-hover: rgba(249,249,250,0.15) !important;
 			--in-content-button-background-active: rgba(249,249,250,0.25) !important;
-	
+
 			/* Primary button overrides in dark */
 			--in-content-primary-button-background: var(--blue-60) !important;
 			--in-content-primary-button-background-hover: var(--blue-70) !important;
 			--in-content-primary-button-background-active: var(--blue-80) !important;
-	
+
 			/* Accent color hover/active */
 			--color-accent-primary-hover: var(--in-content-primary-button-background-hover) !important;
 			--color-accent-primary-active: var(--in-content-primary-button-background-active) !important;
-	
+
 			/* Grays */
 			--color-gray-60: #4a4a4f !important;
 			--color-gray-80: color-mix(in srgb, var(--color-gray-60) 66.67%, var(--color-gray-90)) !important;
 			--color-gray-90: #0c0c0d !important;
-	
+
 			/* Links (dark mode variants) */
 			--link-color: var(--blue-40) !important;
 			--link-color-hover: var(--blue-50) !important;
 			--link-color-active: var(--blue-60) !important;
 		}
 	}
-
 	.close {
 		background-image: var(--message-bar-icon-close-url) !important;
 	}
@@ -329,7 +325,9 @@
 		--toggle-height: 16px !important;
 	}
 	.checkbox-check,
-	input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]),
+	input[type="radio"]:not(.wallpaper-input,
+	[name="theme"],
+	[name="avatar"]),
 	.radio-check,
 	.checkbox-row input,
 	input[type="checkbox"]:not(.reveal-password-checkbox) {
@@ -346,15 +344,18 @@
 		&:hover:active:not([disabled]),
 		:is(checkbox,
 		radio):hover:active:not([checked="true"],
-		[selected="true"], [disabled]) & {
+		[selected="true"],
+		[disabled]) & {
 			background-color: var(--in-content-button-background-active) !important;
 		}
 		:is(checkbox,
-		radio):hover:is([checked], [selected]):not([disabled]) & {
+		radio):hover:is([checked],
+		[selected]):not([disabled]) & {
 			background-color: var(--color-accent-primary-hover) !important;
 		}
 		:is(checkbox,
-		radio):hover:active:is([checked], [selected]):not([disabled]) & {
+		radio):hover:active:is([checked],
+		[selected]):not([disabled]) & {
 			background-color: var(--color-accent-primary-active) !important;
 		}
 		&[checked],
@@ -382,7 +383,9 @@
 			}
 		}
 	}
-	input[type="radio"]:not(.wallpaper-input, [name="theme"], [name="avatar"]),
+	input[type="radio"]:not(.wallpaper-input,
+	[name="theme"],
+	[name="avatar"]),
 	.radio-check {
 		border-radius: 50% !important;
 		margin-top: 4px !important;
@@ -440,6 +443,13 @@
 	.back-button,
 	.arrow-button {
 		background-image: url("./icons/back-12.svg") !important;
+		background-repeat: no-repeat;
+		background-position: center;
+		-moz-context-properties: fill !important;
+		fill: currentColor !important;
+	}
+	img[src="chrome://newtab/content/data/content/assets/shaft-arrow-left.svg"] {
+		--icon-size: 0px;
 	}
 	.menu-button {
 		background-image: url("./icons/more.svg") !important;
@@ -480,7 +490,8 @@
 			scale: 1;
 		}
 	}
-	.icon, .message-icon {
+	.icon,
+	.message-icon {
 		&[src="chrome://global/skin/icons/check-filled.svg"] {
 			content: url("./icons/check.svg") !important;
 		}
@@ -661,7 +672,8 @@
 		display: flex !important;
 		min-height: 16px;
 	}
-	.section-title span, .ds-layout h2 {
+	.section-title span,
+	.ds-layout h2 {
 		background-image: url("./icons/glyph-topsites.svg") !important;
 		background-repeat: no-repeat;
 		background-position-y: 60%;
@@ -699,7 +711,7 @@
 		-moz-context-properties: fill !important;
 		fill: var(--newtab-text-primary-color) !important;
 		padding: 0 !important;
-		/*! transform-origin: center !important; */
+															 /*! transform-origin: center !important; */
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: calc(var(--photon-speed-1) * 10 / 3) !important;
@@ -748,97 +760,98 @@
 	.weatherButtonContextMenu {
 		background-image: url("./icons/more.svg") !important;
 	}
-	.weatherIcon {
+	.weatherIcon,
+	.weather-icon {
 		-moz-context-properties: fill !important;
 		fill: currentColor !important;
-	}
-	.weatherIcon.iconId1 {
-		content: url("./icons/weather/sunny.svg") !important;
-	}
-	.weatherIcon.iconId2 {
-		content: url("./icons/weather/mostly-sunny.svg") !important;
-	}
-	.weatherIcon:is(.iconId3,
-	.iconId4,
-	.iconId6) {
-		content: url("./icons/weather/partly-sunny.svg") !important;
-	}
-	.weatherIcon.iconId5 {
-		content: url("./icons/weather/hazy-sunshine.svg") !important;
-	}
-	.weatherIcon:is(.iconId7,
-	.iconId8) {
-		content: url("./icons/weather/cloudy.svg") !important;
-	}
-	.weatherIcon.iconId11 {
-		content: url("./icons/weather/fog.svg") !important;
-	}
-	.weatherIcon.iconId12 {
-		content: url("./icons/weather/showers.svg") !important;
-	}
-	.weatherIcon:is(.iconId13,
-	.iconId14) {
-		content: url("./icons/weather/mostly-cloudy-with-showers.svg") !important;
-	}
-	.weatherIcon.iconId15 {
-		content: url("./icons/weather/thunderstorms.svg") !important;
-	}
-	.weatherIcon:is(.iconId16,
-	.iconId17) {
-		content: url("./icons/weather/mostly-cloudy-with-thunderstorms.svg") !important;
-	}
-	.weatherIcon.iconId18 {
-		content: url("./icons/weather/rain.svg") !important;
-	}
-	.weatherIcon:is(.iconId19,
-	.iconId20,
-	.iconId25) {
-		content: url("./icons/weather/flurries.svg") !important;
-	}
-	.weatherIcon.iconId21 {
-		content: url("./icons/weather/partly-sunny-with-flurries.svg") !important;
-	}
-	.weatherIcon:is(.iconId22,
-	.iconId23) {
-		content: url("./icons/weather/snow.svg") !important;
-	}
-	.weatherIcon:is(.iconId24,
-	.iconId31) {
-		content: url("./icons/weather/ice.svg") !important;
-	}
-	.weatherIcon:is(.iconId26,
-	.iconId29) {
-		content: url("./icons/weather/freezing-rain.svg") !important;
-	}
-	.weatherIcon.iconId30 {
-		content: url("./icons/weather/hot.svg") !important;
-	}
-	.weatherIcon.iconId32 {
-		content: url("./icons/weather/windy.svg") !important;
-	}
-	.weatherIcon.iconId33 {
-		content: url("./icons/weather/night-clear.svg") !important;
-	}
-	.weatherIcon:is(.iconId34,
-	.iconId35,
-	.iconId36,
-	.iconId38) {
-		content: url("./icons/weather/night-mostly-clear.svg") !important;
-	}
-	.weatherIcon.iconId37 {
-		content: url("./icons/weather/night-hazy-moonlight.svg") !important;
-	}
-	.weatherIcon:is(.iconId39,
-	.iconId40) {
-		content: url("./icons/weather/night-partly-cloudy-with-showers.svg") !important;
-	}
-	.weatherIcon:is(.iconId41,
-	.iconId42) {
-		content: url("./icons/weather/night-partly-cloudy-with-thunderstorms.svg") !important;
-	}
-	.weatherIcon:is(.iconId43,
-	.iconId44) {
-		content: url("./icons/weather/night-mostly-cloudy-with-flurries.svg") !important;
+		&.iconId1 {
+			content: url("./icons/weather/sunny.svg") !important;
+		}
+		&.iconId2 {
+			content: url("./icons/weather/mostly-sunny.svg") !important;
+		}
+		&:is(.iconId3,
+		.iconId4,
+		.iconId6) {
+			content: url("./icons/weather/partly-sunny.svg") !important;
+		}
+		&.iconId5 {
+			content: url("./icons/weather/hazy-sunshine.svg") !important;
+		}
+		&:is(.iconId7,
+		.iconId8) {
+			content: url("./icons/weather/cloudy.svg") !important;
+		}
+		&.iconId11 {
+			content: url("./icons/weather/fog.svg") !important;
+		}
+		&.iconId12 {
+			content: url("./icons/weather/showers.svg") !important;
+		}
+		&:is(.iconId13,
+		.iconId14) {
+			content: url("./icons/weather/mostly-cloudy-with-showers.svg") !important;
+		}
+		&.iconId15 {
+			content: url("./icons/weather/thunderstorms.svg") !important;
+		}
+		&:is(.iconId16,
+		.iconId17) {
+			content: url("./icons/weather/mostly-cloudy-with-thunderstorms.svg") !important;
+		}
+		&.iconId18 {
+			content: url("./icons/weather/rain.svg") !important;
+		}
+		&:is(.iconId19,
+		.iconId20,
+		.iconId25) {
+			content: url("./icons/weather/flurries.svg") !important;
+		}
+		&.iconId21 {
+			content: url("./icons/weather/partly-sunny-with-flurries.svg") !important;
+		}
+		&:is(.iconId22,
+		.iconId23) {
+			content: url("./icons/weather/snow.svg") !important;
+		}
+		&:is(.iconId24,
+		.iconId31) {
+			content: url("./icons/weather/ice.svg") !important;
+		}
+		&:is(.iconId26,
+		.iconId29) {
+			content: url("./icons/weather/freezing-rain.svg") !important;
+		}
+		&.iconId30 {
+			content: url("./icons/weather/hot.svg") !important;
+		}
+		&.iconId32 {
+			content: url("./icons/weather/windy.svg") !important;
+		}
+		&.iconId33 {
+			content: url("./icons/weather/night-clear.svg") !important;
+		}
+		&:is(.iconId34,
+		.iconId35,
+		.iconId36,
+		.iconId38) {
+			content: url("./icons/weather/night-mostly-clear.svg") !important;
+		}
+		&.iconId37 {
+			content: url("./icons/weather/night-hazy-moonlight.svg") !important;
+		}
+		&:is(.iconId39,
+		.iconId40) {
+			content: url("./icons/weather/night-partly-cloudy-with-showers.svg") !important;
+		}
+		&:is(.iconId41,
+		.iconId42) {
+			content: url("./icons/weather/night-partly-cloudy-with-thunderstorms.svg") !important;
+		}
+		&:is(.iconId43,
+		.iconId44) {
+			content: url("./icons/weather/night-mostly-cloudy-with-flurries.svg") !important;
+		}
 	}
 	.wallpaper-list.category {
 		width: 100% !important;
@@ -897,17 +910,17 @@
 		justify-content: center !important;
 		align-content: center !important;
 	}
-	/* widgets */
-	.widgets-section-container {
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-	}
+																			 /* widgets */
 	.widgets-container > article {
 		border: 1px solid var(--box-border-color);
 	}
 	.icon.icon-add {
 		background-image: url("./icons/add.svg") !important;
 	}
-	/* searchbar */
+	.widgets-expand-button {
+		border-color: var(--box-border-color) !important;
+	}
+																			 /* searchbar */
 	.fake-textbox {
 		margin-inline-start: 16px !important;
 	}
@@ -970,7 +983,7 @@
 			background-color: #38383d !important;
 		}
 	}
-	/* oh no */
+									  /* oh no */
 	@media -moz-pref("browser.newtabpage.activity-stream.nova.enabled") {
 		.content {
 			gap: var(--space-xlarge) !important;
@@ -987,10 +1000,12 @@
 			width: auto !important;
 			gap: 18px !important;
 		}
-		.ds-card-grid:not(.ds-section-grid) .ds-card:not(.ds-spoc, .ds-spoc-rectangle) .ds-card-link {
+		.ds-card-grid:not(.ds-section-grid) .ds-card:not(.ds-spoc,
+		.ds-spoc-rectangle) .ds-card-link {
 			padding: 0 !important;
 			.meta {
-				padding: 0 var(--space-large) var(--space-medium) !important;;
+				padding: 0 var(--space-large) var(--space-medium) !important;
+				;
 			}
 		}
 		span:has(img[src="chrome://global/skin/icons/edit-outline.svg"]) {
@@ -1019,10 +1034,10 @@
 		.customize-menu {
 			--customize-menu-bg: var(--newtab-background-color-secondary) !important;
 			padding-inline: var(--space-large) !important;
-  			width: 432px !important;
-  			min-height: 100% !important;
-  			inset-block: 0 !important;
-  			inset-inline: auto 0 !important;
+			width: 432px !important;
+			min-height: 100% !important;
+			inset-block: 0 !important;
+			inset-inline: auto 0 !important;
 			border-radius: 0 !important;
 		}
 		.select-wrapper {
@@ -1040,16 +1055,17 @@
 				width: 100% !important;
 			}
 		}
-	@media not -moz-pref("browser.newtabpage.activity-stream.logowordmark.alwaysVisible") {
-		.sidebar-inline-start .logo-and-wordmark, .content:has(> .top-sites) .logo-and-wordmark {
-			display: none !important;
-		}
-		.content {
-			.wordmark {
-				display: flex !important;
+		@media not -moz-pref("browser.newtabpage.activity-stream.logowordmark.alwaysVisible") {
+			.sidebar-inline-start .logo-and-wordmark,
+			.content:has(> .top-sites) .logo-and-wordmark {
+				display: none !important;
+			}
+			.content {
+				.wordmark {
+					display: flex !important;
+				}
 			}
 		}
-	}
 	}
 	@media -moz-pref("uc.newtab.background") {
 		body {
@@ -1079,7 +1095,7 @@
 			translate: 0px 8px;
 		}
 	}
-	/* Legacy Logos */
+									  /* Legacy Logos */
 	.search-wrapper .logo-and-wordmark .logo {
 		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 		@media -moz-pref("uc.logo.quantum-beta") {
@@ -1168,7 +1184,7 @@
 		background: var(--in-content-page-background) !important;
 	}
 	#browserContainersExtensionContent {
-		/*padding:  !important;*/
+				 /*padding:  !important;*/
 	}
 	.expand-collapse-icon {
 		content: url("./icons/zoom-in.svg") !important;
@@ -1186,8 +1202,8 @@
 	.content-blocking-warning-image {
 		list-style-image: url("./icons/warning-16.svg") !important;
 	}
-	
-	/* new */
+
+				 /* new */
 	.page-nav-heading-wrapper {
 		display: none !important;
 	}
@@ -1208,11 +1224,11 @@
 	}
 	#categories moz-page-nav-button {
 		font-size: 1.07em;
-  		line-height: 1.4em;
+		line-height: 1.4em;
 	}
 	#categories moz-page-nav-button[slot="secondary-nav"] {
 		font-size: 0.9em;
-  		margin: 0 4px;
+		margin: 0 4px;
 	}
 	button[role="tab"] {
 		min-height: 48px;
@@ -1221,7 +1237,8 @@
 		&::before {
 			display: none !important;
 		}
-		&:not(:active, :hover) {
+		&:not(:active,
+		:hover) {
 			background-color: transparent !important;
 		}
 	}
@@ -1240,46 +1257,73 @@
 		content: url("./icons/reload.svg") !important;
 		scale: -1 1;
 	}
-	
+
+	/* n*va */
+	.icon, .page-nav-icon {
+		&[src="chrome://browser/skin/fxa/avatar-empty.svg"] {
+			content: url("./icons/avatar-empty.svg") !important;
+		}
+		&[src="chrome://browser/skin/home.svg"] {
+			content: url("./icons/home.svg") !important;
+		}
+		&[src="chrome://browser/skin/login.svg"] {
+			content: url("./icons/login.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/eye.svg"] {
+			content: url("./icons/customize.svg") !important;
+		}
+		&[src="chrome://browser/skin/downloads/downloads.svg"] {
+			content: url("./icons/download-icons.svg#arrow-with-bar") !important;
+		}
+		&[src="chrome://global/skin/icons/cursor-arrow.svg"] {
+			content: url("./icons/tab.svg") !important;
+		}
+		&[src="chrome://browser/skin/preferences/category-accessibility.svg"] {
+			content: url("./icons/tool-accessibility.svg") !important;
+		}
+		&[src="chrome://browser/skin/translations.svg"] {
+			content: url("./icons/translations.svg") !important;
+		}
+		&[src="chrome://browser/skin/permissions.svg"] {
+			content: url("./icons/permissions.svg") !important;
+		}
+		&[src="chrome://browser/skin/preferences/category-general.svg"] {
+			content: url("./icons/settings.svg") !important;
+		}
+		&[src="chrome://browser/skin/preferences/category-search.svg"] {
+			content: url("./icons/find-in-page.svg") !important;
+		}
+		&[src="chrome://browser/skin/preferences/category-privacy-security.svg"] {
+			content: url("./icons/privacy-security.svg") !important;
+		}
+		&[src="chrome://browser/skin/preferences/category-sync.svg"] {
+			content: url("./icons/sync.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/experiments.svg"],
+		&[src="chrome://browser/skin/labs-16.svg"] {
+			content: url("./icons/glyph-experiments.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/highlights.svg"] {
+			content: url("./icons/glyph-highlights-16.svg") !important;
+		}
+	}
 	#category-general > .category-icon {
 		list-style-image: url("./icons/settings.svg") !important;
-	}
-	.page-nav-icon[src="chrome://browser/skin/preferences/category-general.svg"] {
-		content: url("./icons/settings.svg") !important;
 	}
 	#category-home > .category-icon {
 		list-style-image: url("./icons/home.svg") !important;
 	}
-	.page-nav-icon[src="chrome://browser/skin/home.svg"] {
-		content: url("./icons/home.svg") !important;
-	}
 	#category-search > .category-icon {
 		list-style-image: url("./icons/find-in-page.svg") !important;
-	}
-	.page-nav-icon[src="chrome://browser/skin/preferences/category-search.svg"] {
-		content: url("./icons/find-in-page.svg") !important;
 	}
 	#category-privacy > .category-icon {
 		list-style-image: url("./icons/privacy-security.svg") !important;
 	}
-	.page-nav-icon[src="chrome://browser/skin/preferences/category-privacy-security.svg"] {
-		content: url("./icons/privacy-security.svg") !important;
-	}
 	#category-sync > .category-icon {
 		list-style-image: url("./icons/sync.svg") !important;
 	}
-	.page-nav-icon[src="chrome://browser/skin/preferences/category-sync.svg"] {
-		content: url("./icons/sync.svg") !important;
-	}
 	#category-experimental > .category-icon {
 		list-style-image: url("./icons/glyph-experiments.svg") !important;
-	}
-	.page-nav-icon[src="chrome://global/skin/icons/experiments.svg"],
-	.page-nav-icon[src="chrome://browser/skin/labs-16.svg"] {
-		content: url("./icons/glyph-experiments.svg") !important;
-	}
-	.page-nav-icon[src="chrome://global/skin/icons/highlights.svg"] {
-		content: url("./icons/glyph-highlights-16.svg") !important;
 	}
 	#category-theme > .category-icon,
 	#category-design > .category-icon {
@@ -1460,8 +1504,59 @@
 		&[src="chrome://browser/skin/notification-icons/autoplay-media.svg"] {
 			content: url("./icons/autoplay-media.svg") !important;
 		}
+		&[src="chrome://browser/skin/bookmark.svg"] {
+			content: url("./icons/bookmark.svg") !important;
+		}
+		&[src="chrome://browser/skin/tabs.svg"] {
+			content: url("./icons/tab.svg") !important;
+		}
+		&[src="chrome://browser/skin/history.svg"] {
+			content: url("./icons/history.svg") !important;
+		}
+		&[src="chrome://browser/skin/quickactions.svg"] {
+			content: url("./icons/quick-actions.svg") !important;
+		}
 	}
+	img {
+		&[src="chrome://global/skin/icons/plus.svg"] {
+			content: url("./icons/add.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/edit-outline.svg"] {
+			content: url("./icons/edit.svg") !important;
+		}
 
+
+		&[src="chrome://browser/skin/bookmark-hollow.svg"] {
+			content: url("./icons/bookmark.svg") !important;
+		}
+		&[src="chrome://browser/skin/notification-icons/geo.svg"] {
+			content: url("./icons/formfill-anchor.svg") !important;
+		}
+		&[src="chrome://mozapps/skin/extensions/extension.svg"] {
+			content: url("./icons/extensions.svg") !important;
+		}
+		&[src="chrome://browser/skin/tabs.svg"] {
+			content: url("./icons/tab.svg") !important;
+		}
+		&[src="chrome://browser/skin/history.svg"] {
+			content: url("./icons/history.svg") !important;
+		}
+		&[src="chrome://browser/skin/login.svg"] {
+			content: url("./icons/login.svg") !important;
+		}
+		&[src="chrome://browser/skin/payment-methods-16.svg"] {
+			content: url("./icons/icon-credit-card-generic.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/settings.svg"] {
+			content: url("./icons/settings.svg") !important;
+		}
+		&[src="chrome://browser/content/preferences/web-appearance-dark.svg"] {
+			content: url("./icons/web-appearance-dark.svg") !important;
+		}
+		&[src="chrome://browser/content/preferences/web-appearance-light.svg"] {
+			content: url("./icons/web-appearance-light.svg") !important;
+		}
+	}
 	.addon-badge-private-browsing-allowed {
 		background-image: url("./icons/private-browsing.svg") !important;
 	}
@@ -1528,11 +1623,15 @@
 	.fxaLoginRejectedWarning {
 		list-style-image: url("./icons/warning-16.svg") !important;
 	}
-	/* sine !! */
-	#sineInstallationGroup, #sineInstalledGroup {
+						 /* sine !! */
+	#sineInstallationGroup,
+	#sineInstalledGroup {
 		border-radius: 0 !important;
 	}
-	#sineMarketplaceRefreshButton, .sineMarketplaceOpenButton, .sineItemConfigureButton, .sineItemHomepageButton {
+	#sineMarketplaceRefreshButton,
+	.sineMarketplaceOpenButton,
+	.sineItemConfigureButton,
+	.sineItemHomepageButton {
 		-moz-context-properties: fill;
 		fill: currentColor;
 		background-size: 16px !important;
@@ -1551,10 +1650,12 @@
 	.sineItemHomepageButton {
 		background-image: url("./icons/home.svg") !important;
 	}
-	.sineItemPreferenceDialog, groupbox {
+	.sineItemPreferenceDialog,
+	groupbox {
 		background-color: var(--in-content-page-background) !important;
 	}
-	.sineItemPreferenceDialog::backdrop, groupbox::backdrop {
+	.sineItemPreferenceDialog::backdrop,
+	groupbox::backdrop {
 		backdrop-filter: none !important;
 	}
 	.sineMarketplaceItemButton {
@@ -1597,7 +1698,8 @@
 		padding-bottom: 2px !important;
 		height: 41px;
 		background-color: var(--in-content-dialog-header-background);
-		border-color: var(--in-content-border-color) !important;;
+		border-color: var(--in-content-border-color) !important;
+		;
 		h3 {
 			margin: 0 !important;
 			margin-inline: auto !important;
@@ -1836,7 +1938,7 @@
 	fxview-category-button[name="history"]::before {
 		background-image: url("./icons/history.svg");
 	}
-	/* Firefox 125 and above */
+				   /* Firefox 125 and above */
 	.page-nav-icon {
 		width: 16px !important;
 		height: 16px !important;
@@ -1951,7 +2053,7 @@
 		--popup-button-background-hover: var(--in-content-button-background-hover) !important;
 		--popup-button-background-active: var(--in-content-button-background-active) !important;
 	}
-	
+
 	/* Most of these icons don't need to be changed but when/if Firefox changes them, then I wouldn't have to do anything */
 	.close-button {
 		background-image: url("./icons/close-icon2.svg") !important;
@@ -2012,7 +2114,7 @@
 	:root {
 		--loading-icon: url("./icons/pdfjs/loading.svg") !important;
 		/*--treeitem-expanded-icon: url("./icons/pdfjs/treeitem-expanded.svg") !important;
-		--treeitem-collapsed-icon: url("./icons/pdfjs/treeitem-collapsed.svg") !important;*/
+		 *		--treeitem-collapsed-icon: url("./icons/pdfjs/treeitem-collapsed.svg") !important;*/
 		--toolbarButton-editorFreeText-icon: url("./icons/pdfjs/toolbarButton-editorFreeText-1.svg") !important;
 		--toolbarButton-editorInk-icon: url("./icons/pdfjs/toolbarButton-editorInk-1.svg") !important;
 		--toolbarButton-editorStamp-icon: url("./icons/pdfjs/toolbarButton-editorStamp-1.svg") !important;
@@ -2304,8 +2406,8 @@
 /* Error page illustrations */
 /* From Lepton https://github.com/black7375/Firefox-UI-Fix/blob/master/src/contents/_error_page.scss */
 @-moz-document url-prefix("about:neterror"), url-prefix("about:restartrequired"), url("chrome://browser/content/aboutRestartRequired.xhtml"), url("about:sessionrestore"), url("chrome://browser/content/aboutSessionRestore.xhtml")
-{
-  /* Illustrations Position */
+ {
+	/* Illustrations Position */
 	#errorPageContainer,
 	.neterror > .container,
 	.description-wrapper {
@@ -2322,19 +2424,19 @@
 	.description-wrapper {
 		padding-inline-start: 38%;
 	}
-  /* Container */
+	/* Container */
 	.container {
 		min-width: var(--in-content-container-min-width); /* 13em */
 		max-width: var(--in-content-container-max-width); /* 52em */
 	}
-  /* Text Position */
+	/* Text Position */
 	#text-container {
 		margin: auto;
 		padding-inline-start: 38%;
 	}
 }
 @-moz-document url-prefix("about:neterror?e=connectionFailure"), url-prefix("about:neterror?e=netInterrupt"), url-prefix("about:neterror?e=netReset"), url-prefix("about:neterror?e=netTimeout"), url-prefix("about:neterror?e=netOffline"), url-prefix("about:restartrequired"), url("chrome://browser/content/aboutRestartRequired.xhtml")
-{
+ {
 	:root {
 		--uc-error-llustration: url("./icons/error-connection-failure.svg");
 	}
@@ -2359,7 +2461,7 @@
 	}
 }
 @-moz-document url("about:sessionrestore"), url("chrome://browser/content/aboutSessionRestore.xhtml")
-{
+ {
 	:root {
 		--uc-error-llustration: url("./icons/error-session-restore.svg");
 	}
@@ -2382,7 +2484,7 @@
 	}
 }
 @-moz-document url("about:robots"), url("chrome://browser/content/aboutRobots.xhtml")
-{
+ {
 	@media (min-width: 970px) {
 		.title {
 			background-image: url("chrome://browser/content/aboutRobots-icon.png") !important;
@@ -2390,7 +2492,7 @@
 	}
 }
 @-moz-document url("about:welcomeBack"), url("chrome://browser/content/aboutWelcomeBack.xhtml")
-{
+ {
 	@media (min-width: 970px) {
 		.title {
 			background-image: url("./icons/welcome-back.svg") !important;
