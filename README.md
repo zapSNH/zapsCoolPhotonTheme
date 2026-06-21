@@ -34,12 +34,12 @@ ____
 
 <div align="center">
 	
-|                 | Windows | Linux (KDE) | Notes |
+|                 | Windows | Linux | Notes |
 |-----------------|:-------:|:-------------:|:-:|
 | **115/128esr**  | ✔️     | ✔️             | No longer updated |
 | **140esr**      | ✔️     | ✔️             | |
-| **151**         | ✔️     | ✔️             | |
-| **153 nightly** | ✔️     | ✔️             | New Nova design is unsupported |
+| **152**         | ✔️     | ✔️             | |
+| **154 nightly** | ✔️     | ✔️             | New Nova design is unsupported, expect to see breakage. |
 
 macOS should be compatible, though issues may arise due to a lack of testing.
 
@@ -94,7 +94,7 @@ Download the release for your browser version (for esr releases, download the fi
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 151/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v150) **(recommended)**             | [Firefox 151](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip)             |
+| [Firefox 152/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v150)             | [Firefox 152](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip) **(recommended)**            |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128c)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
