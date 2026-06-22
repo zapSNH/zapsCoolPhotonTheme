@@ -388,7 +388,7 @@ moz-button:is(.primary,
 .popup-notification-secondary-button,
 #editBookmarkPanelRemoveButton,
 button:not([popovertarget]) > span.labelled.button-background[type="default"][part="button"],
-.action-buttons button.secondary {
+.action-buttons button.secondary, .trustpanel-section.panel-subview-footer-button  {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 	&:hover {
@@ -491,9 +491,6 @@ button:not([popovertarget]) > span.labelled.button-background[type="primary"][pa
 menu.bookmark-item {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
-}
-#identity-popup-securityView-extended-info {
-	margin-inline-start: 32px !important;
 }
 :root .all-tabs-item {
 	padding-inline: 0 !important;
@@ -641,9 +638,9 @@ menu.bookmark-item {
 		padding: 0 !important;
 		height: 100% !important;
 		> label {
-			margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
-			padding: var(--arrowpanel-menuitem-margin-inline) !important;
-			height: 100%
+			margin-inline: var(--space-xxsmall) !important;
+			padding: var(--space-large) !important;
+			height: 100%;
 		}
 		> moz-button-group {
 			justify-content: center !important;
@@ -653,6 +650,26 @@ menu.bookmark-item {
 			}
 		}
 	}
+}
+#trustpanel-graphic-section {
+	margin-inline: 0 !important;
+	border-radius: 0 !important;
+}
+#trustpanel-clear-cookies-button + toolbarseparator {
+	opacity: 0;
+}
+.identity-popup-security-connection {
+	align-self: start !important;
+	padding-top: var(--space-small) !important;
+}
+#identity-popup-securityView-extended-info {
+	--card-padding-block: var(--space-small);
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	border-inline: none !important;
+	border-block-color: var(--panel-separator-color) !important;
+	background-color: transparent !important;
+	margin: 0 !important;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
 :is(#unified-extensions-area,

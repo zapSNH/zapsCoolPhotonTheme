@@ -338,8 +338,10 @@
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill, stroke !important;
 }
-#identity-popup:is([connection="secure"]) .identity-popup-security-connection {
-  list-style-image: url("./icons/connection-secure.svg") !important;
+#identity-popup:is([connection="secure"]), .site-information-popup[connection^="secure"] {
+	.identity-popup-security-connection {
+  		list-style-image: url("./icons/connection-secure.svg") !important;
+	}
 }
 #identity-popup:is([connection="chrome"]) .identity-popup-security-connection {
   list-style-image: var(--grayscale-logo) !important;
