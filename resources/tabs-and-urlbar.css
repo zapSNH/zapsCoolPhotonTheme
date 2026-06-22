@@ -635,7 +635,6 @@ box) {
 	height: 100% !important;
 }
 .urlbar-input-container {
-	padding-left: 5px !important;
 	:root[uidensity="touch"] & {
 		margin-top: 0px !important;
 	}
@@ -832,6 +831,11 @@ toolbarbutton#urlbar-searchmode-switcher {
 	.urlbar-background) {
 		translate: 0 0px !important;
 	}
+	:is(#urlbar, #searchbar-new):not([breakout][breakout-extend], [focused]) {
+		.searchmode-switcher {
+			--button-border-radius: 0 !important;
+		}
+	} 
 }
 @media -moz-pref("uc.reduced-megabar") {
 	#urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
@@ -858,6 +862,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 	:root[uidensity="compact"] #urlbar[breakout][breakout-extend] .urlbar-input-container {
 		margin-top: -3px !important;
 	}
+	.searchmode-switcher {
+		--button-border-radius: 0 !important;
+	}
 }
 @media -moz-pref("uc.no-megabar") {
 	#urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
@@ -882,7 +889,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		}
 		:is(#urlbar-background,
 		.urlbar-background) {
-			height: var(--urlbar-height) !important;
+			height: calc(var(--urlbar-height) - 2px) !important;
 			margin-top: 4px !important;
 			margin-inline: 5px !important;
 			animation: none !important;
@@ -900,6 +907,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	#urlbar .urlbarView {
 		background: var(--toolbar-field-background-color) !important;
 		padding-inline: 5px !important;
+		margin-inline: calc(var(--urlbarView-results-padding) - 5px) !important;
 		box-shadow: 0 5px 18px rgba(0,0,0,.2);
 		border-radius: var(--photon-border-radius);
 	}
@@ -938,6 +946,9 @@ toolbarbutton#urlbar-searchmode-switcher {
 	}
 	#urlbar-results[wrap] .urlbarView-url {
 		margin-left: 46px !important;
+	}
+	.searchmode-switcher {
+		--button-border-radius: 0 !important;
 	}
 }
 @media not -moz-pref("uc.no-megabar") {
