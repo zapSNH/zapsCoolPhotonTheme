@@ -575,9 +575,6 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 	:root[uidensity="compact"] & {
 		--urlbar-height: 26px !important;
 	}
-	:root:not([uidensity="touch"]) &[breakout-extend] {
-		translate: 0 1px !important;
-	}
 	&#searchbar,
 	&#searchbar-new {
 		--urlbar-min-height: 30px !important;
@@ -596,7 +593,7 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 	height: var(--urlbar-height) !important;
 	max-height: var(--urlbar-height) !important;
 	min-height: var(--urlbar-height) !important;
-}
+}/*
 :root[uidensity="touch"] #urlbar :is(#page-action-buttons,
 .urlbar-input-box,
 box) {
@@ -612,7 +609,7 @@ box) {
 	max-height: var(--urlbar-height) !important;
 	min-height: var(--urlbar-height) !important;
 	align-items: center !important;
-}
+}*/
 .urlbar-button {
 	align-self: center !important;
 }
@@ -644,7 +641,7 @@ box) {
 	#urlbar[breakout-extend] &,
 	:root:is([sizemode="maximized"],
 	[sizemode="fullscreen"]) & {
-		padding-right: 5px !important;
+		padding-inline: 5px !important;
 	}
 }
 #urlbar-results[wrap] .urlbarView-url {
@@ -733,11 +730,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 	.urlbar-page-action image {
 		translate: 2px !important;
 	}
-	.urlbar-input-container {
-		height: calc(var(--urlbar-height) + 2px) !important;
-	}
-	#urlbar[breakout-extend] {
-		padding-top: 4px !important;
+	#urlbar[breakout][breakout-extend] {
 		#tracking-protection-icon-container, #identity-box {
 			height: calc(var(--urlbar-height) - 4px) !important;
 			margin-block: -2px !important;
@@ -761,10 +754,6 @@ toolbarbutton#urlbar-searchmode-switcher {
 	[open])::after {
 		top: 2px;
 	}
-	#trust-icon-container,
-	#identity-box {
-		align-self: start !important;
-	}
 }
 /* Resize toolbar buttons */
 :root:not([uidensity]) .toolbarbutton-1 stack {
@@ -782,54 +771,36 @@ toolbarbutton#urlbar-searchmode-switcher {
 	#urlbar[focused]:not([breakout][breakout-extend]) {
 		z-index: 3;
 	}
+	:root {
+		--megabar-expansion: 7px;
+		--megabar-breakout-adjustment: 2px;
+		&[uidensity="compact"] {
+			--megabar-expansion: 5px;
+		}
+		&[uidensity="touch"] {
+			--megabar-expansion: 5px;
+		}
+	}
+	#urlbar :is(#urlbar-background,
+	.urlbar-background) {
+		box-sizing: border-box !important;
+	}
 	#urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
 	.urlbar-background) {
-		margin-inline: -8px !important;
-		margin-block: -7px !important;
-		height: calc(var(--urlbar-height) + 14px) !important;
-		outline-width: 0px !important;
+		margin-top: calc(-1 * var(--megabar-expansion)) !important;
+		margin-inline: calc(-1 * var(--megabar-expansion) - 1px) !important;
+		height: calc(var(--urlbar-height) + var(--megabar-expansion) * 2) !important;
 		border: 1px solid var(--urlbar-border-color) !important;
+		outline: none !important;
 	}
 	#urlbar[breakout][breakout-extend] {
-		--urlbar-margin-inline: 8px !important;
-		padding: 3px !important;
-		padding-top: 2px !important;
-		margin-top: -3px !important;
-	}
-	:root[uidensity="compact"] #urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
-	.urlbar-background) {
-		margin-inline: -7px !important;
-		margin-block: -4px !important;
-		height: calc(var(--urlbar-height) + 8px) !important;
-		outline-width: 0px !important;
-		border: 1px solid var(--urlbar-border-color) !important;
-	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend] {
-		--urlbar-margin-inline: 7px !important;
-		padding: 2px !important;
-		padding-block-start: 4px !important;
-		margin-top: -2px !important;
-	}
-	:root[uidensity="touch"] #urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
-	.urlbar-background) {
-		margin-inline: -7px !important;
-		margin-block: -6px !important;
-		height: calc(var(--urlbar-height) + 12px) !important;
-		outline-width: 0px !important;
-		border: 1px solid var(--urlbar-border-color) !important;
-	}
-	:root[uidensity="touch"] #urlbar[breakout][breakout-extend] {
-		--urlbar-margin-inline: 7px !important;
-		padding: 2px !important;
-		padding-top: 7px !important;
-		margin-top: -2px !important;
+		--urlbar-margin-inline: calc(var(--megabar-expansion) + 1px) !important;
+		padding: calc(0.5 * var(--megabar-expansion) - 1px) !important;
+		margin-top:  calc(-1 * var(--megabar-breakout-adjustment)) !important;
+		padding-top: calc( 1 * var(--megabar-breakout-adjustment)) !important;
 	}
 	#nav-bar:has(#urlbar[focused]:not([breakout][breakout-extend])) {
 		overflow: visible !important;
-	}
-	#urlbar[breakout-extend] :is(#urlbar-background,
-	.urlbar-background) {
-		translate: 0 0px !important;
 	}
 	:is(#urlbar, #searchbar-new):not([breakout][breakout-extend], [focused]) {
 		.searchmode-switcher {
@@ -843,25 +814,6 @@ toolbarbutton#urlbar-searchmode-switcher {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
 	}
-	#urlbar[breakout][breakout-extend] {
-		.urlbar-input-container {
-			height: calc(var(--urlbar-container-height) - 2px) !important;
-			:root[uidensity="compact"] & {
-				height: calc(var(--urlbar-container-height) - 2px) !important;
-				align-items: center !important;
-			}
-			:root[uidensity="touch"] & {
-				height: calc(var(--urlbar-container-height) + 4px) !important;
-				align-items: center !important;
-				#trust-icon-container, #identity-box {
-					align-self: center !important;
-				}
-			}
-		}
-	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend] .urlbar-input-container {
-		margin-top: -3px !important;
-	}
 	.searchmode-switcher {
 		--button-border-radius: 0 !important;
 	}
@@ -872,42 +824,29 @@ toolbarbutton#urlbar-searchmode-switcher {
 		border: 1px solid var(--photon-accent-dark) !important;
 		outline: none !important;
 	}
+	#urlbar :is(#urlbar-background,
+	.urlbar-background) {
+		box-sizing: border-box !important;
+	}
 	#urlbar[breakout][breakout-extend] {
-		.urlbar-input-container {
-			height: calc(var(--urlbar-container-height) - 2px) !important;
-			:root[uidensity="compact"] & {
-				height: calc(var(--urlbar-container-height) - 2px) !important;
-				align-items: center !important;
-			}
-			:root[uidensity="touch"] & {
-				height: calc(var(--urlbar-container-height) + 4px) !important;
-				align-items: center !important;
-				#trust-icon-container, #identity-box {
-					align-self: center !important;
-				}
-			}
-		}
 		:is(#urlbar-background,
 		.urlbar-background) {
-			height: calc(var(--urlbar-height) - 2px) !important;
-			margin-top: 4px !important;
+			height: var(--urlbar-height) !important;
+			margin-top: 5px !important;
 			margin-inline: 5px !important;
 			animation: none !important;
 			:root[uidensity="compact"] & {
-				margin-top: 2px !important;
+				margin-top: 3px !important;
 			}
 			:root[uidensity="touch"] & {
-				margin-top: 6px !important;
+				margin-top: 3px !important;
 			}
 		}
 	}
-	:root[uidensity="compact"] #urlbar[breakout][breakout-extend] .urlbar-input-container {
-		margin-top: -3px !important;
-	}
 	#urlbar .urlbarView {
 		background: var(--toolbar-field-background-color) !important;
-		padding-inline: 5px !important;
-		margin-inline: calc(var(--urlbarView-results-padding) - 5px) !important;
+		padding-inline: var(--urlbarView-results-padding) !important;
+		width: calc(100% - 4 * (var(--urlbarView-results-padding))) !important;
 		box-shadow: 0 5px 18px rgba(0,0,0,.2);
 		border-radius: var(--photon-border-radius);
 	}
@@ -915,11 +854,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		border: transparent !important;
 	}
 	#urlbar .urlbarView-row {
-		margin-block: -4px !important;
-	}
-	#urlbar .urlbarView-row:is(:first-child,
-	:last-child) {
-		margin-block: 0px !important;
+		margin-block: 0 !important;
 	}
 	.urlbarView-row[label]::before {
 		display: none !important;
