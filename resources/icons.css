@@ -342,8 +342,10 @@
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 	-moz-context-properties: fill, stroke !important;
 }
-#identity-popup:is([connection="secure"]) .identity-popup-security-connection {
-  list-style-image: url("./icons/connection-secure.svg") !important;
+#identity-popup:is([connection="secure"]), .site-information-popup[connection^="secure"] {
+	.identity-popup-security-connection {
+  		list-style-image: url("./icons/connection-secure.svg") !important;
+	}
 }
 #identity-popup:is([connection="chrome"]) .identity-popup-security-connection {
   list-style-image: var(--grayscale-logo) !important;
@@ -1110,21 +1112,30 @@ menupopup > menu::after {
 		content: url("./icons/trending.svg") !important;
 	}
 }
-#searchmode-switcher-icon {
+.searchmode-switcher-panel-list {
+	panel-item {
+		--button-icon: var(--icon-url);
+	}
+}
+#searchmode-switcher-icon, .searchmode-switcher-panel-list panel-item {
 	&[style*="chrome://browser/skin/history.svg"] {
 		list-style-image: url("./icons/history.svg") !important;
+		--button-icon: url("./icons/history.svg");
 	}
-	&[style*="chrome://global/skin/icons/search-glass.svg"], &:not([style]) {
+	&[style*="chrome://global/skin/icons/search-glass.svg"], &:not([style]), &[style*="chrome://browser/skin/search-engine-placeholder"] {
 		list-style-image: url("./icons/find-in-page.svg") !important;
+		--button-icon: url("./icons/find-in-page.svg");
 	}
 	&[style*="chrome://browser/skin/quickactions.svg"] {
 		list-style-image: url("./icons/quick-actions.svg") !important;
 	}
-	&[style*="chrome://browser/skin/tab.svg"] {
+	&[style*="chrome://browser/skin/tab"] {
 		list-style-image: url("./icons/tab.svg") !important;
+		--button-icon: url("./icons/tab.svg");
 	}
 	&[style*="chrome://browser/skin/bookmark.svg"] {
 		list-style-image: url("./icons/bookmark.svg") !important;
+		--button-icon: url("./icons/bookmark.svg");
 	}
 	&[style*="chrome://global/skin/icons/clipboard.svg"] {
 		list-style-image: url("./icons/edit-paste.svg") !important;
@@ -1192,6 +1203,10 @@ menupopup > menu::after {
 }
 .toolbarbutton-combined-buttons-dropmarker {
 	list-style-image: url("./icons/arrow-dropdown-12.svg") !important;
+}
+.searchmode-switcher-dropmarker {
+	content: url("./icons/arrow-dropdown-12.svg") !important;
+	transition-timing-function: var(--photon-easing-function) !important;
 }
 #translations-button-locale {
 	margin: 0px !important;
