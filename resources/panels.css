@@ -352,7 +352,7 @@ menu) {
 }
 :is(.panel-footer,
 #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
-button > span.labelled.button-background[part="button"],
+button:not([popovertarget]) > span.labelled.button-background[part="button"],
 .action-buttons > div,
 .action-buttons button {
 	border-radius: 0 !important;
@@ -387,8 +387,8 @@ moz-button:is(.primary,
 :has(+ moz-button-group)),
 .popup-notification-secondary-button,
 #editBookmarkPanelRemoveButton,
-button > span.labelled.button-background[type="default"][part="button"],
-.action-buttons button.secondary {
+button:not([popovertarget]) > span.labelled.button-background[type="default"][part="button"],
+.action-buttons button.secondary, .trustpanel-section.panel-subview-footer-button  {
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 	&:hover {
@@ -402,7 +402,7 @@ button > span.labelled.button-background[type="default"][part="button"],
 #select-translations-panel-footer-button-group) > button:is(.primary,
 [slot="primary"],
 [default="true"]):not([type="menu"]),
-button > span.labelled.button-background[type="primary"][part="button"],
+button:not([popovertarget]) > span.labelled.button-background[type="primary"][part="button"],
 .action-buttons button.primary {
 	background-color: #0060df !important;
 	color: white !important;
@@ -491,9 +491,6 @@ button > span.labelled.button-background[type="primary"][part="button"],
 menu.bookmark-item {
 	margin-inline: 0 !important;
 	padding-inline: 11px !important;
-}
-#identity-popup-securityView-extended-info {
-	margin-inline-start: 32px !important;
 }
 :root .all-tabs-item {
 	padding-inline: 0 !important;
@@ -641,9 +638,9 @@ menu.bookmark-item {
 		padding: 0 !important;
 		height: 100% !important;
 		> label {
-			margin-inline: var(--arrowpanel-menuitem-margin-inline) !important;
-			padding: var(--arrowpanel-menuitem-margin-inline) !important;
-			height: 100%
+			margin-inline: var(--space-xxsmall) !important;
+			padding: var(--space-large) !important;
+			height: 100%;
 		}
 		> moz-button-group {
 			justify-content: center !important;
@@ -653,6 +650,26 @@ menu.bookmark-item {
 			}
 		}
 	}
+}
+#trustpanel-graphic-section {
+	margin-inline: 0 !important;
+	border-radius: 0 !important;
+}
+#trustpanel-clear-cookies-button + toolbarseparator {
+	opacity: 0;
+}
+.identity-popup-security-connection {
+	align-self: start !important;
+	padding-top: var(--space-small) !important;
+}
+#identity-popup-securityView-extended-info {
+	--card-padding-block: var(--space-small);
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	border-inline: none !important;
+	border-block-color: var(--panel-separator-color) !important;
+	background-color: transparent !important;
+	margin: 0 !important;
 }
 /* Extensions Menu That I Totally Do Not Dislike */
 :is(#unified-extensions-area,
@@ -898,6 +915,17 @@ toolbarbutton.panel-subview-footer-button {
 }
 #PopupSearchAutoComplete .autocomplete-richlistbox {
 	margin: 0 !important;
+}
+#searchmode-switcher-panel-list-urlbar, #searchmode-switcher-panel-list-searchbar {
+	--panel-subview-body-padding: 0 !important;
+	--panel-menuitem-border-radius: 0 !important;
+	--panel-menuitem-margin: 0 !important;
+	--panel-menuitem-padding: 4px 8px !important;
+	--panel-menuitem-border-radius: 0 !important;
+	> *:not(.searchmode-switcher-panel-description) {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
 }
 #searchmode-switcher-popup, .searchmode-switcher-popup {
 	--panel-padding: 2px 0px 1px 0px !important;
