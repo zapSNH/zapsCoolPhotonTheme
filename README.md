@@ -2,7 +2,11 @@
 <h1 align="center">
 	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="z(ap's) cool photon theme" title="who the hell is zap anyway">
 </h1>
-
+<p align="center">
+	A <a href="https://www.userchrome.org/">userChrome</a> Firefox Photon theme for modern Firefox (and derivatives).
+	<br>
+	Designed based on later versions of Photon, specifically Firefox 87.
+</p>
 <p align="center">
 	<img alt="cool" src="https://github.com/user-attachments/assets/7f67b471-e33a-4c2a-a9cb-94cbfd6ea5b2">
 </p>
@@ -13,15 +17,12 @@
 	<img alt="GitHub License" src="https://img.shields.io/github/license/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
 	<img alt="GitHub Issues" src="https://img.shields.io/github/issues/zapSNH/zapsCoolPhotonTheme?style=for-the-badge">
 	<br>
-	A theme for modern Firefox-based browsers made to be <b>as faithful</b> to Firefox Photon as possible.
-	<br>
-	Designed based on later versions of Photon, specifically Firefox 87.
 </p>
 
 <p align="center">
 	Have an issue or want to share feedback? Feel free to <a href="https://github.com/zapSNH/zapsCoolPhotonTheme/issues/new/choose">open an issue</a> or <a href="https://github.com/zapSNH/zapsCoolPhotonTheme/discussions/new/choose">start a discussion</a>!
 	<br>
-	Contributions are greatly appreciated!
+	Contributions are greatly appreciated! (issues, discussions, pull requests, feedback, anything else!)
 </p>
 
 <h4 align="center"><a href="https://github.com/zapSNH/zapsCoolPhotonTheme/wiki/Showcase">&gt; (theme showcase) &lt;</a></h4>
@@ -39,22 +40,22 @@ ____
 | **115/128esr**  | ✔️     | ✔️             | No longer updated |
 | **140esr**      | ✔️     | ✔️             | |
 | **152**         | ✔️     | ✔️             | |
-| **154 nightly** | ✔️     | ✔️             | New Nova design is unsupported, expect to see breakage. |
+| **154 nightly** | ✔️     | ✔️             | Set `browser.nova.enabled` to `false` in `about:config` |
 
-macOS should be compatible, though issues may arise due to a lack of testing.
+macOS should be compatible, though issues may arise due to a lack of testing. Feel free to open issues/discussions regarding the theme on macOS.
 
 Most Firefox-based forks that don't drastically modify the interface are supported.
-See the [Forks](#forks-) section for more information about Firefox forks.
+See the [Fireforks](#fireforks-) section for more information about Firefox derivatives.
 
 </div>
 
 
 ## Installation
 There are four (4) ways of installing this theme.
-* [Manual Installation 🛠](#manual-installation-)
-* [Sine Mod Manager🪐](#sine-mod-manager-)
-* [Extension 🧩](#extension-)
-* [Git :octocat:](#git-octocat)
+* [Manual Installation 🛠](#manual-installation-) (classic userChrome installation)
+* [Sine Mod Manager🪐](#sine-mod-manager-) (theme installed via Sine, provides auto-updates and basic config UI)
+* [Extension 🧩](#extension-) (theme installed as an extension, provides auto-updates and a config UI)
+* [Git :octocat:](#git-octocat) (theme installed via git)
   
 ____
 ### Manual Installation 🛠
@@ -122,7 +123,7 @@ Restart Firefox.
 
 You're done! 🎉
 
-(note: Due to the lack of auto-updates, it is recommended to manually update the theme every 1-2 Firefox releases to prevent breakage)
+(note: Due to the lack of auto-updates, **it is recommended to manually update the theme every 1-2 Firefox releases to prevent breakage**)
 
 ____
 ### Sine Mod Manager 🪐
@@ -141,9 +142,10 @@ ____
 ### Extension 🧩
 Install the theme as an extension (like uBlock and the like).
 - Only installable on Firefox Developer Edition, Firefox Nightly, and Firefox ESR (and forks based on these versions) since **you need to disable extension signing** (which is insecure).
+- - On certain Firefox forks, extension signing is disabled by default.
 - Has auto-updating and a built-in configurator.
 
-This version is based on [Paxmod](https://github.com/numirias/paxmod).
+This version is loosley based on [Paxmod](https://github.com/numirias/paxmod).
 
 Open `about:config` and set:
 | Pref | Value | Description |
@@ -192,7 +194,7 @@ where `BRANCH_NAME` is [your Firefox version (i.e. `115esr` or `nightly`)](https
 
 You're done! 🎉
 
-# Forks 🍴
+# Fireforks 🍴
 If you're using a Firefox fork (e.g. Waterfox, Floorp, etc.), you can set these prefs in `about:config` for theme fixes and adjustments for your browser.
 
 It is recommended to disable any custom UI styles set by the browser to prevent conflicts.
