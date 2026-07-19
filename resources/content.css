@@ -302,6 +302,12 @@
 			content: url(./icons/forks/tor/tor-grayscale.svg) !important;
 		}
 	}
+	/* mullvad (and prolly the others) already has a grayscale logo */
+	@supports -moz-bool-pref("uc.logo.quantum") {
+		img[src="chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg"] {
+			content: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
+		}
+	}
 }
 @-moz-document url("about:privatebrowsing") {
 	* {
@@ -527,6 +533,35 @@
 		}
 		.top-site-outer .context-menu-button {
 			translate: 0px 8px;
+		}
+	}
+	.search-wrapper .logo-and-wordmark .logo {
+		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
+	}
+
+	@media -moz-pref("uc.logo.quantum-beta") {
+		.search-wrapper .logo-and-wordmark .logo {
+			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
+		}
+	}
+	@media -moz-pref("uc.logo.quantum-dev") {
+		.search-wrapper .logo-and-wordmark .logo {
+			--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg") !important;
+		}
+	}
+	@media -moz-pref("uc.logo.quantum-nightly") {
+		.search-wrapper .logo-and-wordmark .logo {
+			--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
+		}
+	}
+	@media -moz-pref("uc.logo.quantum") {
+		.search-wrapper .logo-and-wordmark .logo {
+			background-image: var(--quantum-logo) !important;
+		}
+	}
+	@media -moz-pref("uc.logo.quantum") {
+		.search-wrapper .logo-and-wordmark .wordmark {
+			background-image: url("./icons/quantum/firefox-wordmark.svg") !important;
 		}
 	}
 }
