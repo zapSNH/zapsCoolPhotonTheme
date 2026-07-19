@@ -160,7 +160,8 @@ Download the release for your browser version:
 |:-:|:-:|
 | 140+ | [Latest Version](https://github.com/zapSNH/zcpt-webextension/releases/latest) |
 | 128 - 139 | [v144.2.0](https://github.com/zapSNH/zcpt-webextension/releases/v144.2.0) |
-| 115 - 127 | [v0.24.5](https://github.com/zapSNH/zcpt-webextension/releases/tag/v0.24.5) |
+| 116 - 127 | [v0.24.5](https://github.com/zapSNH/zcpt-webextension/releases/tag/v0.24.5) |
+| 115 | [v128.2.0](https://github.com/zapSNH/zcpt-webextension/releases/tag/v128.2.0) |
 
 More info at: https://github.com/zapSNH/zcpt-webextension/blob/main/README.md
 
