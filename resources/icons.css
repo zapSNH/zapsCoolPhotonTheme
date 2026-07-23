@@ -804,15 +804,15 @@ menupopup > menu::after {
 /* This pushes down the find/translate button and aligns the zoom seperator */
 #appMenu-find-button2 {
 	margin-bottom: 8px !important;
-}
-@media -moz-pref("browser.translations.enable") {
+}/*
+@media -moz-pref("browser.translations.enable") or -moz-pref("browser.ai.control.translations", "available") {
 	#appMenu-translate-button {
 		margin-bottom: 8px !important;
 	}
 	#appMenu-find-button2 {
 		margin-bottom: unset !important;
 	}
-}
+}*/
 /* Zoom controls */
 #appMenu-zoom-controls .subviewbutton .toolbarbutton-icon {
 	border-radius: var(--photon-border-radius) !important;

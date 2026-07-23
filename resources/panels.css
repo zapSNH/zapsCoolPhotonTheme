@@ -215,6 +215,10 @@ menu) {
 #appMenu-profiles-button .toolbarbutton-icon {
 	margin-inline-end: 0px !important;
 }
+.subviewbutton-iconic.profile-item > .toolbarbutton-icon {
+	height: 16px !important;
+	width: 16px !important;
+}
 #profiles-edit-this-profile-button {
 	height: 32px !important;
 	width: 32px !important;
@@ -1064,9 +1068,15 @@ toolbarbutton.panel-subview-footer-button {
 	}
 }
 .button-background:not(.labelled):has(> img[src="chrome://global/skin/icons/highlights.svg"]) {
-	border-radius: 0 !important;
+	border-radius: var(--photon-border-radius) !important;/*
 	width: 30px !important;
 	min-height: 30px !important;
-	height: 30px !important;
+	height: 30px !important;*/
+}
+@media -moz-pref("browser.nova.enabled") {
+	:root {
+		--button-border-radius: var(--photon-border-radius) !important;
+		--card-border-radius: var(--photon-border-radius) !important;
+	}
 }
 }

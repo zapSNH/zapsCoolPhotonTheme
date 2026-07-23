@@ -71,7 +71,7 @@
 		}
 	}
 
-	/* organized using ai (a eye? but i already have 2 of them). am i one of those 'vibe coders' now? */
+	/* organized using ai (a[n] eye? but i already have 2 of them). am i one of those 'vibe coders' now? */
 	* {
 		/* Border radius / sizing */
 		--photon-primary-border-radius: 4px;
@@ -109,7 +109,9 @@
 
 		/* In-content / box variables */
 		--in-content-box-border-color: color-mix(in srgb, var(--grey-90) 30%, transparent);
-		--box-border-color: var(--in-content-box-border-color);
+		--box-border-color: var(--in-content-box-border-color) !important;
+		--border-color: var(--in-content-box-border-color) !important;
+		--button-border: none;
 		--border-color-interactive: var(--in-content-box-border-color);
 		--box-background: var(--in-content-box-background);
 		--input-text-background-color: var(--in-content-box-background);
@@ -119,10 +121,14 @@
 		--in-content-button-background-active: color-mix(in srgb, var(--grey-90) 30%, transparent) !important;
 		--in-content-box-info-background: var(--grey-90-a30);
 		--background-color-canvas: var(--in-content-page-background) !important;
+		--page-nav-button-background-color: transparent !important;
+		--page-nav-button-text-color-selected: var(--photon-accent) !important;
+		--page-nav-button-background-color-selected: var(--in-content-button-background-hover);
 		--page-nav-button-indicator-color: var(--photon-accent) !important;
+		--button-background-color: var(--in-content-button-background) !important;
 		--button-background-color-hover: var(--in-content-button-background-hover) !important;
 		--button-background-color-active: var(--in-content-button-background-active) !important;
-
+		
 		/* Primary / action buttons */
 		--primary-button-background-color: var(--blue-60);
 		--primary-button-hover-background-color: var(--blue-70);
@@ -1243,7 +1249,7 @@
 		}
 	}
 	#search-container {
-		padding-block-start: 0 !important;
+		padding-block-start: var(--space-large) !important;
 		display: flex;
 		justify-content: end !important;
 	}
@@ -1257,7 +1263,7 @@
 		content: url("./icons/reload.svg") !important;
 		scale: -1 1;
 	}
-
+	
 	/* n*va */
 	.icon, .page-nav-icon {
 		&[src="chrome://browser/skin/fxa/avatar-empty.svg"] {
@@ -1304,6 +1310,18 @@
 			content: url("./icons/glyph-experiments.svg") !important;
 		}
 		&[src="chrome://global/skin/icons/highlights.svg"] {
+			content: url("./icons/glyph-highlights-16.svg") !important;
+		}
+		&[src="chrome://mozapps/skin/extensions/category-extensions.svg"] {
+			content: url("./icons/extensions.svg") !important;
+		}
+		&[src="chrome://mozapps/skin/extensions/category-themes.svg"] {
+			content: url("./icons/customize.svg") !important;
+		}
+		&[src="chrome://mozapps/skin/extensions/category-plugins.svg"] {
+			content: url("./icons/plugin.svg") !important;
+		}
+		&[src="chrome://global/skin/icons/trophy.svg"] {
 			content: url("./icons/glyph-highlights-16.svg") !important;
 		}
 	}
@@ -1748,6 +1766,8 @@
 	}
 	.more-options-button {
 		background-image: url("./icons/settings.svg") !important;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	addon-card .more-options-button {
 		background-image: url("./icons/more.svg") !important;
@@ -1789,6 +1809,11 @@
 		}
 		&[name="mlmodel"] {
 			background-image: url("./icons/import.svg") !important; /* idc */
+		}
+	}
+	.page-nav-icon {
+		&[src="chrome://global/skin/icons/highlights.svg"] {
+			content: url("./icons/import.svg") !important;
 		}
 	}
 	.card-heading-image {

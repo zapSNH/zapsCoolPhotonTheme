@@ -4,6 +4,7 @@
 :root {
 	--theme-css: 1px;
 	--panel-separator-zap-gradient: none !important;
+	--tab-border-color-accent: none !important;
 	
 	--autocomplete-popup-separator-color: color-mix(in srgb, currentColor 10%, transparent) !important;
 	
