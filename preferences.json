@@ -45,6 +45,15 @@
   },
   {
     "type": "checkbox",
+    "property": "uc.bottom-tabs.no-indent",
+    "label": "Indentless bottom tabs",
+    "defaultValue": false,
+    "conditions": [
+      {"if": {"property": "uc.bottom-tabs", "value": true}}
+    ]
+  },
+  {
+    "type": "checkbox",
     "property": "uc.sidebery",
     "label": "Vertical tabs with Sidebery",
     "defaultValue": false
