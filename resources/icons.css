@@ -801,18 +801,6 @@ menupopup > menu::after {
 	list-style-image: url("./icons/translations.svg");
 	margin-inline-end: calc(var(--appmenu-icon-inline-end) - 1px) !important;
 }
-/* This pushes down the find/translate button and aligns the zoom seperator */
-#appMenu-find-button2 {
-	margin-bottom: 8px !important;
-}/*
-@media -moz-pref("browser.translations.enable") or -moz-pref("browser.ai.control.translations", "available") {
-	#appMenu-translate-button {
-		margin-bottom: 8px !important;
-	}
-	#appMenu-find-button2 {
-		margin-bottom: unset !important;
-	}
-}*/
 /* Zoom controls */
 #appMenu-zoom-controls .subviewbutton .toolbarbutton-icon {
 	border-radius: var(--photon-border-radius) !important;
@@ -870,6 +858,9 @@ menupopup > menu::after {
 }
 #appMenu-fullscreen-button2 {
 	margin-right: -11px !important;
+}
+#appMenu-zoom-controls {
+	margin-top: 6px !important;
 }
 /* Hover color */
 #appMenu-zoomReduce-button2:hover image,

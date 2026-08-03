@@ -1062,17 +1062,18 @@ tab-group {
 		height: 32px
 	}
 	#nav-bar {
-		margin-inline-end: 138px;
-		padding-inline-end: 40px !important;
+		margin-inline-end: 0 !important;
+		margin-inline-end: 178px;
 	}
 	@media (-moz-platform: linux) {
 		#nav-bar {
-			margin-inline-end: 72px;
-			padding-inline-end: 40px !important;
+			padding-inline-end: 112px !important;
 		}
 	}
-	#nav-bar-customization-target {
-		margin-inline-start: 30px;
+	@media not -moz-pref("uc.bottom-tabs.no-indent") {
+		#nav-bar-customization-target {
+			margin-inline-start: 30px;
+		}
 	}
 	@media (-moz-platform: windows) {
 		:root[sizemode="normal"] #TabsToolbar #firefox-view-button::before {
@@ -1104,20 +1105,23 @@ tab-group {
 			border-top-right-radius: 10px;
 		}
 	}
-	:root:not([tabsintitlebar],
-	[customtitlebar]) {
+	:root:not([tabsintitlebar], [customtitlebar]) {
 		#nav-bar {
 			margin-inline-end: 0;
+			padding-inline-end: 0 !important;
 		}
 		#nav-bar-customization-target {
 			margin-inline-start: 0;
 		}
 	}
-	:root:has(#toolbar-menubar:is([collapsed="false"],
-	:not([inactive="true"]))) {
+	:root:has(#toolbar-menubar:not([inactive="true"])) {
 		#nav-bar {
 			padding-top: 32px !important;
 			margin-inline-end: 0 !important;
+			z-index: 0;
+		}
+		#toolbar-menubar {
+			z-index: 1;
 		}
 		.titlebar-button {
 			height: 32px !important;
