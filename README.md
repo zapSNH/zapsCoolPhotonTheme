@@ -39,7 +39,7 @@ ____
 |-----------------|:-------:|:-------------:|:-:|
 | **115/128esr**  | ✔️     | ✔️             | No longer updated |
 | **140esr**      | ✔️     | ✔️             | |
-| **152**         | ✔️     | ✔️             | |
+| **153**         | ✔️     | ✔️             | |
 | **154 nightly** | ✔️     | ✔️             | Set `browser.nova.enabled` to `false` in `about:config` |
 
 macOS should be compatible, though issues may arise due to a lack of testing. Feel free to open issues/discussions regarding the theme on macOS.
@@ -95,7 +95,7 @@ Download the release for your browser version (for esr releases, download the fi
 
 | __🪨 Static Release (stability)__ | __🛞 Rolling Release (features and bugfixes)__ |
 |-|-|
-| [Firefox 152/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v150)             | [Firefox 152](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip) **(recommended)**            |
+| [Firefox 153/140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v150)             | [Firefox 153](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/main.zip) **(recommended)**            |
 | [Firefox 128esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v141)                                   | [Firefox 140esr](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/140esr.zip)        |
 | [Firefox 115esr](https://github.com/zapSNH/zapsCoolPhotonTheme/releases/tag/v128c)                                  | [Firefox Beta/Nightly](https://github.com/zapSNH/zapsCoolPhotonTheme/archive/refs/heads/nightly.zip) |
 
