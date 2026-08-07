@@ -1,6 +1,6 @@
 <!-- this is just an html file with extra steps -->
 <h1 align="center">
-	<img src="https://github.com/user-attachments/assets/bb23b9b4-0011-4ac8-acfe-3996006bb2de" alt="z(ap's) cool photon theme" title="who the hell is zap anyway">
+	<img src="https://raw.githubusercontent.com/zapSNH/zapsCoolPhotonTheme/refs/heads/main/.github/logo-wordmark.svg" alt="z(ap's) cool photon theme" title="who the hell is zap anyway">
 </h1>
 <p align="center">
 	A <a href="https://www.userchrome.org/">userChrome</a> Firefox Photon theme for modern Firefox (and derivatives).
@@ -40,7 +40,7 @@ ____
 | **115/128esr**  | ✔️     | ✔️             | No longer updated |
 | **140esr**      | ✔️     | ✔️             | |
 | **153**         | ✔️     | ✔️             | |
-| **154 nightly** | ✔️     | ✔️             | Set `browser.nova.enabled` to `false` in `about:config` |
+| **155 nightly** | ✔️     | ✔️             | Set `browser.nova.enabled` to `false` in `about:config` |
 
 macOS should be compatible, though issues may arise due to a lack of testing. Feel free to open issues/discussions regarding the theme on macOS.
 
