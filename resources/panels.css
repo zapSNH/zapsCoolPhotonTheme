@@ -354,6 +354,12 @@ menu) {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
+popupnotification .panel-footer {
+	display: flex !important;
+	moz-button {
+		flex: 1;
+	}
+}
 :is(.panel-footer,
 #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
 button:not([popovertarget]) > span.labelled.button-background[part="button"],
@@ -388,8 +394,8 @@ moz-button:is(.primary,
 > button:not(.primary,
 [slot="primary"],
 [default="true"],
-:has(+ moz-button-group)),
-.popup-notification-secondary-button,
+:has(+ moz-button-group)),/*
+.popup-notification-secondary-button,*/
 #editBookmarkPanelRemoveButton,
 button:not([popovertarget]) > span.labelled.button-background[type="default"][part="button"],
 .action-buttons button.secondary, .trustpanel-section.panel-subview-footer-button  {

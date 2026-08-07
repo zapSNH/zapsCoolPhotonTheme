@@ -940,14 +940,15 @@
 			display: none !important;
 		}
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-			margin-top: -1px;
+			padding-bottom: 1px !important;
 			max-width: var(--sidebar-width) !important;
 			width: var(--sidebar-width) !important;
 			min-width: var(--sidebar-width) !important;
-			height: calc(100% - 41px) !important;
-			position: absolute;
+			position: absolute !important;
 			transition: var(--photon-speed-3) ease;
 			z-index: 100 !important;
+			height: 100%;
+			left: 54px;
 		}
 		#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
 			width: var(--sidebar-width) !important;
@@ -962,12 +963,22 @@
 		#tabbrowser-tabbox) {
 			margin-inline-start: 35px !important;
 		}
+		#TabsToolbar {
+			min-height: 0 !important;
+			max-height: 0 !important;
+			height: 0 !important;
+			z-index: 2 !important;
+		}
 		#nav-bar {
 			z-index: 1;
-			margin-top: -42px;
-			margin-inline-end: 167px;
-			margin-inline-start: 35px;
 			box-shadow: none !important;
+			margin-inline-end: 0 !important;
+			margin-inline-end: 178px;
+		}
+		@media (-moz-platform: linux) {
+			#nav-bar {
+				padding-inline-end: 112px !important;
+			}
 		}
 		.tabbrowser-tab,
 		#new-tab-button,
@@ -975,7 +986,7 @@
 			display: none !important;
 		}
 		.titlebar-button {
-			height: 46px !important;
+			height: 42px !important;
 		}
 		.titlebar-color,
 		#navigator-toolbox {

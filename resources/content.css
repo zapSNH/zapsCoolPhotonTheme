@@ -1101,8 +1101,8 @@
 			translate: 0px 8px;
 		}
 	}
-									  /* Legacy Logos */
-	.search-wrapper .logo-and-wordmark .logo {
+	/* Legacy Logos */
+	.logo-and-wordmark .logo {
 		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 		@media -moz-pref("uc.logo.quantum-beta") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
@@ -1117,7 +1117,7 @@
 			background-image: var(--quantum-logo) !important;
 		}
 	}
-	.search-wrapper .logo-and-wordmark .wordmark {
+	.logo-and-wordmark .wordmark {
 		@media -moz-pref("uc.logo.quantum") {
 			background-image: url("./icons/quantum/firefox-wordmark.svg") !important;
 		}
