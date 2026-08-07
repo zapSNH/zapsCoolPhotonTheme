@@ -354,6 +354,12 @@ menu) {
 .popup-notification-dropmarker {
 	min-width: 38px !important;
 }
+popupnotification .panel-footer {
+	display: flex !important;
+	moz-button {
+		flex: 1;
+	}
+}
 :is(.panel-footer,
 #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
 button:not([popovertarget]) > span.labelled.button-background[part="button"],
@@ -388,8 +394,8 @@ moz-button:is(.primary,
 > button:not(.primary,
 [slot="primary"],
 [default="true"],
-:has(+ moz-button-group)),
-.popup-notification-secondary-button,
+:has(+ moz-button-group)),/*
+.popup-notification-secondary-button,*/
 #editBookmarkPanelRemoveButton,
 button:not([popovertarget]) > span.labelled.button-background[type="default"][part="button"],
 .action-buttons button.secondary, .trustpanel-section.panel-subview-footer-button  {
@@ -543,7 +549,6 @@ menu.bookmark-item {
 #sidebarMenu-popup > menuitem {
 	margin-inline: 0 !important;
 }
-
 /* Enhanced TP (toilet paper) */
 #protections-popup-tp-switch {
 	border-radius: 8px !important;
@@ -763,7 +768,7 @@ toolbarbutton.panel-subview-footer-button {
 /* passwords */
 #PopupAutoComplete > richlistbox > richlistitem[originaltype="loginsFooter"] {
 	background: color-mix(in srgb, currentColor 9%, transparent) !important;
-	border-top: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
+	border-top: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important; 
 	&:hover {
 		background: color-mix(in srgb, currentColor 25%, transparent) !important;
 	}
