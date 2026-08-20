@@ -659,9 +659,13 @@
 		height: 75% !important;
 		background-size: 100% !important;
 	}
-	.top-site-outer .tile .icon-wrapper {
+	.top-site-outer .tile .icon-stack {
 		width: 100% !important;
 		height: 100% !important;
+	}
+	.top-site-outer .tile .icon-wrapper {
+		min-width: 100% !important;
+		min-height: 100% !important;
 	}
 	.top-site-outer .tile .icon-wrapper::before {
 		translate: 0px 12px;
@@ -705,7 +709,7 @@
 		-moz-context-properties: fill !important;
 		fill: white !important;
 	}
-	.context-menu-button {
+	:not(.nova-tokens) :not(.card-stp-button-position-wrapper) > div > .context-menu-button {
 		border-radius: 50% !important;
 		width: 28px !important;
 		height: 28px !important;
@@ -717,7 +721,7 @@
 		-moz-context-properties: fill !important;
 		fill: var(--newtab-text-primary-color) !important;
 		padding: 0 !important;
-															 /*! transform-origin: center !important; */
+		/*! transform-origin: center !important; */
 	}
 	.top-site-outer .context-menu-button {
 		transition-delay: calc(var(--photon-speed-1) * 10 / 3) !important;
@@ -729,7 +733,7 @@
 		scale: 0;
 	}
 	.top-site-outer .context-menu {
-		inset-block-start: var(--space-large) !important;
+		inset-block-start: var(--space-xxsmall) !important;
 	}
 	.top-site-outer.add-button .tile .icon-wrapper {
 		background-image: url("./icons/add.svg") !important;
@@ -753,6 +757,9 @@
 		background-image: url("./icons/forward.svg") !important;
 		border-start-end-radius: var(--photon-primary-border-radius) !important;
 		border-end-end-radius: var(--photon-primary-border-radius) !important;
+	}
+	.ds-card, .ds-image img {
+		width: 100% !important;
 	}
 	.ds-card .card-stp-button-hover-background {
 		border-radius: var(--photon-primary-border-radius) var(--photon-primary-border-radius) 0 0 !important;
@@ -933,6 +940,17 @@
 	.search-handoff-button {
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 		outline: 1px solid var(--box-border-color);
+	}
+	
+	#main-button span:has(> img[src="chrome://global/skin/icons/edit-outline.svg"]) {
+		border-radius: var(--photon-primary-border-radius) !important;
+		background: transparent !important;
+		&:hover {
+			background: var(--button-background-color-hover) !important;
+			&:active {
+				background: var(--button-background-color-active) !important;
+			}
+		}
 	}
 	:root:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),
