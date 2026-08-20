@@ -659,9 +659,13 @@
 		height: 75% !important;
 		background-size: 100% !important;
 	}
-	.top-site-outer .tile .icon-wrapper {
+	.top-site-outer .tile .icon-stack {
 		width: 100% !important;
 		height: 100% !important;
+	}
+	.top-site-outer .tile .icon-wrapper {
+		min-width: 100% !important;
+		min-height: 100% !important;
 	}
 	.top-site-outer .tile .icon-wrapper::before {
 		translate: 0px 12px;
@@ -729,7 +733,7 @@
 		scale: 0;
 	}
 	.top-site-outer .context-menu {
-		inset-block-start: var(--space-large) !important;
+		inset-block-start: var(--space-xxsmall) !important;
 	}
 	.top-site-outer.add-button .tile .icon-wrapper {
 		background-image: url("./icons/add.svg") !important;
