@@ -41,6 +41,7 @@ ____
 | **140esr**      | ✔️     | ✔️             | |
 | **154**         | ✔️     | ✔️             | |
 | **156 nightly** | ✔️     | ✔️             | |
+
 macOS should be compatible, though issues may arise due to a lack of testing. Feel free to open issues/discussions regarding the theme on macOS.
 
 Most Firefox-based forks that don't drastically modify the interface are supported.
