@@ -360,9 +360,10 @@ popupnotification .panel-footer {
 		flex: 1;
 	}
 }
+button:not([popovertarget]) > span.labelled.button-background[part="button"],
+button:not([popovertarget]) > span[part="chevron-button"][type="split"],
 :is(.panel-footer,
 #select-translations-panel-footer-button-group) > button:not(:has(+ moz-button-group)),
-button:not([popovertarget]) > span.labelled.button-background[part="button"],
 .action-buttons > div,
 .action-buttons button {
 	border-radius: 0 !important;
@@ -377,28 +378,35 @@ button:not([popovertarget]) > span.labelled.button-background[part="button"],
 	}
 	margin-bottom: -4px;
 }
+
+button:not([popovertarget]) > span.labelled.button-background[part="button"],
+button:not([popovertarget]) > span[part="chevron-button"][type="split"] {
+	border: none !important;
+	--button-split-separator-background-color: color-mix(in srgb, transparent 80%, currentColor) !important;
+}
+#main-button + #chevron-button {
+	width: fit-content !important;
+}
 moz-button:is(.primary,
 [slot="primary"],
 [default="true"]):not([type="menu"]) {
 	margin-inline-start: 0 !important;
 }
-/* I was stubbbbbboooooorrrrrnnnnnn */
+/* to rework */
 #editBookmarkPanelRemoveButton {
 	background-color: #0002 !important;
 }
 #tab-group-editor-button-cancel {
 	margin-inline-start: 0 !important;
 }
-:is(.panel-footer,
-#select-translations-panel-footer-button-group)
-> button:not(.primary,
-[slot="primary"],
-[default="true"],
-:has(+ moz-button-group)),/*
-.popup-notification-secondary-button,*/
+.popup-notification-secondary-button,
+.action-buttons button.secondary,
 #editBookmarkPanelRemoveButton,
-button:not([popovertarget]) > span.labelled.button-background[type="default"][part="button"],
-.action-buttons button.secondary, .trustpanel-section.panel-subview-footer-button  {
+.trustpanel-section.panel-subview-footer-button,
+.panel-footer > .cancel-button, #tab-group-editor-button-cancel {
+	--button-background-color-primary: #aaa2;
+	--button-background-color-primary-hover: #aaa4;
+	--button-background-color-primary-active: #1113;
 	background-color: #aaa2 !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
 	&:hover {
@@ -407,13 +415,17 @@ button:not([popovertarget]) > span.labelled.button-background[type="default"][pa
 			background-color: #1113 !important;
 		}
 	}
+	&[type="split"] {
+		background-color: transparent !important;
+	}
 }
-:is(.panel-footer,
-#select-translations-panel-footer-button-group) > button:is(.primary,
-[slot="primary"],
-[default="true"]):not([type="menu"]),
-button:not([popovertarget]) > span.labelled.button-background[type="primary"][part="button"],
-.action-buttons button.primary {
+.popup-notification-primary-button,
+.action-buttons button.primary,
+#editBookmarkPanelDoneButton,
+.panel-footer > button[slot="primary"], #tab-group-editor-button-create {
+	--button-background-color-primary: #0060df;
+	--button-background-color-primary-hover: #003eaa;
+	--button-background-color-primary-active: #002275;
 	background-color: #0060df !important;
 	color: white !important;
 	border-top: solid 1px color-mix(in srgb, transparent 80%, currentColor) !important;
@@ -994,9 +1006,6 @@ toolbarbutton.panel-subview-footer-button {
 		--button-text-color-ghost-hover: rgb(249, 249, 250); !important;
 		--button-text-color-ghost-active: rgb(249, 249, 250); !important;
 		--button-border: none !important;
-		clip-path: inset(0 7px 0 0 round var(--photon-border-radius-1)) !important;
-		margin-inline-start: 4px;
-		overflow: hidden !important;
 	}
 	#tab-group-default-actions {
 		padding-top: 4px !important;
