@@ -1122,13 +1122,13 @@
 	/* Legacy Logos */
 	.logo-and-wordmark .logo {
 		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
-		@media -moz-pref("uc.logo.quantum-beta") {
+		@media -moz-pref("uc.logo.quantum.beta") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 		}
-		@media -moz-pref("uc.logo.quantum-dev") {
+		@media -moz-pref("uc.logo.quantum.dev") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg") !important;
 		}
-		@media -moz-pref("uc.logo.quantum-nightly") {
+		@media -moz-pref("uc.logo.quantum.nightly") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
 		}
 		@media -moz-pref("uc.logo.quantum") {
