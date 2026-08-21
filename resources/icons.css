@@ -28,13 +28,13 @@
 	@media -moz-pref("uc.logo.quantum") {
 		--grayscale-logo: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media -moz-pref("uc.logo.quantum.beta") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-dev") {
+	@media -moz-pref("uc.logo.quantum.dev") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-nightly") {
+	@media -moz-pref("uc.logo.quantum.nightly") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
 	}
 	&[fxastatus="login-failed"] {
@@ -46,7 +46,7 @@
 }
 /* Legacy Logos */
 :is(img, image)[src="chrome://branding/content/icon32.png"] {
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media -moz-pref("uc.logo.quantum.beta") {
 		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 	}
 	@media -moz-pref("uc.logo.quantum") {
@@ -799,18 +799,6 @@ menupopup > menu::after {
 	list-style-image: url("./icons/translations.svg");
 	margin-inline-end: calc(var(--appmenu-icon-inline-end) - 1px) !important;
 }
-/* This pushes down the find/translate button and aligns the zoom seperator */
-#appMenu-find-button2 {
-	margin-bottom: 8px !important;
-}
-@media -moz-pref("browser.translations.enable") {
-	#appMenu-translate-button {
-		margin-bottom: 8px !important;
-	}
-	#appMenu-find-button2 {
-		margin-bottom: unset !important;
-	}
-}
 /* Zoom controls */
 #appMenu-zoom-controls .subviewbutton .toolbarbutton-icon {
 	border-radius: var(--photon-border-radius) !important;
@@ -868,6 +856,9 @@ menupopup > menu::after {
 }
 #appMenu-fullscreen-button2 {
 	margin-right: -11px !important;
+}
+#appMenu-zoom-controls {
+	margin-top: 6px !important;
 }
 /* Hover color */
 #appMenu-zoomReduce-button2:hover image,
