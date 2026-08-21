@@ -321,16 +321,16 @@
 		--quantum-wordmark: url("./icons/quantum/about-wordmark.svg");
 		--wordmark-size: 300px 38px;
 		--wordmark-position: 0px 16px;
-		@media -moz-pref("uc.logo.quantum-beta") {
+		@media -moz-pref("uc.logo.quantum.beta") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg");
 		}
-		@media -moz-pref("uc.logo.quantum-dev") {
+		@media -moz-pref("uc.logo.quantum.dev") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg");
 			--quantum-wordmark: url("./icons/quantum/about-wordmark-de.svg");
 			--wordmark-size: 153.29px 72px;
 			--wordmark-position: 0px 0px;
 		}
-		@media -moz-pref("uc.logo.quantum-nightly") {
+		@media -moz-pref("uc.logo.quantum.nightly") {
 			--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg");
 			--quantum-wordmark: url("./icons/quantum/about-wordmark-nightly.svg");
 			--wordmark-size: 270px 48px;

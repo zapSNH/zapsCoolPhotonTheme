@@ -28,13 +28,13 @@
 	@media -moz-pref("uc.logo.quantum") {
 		--grayscale-logo: url("./icons/quantum/aboutdebugging-firefox-logo.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media -moz-pref("uc.logo.quantum.beta") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-dev") {
+	@media -moz-pref("uc.logo.quantum.dev") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg") !important;
 	}
-	@media -moz-pref("uc.logo.quantum-nightly") {
+	@media -moz-pref("uc.logo.quantum.nightly") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
 	}
 	&[fxastatus="login-failed"] {
@@ -46,7 +46,7 @@
 }
 /* Legacy Logos */
 :is(img, image)[src="chrome://branding/content/icon32.png"] {
-	@media -moz-pref("uc.logo.quantum-beta") {
+	@media -moz-pref("uc.logo.quantum.beta") {
 		--quantum-logo: url("./icons/quantum/firefox-logo.svg");
 	}
 	@media -moz-pref("uc.logo.quantum") {
