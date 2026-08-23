@@ -32,7 +32,7 @@
 		--quantum-logo: url("./icons/quantum/firefox-logo-beta.svg") !important;
 	}
 	@media -moz-pref("uc.logo.quantum.dev") {
-		--quantum-logo: url("./icons/quantum/firefox-logo-dev.svg") !important;
+		--quantum-logo: url("./icons/quantum/firefox-logo-developer-edition.svg") !important;
 	}
 	@media -moz-pref("uc.logo.quantum.nightly") {
 		--quantum-logo: url("./icons/quantum/firefox-logo-nightly.svg") !important;
