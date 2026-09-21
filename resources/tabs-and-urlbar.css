@@ -849,7 +849,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		}
 	}
 	#urlbar .urlbarView {
-		background: var(--toolbar-field-background-color) !important;
+		background: var(--urlbar-background-color) !important;
 		padding-inline: var(--urlbarView-results-padding) !important;
 		width: calc(100% - 4 * (var(--urlbarView-results-padding))) !important;
 		box-shadow: 0 5px 18px rgba(0,0,0,.2);

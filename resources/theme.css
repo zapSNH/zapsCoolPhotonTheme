@@ -42,7 +42,7 @@
 		richlistbox:not(#PopupSearchAutoComplete richlistbox),
 		#tab-preview-panel,
 		panel[type="autocomplete-richlistbox"] {
-			--panel-background-color: var(--panel-background) !important;
+			--panel-background-color: var(--panel-background, Menu) !important;
 		}
 	}
 }
@@ -464,9 +464,9 @@ input.findbar-textbox:focus {
 	--toolbar-background-color: var(--toolbar-bgcolor) !important;
 	--toolbox-background-color: var(--toolbox-bgcolor) !important;
 	--toolbox-background-color-inactive: var(--toolbox-bgcolor-inactive) !important;
-	--panel-background-color: var(--panel-background) !important;
+	--panel-background-color: var(--panel-background, Menu) !important;
 	--toolbar-field-background-color-focus: var(--toolbar-field-focus-background-color) !important;
-	--arrowpanel-background-color: var(--panel-background) !important;
+	--arrowpanel-background-color: var(--panel-background, Menu) !important;
 }
 /* System themes */
 :is(:root[lwt-default-theme-in-dark-mode],
