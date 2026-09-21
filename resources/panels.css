@@ -251,6 +251,9 @@ menu) {
 #downloadsFooterButtons > toolbarseparator {
 	margin: 0 !important;
 }
+#downloadsListBox {
+	overflow: hidden
+}
 #emptyDownloads {
 	padding-inline: 12px !important;
 }
@@ -277,15 +280,11 @@ menu) {
 	margin-inline-end: -4px !important;
 	border-color: transparent !important;
 }
-.download-state:not(:last-child) .downloadButton:not(:hover,
-:active) {
-	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
-}
 .download-state:not(.downloadHoveringButton) .downloadButton:not(:hover,
 :active) {
-	background: var(--arrowpanel-background) !important;
+	background: var(--background-color-canvas) !important;
 }
-.download-state.downloadHoveringButton  {
+.download-state.downloadHoveringButton {
 	background: none !important;
 }
 .downloadButton {
@@ -300,15 +299,13 @@ menu) {
 	height: 46px !important;
 	content: "";
 	display: block;
-	background: color-mix(in srgb, var(--panel-color) 10%, transparent);
+	background: color-mix(in srgb, currentColor 10%, transparent);
 	margin-top: calc(((5.5em - 46px)/2) - 1px);
 	position: relative;
-	translate: -1px
-
-
+	translate: -1px;
 }
 .download-state .downloadButton:hover::before {
-	background: color-mix(in srgb, var(--panel-color) 0%, transparent);
+	background: transparent;
 }
 .download-state .downloadButton:hover {
 	border: none !important;
@@ -318,7 +315,7 @@ menu) {
 	height: 5.5em !important;
 }
 #downloadsListBox .download-state:not(:last-child) {
-	border-bottom: 1px solid color-mix(in srgb, var(--panel-color) 10%, transparent) !important;
+	border-bottom: 1px solid color-mix(in srgb, currentColor 10%, var(--background-color-canvas)) !important;
 }
 /* Panel button styling */
 /* key: panel buttons */
@@ -712,6 +709,7 @@ unified-extensions-item) > :last-child {
 	height: 24px !important;
 	.toolbarbutton-icon {
 		padding: 6px !important;
+		height: 24px !important;
 	}
 	align-self: center !important;
 }
