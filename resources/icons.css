@@ -512,11 +512,38 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 	height: 12px !important;
 }
 /* transition for downloads */
+/* https://searchfox.org/firefox-esr140/source/browser/themes/shared/downloads/indicator.css#129 */
 #downloads-indicator-start-image {
+	--anim-steps: 16 !important;
+	width: calc(20px * (var(--anim-steps) + 1)) !important;
 	list-style-image: url("./icons/notification-start-animation-r1.svg") !important;
 }
-#downloads-indicator-finish-image {
+#downloads-indicator-finish-image {	
+	--anim-frames: 26 !important;
+	--anim-steps: calc(var(--anim-frames) + 100) !important; /* Add 100 frames for doing the pause in the middle */
+	width: calc(20px * (var(--anim-frames) + 1)) !important;
 	list-style-image: url("./icons/notification-finish-animation-r2.svg") !important;
+	transform: translateX(0);
+}
+#downloads-button[animate][notification="finish"]
+	 > .toolbarbutton-badge-stack > #downloads-indicator-finish-box >
+	#downloads-indicator-finish-image {
+	animation-duration: calc(var(--anim-steps) * 16.667ms) !important;
+	animation-name: downloadsButtonFinishedNotification-old !important;
+	transform: translateX(calc(var(--anim-frames) * -20px));
+}
+@keyframes downloadsButtonFinishedNotification-old {
+	from {
+		animation-timing-function: steps(18);
+		transform: translateX(0);
+	}
+	14.28% { /* 18th frame (18/126) */
+		transform: translateX(calc(18 * -20px));
+	}
+	93.65% { /* Wait 100 frames of time, but resume from 18th frame (118/126) */
+		animation-timing-function: steps(8);
+		transform: translateX(calc(18 * -20px));
+	}
 }
 #downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon {
 	fill: var(--photon-accent) !important;
