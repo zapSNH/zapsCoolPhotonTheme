@@ -144,7 +144,7 @@ Install the theme as an extension (like uBlock and the like).
 - - On certain Firefox forks, extension signing is disabled by default.
 - Has auto-updating and a built-in configurator.
 
-This version is loosley based on [Paxmod](https://github.com/numirias/paxmod).
+This version is loosely based on [Paxmod](https://github.com/numirias/paxmod).
 
 Open `about:config` and set:
 | Pref | Value | Description |
