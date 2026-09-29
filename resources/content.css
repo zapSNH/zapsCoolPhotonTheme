@@ -1342,6 +1342,9 @@
 		&[src="chrome://global/skin/icons/trophy.svg"] {
 			content: url("./icons/glyph-highlights-16.svg") !important;
 		}
+		&[src^="data:image/svg+xml;base64,P"] {
+			content: url("./icons/forks/floorp/floorp-hub.svg") !important;
+		}
 	}
 	#category-general > .category-icon {
 		list-style-image: url("./icons/settings.svg") !important;
