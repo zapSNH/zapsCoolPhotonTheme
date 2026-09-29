@@ -993,6 +993,7 @@ menupopup > menu::after {
 #appMenu-floorp-hub-button .toolbarbutton-icon {
 	list-style-image: url("./icons/forks/floorp/floorp-hub.svg") !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	width: 16px;
 }
 /* Mullvad App Menu Icons */
 #appMenu-new-identity .toolbarbutton-icon {
