@@ -43,6 +43,11 @@
 			--panel-background-color: var(--panel-background, Menu) !important;
 		}
 	}
+	@media -moz-pref("uc.floorp") or -moz-pref("uc.forks", "floorp") {
+		:root {
+			--panel-background: Menu !important;
+		}
+	}
 }
 menu,
 menuitem {
