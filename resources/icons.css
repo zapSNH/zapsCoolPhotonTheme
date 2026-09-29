@@ -968,6 +968,7 @@ menupopup > menu::after {
 /* Restart icon (Waterfox) */
 #appMenu-restart-button .toolbarbutton-icon {
 	list-style-image: url("./icons/reload.svg") !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
 /* Restart icon (Floorp) */
 #rebootappmenu .toolbarbutton-icon {
@@ -979,8 +980,18 @@ menupopup > menu::after {
 	list-style-image: url("./icons/pwa-manage.svg") !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 }
-#openprofiledir .toolbarbutton-icon {
-	list-style-image: url("./icons/findFile.svg") !important;
+#openprofiledir, #appMenu-create-profile-button {
+	.toolbarbutton-icon {
+		list-style-image: url("./icons/profiles.svg") !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
+	}
+}
+#appMenu-usercss-button .toolbarbutton-icon {
+	list-style-image: url("./icons/customize.svg") !important;
+	margin-inline-end: var(--appmenu-icon-inline-end) !important;
+}
+#appMenu-floorp-hub-button .toolbarbutton-icon {
+	list-style-image: url("./icons/forks/floorp/floorp-hub.svg") !important;
 	margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	width: 16px;
 }
