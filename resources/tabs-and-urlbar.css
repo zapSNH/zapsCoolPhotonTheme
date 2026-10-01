@@ -565,7 +565,7 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
 #searchbar-new {
 	--urlbar-container-padding: 0px !important;
 	--urlbar-inner-border-radius: 0px !important;
-	&[breakout-extend] {
+	&[breakout-extend], &[focused] {
 		--urlbar-inner-border-radius: var(--photon-border-radius) !important;
 	}
 	--urlbar-height: 30px !important;
@@ -813,7 +813,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		}
 	}
 }
-@media -moz-pref("uc.reduced-megabar") {
+@media -moz-pref("uc.reduced-megabar") and (not -moz-pref("browser.nova.enabled")) {
 	#urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
 	.urlbar-background) {
 		border: 1px solid var(--photon-accent-dark) !important;
@@ -823,7 +823,7 @@ toolbarbutton#urlbar-searchmode-switcher {
 		--button-border-radius: 0 !important;
 	}
 }
-@media -moz-pref("uc.no-megabar") {
+@media -moz-pref("uc.no-megabar") and (not -moz-pref("browser.nova.enabled")) {
 	#urlbar[focused]:not([breakout][breakout-extend]) :is(#urlbar-background,
 	.urlbar-background) {
 		border: 1px solid var(--photon-accent-dark) !important;
@@ -1052,13 +1052,13 @@ tab-group {
 		top: 0;
 		right: 0;
 		background: var(--toolbar-bgcolor);
-		height: 40px;
+		height: 38px;
 	}
 	:root[uidensity="touch"] .titlebar-buttonbox-container {
-		height: 44px
+		height: 42px
 	}
 	:root[uidensity="compact"] .titlebar-buttonbox-container {
-		height: 32px
+		height: 30px
 	}
 	#nav-bar {
 		margin-inline-end: 0 !important;
@@ -1375,7 +1375,8 @@ tab-group {
 		--urlbar-basic-component-size: calc(var(--urlbar-height) - 2 * (var(--urlbar-input-container-border-width))) !important;
 		--urlbarView-padding: var(--space-small) !important;
 		--urlbarView-row-border: none !important;
-		--urlbarView-row-gutter: 0 !important;
+		--urlbarview-row-min-height: var(--space-medium) !important;
+		--urlbarView-row-gutter: var(--space-xxsmall) !important;
 		
 		/* colors (temporary) */
 		--button-border-color: transparent !important;
@@ -1416,9 +1417,16 @@ tab-group {
 		}
 	}
 	
+	.urlbar, #searchbar {
+		--urlbar-background-box-shadow-open: 0 5px 18px rgba(0,0,0,.2) !important;
+		--urlbar-background-border-open: 1px solid var(--urlbar-border-color) !important;
+		--urlbar-background-border-focused: var(--urlbar-background-border-open) !important;
+		--urlbar-background-overhang-open: 7px !important;
+		--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+	}
 	.urlbar-input-container {
 		outline: none !important;
-		#urlbar[breakout-extend] & {
+		#urlbar[open] & {
 			padding-inline: 0 !important;
 		}
 	}
@@ -1426,7 +1434,8 @@ tab-group {
 		margin-left: 0 !important;
 	}
 	.urlbarView-row {
-		--urlbarview-row-padding-block: var(--space-small) !important;
+		background-clip: unset !important;
+		--urlbarview-row-padding-block: var(--space-xsmall) !important;
 	}
 	.urlbarView-type-icon {
 		position: absolute !important;
@@ -1437,23 +1446,26 @@ tab-group {
 		mask-image: none !important;
 	}
 	#urlbar .search-one-offs:not([hidden]) {
+		margin-block-start: var(--space-small) !important;
 		padding-block: var(--space-small) !important;
 		margin-inline: var(--space-xsmall) !important;
+		width: unset !important;
 	}
+	
 	@media not (-moz-pref("uc.reduced-megabar") or -moz-pref("uc.no-megabar")) {
-		.urlbar[breakout][breakout-extend] {
-			> .urlbar-background {
+		.urlbar[open][popover-open] {
+			.urlbar-background, .urlbarView-background {
 				animation-name: urlbar-grow !important;
-				animation-duration: var(--photon-speed-3) !important;
+				animation-duration: var(--photon-speed-1) !important;
 				animation-timing-function: var(--animation-easing-function) !important;
 			}
 		}
-		#urlbar[focused]:not([breakout][breakout-extend]) {
+		#urlbar {
 			z-index: 3;
 		}
 		:root {
 			--megabar-expansion: 7px;
-			--megabar-breakout-adjustment: 2px;
+			--megabar-breakout-adjustment: -1px;
 			&[uidensity="compact"] {
 				--megabar-expansion: 5px;
 			}
@@ -1461,25 +1473,85 @@ tab-group {
 				--megabar-expansion: 5px;
 			}
 		}
+		.urlbarView {
+			padding-inline: var(--space-xsmall) !important;
+		}
 		#urlbar	.urlbar-background {
 			box-sizing: border-box !important;
 			--urlbar-background-inset-breakout: calc(var(--megabar-expansion) * -1) !important;
 		}
-		#urlbar[focused]:not([breakout][breakout-extend]) .urlbar-background {
+		#urlbar[focused]:not([open][popover-open]) .urlbar-background {
 			margin-top: calc(-1 * var(--megabar-expansion)) !important;
 			margin-inline: calc(-1 * var(--megabar-expansion)) !important;
 			height: calc(var(--urlbar-height) + var(--megabar-expansion) * 2) !important;
-			border: 1px solid var(--urlbar-border-color) !important;
 			outline: none !important;
 		}
-		#urlbar[breakout][breakout-extend] {
+		#urlbar[focused] > .urlbar-background {
+			clip-path: none !important;
 		}
 	}
 	@media -moz-pref("uc.reduced-megabar") {
+		.urlbar, #searchbar {
+			--urlbar-background-overhang-open: 4px !important;
+			--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+		}
+		.urlbarView {
+			padding-inline: calc(var(--space-small) - var(--space-xxsmall)) !important;
+		}
 	}
 	@media -moz-pref("uc.no-megabar") {
-	}
-	@media not -moz-pref("uc.no-megabar") {
+		.urlbar, #searchbar {
+			--urlbar-background-overhang-open: 0px !important;
+			--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+		}
+		#urlbar[popover-open] .urlbar-background {
+			clip-path: none !important;
+			inset-block-end: 0px !important;
+		}
+		#urlbar[popover-open] .urlbarView-background {
+			clip-path: none !important;
+			inset-block-start: calc(var(--space-small) - var(--space-xxsmall)) !important;
+			border-color: transparent !important;
+			border-radius: var(--urlbar-background-border-radius) !important;
+		}
+		#urlbar .urlbarView {
+			padding-inline: var(--space-small) !important;
+		}
+		#urlbar .urlbarView-body-inner {
+			border: transparent !important;
+			padding-top: var(--space-xsmall) !important;
+		}
+		#urlbar .urlbarView-row {
+			margin-block: 0 !important;
+		}
+		.urlbarView-row[label]::before {
+			display: none !important;
+		}
+		#urlbar .urlbarView:not([dynamicType="quickactions"]) .urlbarView-type-icon {
+			filter: none;
+			margin: 0 !important;
+			margin-inline-end: 4px !important;
+			position: static !important;
+			min-width: 16px !important;
+			height: 16px !important;
+			translate: 0;
+			order: 1;
+		}
+		#urlbar .urlbarView:not([dynamicType="quickactions"]) :is(.urlbarView-favicon,
+		.urlbarView-tail-prefix) {
+			order: 2;
+		}
+		#urlbar .urlbarView:not([dynamicType="quickactions"]) .urlbarView-row-body {
+			order: 3;
+		}
+		.urlbarView-row:is([type="adaptive-history"], [type="history"], [type^="history_"], [type="semantic-history"]) > .urlbarView-row-inner {
+			& > .urlbarView-type-icon {
+				background-image: none !important;
+			}
+		}
+		.searchmode-switcher {
+			--button-border-radius: 0 !important;
+		}
 	}
 	@keyframes urlbar-grow {
 		0% {

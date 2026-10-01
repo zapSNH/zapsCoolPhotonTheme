@@ -20,6 +20,7 @@
 	--photon-border-radius: 2px;
 	--photon-border-radius-1: 4px;
 	--photon-panel-border-radius: 0px;
+	--urlbarview-border-radius: var(--photon-border-radius-1) !important;
 	
 	--border-radius-small: var(--photon-border-radius) !important;
 	--border-radius-medium: var(--photon-border-radius-1) !important;

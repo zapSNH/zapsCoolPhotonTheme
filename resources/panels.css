@@ -219,12 +219,6 @@ menu) {
 	height: 16px !important;
 	width: 16px !important;
 }
-#profiles-edit-this-profile-button {
-	height: 32px !important;
-	width: 32px !important;
-	justify-content: center !important;
-	margin-inline-end: -4px !important;
-}
 #current-profile {
 	padding-block: var(--space-small) !important;
 	margin-block-start: -4px !important;
@@ -241,6 +235,9 @@ menu) {
 }
 #profiles-copy-profile-button {
 	margin-block-end: 8px !important;
+}
+#profiles-create-profile-button {
+	margin-top: 4px !important;
 }
 /* Random button that is big */
 #overflowMenu-customize-button {

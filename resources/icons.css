@@ -956,9 +956,11 @@ menupopup > menu::after {
 	}
 	#profiles-edit-this-profile-button .toolbarbutton-icon {
 		list-style-image: url("./icons/edit.svg") !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	}
-	#profiles-copy-profile-button {
+	#profiles-copy-profile-button .toolbarbutton-icon {
 		list-style-image: url("./icons/edit-copy.svg") !important;
+		margin-inline-end: var(--appmenu-icon-inline-end) !important;
 	}
 }
 /* Exit icon */
