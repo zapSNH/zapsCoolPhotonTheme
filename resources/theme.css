@@ -136,14 +136,14 @@ input.findbar-textbox:focus {
 		--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 		--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
 	}
-	#urlbar-background, .urlbar-background, #searchbar {
+	#urlbar-background, .urlbar-background, .urlbarView-background, #searchbar {
 		background-color: white !important;
 		border: solid 1px #cccccc !important;
 	}
-	#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
+	#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 		box-shadow: 0px 0px 4px #0001 !important;
 	}
-	#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
+	#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 		box-shadow: 0px 0px 5px #0002 !important;
 	}
 	.tab-background[selected] {
@@ -156,7 +156,7 @@ input.findbar-textbox:focus {
 	.tabbrowser-tab[selected]) {
 		box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 	}
-	#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
+	#urlbar:is([breakout-extend], [popover-open]) :is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 		border: solid 1px var(--photon-tab-outline) !important;
 	}
 }
@@ -166,9 +166,6 @@ input.findbar-textbox:focus {
 		--photon-tab-outline: var(--photon-accent-dark);
 
 		--lwt-accent-color: #d7d7db !important;
-		&:not([builtintheme]) {
-			--lwt-accent-color: #202340 !important;
-		}
 		--lwt-accent-color-inactive: var(--lwt-accent-color) !important;
 		
 		--chrome-content-separator-color: #d7d7db !important;
@@ -187,6 +184,8 @@ input.findbar-textbox:focus {
 		--urlbar-box-text-color: #747576 !important;
 		--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
 		--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
+		--urlbar-box-background-color-hover: var(--button-hover-bgcolor) !important;
+		--urlbar-box-background-color-active: var(--button-active-bgcolor) !important;
 		--urlbarview-text-color-selected: #fff !important;
 		--urlbarView-highlight-background: var(--photon-accent-dark) !important;
 		--urlbarView-highlight-color: #fff !important;
@@ -216,23 +215,33 @@ input.findbar-textbox:focus {
 		--in-content-primary-button-background-hover: color-mix(in srgb, var(--photon-accent) 80%, white) !important;
 		--in-content-primary-button-background-active: color-mix(in srgb, var(--photon-accent) 60%, white) !important;
 		
+		--tab-background-color: transparent !important;
+		--button-background-color-ghost: transparent !important;
+		
 		&:not([builtintheme]) {
+			--lwt-accent-color: #202340 !important;
 			--toolbarbutton-icon-fill: currentColor !important;
 			--toolbox-non-lwt-textcolor: rgb(251, 251, 254) !important;
-			--toolbox-textcolor: rgb(251, 251, 254) !important;
+			--toolbox-textcolor: var(--toolbox-non-lwt-textcolor) !important;
+			--toolbox-text-color: var(--toolbox-non-lwt-textcolor) !important;
+			--toolbox-text-color-inactive: var(--toolbox-non-lwt-textcolor) !important;
+			--tab-text-color-selected: -moz-dialogtext !important;
+			--tab-close-button-text-color: -moz-dialogtext !important;
 		}
 		#urlbar {
 			--urlbar-box-hover-bgcolor: hsla(0,0%,70%,.2) !important;
 			--urlbar-box-active-bgcolor: hsla(0,0%,70%,.3) !important;
 		}
-		#urlbar-background, .urlbar-background, #searchbar {
+		#urlbar-background, .urlbar-background, .urlbarView-background, #searchbar {
 			background-color: white !important;
 			border: solid 1px #cccccc !important;
 		}
-		#urlbar:not([breakout-extend], :hover) :is(#urlbar-background, .urlbar-background) {
+		#urlbar:not([breakout-extend], [popover-open], :hover)
+			:is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 			box-shadow: 0px 0px 4px #0001 !important;
 		}
-		#urlbar:not([breakout-extend]):hover :is(#urlbar-background, .urlbar-background) {
+		#urlbar:not([breakout-extend], [popover-open]):hover
+			:is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 			box-shadow: 0px 0px 5px #0002 !important;
 		}
 		.tab-background[selected] {
@@ -245,7 +254,7 @@ input.findbar-textbox:focus {
 		.tabbrowser-tab[selected]) {
 			box-shadow: calc(-1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1, calc(1 * var(--tabs-navbar-shadow-size)) 0 0 #9e9fa1 !important;
 		}
-		#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
+		#urlbar:is([breakout-extend], [popover-open]) :is(#urlbar-background, .urlbar-background, .urlbarView-background) {
 			border: solid 1px var(--photon-tab-outline) !important;
 		}
 	}
@@ -292,6 +301,8 @@ input.findbar-textbox:focus {
 	--urlbar-box-text-color: #bababc !important;
 	--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
 	--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
+	--urlbar-box-background-color-hover: var(--button-hover-bgcolor) !important;
+	--urlbar-box-background-color-active: var(--button-active-bgcolor) !important;
 	--urlbarView-highlight-background: #0078d4 !important;
 	--urlbarView-highlight-color: #fff !important;
 	--urlbar-box-background-color: rgba(249,249,250,.1) !important;
@@ -378,6 +389,7 @@ input.findbar-textbox:focus {
 		--toolbar-bgcolor: #323234 !important;
 		--toolbar-field-background-color: #474749 !important;
 		--toolbar-field-border-color: #5a5a5c !important;
+		--toolbox-background-image: none !important;
 		--link-color: var(--photon-accent-light) !important;
 		--in-content-page-background: var(--toolbar-bgcolor) !important;
 	
@@ -391,6 +403,8 @@ input.findbar-textbox:focus {
 		--urlbar-box-text-color: #bababc !important;
 		--urlbarview-background-color-selected: var(--photon-accent-dark) !important;
 		--urlbarview-background-color-hover: var(--button-hover-bgcolor) !important;
+		--urlbar-box-background-color-hover: var(--button-hover-bgcolor) !important;
+		--urlbar-box-background-color-active: var(--button-active-bgcolor) !important;
 		--urlbarView-highlight-background: #0078d4 !important;
 		--urlbarView-highlight-color: #fff !important;
 		--urlbar-box-background-color: rgba(249,249,250,.1) !important;
@@ -428,6 +442,9 @@ input.findbar-textbox:focus {
 		--toolbar-field-focus-background-color: #474749 !important;
 		
 		--tabs-navbar-separator-color: transparent !important;
+		--tab-background-color: transparent !important;
+		--tab-background-color-hover: var(--toolbarbutton-background) !important;
+		--button-background-color-ghost: transparent !important;
 		
 		&:not(:-moz-window-inactive) {
 			--lwt-toolbar-field-highlight: var(--photon-accent-dark);
@@ -472,6 +489,10 @@ input.findbar-textbox:focus {
 	--panel-background-color: var(--panel-background, Menu) !important;
 	--toolbar-field-background-color-focus: var(--toolbar-field-focus-background-color) !important;
 	--arrowpanel-background-color: var(--panel-background, Menu) !important;
+	
+	--toolbarbutton-background-color-hover: var(--toolbarbutton-hover-background) !important;
+	--toolbarbutton-background-color-active: var(--toolbarbutton-active-background) !important;
+	--urlbarview-separator-color: var(--panel-separator-color) !important;
 }
 /* System themes */
 :is(:root[lwt-default-theme-in-dark-mode],
