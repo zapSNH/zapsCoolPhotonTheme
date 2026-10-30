@@ -397,7 +397,9 @@ moz-button:is(.primary,
 .action-buttons button.secondary,
 #editBookmarkPanelRemoveButton,
 .trustpanel-section.panel-subview-footer-button,
-.panel-footer > .cancel-button, #tab-group-editor-button-cancel {
+.panel-footer > .cancel-button,
+.panel-footer > .footer-button:has(~ .footer-button[slot="primary"]),
+#tab-group-editor-button-cancel {
 	--button-background-color-primary: #aaa2;
 	--button-background-color-primary-hover: #aaa4;
 	--button-background-color-primary-active: #1113;
