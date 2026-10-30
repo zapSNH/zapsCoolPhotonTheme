@@ -1,4 +1,6 @@
 /* theme colors */
+
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 :root {
 	--theme-css: 1px;
 	--panel-separator-zap-gradient: none !important;
@@ -417,4 +419,5 @@ input.findbar-textbox:focus {
 		--toolbar-bgcolor: var(--lwt-selected-tab-background-color, var(--tab-selected-bgcolor)) !important;
 		--toolbar-color: var(--lwt-tab-text, var(--tab-selected-textcolor)) !important;
 	}
+}
 }

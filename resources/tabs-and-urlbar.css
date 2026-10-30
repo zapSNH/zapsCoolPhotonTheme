@@ -1,5 +1,6 @@
 /* tabs and urlbar */
 /* and sidebar */
+@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 /* ui density */
 :root:not([uidensity="compact"],
 [uidensity="touch"]) {
@@ -1567,4 +1568,5 @@ tab-group {
 			transform: scale(1);
 		}
 	}
+}
 }
