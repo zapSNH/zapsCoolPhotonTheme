@@ -508,8 +508,9 @@ img[src="chrome://browser/content/shopping/assets/shopping.svg"] {
 }
 /* I can't be bothered to remake the animation lol */
 #downloads-indicator-progress-outer {
-	border-width: 2px !important;
-	border-color: var(--toolbarbutton-icon-fill) !important;
+	border-radius: 999px;
+	background-image: none !important;
+	border: 2px solid var(--toolbarbutton-icon-fill) !important;
 }
 #downloads-indicator-progress-inner {
 	width: 12px !important;
@@ -1277,6 +1278,7 @@ menupopup > menu::after {
 .urlbarView-row[type="switchtab"] .urlbarView-type-icon {
 	background: url("./icons/tab-12.svg") !important;
 	fill: var(--photon-accent);
+	stroke: var(--urlbar-background-color);
 }
 .urlbarView-row[type="bookmark"] .urlbarView-type-icon {
 	background: url("./icons/bookmark-12.svg") !important;

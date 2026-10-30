@@ -1,6 +1,5 @@
 /* tabs and urlbar */
 /* and sidebar */
-@-moz-document url-prefix("chrome://"), url-prefix("resource://") {
 /* ui density */
 :root:not([uidensity="compact"],
 [uidensity="touch"]) {
@@ -199,7 +198,6 @@ credits to phroton for some of this stuff */
 #firefox-view-button image {
 	outline: none !important;
 }
-/* Hides the "PLAYING"/"MUTED"/"PICTURE-IN-PICTURE"/"AUTOPLAY BLOCKED" text */
 .tab-secondary-label {
 	display: none !important;
 }
@@ -1273,9 +1271,12 @@ tab-group {
 				border-radius: 999px !important;
 				transition: background var(--photon-speed-1) var(--photon-easing-function) !important;
 				padding: 1px !important;
-				background: var(--toolbar-bgcolor) !important;
+				box-shadow: none !important;
 			}
-		}
+			&:not([visuallyselected]) .tab-icon-overlay {
+				background: var(--toolbox-background-color) !important;
+			}
+ 		}
 		#tabbrowser-tabs[expanded] {
 			#vertical-pinned-tabs-container {
 				padding-inline: 0 !important;
@@ -1371,12 +1372,13 @@ tab-group {
 		--chrome-block-radius: 0 !important;
 		
 		/* urlbar */
-		--urlbarView-favicon-mask-size: 12px !important;
+		--urlbarview-favicon-mask-size: 12px !important;
 		--urlbar-basic-component-size: calc(var(--urlbar-height) - 2 * (var(--urlbar-input-container-border-width))) !important;
-		--urlbarView-padding: var(--space-small) !important;
-		--urlbarView-row-border: none !important;
+		--urlbarview-padding: var(--space-small) !important;
+		--urlbarview-row-border: none !important;
 		--urlbarview-row-min-height: var(--space-medium) !important;
-		--urlbarView-row-gutter: var(--space-xxsmall) !important;
+		--urlbarview-row-gutter: var(--space-xxsmall) !important;
+		--urlbarview-favicon-mask-size: 16px !important;
 		
 		/* colors (temporary) */
 		--button-border-color: transparent !important;
@@ -1421,8 +1423,9 @@ tab-group {
 		--urlbar-background-box-shadow-open: 0 5px 18px rgba(0,0,0,.2) !important;
 		--urlbar-background-border-open: 1px solid var(--urlbar-border-color) !important;
 		--urlbar-background-border-focused: var(--urlbar-background-border-open) !important;
-		--urlbar-background-overhang-open: 7px !important;
-		--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+		--urlbar-background-overhang-open: 8px !important;
+		--urlbarview-joint-background-outset-inline: 
+			calc(var(--urlbar-background-overhang-open) + var(--urlbarview-margin-inline));
 	}
 	.urlbar-input-container {
 		outline: none !important;
@@ -1441,6 +1444,9 @@ tab-group {
 		position: absolute !important;
 		left: 16px;
 		translate: 0 6px;
+		.urlbarView-row:is([type="adaptive-history"], [type="history"], [type^="history_"], [type="semantic-history"], [type="remotetab"]) & {
+			visibility: hidden;
+		}
 	}
 	.urlbarView-favicon {
 		mask-image: none !important;
@@ -1493,7 +1499,7 @@ tab-group {
 	@media -moz-pref("uc.reduced-megabar") {
 		.urlbar, #searchbar {
 			--urlbar-background-overhang-open: 4px !important;
-			--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+			--urlbarview-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) - 1.5px) !important;
 		}
 		.urlbarView {
 			padding-inline: calc(var(--space-small) - var(--space-xxsmall)) !important;
@@ -1502,7 +1508,7 @@ tab-group {
 	@media -moz-pref("uc.no-megabar") {
 		.urlbar, #searchbar {
 			--urlbar-background-overhang-open: 0px !important;
-			--urlbarView-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarView-margin-inline));
+			--urlbarview-joint-background-outset-inline: calc(var(--urlbar-background-overhang-open) + var(--urlbarview-margin-inline));
 		}
 		#urlbar[popover-open] .urlbar-background {
 			clip-path: none !important;
@@ -1517,7 +1523,7 @@ tab-group {
 		#urlbar .urlbarView {
 			padding-inline: var(--space-small) !important;
 		}
-		#urlbar .urlbarView-body-inner {
+		#urlbar .urlbarView-body-inner, #urlbar-results {
 			border: transparent !important;
 			padding-top: var(--space-xsmall) !important;
 		}
@@ -1561,5 +1567,4 @@ tab-group {
 			transform: scale(1);
 		}
 	}
-}
 }
