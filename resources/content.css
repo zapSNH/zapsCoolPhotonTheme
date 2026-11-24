@@ -957,7 +957,7 @@
 			}
 		}
 	}
-	:root:is(:not([lwt-newtab],
+	:root[lang]:is(:not([lwt-newtab],
 	[lwt-newtab-brighttext]),
 	[style="--newtab-background-color: rgb(249, 249, 251);"][style*="--newtab-text-primary-color: rgba(21, 20, 26, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
@@ -981,7 +981,7 @@
 			background-color: rgb(251, 251, 254) !important;
 		}
 	}
-	:root:is(:not([style*="color"])[lwt-newtab-brighttext],
+	:root[lang]:is(:not([style*="color"])[lwt-newtab-brighttext],
 	[style*="--newtab-text-primary-color: rgba(251, 251, 254, 1);"][style*="--newtab-background-color: rgb(43, 42, 51);"][style*="--newtab-background-color-secondary: rgba(66, 65, 77, 1);"][style*="--in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);"]) {
 		* {
 			--newtab-background-color-secondary: #38383d !important;
