@@ -96,9 +96,9 @@
 		--brand-color-accent-active: color-mix(in srgb, var(--brand-color-accent) 60%, currentColor) !important;
 
 		/* Colors */
-		--blue-60: #0060df;
-		--blue-70: #003eaa;
-		--blue-80: #002275;
+		--blue-60: #0060df !important;
+		--blue-70: #003eaa !important;
+		--blue-80: #002275 !important;
 		--green-50: #30e60b !important;
 		--green-60: #12bc00 !important;
 		--green-70: #058b00 !important;
@@ -140,6 +140,11 @@
 		--button-text-color-primary: rgb(249, 249, 250);
 		--button-text-color-primary-hover: rgb(249, 249, 250);
 		--button-text-color-primary-active: rgb(249, 249, 250);
+		
+		/* Accent color hover/active */
+		--color-accent-primary-hover: var(--primary-button-hover-background-color) !important;
+		--color-accent-primary-active: var(--primary-button-active-background-color) !important;
+
 
 		/* New tab / specific UI */
 		--newtab-primary-action-background: #0a84ff !important;
